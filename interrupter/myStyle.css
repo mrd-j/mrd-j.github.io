@@ -47,4 +47,13 @@ h1 {
     border-bottom: 1px solid;
 }
 
+pre {
+    font-size:20px;margin-left:20px;
+}
+body {
+    background:black;color:green;
+}
+a {
+    font-size:20px;color:gray;text-decoration:none;
+}
 
