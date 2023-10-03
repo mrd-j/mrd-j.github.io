@@ -10,26 +10,26 @@
 <pre>
 玩家连线服务器
 
-"/adm/single/master" -> <a href="./lpc-file/adm-single-master.html#connect" target="_blank">connect()</a>
+"/adm/single/master" -> <a href="adm-single-master.html#connect" target="_blank">connect()</a>
 new(LOGIN_OB)，并返回这个复制出来的物件"/clone/user/login#?"
 
 new(LOGIN_OB) -> 
-<a href="./lpc-file/clone-user-login.html#logon" target="_blank">logon()</a>
-<a href="./lpc-file/clone-user-login.html#terminal_type" target="_blank">terminal_type()</a>
-<a href="./lpc-file/clone-user-login.html#login" target="_blank">login()</a>
+<a href="clone-user-login.html#logon" target="_blank">logon()</a>
+<a href="clone-user-login.html#terminal_type" target="_blank">terminal_type()</a>
+<a href="clone-user-login.html#login" target="_blank">login()</a>
 LOGIN_D->logon(this_object())
 
-"/adm/daemons/logind" -> <a href="./lpc-file/adm-daemons-logind.html#logon" target="_blank">logon</a>(this_object())</a>
-<a href="./lpc-file/adm-daemons-logind.html#get_id" target="_blank">get_id()</a> 
-1.如果输入的id是注册了的，则提示<a href="./lpc-file/adm-daemons-logind.html#input-password" target="_blank">"请输入密码："</a> ，调用<a href="./lpc-file/adm-daemons-logind.html#get_passwd" target="_blank">get_passwd()</a> ，密码正确则交由<a href="./lpc-file/adm-daemons-logind.html#check_ok" target="_blank">check_ok()</a>处理，没任何问题的话进入游戏世界！
-2.如果输入的id是未注册的，则进入注册流程，提示将要<a href="./lpc-file/adm-daemons-logind.html#newplayer" target="_blank">创建新人物</a>，确认后通过<a href="./lpc-file/adm-daemons-logind.html#confirm_id" target="_blank">confirm_id()</a>的处理；
-  通过后提示<a href="./lpc-file/adm-daemons-logind.html#input-surname" target="_blank">输入中文姓氏</a>并通过<a href="./lpc-file/adm-daemons-logind.html#get_surname" target="_blank">get_surname()</a>    的处理；
-  通过后提示<a href="./lpc-file/adm-daemons-logind.html#input-name" target="_blank">输入中文名字</a>并通过<a href="./lpc-file/adm-daemons-logind.html#get_name" target="_blank">get_name()</a>       的处理；
-  通过后提示<a href="./lpc-file/adm-daemons-logind.html#input-ad-password" target="_blank">输入管理密码</a>并通过<a href="./lpc-file/adm-daemons-logind.html#new_ad_password" target="_blank">new_ad_password()</a>的处理；
-  通过后提示<a href="./lpc-file/adm-daemons-logind.html#input-new-password" target="_blank">输入普通密码</a>并通过<a href="./lpc-file/adm-daemons-logind.html#new_password" target="_blank">new_password()</a>   的处理；
-  通过后提示<a href="./lpc-file/adm-daemons-logind.html#input-gender" target="_blank">输入性别</a>    并通过<a href="./lpc-file/adm-daemons-logind.html#get_gender" target="_blank">get_gender()</a>     的处理；成功后开始设置玩家的<a href="./lpc-file/adm-daemons-logind.html#base-attr" target="_blank">基本属性</a>，然后初始化新玩家，最后进入游戏世界！</a>
+"/adm/daemons/logind" -> <a href="adm-daemons-logind.html#logon" target="_blank">logon</a>(this_object())</a>
+<a href="adm-daemons-logind.html#get_id" target="_blank">get_id()</a> 
+1.如果输入的id是注册了的，则提示<a href="adm-daemons-logind.html#input-password" target="_blank">"请输入密码："</a> ，调用<a href="adm-daemons-logind.html#get_passwd" target="_blank">get_passwd()</a> ，密码正确则交由<a href="adm-daemons-logind.html#check_ok" target="_blank">check_ok()</a>处理，没任何问题的话进入游戏世界！
+2.如果输入的id是未注册的，则进入注册流程，提示将要<a href="adm-daemons-logind.html#newplayer" target="_blank">创建新人物</a>，确认后通过<a href="adm-daemons-logind.html#confirm_id" target="_blank">confirm_id()</a>的处理；
+  通过后提示<a href="adm-daemons-logind.html#input-surname" target="_blank">输入中文姓氏</a>并通过<a href="adm-daemons-logind.html#get_surname" target="_blank">get_surname()</a>    的处理；
+  通过后提示<a href="adm-daemons-logind.html#input-name" target="_blank">输入中文名字</a>并通过<a href="adm-daemons-logind.html#get_name" target="_blank">get_name()</a>       的处理；
+  通过后提示<a href="adm-daemons-logind.html#input-ad-password" target="_blank">输入管理密码</a>并通过<a href="adm-daemons-logind.html#new_ad_password" target="_blank">new_ad_password()</a>的处理；
+  通过后提示<a href="adm-daemons-logind.html#input-new-password" target="_blank">输入普通密码</a>并通过<a href="adm-daemons-logind.html#new_password" target="_blank">new_password()</a>   的处理；
+  通过后提示<a href="adm-daemons-logind.html#input-gender" target="_blank">输入性别</a>    并通过<a href="adm-daemons-logind.html#get_gender" target="_blank">get_gender()</a>     的处理；成功后开始设置玩家的<a href="adm-daemons-logind.html#base-attr" target="_blank">基本属性</a>，然后初始化新玩家，最后进入游戏世界！</a>
 
-注：<a href="./lpc-file/adm-daemons-logind.html#init_new_player" target="_blank">初始化新玩家</a>的函数以及<a href="./lpc-file/adm-daemons-logind.html#enter_world" target="_blank">进入游戏世界</a>的函数点击链接查看。
+注：<a href="adm-daemons-logind.html#init_new_player" target="_blank">初始化新玩家</a>的函数以及<a href="adm-daemons-logind.html#enter_world" target="_blank">进入游戏世界</a>的函数点击链接查看。
 </pre>
 </body>
 </html>
