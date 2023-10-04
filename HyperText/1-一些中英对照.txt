@@ -1,0 +1,310 @@
+etc，即e2c，English to Chinese。
+rumor，谣言
+*d.c，文件名以d结尾，表示这是某个精灵文件，比如logind.c表示登录精灵。
+*p，函数以p结尾，表示这个函数式用于判断的，比如stringp()判断是否为字符串。
+
+party，帮派
+family，门派
+league，同盟
+shout，大叫
+ultra，大宗师
+no_autoultra，不自动将聊天频道转为宗师频道
+rultra，塞外宗师
+bill，交易
+ic，异域
+chat，闲聊
+inter，同盟
+sys，系统
+wiz，巫师
+
+一些文件位于\clone\quest目录下
+avoid，提示信息任务，就是在任意店小二那里通过使用ask xiaoer rumor后打听到的任务。
+deliver.c，送货任务的文件
+capture.c，追捕任务
+explore.c，探索任务
+judge.c，判官任务
+search.c，搜索任务
+supply.c，上交物品任务
+trace.c，追踪任务
+
+corpse，尸体
+misc，杂项
+victim，受害者
+reincarnate，转世
+stage，阶段
+REVIVE_ROOM，复活房间
+dump，转储
+immortal，名垂千古，‘骨灰级玩家’,简称‘imm’
+apprentice，学徒，‘见习巫师’
+wizard，巫师
+arch，首席，mud中称为‘首席巫师’
+admin，管理员，mud中称为‘天神’
+
+chatter，聊天者
+suicide，自杀
+
+"int":"后天悟性"
+"str":"后天臂力"
+"con":"后天根骨"
+"dex":"后天身法"
+
+"personality":"人格魅力"
+"attack":"战斗攻击",
+"defense":"战斗防御",
+"parry":"有效招架",
+"dodge":"有效轻功",
+"force":"有效内功",
+"armor":"战斗护甲",
+"damage":"兵器伤害",
+"unarmed_damage":"空手伤害",
+"unarmed":"有效拳脚",
+"cuff":"有效拳法",
+"strike":"有效掌法",
+"hand":"有效手法",
+"finger":"有效指法",
+"claw":"有效爪法",
+"warm":"保暖能力",
+"max_neili":"最大内力上限",
+"max_jingli":"最大精力上限",
+"max_qi":"最大气血上限",
+"max_jing":"最大精气上限",
+"max_potential":"最大潜能上限",
+"max_experience":"最大体会上限",
+"attack":"战斗攻击力有效等级",
+"defense":"战斗防御力有效等级",
+"parry":"战斗招架力有效等级",
+"dodge":"战斗躲闪力有效等级",
+"armor":"战斗保护力",
+"damage":"战斗兵器伤害力",
+"unarmed_damage":"战斗拳脚伤害力",
+"ap_power":"绝招战斗攻击力百分比",
+"dp_power":"绝招战斗防御力百分比",
+"da_power":"绝招战斗伤害力百分比",
+"add_poison":"附带毒气攻击效果百分比",
+"reduce_poison":"化解毒气攻击效果百分比",
+"avoid_poison":"回避毒气攻击机率百分比",
+"add_cold":"附带冷冻攻击效果百分比",
+"add_fire":"附带火焰攻击效果百分比",
+"add_lighting":"附带闪电攻击效果百分比",
+"add_magic":"附带魔法攻击效果百分比",
+"reduce_cold":"化解冷冻攻击效果百分比",
+"reduce_fire":"化解火焰攻击效果百分比",
+"reduce_lighting":"化解闪电攻击效果百分比",
+"reduce_magic":"化解魔法攻击效果百分比",
+"avoid_cold":"回避冷冻攻击机率百分比",
+"avoid_fire":"回避火焰攻击机率百分比",
+"avoid_lighting":"回避闪电攻击机率百分比",
+"avoid_magic":"回避魔法攻击机率百分比",
+"effjing_recover":"提高每次最大精气恢复值",
+"effqi_recover":"提高每次最大气血恢复值",
+"research_times":"提升研究的次数",
+"learn_times":"提升学习的次数",
+"practice_times":"提升练习的次数",
+"derive_times":"提升汲取的消耗",
+"study_times":"提升读书的次数",
+"study_effect":"提升读书的效果百分比",
+"learn_effect":"提升学习的效果百分比",
+"avoid_parry":"回避特殊招架机率百分比",     // 符文防具
+"avoid_dodge":"回避特殊躲闪机率百分比",     // 符文防具
+"avoid_attack":"回避特殊攻击机率百分比",     // 符文防具
+"reduce_age":"降低自己的年纪",
+"research_effect":"提升研究的效果百分比",
+"practice_effect":"提升练习的效果百分比",
+"derive_effect":"提升汲取的效果百分比",
+"avoid_noperform":HIR "回避绝招使用限制机率百分比",     // 终极兵器
+"target_noperform":HIB "限制对手使用绝招机率百分比",     // 终极防具
+"add_busy":HIR "对手忙乱秒数",   // 终极兵器
+"reduce_busy":HIB "化解忙乱秒数",   // 终极防具
+"avoid_busy":HIB "回避忙乱机率百分比",     // 终极防具
+"xuruo_status":HIR "让对手处于虚弱状态机率百分比",   // 终极兵器
+"avoid_xuruo":HIB "回避虚弱机率百分比",     // 终极防具
+"add_skilllevel":HIR "提升所有技能等级",       // 终极兵器
+"add_damage":HIR "追加最终伤害百分比",     // 终极兵器
+"reduce_damage":HIB "化解最终伤害百分比",     // 终极防具
+
+state，状态
+"state":(["mirror":0,"quest":0,"go":389,])
+详情请看\cmds\usr\record.c
+go是移动距离，距离=房间数*5，也就是一个房间是5米。
+
+//--\data\user\m\mudren.o中的内容"mark":(["job_smith":365,])--//
+    if (me->query("mark/job_smith") > 10000)
+        return "您老不会真想做一辈子的铁匠吧？";
+
+score：江湖阅历
+
+user dbase：
+toDoList([])，接受的任务
+solved({})，已完成的任务，两种任务源码在这里/mudcore/inherit/user_quest.c，在/clone/user/user.c->setup()设置过空值。
+dbase([])，玩家基本属性，源码在这里/mudcore/inherit/dbase.c
+conditions([])，状态，比如生病状态、冻伤状态等等，源码在这里/feature/condition.c
+my_depot ([])，我的仓库，源码在这里/feature/user_storage.c
+autoload ({})，源码在这里/feature/autoload.c
+killer ({})，你对哪些人下过kill指令，列表只在一定时间内有效（你下线后清空），源码在这里/feature/attack.c
+want_kills ({})，你想杀谁，你对别人下了kill命令，但是对方跑了，那么对方的名字会在这里，只要你在地图中碰到这个列表中的人也在killer({})列表中，就会自动kill对方，列表只在一定时间内有效，源码在这里/feature/attack.c
+at_time，在什么时间
+ban_say_msg ""，禁止说的信息
+skills ([])，玩家技能等级，源码在这里/feature/skill.c
+skill_map ([])，通过指令jifa激发的特殊技能
+learned ([])，学一次涨多少经验。源码在这里/feature/skill.c
+
+permit_recruit，允许收徒
+attempt_apprentice，尝试拜师，apprentice|bai 指令触发这个函数
+recognize_apprentice，学习技能，learn|xue 指令触发这个函数
+"storage_bag":1，表示你有背包，这个背包是用乾坤石打造的如意乾坤袋
+
+
+激发：
+jifa ?
+用法，比如你学会了武当心法这么特殊内功，那么可以这样
+jifa force wudang-xinfa
+以下是可以使用特殊技能的种类：
+  刀法 (blade)
+  吹萧 (chuixiao-jifa)
+  爪法 (claw)
+  棍法 (club)
+  厨艺 (cooking)
+  拳法 (cuff)
+  短兵 (dagger)
+  轻功 (dodge)
+  指法 (finger)
+  内功 (force)
+  古筝 (guzheng-jifa)
+  锤法 (hammer)
+  手法 (hand)
+  法术 (magic)
+  医术 (medical)
+  招架 (parry)
+  毒技 (poison)
+  杖法 (staff)
+  掌法 (strike)
+  剑法 (sword)
+  弹琴 (tanqin-jifa)
+  暗器 (throwing)
+  拳脚 (unarmed)
+  鞭法 (whip)
+
+  读书写字（literate）
+  
+//内容来源：/adm/daemons/updated.c
+//转世清除记录delete
+    me->set_name();          // 重置姓名
+    me->delete ("couple");   // 家庭记录
+    me->delete ("sex");      // 做爱记录
+    me->delete ("brothers"); // 结拜兄弟
+    me->delete ("bunch");    // 帮派记录
+    me->delete ("league");   // 同盟记录
+    me->delete ("family");   // 门派记录
+
+    me->delete ("class");    // 称号记录
+    me->delete ("detach");   // 脱离记录
+    me->delete ("betrayer"); // 叛师记录
+    me->delete ("long");     // 个人描述
+    //新增转世清除世家
+    me->delete ("born_family");
+
+    me->delete ("combat");    // PK  记录
+    me->delete ("animaout");  // 元婴出世
+    me->delete ("breakup");   // 任督二脉
+    me->delete ("can_learn"); // 技能解密
+    me->delete ("can_make");  // 制药记录
+
+    me->delete ("env");        // 个人设定
+    me->delete ("gift");       // 吃丹记录（含九转）
+    me->delete ("opinion");    // 评价记录
+    me->delete ("opinions");   // 宗师身份
+    me->delete ("out_family"); // 出师历练
+
+    me->delete ("quest");       // 门派任务
+    me->delete ("quest_count"); // 门派任务
+    me->delete ("map");         // 地图标志
+    me->delete ("rumor");       // 事件记录
+    me->delete ("schedule");    // 计划记录
+    me->delete ("skybook");     // 天书记录（三丹记录）
+
+    me->delete ("luohan_winner"); // 过阵记录
+    me->delete ("story");         // 中的故事
+
+    me->delete ("DiZangPass");   // 转世任务
+    me->delete ("HellZhenPass"); // 转世任务
+    me->delete ("SkyPass");      // 转世任务
+    me->delete ("over_quest");   // 转世任务
+
+    //获取转生前门派，用于脱离时无损判断
+    menpai1 = me->query("family/family_name");
+    //(取消无损背叛师门)
+    //me->set("old_family_name",menpai1);
+    me->set("reborn/family/" + menpai1, 1);
+    me->delete ("reborn/family/mark"); //删除门派脱离记录
+    me->delete ("mark");               //删除郭府打工记录
+    me->delete ("family");             // 门派记录
+
+    //转世set
+    me->set("title", "江湖游侠");              // 个人称号
+    me->set("character", "国士无双");          // 转世性格
+    // me->set("family/family_name", "侠客盟"); //设定转世后默认散人
+    //补充 by 薪有所属
+    me->delete ("tattoo"); // 刺青记录
+    //me->delete("special_skill");            // 特技记录
+    me->delete ("can_learned");  // 技能解密2(太玄)
+    me->delete ("mirror_task");  // task记录
+    me->delete ("mirror_count"); // task记录
+
+    me->delete ("death"); // 生死玄关
+
+    me->delete ("can_perform"); //武功绝招
+
+    me->delete ("learned_literate"); //学过读书写字
+
+    me->set("gongxian", 0);           //贡献清零
+    me->set("score", 0);              //阅历清零
+    me->set("weiwang", 0);            //威望清零
+    me->set("experience", 0);         //体会清零
+    me->set("learned_experience", 0); //体会清零
+
+    me->set("max_neili", 0); //内力清零
+    me->set("neili", 0);     //内力清零
+    me->set("jiali", 0);
+
+    me->set("max_jingli", 0); //精力清零
+    me->set("jingli", 0);     //精力清零
+    me->set("jiajing", 0);    //精力清零
+
+    me->set("shen", 0);           //神清零
+    me->set("combat_exp", 0);     //经验清零
+    me->set("learned_points", 0); //潜能清零
+    me->set("potential", 0);      //潜能清零
+    me->set("magic_learned", 0);  //灵慧清零
+    me->set("magic_points", 0);   //灵慧清零
+
+    //me->set("static/marry",0);      //黯然记录
+    //me->set("static/sadly",0);      //黯然记录
+    me->delete ("static"); //黯然记录
+
+    //hp set
+    me->set("max_qi", 100);
+    me->set("eff_qi", me->query("max_qi"));
+    me->set("qi", me->query("eff_qi"));
+    me->set("max_jing", 100);
+    me->set("eff_jing", me->query("max_jing"));
+    me->set("jing", me->query("eff_jing"));
+
+    me->set("mud_age", 0);
+    me->set("age", 14);
+    me->set("birthday", time());
+
+    all_skills = me->query_skills();
+
+    //判断是否有技能，有技能才清除技能。否则没技能时原清除技能代码会报错。
+    //虽说正常转世肯定不会0技能，但完全可以最后一步放弃所有技能。。。
+    if (all_skills)
+    {
+        skills = keys(all_skills);
+        //skills清零
+        for (i = 0; i < sizeof(skills); i++)
+            me->delete_skill(skills[i]);
+    }
+    //me->set("reborn", 1);
+    me->add("reborn/count", 1);
+    me->add("reborn/point", 1); //转世获得洗点1
+    
