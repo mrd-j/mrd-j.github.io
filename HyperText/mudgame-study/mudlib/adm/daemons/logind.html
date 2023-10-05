@@ -55,13 +55,13 @@ object find_body(string name);
 int check_legal_id(string arg);
 int check_legal_name(string arg, int maxlen);
 
-void create()
+void create()<a id="create"></a>
 {
-    seteuid(ROOT_UID);
+    seteuid(<a href="/HyperText/mudgame-study/mudlib/include/globals.html#root_uid" target="_blank">ROOT_UID</a>);
     set("channel_id", "连线精灵");
     set("name", HIW "连线精灵" HIM);
-    if (intp(WIZ_LOCK_LEVEL))
-        wiz_lock_level = WIZ_LOCK_LEVEL;
+    if (intp(<a href="/HyperText/mudgame-study/mudlib/include/login.html#wiz_lock_level" target="_blank">WIZ_LOCK_LEVEL</a>))
+        wiz_lock_level = WIZ_LOCK_LEVEL;<a id="wiz_lock_level"></a>
     else
         wiz_lock_level = 0;
 }

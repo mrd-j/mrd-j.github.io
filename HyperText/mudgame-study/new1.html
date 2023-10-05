@@ -10,7 +10,7 @@
 <pre>
 这个文件是对logind.c源文件进行自然语言的陈述。
 这个文件有如下几个功能：（按源文件函数出现顺序编号）
-1.创建
+1.加载时创建
 2.进入系统
 3.获取id
 4.匹配密码
@@ -39,7 +39,21 @@
 27.设置巫师锁定级别
 
 
-检查合法id
+1.<a href="/HyperText/mudgame-study/mudlib/adm/daemons/logind.html#create" target="_blank">加载时创建</a>
+在本源文件加载到内存时自动执行的操作，操作如下：
+首先设置euid为Root，
+然后设置频道id为“连线精灵”，
+设置频道名称为“连线精灵”，
+通过配置精灵查询巫师锁并判断是否为整数，
+如果是整数，则巫师锁定顶级的值为巫师锁，否则值为0，
+
+主要工作就是：
+(1.设置euid；
+(2.设置频道信息（侧面说明了本文件就是连线精灵）；
+(3.<a href="/HyperText/mudgame-study/mudlib/adm/daemons/logind.html#wiz_lock_level" target="_blank">设置巫师锁定等级。</a>
+
+
+16.检查合法id
 id是被禁id的成员，则输出出错提示并结束。
 如果通过，则获取id的长度，
 </pre>

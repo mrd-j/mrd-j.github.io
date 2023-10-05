@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+#include <login.h>
+#include <dbase.h>
+
+inherit F_DBASE;
+inherit F_SAVE;
+
+#define WAIT_HEART_BEAT  2
+
+nosave int serial = 0;
+
+void heart_beat();
+
+void login()<a id="login"></a>
+{
+    string term_type = query_temp("terminal_type");
+    // 自动设置客户端编码，不设置默认为UTF-8
+    if (term_type == "vt100" || term_type == "mushclient")
+    {
+        set_encoding("GBK");
+    }
+    if (interactive(this_object()))
+        set_temp("ip_number", query_ip_number(this_object()));
+
+    LOGIN_D->logon(this_object());
+}
+
+void logon()<a id="logon"></a>
+{
+    call_out("time_out", LOGIN_TIMEOUT);//LOGIN_TIMEOUT 为 240，240秒后执行time_out()
+    // 延迟登陆，解决mudlet初次连接乱码问题
+    call_out_walltime("login", 0.25);//0.25秒后执行login()
+}
+
+// Don't destruct(this_object()) in the net_dead() interactive apply or
+// there'll be error message: Double call to remove_interactive()
+void net_dead()
+{
+    remove_call_out("time_out");
+    call_out("time_out", 1);
+}
+
+void time_out()<a id="time_out"></a>
+{
+    object body;
+
+    if (objectp(body = query_temp("body_ob")))
+    {
+        if (! environment(body) && ! body->query("registered"))
+            destruct(body);
+        return;
+    }//body为，比如，/clone/user/user#1 ("武当派第四代传人 张三李四(mudren)")
+    if (interactive(this_object()))
+        write("\n您花在连线进入手续的时间太久了，下次想好再来吧。\n");
+    destruct(this_object());
+}
+
+// This is used by F_SAVE to determinethe file name to save our data.
+//字符串形式返回一个文件路径。
+//返回保存账号登录数据的文件路径，即 /data/login/账号的第一个字母/账号全称。
+string query_save_file()<a id="query_save_file"></a>
+{
+    string id;
+
+    id = query("id", 1);
+    if (! stringp(id)) return 0;
+    return sprintf(DATA_DIR "login/%c/%s", id[0], id);//DATA_DIR为"/data/"
+}
+
+void receive_message(string type, string str)<a id="receive_message"></a>
+{
+    if (type != "write") return;
+    receive(str);
+}
+
+void terminal_type(string term_type)<a id="terminal_type"></a>
+{
+    set_temp("terminal_type", term_type);
+}
+
+// Protect login object's data against hackers.
+nomask mixed set(string prop, mixed data)<a id="set"></a>
+{
+    if (geteuid(previous_object()) != ROOT_UID) return 0;
+    return ::set(prop, data);
+}
+
+nomask mixed query_entire_dbase()<a id="query_entire_dbase"></a>
+{
+    if (geteuid(previous_object()) != ROOT_UID) return 0;
+    return ::query_entire_dbase();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
