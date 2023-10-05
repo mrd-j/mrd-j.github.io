@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="js/myScript.js"></script>
+</head>
+<body>
+<pre>
+游戏世界中的资源演变：
+feature》》》inherit》》》d
+                          clone
+                          kungfu
+                          武功继承了  SKILL
+                          物品继承了  ITEM
+                          npc继承了   NPC
+                          地图继承了  ROOM
+                          玩家继承了  CHARACTER
+                                      F_AUTOLOAD
+                                      F_USER_GMCP
+                                      F_USER_MXP
+                                      F_USER_QUEST
+                                      F_USER_STORAGE
+                                      F_SAVE
+                         
+feature文件夹
+/feature/
+action.c              #动作，处理出招时的动作描述之类的东西
+alias.c               #别名
+apprentice.c          #学徒，门派收徒用
+attack.c              #攻击
+attribute.c           #属性
+autoload.c            #自动载入，对应/data/user/*/*n.o中的autoload({})
+banker.c              #银行家
+clean_up.c            #清除
+coagent.c             #帮手
+command.c             #指令
+condition.c           #状态，条件
+cutable.c             #割。比如有些部位是可以割下来的。
+damage.c              #伤害、恢复之类的。
+dbase.c               #数据库。继承于CORE_DBASE，增加了重置永久和临时数据库的函数。
+dbsave.c              #数据库保存。继承于CORE_DBSAVE，未做任何改动。
+dealer.c              #商人
+edit.c                #编辑
+equip.c               #装备
+finance.c             #金融
+food.c                #食物
+guarder.c             #守卫
+itemmake.c            #物品制作，自制道具。
+liquid.c              #液体
+master.c              #师傅。see also ：apprentice.c 
+message.c             #消息
+more.c                #分页。内容多时才用分页阅读。
+move.c                #移动
+name.c                #名字
+noclone.c             #非复制
+quester.c             #请求、取消任务
+sadjust.c             #调整，整理
+save.c                #保存。继承于CORE_SAVE，未做任何改动。
+shadow.c              #遮罩
+shell.c               #
+silentdest.c          #
+skill.c               #技能
+sserver.c             #
+team.c                #队伍
+transport.c           #交通工具
+treemap.c             #树形地图
+unique.c              #
+user_gmcp.c           #
+user_mxp.c            #
+user_quest.c          #用户任务。继承于CORE_USER_QUEST，未做任何改动。
+user_storage.c        #用户背包
+vendor.c              #小贩
+vi.c                  #。没有物件继承它。
+注：文件表示方法：F_大写，比如 F_ACTION 等效于 "/feature/action"
+用法：搜索 inherit F_大写 ，看看有哪些文件继承了它。配合inherit文件夹。
+
+inherit文件夹
+ARMOR 等效于 "/inherit/armor/armor"
+/inherit/
+  armor/             #防具。继承于 EQUIP ，即 "/inherit/misc/equip"
+    armor.c          #护甲
+    boots.c          #靴子
+    charm.c          #护身符
+    cloth.c          #衣服
+    finger.c         #指套
+    hands.c          #掌套
+    head.c           #头盔
+    neck.c           #项圈
+    shield.c         #护盾
+    surcoat.c        #披风
+    waist.c          #腰带
+    wrists.c         #护腕
+
+  char/              #生物
+    challenger.c     #挑战者。inherit NPC 即 "/inherit/char/npc"
+    char.c           #生物CHARACTER    继承了：
+                                       F_ACTION
+                                       F_ALIAS
+                                       F_APPRENTICE
+                                       F_ATTACK
+                                       F_ATTRIBUTE
+                                       F_COMMAND
+                                       F_CONDITION
+                                       F_DAMAGE
+                                       F_DBASE
+                                       F_EDIT
+                                       F_FINANCE
+                                       F_MESSAGE
+                                       F_MORE
+                                       F_MOVE
+                                       F_NAME
+                                       F_SKILL
+                                       F_SHELL
+                                       F_TEAM
+    fighter.c        #练功人。inherit NPC
+    insect.c         #昆虫，毒虫。inherit NPC
+    knower.c         #消息灵通人士。inherit NPC
+    npc.c            #inherit CHARACTER 即 "/inherit/char/char"、inherit F_CLEAN_UP
+    punisher.c       #执法者。    继承于 NPC
+    quarry.c         #猎物。      继承于 NPC
+    smith.c          #铁匠。      继承于 NPC、F_DEALER
+    snake.c          #蛇类。      继承于 NPC
+    waiter.c         #店铺伙计。  继承于 NPC
+    worm.c           #蠕虫，毒虫。继承于 NPC
+
+  condition/         #状态，条件  
+    damo.c           #化解，解毒  
+    illness.c        #生病
+    poison.c         #中毒
+
+  item/              #物品
+    book.c           #书籍        继承于 ITEM
+    combined.c       #合成物      继承于 F_CLEAN_UP、F_DBASE、F_MOVE、
+F_NAME
+    container.c      #容器        继承于 ITEM
+    inlaid.c         #镶嵌物      继承于 ITEM
+    item.c           #物品        继承于 F_CLEAN_UP、F_DBASE、F_MOVE、F_NAME
+    medical-book.c   #医学书籍    继承于 ITEM
+    money.c          #金钱        继承于 COMBINED_ITEM
+    task.c           #任务        继承于 ITEM
+
+  medicine/          #医学
+    pill.c           #药丸        继承于 COMBINED_ITEM
+    powder.c         #药粉        继承于 COMBINED_ITEM
+
+  misc/              #杂项
+    bboard.c         #b留言板     继承于 ITEM、
+F_SAVE
+    equip.c          #装备        继承于 ITEM、
+F_EQUIP
+    fboard.c         #档案板      继承于 ITEM、
+F_SAVE
+    jboard.c         #计划板      继承于 ITEM、
+F_SAVE
+    quest.c          #任务        继承于 F_DBASE              所有玩家任务继承此物件
+    _qin.c           #琴
+    _xiao.c          #箫
+    _zheng.c         #筝
+
+  room/              #房间
+    bank.c           #钱庄        继承于 ROOM  
+    buildroom.c      #建造房间    继承于 ROOM、F_DBSAVE
+    chatroom.c       #聊天室      继承于 ROOM
+    create.c         #建立聊天室  继承于 ROOM
+    pigroom.c        #拱猪房      继承于 ROOM
+    privateroom.c    #私人房间    继承于 ROOM、F_DBSAVE、
+F_AUTOLOAD
+    producing.c      #生产车间    继承于 ROOM
+    river.c          #河流        继承于 ROOM
+    room.c           #房间        继承于 CORE_ROOM
+    shop.c           #商店        继承于 ROOM、F_SAVE
+    trans.c          #驿站，交通  继承于 ROOM
+    vrm.c            #虚拟房间    继承于CORE_VRM
+  
+  skill/
+    force.c          #内功        继承于 SKILL
+    shaolin.c        #少林        继承于 SKILL
+    skill.c          #技能，武功  继承于 F_CLEAN_UP
+
+  weapon/            #兵器        继承于 EQUIP
+    axe.c            #斧          
+    blade.c          #刀
+    bow.c            #弓
+    club.c           #棍
+    dagger.c         #短兵
+    fork.c           #叉
+    hammer.c         #锤
+    pin.c            #针
+    staff.c          #杖
+    sword.c          #剑
+    throwing.c       #暗器
+    whip.c           #鞭
+    xsword.c         #箫
+</pre>
+<pre>
+在 feature 和 inherit 的共同搭配下，继续演化出了这几个目录
+中的内容：
+d、clone、kungfu
+
+在feature和inherit目录下都定义了skill，
+不过在这三个目录下，并没有哪个文件继承了 F_SKILL。
+在d和clone目录下，也没有文件继承了 SKILL 。
+kungfu目录下的武功继承了 SKILL。
+</pre>
+</body>
+</html>
