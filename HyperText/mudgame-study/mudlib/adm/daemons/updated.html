@@ -64,7 +64,7 @@ void check_user(object ob)<a id="check_user"></a>
     if (ob->query("gender") == "无性")
         ob->set("class", "eunach");
 
-    if ((int)ob->query("combat/today/which_day") != time() / 86400)
+    if ((int)ob->query("combat/today/which_day") != <a href="/HyperText/mudgame-study/mudlib/doc/efuns/system/time.html" target="_blank">time()</a> / 86400)
         ob->delete ("combat/today");
 
     if (mapp(party = my["party"]) && stringp(party["party_name"]))
