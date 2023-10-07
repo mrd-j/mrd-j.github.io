@@ -56,7 +56,7 @@ void check_user(object ob)<a id="check_user"></a>
     int i;
     mapping party;
 
-    my = ob->query_entire_dbase();
+    my = ob-><a href="/HyperText/mudgame-study/mudlib/mudcore/inherit/dbase.html#query_entire_dbase" target="_blank">query_entire_dbase()</a>;
 
     if (ob->query("family/generation") == 0 || ob->query("family/family_name") == "无门无派")
         ob->delete ("family");
