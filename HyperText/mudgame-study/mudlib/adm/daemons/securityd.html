@@ -364,7 +364,7 @@ string get_status(mixed ob)<a id="get_status"></a>
 
     if (!undefinedp(wiz_status[euid]))
         return wiz_status[euid];
-    else if (member_array(euid, wiz_levels) != -1)
+    else if (<a href="/HyperText/mudgame-study/mudlib/doc/efuns/arrays/member_array.html" target="_blank">member_array</a>(euid, wiz_levels) != -1)
         return euid;
     else
         return "(player)";

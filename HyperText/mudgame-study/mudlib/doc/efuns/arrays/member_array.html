@@ -1,18 +1,29 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
 ---
 layout: default
 title: arrays / member_array
 ---
 
-### NAME
+### NAME 名称
 
     member_array()  -  returns  index of an occurence of a given item in an
-    array or string
+                       array or string
+                       返回数组或字符串中给定项第一次出现时的索引号
 
-### SYNOPSIS
+### SYNOPSIS 简介
 
     int member_array( mixed item, mixed * | string arr, void | int start );
 
-### DESCRIPTION
+### DESCRIPTION 描述
 
     Returns the index of the first occurence of 'item' in array  'arr',  or
     the  first  occurence  at  or after 'start'.  If the item is not found,
@@ -20,8 +31,14 @@ title: arrays / member_array
 
     Note, if the second argument is a string, the first parameter must be an int
     representing the character you are looking for in the provided string.
+    
+    返回数组“arr”中第一次出现“item”的索引，或在“start”处或之后第一次出现的索引。
+    如果未找到该项，则返回-1。
+    
+    请注意，如果第二个参数是字符串，则第一个参数必须是int，表示您在提供的字符串
+    中要查找的字符。
 
-### EXAMPLE
+### EXAMPLE 实例
 
     member_array( "red", ({ "red", "blue", "red", "green", "red", }) ) ;
     // 0
@@ -43,3 +60,36 @@ title: arrays / member_array
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
