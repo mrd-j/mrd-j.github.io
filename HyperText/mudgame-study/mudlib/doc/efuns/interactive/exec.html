@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: interactive / exec
+---
+
+### NAME 名称
+
+    exec()  - switches a player (interactive) connection from one object to
+              another
+              将一个玩家（可交互）连接从一个物件切换到另一个物件
+
+### SYNOPSIS 简介
+
+    int exec( object to, object from );
+
+### DESCRIPTION 描述
+
+    This efunction allows the interactive link to  a  given  object  to  be
+    migrated to another object.  That is, after a successful exec(to, from)
+    call, interactive(to) will return 1 and interactive(from)  will  return
+    0.   The player that was controlling 'from' will begin controlling 'to'
+    following the exec() call.  Note that this is a powerful  function  and
+    its use must be restricted if you wish to attempt to have a secure mud.
+    The proper way to restrict the use of exec() is to make a simul_efun of
+    the  same  name and then use valid_override(4) to restrict the use of a
+    simul_efun override (i.e. efun::exec()).  The exec() function returns 1
+    if the switch is successful (and 0 otherwise).
+    此外部函数（efun）允许将到给定对象的交互式链接迁移到另一个对象。
+    也就是说，在成功的调用exec(to，from)之后，interactive(to)将返回1，
+    而interactive(from)将返回0。
+    控制“from”的玩家将在exec()调用之后开始控制“to”。
+    请注意，这是一个功能强大的函数，如果您希望尝试使用安全的mud，则必须限制其使用。
+    限制使用exec()的正确方法是制作一个同名的simul_efun（模拟外部函数），然后使用
+    valid_override(4)来限制使用simul_efun override （即 efun::exec()）。
+    如果切换成功，exec()函数将返回1（否则返回0）。
+
+### SEE ALSO 参考
+
+    <a href="/HyperText/mudgame-study/mudlib/doc/efuns/interactive/interactive.html" target="_blank">interactive(3)</a>, <a href="" target="_blank">valid_override(4)</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

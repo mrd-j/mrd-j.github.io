@@ -809,9 +809,9 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
     user->set_temp("link_ob", ob);
     ob->set_temp("body_ob", user);
     ob->set("registered", user->query("registered"));
-    if (interactive(ob)) exec(user, ob);
+    if (<a href="/HyperText/mudgame-study/mudlib/doc/efuns/interactive/interactive.html" target="_blank">interactive</a>(ob)) <a href="/HyperText/mudgame-study/mudlib/doc/efuns/interactive/exec.html" target="_blank">exec</a>(user, ob);
 
-    write("\n目前权限：" + wizhood(user) + "\n");
+    write("\n目前权限：" + <a href="/HyperText/mudgame-study/mudlib/adm/single/simul_efun/wizard.html" target="_blank">wizhood</a>(user) + "\n");
 
     user->setup();
     if (user->query("age") == 14)
