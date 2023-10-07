@@ -220,7 +220,7 @@ int restore()
 }
 
 // This function updates player's age, called by heart_beat()
-void update_age()
+void update_age()<a id="update_age"></a>
 {
     int age;
     int delta;
@@ -246,7 +246,7 @@ void update_age()
     }
 
     last_age_set = time();
-    age = query("age_modify") + query("mud_age") / (86400 * 365 / DATE_SCALE);
+    age = query("age_modify") + query("mud_age") / (86400 * 365 / <a href="/HyperText/mudgame-study/mudlib/include/globals.html#date_scale" target="_blank">DATE_SCALE</a>);
     // 原始设置为现实1天游戏1年，玩家年龄增加分阶段递减
     // if (age > 118)
     //     age = 46 + (age - 118) / 4;
@@ -269,12 +269,12 @@ int age_month()
     return month;
 }
 
-void setup()
+void setup()<a id="setup"></a>
 {
     // We want set age first before new player got initialized with
     // random age.
     last_age_set = 0;
-    update_age();
+    <a href="#update_age">update_age</a>();
     // enable player
     ::setup();
     // GMCP
@@ -287,7 +287,7 @@ void setup()
     restore_depot();
 
     if (query("doing"))
-        CLOSE_D->continue_doing(this_object());
+        <a href="/HyperText/mudgame-study/mudlib/adm/daemons/closed.html#continue_doing" target="_blank">CLOSE_D->continue_doing</a>(this_object());
     // todo >>>？
     if (!mapp(toDoList))
         toDoList = ([]);
