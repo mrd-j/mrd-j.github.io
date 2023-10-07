@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: objects / new
+---
+
+### NAME 名称
+
+    new() - load a copy of an object
+            加载一个物件的复制体
+
+### SYNOPSIS 简介
+
+    object new( string name, ... );
+
+### DESCRIPTION 描述
+
+    Load  a  new  object  from  definition <name>, and give it a new unique
+    name.  Returns the new object.  An object with a nonzero  environment()
+    cannot be cloned.  Optionally, additional arguments may be passed to
+    new() which will be passed to 'create()' in the new object.
+    
+    从定义的＜name＞加载一个新物件，并给它一个新的唯一名称。返回这个新的物件。
+    无法克隆 <a href="/HyperText/mudgame-study/mudlib/doc/efuns/objects/environment.html" target="_blank">environment()</a> 为非零的物件。可选地，可以将额外的参数传递给new()，
+    后者将传递给新物件中的“create()”。
+
+### EXAMPLE 实例
+
+    object ob = new("/obj/torch") ; // clone a torch object
+    object money = new("/obj/money", 10, "dollars" ) ; // clone a money object and set initial values
+
+### SEE ALSO 参考
+
+    clone_object(3), destruct(3), move_object(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

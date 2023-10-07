@@ -813,7 +813,7 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
 
     write("\n目前权限：" + <a href="/HyperText/mudgame-study/mudlib/adm/single/simul_efun/wizard.html" target="_blank">wizhood</a>(user) + "\n");
 
-    user->setup();
+    <a href="/HyperText/mudgame-study/mudlib/clone/user/user.html#setup" target="_blank">user->setup()</a>;
     if (user->query("age") == 14)
     {
         user->set("food", user->max_food_capacity());
@@ -823,19 +823,19 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
     // In case of new player, we save them here right aftre setup
     // compeleted.
     user->set("last_save", time());
-    user->save();
-    ob->save();
+    <a href="/HyperText/mudgame-study/mudlib/clone/user/user.html#save" target="_blank">user->save()</a>;
+    <a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#save" target="_blank">ob->save()</a>;
 
     // check the user
-    UPDATE_D->check_user(user);
+    <a href="/HyperText/mudgame-study/mudlib/adm/daemons/updated.html#check_user" target="_blank">UPDATE_D->check_user</a>(user);
 
-    if (wizhood(user) == "(player)")
+    if (<a href="/HyperText/mudgame-study/mudlib/adm/single/simul_efun/wizard.html" target="_blank">wizhood</a>(user) == "(player)")
     {
         if (user->query("class") == "bonze")
         {
             if (user->query("gender") == "女性")
             {
-                cloth = new("/clone/cloth/ni-cloth.c");
+                cloth = <a href="/HyperText/mudgame-study/mudlib/doc/efuns/objects/new.html" target="_blank">new</a>("/clone/cloth/ni-cloth.c");
                 shoe = new("/clone/cloth/ni-xie.c");
             }
             else
@@ -870,8 +870,8 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
             }
         }
 
-        cloth->move(user);
-        catch(cloth->wear());
+        cloth-><a href="/HyperText/mudgame-study/mudlib/feature/move.html#move" target="_blank">move(user)</a>;
+        catch(cloth-><a href="/HyperText/mudgame-study/mudlib/feature/equip.html#wear" target="_blank">wear()</a>);
         shoe->move(user);
         catch(shoe->wear());
     }
