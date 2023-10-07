@@ -938,9 +938,9 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
             user->move(startroom);
         else
         {
-            user->move(START_ROOM);
-            startroom = START_ROOM;
-            user->set("startroom", START_ROOM);
+            user->move(<a href="/HyperText/mudgame-study/mudlib/include/login.html#start_room" target="_blank">START_ROOM</a>);
+            startroom = <a href="/HyperText/mudgame-study/mudlib/include/login.html#start_room" target="_blank">START_ROOM</a>;
+            user->set("startroom", <a href="/HyperText/mudgame-study/mudlib/include/login.html#start_room" target="_blank">START_ROOM</a>);
         }
         tell_room(startroom, user->query("name") +
             "连线进入这个世界。\n", ({user}));
@@ -952,15 +952,15 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
         {
             write(NOR "\n欢迎回到" + <a href="/HyperText/mudgame-study/mudlib/include/getconfig.html#local_mud_name" target="_blank">LOCAL_MUD_NAME()</a> + "。\n");
             // show rules
-            color_cat(UNREG_MOTD);
+            <a href="/HyperText/mudgame-study/mudlib/adm/single/simul_efun/ansi.html#color_cat" target="_blank">color_cat</a>(<a href="/HyperText/mudgame-study/mudlib/include/login.html#unreg_motd" target="_blank">UNREG_MOTD</a>);
             ob->set("login_times", 1);
-            CHANNEL_D->do_channel(this_object(), "chat", "欢迎新玩家" + user->short() + "来到" + LOCAL_MUD_NAME() + "。");
+            <a href="/HyperText/mudgame-study/mudlib/adm/daemons/channeld.html#do_channel" target="_blank">CHANNEL_D->do_channel</a>(this_object(), "chat", "欢迎新玩家" + user->short() + "来到" + LOCAL_MUD_NAME() + "。");
         }
         else
         {
             ob->add("login_times", 1);
             write(NOR "\n你是第 " + ob->query("login_times") + " 次光临" + LOCAL_MUD_NAME() + "。\n");
-            write("\n你上次是 " + HIG + ctime(ob->query("last_on")) + NOR + " 从 " + HIR +
+            write("\n你上次是 " + HIG + <a href="/HyperText/mudgame-study/mudlib/doc/efuns/system/ctime.html" target="_blank">ctime</a>(ob->query("last_on")) + NOR + " 从 " + HIR +
                     ob->query("last_from") + NOR + " 连接的。\n");
         }
     }
