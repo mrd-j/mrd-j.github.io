@@ -917,22 +917,22 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
         {
             if (user->is_ghost())
                 user->reincarnate();
-            user->set("startroom", REGISTER_ROOM);
+            user->set("startroom", <a href="/HyperText/mudgame-study/mudlib/include/login.html#start_room#register_room" target="_blank">REGISTER_ROOM</a>);
         }
         else if (! stringp(user->query("born")))
         {
             if (user->is_ghost())
-                user->reincarnate();
-            user->set("startroom", BORN_ROOM);
+                user-><a href="/HyperText/mudgame-study/mudlib/feature/damage.html#reincarnate" target="_blank">reincarnate()</a>;
+            user->set("startroom", <a href="/HyperText/mudgame-study/mudlib/include/login.html#start_room#born_room" target="_blank">BORN_ROOM</a>);
         }
 
         if (user->is_in_prison())
             startroom = user->query_prison();
         else if (user->is_ghost())
-            startroom = DEATH_ROOM;
+            startroom = <a href="/HyperText/mudgame-study/mudlib/include/login.html#start_room#death_room" target="_blank">DEATH_ROOM</a>;
         else if (! stringp(startroom = user->query("startroom")) ||
             file_size(startroom + ".c") < 0)
-            startroom = START_ROOM;
+            startroom = <a href="/HyperText/mudgame-study/mudlib/include/login.html#start_room" target="_blank">START_ROOM</a>;
 
         if (! catch(load_object(startroom)))
             user->move(startroom);
@@ -950,7 +950,7 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
     {
         if (!(ob->query("login_times")))
         {
-            write(NOR "\n欢迎回到" + LOCAL_MUD_NAME() + "。\n");
+            write(NOR "\n欢迎回到" + <a href="/HyperText/mudgame-study/mudlib/include/getconfig.html#local_mud_name" target="_blank">LOCAL_MUD_NAME()</a> + "。\n");
             // show rules
             color_cat(UNREG_MOTD);
             ob->set("login_times", 1);
