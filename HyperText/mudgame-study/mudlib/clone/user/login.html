@@ -39,7 +39,7 @@ void logon()<a id="logon"></a>
 {
     call_out("time_out", <a href="/HyperText/mudgame-study/mudlib/include/login.html#login_timeout" target="_blank">LOGIN_TIMEOUT</a>);
     // 延迟登陆，解决mudlet初次连接乱码问题
-    call_out_walltime("login", 0.25);//0.25秒后执行login()
+    <a href="/HyperText/mudgame-study/mudlib/doc/efuns/calls/remove_call_out.html" target="_blank">call_out_walltime</a>("login", 0.25);//0.25秒后执行login()
 }
 
 // Don't destruct(this_object()) in the net_dead() interactive apply or
