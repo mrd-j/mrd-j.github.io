@@ -37,7 +37,7 @@ void login()<a id="login"></a>
 
 void logon()<a id="logon"></a>
 {
-    call_out("time_out", LOGIN_TIMEOUT);//LOGIN_TIMEOUT 为 240，240秒后执行time_out()
+    call_out("time_out", <a href="/HyperText/mudgame-study/mudlib/include/login.html#login_timeout" target="_blank">LOGIN_TIMEOUT</a>);
     // 延迟登陆，解决mudlet初次连接乱码问题
     call_out_walltime("login", 0.25);//0.25秒后执行login()
 }
