@@ -74,7 +74,7 @@ string query_save_file()<a id="query_save_file"></a>
 
     id = query("id", 1);
     if (! stringp(id)) return 0;
-    return sprintf(DATA_DIR "login/%c/%s", id[0], id);//DATA_DIR为"/data/"
+    return sprintf(<a href="/HyperText/mudgame-study/mudlib/include/globals.html#data_dir" target="_blank">DATA_DIR</a> "login/%c/%s", id[0], id);
 }
 
 void receive_message(string type, string str)<a id="receive_message"></a>
