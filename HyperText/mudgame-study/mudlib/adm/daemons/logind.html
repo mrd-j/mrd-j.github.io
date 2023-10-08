@@ -206,7 +206,7 @@ private void get_id(string arg, object ob)<a id="get_id"></a>
     input_to("confirm_id", ob);
 }
 
-nomask int matches_password(string str, string password)
+nomask int matches_password(string str, string password)<a id="matches_password"></a>
 {
     if (password[0..2] == "$6$")
         return crypt(str, password) == password;
@@ -264,7 +264,7 @@ private void get_passwd(string pass, object ob)<a id="get_passwd"></a>
     check_ok(ob);
 }
 
-private void reset_ad_password(string pass, object ob)
+private void reset_ad_password(string pass, object ob)<a id="reset_ad_password"></a>
 {
     string my_pass;
     write("\n");
@@ -290,7 +290,7 @@ private void reset_ad_password(string pass, object ob)
     input_to("confirm_reset_ad_password", 1, ob);
 }
 
-private void confirm_reset_ad_password(string pass, object ob)
+private void confirm_reset_ad_password(string pass, object ob)<a id="confirm_reset_ad_password"></a>
 {
     //mapping my;
     string old_pass;
@@ -387,7 +387,7 @@ private void check_ok(object ob)<a id="check_ok"></a>
         write(HIR "无法创建该玩家，你可以尝试重新登录或是和巫师联系。\n" NOR);
 }
 
-private void create_new_player(string yn, object ob)
+private void create_new_player(string yn, object ob)<a id="create_new_player"></a>
 {
     if (yn != "y" && yn != "Y")
     {
@@ -401,7 +401,7 @@ private void create_new_player(string yn, object ob)
     confirm_id(yn, ob);
 }
 
-private void confirm_relogin(string yn, object ob, object user)
+private void confirm_relogin(string yn, object ob, object user)<a id="confirm_relogin"></a>
 {
     object old_link;
 
@@ -551,7 +551,7 @@ private void get_name(string arg, object ob)<a id="get_name"></a>
     input_to("new_ad_password", 1, ob);
 }
 
-private void input_full_name(string arg, object ob, string fname)
+private void input_full_name(string arg, object ob, string fname)<a id="input_full_name"></a>
 {
     if (arg != fname)
     {
@@ -588,7 +588,7 @@ private void new_ad_password(string pass, object ob)<a id="new_ad_password"></a>
     input_to("confirm_ad_password", 1, ob);
 }
 
-private void confirm_ad_password(string pass, object ob)
+private void confirm_ad_password(string pass, object ob)<a id="confirm_ad_password"></a>
 {
     //mapping my;
     string old_pass;
@@ -637,7 +637,7 @@ private void new_password(string pass, object ob)<a id="new_password"></a>
     input_to("confirm_password", 1, ob);
 }
 
-private void confirm_password(string pass, object ob)
+private void confirm_password(string pass, object ob)<a id="confirm_password"></a>
 {
     // mapping my;
     string old_pass;
@@ -725,7 +725,7 @@ private void get_gender(string gender, object ob)<a id="get_gender"></a>
     write("\n");
 }
 
-object make_body(object ob)
+object make_body(object ob)<a id="make_body"></a>
 {
     string err;
     object user;
@@ -1020,7 +1020,7 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
         user->unconcious();
 }
 
-varargs void reconnect(object ob, object user, int silent)
+varargs void reconnect(object ob, object user, int silent)<a id="reconnect"></a>
 {
     //int new_mail_n;
     object sob; // 检查身上物品，是否有作弊嫌疑
@@ -1120,7 +1120,7 @@ int check_legal_id(string id)<a id="check_legal_id"></a>
     return 1;
 }
 
-int check_legal_name(string name, int maxlen)
+int check_legal_name(string name, int maxlen)<a id="check_legal_name"></a>
 {
     int i;
 
@@ -1148,12 +1148,12 @@ int check_legal_name(string name, int maxlen)
     return 1;
 }
 
-object find_body(string name)
+object find_body(string name)<a id="find_body"></a>
 {
     return find_player(name);
 }
 
-int set_wizlock(int level)
+int set_wizlock(int level)<a id="set_wizlock"></a>
 {
     if (wiz_level(this_player(1)) <= level)
         return 0;
