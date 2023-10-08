@@ -824,7 +824,7 @@ varargs void enter_world(object ob, object user, int silent)<a id="enter_world">
     // compeleted.
     user->set("last_save", time());
     <a href="/HyperText/mudgame-study/mudlib/clone/user/user.html#save" target="_blank">user->save()</a>;
-    <a href="/HyperText/mudgame-study/mudlib/feature/save.html#save" target="_blank">ob->save()</a>;
+    ob-><a href="/HyperText/mudgame-study/mudlib/feature/save.html#save" target="_blank">save()</a>;
 
     // check the user
     <a href="/HyperText/mudgame-study/mudlib/adm/daemons/updated.html#check_user" target="_blank">UPDATE_D->check_user</a>(user);
