@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "虎穴");
+        set("long", @LONG
+这里是个隐藏在密林里的岩洞，里面腥味扑鼻，随处都是
+吃剩的兽骨。几只威风凛凛的大老虎正躺在洞口懒懒的晒太阳。
+LONG);
+
+        set("exits", ([
+                "south" : __DIR__"huxue2",
+                "out" : __DIR__"milin7",
+        ]));
+        set("objects", ([
+                "/clone/quarry/laohu" : 2,
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

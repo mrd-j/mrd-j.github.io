@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "厨房");
+        set("long", @LONG
+这里是全真教的厨房，屋角上堆着一大堆手臂粗细的木柴，
+看来还没有劈好。一位火工道人正愁眉苦脸地坐在那里，看着
+那堆柴。墙上挂着一块牌子，墙边扔着一把柴刀。
+LONG);
+
+        set("exits",([
+                "west" : __DIR__"shantang",
+        ]));
+        set("resource/water", 1);
+
+        set("objects" , ([
+                __DIR__"npc/huogong" : 1,
+        "/d/wudu/obj/ganchai" : 2,
+        ]));
+
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

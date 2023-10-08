@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// chengqi.c
+
+inherit NPC;
+
+void create()
+{
+    set_name("陈七", ({ "chen qi","chen" }) );
+    set("gender", "男性");
+    set("title", "趟子手");
+    set("age", 30);
+    set("long",
+        "这是个镖局趟子手，长得虎背熊腰，一身横练功夫。\n");
+    set("combat_exp", 10000);
+        set("shen_type", -1);
+    set("attitude", "peaceful");
+
+    set("apply/attack", 20);
+    set("apply/defense", 20);
+
+    set_skill("unarmed", 40);
+    set_skill("sword", 20);
+    set_skill("parry", 40);
+    set_skill("dodge", 40);
+    setup();
+
+        carry_object("/clone/misc/cloth")->wear();
+
+    add_money("silver", 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

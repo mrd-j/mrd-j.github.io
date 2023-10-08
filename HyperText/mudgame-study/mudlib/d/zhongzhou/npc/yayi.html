@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+
+void create()
+{
+        set_name("衙役", ({ "ya yi", "ya" }));
+        set("gender", "男性");
+        set("age", 25);
+        set("long", "一个高大威猛的汉子，因为久在官府做事，脸\n"
+                    "上已经磨炼得毫无表情。\n");
+        set("combat_exp", 7500);
+        set("shen_type", 1);
+        set_skill("unarmed", 30);
+        set_skill("dodge", 30);
+
+        setup();
+        carry_object("/d/city/npc/obj/yayifu")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "走廊");
+        set("long", @LONG
+这是衙门大堂后面的走廊，走廊西面有一小石拱门，里面
+是一个小花园，花丛中有两个花匠正在修剪花草。北面走廊的
+尽头的门开着，不知是不是就是师爷处.
+LONG);
+
+        set("exits", ([
+                "west" : __DIR__"huayuan",
+                "north" : __DIR__"zoulang1",
+                "east"  : __DIR__"yamen",
+
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

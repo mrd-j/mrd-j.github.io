@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+////Room: qixiang3.c
+
+inherit ROOM;
+
+void create ()
+{
+        set ("short", "麒祥街");
+        set ("long", @LONG
+麒祥街是长安城北一条东西向的大道，街面宽敞洁净，街上十分热
+闹，人来人往川流不息。大街的两旁商家云集，大大小小的店铺比邻而
+立。街的北边是一家赌场，出出入入的人有喜有忧。赌场的老板为了方
+便客人，就又在麒祥街对面开了一家当铺。
+LONG);
+        set("exits",
+        ([ //sizeof() == 4
+        "south" : __DIR__"dangpu",
+            "north" : __DIR__"duchang",
+            "west" : __DIR__"qixiang2",
+            "east" : __DIR__"beian-daokou",
+        ]));
+
+        set("outdoors", "changan");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

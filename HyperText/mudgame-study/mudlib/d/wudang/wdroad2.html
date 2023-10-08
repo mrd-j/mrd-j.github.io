@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "青石大道");
+        set("long", @LONG
+你走在一条青石大道上，北边隐约可见到扬州城的南城墙。
+此处往东南望去，可以看到一个市镇。
+LONG);
+        set("outdoors", "wudang");
+        set("exits", ([
+                "south" : __DIR__"wdroad3",
+                "north" : __DIR__"wdroad1",
+                "southeast" : "/d/guiyun/yixing",
+        ]));
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

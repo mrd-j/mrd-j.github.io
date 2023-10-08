@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// xilingqiao.c
+// Date: Nov.1997 by Venus
+#include <room.h>
+inherit ROOM;
+void create()
+{
+        set("short", "西泠桥");
+        set("long", @LONG
+西泠桥衔结孤山，跨过里西湖。桥的东南边是孤山。北边则是一
+条青石大道。
+LONG);
+        set("exits", ([
+            "southeast" : __DIR__"gushan",
+            "north"     : __DIR__"road7",
+        ]));
+        set("outdoors", "hangzhou");
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

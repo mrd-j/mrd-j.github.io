@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "西大街");
+    set("long", @LONG
+这是一条宽阔的青石板街道，向东西两头延伸。行人络绎
+不绝，北边是当地有名的关圣庙，东边有一个热闹的广场。
+LONG);
+        set("outdoors", "jingzhou");
+    set("exits", ([
+        "east" : __DIR__"xidajie1",
+        "west" : __DIR__"jzximen",
+        "north" : __DIR__"guanmiao",
+                "south" : __DIR__"lydao1",
+    ]));
+        set("objects", ([
+                "/d/beijing/npc/hunhun" : 1,
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

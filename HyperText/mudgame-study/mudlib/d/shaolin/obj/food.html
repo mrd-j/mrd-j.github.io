@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ITEM;
+inherit F_FOOD;
+
+#include <ansi.h>
+
+void create()
+{
+        set_name(RED "糖醋里脊" NOR, ({ "tangcu liji", "tangcu", "liji" }) );
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("long", "一份热气腾腾的糖醋里脊。\n");
+                set("unit", "份");
+                set("value", 160);
+                set("food_remaining", 8);
+                set("food_supply", 30);
+                set("material", "meet");
+        }
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

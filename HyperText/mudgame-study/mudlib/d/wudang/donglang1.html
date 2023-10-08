@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+        set("short", "东厢走廊");
+        set("long", @LONG
+你走在一条走廊上，东边有几间雅室，人来人往很是热闹。
+西边则是武当派的大殿。
+LONG );
+        set("exits", ([
+                "east" : __DIR__"donglang2",
+                "west" : __DIR__"sanqingdian",
+        ]));
+        set("objects", ([
+                CLASS_D("wudang") + "/xi" : 1
+        ]));
+        setup();
+}
+
+int valid_leave(object me, string dir)
+{
+        object guarder;
+
+        if (dir != "east")
+                return 1;
+
+        if (! objectp(guarder = present("zhang songxi", environment(me))))
+                return 1;
+
+        return guarder->permit_pass(me, dir);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

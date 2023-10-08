@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: sockets / socket_write
+---
+
+### NAME
+
+    socket_write() - send a message from a socket
+
+### SYNOPSIS
+
+    #include <socket_err.h>
+
+    int socket_write( int s, mixed message,
+                      void | string address );
+
+### DESCRIPTION
+
+    socket_write()  sends  a  message  on a socket s. If the socket s is of
+    type STREAM or MUD, the  socket  must  already  be  connected  and  the
+    address  is  not  specified.  If  the  socket  is of type DATAGRAM, the
+    address must be specified.  The address is of the form: "127.0.0.1 23".
+
+### RETURN VALUES
+
+    socket_write() returns:
+
+        EESUCCESS on success.
+
+        a negative value indicated below on error.
+
+### ERRORS
+
+    EEFDRANGE      Descriptor out of range.
+
+    EEBADF         Descriptor is invalid.
+
+    EESECURITY     Security violation attempted.
+
+    EENOADDR       Socket not bound to an address.
+
+    EEBADADDR      Problem with address format.
+
+    EENOTCONN      Socket not connected.
+
+    EEALREADY      Operation already in progress.
+
+    EETYPENOTSUPP  Object type not supported.
+
+    EEBADDATA      Sending data with too many nested levels.
+
+    EESENDTO       Problem with sendto.
+
+    EEMODENOTSUPP  Socket mode not supported.
+
+    EEWOULDBLOCK   Operation would block.
+
+    EESEND         Problem with send.
+
+    EECALLBACK     Wait for callback.
+
+### SEE ALSO
+
+    socket_connect(3), socket_create(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+
+void create()
+{
+        set_name("丫环", ({ "ya huan","ya","huan"}) );
+        set("gender", "女性" );
+        set("age", 14+random(10));
+        set("long", "这是一个小丫环，容貌清秀脱俗。\n");
+        set("shen_type", 1);
+        set("combat_exp", 3000);
+        set("str", 18);
+        set("dex", 18);
+        set("con", 18);
+        set("int", 19);
+        set("attitude", "friendly");
+        setup();
+        carry_object("/clone/misc/cloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

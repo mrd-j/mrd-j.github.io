@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/suzhou/fengqiao.c
+// Date: May 31, 98  Java
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "枫桥");
+    set("long", @LONG
+寺的北面有一座桥孔呈半圆的单空石桥--枫桥，她跨于运
+河的枫桥湾。桥的东面是铁岭关，它与白虎关，浒墅关，合称
+苏州三关。
+LONG );
+    set("outdoors", "suzhou");
+    set("no_clean_up", 0);
+    set("exits", ([
+        "in" : __DIR__"hanshidian",
+        "north" : __DIR__"tielingguan",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

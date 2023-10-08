@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// chat command: tell.c
+
+#include <net/messaged.h>
+
+inherit F_CLEAN_UP;
+
+int main(object user, mapping info)
+{
+    if (!stringp(info[MSGTO]))
+        return MESSAGE_D->error_msg("你要发消息给谁？\n");
+
+    if (!stringp(info[MESSAGE]))
+        return MESSAGE_D->error_msg("你要说什么话？\n");
+
+    return MESSAGE_D->send_msg_to(user, info[MSGTO], info[MESSAGE]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

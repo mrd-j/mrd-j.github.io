@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// gangcha.c
+
+#include <weapon.h>
+
+inherit FORK;
+
+void create()
+{
+        set_name("钢叉", ({ "gangcha", "cha","fork" }) );
+        set_weight(8000);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "柄");
+                set("value", 1000);
+                set("material", "iron");
+                set("long", "一柄锋利的钢叉。\n");
+                set("wield_msg", "$N抄起一柄$n，还拿衣服擦了擦叉尖。\n");
+        }
+        init_fork(25);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit TRANS_ROOM;
+
+void create()
+{
+      set("short","马厩");
+      set("long",@LONG
+这是关外的马厩，关外苦寒之地，颇乏新鲜草料。但东北大汉惯能吃
+苦，马夫们会把马牵到马厩好生照看，将它们喂饱饮足，再洗刷得干乾净
+净，一直伺候到客人上路。马厩雪披下的木柱上钉着一块破木牌(paizi)。
+LONG);
+      set("exits",([
+                "east"      : __DIR__"kedian",
+      ]));
+      set("outdoors", "guanwai");
+      set("no_fight", 1);
+      set("objects", ([
+                "/clone/horse/zaohongma": 1,
+                "/clone/horse/huangbiaoma": 1,
+                "/clone/horse/ziliuma": 1,
+                "/clone/npc/mafu": 1,
+      ]));
+      setup();
+      replace_program(TRANS_ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

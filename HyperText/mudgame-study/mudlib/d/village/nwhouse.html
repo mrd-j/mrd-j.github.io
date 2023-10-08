@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/village/nwhouse.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "民房");
+    set("long", @LONG
+这是一个小房间，屋子里飘着一股大葱加香粉的味道。靠墙摆着张大
+床，床头有个小梳妆台。
+LONG );
+        set("exits", ([ /* sizeof() == 1 */
+            "northeast" : __DIR__"nwroad2",
+        ]));
+        set("objects", ([
+                __DIR__"npc/cuihua": 1
+        ]) );
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

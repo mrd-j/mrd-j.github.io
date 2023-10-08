@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// nailao.c 奶酪
+
+inherit ITEM;
+inherit F_FOOD;
+
+void create()
+{
+    set_name("奶酪", ({ "nai lao", "nailao" }));
+    set_weight(300);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("long", "一块乳黄色的奶酪。\n");
+        set("unit", "块");
+        set("value", 150);
+        set("food_remaining", 5);
+        set("food_supply", 60);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

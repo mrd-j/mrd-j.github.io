@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/fuzhou/ximen.c
+// Date: May 12, 98  Java
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "福州西门");
+    set("long", @LONG
+这里是福州西门。出此门向西可达中原。
+LONG );
+    set("exits", ([
+                "east" : __DIR__"ximendajie",
+                "west" : __DIR__"fzroad11",
+    ]));
+    set("outdoors", "fuzhou");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

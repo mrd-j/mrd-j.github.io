@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// yadan.c 
+// Jay 5/23/96
+
+inherit ITEM;
+inherit F_FOOD;
+
+void create()
+{
+        set_name("臭鸭蛋", ({"chou yadan", "yadan", "egg"}));
+        set_weight(70);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("long", "臭鸭蛋闻着臭，吃着香。\n");
+                set("unit", "颗");
+                set("value", 80);
+                set("food_remaining", 1);
+                set("food_supply", 80);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

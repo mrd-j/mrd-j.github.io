@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// hupi.c
+//
+
+#include <armor.h>
+
+inherit CLOTH;
+
+void create()
+{
+        set_name("虎皮", ({ "hu pi" }) );
+        set_weight(20000);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "张");
+                set("material", "cloth");
+        set("value", 20000);
+                set("armor_prop/armor", 10);
+        }
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

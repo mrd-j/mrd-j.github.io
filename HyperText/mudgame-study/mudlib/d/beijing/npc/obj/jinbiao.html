@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <weapon.h>
+#include <ansi.h>
+
+inherit THROWING;
+
+void create()
+{
+        set_name(HIY "金镖" NOR, ({ "jin biao", "jin", "biao" }) );
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "些");
+                set("value", 2000);
+                set("base_unit", "支");
+                set("base_weight", 300);
+                set("base_value", 4000);
+                set("material", "iron");
+        }
+        set_amount(10);
+        init_throwing(50);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

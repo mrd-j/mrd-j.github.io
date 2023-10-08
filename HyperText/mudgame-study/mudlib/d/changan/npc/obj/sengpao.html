@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//sengpao.c
+
+#include <armor.h>
+#include <ansi.h>
+
+inherit CLOTH;
+
+void create()
+{
+    set_name(HIY"僧袍"NOR, ({ "seng pao", "pao", "cloth" }) );
+    set("long", "这是一件寻常的僧袍，是和尚们的普通装束。\n");
+    set_weight(3000);
+    if (clonep())
+        set_default_object(__FILE__);
+    else
+    {
+            set("unit", "件");
+            set("material", "cloth");
+            set("armor_prop/armor", 10);
+            set("armor_prop/dodge", 3);
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// y_jiasha.c 黄色袈裟
+//
+
+#include <armor.h>
+#include <ansi.h>
+
+inherit CLOTH;
+
+void create()
+{
+        set_name(HIY"黄色袈裟"NOR,({"jiasha","jia sha","cloth"}));
+        set_weight(5000);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "件");
+                set("material", "cloth");
+                set("armor_prop/armor", 20);
+                set("value",100);
+        }
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// baiyubi.c
+
+inherit ITEM;
+
+void create()
+{
+    set_name("白玉笔", ({ "baiyu bi", "bi" }));
+    set_weight(300);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "支");
+        set("long", "晶莹剔透的的汉白玉琢磨的笔形饰物。\n");
+        set("value", 3000);
+        set("material", "stone");
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

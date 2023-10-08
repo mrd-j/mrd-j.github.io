@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: interactive / disable_commands
+---
+
+### NAME
+
+    disable_commands() - makes a living object non-living
+
+### SYNOPSIS
+
+    int disable_commands( void );
+
+### DESCRIPTION
+
+    Makes a living object non-living, that is, add_actions have no effects,
+    livingp returns false, and, if the object is interactive, disallows the
+    user  to type in commands other than for an input_to.  disable_commands
+    always returns 0.
+
+    calling disable_commands() also have side-effct of clearing all actions
+    previously  added  by  other  object,  it also removes actions that was
+    defined by this object.
+
+### SEE ALSO
+
+    enable_commands(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

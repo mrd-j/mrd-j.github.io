@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//Room: bed.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "床上");
+        set("long", @LONG
+一张白色的软榻，看上去极为精致，纱衾鸳枕之间散发出一丝丝幽香．
+LONG);
+        set("exits", ([
+            "out": __DIR__"kzsleep",
+        ]));
+        set("no_fight", 1);
+           //set("no_magic", 1);
+        set("sleep_room",1);
+        set("if_bed",1);
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

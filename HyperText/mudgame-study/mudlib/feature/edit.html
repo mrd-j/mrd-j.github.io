@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// edit.c
+
+int edit(function callback)
+{
+    write("结束离开用 '.'，取消输入用 '~q'，使用内建列编辑器用 '~e'。\n");
+    write("----------------------------------------------------------\n");
+    input_to("input_line", "", callback);
+    return 1;
+}
+
+void input_line(string line, string text, function callback)
+{
+    if (line == ".")
+    {
+        (*callback)(text);
+        return;
+    }
+    else if (line == "~q")
+    {
+        write("输入取消。\n");
+        return;
+    }
+    else if (line == "~e")
+    {
+    }
+    else
+        text += line + "\n";
+    input_to("input_line", text, callback);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "开封贡院");
+    set("long", @LONG
+过了州桥，街道边一处高深的大院，威武的石狮守卫两边
+门楣上『贡院』两字作深红色，每月上旬，此处将进行举人的
+开考，门边墙上贴了张告示。
+LONG);
+    set("objects", ([
+          __DIR__"npc/zhukao3" : 1,
+    ]));
+        set("no_clean_up", 0);
+    set("exits", ([
+          "east" : __DIR__"road2",
+    ]));
+        set("outdoors", "kaifeng");
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

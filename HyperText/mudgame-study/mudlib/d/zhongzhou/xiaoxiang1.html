@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "小巷");
+    set("long", @LONG
+前面看起来好象要到小巷底了，巷中行人越发稀少。西北
+角上好象有一座破烂房子，远远望去烟雾弥漫，陈旧不堪，原
+来是座破庙。
+LONG);
+    set("no_clean_up", 0);
+    set("exits", ([
+          "northwest" : __DIR__"guandimiao",
+          "east" : __DIR__"xiaoxiang",
+    ]));
+    set("outdoors", "zhongzhou");
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+inherit BOOK;
+
+void create()
+{
+        set_name(HIR "「唐诗选辑」" NOR, ({ "tangshi xuanji", "tangshi", "xuanji", "book" }));
+        set_weight(500);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("unit", "本");
+                set("long", HIR "一本在民间流传甚广的诗选。\n" NOR);
+                set("value", 500);
+                set("material", "paper");
+                set("skill",
+                ([
+                        "name" : "literate",
+                        "jing_cost" : 5,
+                        "difficulty" : 10,
+                        "max_skill" : 9,
+                        "min_skill" : 0,
+                ]) );
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "密室");
+        set("long", @LONG
+这里是全真教弟子为了直达中原修建的密室，这里的光线
+非常昏暗，也许已经身处地下了。
+LONG);
+        set("exits", ([
+                "up" : __DIR__"diziju",
+                "eastup" : "/d/city/guangchang",
+        ]));
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

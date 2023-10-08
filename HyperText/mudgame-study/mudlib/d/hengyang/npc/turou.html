@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// turou.c 野兔肉
+inherit ITEM;
+inherit F_FOOD;
+void create()
+{
+    set_name("兔肉", ({"tu rou", "tu"}));
+    set_weight(300);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("long", "一块鲜血淋漓肥的野兔肉。\n");
+        set("unit", "块");
+        set("value", 200);
+        set("food_remaining", 4);
+        set("food_supply", 50);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "黑森林");
+        set("long", @LONG
+这里就是有名的黑森林，四周均是茂密的丛林，巨大的古木遮天
+蔽日，头顶看不到一片天空。脚下不时传来轻微的声响，似乎有什么
+东西从草丛中游过，远处偶尔传来一阵野兽的嚎叫声。
+LONG);
+        set("outdoors", "wudujiao");
+
+        set("exits", ([
+                "east" : __DIR__"milin4",
+                "south" : __DIR__"milin3",
+                "west" : __DIR__"milin6",
+                "north" : __DIR__"milin4",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

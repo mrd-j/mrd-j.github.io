@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/wanjiegu/wlshan.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "无量山");
+        set("long", @LONG
+这里就是无量山区。山上树木丛生，很少有人走动，你都无法
+找到一条能够上山的路。沿着山脚有一条蜿蜒的小路。
+LONG
+        );
+        set("outdoors", "wanjiegu");
+        set("exits", ([ /* sizeof() == 2 */
+                "northwest" : __DIR__"wlroad1",
+                "southeast" : __DIR__"riverside4",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

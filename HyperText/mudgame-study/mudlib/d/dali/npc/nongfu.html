@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// nongfu.c
+
+inherit NPC;
+
+void create()
+{
+    set_name("农夫",({ "nong fu", "fu" }) );
+        set("gender", "男性" );
+        set("age", 22);
+        set("long", "一位乌夷族的农夫，束发总于脑后，用布纱包着，上半身裸露，下著兽皮。\n");
+        set_temp("apply/defense", 15);
+    set("combat_exp", 1700);
+    set("shen_type", 1);
+        set("per", 18);
+        set("str", 24);
+        set("dex", 25);
+        set("con", 36);
+        set("int", 15);
+        set("attitude", "friendly");
+        setup();
+        carry_object(__DIR__"obj/wdahui")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

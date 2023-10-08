@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /qingcheng/chaoyangdong.c
+// Date: Frb.20 1998 by Java
+
+inherit ROOM;
+void create()
+{
+    set("short", "朝阳洞");
+    set("long", @LONG
+你来到朝阳洞。洞深广数丈，相传是宁封子栖息处。这里也是
+观日好去处，“古洞常临光照耀”，正是指旭日东升，霞光透过绿
+荫，射到洞口，一片璀灿绚丽的景色。
+LONG );
+        set("outdoors","qingcheng");
+    set("exits", ([
+        "westdown"  : __DIR__"zushidian",
+        "northup"   : __DIR__"sanwanjiudao",
+    ]));
+    set("objects", ([
+        __DIR__"npc/hong" : 1,
+    ]));
+//    set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

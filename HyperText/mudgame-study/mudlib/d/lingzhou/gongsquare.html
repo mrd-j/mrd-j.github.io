@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /lingzhou/gongsquare.c
+// Java. Sep 21 1998
+
+#include <room.h>
+
+inherit ROOM;
+void create()
+{
+    set("short", "皇宫广场");
+    set("long", @LONG
+这里是皇宫广场。
+LONG );
+    set("exits", ([
+        "south"  : __DIR__"gonggate",
+    ]));
+    set("objects", ([
+        __DIR__"npc/gongweishi" :2,
+    ]));
+    setup();
+    create_door("south" , "红漆宫门", "north" , DOOR_CLOSED);
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

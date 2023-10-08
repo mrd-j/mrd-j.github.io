@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// jinyt.c
+
+inherit ITEM;
+
+void create()
+{
+    set_name("金砚台", ({ "jin yantai", "yantai" }));
+    set_weight(1500);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "座");
+                set("no_sell", "这...这是什么东西？我可不敢要。\n");
+        set("long", "一座纯金的砚台，入手非常的沉重。\n");
+        set("value", 1);
+        set("material", "gold");
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

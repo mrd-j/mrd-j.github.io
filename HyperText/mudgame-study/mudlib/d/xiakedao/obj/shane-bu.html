@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shane-bu.c 赏善罚恶簿
+
+#include <armor.h>
+#include <ansi.h>
+
+inherit NECK;
+
+void create()
+{
+        set_name("赏善罚恶簿", ({ "shane bu", "bu" }));
+        set("long", "这是一本赏善罚恶簿，里头记载着江湖善恶。\n");
+        set_weight(300);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("unit", "本");
+                set("material", "paper");
+        }
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short","司马堂");
+    set("long",@LONG
+这里是大理国司马堂。大理东北强宋，西北吐蕃，历年
+来边疆宁靖，皆司马劳顿之功。盖吐蕃垂涎大理已久，每每
+强辞胁迫，大理不得不重兵于西北。
+LONG);
+    set("objects", ([
+            CLASS_D("duan") + "/fan" : 1,
+    ]));
+    set("exits", ([
+            "west"  : __DIR__"zonglichu",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

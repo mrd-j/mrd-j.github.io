@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// zhangkang.c
+
+inherit NPC;
+
+void create()
+{
+    set_name("张康", ({ "zhang kang", "zhang" }));
+    set("gender", "男性");
+    set("age", 25);
+    set("per", 20);
+    set("long", "这是个老实巴交的汉子，是张朝唐的从人。\n");
+    set("combat_exp", 2000);
+        set_skill("dodge", 20);
+        set_skill("unarmed", 20);
+        set_temp("apply/attack",  10);
+        set_temp("apply/defense", 10);
+    set("shen_type", 1);
+    setup();
+
+    add_money("silver",3);
+    carry_object("/clone/misc/cloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

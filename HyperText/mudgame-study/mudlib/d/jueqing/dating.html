@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "大厅");
+        set("long", @LONG
+绝情谷大厅正中摆放着一个红棕色茶几，四周并排着几个
+椅子，椅背上刻有些许图案，虽单调了点，但也显得非常别致，
+厅角的几盆花木散发出阵阵清香。
+LONG);
+
+        set("objects", ([
+              __DIR__"npc/dizi1"  :  2,
+              __DIR__"npc/dizi2"  :  2,
+        ])); 
+        set("exits", ([
+               "out"   : __DIR__"shanzhuang",
+               "north" : __DIR__"neitang",
+               "west"  : __DIR__"changlang1",
+               "east"  : __DIR__"xiaojing",
+        ]));
+
+        set("no_clean_up", 0);
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

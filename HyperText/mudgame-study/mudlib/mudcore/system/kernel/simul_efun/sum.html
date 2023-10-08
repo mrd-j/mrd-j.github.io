@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+/**
+ * NAME: sum
+ * SYNOPSIS: (int|float) sum( int|float num1, int|float num2, int|float numx... )
+ * DESCRIPTION: Returns the sum of all passed values.
+ */
+
+#include <type.h>
+
+mixed sum(mixed *numbers...)
+{
+    mixed number, result = 0;
+
+    foreach(number in numbers)
+    {
+        switch(typeof(number))
+        {
+            case T_INT :
+                result += number ;
+                break ;
+            case T_FLOAT :
+                result = to_float(result) + number ;
+                break ;
+            default:
+                error("Argument must be an array of int or float.\n");
+        }
+
+    }
+
+    return result;
+}
+
+/**
+ * NAME: array_sum
+ * SYNOPSIS: (int|float) array_sum( array int|array float numbers  )
+ * DESCRIPTION: Returns the sum of all values in the passed array.
+ */
+
+mixed array_sum(mixed *numbers)
+{
+    return sum(numbers...) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

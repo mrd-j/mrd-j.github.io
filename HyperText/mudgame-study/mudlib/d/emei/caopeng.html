@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "草棚");
+        set("long", @LONG
+这是峨嵋山脚下一个简单的草棚，地上堆著些上货。很多
+上山的游客都在这里买些上山用品。草棚后有个口井，西面是
+间简陋的马厩。
+LONG);
+        set("outdoors", "emei");
+        set("objects", ([
+                __DIR__"npc/xiao-fan": 1,
+        ]));
+        set("exits", ([
+                "west" : __DIR__"majiu1",
+                "east" : __DIR__"qsjie2",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

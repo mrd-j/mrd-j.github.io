@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "屠人场休息室");
+    set("long", @LONG
+这里黑乎乎的，地上还有一些粘满了血迹的布条，偶然
+也看得到断了的长剑、钢刀什么的。北面的门紧紧锁着，里
+面散发出一阵阵血腥的气味。
+LONG);
+    set("exits", ([
+        "south" : __DIR__"entry",
+    ]));
+
+        set("no_fight", 1);
+    setup();
+}
+
+int valid_leave(object me, string dir)
+{
+        if (dir == "south")
+                message_vision("$N四处张望了一下，溜出了休息室。\n", me);
+        return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

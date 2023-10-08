@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "山路");
+        set("long", @LONG
+这里是白驼山庄广场西边的一条小路，寻常百姓平时都是
+经过这条小路上山。
+LONG);
+      set("exits", ([
+              "north" : __DIR__"shulin",
+              "south" : __DIR__"shanlu",
+         ]));
+      set("outdoors", "baituo");
+      set("objects", ([
+              __DIR__"npc/qiaofu" : 1 ,
+          ]));
+      setup();
+      replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

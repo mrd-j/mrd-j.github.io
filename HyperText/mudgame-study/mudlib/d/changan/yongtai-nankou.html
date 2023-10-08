@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//Room: yongtai-nankou.c
+
+inherit ROOM;
+
+void create ()
+{
+        set ("short", "永泰南口");
+        set ("long", @LONG
+华瑞街和永泰大道的交叉口，一根三丈多高的旗杆之上，挑起了四
+盏斗大的灯笼，每当暮色降临，这里灯火通明。南面是一家包子铺，北
+方通向永泰大道。
+LONG);
+        set("exits",
+        ([ //sizeof() == 1
+            "east" : __DIR__"huarui1",
+            "north" : __DIR__"yongtai-dadao5",
+            "south" : __DIR__"baozipu"
+        ]));
+
+        set("outdoors", "changan");
+        setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

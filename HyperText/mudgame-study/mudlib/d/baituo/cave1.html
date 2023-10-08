@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "岩洞内");
+        set("long", @LONG
+这里是岩洞内部，洞顶上悬挂着洁白的钟乳石。
+LONG);
+        set("exits",([
+                "out" : __DIR__"cave",
+        ]));
+        set("objects",([
+                "/clone/beast/yanjingshe" : random(2),
+                "/clone/beast/wangshe" : random(2),
+        ]));
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

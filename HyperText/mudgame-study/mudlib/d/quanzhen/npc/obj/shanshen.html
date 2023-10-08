@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shanshen.c 老山参
+
+inherit ITEM;
+
+void create()
+{
+        set_name("老山参", ({"laoshan shen", "shen"}));
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("unit", "株");
+                set("long", "这是一株沾满山泥的老山参。\n");
+                set("value", 10000);
+                set("only_do_effect", 1);
+        }
+        setup();
+}
+
+int do_effect(object me)
+{
+        if (me->query("eff_qi") > me->query("max_qi") - 20)
+                return notify_fail("你现在没有必要服用这支老山参。\n");
+
+        me->add("eff_qi", 200);
+
+        message_vision("$N吃下一株老山参，只觉得浑身一股热气兜底冒了上来 !\n", this_player());
+        destruct(this_object());
+        return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

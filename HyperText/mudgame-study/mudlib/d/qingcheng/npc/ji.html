@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// ji.c
+
+inherit NPC;
+
+void create()
+{
+        set_name("吉人通", ({ "ji rentong", "ji", "rentong" }));
+        set("gender", "男性");
+        set("age", 25);
+        set("long", "他就是和申人俊焦孟不离的吉人通。\n");
+
+        set("combat_exp", 70000);
+        set("shen_type", -1);
+
+        set_skill("sword", 70);
+        set_skill("pixie-sword", 70);
+        set_skill("unarmed", 70);
+        set_skill("dodge", 70);
+        set_skill("parry", 70);
+        map_skill("parry", "pixie-sword");
+        map_skill("sword", "pixie-sword");
+        create_family("青城派", 6, "弟子");
+        setup();
+        carry_object("/clone/weapon/changjian")->wield();
+        carry_object("/d/wudang/obj/bluecloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

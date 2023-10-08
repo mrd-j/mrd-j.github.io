@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// hsroad3.c
+// by Xiang
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "黄土路");
+    set("long", @LONG
+一条坑坑洼洼的土路，弯弯曲曲的通向山里。
+LONG );
+        set("outdoors", "village");
+    set("exits", ([
+        "southeast" : __DIR__"hsroad2",
+        "north"     : __DIR__"sexit",
+    ]));
+    set("objects", ([
+        "/d/taishan/npc/tangzi" : 4,
+    ]));
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

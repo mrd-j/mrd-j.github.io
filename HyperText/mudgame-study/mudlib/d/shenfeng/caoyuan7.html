@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "山路");
+    set("long", @LONG
+山路自东向西，地势渐平。云中有几头苍鹰在低低的盘旋
+遨翔，仿佛将行人当作了猎物。路面铺着小石子，道两旁的灌
+木越来越少，骄阳似火，令人真想找个地方休息一下。
+LONG);
+        set("outdoors", "shenfeng");
+    set("exits", ([
+          "north" : "/d/gaochang/shulin1",
+          "westdown" : __DIR__"shamo1",
+          "eastdown" : __DIR__"caoyuan6",
+    ]));
+    setup();
+}
+
+int valid_leave(object me, string dir)
+{
+        if (! userp(me) && dir == "north")
+                return notify_fail("高昌迷宮NPC立入禁止。\n");
+        return ::valid_leave(me, dir);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

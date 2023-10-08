@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// liumang.c 流氓
+
+inherit NPC;
+
+void create()
+{
+    set_name("流氓", ({ "liu mang", "liu" }));
+    set("gender", "男性");
+    set("age", 19);
+    set("long", "他是一个成天游手好闲的流氓，长得倒是白白胖胖的，也许以前有过钱。\n");
+
+    set("combat_exp", 1000);
+    set("shen_type", -1);
+
+    set("attitude", "peaceful");
+
+    set_skill("unarmed", 20);
+    set_skill("dodge", 20);
+    set_temp("apply/attack", 10);
+    set_temp("apply/defense", 10);
+
+    setup();
+    carry_object("/clone/misc/cloth")->wear();
+    add_money("silver",2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

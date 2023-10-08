@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "中心广场");
+        set("long", @LONG
+这里是武功镇的中心广场，武功镇是个小镇，只有四条大
+街分别是东街，西街，南街和北街，都在这里汇合。走到这里
+路上的行人多了些，见了你都和和气气地拱手为礼。
+LONG);
+        set("outdoors", "wugong");
+        set("exits", ([
+                "east" : __DIR__"dongjie",
+                "west" : __DIR__"xijie",
+                "north" : __DIR__"beijie",
+                "south" : __DIR__"nanjie",
+        ]));
+
+        set("objects", ([
+                __DIR__"npc/liumang" : 2,
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

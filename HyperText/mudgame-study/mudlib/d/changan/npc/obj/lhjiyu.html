@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//lhjiyu.c
+
+#include <ansi.h>
+
+inherit ITEM;
+inherit F_FOOD;
+
+void create()
+{
+        string name =HIY "罗汉鲫鱼" NOR;
+      set_name(name, ({"luohan jiyu", "jiyu", "yu"}));
+      set_weight(300);
+      if (clonep())
+            set_default_object(__FILE__);
+      else
+    {
+            set("long", "一盘令人垂涎的"+name+"。\n");
+            set("unit", "盘");
+            set("value", 1000);
+            set("food_remaining", 10);
+            set("food_supply", 30);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

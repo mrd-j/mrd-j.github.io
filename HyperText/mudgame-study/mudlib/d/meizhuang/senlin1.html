@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// senlin1.c
+
+inherit ROOM;
+
+#include <ansi.h>
+
+void create()
+{
+        set("short", "百木园");
+        set("long", @LONG
+这里是梅庄的百木园，你一走到这里，就象走到了一个连绵无尽
+的小森林一样，这里无数的松树，柏树，白杨，还有很多叫不出来名
+字的异种苗木。
+LONG
+        );
+        set("exits", ([
+            "south" : __DIR__"keting",
+            "north" : __DIR__"neiyuan",
+            "east" : __DIR__"senlin2",
+            "west" : __DIR__"neitang",
+        ]));
+
+        set("outdoors", "meizhuang");
+        setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/quanzhou/beimen.c
+// Date: May 7, 96   Jay
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "泉州北门");
+    set("long", @LONG
+这里是南方第一港泉州的北门。出此门向北可抵中原。
+LONG );
+    set("exits", ([
+                "north" : "/d/fuzhou/puxian",
+                "south" : __DIR__"zhongxin",
+    ]));
+    set("outdoors", "quanzhou");
+    set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

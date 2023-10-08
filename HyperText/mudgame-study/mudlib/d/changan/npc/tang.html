@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//tang.c
+
+inherit NPC;
+
+void create()
+{
+        set_name("趟子手", ({ "tang" }));
+        set("gender", "男性" );
+        set("age", 24);
+        set("long", "一位训练有素的趟子手。\n");
+        set("combat_exp", 40000);
+        set("attitude", "friendly");
+        set_skill("unarmed", 80);
+        set_skill("dodge", 100);
+
+        setup();
+        add_money("coin", 10);
+        carry_object(__DIR__"obj/jinzhuang")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

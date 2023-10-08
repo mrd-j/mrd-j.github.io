@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /u/zqb/tiezhang/zoulang-1.c
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "走廊");
+    set("long", @LONG
+你走在一条走廊上。北面的屋内传来阵阵金属的声音。
+LONG    );
+    set("exits", ([ /* sizeof() == 3 */
+  "north" : __DIR__"bqshi",
+  "west" : __DIR__"wztang",
+  "east" : __DIR__"zoulang-4",
+]));
+    set("no_clean_up", 0);
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

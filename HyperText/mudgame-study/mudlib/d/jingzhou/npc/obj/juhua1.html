@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit ITEM;
+
+void create()
+{
+        set_name(HIG "绿菊花" NOR, ({ "lv juhua", "juhua" }));
+        set("weight", 100);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("long","一盆淡绿的菊花，叫做“春水碧波”。\n");
+                set("unit", "盆");
+                set("material", "wood");
+        }
+        setup();
+}       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

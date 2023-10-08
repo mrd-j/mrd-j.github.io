@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "小巷");
+    set("long", @LONG
+洛阳东城的一条由碎石铺砌的小巷，非常僻静。刚下过雨，路面看起
+来还满干净的。
+LONG);
+        set("outdoors", "luoyang");
+        set("no_clean_up", 0);
+        set("exits", ([
+          "south" : __DIR__"suishi4",
+          "north" : __DIR__"xiaoxiang4",
+    ]));
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

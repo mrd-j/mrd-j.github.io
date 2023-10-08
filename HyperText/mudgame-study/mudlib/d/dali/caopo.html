@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "村外草坡");
+    set("long", @LONG
+一大片山坡长满青草，正是放牧牛羊的好地方。这里地
+势甚高，天空呈深蓝色，附近山岭树木已经甚少，基本上都
+是低矮灌木或草地。不少附近的村民在此放牧。
+LONG);
+    set("objects",([
+            __DIR__"npc/muyangren": 1,
+            __DIR__"npc/muyangnu": 1,
+    ]));
+    set("outdoors", "dali");
+    set("exits", ([
+            "west"      : __DIR__"wumeng",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

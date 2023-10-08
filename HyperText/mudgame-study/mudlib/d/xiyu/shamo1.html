@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit "/d/xiyu/shamo";
+
+int valid_leave(object me, string dir)
+{
+//      string dest;
+
+           if (dir == "east")
+        {
+                if (me->add_temp("out_shamo", 1) >= 3)
+                {
+                         me->move("/d/xiyu/silk4");
+                         write("你累得半死，终於走出了沙漠。\n");
+                return -1;
+                }
+        }
+
+        return ::valid_leave(me, dir);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

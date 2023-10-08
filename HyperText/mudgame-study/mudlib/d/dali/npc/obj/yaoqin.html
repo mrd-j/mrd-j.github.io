@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// tiepipa.c
+
+#include <weapon.h>
+#include <ansi.h>
+#include <music.h>
+
+inherit HAMMER;
+inherit MI_QIN;
+
+void create()
+{
+        set_name("瑶琴", ({ "yao qin" }) );
+        set_weight(5000);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "把");
+                set("long", "这是一把歌女用的瑶琴，制做得相当精巧细腻。\n");
+                set("value", 300);
+                set("material", "iron");
+                set("wield_msg", "$N从背上解下一把$n，然後横在手中。\n");
+                set("unwield_msg", "$N放下手中的$n。\n");
+        }
+        init_hammer(5);
+        setup();
+}
+
+void init()
+{
+    add_action("play_qin", "play");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

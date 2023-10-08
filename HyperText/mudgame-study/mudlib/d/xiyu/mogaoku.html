@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "莫高窟");
+        set("long", @LONG
+这里墙壁上绘制着与佛教相关的画面，有仙女飞天，还有
+反弹琵琶。洞中还有很多佛像和经书。你被这些瑰丽的文化之
+宝惊呆了。
+LONG );
+        set("exits", ([
+                 "out" : __DIR__"yueerquan",
+        ]));
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

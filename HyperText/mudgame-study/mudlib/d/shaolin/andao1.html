@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+    set("short", "暗道");
+    set("long", @LONG
+这里是一个阴暗潮湿的地道，四壁用粗糙的片岩垒垛而成，
+只见一颗颗水珠沿着墙壁滚下来，溅在地上。也许是因为长时
+间无人通行的缘故，整个地道弥漫着一股腐尸般的恶臭。
+LONG);
+    set("exits", ([
+        "south" : __DIR__"rukou",
+        "north" : __DIR__"jianyu1",
+    ]));
+    create_door("north","木门","south",DOOR_CLOSED);
+    set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

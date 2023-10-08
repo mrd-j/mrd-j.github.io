@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// turou.c 红烧狗肉
+
+inherit ITEM;
+inherit F_FOOD;
+
+void create()
+{
+        set_name("红烧狗肉", ({"gou rou", "gou"}));
+        set_weight(300);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("long", "一碗香喷喷的红烧狗肉\n");
+                set("unit", "碗");
+                set("value", 200);
+                set("food_remaining", 4);
+                set("food_supply", 50);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

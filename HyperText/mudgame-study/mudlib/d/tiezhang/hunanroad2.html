@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// /d/xiangyang/hunanroad2.c
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "土路");
+    set("long", @LONG
+你走在湘鄂交界的土路上，偶尔会有人骑着马匆匆而过。这里已经是湖
+南地界，往北进入湖北境内。
+LONG
+    );
+        set("outdoors", "tiezhang");
+
+    set("exits", ([
+        "northeast" : __DIR__"hunanroad1",
+        "south" : "/d/tiezhang/lx",
+    ]));
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

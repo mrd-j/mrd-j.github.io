@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "密道");
+        set("long", @LONG
+这里是侯员外卧室下的密道，听说许多佃户由于缴不起租，
+被侯员外的爪牙抓到这里来拷打。四周好象有一些浅褐色干的
+血渍，空气中夹杂着一种令人毛骨悚然的腥气。你不由地有些
+害怕起来，心想还是赶快离开这里吧。
+LONG);
+        set("exits", ([
+                "southeast" : __DIR__"fu-mishi",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

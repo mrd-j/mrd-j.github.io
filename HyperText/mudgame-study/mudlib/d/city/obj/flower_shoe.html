@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shoe.c
+
+#include <armor.h>
+
+inherit BOOTS;
+
+void create()
+{
+    set_name( "绣花小鞋", ({ "flower shoes", "shoes"}) );
+    set_weight(900);
+    if( clonep() )
+        set_default_object(__FILE__);
+    else {
+        set("material", "cloth");
+        set("unit", "双");
+        set("value", 300);
+        set("armor_prop/armor", 1 );
+        set("female_only", 1);
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

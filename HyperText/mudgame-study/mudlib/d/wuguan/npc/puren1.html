@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+#include <ansi.h>
+
+void create()
+{
+        set_name("仆人", ({ "pu ren", "puren","ren" }) );
+        set("gender", "男性" );
+        set("age", 25);
+        set("int", 28);
+        set("long", "这是个仆人打扮的年青人，两眼乱转，四处看个不停。\n");
+        set("attitude", "peaceful");
+        set("combat_exp",10000 + random(5000));
+        set("chat_chance", 1);
+        set("chat_msg", ({
+                CYN "仆人突然说道：后院很需要人手，郭大侠正为此烦恼呢。\n" NOR,
+                CYN "仆役低声的说：在后院做事有好多好处啊。\n" NOR,
+        }));
+        setup();
+        carry_object("/clone/misc/cloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

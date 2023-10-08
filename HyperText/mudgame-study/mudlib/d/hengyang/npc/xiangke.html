@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+
+void create()
+{
+    set_name("敬香客", ({ "jingxiang ke","ke","jingxiang"}));
+    set("gender", "男性");
+    set("age", 45);
+    set("long", "这是来衡山朝拜的人。\n");
+    set("combat_exp", 2000);
+    set("attitude", "friendly");
+    setup();
+    carry_object("/clone/misc/cloth")->wear();
+    add_money("silver", 5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

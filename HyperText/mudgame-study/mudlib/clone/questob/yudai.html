@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// yudai.c
+
+#include <ansi.h>
+
+inherit ITEM;
+
+void create()
+{
+    set_name("玉带", ({ "yu dai" }));
+    set_weight(500);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "条");
+        set("long", "这是一条玉带，上面绣得五彩缤纷，颇为美丽。\n");
+        set("value", 10000);
+        set("material", "silk");
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

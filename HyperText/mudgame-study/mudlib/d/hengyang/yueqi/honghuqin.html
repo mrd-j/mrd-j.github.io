@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+#include <music.h>
+
+inherit ITEM;
+inherit MI_QIN;
+
+void create()
+{
+        set_name(RED "红木胡琴·五玄" NOR, ({ "hongmu huqin", "qin", "huqin", "hongmu" }));
+        set_weight(800);
+
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+                set("unit", "把");
+                set("long", RED "一把精致的红木胡琴，琴身光滑，微泛红光。\n" NOR);
+        set("value", 2000);
+        set("material", "wood");
+    }
+    setup();
+}
+
+void init()
+{
+        add_action("play_qin", "play");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

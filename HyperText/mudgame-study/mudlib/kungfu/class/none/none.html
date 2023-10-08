@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+
+int permit_recruit(object ob)
+{
+    if (ob->query("detach") || ob->query("betrayer"))
+    {
+        command("say 嘿嘿，朝秦暮楚之人！");
+        return 0;
+    }
+
+    if (ob->query("family/family_name"))
+    {
+        command("say 你既然已经有了名师指点，还来我着干什么？");
+        return 0;
+    }
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

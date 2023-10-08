@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short",  "长江岸边" );
+        set("long", @LONG
+这里是长江北岸，江水在你身边哗哗的流淌，不时可以看
+见有山木从上游漂来，在水中打了个圈，向下游漂去。
+LONG);
+        set("outdoors", "jingzhou");
+        set("exits", ([
+                "northup" : __DIR__"chibi3",
+        "west" : __DIR__"chibi5",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

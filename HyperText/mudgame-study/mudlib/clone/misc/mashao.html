@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+/* mashao.c 马哨 */
+
+#include <ansi.h>
+
+inherit __DIR__"whistle";
+
+void create()
+{
+    set_name( HIG "马哨" NOR, ({ "ma shao", "shao" }) );
+    if ( clonep() )
+        set_default_object( __FILE__ );
+    else {
+        set( "unit", "个" );
+        set( "long", "这是一个竹子制成的马哨，上面有镇远镖局的标志。\n" );
+        set( "family", 1 );
+        set( "whistle", 5 );
+    }
+
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

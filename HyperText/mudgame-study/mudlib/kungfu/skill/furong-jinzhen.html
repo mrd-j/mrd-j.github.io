@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit SKILL;
+
+int valid_learn(object me)
+{
+//      object ob;
+  
+        if (me->query_skill("throwing", 1) < 40)
+                return notify_fail("你的暗器技能不够娴熟。\n");
+
+        if ((int)me->query_skill("throwing", 1) < (int)me->query_skill("furong-jinzhen", 1))
+                return notify_fail("你的基本暗器水平有限，难以领会更精妙的芙蓉金针。\n");
+
+        return 1;
+}
+
+int valid_enable(string usage)
+{
+        return usage == "throwing";
+}
+
+int practice_skill(object me)
+{
+        if ((int)me->query("qi") < 80)
+                return notify_fail("你的气不够，没有办法练习芙蓉金针。\n");
+
+        if ((int)me->query("neili") < 60)
+                return notify_fail("你的内力不够，没有办法练习芙蓉金针。\n");
+
+        me->receive_damage("qi", 70);
+        me->add("neili", -50);
+        return 1;
+}
+
+string perform_action_file(string action)
+{
+        return __DIR__"furong-jinzhen/" + action;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

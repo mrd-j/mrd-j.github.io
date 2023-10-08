@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+#include <ansi.h>
+
+void create()
+{
+    set("short","花厅");
+    set("long", @LONG
+这个花厅是喝酒赏月的佳所，一个小亭子建造在厅的中央，四周围绕着一
+些葡萄藤。一阵微风吹过，空气中似乎有隐隐的花香飘来，中人欲醉。
+LONG );
+    set("exits", ([
+        "west" : __DIR__"hai_dayuan",
+    ]));
+
+    setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

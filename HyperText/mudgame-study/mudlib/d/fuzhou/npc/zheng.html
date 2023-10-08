@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// zheng.c
+
+inherit NPC;
+
+void create()
+{
+    set_name("郑镖头", ({ "zheng biaotou", "zheng" }));
+    set("gender", "男性");
+    set("age", 45);
+
+    set("combat_exp", 10000);
+    set("shen_type", 1);
+
+    set_skill("unarmed", 30);
+    set_skill("blade", 50);
+    set_skill("parry", 50);
+    set_skill("dodge", 50);
+
+    set_temp("apply/attack", 25);
+    set_temp("apply/defense", 25);
+    set_temp("apply/damage", 30);
+
+    setup();
+    carry_object("/clone/weapon/gangdao")->wield();
+    carry_object("/clone/cloth/cloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

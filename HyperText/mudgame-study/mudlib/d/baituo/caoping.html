@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short","草坪");
+        set("long", @LONG
+这里是一块芳草坪，绿草茵茵，蝴蝶漫舞，让人感到惬意。
+不过偶尔也会碰到菜花蛇。
+LONG);
+        set("exits", ([
+                "west" : __DIR__"shijie",
+        ]));
+
+        set("objects" , ([
+                "/clone/beast/caihuashe" : random(2),
+        ]));
+
+        set("quarrys", ([
+                "caihuashe"  : 100000,
+                "dushe"      : 20000,
+                "jinshe"     : 20000,
+                "qingshe"    : 20000,
+        ]));
+
+        set("outdoors", "baituo");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

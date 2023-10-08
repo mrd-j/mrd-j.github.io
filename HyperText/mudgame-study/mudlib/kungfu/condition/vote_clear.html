@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// vote_clear.c
+// by Marz 04/21/96
+
+#include <ansi.h>
+#include <login.h>
+
+int dispel() { return 0; }
+
+int update_condition(object me, int duration)
+{
+    if (duration < 1) {
+        if (duration > -5)
+            tell_object(me, HIM "因为响应的人不多，对你的投票取消了。\n" NOR);
+        me->delete("vote/reason");
+        me->delete("vote/juror");
+        me->delete("vote/count");
+
+        return 0;
+    }
+
+    me->apply_condition("vote_clear", duration - 1);
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "花园小径");
+        set("long",@LONG
+这里风雷堂中的小花园，你走这里，只觉得草地西边似乎
+香气四逸，东边好象是另一个花园。
+LONG);
+        set("exits", ([
+                "west"  : __DIR__"chufang1",
+                "east"  : __DIR__"hua1",
+                 "north" :__DIR__"dating1",
+                 "south" :__DIR__"grass1",
+        ]));
+        set("objects", ([
+                __DIR__"npc/shinu" : 1,
+        ]));
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// yuhulu.c
+
+#include <ansi.h>
+
+inherit ITEM;
+
+void create()
+{
+    set_name("玉葫芦", ({ "yu hulu", "hulu" }));
+    set_weight(300);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "只");
+        set("long", "这是一个美玉雕刻的葫芦，玲珑精致。\n");
+        set("value", 8000);
+        set("material", "jade");
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

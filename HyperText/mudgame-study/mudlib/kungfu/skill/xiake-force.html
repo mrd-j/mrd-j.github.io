@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// xiake-force.c 侠客岛内功
+
+inherit FORCE;
+
+int valid_enable(string usage) { return usage == "force"; }
+
+int valid_learn(object me)
+{
+    return ::valid_learn(me);
+}
+
+int practice_skill(object me)
+{
+    return notify_fail("侠客岛内功只能用学(learn)的来增加熟练度。\n");
+}
+
+string exert_function_file(string func)
+{
+        return __DIR__"xiake-force/" + func;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

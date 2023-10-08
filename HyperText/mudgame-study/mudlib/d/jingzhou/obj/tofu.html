@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// tofu.c 豆腐
+
+inherit ITEM;
+inherit F_FOOD;
+
+void create()
+{
+    set_name("翡翠豆腐", ({"doufu", "tofu"}));
+    set_weight(40);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("long", "一块水灵灵的大豆腐，嫩的令人不禁想到阿庆嫂的脸蛋儿。\n");
+        set("unit", "块");
+        set("value", 40);
+        set("food_remaining", 1);
+        set("food_supply", 50);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

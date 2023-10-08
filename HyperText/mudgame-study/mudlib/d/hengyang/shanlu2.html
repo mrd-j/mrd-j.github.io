@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "山路");
+        set("long", @LONG
+你走在衡山山路上，四望山峰错落，林壑幽深，溪泉飞瀑，
+云雾缭绕，不觉心胸大快。
+LONG);
+        set("exits", ([
+               "southeast"  : __DIR__"shanlu1",
+               "northup"    : __DIR__"chidifeng",
+        ]));
+
+        set("outdoors", "hengyang");
+
+        set("no_clean_up", 0);
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

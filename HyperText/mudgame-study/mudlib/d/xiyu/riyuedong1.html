@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+inherit ROOM;
+
+void create()
+{
+        set("short", "日月侧洞");
+        set("long", @LONG
+这里是星宿派总舵所在地日月洞侧洞。只见漆黑一片，唯
+有前方不员处有些许光线，看来可以从这出去。
+LONG);
+        set("exits", ([
+             "out" : __DIR__"xxh1",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

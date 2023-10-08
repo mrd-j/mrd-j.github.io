@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// food.c
+
+#include <dbase.h>
+#include <name.h>
+
+mixed func = 0;
+
+int is_food() { return 1; }
+
+void apply_effect(function f)
+{
+    if (!func)
+        func = f;
+    else if (functionp(func))
+        func = ({func, f});
+    else if (sizeof(func) < 12)
+        func += ({f});
+}
+
+void clear_effect()
+{
+    func = 0;
+}
+
+mixed query_effect()
+{
+    return func;
+}
+
+int do_effect(object me)
+{
+    int i;
+
+    if (functionp(func))
+        evaluate(func);
+    if (arrayp(func))
+        for (i = 0; i < sizeof(func); i++)
+            evaluate(func[i]);
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

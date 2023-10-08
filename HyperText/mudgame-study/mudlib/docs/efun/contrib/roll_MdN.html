@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: contrib / roll_MdN.pre
+---
+
+### NAME
+
+    roll_MdN() - dice roll generator where you specify the number of dice and
+    the number of sides to each die, with bonus if supplied.
+
+### SYNOPSIS
+
+    int roll_MdN(int rolls, int sides, int bonus : default = 0)
+
+### DESCRIPTION
+
+    rolls `sides`-sided die `rolls` number of times and returns the sum
+    of all rolls
+
+    if `bonus` is supplied, will add the bonus and return the result.
+
+### EXAMPLE
+
+    // roll a 1d4
+    roll_MdN(1, 4)
+
+    // roll 2d6
+    roll_MdN(2, 6)
+
+    // roll 1d10 and add 15
+    roll_MdN(1, 10, 15)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

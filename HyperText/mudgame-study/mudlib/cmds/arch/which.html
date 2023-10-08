@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// which.c
+inherit F_CLEAN_UP;
+
+int main(object me, string arg)
+{
+    string file;
+    if (!SECURITY_D->valid_grant(me, "(wizard)"))
+        return 0;
+    if (!arg)
+        return notify_fail("指令格式：which <命令>\n");
+    file = me->find_command(arg);
+    if (!file)
+        write("没有找到 " + arg + " 这个命令。\n");
+    else
+        write(file + "\n");
+    return 1;
+}
+
+int help()
+{
+    write(@TEXT
+指令格式：which <命令>
+这个指令可以找到某个命令在什么目录。
+TEXT
+    );
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

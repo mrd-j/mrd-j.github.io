@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//Room: taiziyan.c 太子岩
+//Date: Sep 22 1997
+
+inherit ROOM;
+
+void create()
+{
+      set("short","太子岩");
+      set("long",@LONG
+这里是群山环抱中的太子岩，岩上有一块三清石和一座太子亭。
+LONG);
+      set("exits",([ /* sizeof() == 1 */
+           "northdown":__DIR__"shanlu4",
+          "southdown": __DIR__"langmeiyuan",
+      ]));
+      set("outdoors", "wudang");
+      set("no_clean_up", 0);
+      setup();
+      replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

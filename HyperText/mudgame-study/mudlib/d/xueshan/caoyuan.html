@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "草原");
+        set("long", @LONG
+这里是雪山脚下的一片草原。北面是起伏的群山，山顶上
+积着终年不化的雪。西边有一条土路。
+LONG);
+
+        set("exits", ([
+                "west"      : __DIR__"tulu1",
+                "northeast" : "/d/xiyu/silk4" ,
+        ]));
+
+        set("objects", ([
+                "/clone/quarry/tu" : 4 ,
+        ]));
+
+        set("outdoors", "xueshan");
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

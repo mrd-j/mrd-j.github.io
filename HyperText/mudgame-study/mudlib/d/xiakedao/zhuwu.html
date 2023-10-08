@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// zhuwu.c
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "竹屋");
+    set("long", @LONG
+这是一个用碗口粗大的竹子搭建的屋子，离地不足三尺。有一小竹梯
+搭在门口。
+LONG );
+    set("exits", ([
+        "east" : __DIR__"haibin",
+        "in"   : __DIR__"zhuwu2",
+    ]));
+    set("outdoors", "nanhai");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

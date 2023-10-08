@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// dodge.c
+
+inherit SKILL;
+
+string *dodge_msg = ({
+        "但是和$p$l偏了几寸。\n",
+        "但是被$p机灵地躲开了。\n",
+        "但是$n身子一侧，闪了开去。\n",
+        "但是被$p及时避开。\n",
+        "但是$n已有准备，不慌不忙的躲开。\n",
+});
+
+string query_dodge_msg()
+{
+        return dodge_msg[random(sizeof(dodge_msg))];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

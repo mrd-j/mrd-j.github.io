@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short","休息室3");
+    set("long", @LONG
+这里是郭府内的休息室，屋子有点点旧，但是打扫的非常
+干净，一排床铺靠墙摆着，东面过去也是一间休息室，不断的
+有人进来休息或醒后离去。
+LONG);
+    set("exits", ([
+        "west" : __DIR__"guofu_woshi1",
+    ]));
+    set("no_fight", 1);
+    set("sleep_room", 1);
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

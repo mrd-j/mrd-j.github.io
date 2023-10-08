@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/shaolin/jiebei.c
+// Date: YZC 96/01/19
+
+inherit ROOM;
+
+string look_jiebei();
+
+void create()
+{
+    set("short", "界碑");
+    set("long", @LONG
+界碑----未连接好的区域(jiebei)。
+LONG
+    );
+
+    set("exits", ([
+        "east" : __DIR__"shulin14",
+        "northup" : __DIR__"qyping",
+    ]));
+
+    set("outdoors", "shaolin");
+    set("item_desc",([
+        "stone"        :    (: look_jiebei :),
+    ]));
+    setup();
+}
+
+
+string look_jiebei()
+{
+    return "由此往前，通向山顶。道路尚未修好。\n--时空书于侠客行\n";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

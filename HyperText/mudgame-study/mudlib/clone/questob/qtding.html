@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// yuping.c
+
+#include <ansi.h>
+
+inherit ITEM;
+
+void create()
+{
+    set_name("青铜鼎", ({ "qingtong ding", "ding" }));
+    set_weight(1500);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "只");
+        set("long", "这是一只古代的青铜鼎，上面雕着精美的花纹。\n");
+        set("value", 10000);
+        set("material", "copper");
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

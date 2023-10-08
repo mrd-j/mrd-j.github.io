@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ITEM;
+inherit F_LIQUID;
+
+void create()
+{
+    set_name("龙井茶", ({"longjing tea", "tea"}));
+    set_weight(50);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("long", "一个蓝边粗磁大碗，里面盛满了龙井茶。\n");
+        set("unit", "碗");
+        set("value", 4);
+        set("max_liquid", 4);
+    }
+    set("liquid", ([
+        "type": "tea",
+        "name": "茶水",
+        "remaining": 4,
+        "drunk_supply": 0,
+    ]));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

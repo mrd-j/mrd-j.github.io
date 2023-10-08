@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// potato.c
+
+inherit ITEM;
+inherit F_FOOD;
+#include <ansi.h>
+
+void create()
+{
+    set_name(HIY"土豆炖牛肉"NOR, ({ "potato" }));
+    if( clonep() )
+        set_default_object(__FILE__);
+    else {
+        set("long", "一碗热气腾腾的土豆炖牛肉，散发出诱人的香气。\n");
+        set("unit", "碗");
+        set("value", 100);
+        set("food_remaining", 20);
+        set("food_supply", 35);
+        set("material", "meat");
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// efun call_other
+#include <ansi.h>
+inherit _CLEAN_UP;
+
+int help(object me);
+
+int main(object me, string arg)
+{
+    object ob;
+    string arg1, arg2, err;
+    mixed res;
+
+    if (!wizardp(me))
+        return 0;
+
+    if (!arg || sscanf(arg,"%s %s",arg1, arg2) != 2)
+    {
+        return help(me);
+    }
+    else if (ob = load_object(arg1))
+    {
+        if (err = catch(res = call_other(ob, explode(arg2, " "))))
+        {
+            cecho("运行报错啦~>详细错误信息请看日志记录<：\n" + err);
+        }
+        else
+        {
+            cecho("result = " + res);
+        }
+    }
+    else
+    {
+        cecho("没有找到对象 " + arg1);
+    }
+
+    return 1;
+}
+
+int help(object me)
+{
+    if (!wizardp(me))
+        return 0;
+
+    write(@TEXT
+指令格式: call_other <对象文件名> function [arg1 arg2 ...]
+指令说明:
+    执行指定文件中的方法。
+TEXT
+    );
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

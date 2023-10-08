@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// zheng.c 筝
+
+int play_zheng(string arg)
+{
+        string my_id;
+        if (arg && sscanf(arg, "%s with %s", arg, my_id) == 2 &&
+            ! this_object()->id(my_id))
+                return 0;
+        return SKILL_D("guzheng-jifa")->play(this_player(), this_object(), arg);
+}
+
+int valid_as_zheng() { return 1; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

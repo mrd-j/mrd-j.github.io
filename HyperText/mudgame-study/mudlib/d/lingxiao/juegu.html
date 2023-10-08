@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short","绝谷");
+        set("long",@LONG
+还好，你运气好，从万丈深渊上摔下来，居然摔到厚厚的
+雪堆上，不但没断腿少胳膊，连皮都没伤到一点。但是，到了
+这绝谷之下，如何上去倒是一大难题。
+LONG);
+        set("outdoors", "lingxiao");
+        set("no_clean_up", 0);
+        setup();
+}
+
+void init()
+{
+    add_action("do_pan", "climb");
+}
+
+int do_pan()
+{
+        object me = this_player();
+        me->move(__DIR__"shiya");
+        return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

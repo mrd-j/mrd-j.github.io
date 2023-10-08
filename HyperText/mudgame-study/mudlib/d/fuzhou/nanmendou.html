@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "南门兜");
+        set("long", @LONG
+南门兜中央一株巨大古榕，根繁叶茂，浓荫遮盖树亩，将
+整个街口遮闭严实不漏日光。在树阴下乘凉，甚为舒适。
+LONG);
+        set("exits", ([
+                "north"  : __DIR__"nandajie",
+                "south"  : __DIR__"nanmen",
+                "west"   : __DIR__"shiqiao",
+                "east"   : __DIR__"xiaochang",
+        ]));
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// jing_curing.c
+
+#include <condition.h>
+
+inherit F_CLEAN_UP;
+
+int dispel() { return 0; }
+
+int update_condition(object me, int duration)
+{
+        if( (int)me->query("eff_jing") < (int)me->query("max_jing") )
+                me->receive_curing("jing", 3);
+
+        me->apply_condition("jing_curing", duration - 1);
+        if( !duration ) return 0;
+
+        return CND_CONTINUE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

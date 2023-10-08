@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shuyuan.c
+// Date: Nov.1997 by Venus
+#include <room.h>
+inherit ROOM;
+void create()
+{
+        set("short", "凤池书院");
+        set("long", @LONG
+书院正中有一匾“凤池书院”。书院里坐着两位老者，他们正在
+吟诗作对。他们身旁的桌上铺着宣纸和笔墨。
+LONG);
+        set("exits", ([
+            "west"      : __DIR__"road12",
+        ]));
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

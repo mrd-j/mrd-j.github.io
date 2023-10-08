@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// lazhu.c
+
+inherit ITEM;
+
+void create()
+{
+        set_name( "蜡烛", ({ "zhu", "lazhu" }) );
+        set_weight(10);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "只");
+                set("long", "这是一只普通的蜡烛，上面镂着一些花纹，还比较精致。\n");
+        }
+        setup();
+}
+
+void init()
+{
+        call_out("dest", 1800);
+}
+
+void dest()
+{
+        write("眼前烛光一闪，不好，蜡烛熄灭了。\n");
+        destruct(this_object());
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+inherit ROOM;
+
+void create()
+{
+    set("short", HIW "【通天门】" NOR);
+    set("long", HIW @LONG
+你来到这里，发现这里茫茫一片云海。眼前一座宏伟的敞开的大
+门，大门的柱子旁依偎着一位男子，似乎对你的到来毫不在意。
+LONG NOR );
+    set("exits", ([
+        "in" : __DIR__"sky1",
+    ]));
+    set("sleep_room", 1);
+    set("objects", ([
+        __DIR__"npc/li": 1,
+    ]));
+
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

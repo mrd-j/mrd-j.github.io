@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "小花园");
+        set("long", @LONG
+这是县太爷府前的小花园，花草树木，鸟语花香。好一个
+悠闲的地方。透过一簇牡丹花，北面就是县太爷的府邸。西面
+的厢房略微陈旧一点。可能是府内下人的屋子。
+LONG);
+    set("outdoors", "zhongzhou");
+
+        set("exits", ([
+                "west" : __DIR__"xiaren",
+                "north" : __DIR__"taiyefu",
+                "east" :__DIR__"zoulang",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

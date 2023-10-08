@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "水房");
+    set("long", @LONG
+一进屋，你看见屋内放着几口大缸，好象是装水用的，不
+过缸似乎都是空的，这里没有一个人，估计仆人都跑了。
+LONG);
+    set("no_fight", 1);
+    set("exits", ([
+        "east" : __DIR__"guofu_houyuan",
+    ]) );
+    set("outdoors", "wuguan");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

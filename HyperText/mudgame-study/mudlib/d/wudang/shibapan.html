@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "十八盘");
+        set("long", @LONG
+这是一个很大的斜坡，俗称十八盘，大石阶一级一级笔直
+而上，颇费脚力。这里坡坡有神，拐拐有祠，往上十里之后即
+是灵霄宫。
+LONG);
+        set("exits", ([
+                "northdown" : __DIR__"shiliang",
+                "southup" : __DIR__"shijie2",
+        ]));
+        set("outdoors", "wudang");
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+void create()
+{
+    set("short","大森林");
+    set("long",@LONG
+此去向北通过茂密的森林可以到达云南昆明，这里已经林
+木茂密人迹罕至了，南面不远便是著名的滇池了。
+LONG);
+    set("outdoors", "dali");
+    set("exits", ([
+        "south" : __DIR__"dianchi",
+        "north" : __DIR__"heisenlin",
+    ]));
+    set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

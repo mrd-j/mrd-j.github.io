@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// ruanjian.c 软剑
+
+#include <weapon.h>
+inherit SWORD;
+
+void create()
+{
+        set_name("软剑", ({ "ruanjian", "jian" }));
+        set_weight(500);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("unit", "柄");
+                set("long", "这是一柄用特殊材料制成的钢剑。\n");
+                set("value", 150);
+                set("material", "steel");
+                set("wield_msg", "$N「唰」的一声抽出一柄$n握在手中。\n");
+                set("unwield_msg", "$N将手中的$n插回剑鞘。\n");
+        }
+        init_sword(35);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

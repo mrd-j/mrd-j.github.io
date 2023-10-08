@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// feather.c
+
+#include <armor.h>
+#include <ansi.h>
+#include <mudlib.h>
+
+inherit CLOTH;
+
+void create()
+{
+        set_name(GRN"孔雀羽衣"NOR, ({ "feather" }) );
+        set("no_drop", "1");
+        set("no_get", "1");
+        set_weight(600);
+
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("long", "这件孔雀羽衣是用孔雀羽毛织成的。\n");
+                set("unit", "件");
+            set("value", 5000);
+                set("material", "feature");
+                set("armor_prop/personality", 10);
+                set("armor_prop/armor", 10);
+                set("armor_prop/armor_vs_force", 10);
+                set("armor_prop/attack", -2);
+        }
+        setup();
+}
+
+int query_autoload() { return 1; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

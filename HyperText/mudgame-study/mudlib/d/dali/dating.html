@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short","大厅");
+    set("long",@LONG
+这里是五华楼的前大厅，大厅内异常宽敞明亮，足有一
+里见方。全是云石铺地，黑白相间，足足可以容纳二、三千
+人。时时可见锦衣侍者手托美食来回行走。
+LONG);
+    set("objects", ([
+           __DIR__"npc/shizhe": 3,
+    ]));
+    set("exits", ([
+            "north"   : __DIR__"louti",
+            "out"     : __DIR__"gudao",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

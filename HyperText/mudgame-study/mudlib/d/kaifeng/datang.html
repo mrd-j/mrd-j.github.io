@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "开封府大堂");
+        set("long", @LONG
+两排的衙役站立两边，再旁边是龙头，虎头，狗头三把铡
+刀，白亮的锋刃令人寒毛直竖。台桌后高挂『明镜高悬』的匾
+额。上了大堂，无事也胆寒，东面出去就是街道。
+LONG
+        );
+        set("objects", ([
+            __DIR__"npc/baozheng" : 1,
+    ]));
+
+        set("exits", ([
+          "east" : __DIR__"kaifeng",
+    ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

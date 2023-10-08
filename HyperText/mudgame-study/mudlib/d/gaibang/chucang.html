@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "储藏室");
+        set("long", @LONG
+这里是丐帮的储藏室，你可以看见一个个锁着的箱子。周
+围还悬挂着一些武器和装备。这时有一位丐帮五袋弟子正闭目
+养神，看守着这里。
+LONG);
+        set("exits", ([
+                "west" : __DIR__"undertre",
+        ]));
+        set("objects", ([
+                "/d/gaibang/npc/5dai" : 1,
+                "/d/gaibang/npc/obj/staff" : 3,
+                "/clone/weapon/gangdao" : 2,
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

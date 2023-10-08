@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room:/d/changan/tulu3.c
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "土路");
+    set("long", @LONG
+这是一条黄土飞扬的路，不算太宽，路上几乎没有行人，四周
+一片荒寂。
+LONG);
+    set("exits",  ([  /*  sizeof()  ==  2  */
+        "northeast" : __DIR__"tulu4",
+        "southdown" : __DIR__"tulu2",
+    ]));
+    set("outdoors", "changan");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: interactive / this_player
+---
+
+### SYNOPSIS
+
+    object this_player( int flag );
+
+### DESCRIPTION
+
+    Return the object representing the player that caused the calling func‐
+    tion to be called.  Note that  this_player()  may  return  a  different
+    value  than this_object() even when called from within a player object.
+    If this_player is called as this_player(1) then the returned value will
+    be  the  interactive  that  caused  the  calling function to be called.
+    this_player(1) may return a different value than this_player() in  cer‐
+    tain  cases  (such  as  when  command()  is used by an admin to force a
+    player to perform some command).
+
+### SEE ALSO
+
+    this_object(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

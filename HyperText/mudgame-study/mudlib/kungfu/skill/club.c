@@ -1,3 +1,0 @@
-// club.c
-
-inherit SKILL;

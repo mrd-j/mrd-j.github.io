@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+
+void create()
+{
+        set_name("厨师", ({ "chu shi", "chu", "shi" }));
+        set("long", "绝情谷的厨师，你可以问他要(serve)一些吃的。\n");
+        set("gender", "男性");
+        set("age", 50);
+        set("combat_exp", 7500);
+        set_skill("unarmed", 35);
+        set_skill("force", 35);
+        set_skill("dodge", 40);
+        set_temp("apply/attack", 30);
+        set_temp("apply/defense", 40);
+        set("shen_type", 1);
+        setup();
+    carry_object("/clone/misc/cloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

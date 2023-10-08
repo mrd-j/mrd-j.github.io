@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// qiantang.c
+// Date: Nov.1997 by Venus
+
+#include <room.h>
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "钱塘江畔");
+        set("long", @LONG
+钱塘江，每年八月十八是观潮的好日子。“八月十八潮，壮观天
+下无”，乃是杭州一大奇景。西上月轮山便到了六和塔。
+LONG);
+        set("exits", ([
+            "north"     : __DIR__"road17",
+            "westup"    : __DIR__"liuheta",
+        ]));
+        set("objects", ([
+            __DIR__"npc/jian-ke" : 1,
+        ]));
+        set("outdoors", "hangzhou");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

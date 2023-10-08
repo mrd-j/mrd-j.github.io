@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "雪山山脚");
+        set("long", @LONG
+这里是山脚下的一片平地，山上不远处，皑皑白雪映照下
+的一大片红墙金瓦处，就是远近闻名的雪山寺。
+LONG);
+        set("outdoors", "xueshan");
+        set("exits", ([
+                "westup" : "/d/xuedao/nroad7",
+                "south"  : __DIR__"hubian4",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

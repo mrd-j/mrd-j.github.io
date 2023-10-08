@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+ 
+inherit BOOK;
+
+void create()
+{
+        set_name(YEL "「苗家剑谱」下册" NOR, ({ "miaojia jianpu", "miaojia", "jianpu", "pu", "book" }));
+        set_weight(500);
+        if (clonep())
+                destruct(this_object());
+        else {
+                set("unit", "本");
+                set("long", YEL "这是一本薄薄的书册，书皮已然发黄，封"
+                            "面上写着「苗家剑谱」四个字。\n" NOR);
+                set("value", 1);
+                set("no_sell", "…苗…苗家…金面佛他老人家我可得罪不起。");
+                set("material", "paper");
+                set("skill", ([
+                        "name" : "sword",
+                        "exp_required" : 300000,
+                        "jing_cost"  : 120,
+                        "difficulty" : 80,
+                        "max_skill"  : 199,
+                        "min_skill"  : 150
+                ]));
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

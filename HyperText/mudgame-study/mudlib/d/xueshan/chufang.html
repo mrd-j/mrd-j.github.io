@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "厨房");
+        set("long", @LONG
+这里是大轮寺的厨房，新来的僧人可以在此打杂。房中醒
+目的位置有一块牌子，但已经破旧不堪，字迹模糊了。
+LONG);
+        set("exits", ([
+                "south" : __DIR__"xiaoyuan",
+        ]));
+
+        set("objects", ([
+                __DIR__"obj/cha" : 2 + random(2),
+                __DIR__"obj/nailao" : 2 + random(2),
+        ]));
+
+        set("resource/water", 1);
+
+        set_temp("times" , 5);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "大厅");
+        set("long", @LONG
+这是白驼山庄的大厅，内部摆设极尽豪华，当中一张黑色
+檀木条案，上面陈放着精美的花瓶和一些珍贵的瓷器，四壁挂
+满名家的字画，非常之醒目。
+LONG);
+        set("valid_startroom", 1);
+        set("exits", ([
+                "north" : __DIR__"liangong",
+                "southdown" : __DIR__"yuanzi",
+        ]));
+ 
+        set("objects",([
+                CLASS_D("ouyang") + "/ouyangfeng" : 1,
+                __DIR__"npc/yahuan" : 2,
+        ]));
+
+        setup();
+
+        "/clone/board/baituo_b"->foo();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

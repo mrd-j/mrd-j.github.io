@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// /guanwai/damen.c
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "达门");
+    set("long", @LONG
+天池三面壅注不流，惟独北面偏东一线斜垂，白练飞舞，这就是达门。
+池水经达门外流，水流清冷，在石壁间冲撞有声。
+LONG );
+    set("exits", ([
+        "southwest"  : __DIR__"longmen",
+        "northwest"  : __DIR__"pubu",
+    ]));
+    set("no_clean_up", 0);
+    set("outdoors", "guanwai");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//Room: qinglong1.c
+
+inherit ROOM;
+
+void create ()
+{
+        set ("short", "青龙街");
+        set ("long", @LONG
+青龙街是长安城中心大街，青石板路笔直的伸展出去，一路上行人
+比肩，笙歌处处。景物之美，直如神仙境地。南面有一座很具规模的寺
+院。偶尔有颂经之声传出。
+LONG);
+        set("exits",
+        ([ //sizeof() == 3
+        "south" : __DIR__"baoxiangsi",
+            "west" : __DIR__"fufeng5",
+            "east" : __DIR__"qinglong2",
+        ]));
+
+        set("outdoors", "changan");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

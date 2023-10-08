@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+    set("short", "康亲王书房");
+    set("long", @LONG
+这里是康亲王书房，房中书架上整整齐齐地堆放着很多书。不过书上积了
+一些灰尘，显然是很久没有动过了。而书橱里的几件精巧玉器却更显得玲珑剔
+透，光彩照人。
+LONG );
+    set("exits", ([
+        "south" : __DIR__"kangfu_zoulang2",
+    ]));
+
+    set("outdoors", "beijing");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

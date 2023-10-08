@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// /guanwai/houting.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "后厅");
+        set("long", @long
+这里是庄内人用饭休息的地方，四角各生着一盆大炭火，一张八仙桌居
+中，周围打扫得甚是干净。管家正在和下人们吩咐着什么。
+long );
+        set("exits", ([
+                "south"    : __DIR__"houyuan",
+        ]));
+        set("no_clean_up", 0);
+        set("outdoors", "guanwai");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

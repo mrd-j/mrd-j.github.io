@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "文定北街");
+        set("long", @LONG
+这是中州城文定北街，宽敞的街道让人不竟心情一畅。街
+道的东面有一间药铺。走到这里就可以闻见浓浓的药味。西面
+人声鼎沸，原来是一座戏院子。
+LONG);
+
+    set("outdoors", "zhongzhou");
+        set("exits", ([
+                "east" : __DIR__"yaopu",
+                "south" : __DIR__"wendingbei1",
+                "west" : __DIR__"xiyuan",
+                "north" : __DIR__"wendingbei3",
+        ]));
+        set("objects", ([
+            "/d/beijing/npc/shusheng1" : 1,
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// /d/dali/huanggs.c 黄果树瀑布
+
+#include <room.h>
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "黄果树瀑布");
+        set("long", @LONG
+这儿是大理闻名于天下的黄果树瀑布，河流纵横交错，瀑布成
+群，洞穴成串，峰峦叠翠，植被奇特，呈现出层次丰富的喀斯特山
+水旖旎风光。
+LONG
+        );
+        set("outdoors", "dali");
+
+        set("exits", ([
+                "east" : __DIR__"feilihusouth",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

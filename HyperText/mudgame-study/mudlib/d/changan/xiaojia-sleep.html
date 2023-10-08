@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//Room: xiaojia-sleep.c
+
+inherit ROOM;
+
+void create ()
+{
+        set ("short", "卧室");
+        set ("long", @LONG
+这里是萧家的卧室，摆设很是华丽。几个丫鬟忙个不停，似乎出了
+什么大事。
+LONG);
+        set("exits", ([
+            "north" : __DIR__"xiaojiadt",
+        ]));
+        set("objects", ([
+            __DIR__"npc/yahuan" : 1,
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/taishan/.c
+// Date: CSWORD 96/03/25
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "斗母宫");
+    set("long", @LONG
+上了一段山路，游人一般都会在这里稍为休息。这里的地势已
+经比泰山邻近的徂徕山为高，从这里往东北走便是石经峪。
+LONG );
+    set("exits", ([
+        "eastup" : __DIR__"shijin",
+        "southdown" : __DIR__"yitian",
+    ]));
+    set("objects",([
+        __DIR__"npc/jian-ke" : 1,
+    ]));
+    set("outdoors", "taishan");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

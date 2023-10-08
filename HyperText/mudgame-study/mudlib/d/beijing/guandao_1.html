@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+    set("short", "大官道");
+    set("long", @LONG
+你走在一条尘土飞扬的大官道上。不时有两三骑快马从身边飞驰而过，扬
+起一路尘埃。道路两旁是整整齐齐的杨树林。
+LONG );
+       set("exits", ([
+        "east" : __DIR__"shi_2",
+        "north" : __DIR__"guandao_2",
+    ]));
+    set("objects", ([
+        __DIR__"npc/tangzi" : 1,
+    ]));
+    set("outdoors", "beijing");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

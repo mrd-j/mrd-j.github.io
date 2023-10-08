@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+
+int permit_recruit(object ob)
+{
+        if( ob->query("detach/关外胡家") || ob->query("betrayer/关外胡家") )
+        {
+                command("say 你反复无常，我不能收你为徒！");
+                return 0;
+        }
+
+        if (ob->query("born_family") != "关外胡家")
+        {
+                command("hmm");
+                command("say 我关外胡家虽然人丁稀少，但也不收纳族外之人。");
+                return 0;
+        }
+
+        if( ob->query("family/family_name") &&
+            ob->query("family/family_name") != "关外胡家")
+        {
+                command("hmm");
+                command("say 你既然已经离家拜师，就应有所作为，又跑回来作甚？");
+                return 0;
+        }
+
+        return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

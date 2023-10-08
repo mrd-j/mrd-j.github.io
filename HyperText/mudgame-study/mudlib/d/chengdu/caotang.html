@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "杜甫草堂");
+    set("long", @LONG
+这里是杜甫流寓成都的故居。草堂里流水回萦，小桥勾连
+竹树掩映，显得既庄严肃穆，古朴典雅，又不失幽深静谧，秀
+丽清朗。
+LONG);
+        set("outdoors", "chengdu");
+    set("no_clean_up", 0);
+    set("exits", ([
+        "south"  : __DIR__"path2",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

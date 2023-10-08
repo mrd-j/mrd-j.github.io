@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// peicong.c
+
+inherit NPC;
+
+void create()
+{
+    set_name("陪从", ({ "pei cong", "cong", "pei" }));
+    set("age", 22);
+    set("gender", "男性");
+    set("long", "一个部族头领的陪从。\n");
+    set("attitude", "peaceful");
+
+    set("str", 24);
+    set("per", 20);
+    set("dex", 16);
+    set("combat_exp", 1000);
+    set("shen_type", 1);
+
+    set_skill("unarmed", 20);
+    set_skill("dodge", 20);
+    set_skill("parry", 30);
+    set_skill("force", 40);
+    set_temp("apply/attack", 10);
+    set_temp("apply/defense", 10);
+    set_temp("apply/damage", 20);
+    set_temp("apply/armor", 10);
+
+    setup();
+    carry_object("/clone/cloth/cloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

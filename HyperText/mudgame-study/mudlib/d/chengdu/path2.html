@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "浣花溪");
+    set("long", @LONG
+溪源转北，阵阵水响带着你来到草堂前。站在草堂照壁前
+回首浣花溪，想象万红漂坠，少女清歌浣花时节，别是一
+般滋味。北边就是万里桥西宅，百花潭北庄的杜甫草堂。
+LONG);
+        set("outdoors", "chengdu");
+    set("exits", ([
+        "north"  : __DIR__"caotang",
+        "south"  : __DIR__"path1",
+    ]));
+    set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// jiandao.c
+
+#include <weapon.h>
+inherit BLADE;
+
+void create()
+{
+    set_name("尖刀", ({ "jian dao", "blade" }));
+    set_weight(5000);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "柄");
+        set("long", "一柄杀猪刀。\n");
+        set("value", 1500);
+        set("rigidity",100);
+        set("material", "steel");
+        set("wield_msg", "$N抽出一根$n握在手中。\n");
+        set("unwield_msg", "$N将手中的$n插回腰间。\n");
+    }
+      init_blade(10);
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

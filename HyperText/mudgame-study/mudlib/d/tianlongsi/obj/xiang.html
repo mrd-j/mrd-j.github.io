@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ITEM;
+
+void init();
+int do_dian(string arg);
+void create()
+{
+    set_name("香", ({ "xiang" }) );
+    set_weight(30);
+    if( clonep() )
+        set_default_object(__FILE__);
+    else {
+        set("unit", "柱");
+                set("long", "这是一柱香,你可以点燃它(dian)。\n");
+        set("value", 100);
+        set("material", "wood");
+    }
+    setup();
+}
+
+void init()
+{
+    add_action("do_dian", "dian");
+}
+
+int do_dian(string arg)
+{
+    object me;
+//    string item,target;
+
+    me = this_player();
+    if(!arg||arg!="xiang")
+        return notify_fail("你要点燃什么东西？\n");
+    else
+        {
+        if(me->query_temp("marks/ask_temp3"))
+            me->set_temp("marks/dian_temp",1);
+        return notify_fail("你点燃一柱香拿在手中。\n");
+        }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//RJQMEN.C
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "侧门");
+    set("long", @LONG
+这是锐金旗的一个侧门，大概只容得下一个人进出，每个教众
+到此，都必须出示一张腰牌，才可进入。
+LONG );
+    set("exits", ([
+        "in"   : __DIR__"rjqyuan",
+        "east" : __DIR__"torjq3",
+    ]));
+    set("no_clean_up", 0);
+    set("outdoors", "mingjiao");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

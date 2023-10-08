@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "苏堤");
+        set("long", @LONG
+春晓，漫步林荫道上，烟柳笼纱，雀鸟欢鸣一片生机。苏
+堤春晓被列为西湖十景之首，果然名不虚传。北边是压堤桥南
+面是望山桥。东面一片梅林，林后似乎有座院落，但看不真切。
+LONG);
+        set("exits", ([
+                "north" : __DIR__"suti3",
+                "south" : __DIR__"suti5",
+        ]));
+        set("objects", ([
+                __DIR__"npc/liyuanzhi" : 1,
+        ]));
+        set("outdoors", "hangzhou");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

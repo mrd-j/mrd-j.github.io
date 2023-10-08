@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "草原");
+        set("long", @LONG
+这是一片无边无际的草原，半人高的青草随风而动，正如
+江湖中的你，随著江湖之中汹涌的波涛，四处飘摇。你想到江
+湖中的无奈，不禁沧然泪下。
+LONG);
+        set("outdoors", "shenfeng");
+    set("exits", ([
+          "west" : __DIR__"caoyuan4",
+          "east" : __DIR__"caoyuan2",
+    ]));
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

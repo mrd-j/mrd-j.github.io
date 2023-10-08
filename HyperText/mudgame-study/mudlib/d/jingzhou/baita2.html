@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "白塔三楼");
+    set("long", @LONG
+这里是报恩塔三楼，由于这里地势高，一阵微风吹来，说
+不出的凉爽，荆州城的风光也尽收眼底。
+LONG);
+    set("exits", ([
+          "down" : __DIR__"baita1",
+    ]));
+        set("objects", ([
+                "/d/beijing/npc/shiren" : 1,
+        ]));
+    set("no_clean_up", 0);
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

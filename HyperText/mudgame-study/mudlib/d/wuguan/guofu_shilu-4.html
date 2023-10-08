@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "石板路2");
+        set("long", @LONG
+你走在一条石板路上，北面过去就是后院了，南面是西练
+功场，西面传来阵阵饭菜的香气，那里是郭府的饭厅。东面过
+去是郭府大厅。
+LONG);
+        set("no_fight", 1);
+        set("exits", ([
+                "east" : __DIR__"guofu_shilu-2",
+                "south" : __DIR__"guofu_lang3",
+                "north" : __DIR__"guofu_shilu-3",
+                "west" : __DIR__"guofu_fanting",
+        ]));
+        set("outdoors", "wuguan");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

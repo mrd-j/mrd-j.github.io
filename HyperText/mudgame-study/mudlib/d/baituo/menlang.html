@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "门廊");
+        set("long", @LONG
+这是个门廊，门廊的飞檐上挂着一串串的小铜铃，在清风
+中发出清脆动听的铃声。
+LONG);
+        set("exits", ([
+                "north" : __DIR__"huayuan",
+                "south" : __DIR__"liangong",
+        ]));
+        set("objects", ([
+                __DIR__"npc/guanjia" : 1,
+        ]));
+        set("outdoors", "baituo");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

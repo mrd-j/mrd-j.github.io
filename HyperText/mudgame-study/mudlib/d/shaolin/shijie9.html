@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/shaolin/shijie9.c
+// Date: YZC 96/01/19
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "石阶");
+    set("long", @LONG
+眼前遽然出现一大片松林。松林长得极密，石阶上铺满了厚
+厚的朽黄的松针。踩在脚下，发出察察的响声。一只小松鼠吱地
+在眼前闪过，消失在林海里。
+LONG );
+    set("exits", ([
+        "southdown" : __DIR__"shijie8",
+        "northup" : __DIR__"shijie10",
+    ]));
+    set("outdoors", "shaolin");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

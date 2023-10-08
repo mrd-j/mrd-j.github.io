@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+#include <armor.h>
+
+inherit CLOTH;
+
+void create()
+{
+    set_name(HIW "银铠甲" NOR, ({ "silver armor", "silver", "armor", "jia" }));
+    set_weight(80000);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "副");
+        set("long", HIW "一副全银制的重铠甲，在中原很难见到。\n" NOR);
+        set("value", 20000);
+        set("material", "boots");
+                set("armor_prop/armor", 200);
+        set("armor_prop/dodge", -80);
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

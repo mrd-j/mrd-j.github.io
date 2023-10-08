@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/shaolin/bagua.c
+// Date: YZC 96/01/19
+// Date: CLEANSWORD 96/05/19
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "八卦阵阵心");
+    set("long", @LONG
+这里就是洪荒古阵的中心。站在这里，才能看清楚四周
+的情形，只见周围暮蔼沉沉，云气弥漫，不见边际。一道道
+闪电如奔蛇般穿梭其间，发出阵阵闷雷。间夹着几声惨厉的
+哭叫声，与雷电着地的劈裂声混合在一起，整个场面说不出
+的诡异可惧。阵心正中处有一口深潭(tan)，望之深不见底。
+LONG );
+    set("item_desc", ([
+        "tan":  "深潭边的岩石上刻着四个巨大的古篆：“万古寒潭”，\n"
+            "再有五个小字：“苍松子谨书”。 潭边都是极硬的玄武岩，\n"
+            "潭水澄碧透明，鱼虾不生。水面隐隐泛着一股幽幽的深绿色，\n"
+            "走近便觉一股彻骨寒气扑面而来。  粗看似乎只有几十丈深，\n"
+            "仔细望下去却是越看越深，直如无底深渊一般！\n",
+    ]));
+    set("exits", ([
+        "up" : __DIR__"andao3",
+    ]));
+    set("no_clean_up", 0);
+    setup();
+}
+
+void init()
+{
+        add_action("do_enter", "enter");
+}
+
+int do_enter(string arg)
+{
+    object me;
+    me = this_player();
+
+        if( !arg || arg=="" ) return 0;
+
+        if( arg=="tan" )
+    {
+                if( present("pishui zhu", me) )
+        {
+            message_vision("$N取出辟水灵珠，含在嘴里，轻轻一纵，跃入寒潭之中。\n", me);
+                    me->move("/d/shaolin/hantan1");
+                    message("vision", "只听水面哗啦一声响，似乎有人也潜下水来。\n",
+                        environment(me), ({me}) );
+        }
+        else
+        {
+            tell_object(me, "你一跳入水中，只觉蚀骨寒气从全身无数个毛孔侵入，四肢几乎完全麻木，\n"
+                    "你拚着丹田中残余的一股内力，攀住潭边的岩石，急急忙忙地爬了出来！\n");
+                    message("vision", me->name() + "下半身一浸入水中，立刻大叫一声，落汤鸡似地跳了出来！，\n",
+                        environment(me), ({me}) );
+        }
+
+        return 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/shaolin/bagua.h
+// Date: YZC 96/01/19
+
+string* dirs = ({
+    "坎", "坤", "离", "乾",
+    "艮", "震", "巽", "兑"
+    });
+
+int check_dirs(object me, string dir)
+{
+    int /*i,*/ bc, count;
+    if (member_array(dir, dirs) != -1)
+    {
+        bc = me->query_temp("bagua/count");
+
+        switch (dir)
+        {
+        case "坎":
+            if (bc == 0 || bc == 13 || bc == 17) {
+                me->set_temp("bagua/count",  bc + 1);
+                me->receive_damage("jing",50); }
+            else
+                me->delete_temp("bagua/count");
+            break;
+        case "坤":
+            me->delete_temp("bagua/count");
+            break;
+        case "离":
+            if (bc == 1 || bc == 12 ) {
+                me->set_temp("bagua/count",  bc + 1);
+                me->add("neili", -50); }
+            else
+                me->delete_temp("bagua/count");
+            break;
+        case "乾":
+            if (bc == 8 ) {
+                me->set_temp("bagua/count",  bc + 1);
+                me->receive_damage("qi", 50); }
+            else
+                me->delete_temp("bagua/count");
+            break;
+        case "艮":
+            if (bc == 3 || bc == 4 || bc == 15) {
+                me->set_temp("bagua/count",  bc + 1);
+                me->add("combat_exp", -50); }
+            else
+                me->delete_temp("bagua/count");
+            break;
+        case "震":
+            if (bc == 2 || bc == 7 || bc == 9 ) {
+                me->set_temp("bagua/count",  bc + 1);
+                me->unconcious(); }
+            else
+                me->delete_temp("bagua/count");
+            break;
+        case "巽":
+            if (bc == 6 || bc == 11 ) {
+                me->set_temp("bagua/count",  bc + 1);
+                me->receive_wound("qi", 50); }
+            else
+                me->delete_temp("bagua/count");
+            break;
+        case "兑":
+            if (bc == 5 || bc == 10 || bc == 14 || bc == 16) {
+                me->set_temp("bagua/count",  bc + 1);
+                me->receive_wound("jing", 50); }
+            else
+                me->delete_temp("bagua/count");
+            break;
+        default:
+            me->delete_temp("bagua/count");
+            break;
+        }
+
+        if (dir == "坤")
+        {
+            me->delete_temp("bagua");
+        }
+        else
+        {
+            count =  me->query_temp("bagua/"+dir);
+            count++;
+            me->set_temp("bagua/"+dir, count);
+            if (count > 13)
+            {
+                me->delete_temp("bagua");
+                me->move(__DIR__"jianyu");
+                return (1);
+            }
+        }
+    }
+
+/*
+    write("* " + me->query_temp("bagua/northwest"));
+    write(" " + me->query_temp("bagua/north"));
+    write(" " + me->query_temp("bagua/northeast") +"\n");
+
+    write("* " + me->query_temp("bagua/west"));
+    write(" " + me->query_temp("bagua/count"));
+    write(" " + me->query_temp("bagua/east") +"\n");
+
+    write("* " + me->query_temp("bagua/southwest"));
+    write(" " + me->query_temp("bagua/south"));
+    write(" " + me->query_temp("bagua/southeast") +"\n");
+*/
+    return (0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

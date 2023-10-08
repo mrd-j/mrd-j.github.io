@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "小河边");
+    set("long", @LONG
+此处位於终南山角一偏僻处，浓荫匝地，花光浮动，周围
+尽是叁天古木，颇具幽静之美。不远处的小河由山洞(dong)中
+涌出的泉水所形成，淙淙的水声更让你觉得身心顺畅。往北可
+通往山林深处。往西可进入山洞中。
+LONG );
+    set("outdoors", "gumu");
+    set("item_desc", ([
+        "dong" : "一个深邃、幽暗、恐怖的小山洞。\n",
+    ]));
+    set("exits", ([
+        "in"    : __DIR__"shandong",
+        "north" : __DIR__"shanlu16",
+    ]));
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

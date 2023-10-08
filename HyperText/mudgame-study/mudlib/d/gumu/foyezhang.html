@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "佛爷掌");
+        set("long", @LONG
+只见此处颇为荒凉，是一处寺院的遗址。四周青松翠柏环
+绕，寺院的断垣残璧依稀可见，似乎还是一座不小的寺院。往
+北是一片平原。
+LONG
+        );
+        set("outdoors", "gumu");
+        set("exits", ([
+                "east"  : __DIR__"shenheyuan",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

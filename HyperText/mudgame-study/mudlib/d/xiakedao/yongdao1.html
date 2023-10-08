@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// yongdao1.c 甬道
+
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "甬道");
+        set("long", @LONG
+这是一条长长的甬道，两边点着油灯，光线虽暗，却也可辨道
+路，外面隐约能听见瀑布的隆隆水声，洞口水花飞溅，地面甚是湿润。
+LONG );
+        set("exits", ([
+               "south" : __DIR__"yongdao2",
+               "out" : __DIR__"pubu",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

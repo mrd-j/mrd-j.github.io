@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//tongpai1.c
+//edit by noz
+
+inherit ITEM;
+
+void create()
+{
+        set_name("罚恶铜牌",({ "e pai" }));
+        set_weight(100);
+
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("unit", "块");
+                set("long", "这是一块闪闪发光的白铜片子，约有巴掌大小，牌子正"
+                            "面刻着一张狰狞的煞神凶脸，十分诡异。\n");
+                set("value", 100);
+        }
+
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

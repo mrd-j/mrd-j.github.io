@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit ITEM;
+
+string *names = ({
+HIW "梅花" NOR,
+HIM "梅花" NOR,
+HIC "梅花" NOR,
+HIY "梅花" NOR,
+HIR "梅花" NOR,
+});
+
+void create()
+{
+
+        int i = random(sizeof(names));
+        set_name(names[i], ({"mei hua", "mei", "hua"}));
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "朵");
+                set("long", "一朵刚刚从树上飘落的梅花。\n");
+                set("value", 0);
+                set("material", "plant");
+                set_weight(1);
+        }
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

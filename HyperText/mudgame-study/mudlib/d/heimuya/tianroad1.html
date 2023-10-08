@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "乱石小径");
+        set("long", @LONG
+这是一处乱石怪异的小径，向西再迂回转东北可以通往平
+安州。据说前方经常有野兽出没，不可久留。东方不远有一座
+建筑，颇为气派。
+LONG);
+        set("outdoors", "heimuya");
+        set("exits", ([
+                "west" : __DIR__"road1",
+                "east" : __DIR__"tianroad2",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/taishan/.c
+// Date: CSWORD 96/03/25
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "莲花峰");
+    set("long", @LONG
+莲花峰其实是由五座山峰攒簇而成，状如莲花，因以为名。东
+面有危崖万仞，叫五花崖。登上莲花峰后，可看到在盘道中的游人
+如小蚁般往来穿梭，故此莲花峰又叫望人峰。往上走便是莲花峰的
+峰顶。
+LONG );
+    set("exits", ([
+        "westup" : __DIR__"tianjie",
+        "northup" : __DIR__"shixin",
+    ]));
+    set("outdoors", "taishan");
+    set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

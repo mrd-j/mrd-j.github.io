@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// equip.c
+
+inherit ITEM;
+inherit F_EQUIP;
+
+void setup()
+{
+    if (! query("armor_prop/dodge") && (weight() >= 3000))
+        set("armor_prop/dodge", -weight() / 3000);
+    if (! query("weapon_prop/dodge") && (weight() >= 3000))
+        set("weapon_prop/dodge", -weight() / 3000);
+
+        ITEM_D->equip_setup(this_object());
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

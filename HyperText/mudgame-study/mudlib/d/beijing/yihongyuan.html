@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "怡红院");
+    set("long", @LONG
+你一走进来，一眼就看到大厅的墙上挂着一幅幅春宫图，一下子就明白了
+这是什么地方。厅内到处张灯结彩，香气扑鼻。几名打扮得妖里妖气的女人分
+站两旁对你发出媚笑。一个老鸨婆连忙上前招呼客人。从楼上传来了阵阵打情
+骂俏的声音。
+LONG );
+    set("exits", ([
+        "west" : __DIR__"wang_8",
+    ]));
+
+    set("objects", ([
+                __DIR__"npc/laobaopo" : 1,
+                __DIR__"npc/piaoke" : 1,
+                __DIR__"npc/jinv" : 2,
+    ]));
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

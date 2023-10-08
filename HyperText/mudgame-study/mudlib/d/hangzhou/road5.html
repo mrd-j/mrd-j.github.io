@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+        set("short", "青石大道");
+        set("long", @LONG
+大道上游人，或步行，或乘轿，或骑马。个个喜气洋洋的来游西
+湖。往西是去玉泉寺的路。大道则延伸向东边和西南边。
+LONG);
+        set("exits", ([
+            "southwest" : __DIR__"road4",
+            "west"    : __DIR__"yuquan",
+            "south"     : __DIR__"dadao1",
+            "east"      : __DIR__"road6",
+        ]));
+        set("objects" , ([
+            __DIR__"npc/honghua1" :1,
+            __DIR__"npc/tiao-fu" :1,
+        ]));
+
+        set("outdoors", "hangzhou");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

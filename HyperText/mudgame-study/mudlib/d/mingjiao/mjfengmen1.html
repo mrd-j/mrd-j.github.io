@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/mingjiao/mjfengmen1.c
+// Date: Java 97/05/11
+
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+    set("short", "竹林");
+    set("long", @LONG
+这是竹林中的一间小院，竹影依依，经声入耳，其南北各有
+一间竹舍，乃是明教中释道和佛家弟子的修炼场所。
+LONG );
+    set("exits", ([
+        "northwest" : __DIR__"mjfengmen",
+    "north" : __DIR__"foshe",
+    "south" : __DIR__"daoshe",
+    ]));
+    set("no_clean_up", 0);
+    set("outdoors", "mingjiao");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// funu.c
+
+inherit NPC;
+
+void create()
+{
+    set_name("村妇",({ "cun fu", "woman" }) );
+        set("gender", "女性" );
+        set("age", 27);
+        set("long", "一个年轻的摆夷村妇。\n");
+     set_temp("apply/defense", 5);
+    set("combat_exp", 3000);
+    set("shen_type", 1);
+        set("per", 20);
+        set("str", 24);
+        set("dex", 25);
+        set("con", 16);
+        set("int", 15);
+        set("attitude", "friendly");
+        setup();
+        carry_object(__DIR__"obj/tduanqun")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

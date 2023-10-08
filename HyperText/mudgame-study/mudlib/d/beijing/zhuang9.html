@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "小房间");
+    set("long", @LONG
+这是一个小房间，桌上点着蜡烛。房中只有一桌一床，陈设简单，
+却十分干净。床上铺着被褥。
+LONG );
+    set("exits", ([
+        "south" : __DIR__"zhuang8",
+    ]));
+    set("objects", ([
+    __DIR__"npc/furen": 1,
+    __DIR__"npc/shuanger": 1,
+    ]));
+    set("outdoors", "beijing");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

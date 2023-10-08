@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "御街");
+        set("long", @LONG
+这条横贯南北的街道是皇上出巡时的要道，北起宣德门南
+至南盈门，两边店铺不断。街道东面是有名的稻香居。
+LONG);
+        set("no_clean_up", 0);
+        set("outdoors", "kaifeng");
+        set("exits", ([
+          "north" : __DIR__"road3",
+          "west" : __DIR__"gongyuan3",
+          "south" : __DIR__"zhuque",
+          "east" : __DIR__"daoxiang",
+    ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

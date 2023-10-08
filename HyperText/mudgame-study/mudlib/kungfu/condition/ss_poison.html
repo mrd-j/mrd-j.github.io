@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+#include <condition.h>
+
+inherit F_CLEAN_UP;
+inherit POISON;
+
+string name() { return "ss_poison"; }
+
+string chinese_name() { return "生死符"; }
+
+string update_msg_others()
+{
+       return HIR "只见$N" HIR "哀嚎连连，双手在身上一阵乱抓，苦不堪言。\n" NOR;
+}
+
+string update_msg_self()
+{
+        return HIB "忽然一股寒流夹着一阵灼热涌上心来，你中的生死符发作了！\n" NOR;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

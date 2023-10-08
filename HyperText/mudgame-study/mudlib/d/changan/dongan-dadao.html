@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//Room: dongan-dadao.c
+
+inherit ROOM;
+
+void create ()
+{
+        set ("short", "东安大道");
+        set ("long", @LONG
+长安城的主街东安大道颇为热闹，除了本城的居民外，还有不少外
+来的旅客和商人。东安大道再向东就是长安城的连德道口、东城门，往
+西是故皇宫的冯诩道。
+LONG);
+        set("exits",
+        ([ //sizeof() == 2
+        "west" : __DIR__"fengxu3",
+            "east" : __DIR__"dongan-daokou",
+        ]));
+
+        set("outdoors", "changan");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

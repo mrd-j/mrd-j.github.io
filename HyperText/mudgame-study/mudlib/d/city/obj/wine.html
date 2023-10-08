@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// wine.c
+
+inherit ITEM;
+inherit F_LIQUID;
+
+void create()
+{
+    set_name("酒杯", ({"wine"}));
+    set_weight(700);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("long", "还没定义，等下层调用。\n");
+        set("unit", "杯");
+        set("value", 100);
+        set("no_get", "1");
+        set("max_liquid", 5);
+    }
+
+    set("liquid", ([
+        "type": "alcohol",
+        "name": "米酒",
+        "remaining": 5,
+        "supply": 15,
+        "drunk_apply": 3,
+    ]));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

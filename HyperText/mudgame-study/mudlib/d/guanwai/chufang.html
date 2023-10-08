@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/guanwai/chufang.c
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "厨房");
+    set("long", @LONG
+炊烟缭绕，蒸汽腾腾，香味扑鼻而来。靠墙有一个灶台，支着一
+口大锅，里面煮着香喷喷的米粥，旁边的一个火上蒸着白面馒头。一
+个老仆人聚精会神的整理着厨房里面物什。
+LONG );
+    set("exits", ([
+        "east" : __DIR__"shizilu",
+    ]));
+
+    set("objects",([
+        __DIR__"obj/wan" : 2,
+                __DIR__"obj/mantou" : 5,
+    ]));
+
+    set("resource/water", 1);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

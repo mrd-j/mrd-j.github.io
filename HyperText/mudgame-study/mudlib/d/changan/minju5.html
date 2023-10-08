@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//Room: minju5.c
+
+inherit ROOM;
+
+void create ()
+{
+        set ("short", "民居");
+        set ("long", @LONG
+房间里甚是宽敞，里面摆设朴素而自然，左侧是一个古色古色的精
+雅梳妆台，前面摆有两张红木圆椅。右侧墙壁上挂有一幅美女抚琴图，
+上面配有几行笔迹清秀的隶体小字，内侧则是一张红色帐幔垂挂的低矮
+木榻。
+LONG);
+        set("exits",
+        ([ //sizeof() == 1
+            "north" : __DIR__"huarui5",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "武场");
+        set("long", @LONG
+这里是大轮寺的小练武场，树着好多木桩和沙袋，僧人们
+日常均在此刻苦习武。往南走就是大练武场，许多雪山弟子在
+那里练功。
+LONG);
+        set("outdoors", "xueshan");
+
+        set("exits", ([
+                "north" : __DIR__"houyuan",
+                "south" : __DIR__"chang",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

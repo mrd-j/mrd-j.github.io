@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// qiaofu.c
+
+inherit NPC;
+
+
+void create()
+{
+    set_name("樵夫", ({ "qiao fu","fu" }));
+    set("gender", "男性");
+    set("age", 52);
+    set("str", 25);
+    set("dex", 16);
+    set("per", 21);
+    set("long", "这是一个精壮老汉。\n");
+    set("combat_exp", 5000);
+    set("shen_type", 1);
+    set("attitude", "peaceful");
+
+    setup();
+    carry_object(__DIR__"obj/futou")->wield();
+    carry_object("/clone/misc/cloth")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

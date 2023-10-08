@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <weapon.h>
+inherit STAFF;
+
+void create()
+{
+        set_name("招魂幡", ({ "zhaohun fan", "zhaohun", "fan" }));
+        set_weight(2000);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("unit", "面");
+                set("long", "这是一面精铁打铸的招魂幡。\n");
+                set("value", 800);
+                set("rigidity", 100);
+                set("material", "steel");
+                set("wield_msg", "$N抽出一面$n握在手中。\n");
+                set("unwield_msg", "$N将手中的$n插回腰间。\n");
+        }
+        init_staff(35);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

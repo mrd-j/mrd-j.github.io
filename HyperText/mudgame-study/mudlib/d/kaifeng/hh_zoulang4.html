@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "走廊");
+        set("long", @LONG
+这是红花会总舵内的一条木制的走廊，红漆地面很是光滑
+整个走廊被打整得一尘不染。你不时能够看到几个红花会的会
+众或是弟子在此走动，忙碌个不停。
+LONG);
+        set("no_clean_up", 0);
+        set("exits", ([
+          "east" : __DIR__"hh_zhengting",
+          "west" : __DIR__"hh_yanting1",
+    ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

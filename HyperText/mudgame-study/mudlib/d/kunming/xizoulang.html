@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short",  "西走廊" );
+        set("long", @LONG
+这里是一条干净的走廊，从两面看去，可以欣赏到花园里
+的风景，只见各种假山怪石，奇花异草，足见王府之气派。
+LONG);
+        set("exits", ([
+                "west"   :__DIR__"xizoulang1",
+                "east"   :__DIR__"wangfu1"
+        ]));
+        set("objects", ([
+                "/d/zhongzhou/npc/jiading" : 2,
+        ]));
+        setup();
+        replace_program(ROOM);         
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

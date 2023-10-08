@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// necromancy.c 降伏法
+// by Java
+
+inherit SKILL;
+
+int valid_learn(object me)
+{
+    if( (int)me->query_skill("longxiang",1) <
+        (int)me->query_skill("necromancy",1) )
+      return notify_fail("你的龙相般若功太低了，无法修炼更高深的降伏法。\n");
+
+    return 1;
+}
+
+int practice_skill(object me)
+{
+    return notify_fail("降伏法只能靠学(learn)来提高。\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

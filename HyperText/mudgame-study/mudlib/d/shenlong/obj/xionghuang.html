@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit ITEM;
+
+void create()
+{
+    set_name(YEL "雄黄" NOR, ({"xionghuang" }));
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "包");
+        set("long", "这是一包雄黄，据说可驱百毒。\n");
+        set("value", 1000);
+        set("only_do_effect", 1);
+    }
+    setup();
+}
+
+int do_effect(object me)
+{
+    write("想死啊？雄黄不能吃。\n");
+        return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

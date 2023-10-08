@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "石阶");
+        set("long", @LONG
+你走在青石板铺成的石阶上。这里就是传说中神秘的白驼
+山。远远望去，两座白沙堆积形成的山峰好像一只骆驼的脊背。
+一座山门立在你的眼前。
+LONG);
+    set("exits", ([
+        "east"      : __DIR__"caoping",
+        "northup"   : __DIR__"damen",
+        "southdown" : __DIR__"guangchang" ,
+    ]));
+    set("outdoors", "baituo");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

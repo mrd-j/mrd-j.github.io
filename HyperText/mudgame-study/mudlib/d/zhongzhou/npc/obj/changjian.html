@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//changjian
+#include <weapon.h>
+
+inherit SWORD;
+
+void create()
+{
+    set_name("长剑", ({ "changjian","sword" , "chang jian" , "jian" }) );
+    set_weight(7000);
+    if( clonep() )
+        set_default_object(__FILE__);
+    else {
+        set("unit", "把");
+        set("long", "这是一把看起相当普通的长剑。\n");
+        set("value" , 1000);
+        set("material", "steel");
+    }
+    init_sword(25);
+
+// These properties are optional, if you don't set them, it will use the
+// default values.
+
+    set("wield_msg", "$N「唰」地一声抽出一把$n握在手中。\n");
+    set("unwield_msg", "$N将手中的$n插入腰间的剑鞘。\n");
+
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

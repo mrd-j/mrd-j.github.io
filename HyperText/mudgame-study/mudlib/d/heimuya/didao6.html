@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//room: didao6.c
+inherit ROOM;
+
+void create()
+{
+  set("short","秘道尽头");
+  set("long", @LONG
+你忽觉前方一亮，身前真是别有洞天，前方好想有作花园。
+不知是什么地方。\n"
+LONG );
+  set("exits",([
+      "north"     : __DIR__"xiaohuayuan",
+      "northdown" : __DIR__"didao4",
+  ]));
+  set("no_clean_up", 0);
+  setup();
+  replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

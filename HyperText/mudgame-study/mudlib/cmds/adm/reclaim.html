@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// reclaim.c
+
+inherit F_CLEAN_UP;
+
+int main(object me, string arg)
+{
+
+    if (!SECURITY_D->valid_grant(me, "(admin)"))
+        return 0;
+
+    write(sprintf("Total %d objects has been cleaned.\n",
+                  reclaim_objects()));
+    return 1;
+}
+
+int help()
+{
+    write(@TEXT
+指令格式: reclaim
+
+查阅所有的对象，清除那些不应继续保存在内存中的对象。
+TEXT );
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

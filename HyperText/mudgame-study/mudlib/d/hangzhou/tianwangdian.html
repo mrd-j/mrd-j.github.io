@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// tianwangdian.c
+// Date: Nov.1997 by Venus
+#include <room.h>
+inherit ROOM;
+void create()
+{
+        set("short", "天王殿");
+        set("long", @LONG
+走进大殿，只见正面坐着袒胸露腹的弭勒佛，两旁是四大天王，
+後面是神态威严的韦驮菩萨。天王殿後面便是大雄宝殿。
+LONG);
+        set("exits", ([
+                "out"       : __DIR__"lingyinsi",
+                "north"     : __DIR__"dxbaodian1",
+        ]));
+        set("outdoors", "hangzhou");
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

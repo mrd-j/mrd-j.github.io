@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+void create()
+{
+        set("short", "玉皇山脚");
+        set("long", @LONG
+只见往上的山路曲折蜿延。山路旁有一座小六角亭，几个游人正
+在亭里歇脚。东北边是一条青石大道，往西是上山的路。
+LONG);
+        set("exits", ([
+                "north" : __DIR__"road15",
+                "westup"    : __DIR__"shanlu7",
+        ]));
+        set("objects", ([
+                __DIR__"npc/honghua1" : 2,
+        ]));
+        set("outdoors", "hangzhou");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

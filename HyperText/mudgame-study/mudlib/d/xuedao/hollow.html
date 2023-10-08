@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "雪坑");
+        set("long", @LONG
+这是大雪山脚下的一个雪坑，坑内四周光线阴暗，什么都
+看不清楚。躲进这里，你感到暖和了一些。
+LONG);
+        set("exits", ([
+                "northup"   : __DIR__"sroad3",
+        ]));
+        set("objects", ([
+                "/clone/worm/xixuezhu" : 2,
+        ]));
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+void create()
+{
+        set_name("富商",({"fu shang","fu","shang"}));
+        set("gender", "男性");
+        set("age", 35);
+        set("long", "中州本地的暴发户。\n");
+        set("combat_exp", 3600);
+        
+        set_skill("unarmed", 20);
+        set_skill("dodge", 40);
+        set_skill("parry", 20);
+        set_temp("apply/attack", 10);
+        set_temp("apply/defense", 30);
+        set_temp("apply/armor", 15);
+        set_temp("apply/damage", 5);
+        setup();
+        carry_object("/clone/misc/cloth")->wear();
+        add_money("silver", 20);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

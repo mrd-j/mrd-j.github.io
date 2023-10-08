@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// zysha.c
+
+inherit ITEM;
+
+void create()
+{
+    set_name("紫云纱", ({ "ziyun sha", "sha", "silk" }));
+    set_weight(200);
+    if (clonep())
+        set_default_object(__FILE__);
+    else {
+        set("unit", "匹");
+        set("long", "这是一匹淡紫色的华丽丝绸，薄得几乎透明。\n");
+        set("value", 5000);
+        set("material", "silk");
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

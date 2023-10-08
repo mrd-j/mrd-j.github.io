@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// nixie.c
+
+#include <ansi.h>
+#include <armor.h>
+
+inherit BOOTS;
+
+void create()
+{
+    set_name( HIC "青布尼鞋" NOR, ({ "ni xie", "xie" }) );
+    set_weight(1000);
+    if( clonep() )
+        set_default_object(__FILE__);
+    else {
+        set("unit", "双");
+        set("long", "一双青布尼鞋。\n");
+        set("value", 0);
+        set("material", "boots");
+        set("armor_prop/dodge", 5);
+        set("female_only", 1);
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

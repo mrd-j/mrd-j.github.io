@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shield.c 牛皮盾
+
+#include <armor.h>
+
+inherit SHIELD;
+
+void create()
+{
+    set_name("牛皮盾", ({ "leather shield", "shield", "dun" }) );
+    set_weight(7000);
+    if( clonep() )
+        set_default_object(__FILE__);
+    else {
+        set("material", "leather");
+        set("unit", "面");
+        set("value", 1200);
+        set("armor_prop/armor", 5);
+        set("armor_prop/defense", 3);
+    }
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

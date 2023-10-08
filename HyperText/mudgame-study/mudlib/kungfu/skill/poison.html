@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// poison.c 基本毒技
+// Modified by Java Mar.1998
+inherit SKILL;
+
+void create() { seteuid(getuid()); }
+string type() { return "poison"; }
+
+int valid_learn(object me)
+{
+        if (me->query("character") == "光明磊落")
+                return notify_fail("你心中暗想：我行事光明磊落，学什么毒技！\n");
+
+        return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

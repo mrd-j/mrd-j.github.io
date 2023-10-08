@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+        set("short", "北街菜市");
+        set("long", @LONG
+这里是京城西单北大街西边的一个菜市，青石板铺砌着地面。街的两边摆
+满了蔬菜摊和水果摊, 小贩门大声吆喝着，京城的百姓都是从这儿把每天所需
+的食物购回, 做成一顿顿可口的佳肴。
+LONG );
+       set("exits", ([
+                "east" : __DIR__"bei_3",
+        ]));
+        set("objects", ([
+                __DIR__"npc/caifan" : 1,
+                __DIR__"npc/jumin1" : 2,
+                "/clone/npc/walker" : 1,
+        ]));
+        set("outdoors", "beijing");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

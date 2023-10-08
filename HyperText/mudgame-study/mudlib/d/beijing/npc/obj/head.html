@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <armor.h>
+
+inherit HEAD;
+
+void create()
+{
+        set_name("钢盔", ({ "gang kui", "gangkui", "kui", "helmet" }) );
+        set_weight(800);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "顶");
+                set("material", "steel");
+                set("long", "一顶结实的钢盔。\n");
+                set("value", 0);
+                set("armor_prop/armor", 5);
+        }
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

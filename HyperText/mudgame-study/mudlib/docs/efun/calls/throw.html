@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: calls / throw
+---
+
+### NAME
+
+    throw() - forces an error to occur in an object.
+
+### SYNOPSIS
+
+    void throw(mixed);
+
+### DESCRIPTION
+
+    The  throw()  efun may be used to force an error to occur in an object.
+    When used in conjunction, throw() and catch() allow the  programmer  to
+    choose  what  error  message  is displayed when a runtime error occurs.
+    When throw() is used,  it  should  be  used  in  conjunction  with  the
+    catch(3) efun.  Here is a typical usage:
+
+       string err;
+       int rc;
+
+       err = catch(rc = ob->move(dest));
+       if (err) {
+            throw("move.c: ob->move(dest): " + err + "\n");
+            return;
+       }
+
+### SEE ALSO
+
+    catch(3), error(3), error_handler(4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

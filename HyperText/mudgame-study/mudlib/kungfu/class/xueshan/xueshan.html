@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// check recruit
+
+int permit_recruit(object ob)
+{
+        if (ob->query("detach/大轮寺") || ob->query("betrayer/大轮寺"))
+        {
+                command("say 你既然已经离开了大轮寺，还跑回来干嘛？");
+                return 0;
+        }
+
+        if (ob->query("betrayer/times"))
+        {
+                command("say 我们大轮寺最恨判师之徒，你还不快滚？");
+                return 0;
+        }
+
+        if (ob->query("family/family_name") &&
+            ob->query("family/family_name") != "大轮寺")
+        {
+                command("say 你有师傅指点，当循序渐进，怎可贸然判师？");
+                return 0;
+        }
+
+        return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

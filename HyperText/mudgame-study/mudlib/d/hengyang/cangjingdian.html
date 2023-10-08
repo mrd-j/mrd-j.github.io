@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+void create()
+{
+        set("short", "藏经殿");
+        set("long", @LONG
+藏经殿深掩祥光峰下，因为藏明太祖所赠「大藏经」故名。
+只见这里古木参天，殿宇飘翼，奇花异草，林壑幽深，景色秀
+丽，「藏经殿之秀」是衡山大四绝之一。
+LONG);
+        set("exits", ([
+               "east"   : __DIR__"shanlu14",
+               "south"  : __DIR__"shuzhuangtai",
+        ]));
+
+        set("no_clean_up", 0);
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

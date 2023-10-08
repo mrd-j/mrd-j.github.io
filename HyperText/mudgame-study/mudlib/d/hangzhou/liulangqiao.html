@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "柳浪桥");
+        set("long", @LONG
+每当春至站在桥上，沿湖垂柳在风中摇曳如翠浪翻空，黄
+莺在枝头迎春嬉戏，鸣声婉转，故得名「浪桥闻莺」。
+LONG);
+        set("exits", ([
+                "southwest" : __DIR__"jujingyuan",
+        ]));
+        set("outdoors", "hangzhou");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

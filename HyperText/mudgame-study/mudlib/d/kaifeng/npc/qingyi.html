@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+
+void create()
+{
+        set_name("青衣",({"qing yi"}));
+        set("gender", "女性");
+        set("long", "戏剧中的一个脚色!\n");
+        set("age", 25);
+        set("combat_exp", 7000);
+        set("shen_type", 1);
+        set("attitude", "peaceful");
+        
+        set_skill("unarmed", 40);
+        set_skill("dodge", 40);
+        set_temp("apply/attack", 20);
+        set_temp("apply/defense", 20);
+
+        setup();
+        carry_object("/clone/misc/cloth")->wear();
+        add_money("silver", 20);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

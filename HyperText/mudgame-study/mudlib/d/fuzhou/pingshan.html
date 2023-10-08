@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "福州屏山");
+    set("long", @LONG
+屏山古称越王山，横亘福州城北，山下华林寺，构法考
+究。屏山上俯瞰榕城，历历如画。
+LONG );
+    set("exits", ([
+                "southdown" : __DIR__"beidajie",
+    ]));
+        set("objects", ([
+                "/clone/npc/walker" : 1,
+        ]));
+    set("outdoors", "fuzhou");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

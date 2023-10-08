@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit NPC;
+
+void create()
+{
+        set_name("小孩", ({ "kid" }));
+        set("gender", "男性" );
+        set("age", 7);
+        set("long", "这是个农家小孩子\n");
+        set("combat_exp", 50);
+        set("shen_type", 1);
+        set("str", 11);
+        set("dex", 11);
+        set("con", 11);
+        set("int", 11);
+        set("attitude", "friendly");
+
+        setup();
+        carry_object(__DIR__"obj/cloth")->wear();
+        add_money("coin",50);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

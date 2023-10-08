@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//
+//  羊皮书
+
+inherit BOOK;
+
+void create()
+{
+        set_name( "羊皮卷轴", ({ "skin" }));
+    set_weight(200);
+    if( clonep() )
+        set_default_object(__FILE__);
+    else {
+        set("unit", "本");
+                set("long", "这是一张羊皮质地的卷轴，上面画着一些古怪的符号。\n");
+        set("material", "paper");
+        set("skill", ([
+                        "name": "hammer",        // name of the skill
+                        "exp_required": 200000, // minimum combat experience required
+                        "jing_cost":    40,     // jing cost every time study this
+                        "difficulty":   40,     // the base int to learn this skill
+                        "max_skill":    180,    // the maximum level you can learn
+                        "min_skill":    20,     // the minimum level you can learn
+        ]) );
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

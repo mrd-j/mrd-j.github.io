@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shangtianti.c
+#include <room.h>
+inherit ROOM;
+void create()
+{
+        set("short", "上天梯");
+        set("long", @LONG
+此处绝险，必须面壁挽索，贴身探足前进，步不登高，故名"上天梯"。
+北面是下山的路，往南面是金锁关。西面上去可以通达北峰云台峰。
+LONG );
+        set("exits", ([ /* sizeof() == 4 */
+           "southup"   : __DIR__"jinsuo",
+           "northdown" : __DIR__"husun",
+           "westup"    : __DIR__"canglong",
+        ]));
+        set("no_clean_up", 0);
+        set("outdoors", "huashan");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

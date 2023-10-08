@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "朝天宫");
+        set("long", @LONG
+这里已近武当绝顶，只见石梯直耸，危蹬高悬，两旁辅以
+索链、铁拦勾连。
+LONG);
+        set("objects", ([
+                CLASS_D("wudang") + "/qingxu": 1,
+        ]));
+
+        set("exits", ([
+                "northdown" : __DIR__"hutouyan",
+                "south" : __DIR__"huixianqiao",
+        ]));
+        set("outdoors", "wudang");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

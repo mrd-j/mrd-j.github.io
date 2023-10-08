@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "后台");
+    set("long", @LONG
+这里是戏院的后台，地方不大，除了化妆台，就没有什么了，到处都
+堆满了服装和道具，显得很紧凑，人人都紧张的忙碌着，化妆的化妆，卸
+妆的卸妆，修道具的修道具，理服装的理服装，大家都在为前台的表演做
+着准备。
+LONG);
+    set("no_clean_up", 0);
+    set("exits", ([
+          "west" : __DIR__"xiyuan",
+    ]));
+        set("objects", ([
+                "/d/beijing/npc/xizi1" : 2,
+        ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

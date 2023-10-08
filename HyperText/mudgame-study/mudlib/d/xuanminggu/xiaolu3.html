@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "小路");
+    set("long", @LONG
+这是陡坡上的一条杂草丛生的羊肠小路，看起来平时没什
+么人迹，路边开着不知名野花，两边松树依然高大挺拔。阳光
+透下来照的你身上是斑斑驳驳的影子。
+LONG );
+    set("exits", ([
+        "eastdown"  : __DIR__"xiaolu2",
+        "westup"    : __DIR__"zulin1",
+    ]));
+
+    set("outdoors", "xuanming");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

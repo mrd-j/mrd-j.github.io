@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "偏厅");
+        set("long", @LONG
+绝情谷内堂东侧便是偏厅，这里是谷主招呼朋友谈天喝茶
+的地方。此处甚是清静，偶有一两声鸟叫伴随着淡淡香气，令
+人有一种说不出的舒畅。
+LONG);
+        set("exits", ([
+               "west"   : __DIR__"neitang",
+        ]));
+
+        set("no_clean_up", 0);
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

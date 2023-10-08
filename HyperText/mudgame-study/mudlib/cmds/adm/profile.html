@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// profile.c
+
+int main(object me, string arg)
+{
+    if (!SECURITY_D->valid_grant(me, "(admin)"))
+        return 0;
+
+    seteuid(geteuid(me));
+
+    PROFILE_D->make_profile(arg);
+    write("Result written to /PROFILE\n");
+
+    return 1;
+}
+
+int help (object me)
+{
+    write(@HELP
+指令格式: profile
+
+turns on command profiling, the result will be saved to /PROFILE
+
+HELP
+);
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// gangbiao.c
+#include <weapon.h>
+inherit THROWING;
+
+void create()
+{
+        set_name("子母回魂镖", ({"hhbiao", "biao" }));
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("long", "这是一把唐门特制的钢镖，威力无穷。\n");
+                set("unit", "些");
+                set("base_value", 1);
+                set("material", "steel");
+                set("base_unit", "枚");
+                set("base_weight", 10);
+        }
+        set_amount(1);
+        init_throwing(100);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

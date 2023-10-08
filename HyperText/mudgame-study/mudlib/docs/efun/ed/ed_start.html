@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: ed / ed_start
+---
+
+### NAME
+
+    ed_start() - start an ed session
+
+### SYNOPSIS
+
+    string ed_start(string file | void, int restricted | void)
+
+### DESCRIPTION
+
+    This efun is available only if __OLD_ED__ is not defined.
+
+    The  internal editor is started, optionally loading 'file' for editing.
+    The resulting output is returned.  The editor session  remains  active,
+    and further calls to ed_cmd() can be used to send commands to it.
+
+    If restricted is 1, the commands that change which file is being edited
+    will be disabled.
+
+    Only one ed session can be active per object at a time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

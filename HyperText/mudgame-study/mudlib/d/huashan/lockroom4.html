@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+inherit ROOM;
+inherit __DIR__"tsr_room_dugu-jiujian.c";
+
+void create()
+{
+        set("short", "石室");
+        set("long", @LONG
+这是一间宽敞的石室，只见四周空旷无比，不远处有一块
+形状奇特的石桌（desk）。
+LONG);
+        set("exits", ([
+                "out" : __DIR__"s",
+        ]));
+        set("room_id", "number/lockroom4");
+        set("item_desc", ([
+             "desk" : NOR + WHT "一张形状奇特的石桌，似乎连接着什么机关！\n" NOR,
+        ]));
+        set("no_clean_up", 0);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

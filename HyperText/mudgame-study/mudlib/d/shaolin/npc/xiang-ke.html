@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// xiang-ke.c 进香客
+
+inherit NPC;
+
+void create()
+{
+    int value;
+
+    value = random(10);
+
+    set_name("进香客", ({ "jingxiang ke", "ke", "guest" }));
+    set("gender", "男性");
+    set("age", 14 + value * 3 );
+
+    set("combat_exp", 500 + 5 * value);
+    set("shen_type", 0);
+    setup();
+    add_money("silver", 1 + value);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

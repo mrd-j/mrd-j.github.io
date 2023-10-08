@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "金牛武馆二部");
+    set("long", @LONG
+这是金牛武馆教授二部，师傅龙铨教授基本轻功，基本内
+功，基本招架，基本爪法，基本刀法。
+LONG);
+    set("objects", ([
+        __DIR__"npc/longquan" : 1,
+    ]));
+        set("no_fight",1);
+        set("no_steal",1);
+        set("no_beg",1);
+    set("no_clean_up", 0);
+    set("exits", ([
+        "north" : __DIR__"wuguan",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "玉皇山路");
+        set("long", @LONG
+山脚有一座小亭，德意亭。不少游客登山前或下山後都在此小歇。
+山路蜿延往东向上。西边有一条大路。
+LONG);
+        set("exits", ([
+            "eastup"  : __DIR__"shanlu6",
+            "west"    : __DIR__"road18",
+        ]));
+        set("outdoors", "hangzhou");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

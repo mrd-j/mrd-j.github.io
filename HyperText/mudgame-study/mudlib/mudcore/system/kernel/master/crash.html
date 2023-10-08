@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+/**
+ * @brief apply: driver挂掉时呼叫此方法
+ *
+ * @param crash_message
+ * @param command_giver
+ * @param current_object
+ */
+void crash(string crash_message, object command_giver, object current_object)
+{
+    foreach (object ob in users())
+    {
+        tell_object(ob, "[CORE_MASTER_OB]->crash():Damn!\nThe game is crashing.\n");
+    }
+    foreach (object ob in objects())
+    {
+        reset_eval_cost();
+        catch (ob->remove());
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

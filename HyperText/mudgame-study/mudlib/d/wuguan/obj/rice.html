@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ITEM;
+inherit F_FOOD;
+#include <ansi.h>
+
+void create()
+{
+        set_name(HIW "小米饭" NOR, ({ "rice" }));
+        set_weight(280);
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("long", HIW "一碗香喷喷的小米饭。\n" NOR);
+                set("unit", "碗");
+                set("value", 0);
+                set("food_remaining", 15);
+                set("food_supply", 10);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

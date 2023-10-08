@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /city/biaojuhy.c
+// YZC 1995/12/04
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "福威镖局后院");
+    set("long", @LONG
+镖局后院是平常镖师们打拳练功之所，除了几个木桩石
+锁外，别无它物。
+LONG );
+    set("exits", ([
+        "south" : __DIR__"biaojuzt",
+    ]));
+    set("objects", ([
+        __DIR__"npc/zheng" : 1,
+    ]));
+    set("outdoors", "fuzhou");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

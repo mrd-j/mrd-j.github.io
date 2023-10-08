@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "万物堂");
+        set("long", @LONG
+这里是全真七子之五王处一的居所。房间不大，收拾的素
+雅整洁，墙上挂着一萧一琴和一些字画，小几上摆放着宣纸和
+徽墨狼毫，不知道主人是要练字还是绘画。
+LONG);
+        set("exits", ([
+                "south" : __DIR__"huizhentang",
+        ]));
+        set("objects",([
+                CLASS_D("quanzhen") + "/wangchuyi" : 1,
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

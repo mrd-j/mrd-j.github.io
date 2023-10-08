@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// inherit object: knower.c
+// 消息灵通人士继承此对象
+
+#include <ansi.h>
+
+inherit NPC;
+
+int is_knower() { return 1; }
+
+// 接收打听消息
+mixed accept_ask(object ob, string topic)
+{
+        return QUEST_D->generate_information(this_object(), ob, topic);
+}
+
+void receive_damage(string type)
+{
+        return;
+}
+
+void receive_wound(string type)
+{
+        return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

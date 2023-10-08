@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+inherit NPC;
+
+void create()
+{
+        set_name("紫衫侍者", ({ "shi zhe", "shi", "zhe" }));
+        set("title", HIY "成德殿" NOR);
+        set("gender", "男性" );
+        set("age",18);
+        set("class", "hemuya");
+        set("combat_exp", 1000);
+        set_skill("unarmed", 50);
+        set_skill("dodge", 70);
+        set_skill("force",100);
+        set("force",300);
+        set("max_force",300);
+
+        setup();
+        carry_object(__DIR__"obj/zichoush")->wear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

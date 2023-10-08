@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shizi.c
+
+#include <weapon.h>
+#include <ansi.h>
+
+inherit THROWING;
+
+void create()
+{
+        set_name(WHT "石子" NOR, ({ "shi zi", "shi", "zi" }) );
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "些");
+                set("value", 0);
+                set("base_unit", "颗");
+                set("base_weight", 100);
+                set("base_value", 0);
+                set("material", "iron");
+                set("long", "一颗不同的小石子。\n");
+        }
+        set_amount(10);
+        init_throwing(2);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

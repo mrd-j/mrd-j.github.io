@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+        set("short", "院子");
+        set("long", @LONG
+这是一个大院子，打扫得一尘不染。四周装点着几株青青
+翠竹，错落有致。西边是武器库。东边有一间储藏室，房门关
+闭着。北边是白驼山庄的大厅。南边就是大门了。
+LONG);
+        set("exits", ([
+                "northup" : __DIR__"dating",
+                "west"    : __DIR__"wuqiku",
+                "east"    : __DIR__"storeroom",
+                "south"   : __DIR__"damen",
+        ]));
+        create_door("east", "木门", "west", DOOR_CLOSED);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// dump.c (should be admin cmd?)
+
+inherit F_CLEAN_UP;
+
+int main(object me, string arg)
+{
+    seteuid(geteuid(me));
+
+    dumpallobj();
+
+    write("dump all obj to OBJ_DUMP...ok\n");
+
+    return 1;
+}
+
+int help(object me)
+{
+    write(@HELP
+指令格式 : dump
+
+dump the stats of all objects to a file in root dir
+named OBJ_DUMP.
+
+HELP
+    );
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

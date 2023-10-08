@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "小路");
+        set("long", @LONG
+这里是一条上山的小路。东北方有山贼出没，要格外小心。
+LONG);
+    set("outdoors", "baituo");
+    set("exits", ([
+        "northeast" : __DIR__"xiaolu4",
+        "southdown" : __DIR__"xiaolu2",
+    ]));
+    set("objects",([
+        __DIR__"npc/shanzei1" : 1,
+    ]));
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

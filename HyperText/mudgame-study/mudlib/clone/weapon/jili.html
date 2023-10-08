@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// jili.c
+
+#include <weapon.h>
+#include <ansi.h>
+
+inherit THROWING;
+
+void create()
+{
+        set_name("铁蒺藜", ({ "tie jili", "jili" }));
+        if (clonep())
+                set_default_object(__FILE__);
+        else {
+                set("unit", "些");
+                set("base_unit", "枚");
+                set("base_weight", 300);
+                set("base_value", 0);
+                set("material", "iron");
+                set("long", HIG "铁蒺藜经常用于淬毒暗器，寸许大小。\n"NOR);
+        }
+
+        set_amount(50);
+        init_throwing(50);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

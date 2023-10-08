@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: system / error
+---
+
+### NAME
+
+    error - generate a run-time error
+
+### SYNOPSIS
+
+    void error( string err );
+
+### DESCRIPTION
+
+    A  run-time error 'err' will be generated when error() is called.  Exe‐
+    cution of the current thread will halt, and the trace will be  recorded
+    to  the debug log.  'err' itself is allowed to have a length of maximal
+    2045 characters not  counting  an  optional  '\n'  as  last  character.
+    Before processing if the error the optional '\n' will be removed, a '*'
+    will be prepended and an unconditional '\n' gets appended.
+
+### SEE ALSO
+
+    catch(3), throw(3), error_handler(4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

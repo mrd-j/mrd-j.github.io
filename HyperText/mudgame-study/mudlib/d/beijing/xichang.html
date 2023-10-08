@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+#include <ansi.h>
+
+void create()
+{
+    set("short", "西厂");
+    set("long", @LONG
+这里就是京城的特务机构----西厂。大厅内很是宽阔，这里警备深严，穿
+着制服的西厂官兵和太监在这里来回走动。看来这里不宜久留，赶快离开为妙。
+LONG NOR);
+    set("exits", ([
+        "north" : __DIR__"xichang_men",
+    ]));
+    set("objects", ([
+        __DIR__"npc/bing3" : 4,
+        __DIR__"npc/taijian" : 1,
+    ]));
+    set("no_fight", 1);
+    setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+#include <ansi.h>
+
+void create()
+{
+    set("short", "玄冥谷");
+    set("long", @LONG
+这是玄冥谷了，但见四周群峰围绕，山石掩映，前方不远
+处有几间小屋(room)，偶有山鹿追逐嬉戏，飞鸟齐鸣，犹如置
+身于世外桃源一般。远远望见玄冥峰上白雪一片，云雾缭绕于
+四周，令人心旷神怡。
+LONG );
+    set("exits", ([
+        "southup"   : __DIR__"shanlu3",
+        "northwest" : __DIR__"shanlu4",
+        "in"        : __DIR__"xiaowu",
+    ]));
+
+    set("objects", ([
+        "/kungfu/class/xuanming/lu" : 1,
+    ]));
+
+    set("item_desc", ([
+        "room"  : NOR + YEL "一间简陋的茅草屋，可以在里面休息练功。\n" NOR,
+    ]));
+
+    set("outdoors", "xuanming");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

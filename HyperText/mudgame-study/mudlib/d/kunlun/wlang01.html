@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "长廊");
+        set("long", @long
+这是一条长廊，连接前厅和客房，不断看见各种打扮的江
+湖人士走过，看过廊外，是一片青色的树林，幽静雅致，只听
+见不断传来的鸟鸣声。
+long);
+        set("exits",([
+        "east" : __DIR__"qianting",
+        "west" : __DIR__"keting2",
+    ]));
+
+    set("outdoors", "kunlun");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

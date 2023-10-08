@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+        set("short", "走廊");
+        set("long", @LONG
+你走在一条走廊上。北面似乎有个黑暗的小屋，还隐隐传来一些酣声。
+LONG    );
+        set("exits", ([ 
+                "west" : __DIR__"zoulang-1",
+                "north" : __DIR__"xxs",
+        ]));
+
+        create_door("north", "木门", "south", DOOR_CLOSED);
+
+        set("no_clean_up", 0);
+
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

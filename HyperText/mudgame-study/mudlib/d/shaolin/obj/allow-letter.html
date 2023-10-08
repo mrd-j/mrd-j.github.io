@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// allow-letter.c 手谕
+
+inherit ITEM;
+
+void create()
+{
+        set_name("手谕", ({"shou yu", "yu", "letter"}));
+        set_weight(100);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "封");
+                set("long","这是一封由方丈签发的手谕，凭此可自由进入藏经阁二楼研习上乘武功。\n");
+        set("no_drop", "这样东西不能离开你。\n");
+                set("material", "paper");
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

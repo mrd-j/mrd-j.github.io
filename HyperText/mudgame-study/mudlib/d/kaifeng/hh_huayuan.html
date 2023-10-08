@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "后花园");
+        set("long", @LONG
+这里是总舵内的后花园，一年四季都生长着各种奇异的花
+草，在阳光下发出七彩妖艳的光辉。花园里一片沉寂，竟看不
+到一只蜜蜂或蝴蝶飞舞。有一条石子小路通向前面一座花厅。
+LONG);
+        set("no_clean_up", 0);
+        set("exits", ([
+          "east" : __DIR__"hh_penquan",
+          "west" : __DIR__"hh_jiashan",
+          "north" : __DIR__"hh_road",
+          "south" : __DIR__"hh_hguangchang",
+    ]));
+        set("outdoors", "honghua");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

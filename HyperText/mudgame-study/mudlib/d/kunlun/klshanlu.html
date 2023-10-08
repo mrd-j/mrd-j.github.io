@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "昆仑山麓");
+        set("long", @long
+整个昆仑山脉雪山连绵，冰河垂悬。远望昆仑，有如横卧
+云彩间的银色玉龙。每年春天以后，冰雪融化，汇成一股股清
+澈溪流，流入长江，黄河。
+long);
+        set("exits",([
+            "northup" : __DIR__"shanmen",
+                "east" : __DIR__"shankou",
+        ]));
+    set("outdoors", "kunlun");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

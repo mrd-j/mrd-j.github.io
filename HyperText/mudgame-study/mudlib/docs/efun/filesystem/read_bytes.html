@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: filesystem / read_bytes
+---
+
+### NAME
+
+    read_bytes()  -  reads  a contiguous series of bytes from a file into a
+    string
+
+### SYNOPSIS
+
+    string read_bytes( string path, int start, int length );
+
+### DESCRIPTION
+
+    This function reads 'length' bytes beginning at byte # 'start'  in  the
+    file  named  'path'.   The  bytes  are returned as a string.  Note that
+    (start + length) must  not  be  past  the  end  of  the  file  or  else
+    read_bytes  will  fail.  If the second and third arguments are omitted,
+    the entire file is returned.
+
+### SEE ALSO
+
+    read_file(3), write_bytes(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

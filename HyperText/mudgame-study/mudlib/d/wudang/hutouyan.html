@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "虎头岩");
+        set("long", @LONG
+一块巨大的岩石看上去好象一个虎头正张大了血盆大口咆
+哮，虎身隐藏在草木丛中。
+LONG);
+        set("objects", ([
+                "/clone/quarry/laohu" : 1,
+        ]));
+        set("exits", ([
+                "northdown" : __DIR__"wulaofeng",
+                "southup"   : __DIR__"chaotiangong",
+        ]));
+
+        set("outdoors", "wudang");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+      set ("short", "大道");
+      set ("long", @LONG
+在平原之上的一条大路，来往人很多，路边相隔不远就有
+个小亭子供行人歇脚，向北去就是开封城。南面不远是个三叉
+路口。
+LONG);
+      set("outdoors", "kaifeng");
+
+      set("exits", ([
+          "south" : __DIR__"dadao1",
+          "north" : __DIR__"nanying",
+    ]));
+
+      setup();
+      replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

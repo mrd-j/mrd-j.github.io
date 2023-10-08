@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// wuchang3.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "东练武场");
+    set("long", @LONG
+这里是华山派的练武场，场上立这几个木人，地处偏僻，有些荒凉。
+LONG );
+        set("exits", ([ /* sizeof() == 2 */
+            "west"     : __DIR__"wuchang1",
+        ]));
+        set("outdoors", "huashan");
+
+        set("for_family", "华山派");
+
+        setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/huashan/jzroad3.c
+
+inherit ROOM;
+void create()
+{
+    set("short", "中条山脚");
+    set("long", @LONG
+你来到中条山脚。仰望天空，山势压顶，天边的红霞映透了整个
+山林，呼啸的穿山风刮个不停。你不禁有些惧意。向东有一条上山小
+路。
+LONG );
+    set("exits", ([
+        "west"   : __DIR__"jzroad2",
+        "eastup" : __DIR__"jzroad4",
+    ]));
+    set("outdoors", "huashan");
+        set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

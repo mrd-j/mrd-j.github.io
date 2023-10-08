@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /t/wanjiegu/port.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "善人渡");
+        set("long", @LONG
+这里从前是澜沧江的一个渡口，后来大理国在此修了一座铁索
+桥，人们便不用再乘船过江了。桥边石上清清楚楚地刻着三个大字
+“善人渡”。
+LONG
+        );
+        set("outdoors", "wanjiegu");
+        set("exits", ([ /* sizeof() == 2 */
+            "west" : __DIR__"bridge",
+            "east" : __DIR__"riverside3",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

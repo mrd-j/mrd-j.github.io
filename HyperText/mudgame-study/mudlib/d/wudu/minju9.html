@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "供桌下");
+        set("long", @LONG
+你现在蜷缩在低矮的供桌下面，四周到处都是灰尘和蜘蛛
+网，稍一抬头就会碰到桌面。这张桌子的四周都被肮脏的布帘
+挡住了，你看不到外面的情况，别人也发现不了你。
+LONG);
+
+        set("exits", ([
+                "out" : __DIR__"minju7",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

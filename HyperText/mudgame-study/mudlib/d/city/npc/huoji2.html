@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// huoji. 药铺伙计
+
+inherit NPC;
+inherit F_DEALER;
+
+void create()
+{
+    set_name("药铺伙计", ({ "yaopu huoji", "huoji" }));
+    set("str", 20);
+    set("gender", "男性");
+    set("age", 18);
+    set("long", "他十分强壮，看上去会几分武功，对药铺生意似乎并不在乎。\n");
+    set("combat_exp", 2500);
+    set("attitude", "friendly");
+    set("vendor_goods", ({
+        "/d/city/obj/jinchuang",
+        "/d/city/obj/yangjing",
+    }));
+
+    setup();
+    carry_object("/clone/misc/cloth")->wear();
+}
+
+void init()
+{
+        add_action("do_list", "list");
+        add_action("do_buy", "buy");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

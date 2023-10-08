@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// lhqlwch.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "练武场");
+        set("long", @LONG
+走进了烈火旗的练武场，发现练武的教众们并不是在相互
+切磋武功，而是穿戴着特制的防火护具，在学习使用火具和瞄
+准。火具中喷出黝黑的原油，见火即燃，威力无比。
+LONG );
+        set("exits", ([
+                "east" : __DIR__"lhqyuan",
+        ]));
+        set("outdoors", "mingjiao");
+        set("no_clean_up", 0);
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

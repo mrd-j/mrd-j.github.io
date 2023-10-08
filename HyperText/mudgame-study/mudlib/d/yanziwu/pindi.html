@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//ROOM: /d/yanziwu/pindi.c
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "品笛庭");
+        set("long",@LONG
+只见墙上挂有萧管之类的乐器，桌上放有一沓乐谱，想是
+慕容世家演练乐曲的所在了。在向西就到了太湖岸边，向东则
+是慕容世家接待宾客的龙凤厅了。
+LONG );
+        set("exits", ([
+            "east"  : __DIR__"longfeng",
+            "west"  : __DIR__"bozhou",
+        ]));
+
+    set("objects", ([
+         __DIR__"npc/gongye"  : 1,
+    ]));
+
+        setup();
+}
+
+int valid_leave(object me, string dir)
+{
+    object guarder;
+
+    if (dir != "east")
+        return 1;
+
+    if (guarder = present("gongye qian", this_object()))
+        return guarder->permit_pass(me, dir);
+
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

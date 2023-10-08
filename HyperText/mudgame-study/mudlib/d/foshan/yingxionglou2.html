@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "英雄楼");
+    set("long", @LONG
+英雄酒楼里桌椅洁净。座中客人衣饰豪奢，十九是富商大
+贾。这里可以俯瞰佛山镇全景。
+LONG);
+    set("objects", ([
+            __DIR__"npc/pang": 1,
+            __DIR__"npc/shou": 1,
+    ]));
+    set("exits", ([
+            "down" : __DIR__"yingxionglou",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

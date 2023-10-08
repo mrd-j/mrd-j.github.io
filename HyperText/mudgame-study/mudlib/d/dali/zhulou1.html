@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "竹楼下");
+        set("long", @LONG
+台夷人喜居竹林深处，房舍自然少不了用竹子搭成，竹为
+梁，竹为墙，竹楼建的相当精致。下层基本上只是四根柱子架
+空的，既可以作兽圈，也为了防蛇。一架竹梯通向上层的房舍。
+LONG);
+        set("outdoors", "dali");
+        set("exits", ([
+                "south" : __DIR__"wuding",
+                "up"    : __DIR__"zhulou2",
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

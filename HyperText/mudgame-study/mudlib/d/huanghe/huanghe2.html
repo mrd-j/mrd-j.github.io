@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /huanghe/huanghe2.c
+// Java. Sep 21 1998
+
+#include <room.h>
+
+inherit ROOM;
+void create()
+{
+    set("short", "黄河岸边");
+    set("long", @LONG
+这里是黄河岸边。黄河流淌到这里，已经泥沙浑浊了。黄色的河水
+在河床里翻滚着，咆哮着，卷起一个个巨大的漩窝。
+LONG );
+    set("exits", ([
+        "east"  : __DIR__"huanghe3",
+        "west"  : __DIR__"huanghe1",
+    ]));
+    set("no_clean_up", 0);
+    set("outdoors", "huanghe");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

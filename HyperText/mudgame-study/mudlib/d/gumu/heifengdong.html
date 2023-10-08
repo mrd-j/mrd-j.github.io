@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+
+inherit ROOM;
+
+void create()
+{
+        set("short", "黑凤洞");
+        set("long", @LONG
+此处位於终南山脉东部的太阳山上。山峰直上直下，像刀
+切般的陡峭，山腰上有一个碾盘子粗的石洞，不时冒出一股黑
+气，怪可怕的。往西是一片树林。
+LONG
+        );
+        set("outdoors", "gumu");
+        set("exits", ([
+                "westup"  : __DIR__"shulin7",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

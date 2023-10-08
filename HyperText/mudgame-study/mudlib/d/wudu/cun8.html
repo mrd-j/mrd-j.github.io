@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "村东口");
+        set("long", @LONG
+这里是小村的东头。因为暴雨刚过，地上一片泥泞，路非常不好
+走。顺着这条路一直向东走一两个时辰就可到青石坪了，那里是这附
+近最大的镇子。
+LONG);
+        set("outdoors", "wudujiao");
+
+        set("exits", ([
+                "northwest" : __DIR__"cun7",
+                "east" : "/d/dali/zhulin2",
+        ]));
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

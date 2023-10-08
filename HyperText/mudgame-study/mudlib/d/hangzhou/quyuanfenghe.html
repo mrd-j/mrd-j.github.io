@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// quyuanfenghe.c
+// Date: Nov.1997 by Venus
+#include <room.h>
+inherit ROOM;
+void create()
+{
+        set("short", "曲院风荷");
+        set("long", @LONG
+走进亭院，只见临湖一座小榭。柱上有一对联(duilian)。 依榭
+观湖，只见荷花满湖，茭荷深处，香远益清。杨万里曾有题咏“毕竟
+西湖六月中，风光不与四时同。接天莲叶无穷碧，映日荷花别样红”。
+LONG);
+        set("exits", ([
+            "out"    : __DIR__"quyuanbei",
+        ]));
+        set("item_desc", ([
+            "duilian" :
+"\n
+        身              眼
+        在              明
+        荷              小
+        香              阁
+        水              浮
+        影              烟
+        中              翠\n",
+        ]));
+        set("no_clean_up", 0);
+        set("outdoors", "hangzhou");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

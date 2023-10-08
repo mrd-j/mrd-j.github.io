@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "武夷山道");
+    set("long", @LONG
+你走在窄窄的武夷山小道上，山路崎岖，密林森森，常有
+长虫野兽出没。所谓「闽道更比蜀道难」诚不相欺。西面隔着
+崇阳溪，就是奇秀甲于东南的武夷山了。
+LONG);
+    set("exits", ([
+        "northup" : __DIR__"erbapu",
+        "southup" : __DIR__"fzroad3",
+        "west"    : __DIR__"wuyishan1",
+    ]));
+    set("outdoors", "fuzhou");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// medicine.h
+
+inherit COMBINED_ITEM;
+
+string query_autoload() { return query_amount() + ""; }
+
+void autoload(string param)
+{
+    int amt;
+
+    if (sscanf(param, "%d", amt) == 1)
+        set_amount(amt);
+}
+
+void setup()
+{
+        set_amount(1);
+        ::setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

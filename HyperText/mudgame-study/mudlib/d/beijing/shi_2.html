@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <room.h>
+inherit ROOM;
+
+void create()
+{
+    set("short", "西四北大街");
+    set("long", @LONG
+这里是京城的西四北大街，青石铺砌道路贯通南北，街道上的行人熙熙攘
+攘。西方一条宽阔的大官道上马蹄声不断，尘土飞扬。向南通过西四南大街接
+西单北大街。
+LONG );
+       set("exits", ([
+        "north" : __DIR__"shi_3",
+        "south" : __DIR__"shi_1",
+        "west" : __DIR__"guandao_1",
+    ]));
+    set("objects", ([
+        __DIR__"npc/boy1" : 1,
+    ]));
+    set("outdoors", "beijing");
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

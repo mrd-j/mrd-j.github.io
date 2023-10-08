@@ -1,3 +1,0 @@
-// finger.c
-
-inherit SKILL;

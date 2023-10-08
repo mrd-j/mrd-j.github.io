@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// jinsuo.c
+#include <room.h>
+inherit ROOM;
+void create()
+{
+        set("short", "金锁关");
+        set("long", @LONG
+金锁关山势形如一把锁，下面是一片开阔地，两旁是高耸入云的峭壁，中间
+一条羊肠小道。真是一夫当关，万夫莫开。
+LONG
+        );
+        set("exits", ([ /* sizeof() == 4 */
+           "southup"   : __DIR__"zhenyue",
+           "northdown" : __DIR__"shangtianti",
+        ]));
+        set("no_clean_up", 0);
+        set("outdoors", "huashan");
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

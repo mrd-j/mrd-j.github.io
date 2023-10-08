@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /lingzhou/xiaoyuan.c
+// By Doing
+
+#include <room.h>
+
+inherit ROOM;
+void create()
+{
+    set("short", "将军府小院");
+    set("long", @LONG
+这里是将军府的小院，一色的青砖铺地，有几个仆役正在院中洒
+扫，远远的传来一阵嬉笑声。
+LONG );
+
+    set("exits", ([
+        "west" : __DIR__"jiangjunyuan",
+    ]));
+
+    setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

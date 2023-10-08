@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// noclone.c
+
+int is_no_clone() { return 1; }
+
+object check_clone()
+{
+    object me = this_object();
+
+    if (clonep(me))
+    {
+        destruct(me);
+        return 0;
+    }
+
+    if (!stringp(me->query("startroom")))
+        return this_object();
+
+    me->move(me->query("startroom"));
+    if (me->is_character())
+    {
+        message("info", me->name() + "走了过来。", environment(me), me);
+    }
+    return this_object();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

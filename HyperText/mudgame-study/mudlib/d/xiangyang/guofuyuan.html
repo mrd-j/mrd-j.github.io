@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// Room: /d/xiangyang/guofuyuan.c
+// Date: Jan. 8 1999 by Winder
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "郭府大院");
+    set("long", @LONG
+这里是郭府的大院，当面一堵宽阔的白玉照壁，上书“忠
+心报国”四个大字，地下是一色的青砖铺地，四周种了几棵大
+树，有几个仆役正在院中洒扫，北面是郭府的客厅,。
+LONG );
+        set("outdoors", "xiangyang");
+    set("no_clean_up", 0);
+    set("exits", ([
+        "south" : __DIR__"guofugate",
+        "north" : __DIR__"guofuting",
+    ]));
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

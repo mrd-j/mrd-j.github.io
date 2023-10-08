@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: efuns / strings / strlen
+---
+
+### NAME
+
+    strwidth() - returns the display width of a string
+
+### SYNOPSIS
+
+    int strwidth( string str );
+
+### DESCRIPTION
+
+    strwidth() returns the number of columns to display string 'str'.
+
+    The driver uses rules defined in https://www.unicode.org/reports/tr11/tr11-36.html
+    to calcuate character width.
+
+    Control characters have no width. Wide characters, including emojis are two
+    columns wide. This rule is also used by sprintf() to layout strings.
+
+### SEE ALSO
+
+    strlen()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

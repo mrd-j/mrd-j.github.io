@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+    set("short", "大道");
+    set("long", @LONG
+这是一条青石大道。东面隐约可以看到扬州城的城墙。向
+西看去，只见群山起伏，青翠碧绿，不知通向哪里。
+LONG);
+    set("exits", ([
+        "northeast" : __DIR__"road1",
+        "southwest" : __DIR__"road3",
+    ]));
+
+    set("no_clean_up", 0);
+    set("outdoors", "jingzhou");
+
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

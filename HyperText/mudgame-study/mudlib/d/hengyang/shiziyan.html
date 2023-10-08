@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "狮子岩");
+        set("long", @LONG
+狮子岩布满奇形怪状的岩石，细究则绝类狮子，腾跃伏吼，
+各肖其类。到狮子岩，祝融峰已经在望了。
+LONG);
+        set("exits", ([
+               "southwest"  : __DIR__"nantian",
+               "northup"    : __DIR__"wangritai",
+        ]));
+
+        set("outdoors", "hengyang");
+
+        set("no_clean_up", 0);
+
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

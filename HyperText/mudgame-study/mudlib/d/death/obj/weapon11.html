@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+#include <ansi.h>
+
+#include <weapon.h>
+
+inherit HAMMER;
+
+void create()
+{
+        set_name(HIY"天罗锤"NOR, ({ "tianluo chui", "chui", "tianluo", "hammer" }) );
+        set_weight(18000);
+        if( clonep() )
+                set_default_object(__FILE__);
+        else {
+                set("unit", "把");
+                set("value", 250000);
+                set("material", "steel");
+        }
+        init_hammer(50);
+        setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

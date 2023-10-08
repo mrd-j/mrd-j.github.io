@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+inherit ROOM;
+
+void create()
+{
+        set("short", "潇湘馆");
+        set("long",@LONG
+这是缥缈峰灵鹫宫的裁缝室。几个女子围坐在一块，飞针
+走线，苦练女红，为灵鹫宫的诸多女弟子缝纫青衣斗篷。 
+LONG);
+        set("exits", ([
+                "south" : __DIR__"changl10",
+        ]));
+        set("objects",([
+                CLASS_D("lingjiu") + "/fumingyi" : 1,
+        ]));
+        setup();
+        replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

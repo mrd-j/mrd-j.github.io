@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// team command: talk
+
+#include <ansi.h>
+
+void create() { seteuid(getuid()); }
+
+int main(object me, string arg)
+{
+    object *t;
+
+    if (!arg)
+        arg = "...";
+
+    if (!pointerp(t = me->query_team()))
+        return notify_fail("你现在并没有和别人组成队伍。\n");
+
+    message("team", HIY "【队伍会话】" + me->name(1) + "：" + arg + "\n" NOR, t);
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

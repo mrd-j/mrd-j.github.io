@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+// shortblade.c
+
+#include <weapon.h>
+
+inherit THROWING;
+
+void create()
+{
+    set_name("短刀", ({ "short blade", "dao" }));
+    set_weight(7000);
+    if (clonep())
+        set_default_object(__FILE__);
+    else
+    {
+                set("value", 0);
+                set("base_unit", "柄");
+                set("base_weight", 300);
+                set("base_value", 0);
+                set("material", "iron");
+        set("unit", "把");
+        set("long", "这是一捆飞刀。\n");
+        set("value", 1000);
+        set("material", "steel");
+    }
+    set_amount(18);
+    init_throwing(25);
+    setup();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

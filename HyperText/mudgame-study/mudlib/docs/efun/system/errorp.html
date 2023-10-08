@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+---
+layout: default
+title: system / errorp
+---
+
+### NAME
+
+    errorp() - determine whether or not a given variable is an error code
+
+### SYNOPSIS
+
+    int errorp( mixed arg );
+
+### DESCRIPTION
+
+    Returns 1 if 'arg' is an integer that is an error code.
+
+    Eventually  efuns  will  be  modified to return standard error codes so
+    that code like this will be possible:
+
+        if (errorp(result = efun_call()))
+            printf("error = %d\n", result);
+
+    In future, there will also be a perror(result)  efun  to  return  error
+    string that goes with a particular error integer.
+
+### SEE ALSO
+
+    nullp(3), undefinedp(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

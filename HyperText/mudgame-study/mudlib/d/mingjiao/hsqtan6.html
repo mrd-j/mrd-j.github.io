@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/interrupter/myStyle.css"></link>
+    <script type="text/javascript" src="/js/myScript.js"></script>
+</head>
+<body>
+<pre>
+//HSQTAN6.C
+
+inherit ROOM;
+
+void create()
+{
+    set("short", "深潭");
+    set("long", @LONG
+这里的水只有齐腰深，但站在水中，仍感觉寒意从脚下漫起，
+经久不散。
+LONG );
+    set("exits", ([
+        "up"   : __DIR__"hsqmen",
+        "west" : __DIR__"hsqtan5",
+    ]));
+    set("no_clean_up", 0);
+    setup();
+    replace_program(ROOM);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
