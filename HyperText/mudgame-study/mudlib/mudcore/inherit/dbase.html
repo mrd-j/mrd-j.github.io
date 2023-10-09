@@ -26,7 +26,7 @@ nosave mixed default_ob;
 
 // void create(){}
 
-nomask mixed _query(mapping map, string *parts)
+nomask mixed _query(mapping map, string *parts)<a id="_query"></a>
 {
     mixed value;
     int i, s;
@@ -106,7 +106,7 @@ varargs mixed query(string prop, int raw)
         return 0;
 
     if (undefinedp(dbase[prop]) && (strsrch(prop, '/') != -1))
-        data = _query(dbase, explode(prop, "/"));
+        data = <a href="#_query" target="_blank">_query(dbase, explode(prop, "/"))</a>;
     else
         data = dbase[prop];
 
@@ -171,7 +171,7 @@ varargs mixed query_temp(string prop, int raw)
         return 0;
 
     if (strsrch(prop, '/') != -1)
-        data = _query(tmp_dbase, explode(prop, "/"));
+        data = <a href="#_query" target="_blank">_query(tmp_dbase, explode(prop, "/"))</a>;
     else
         data = tmp_dbase[prop];
 
