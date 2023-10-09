@@ -75,12 +75,12 @@ void set_default_object(mixed ob)
 
     if (stringp(ob))
     {
-        ob = load_object(ob);
+        ob = <a href="/HyperText/mudgame-study/mudlib/doc/efuns/objects/load_object.html" target="_blank">load_object</a>(ob);
     }
 
-    if (objectp(ob))
+    if (<a href="/HyperText/mudgame-study/mudlib/doc/efuns/objects/objectp.html" target="_blank">objectp</a>(ob))
     {
-        default_ob = ob;
+        default_ob = ob;<a id="default_ob"></a>
         ob->set("no_clean_up", 1);
     }
 }
@@ -111,7 +111,7 @@ varargs mixed query(string prop, int raw)
         data = dbase[prop];
 
     if (undefinedp(data) && default_ob)
-        data = default_ob->query(prop, 1);
+        data = <a href="#default_ob" target="_blank">default_ob</a>->query(prop, 1);
 
     if (raw)
         return data;
