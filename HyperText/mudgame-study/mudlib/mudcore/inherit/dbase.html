@@ -43,7 +43,7 @@ nomask mixed _query(mapping map, string *parts)<a id="_query"></a>
     return value;
 }
 
-nomask int _delete(mapping map, string *parts)
+nomask int _delete(mapping map, string *parts) <a id="_delete"></a>
 {
     if (sizeof(parts) == 1)
     {
@@ -55,7 +55,7 @@ nomask int _delete(mapping map, string *parts)
     return _delete(map[parts[0]], parts[1..sizeof(parts)-1]);
 }
 
-nomask mixed _set(mapping map, string *parts, mixed value)
+nomask mixed _set(mapping map, string *parts, mixed value) <a id="_set"></a>
 {
     if (sizeof(parts) == 1)
         return map[parts[0]] = value;
@@ -68,7 +68,7 @@ nomask mixed _set(mapping map, string *parts, mixed value)
 
 mixed query_default_object() { return default_ob; }
 
-void set_default_object(mixed ob)
+void set_default_object(mixed ob) <a id="set_default_object"></a>
 {
     if (!geteuid())
         seteuid(getuid());
@@ -85,7 +85,7 @@ void set_default_object(mixed ob)
     }
 }
 
-mixed set(string prop, mixed data)
+mixed set(string prop, mixed data) <a id="set"></a>
 {
     if (!mapp(dbase))
         dbase = ([]);
@@ -98,7 +98,7 @@ mixed set(string prop, mixed data)
     return dbase[prop] = data;
 }
 
-varargs mixed query(string prop, int raw)
+varargs mixed query(string prop, int raw) <a id="query"></a>
 {
     mixed data;
 
@@ -120,13 +120,13 @@ varargs mixed query(string prop, int raw)
     return evaluate(data, this_object());
 }
 
-int delete(string prop)
+int delete(string prop) <a id="delete"></a>
 {
     if (!mapp(dbase))
         return 0;
 
     if (strsrch(prop, '/') != -1)
-        return _delete(dbase, explode(prop, "/"));
+        return <a href="#_delete" target="_blank">_delete(dbase, explode(prop, "/"))</a>;
     else
     {
         map_delete(dbase, prop);
@@ -134,7 +134,7 @@ int delete(string prop)
     }
 }
 
-mixed add(string prop, mixed data)
+mixed add(string prop, mixed data) <a id="add"></a>
 {
     mixed old;
 
@@ -142,17 +142,17 @@ mixed add(string prop, mixed data)
         return set(prop, data);
 
     if (functionp(old))
-        error("dbase: add() - called on a function type property.\n");
+        <a href="/HyperText/mudgame-study/mudlib/doc/efuns/system/error.html" target="_blank">error</a>("dbase: add() - called on a function type property.\n");
 
     return set(prop, old + data);
 }
 
-mapping query_entire_dbase()<a id="query_entire_dbase"></a>
+mapping query_entire_dbase() <a id="query_entire_dbase"></a>
 {
     return dbase;
 }
 
-mixed set_temp(string prop, mixed data)
+mixed set_temp(string prop, mixed data) <a id="set_temp"></a>
 {
     if (!mapp(tmp_dbase))
         tmp_dbase = ([]);
@@ -163,7 +163,7 @@ mixed set_temp(string prop, mixed data)
     return tmp_dbase[prop] = data;
 }
 
-varargs mixed query_temp(string prop, int raw)
+varargs mixed query_temp(string prop, int raw) <a id="query_temp"></a>
 {
     mixed data;
 
@@ -181,21 +181,21 @@ varargs mixed query_temp(string prop, int raw)
         return data;
 }
 
-int delete_temp(string prop)
+int delete_temp(string prop) <a id="delete_temp"></a>
 {
     if (!mapp(tmp_dbase))
         return 0;
 
     if (strsrch(prop, '/') != -1)
-        return _delete(tmp_dbase, explode(prop, "/"));
+        return <a href="#_delete" target="_blank">_delete(tmp_dbase, explode(prop, "/"))</a>;
     else
     {
-        map_delete(tmp_dbase, prop);
+        <a href="/HyperText/mudgame-study/mudlib/doc/efuns/mappings/map_delete.html" target="_blank">map_delete</a>(tmp_dbase, prop);
         return 1;
     }
 }
 
-mixed add_temp(string prop, mixed data)
+mixed add_temp(string prop, mixed data) <a id="add_temp"></a>
 {
     mixed old;
 
@@ -203,17 +203,17 @@ mixed add_temp(string prop, mixed data)
         return set_temp(prop, data);
 
     if (functionp(old))
-        error("dbase: add_temp() - called on a function type property.\n");
+        <a href="/HyperText/mudgame-study/mudlib/doc/efuns/system/error.html" target="_blank">error</a>("dbase: add_temp() - called on a function type property.\n");
 
     return set_temp(prop, old + data);
 }
 
-mapping query_entire_temp_dbase()
+mapping query_entire_temp_dbase() <a id="query_entire_temp_dbase"></a>
 {
     return tmp_dbase;
 }
 
-nomask void set_dbase(mapping data)
+nomask void set_dbase(mapping data) <a id="set_dbase"></a>
 {
     if (!mapp(data))
         return;
@@ -221,7 +221,7 @@ nomask void set_dbase(mapping data)
     dbase = data;
 }
 
-nomask void set_temp_dbase(mapping data)
+nomask void set_temp_dbase(mapping data) <a id="set_temp_dbase"></a>
 {
     if (!mapp(data))
         return;
