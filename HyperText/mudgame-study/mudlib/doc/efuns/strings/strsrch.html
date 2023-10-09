@@ -13,30 +13,37 @@ layout: default
 title: strings / strsrch
 ---
 
-### NAME
+### NAME 名称
 
     strsrch() - search for substrings in a string
+                搜索字符串中的子字符串
 
-### SYNOPSIS
+### SYNOPSIS 简介
 
     int strsrch( string str, string substr | int char, int flag );
 
-### DESCRIPTION
+### DESCRIPTION 描述
 
     strsrch()  searches  for  the first occurance of the string 'substr' in
     the string 'str'.  The last occurance of 'substr' can be found by pass‐
     ing  '-1' as the 3rd argument (which is optional).  If the second argu‐
     ment is an integer, that character is found  (a  la  C's  strchr()/str‐
     rchr().)  The empty string or null value cannot be searched for.
+    
+    strsrch()搜索字符串“str”中首次出现的字符串“substr”。“substr”的最后一次
+    出现可以通过传递“-1”作为第三个参数（这是可选的）来找到。如果第二个参数是整数，
+    则会找到该字符（la C的strchr()/str‐rchr()。）无法搜索空字符串或null值。
 
-### RETURN VALUE
+### RETURN VALUE 返回值
 
     The  integer  offset  of  the  first  (last)  match is returned.  -1 is
     returned if there was no match, or an error occurred (bad args, etc).
+    
+    返回第一个（最后一个）匹配的整数偏移量。如果不匹配或发生错误（错误的参数等），则返回-1。
 
-### SEE ALSO
+### SEE ALSO 参考
 
-    explode(3), sscanf(3), replace_string(3), regexp(3)
+    <a href="/HyperText/mudgame-study/mudlib/doc/efuns/strings/explode.html" target="_blank">explode(3), sscanf(3)</a>, <a href="/HyperText/mudgame-study/mudlib/doc/efuns/strings/replace_string.html" target="_blank">replace_string(3)</a>, <a href="/HyperText/mudgame-study/mudlib/doc/efuns/strings/regexp.html" target="_blank">regexp(3)</a>
 
 
 
