@@ -92,8 +92,8 @@ mixed set(string prop, mixed data)
 
     //strsrch，在prop字符串中寻找第一个出现的'/'，如果没有符合的字符串则返回-1。
     //explode，返回一个字符串的数组，此数组是字符串 prop 以 ‘/’ 分界打断的片段。
-    if (strsrch(prop, '/') != -1)
-        return _set(dbase, explode(prop, "/"), data);
+    if (<a href="/HyperText/mudgame-study/mudlib/doc/efuns/strings/strsrch.html" target="_blank">strsrch</a>(prop, '/') != -1)
+        return _set(dbase, <a href="/HyperText/mudgame-study/mudlib/doc/efuns/strings/explode.html" target="_blank">explode</a>(prop, "/"), data);
 
     return dbase[prop] = data;
 }
