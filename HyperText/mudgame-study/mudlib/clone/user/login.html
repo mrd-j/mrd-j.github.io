@@ -44,13 +44,13 @@ void logon()<a id="logon"></a>
 
 // Don't destruct(this_object()) in the net_dead() interactive apply or
 // there'll be error message: Double call to remove_interactive()
-void net_dead()
+void net_dead() <a id="net_dead"></a>
 {
     remove_call_out("time_out");
     call_out("time_out", 1);
 }
 
-void time_out()<a id="time_out"></a>
+void time_out() <a id="time_out"></a>
 {
     object body;
 

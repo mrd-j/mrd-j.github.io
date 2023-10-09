@@ -24,8 +24,8 @@
 1，进入系统-<a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#logon" target="_blank">logon</a>
 2，设置终端类型-<a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#terminal_type" target="_blank">terminal_type</a>
 如果网络失效则执行<a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#net_dead" target="_blank">net_dead</a>
-如果超时则执行<a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#time_out" target="_blank">time_out</a>
-3，都没问题则执行<a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#login" target="_blank">login</a>
+如果超过logon规定的时间算超时，则调用<a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#time_out" target="_blank">time_out</a>
+3，logon中设置了0.25秒后调用login，<a href="/HyperText/mudgame-study/mudlib/clone/user/login.html#login" target="_blank">login</a>
 login()在最后会调用<a href="/HyperText/mudgame-study/logind-study.html#logon">连线精灵的logon</a>。
 
 备用，当需要时执行：
