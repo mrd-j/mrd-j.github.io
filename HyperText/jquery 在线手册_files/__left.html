@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0048)https://www.runoob.com/manual/jquery/__left.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title></title>
+<link rel="StyleSheet" href="./dtree.css" type="text/css">
+<script type="text/javascript" src="./jquery.min.js.下载"></script>
+<script type="text/javascript" src="./jquery.autocomplete.js.下载"></script>
+<script type="text/javascript" src="./dtree.js.下载"></script>
+</head>
+
+<body>
+<input type="text" name="query" id="query" placeholder="请输入关键字" autocomplete="off"><input type="button" id="butsoso" value="搜索">
+<p style="margin:7px 0;"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a></p>
+<div><img src="./base.gif">jQuery1.10.3_20130708.chm</div>
+<div><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/cheatsheet.html" target="body">速查表</a></div>
+<div class="dtree">
+  <div id="core">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>核心</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery_selector_context.html" target="body">jQuery([sel,[context]])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery_html_ownerDocument.html" target="body">jQuery(html,[ownerDoc])</a><sup>1.8*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery_callback.html" target="body">jQuery(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.holdReady.html" target="body">jQuery.holdReady(hold)</a><sup>1.6+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/each.html" target="body">each(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/size.html" target="body">size()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/length.html" target="body">length</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/selector.html" target="body">selector</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/context.html" target="body">context</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/get.html" target="body">get([index])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/index_1.html" target="body">index([selector|element])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/data.html" target="body">data([key],[value])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/removeData.html" target="body">removeData([name|list])</a><sup>1.7*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.data.html" target="body"><del>$.data(ele,[key],[val])</del></a><sup>1.8-</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/queue.html" title="queue(element,[queueName])" target="body">queue(e,[q])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/dequeue.html" title="dequeue([queueName])" target="body">dequeue([queueName])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/clearQueue.html" title="clearQueue([queueName])" target="body">clearQueue([queueName])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.fn.extend.html" target="body">jQuery.fn.extend(object)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.extend_object.html" target="body">jQuery.extend(object)</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.noConflict.html" title="jQuery.noConflict([extreme])" target="body">jQuery.noConflict([ex])</a></li>
+    </ul>
+  </div>
+  <div id="attributes">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>属性</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attr.html" title="attr(name|properties|key,value|fn)" target="body">attr(name|pro|key,val|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/removeAttr.html" target="body">removeAttr(name)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/prop.html" title="prop(name|properties|key,value|fn)" target="body">prop(n|p|k,v|f)</a><sup>1.6+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/removeProp.html" target="body">removeProp(name)</a><sup>1.6+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/addClass.html" target="body">addClass(class|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/removeClass.html" target="body">removeClass([class|fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/toggleClass.html" target="body">toggleClass(class|fn[,sw])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/html.html" target="body">html([val|fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/text.html" target="body">text([val|fn])</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/val.html" target="body">val([val|fn|arr])</a></li>
+    </ul>
+  </div>
+  <div id="css">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>CSS</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/css.html" title="css(name|properties|[,value|fn])" target="body">css(name|pro|[,val|fn])</a><sup>1.9*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.cssHooks.html" target="body">jQuery.cssHooks</a></li>      
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/offset.html" target="body">offset([coordinates])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/position.html" target="body">position()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/scrollTop.html" target="body">scrollTop([val])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/scrollLeft.html" target="body">scrollLeft([val])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/height.html" target="body">heigh([val|fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/width.html" target="body">width([val|fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/innerHeight.html" target="body">innerHeight()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/innerWidth.html" target="body">innerWidth()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/outerHeight.html" target="body">outerHeight([soptions])</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/outerWidth.html" target="body">outerWidth([options])</a></li>
+    </ul>
+  </div>
+  <div id="selectors">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>选择器</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/id.html" target="body">#id</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/element.html" target="body">element</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/class.html" target="body">.class</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/all.html" target="body">*</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/multiple.html" target="body">selector1,selector2,selectorN</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/descendant.html" target="body">ancestor descendant</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/child.html" target="body">parent &gt;  child</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/next_1.html" target="body">prev + next</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/siblings_1.html" target="body">prev ~ siblings</a></li>
+      
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/first_1.html" target="body">:first</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/not_1.html" target="body">:not(selector)</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/even.html" target="body">:even</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/odd.html" target="body">:odd</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/eq_1.html" target="body">:eq(index)</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/gt.html" target="body">:gt(index)</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/lang.html" target="body">:lang</a><sup>1.9+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/last_1.html" target="body">:last</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/lt.html" target="body">:lt(index)</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/header.html" target="body">:header</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/animated.html" target="body">:animated</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/focus_1.html" target="body">:focus</a><sup>1.6+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/root.html" target="body">:root</a><sup>1.9+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/target.html" target="body">:target</a><sup>1.9+</sup></li>  
+      
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/contains.html" target="body">:contains(text)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/empty_1.html" target="body">:empty</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/has_1.html" target="body">:has(selector)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/parent_1.html" target="body">:parent</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/hidden_1.html" target="body">:hidden</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/visible.html" target="body">:visible</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attributeHas.html" target="body">[attribute]</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attributeEquals.html" target="body">[attribute=value]</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attributeNotEqual.html" target="body">[attribute!=value]</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attributeStartsWith.html" target="body">[attribute^=value]</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attributeEndsWith.html" target="body">[attribute$=value]</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attributeContains.html" target="body">[attribute*=value]</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/attributeMultiple.html" target="body">[attrSel1][attrSel2][attrSelN]</a></li>
+      
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/firstChild.html" target="body">:first-child</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/firstOfType.html" target="body">:first-of-type</a><sup>1.9+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/lastChild.html" target="body">:last-child</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/lastOfType.html" target="body">:last-of-type</a><sup>1.9+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/nthChild.html" target="body">:nth-child</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/:nthLastChild.html" target="body">:nth-last-child()</a><sup>1.9+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/nthLastOfType.html" target="body">:nth-last-of-type()</a><sup>1.9+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/nthOfType.html" target="body">:nth-of-type()</a><sup>1.9+</sup></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/onlyChild.html" target="body">:only-child</a></li>
+          <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/onlyOfType.html" target="body">:only-of-type</a><sup>1.9+</sup></li>
+      
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/input.html" target="body">:input</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/text_1.html" target="body">:text</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/password.html" target="body">:password</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/radio.html" target="body">:radio</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/checkbox.html" target="body">:checkbox</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/submit_1.html" target="body">:submit</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/image.html" target="body">:image</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/reset.html" target="body">:reset</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/button.html" target="body">:button</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/file.html" target="body">:file</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/hidden_1.html" target="body">:hidden</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/enabled.html" target="body">:enabled</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/disabled.html" target="body">:disabled</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/checked.html" target="body">:checked</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/selected.html" target="body">:selected</a></li>
+    </ul>
+  </div>
+  <div id="manipulation">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>文档处理</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/append.html" target="body">append(content|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/appendTo.html" target="body">appendTo(content)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/prepend.html" target="body">prepend(content|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/prependTo.html" target="body">prependTo(content)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/after.html" target="body">after(content|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/before.html" target="body">before(content|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/insertAfter.html" target="body">insertAfter(content)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/insertBefore.html" target="body">insertBefore(content)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/wrap.html" title="wrap(html|element|fn)" target="body">wrap(html|ele|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/unwrap.html" target="body">unwrap()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/wrapAll.html" title="wrapall(html|element)" target="body">wrapall(html|ele)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/wrapInner.html" title="wrapInner(html|element|fn)" target="body">wrapInner(html|ele|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/replaceWith.html" target="body">replaceWith(content|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/replaceAll.html" target="body">replaceAll(selector)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/empty.html" target="body">empty()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/remove.html" target="body">remove([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/detach.html" target="body">detach([expr])</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/clone.html" target="body">clone([Even[,deepEven]])</a></li>
+    </ul>
+  </div>
+  <div id="traversing">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>筛选</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/eq.html" target="body">eq(index|-index)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/first.html" target="body">first()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/last.html" target="body">last()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/hasClass.html" target="body">hasClass(class)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/filter.html" title="filter(expr|object|element|fn)" target="body">filter(expr|obj|ele|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/is.html" title="is(expr|object|element|fn)" target="body">is(expr|obj|ele|fn)</a><sup>1.6*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/map.html" target="body">map(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/has.html" title="has(expr|element)" target="body">has(expr|ele)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/not.html" title="not(expr|element|fn)" target="body">not(expr|ele|fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/slice.html" title="slice(start,[end])" target="body">slice(start,[end])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/children.html" target="body">children([expr])</a></li>
+      <li><del><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/closest.html" title="closest(expr,[context]|object|element)" target="body">closest(e,[c|o|e)</a></del><sup>1.7-</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/find.html" title="find(expr|object|element)" target="body">find(e|o|e)</a><sup>1.6*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/next.html" target="body">next([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/nextAll.html" target="body">nextall([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/nextUntil.html" title="nextUntil([expr|element][,filter])" target="body">nextUntil([e|e][,f])</a><sup>1.6*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/offsetParent.html" target="body">offsetParent()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/parent.html" target="body">parent([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/parents.html" target="body">parents([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/parentsUntil.html" title="parentsUntil([expr|element][,filter])" target="body">parentsUntil([e|e][,f])</a><sup>1.6*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/prev.html" target="body">prev([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/prevAll.html" target="body">prevall([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/prevUntil.html" title="prevUntil([expr|element][,filter])" target="body">prevUntil([e|e][,f])</a><sup>1.6*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/siblings.html" target="body">siblings([expr])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/add.html" title="add(expr|element|html|object[,context])" target="body">add(e|e|h|o[,c])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/andSelf.html" target="body">andSelf()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/contents.html" target="body">contents()</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/end.html" target="body">end()</a></li>
+    </ul>
+  </div>
+  <div id="events">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>事件</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/ready.html" target="body">ready(fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/on.html" title="on(events,[selector],[data],fn)" target="body">on(eve,[sel],[data],fn)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/off.html" title="off(events,[selector],[data],fn)" target="body">off(eve,[sel],[fn])</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/bind.html" target="body">bind(type,[data],fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/one.html" target="body">one(type,[data],fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/trigger.html" target="body">trigger(type,[data])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/triggerHandler.html" target="body">triggerHandler(type, [data])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/unbind.html" title="unbind(type,[data|fn])" target="body">unbind(t,[d|f])</a></li>
+      <li><del><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/live.html" target="body">live(type,[data],fn)</a></del><sup>1.7-</sup></li>
+      <li><del><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/die.html" target="body">die(type,[fn])</a></del><sup>1.7-</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/delegate.html" title="delegate(selector,[type],[data],fn)" target="body">delegate(s,[t],[d],fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/undelegate.html" title="undelegate([selector,[type],fn])" target="body">undelegate([s,[t],fn])</a><sup>1.6*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/hover.html" target="body">hover([over,]out)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/toggle.html" target="body">toggle(fn, fn2, [fn3, fn4, ...])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/blur.html" target="body">blur([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/change.html" target="body">change([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/click.html" target="body">click([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/dblclick.html" target="body">dblclick([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/error.html" target="body">error([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/focus.html" target="body">focus([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/focusin.html" target="body">focusin([data],fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/focusout.html" target="body">focusout([data],fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/keydown.html" target="body">keydown([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/keypress.html" target="body">keypress([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/keyup.html" target="body">keyup([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/mousedown.html" target="body">mousedown([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/mouseenter.html" target="body">mouseenter([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/mouseleave.html" target="body">mouseleave([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/mousemove.html" target="body">mousemove([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/mouseout.html" target="body">mouseout([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/mouseover.html" target="body">mouseover([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/mouseup.html" target="body">mouseup([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/resize.html" target="body">resize([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/scroll.html" target="body">scroll([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/select.html" target="body">select([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/submit.html" target="body">submit([[data],fn])</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/unload.html" target="body">unload([[data],fn])</a></li>
+    </ul>
+  </div>
+  <div id="effects">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>效果</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/show.html" title="show([speed,[easing],[fn]])" target="body">show([s,[e],[fn]])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/hide.html" title="hide([speed,[easing],[fn]])" target="body">hide([s,[e],[fn]])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/toggle.html" title="toggle([speed],[easing],[fn])" target="body">toggle([s],[e],[fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/slideDown.html" title="slideDown([speed],[easing],[fn])" target="body">slideDown([s],[e],[fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/slideUp.html" title="slideUp([speed,[easing],[fn]])" target="body">slideUp([s,[e],[fn]])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/slideToggle.html" title="slideToggle([speed],[easing],[fn])" target="body">slideToggle([s],[e],[fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/fadeIn.html" title="fadeIn([speed],[easing],[fn])" target="body">fadeIn([s],[e],[fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/fadeOut.html" title="fadeOut([speed],[easing],[fn])" target="body">fadeOut([s],[e],[fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/fadeTo.html" title="fadeTo([[speed],opacity,[easing],[fn]])" target="body">fadeTo([[s],o,[e],[fn]])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/fadeToggle.html" title="fadeToggle([speed,[easing],[fn]])" target="body">fadeToggle([s,[e],[fn]])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/animate.html" title="animate(params,[speed],[easing],[fn])" target="body">animate(p,[s],[e],[fn])</a><sup>1.8*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/stop.html" title="stop([clearQueue],[jumpToEnd])" target="body">stop([c],[j])</a><sup>1.7*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/delay.html" title="delay(duration,[queueName])" target="body">delay(d,[q])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/finish.html" title="finish([queue])" target="body">finish([queue])</a><sup>1.9+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.fx.off.html" target="body">jQuery.fx.off</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.fx.interval.html" target="body">jQuery.fx.interval</a></li>
+    </ul>
+  </div>
+  <div id="ajax">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>ajax</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.ajax.html" target="body">$.ajax(url,[settings])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/load.html" target="body">load(url,[data],[callback])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.get.html" target="body">$.get(url,[data],[fn],[type])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.getJSON.html" target="body">$.getJSON(url,[data],[fn])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.getScript.html" target="body">$.getScript(url,[callback])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.post.html" target="body">$.post(url,[data],[fn],[type])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/ajaxComplete.html" target="body">ajaxComplete(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/ajaxError.html" target="body">ajaxError(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/ajaxSend.html" target="body">ajaxSend(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/ajaxStart.html" target="body">ajaxStart(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/ajaxStop.html" target="body">ajaxStop(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/ajaxSuccess.html" target="body">ajaxSuccess(callback)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.ajaxPrefilter.html" target="body">$.ajaxPrefilter([type],fn)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.ajaxSetup.html" target="body">$.ajaxSetup([options])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/serialize.html" target="body">serialize()</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/serializearray.html" target="body">serializearray()</a></li>
+    </ul>
+  </div>
+  <div id="utilities">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>工具</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.support.html" target="body">$.support</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.browser.html" target="body"><del>$.browser</del></a><sup>1.9-</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.browser.version.html" target="body">$.browser.version</a></li>
+      <li><del><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.boxModel.html" target="body">$.boxModel</a></del></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.each.html" target="body">$.each(object,[callback])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.extend.html" target="body">$.extend([d],tgt,obj1,[objN])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.grep.html" target="body">$.grep(array,fn,[invert])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.sub.html" target="body"><del>$.sub()</del></a><sup>1.9-</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.when.html" target="body">$.when(deferreds)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.makeArray.html" target="body">$.makearray(obj)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.map.html" target="body">$.map(arr|obj,callback)</a><sup>1.6*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.inArray.html" target="body">$.inarray(val,arr,[from])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.toarray.html" target="body">$.toarray()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.merge.html" target="body">$.merge(first,second)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.unique.html" target="body">$.unique(array)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.parseJSON.html" target="body">$.parseJSON(json)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.parseXML.html" target="body">$.parseXML(data)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.noop.html" target="body">$.noop</a>
+      </li><li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.proxy.html" target="body">$.proxy(function,context)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.contains.html" title="$.contains(container,contained)" target="body">$.contains(c,c)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.type.html" target="body">$.type(obj)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.isArray.html" target="body">$.isarray(obj)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.isFunction.html" target="body">$.isFunction(obj)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.isEmptyObject.html" target="body">$.isEmptyObject(obj)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.isPlainObject.html" target="body">$.isPlainObject(obj)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.isWindow.html" target="body">$.isWindow(obj)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.isNumeric.html" target="body">$.isNumeric(value)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.trim.html" target="body">$.trim(str)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.param.html" target="body">$.param(obj,[traditional])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.error.html" target="body">$.error(message)</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jquery.html" target="body">$.fn.jquery</a></li>
+    </ul>
+  </div>
+  <div id="Eventobject">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>事件对象</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.currentTarget.html" target="body">eve.currentTarget</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.data.html" target="body">eve.data</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.delegateTarget.html" target="body">eve.delegateTarget</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.isDefaultPrevented.html" target="body">eve.isDefaultPrevented()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.isImmediatePropagationStopped.html" title="event.isImmediatePropagationStopped" target="body">eve.isImmediatePropag...()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.isPropagationStopped.html" target="body">eve.isPropagationStopped()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.namespace.html" target="body">eve.namespace</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.pageX.html" target="body">eve.pageX</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.pageY.html" target="body">eve.pageY</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.preventDefault.html" target="body">eve.preventDefault()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.relatedTarget.html" target="body">eve.relatedTarget</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.result.html" target="body">eve.result</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.stopImmediatePropagation.html" title="event.stopImmediatePropagation" target="body">eve.stopImmediatePro...()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.stopPropagation.html" target="body">eve.stopPropagation()</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.target.html" target="body">eve.target</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.timeStamp.html" target="body">eve.timeStamp</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.type.html" target="body">eve.type</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/event.which.html" target="body">eve.which</a></li>
+    </ul>
+  </div>
+  <div id="Deferred">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>延迟对象</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.done.html" title="deferred.done(doneCallbacks[,doneCallbacks])" target="body">def.done(d,[d])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.fail.html" target="body">def.fail(failCallbacks)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.isRejected.html" target="body"><del>def.isRejected()</del></a><sup>1.8-</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.isResolved.html" target="body"><del>def.isResolved()</del></a><sup>1.8-</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.reject.html" target="body">def.reject(args)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.rejectWith.html" title="deferred.rejectWith(context,[args])" target="body">def.rejectWith(c,[a])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.resolve.html" target="body">def.resolve(args)</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.resolveWith.html" title="deferred.resolveWith(context,[args])" target="body">def.resolveWith(c,[a])</a></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.then.html" title="deferred.then(doneCallbacks,failCallbacks[, progressCallbacks])" target="body">def.then(d,f,[,p])</a><sup>1.7*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.promise.html" title="deferred.promise([type],[target])" target="body">def.promise([ty],[ta])</a><sup>1.6+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.pipe.html" title="deferred.pipe([doneFilter],[failFilter],[progressFilter])" target="body">def.pipe([d],[f],[p])</a><sup>1.7*</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.always.html" title="deferred.always(alwaysCallbacks,[alwaysCallbacks])" target="body">def.always(al,[al])</a><sup>1.6+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.notify.html" target="body">def.notify(args)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.notifyWith.html" title="deferred.notifyWith(context,[args])" target="body">def.notifyWith(c,[a])</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.progress.html" title="deferred.progress(progressCallbacks)" target="body">def.progress(proCal)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/deferred.state.html" target="body">def.state()</a><sup>1.7+</sup></li>
+    </ul>
+  </div>
+  <div id="Callbacks">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>回调函数</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.add.html" target="body">cal.add(callbacks)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.disable.html" target="body">cal.disable()</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.empty.html" target="body">cal.empty()</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.fire.html" target="body">cal.fire(arguments)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.fired.html" target="body">cal.fired()</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.fireWith.html" title="callbacks.fireWith([context] [, args])" target="body">cal.fireWith([c] [,a])</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.has.html" target="body">cal.has(callback)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.lock.html" target="body">cal.lock()</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.locked.html" target="body">cal.locked()</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/callbacks.remove.html" target="body">cal.remove(callbacks)</a><sup>1.7+</sup></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jQuery.callbacks.html" target="body">$.callbacks(flags)</a><sup>1.7+</sup></li>
+    </ul>
+  </div>
+  <div id="about">
+    <a href="javascript:void(0)"><img src="./plus.gif"></a><img src="./folder.gif"><h2>关于</h2>
+    <ul>
+      <li><img src="./line.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/about.html" target="body">关于此jQuery中文文档</a></li>
+      <li><img src="./line.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/bugandUpdate.html" target="body">提交bug及获取更新</a></li>
+    </ul>
+  </div>
+  <div id="Other">
+    <a href="javascript:void(0)"><img src="./plusbottom.gif"></a><img src="./folder.gif"><h2>其它</h2>
+	  <ul>        
+      	 <li><img src="./empty.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/cssFormat.html" target="body">CSS压缩/格式化</a></li>
+         <li><img src="./empty.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/jsFormat.html" target="body">JS压缩/格式化</a></li>
+         <li><img src="./empty.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/regexChe.html" target="body">正则表达式在线测试</a></li>
+	     <li><img src="./empty.gif"><img src="./join.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/regexp.html" target="body">正则表达式速查表</a></li>
+         <li><img src="./empty.gif"><img src="./joinbottom.gif"><img src="./page.gif"><a href="https://www.runoob.com/manual/jquery/html5.html" target="body">HTML5速查表</a></li>
+	  </ul>
+  </div>
+</div>
+
+
+
+<div id="AutocompleteContainter_7134e" style="position: absolute; z-index: 9999; top: 30px; left: 5px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_7134e" style="display: none; width: 188px; max-height: 300px;"></div></div></div></body></html>
