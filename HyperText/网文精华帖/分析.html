@@ -10,7 +10,7 @@ body {margin-bottom:100vh;}
 </style>
 <script>
 $(document).ready(function(){
-    $("#content").append($('.biji', parent.document).html());
+    $("#content").after($(".biji",document.frames('neirong').document).clone);
 });
 </script>
 </head>
