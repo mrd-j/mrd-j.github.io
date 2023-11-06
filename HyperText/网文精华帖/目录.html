@@ -7,10 +7,30 @@
 a {color:black;text-decoration:none;cursor:pointer;}
 body {margin-bottom:100vh;}
 </style>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#m1").hide();
+        $("#m2").hide();
+        $("#戏呈之核心卖点").click(function(){
+            $("#m1").toggle();
+        });
+        $("#戏呈之模板循环").click(function(){
+            $("#m2").toggle();
+        });
+    });
+</script>
 </head>
 <body>
 <h3>目录</h3>
 <a onclick="window.open('内容.html#戏呈之核心卖点','neirong');window.open('分析.html#戏呈之核心卖点','fenxi')" id="戏呈之核心卖点">干货分享！浅谈核心卖点——一本书的诞生（上）【戏呈】</a><br/>
+<div id="m1">
+<a href="内容.html#h2-1" target="neirong">....一、核心卖点？怎么理解？</a>
+</div>
 <a onclick="window.open('内容.html#戏呈之模板循环','neirong');window.open('分析.html#戏呈之模板循环','fenxi')" id="戏呈之模板循环">干货分享！浅谈核心卖点——一本书的诞生（上）【戏呈】</a><br/>
+<div id="m2">
+<a href="内容.html#模板循环" target="neirong">....一、模板循环</a>
+</div>
 </body>
 </html>
