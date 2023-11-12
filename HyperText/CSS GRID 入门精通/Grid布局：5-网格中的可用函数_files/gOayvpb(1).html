@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://cdpn.io/thebabydino/fullembedgrid/gOayvpb?animations=stop-after-5&type=embed -->
+<html lang="en" class=" -webkit-"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <style>*, *::before, *::after { animation-play-state: paused !important; }</style><script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - auto-fit vs. auto-fill #2 (change justify-content/ no of thumbnails per grid)</title>
+
+    <link rel="canonical" href="https://codepen.io/thebabydino/pen/gOayvpb">
+  
+  
+  
+  
+<style>
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: max-content 1fr 1fr max-content;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  background: whitesmoke;
+  font: 1.25em ubuntu mono, consolas, monaco, monospace;
+}
+@media (max-width: 385px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+a {
+  margin-top: -1em;
+  padding: 0.25em 0.5em;
+  background: crimson;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
+pre {
+  z-index: 2;
+  padding: 0.5em;
+}
+
+form {
+  display: grid;
+}
+
+output::after {
+  content: attr(data-val);
+}
+
+article {
+  --dim: calc(100vw - 1.5em);
+  place-self: center;
+  width: var(--dim);
+}
+
+img {
+  place-self: stretch;
+  height: 8em;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dark {
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.9);
+  color: #d9d9d9;
+}
+:not(body) > .dark {
+  border-radius: 5px;
+}
+
+.token--prop {
+  color: #B7E3C0;
+}
+.token--func {
+  color: #B8D0DD;
+}
+.token--keyw {
+  display: inline-block;
+  padding: 0 0.25em;
+  border-radius: 3px;
+  background: #F8F087;
+  color: #222;
+  font-weight: 900;
+}
+.token--num {
+  color: #DBBAE5;
+}
+.token--unit {
+  color: #F39DD4;
+}
+@media (max-width: 565px) {
+  .token--prop ~ .token--func::before {
+    content: "\a   ";
+  }
+}
+
+.ctrl {
+  cursor: pointer;
+}
+
+[id=pop] {
+  --j: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  transform-origin: 0 0;
+  transform: scale(var(--j));
+  transition: 0.2s calc((1 - var(--j))*0.2s);
+}
+[id=pop] label {
+  opacity: var(--j);
+  transition: 0.2s calc(var(--j)*0.2s);
+}
+[aria-expanded=true] + [id=pop] {
+  --j: 1 ;
+}
+
+[type=radio] {
+  position: absolute;
+  right: 100%;
+}
+[type=radio] + label {
+  cursor: pointer;
+}
+[type=radio]:checked + label {
+  color: orange;
+}
+
+.grid {
+  display: grid;
+  justify-content: var(--key);
+  grid-gap: 0.5vw;
+  grid-template-columns: repeat(var(--col-rule, auto-fit), var(--w));
+  margin-top: 0.5em;
+}
+[style*=auto-fill] > .grid {
+  --g: 0.5vw;
+  background: repeating-linear-gradient(90deg, transparent 0 0, #dfdfdf 0 calc(var(--w) - 0px), transparent 0 calc(var(--w) + var(--g))) var(--x, 50%) 50%/calc(var(--max)*var(--w) + (var(--max) - 1)*var(--g)) calc(100% - 2px) no-repeat;
+}
+body[style*=start] .grid {
+  --x: 0 ;
+}
+body[style*=end] .grid {
+  --x: 100% ;
+}
+body[style*=space-between] .grid {
+  --g: calc((var(--dim) - var(--max)*var(--w))/(var(--max) - 1)) ;
+}
+body[style*=space-around] .grid {
+  --g: calc((var(--dim) - var(--max)*var(--w) - (var(--max) - 1)*0.5vw)/var(--max) + 0.5vw) ;
+}
+body[style*=space-evenly] .grid {
+  --g: calc((var(--dim) - var(--max)*var(--w) - (var(--max) - 1)*0.5vw)/(var(--max) + 1) + 0.5vw) ;
+}
+
+.ctrl {
+  position: relative;
+  white-space: normal;
+}
+.ctrl > output {
+  white-space: pre;
+}
+
+.pan {
+  --i: var(--wide, 1);
+  --not-i: calc(1 - var(--i));
+  --focus: 0;
+  --not-focus: calc(1 - var(--focus));
+  place-content: center;
+  grid-template-columns: minmax(max-content, 0) 15em minmax(max-content, 0);
+  grid-gap: 0.5em;
+  filter: grayScale(var(--not-focus));
+}
+.pan:focus-within {
+  --focus: 1 ;
+}
+@media (max-width: 610px) {
+  .pan {
+    --wide: 0 ;
+  }
+}
+
+[for=val] {
+  grid-column: calc(1 + var(--not-i));
+  place-self: center var(--wide, end);
+}
+
+[type=range] {
+  grid-column: 2;
+  grid-row: calc(1 + var(--not-i));
+  cursor: pointer;
+}
+[type=range], [type=range]::-webkit-slider-thumb, [type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+}
+[type=range]::-webkit-slider-runnable-track {
+  border: none;
+  width: 15em;
+  height: 0.25em;
+  border-radius: 0.125em;
+  background: currentcolor;
+}
+[type=range]::-moz-range-track {
+  border: none;
+  width: 15em;
+  height: 0.25em;
+  border-radius: 0.125em;
+  background: currentcolor;
+}
+[type=range]::-webkit-slider-thumb {
+  margin-top: -0.375em;
+  border: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: orange;
+}
+[type=range]::-moz-range-thumb {
+  margin-top: 0em;
+  border: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: orange;
+}
+[type=range]:focus {
+  outline: solid 0 transparent;
+}
+
+output[for=val] {
+  grid-column: calc(3 - var(--not-i));
+  grid-row: calc(1 + var(--not-i));
+  place-self: start;
+  transform: translate(calc(var(--not-i)*(0.5em + (var(--val) - var(--min))/(var(--max) - var(--min))*14em - 50%)), calc(var(--not-i)*(0.25em - 100%)));
+}
+output[for=val]::after {
+  display: block;
+  border: solid 0.25em transparent;
+  padding: 0 0.5em;
+  border-radius: calc(0.25em + 3px);
+  transform-origin: 50% 100%;
+  transform: scale(calc(var(--i) + var(--not-i)*var(--focus)));
+  background: orange border-box;
+  color: #222;
+  text-align: center;
+  --xy: calc(var(--not-i)*50%) calc(50%*(1 + var(--not-i)));
+  --mask:
+  	linear-gradient(red, red) padding-box,
+  	conic-gradient(
+  			from calc(45deg - var(--not-i)*90deg)
+  			at var(--xy),
+  			red 0% 25%, transparent 0%)
+  		var(--xy)/ 50% 50% no-repeat border-box;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  transition: transform 0.3s, filter 0.3s;
+}
+</style>
+
+  
+  <script src="./prefixfree.min.js.下载"></script>
+
+    <script>
+    (function() {
+      /*
+      * Capture all errors for this pen
+      **/
+      window.onerror = function(/* message, file, line */) {
+        return true;
+      };
+
+      /*
+      * Capture and kill Web Audio and Speech
+      */
+      if (typeof (AudioContext) != "undefined" || typeof (webkitAudioContext) != "undefined") {
+        AudioContext = function() {
+          return false;
+        };
+
+        webkitAudioContext = function() {
+          return false;
+        };
+      }
+
+      if (typeof (mozAudioContext) != "undefined") {
+        mozAudioContext = function() {
+          return false;
+        };
+      }
+
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis = {};
+      }
+      if ("speak" in speechSynthesis) {
+        speechSynthesis.speak = function() {
+          return false;
+        };
+      }
+
+      // Kill the browser asking for access to the video cam or audio
+      navigator.getUserMedia = function() {
+      };
+      navigator.mozGetUserMedia = function() {
+      };
+      navigator.webkitGetUserMedia = function() {
+      };
+      navigator.mediaDevices.getUserMedia = function() {
+      };
+
+
+      /**
+      * Capture and kill animations after X number of seconds
+      **/
+      var __animationDuration = 4000;
+      var __animationsTimedOut = false;
+      var __animationRequests = [];
+      var __requestAnimationFrame = false;
+      var __cancelAnimationFrame = false;
+      var x, i;
+
+      var vendorsRequestAnimationFrame = [
+        "requestAnimationFrame",
+        "mozRequestAnimationFrame",
+        "webkitRequestAnimationFrame"
+      ];
+
+      // find the browsers requestAnimationFrame and cancelAnimationFrame
+      for (x = 0; x < vendorsRequestAnimationFrame.length; x++) {
+        if (!__requestAnimationFrame) {
+          __requestAnimationFrame = window[vendorsRequestAnimationFrame[x]
+          ];
+        }
+      }
+
+      __cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+      // Wrap the requestAnimationFrame so we can stop it in the future
+      function __reqFrame(callback, element) {
+        // after the timeout we no longer take requests
+        var timerID;
+        if (__animationsTimedOut) {
+          return 0;
+        } else {
+          timerID = __requestAnimationFrame(callback, element);
+          __animationRequests.push(timerID);
+
+          return timerID;
+        }
+      }
+
+      for (x = 0; x < vendorsRequestAnimationFrame.length; x++) {
+        window[vendorsRequestAnimationFrame[x]] = __reqFrame;
+      }
+
+      // Cancel the animations after expiration
+      setTimeout(function() {
+        for (i = 0; i < __animationRequests.length; i++) {
+          __cancelAnimationFrame(__animationRequests[i]);
+        }
+
+        var ss = window.document.createElement("style");
+        ss.textContent = "*, *::before, *::after { animation-play-state: paused !important; }";
+        var ref = window.document.getElementsByTagName("script")[0];
+        ref.parentNode.insertBefore(ss, ref);
+
+        __animationsTimedOut = true;
+      }, __animationDuration, "push");
+
+      /**
+      * Capture setInterval and setTimeout to kill after X number of seconds
+      **/
+      window.setInterval = (function(oldSetInterval) {
+        var registered = [];
+
+        function f(a,b) {
+          // check if the time has expired,
+          // after __animationDuration expires don't take anymore setIntervals
+          if (this.timedOut) {
+            return 0;
+          } else {
+            return registered[ registered.length ] = oldSetInterval(a,b);
+          }
+        }
+
+        f.clearAll = function() {
+          var r;
+
+          while (r = registered.pop()) {
+            clearInterval( r );
+          }
+
+          this.timedOut = true;
+        };
+
+        f.timedOut = false;
+
+        return f;
+      }(window.setInterval));
+
+      window.setTimeout = (function(oldSetTimeout) {
+        var registered = [];
+
+        // because some of our timeouts may time out afterwards
+        // we want to make sure they know the secret sauce to still use
+        // setTimeout after the time has expired, thats why we have a
+        // third param
+        function f(a, b, push) {
+          // check if the time has expired,
+          // after __animationDuration expires don't take anymore requests
+          if (this.timedOut && typeof(push) == "undefined") {
+            return 0;
+          } else {
+            // If push is there, never clear that interval
+            // so never add it to the registry
+            if (push) {
+              return oldSetTimeout(a,b);
+            } else {
+              return registered[ registered.length ] = oldSetTimeout(a,b);
+            }
+          }
+        }
+
+        f.clearAll = function() {
+          var r;
+
+          while (r = registered.pop()) {
+            clearTimeout( r );
+          }
+
+          this.timedOut = true;
+        };
+
+        f.timedOut = false;
+
+        return f;
+      }(window.setTimeout));
+
+      setTimeout(function() {
+
+        setTimeout.clearAll();
+        setInterval.clearAll();
+
+        // Stop Web Animations API
+        // Idea from Gregor: https://github.com/CodePen/CodePen-Bug-Reporting-Only/issues/173#issuecomment-203443301
+        // Status as of April 2020:
+        //  Chrome 80 = Stops animations
+        //  Firefox 75 = Stops animations
+        //  Safari 13 = Doesn't support WAAPI
+        //  Safari 13.1 = Stops animations
+
+        // Apparently this used to be done via `document.timeline`, but the modern method is to get the animations directly from the document.
+        let animations = ( typeof document.getAnimations === "function" && document.getAnimations() ) || (document.timeline && typeof document.timeline.getAnimations === "function" && document.timeline.getAnimations() )
+
+        if ( animations && animations.length ) {
+          animations.map(function(animation) {
+            animation.pause();
+          });
+        }
+
+      }, __animationDuration, "push");
+
+    }());
+  </script>
+
+</head>
+
+<body translate="no" onload="_l=&#39;t&#39;;" style="--min: 1; --val: 6; --max: 6; --key: center; --w: 14vw">
+  
+  <pre class="dark"><span class="token--prop">justify-content</span><span class="token--punc">:</span><span class="ctrl">
+      <output class="token--keyw" for="start center end space-between space-around space-evenly" aria-haspopup="true" aria-expanded="false" aria-controls="pop" data-val="center"></output>
+      <form class="dark" id="pop">
+        <input type="radio" name="key" id="start" value="start">
+        <label for="start">start</label>
+        <input type="radio" name="key" id="center" value="center" checked="checked">
+        <label for="center">center</label>
+        <input type="radio" name="key" id="end" value="end">
+        <label for="end">end</label>
+        <input type="radio" name="key" id="space-between" value="space-between">
+        <label for="space-between">space-between</label>
+        <input type="radio" name="key" id="space-around" value="space-around">
+        <label for="space-around">space-around</label>
+        <input type="radio" name="key" id="space-evenly" value="space-evenly">
+        <label for="space-evenly">space-evenly</label>
+      </form></span><span class="token--comm">/* change this value */</span></pre>
+  <article style="--col-rule: auto-fit">
+    <pre class="dark"><span class="token--prop">grid-template-columns</span><span class="token--punc">:</span> <span class="token--func">repeat</span><span class="token--punc">(</span><span class="token--args"><span class="token--arg token--keyw">auto-fit</span><span class="token--punc">,</span> <span class="token--arg token--len"><span class="token--num">14</span><span class="token--unit">vw</span></span></span><span class="token--punc">)</span></pre>
+    <section class="grid"><img src="./photo-1564844536308-75c540dbf14e"><img src="./photo-1548865164-c4e93ca471aa"><img src="./photo-1502004960551-dc67f7c24cb3"><img src="./photo-1551276705-0503a4b9d38c"><img src="./photo-1551529563-9dd66d188764"><img src="./photo-1473340186413-a68ba9c2564e">
+    </section>
+  </article>
+  <article style="--col-rule: auto-fill">
+    <pre class="dark"><span class="token--prop">grid-template-columns</span><span class="token--punc">:</span> <span class="token--func">repeat</span><span class="token--punc">(</span><span class="token--args"><span class="token--arg token--keyw">auto-fill</span><span class="token--punc">,</span> <span class="token--arg token--len"><span class="token--num">14</span><span class="token--unit">vw</span></span></span><span class="token--punc">)</span></pre>
+    <section class="grid"><img src="./photo-1564844536308-75c540dbf14e"><img src="./photo-1548865164-c4e93ca471aa"><img src="./photo-1502004960551-dc67f7c24cb3"><img src="./photo-1551276705-0503a4b9d38c"><img src="./photo-1551529563-9dd66d188764"><img src="./photo-1473340186413-a68ba9c2564e">
+    </section>
+  </article>
+  <form class="pan dark">
+    <label for="val">Thumbnails per grid:</label>
+    <input id="val" type="range" name="val" min="1" value="6" max="6">
+    <output for="val" data-val="6"></output>
+  </form><a href="https://codepen.io/thebabydino/pen/QWjovRV" target="_blank">Also check out the first version! 😼</a>
+
+  
+      <script id="rendered-js">
+const _BODY = document.body,
+_GRIDS = [...document.querySelectorAll('.grid')].map(c => ({
+  _el: c,
+  _imgs: [...c.querySelectorAll('img')] })),
+
+FN = ['append', 'remove'];
+
+addEventListener('click', e => {
+  let _tg = e.target;
+
+  if (_tg.hasAttribute('aria-haspopup')) {
+    console.log(_tg.getAttribute('aria-expanded'));
+    if (_tg.getAttribute('aria-expanded') === 'false')
+    _tg.setAttribute('aria-expanded', 'true');
+  } else
+  {
+    let _octrl = document.querySelector('[aria-expanded=true]');
+
+    if (_octrl) _octrl.setAttribute('aria-expanded', 'false');
+  }
+}, false);
+
+addEventListener('input', e => {
+  let _tg = e.target,
+  new_val = _tg.value,
+  _out = document.querySelector(`output[for*='${_tg.id}']`),
+  old_val = _out.dataset.val;
+
+  if (new_val != old_val) {
+    if (_tg.type === 'range') {
+      _GRIDS.forEach(g => {
+        let dif = +new_val - +old_val,
+        sgn = Math.sign(dif),
+        bit = .5 * (1 - sgn);
+
+        while (dif !== 0) {if (window.CP.shouldStopExecution(0)) break;
+          g._el[`${FN[bit]}Child`](g._imgs[new_val - dif - bit]);
+          dif -= sgn;
+        }window.CP.exitedLoop(0);
+      });
+    }
+
+    _BODY.style.setProperty(`--${_tg.name}`, _out.dataset.val = new_val);
+  }
+}, false);
+//# sourceURL=pen.js
+    </script>
+
+    <script style="display: none !important;">
+  (function() {
+    var __animationDuration = 4000;
+
+    setTimeout(function() {
+      // If onload hasn't been called, stop all requests after 2 seconds
+      if (typeof(_l) == "undefined") {
+        if (window.stop !== undefined) window.stop();
+        else if (document.execCommand !== undefined) document.execCommand("Stop", false);
+      }
+    }, 2000, "push");
+
+    /*
+    * Capture and kill CSS animations after X number of seconds
+    */
+    function pauseAnimations() {
+      var body = document.getElementsByTagName("body")[0];
+
+      if (body.addEventListener) {
+        body.addEventListener("webkitAnimationStart", listener, false);
+        body.addEventListener("webkitAnimationIteration", listener, false);
+        body.addEventListener("animationstart", listener, false);
+        body.addEventListener("animationiteration", listener, false);
+      }
+    }
+
+    function listener(e) {
+
+      var targetEl;
+
+      if (e.type == "webkitAnimationStart" || e.type == "webkitAnimationIteration") {
+
+        targetEl = e.target;
+
+        setTimeout(function() {
+          targetEl.style.webkitAnimationPlayState = "paused";
+        }, __animationDuration, "push");
+
+      } else if (e.type == "animationstart" || e.type == "animationiteration") {
+
+        targetEl = e.target;
+
+        setTimeout(function() {
+          targetEl.style.MozAnimationPlayState = "paused";
+        }, __animationDuration, 'push');
+
+      }
+    }
+
+    pauseAnimations();
+
+    // Pause all audio elements, allow the audio/video
+    // elements to render before stopping them
+    function pauseElementTypes(type) {
+      for (var i = 0, els = document.getElementsByTagName(type); i < els.length; i++) {
+        els[i].pause();
+      }
+    }
+
+    // Wait until the elements have been created to pause them
+    setTimeout(function() {
+      pauseElementTypes("audio");
+      pauseElementTypes("video");
+    }, 100);
+
+  }());
+  </script>
+
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>
