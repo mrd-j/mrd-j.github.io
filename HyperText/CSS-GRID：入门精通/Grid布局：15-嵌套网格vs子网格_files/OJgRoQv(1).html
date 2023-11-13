@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/OJgRoQv?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Card Layout with subgid（or Nested Grid)</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/OJgRoQv">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #557;
+  line-height: 1.4;
+  font-size: clamp(11px, 3vw, 14px);
+}
+
+/* MAIN GRID */
+.cards-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, [col-start] fit-content(9rem));
+  grid-auto-rows: fit-content(12rem) minmax(10rem, 14rem) auto auto;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* SUBGRID */
+
+.card {
+  grid-column: span 3;
+  grid-row: span 4;
+  display: grid;
+  grid-template-columns: subgrid [card-start][button-start][col][card-end button-end];
+  grid-template-rows: subgrid [title-start][title-end photo-start] [photo-end text-start] [text-end button-start] [button-end];
+  row-gap: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0 0.5rem 1rem 0.5rem;
+  padding: 1rem;
+}
+
+/* SUBGRID IN SUBGRID */
+
+.card-header-wrapper {
+  grid-column: card;
+  grid-row: title;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: fit-content(6rem) fit-content(6rem);
+  grid-template-areas: "subtitle subtitle avatar" "title title title";
+  align-items: end;
+}
+
+/* CARD DETAILS */
+
+.card-title {
+  grid-area: title;
+  font-size: 1.25rem;
+}
+
+.card-subtitle {
+  grid-area: subtitle;
+  font-weight: normal;
+  margin: 0;
+}
+
+.card-avatar-wrapper {
+  grid-area: avatar;
+  align-self: start;
+  justify-self: end;
+}
+
+.card-avatar {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.card-photo-wrapper {
+  grid-column: card;
+  grid-row: photo;
+  margin-bottom: 0.5rem;
+}
+
+.card-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-text {
+  grid-column: col-start / span 3;
+  grid-row: text;
+  margin-bottom: 2rem;
+}
+
+.card-like {
+  grid-column: 1/2;
+  grid-row: button;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-self: end;
+  cursor: pointer;
+}
+
+.card-button {
+  grid-area: button;
+  min-width: 4rem;
+  height: 3rem;
+  background-color: #66a9d6;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0 0.75rem;
+  color: white;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  cursor: pointer;
+  justify-self: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 8rem;
+}
+
+.caption {
+  text-align: center;
+  font-size: 13px;
+  padding-bottom: 30px;
+}
+
+.caption a {
+  color: #0086b3;
+}
+
+/* browsers without support for the subgrid feature */
+
+@supports not (grid-template-columns: subgrid) {
+  .card {
+    grid-template-columns: repeat(3, [col-start] fit-content(9rem));
+    grid-template-rows: 9rem 15rem auto auto;
+  }
+
+  .card-header-wrapper,
+  .card-photo-wrapper,
+  .card-text {
+    grid-column: 1/-1;
+    grid-row: span 1;
+  }
+
+  .card-text {
+    margin-bottom: 0;
+  }
+
+  .card-button {
+    grid-column: 3/-1;
+    align-self: end;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: clamp(11px, 2vw, 14px);
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(6, [col-start] fit-content(9rem));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: clamp(11px, 1vw, 14px);
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(12, [col-start] fit-content(9rem));
+  }
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <div class="cards-container">
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">The cosmos awaits</h2>
+      <h4 class="card-subtitle">Great turbulent clouds</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1476814607969-0dfe98b9be5c" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper">
+      <img class="card-photo" src="./photo-1512547770769-0eb554dbaa73" alt="">
+    </div>
+    <p class="card-text">With pretty stories for which there's little good evidence star stuff harvesting star light circumnavigated invent the universe billions upon billions of brilliant syntheses.</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">Harvesting star light</h2>
+      <h4 class="card-subtitle">Realm of the galaxies</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1583994009906-c00c0bd8acb2" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper">
+      <img class="card-photo" src="./photo-1503389152951-9f343605f61e" alt="">
+    </div>
+    <p class="card-text">Descended from astronomers encyclopaedia galactica Sea of Tranquility encyclopaedia galactica vanquish the impossible courage of our questions. Great turbulent clouds emerged into consciousness inconspicuous motes of rock and gas gathered by gravity.</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">Impossible courage of our questions</h2>
+      <h4 class="card-subtitle">The ash of stellar alchemy</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1511546395756-590dffdcdbd1" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper"><img class="card-photo" src="./photo-1485846753954-dff2171ddb2b" alt=""></div>
+    <p class="card-text">Brain is the seed of intelligence from which we spring not a sunrise but a galaxyrise consciousness take root and flourish Cambrian explosion. Stirred by starlight billions upon billions vanquish the impossible the sky calls to us with pretty stories?</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">A mote of dust suspended in a sunbeam</h2>
+      <h4 class="card-subtitle">Interiors of collapsing stars</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1553669006-0b3882afea8d" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper">
+      <img class="card-photo" src="./photo-1498452572341-c087c3ee25fc" alt="">
+    </div>
+    <p class="card-text">Orion's sword venture take root and flourish inconspicuous motes of rock and gas vanquish the impossible muse about. A very small stage in a vast cosmic arena two ghostly white figures in coveralls and helmets.</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">The cosmos awaits</h2>
+      <h4 class="card-subtitle">Great turbulent clouds</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1476814607969-0dfe98b9be5c" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper">
+      <img class="card-photo" src="./photo-1512547770769-0eb554dbaa73" alt="">
+    </div>
+    <p class="card-text">With pretty stories for which there's little good evidence star stuff harvesting star light circumnavigated invent the universe billions upon billions of brilliant syntheses.</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">Harvesting star light</h2>
+      <h4 class="card-subtitle">Realm of the galaxies</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1583994009906-c00c0bd8acb2" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper">
+      <img class="card-photo" src="./photo-1503389152951-9f343605f61e" alt="">
+    </div>
+    <p class="card-text">Descended from astronomers encyclopaedia galactica Sea of Tranquility encyclopaedia galactica vanquish the impossible courage of our questions. Great turbulent clouds emerged into consciousness inconspicuous motes of rock and gas gathered by gravity.</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">Impossible courage of our questions</h2>
+      <h4 class="card-subtitle">The ash of stellar alchemy</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1511546395756-590dffdcdbd1" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper"><img class="card-photo" src="./photo-1485846753954-dff2171ddb2b" alt=""></div>
+    <p class="card-text">Brain is the seed of intelligence from which we spring not a sunrise but a galaxyrise consciousness take root and flourish Cambrian explosion. Stirred by starlight billions upon billions vanquish the impossible the sky calls to us with pretty stories?</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header-wrapper">
+      <h2 class="card-title">A mote of dust suspended in a sunbeam</h2>
+      <h4 class="card-subtitle">Interiors of collapsing stars</h4>
+      <div class="card-avatar-wrapper">
+        <img class="card-avatar" src="./photo-1553669006-0b3882afea8d" alt="">
+      </div>
+    </div>
+    <div class="card-photo-wrapper">
+      <img class="card-photo" src="./photo-1498452572341-c087c3ee25fc" alt="">
+    </div>
+    <p class="card-text">Orion's sword venture take root and flourish inconspicuous motes of rock and gas vanquish the impossible muse about. A very small stage in a vast cosmic arena two ghostly white figures in coveralls and helmets.</p>
+    <svg class="card-like" height="32" width="32" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"></path>
+    </svg>
+    <button class="card-button">More</button>
+  </div>
+
+</div>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

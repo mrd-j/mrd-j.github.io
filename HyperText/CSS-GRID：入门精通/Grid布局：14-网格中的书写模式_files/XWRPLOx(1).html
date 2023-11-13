@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/XWRPLOx?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - Grid with writing-mode and direction</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/XWRPLOx">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  inline-size: 100vw;
+  min-block-size: 100vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #f7f7f7;
+
+  padding: 20px;
+}
+
+section {
+  margin: 0 auto;
+  box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);
+  border-radius: 3px;
+  min-inline-size: 80vmin;
+  max-block-size: 80vmin;
+}
+
+.grid__container {
+  inline-size: 100%;
+  box-shadow: 0 0 0 1px #f36;
+  position: relative;
+}
+
+.grid__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  position: relative;
+  counter-increment: item;
+  padding: 10px;
+}
+
+.grid__item::before {
+  content: "i" counter(item);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px;
+  text-shadow: 1px 1px 0 rgba(0 0 0 / 0.25);
+  background-color: rgb(0 0 0 / 0.6);
+  background-image: conic-gradient(
+    from 90deg at 40% -25%,
+    #ffd700,
+    #f79d03,
+    #ee6907,
+    #e6390a,
+    #de0d0d,
+    #d61039,
+    #cf1261,
+    #c71585,
+    #cf1261,
+    #d61039,
+    #de0d0d,
+    #ee6907,
+    #f79d03,
+    #ffd700,
+    #ffd700,
+    #ffd700
+  );
+  inline-size: 32px;
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 3px rgb(255 255 255 / 0.5));
+}
+
+.grid__item:nth-child(n + 1) {
+  background-color: #f1c2c6;
+}
+
+.grid__item:nth-child(2n + 1) {
+  background-color: #dac2f1;
+}
+
+.grid__item:nth-child(3n + 1) {
+  background-color: #ccf1c2;
+}
+
+.grid__item:nth-child(4n + 1) {
+  background-color: #c2e9f1;
+}
+
+.grid__item:nth-child(5n + 1) {
+  background-color: #f1ebc2;
+}
+.grid__item:nth-child(6n + 1) {
+  background-color: #09f;
+}
+
+.grid__item:nth-child(7n + 1) {
+  background-color: #ff5722;
+}
+
+.grid__item:nth-child(8n + 1) {
+  background-color: #8bc34a;
+}
+
+.grid__item:nth-child(9n + 1) {
+  background-color: #f66803;
+}
+1 .grid__item:nth-child(10n + 1) {
+  background-color: #0d815f;
+}
+.grid__item:nth-child(11n + 1) {
+  background-color: #28d1c2;
+}
+.grid__item:nth-child(12n + 1) {
+  background-color: #4a28d1;
+}
+.form {
+  text-align: center;
+  inline-size: 100%;
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+  -ms-writing-mode: var(--writing-mode, horizontal-tb);
+      writing-mode: var(--writing-mode, horizontal-tb);
+  direction: var(--direction, ltr);
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <section>
+  <div class="grid__container">
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+  </div>
+</section>
+
+<div class="form">
+  <label for="writing-mode">
+    writing-mode:
+  </label>
+  <select name="writing-mode" id="writing-mode">
+    <option value="horizontal-tb">horizontal-tb</option>
+    <option value="vertical-rl">vertical-rl</option>
+    <option value="vertical-lr">vertical-lr</option>
+    <option value="sideways-rl">sideways-rl</option>
+    <option value="sideways-lr">sideways-lr</option>
+  </select>
+  <label for="direction">direction:</label>
+  <select name="direction" id="direction">
+    <option value="ltr">ltr</option>
+    <option value="rtl">rtl</option>
+  </select>
+</div>
+  
+      <script id="rendered-js">
+const grid = document.querySelector(".grid__container");
+const selects = document.querySelectorAll("select");
+
+selects.forEach(select => {
+  select.addEventListener("change", etv => {
+    grid.style.setProperty(`--${etv.target.id}`, etv.target.value);
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

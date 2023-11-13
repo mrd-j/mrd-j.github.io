@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/YzQGwoe?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Nested Grid vs. Subgrid</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/YzQGwoe">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #557;
+  padding: 4rem;
+
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.grid__container {
+  outline: 3px solid #111;
+  background: #333;
+  padding: 1rem;
+  flex: 1;
+}
+.grid__item {
+  outline: 4px solid #111;
+  background: #557;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 0 rgb(0 0 0 / 0.8);
+}
+
+.grid__container--nested,
+.grid__container--subgrid {
+  justify-content: unset !important;
+  align-items: unset !important;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.grid__subitem {
+  outline: 3px solid #999;
+  background: #ccc;
+  position: relative;
+  color: #000 !important;
+  text-shadow: 1px 1px 0 rgb(255 255 255 / 0.8) !important;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  gap: 1rem;
+}
+
+.grid__container--nested,
+.grid__container--subgrid {
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
+  gap: inherit;
+}
+
+.grid__container--nested {
+  display: inherit !important;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
+}
+
+.grid__container--subgrid {
+  display: inherit !important;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.warning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #fed7d7;
+  border-top: 1px solid #f56565;
+  padding: 10px;
+  color: #f56565;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .warning {
+    display: none;
+  }
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <div class="grid__container">
+  <div class="grid__item">A</div>
+  <div class="grid__item">B</div>
+  <div class="grid__item">C</div>
+  <div class="grid__item">D</div>
+  <div class="grid__item">E</div>
+  <div class="grid__item">F</div>
+  <div class="grid__item grid__container--nested">
+    <div class="grid__subitem grid__item">G1</div>
+    <div class="grid__subitem grid__item">G2</div>
+    <div class="grid__subitem grid__item">G3</div>
+    <div class="grid__subitem grid__item">G4</div>
+    <div class="grid__subitem grid__item">G5</div>
+    <div class="grid__subitem grid__item">G6</div>
+    <div class="grid__subitem grid__item">G7</div>
+    <div class="grid__subitem grid__item">G8</div>
+    <div class="grid__subitem grid__item">G9</div>
+  </div>
+  <div class="grid__item">H</div>
+  <div class="grid__item">I</div>
+  <div class="grid__item">J</div>
+  <div class="grid__item">K</div>
+  <div class="grid__item">L</div>
+  <div class="grid__item">M</div>
+  <div class="grid__item">N</div>
+  <div class="grid__item">O</div>
+</div>
+<div class="grid__container">
+  <div class="grid__item">A</div>
+  <div class="grid__item">B</div>
+  <div class="grid__item">C</div>
+  <div class="grid__item">D</div>
+  <div class="grid__item">E</div>
+  <div class="grid__item">F</div>
+  <div class="grid__item grid__container--subgrid">
+    <div class="grid__subitem grid__item">G1</div>
+    <div class="grid__subitem grid__item">G2</div>
+    <div class="grid__subitem grid__item">G3</div>
+    <div class="grid__subitem grid__item">G4</div>
+    <div class="grid__subitem grid__item">G5</div>
+    <div class="grid__subitem grid__item">G6</div>
+    <div class="grid__subitem grid__item">G7</div>
+    <div class="grid__subitem grid__item">G8</div>
+    <div class="grid__subitem grid__item">G9</div>
+  </div>
+  <div class="grid__item">H</div>
+  <div class="grid__item">I</div>
+  <div class="grid__item">J</div>
+  <div class="grid__item">K</div>
+  <div class="grid__item">L</div>
+  <div class="grid__item">M</div>
+  <div class="grid__item">N</div>
+  <div class="grid__item">O</div>
+</div>
+
+<div class="warning">
+  <p>Subgrid support required to get the most out of this pen</p>
+</div>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

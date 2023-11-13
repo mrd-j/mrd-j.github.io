@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<!-- saved from url=(0133)https://www.w3cplus.com/css/grid-layout-part-10.html?expire=1699862097&code=pO48loKzp50&sign=6a5cf5330670ec30c2aed27c9ed5d92b#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="在 CSS 网格中除了使用明确指定网格项目位置的属性之外，还可以使用`grid-auto-flow`有不同模式来自动放置网格项目。到目前为止，我们所阐述的网格项目都是用不同的网格区域来放置网格项目，但网格布局中的网格项目有可能是会重叠在一起的。那么接下来的一节中，将和大家一起来探讨网格项目重叠和定位相关的知识。">
+<meta name="keywords" content="前端,图解CSS, Grid, Layout, Web布局系列, 布局, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/grid-layout-part-10.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2721">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>图解CSS: Grid布局（Part10）_图解CSS, Grid, Layout, Web布局系列, 布局, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./Grid布局：10-网格项目自动放置算法_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：10-网格项目自动放置算法_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：10-网格项目自动放置算法_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：10-网格项目自动放置算法_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./Grid布局：10-网格项目自动放置算法_files/hm.js.下载"></script><script type="text/javascript" src="./Grid布局：10-网格项目自动放置算法_files/jquery.min.js.下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2721 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/grid-layout-part-10.html?expire=1699862097&amp;code=pO48loKzp50&amp;sign=6a5cf5330670ec30c2aed27c9ed5d92b#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/grid-layout-part-10.html?expire=1699862097&amp;code=pO48loKzp50&amp;sign=6a5cf5330670ec30c2aed27c9ed5d92b#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/adidas-running-springsummer-2010-preview-oscillate-regulate/" title="IetpShops , adidas Running Spring/Summer 2010 Preview Oscillate &amp; Regulate , Tênis Adidas Originals Nmdr1 Preto Branco
+" style="display: none;">IetpShops , adidas Running Spring/Summer 2010 Preview Oscillate &amp; Regulate , Tênis Adidas Originals Nmdr1 Preto Branco
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejcashop/" title="Air Jordan 1 Outlet Store online
+" style="display: none;">Air Jordan 1 Outlet Store online
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfedavshop/jordan-reveal-photo-blue/" title="muzhskie krossovki nike jordan why not zero 2 seryj zheltyj - Jordan Reveal Photo Blue - these jordan 1 mid gs boast a flash of colour on the heel
+" style="display: none;">muzhskie krossovki nike jordan why not zero 2 seryj zheltyj - Jordan Reveal Photo Blue - these jordan 1 mid gs boast a flash of colour on the heel
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/air-jordan-6-low-psg-dz4133-008-release-date-info/" title="IetpShops - Is a Nike SB x Air Jordan 8 Retro BG Three - 142 Pine Green in the Pipeline Low PSG DZ4133 , 008 Release Date - Is a Nike SB x Air Jordan 4 Pine Green in the Pipeline - Peat 305368
+" style="display: none;">IetpShops - Is a Nike SB x Air Jordan 8 Retro BG Three - 142 Pine Green in the Pipeline Low PSG DZ4133 , 008 Release Date - Is a Nike SB x Air Jordan 4 Pine Green in the Pipeline - Peat 305368
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfeddfshop/sd/00842/adidas/adidas-mutombo-1-i" title="Manor PHX
+" style="display: none;">Manor PHX
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./Grid布局：10-网格项目自动放置算法_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              图解CSS: Grid布局（Part10）            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2721" class="node node-blog node-promoted node-full clearfix" about="/css/grid-layout-part-10.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2021-07-08</span>          点击：<span>392</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/674.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">图解CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/356.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Grid</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/695.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Web布局系列</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/130.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">布局</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><p>在 CSS 网格布局中，我们可以有很多种方法将网格项目明确的放置到指定的位置。比如：</p>
+
+<ul>
+<li>使用 <code>grid-row-start</code>、<code>grid-row-end</code>、<code>grid-column-start</code> 和 <code>grid-column-end</code> 指定网格线名称，放置网格项目</li>
+<li>使用 <code>grid-row-start</code>、<code>grid-row-end</code>、<code>grid-column-start</code> 和 <code>grid-column-end</code> 的简写属性 <code>grid-row</code> 和 <code>grid-column</code> 指定网格线名称，放置网格项目</li>
+<li>使用 <code>grid-area</code> 指定网格名称 或 指定<code>grid-template-areas</code>定义的网格区域名称，放置网格项目</li>
+<li>在 <code>grid-row-start</code>、<code>grid-row-end</code>、<code>grid-column-start</code>、<code>grid-column-end</code> 或 <code>grid-row</code>、<code>grid-column</code> 指定网格线名称，并且使用 <code>span</code> 来指定合并的网格单元格。他们的结合来放置网格项目</li>
+<li>在 <code>grid-row-start</code>、<code>grid-row-end</code>、<code>grid-column-start</code>、<code>grid-column-end</code>（以及其简写属性<code>grid-row</code>、<code>grid-column</code>）或 <code>grid-area</code>中指定 <code>grid-template-rows</code>、<code>grid-template-columns</code> 和 <code>grid-template-areas</code> 定义的网格线名称，放置网格项目</li>
+<li>使用已命名的网格线名称和 <code>span</code> 关键词，放置网格项目</li>
+<li>在<code>grid-area</code>指定<code>grid-template-areas</code>或 <code>grid-template-rows</code>和<code>grid-template-columns</code>创建的网格区域名称，放置网格项目</li>
+</ul>
+
+<p>示例代码如下：</p>
+
+<pre class="sql"><code class="sql">// 方法一
+.grid__item {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    // 等同于
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+// 方法二
+.grid__item {
+    grid-row: 2 / 4;    // ᐅ row-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator"> / row-<span class="keyword"><span class="keyword">end</span></span>;</span></span>
+    grid-column: 2 / 4; // ᐅ col-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator"> / col-<span class="keyword"><span class="keyword">end</span></span>;</span></span>
+}
+
+// 方法三
+.grid__item {
+    grid-area: 2 / 2 / 4 / 4; // ᐅ row-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator"> / col-<span class="keyword"><span class="keyword">start</span></span> / row-<span class="keyword"><span class="keyword">end</span></span> / col-<span class="keyword"><span class="keyword">end</span></span>;</span></span>
+}
+
+// 方法四
+.grid__item {
+    grid-row:  1 / span 2;      // ᐅ row-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator"> / span row-span-<span class="keyword"><span class="keyword">value</span></span>;</span></span>
+    grid-column:  1 / span 2;   // ᐅ col-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator"> / span col-span-<span class="keyword"><span class="keyword">value</span></span>;</span></span>
+}
+
+// 方法五
+.grid__item {
+    grid-column: head-col-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator"> / head-col-<span class="keyword"><span class="keyword">end</span></span>;</span></span>
+    grid-row: content-row-end / footer-row-end;
+}
+
+// 方法六
+.grid__item {
+    grid-row: row-name row-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator">-<span class="keyword"><span class="keyword">number</span></span>/ row-name row-<span class="keyword"><span class="keyword">end</span></span>-<span class="keyword"><span class="keyword">number</span></span>;</span></span>
+    grid-column: col-name col-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator">-<span class="keyword"><span class="keyword">number</span></span> / span col-name col-<span class="keyword"><span class="keyword">to</span></span>-span;</span></span>
+}
+
+// 方法七
+.grid__item {
+    grid-area: header;
+}
+</code></pre>
+
+<p>上面的方法让我们可以通过不同的姿势将网格项目明确的放置在网格系统中的位置。在这个过程中，有些网格项目并没有使用上面提到的方法来明确的放置，那么这些未明确放置的网格项目会根据一种算法来正确的放置。</p>
+
+<p>在接下来的内容中，将会向大家展示这个算法是如何工作的。这样一来，下次再有元素出现在一个意外的位置时，你就不会再感到困惑，也能知道发生了什么。</p>
+
+<p>为了更好的掌握自动放置算法的工作原理，我们有必要来了解一些基本概念：</p>
+
+<ul>
+<li><strong>匿名网格项目</strong>：如果你把一些文本直接放置在一个网格容器里，而没有使用任何标签包裹它，它将是一个匿名网格项目。在 CSS 网格布局中，你不能为匿名网格项目设置样式，因为你没办法使用 CSS 选择器来选择匿名网格项目，但它仍然从其父容器中继承样式规则。另一方面，网格容器内的空格符，回车符并不会创建自己的匿名网格项目</li>
+<li><strong>网格跨度（<code>span</code>）的值</strong>：网格跨度的值，指的是合并网格单元格数量，它和网格位置不同，该算法没有特别的规则来解决网格跨度的值。如果没有明确指定<code>span</code>的值，它将会是一个默认值，即<code>1</code>。</li>
+<li><strong>隐式网格</strong>：通过前面的学习，我们知道，在CSS网格系统中，使用<code>grid-template-rows</code>、<code>grid-template-columns</code>和<code>grid-template-areas</code>属性显式定义的网格被称为 <strong>显式网格</strong>。不过，要是你指定一个网格项目的位置，使其位于显式网格的边界之外，浏览器就会产生额外的网格线来放置网格项目。这些网格线和显式网格一起，就构建了 <strong>隐式网格</strong>。另外，在CSS网格系统中，自动放置网格项目的算法也会导致在隐式网格中创建额外的网格轨道（行或列）</li>
+</ul>
+
+<p>我们在介绍 <code>grid-auto-flow</code> 属性的时候，得知该属性是网格自动放置算法的控制属性，而且其默认值是<code>row</code>。除了 <code>row</code> 值之外，该属性还有 <code>column</code> 和 <code>dense</code> 两个值。换句话说，在CSS网格布局系统中，网格项目自动放置的算法是怎么工作的呢？</p>
+
+<p>换句话说，网格项目自动放置算法是:</p>
+
+<blockquote>
+  <p><strong>将网格项目的自动位置解析为明确的位置，确保每个网格项目都有一个明确的网格区域来放置（一个网格单元格也可以称为是一个网格区域）</strong>。</p>
+</blockquote>
+
+<p>注意，前面也提到过，在网格项目自动放置的算法中，网格跨度是不需要特别解决的。因为未显式指定<code>span</code>的值，即是默认值<code>1</code>。另外，如果在一个显式网格系统中没有空间放置明确指定的网格项目，就有可能根据网格自动放置算法创建隐式的网格轨道（创建隐式的行或列），从而创建一个隐式网格。</p>
+
+<p>另外，网格系统中的每个网格单元格（在显式网格或隐式网格中）都可以被占用或不被占用。如果一个网格单元格被一个有明确网格位置的网格项目覆盖，该网格单元格就被占用；否则，该网格单元格就未被占用。在这个算法中，一个网格单元格的占用或未占用状态是可以被改变的。</p>
+
+<p>为了帮助大家更易于理解，我们将假设<code>grid-auto-flow</code>的值为<code>row</code>。如果它被设置为<code>column</code>，那么在这个算法中要交换所有提到的行和列、内联轴和块轴等。</p>
+
+<p>接下来，我们将通过以下步骤和大家一起来看看该算法在构建布局时遵循的所有步骤的细节（指的是自动放置网格项目算法的步骤和细节）。</p>
+
+<h2 class="content-title" data-index="2">步骤1：匿名网格项目的生成</h2>
+
+<p>当自动放置网格项目算法试图将所有网格项目放在一个网格系统内时，发生的第一件事就是创建“匿名网格项目”。在网格系统中，网格容器内的文本节点，被称为匿名网格项目。比如：</p>
+
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"https://picsum.photos/400/300?random=2"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> /&gt;</span></span>
+    我是一个文本节点 <span class="comment"><span class="comment">&lt;!-- 该文本节点被称为匿名网格项目 --&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"float: left"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>假设我们在 <code>.grid__container</code> 上显式定义了一个网格系统：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Anonymous Grid Items" src="./Grid布局：10-网格项目自动放置算法_files/ExWqVMQ.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/ExWqVMQ">
+  Anonymous Grid Items</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>正如下图所示，蓝色框框起的网格项目被称为“匿名网格项目”：</p>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-230.jpg" alt=""></p>
+
+<p>抛开网格系统不说，网格容器中的“文本节点”，我们是无法通过具体选择器来选中他，因此，我们也无法使用网格项目相关的属性来明确指定它的位置。换句话说，他的位置是按照网格系统中自动放置的算法来指定其位置。</p>
+
+<p>需要注意的是，上面示例中，除了生成了一个匿名网格项目外，网格项目放置的算法将会忽略应用于网格项目<code>i3</code>的<code>float</code>属性设置。</p>
+
+<h2 class="content-title" data-index="2">步骤2：使用显式网格名称明确放置网格项目</h2>
+
+<p>对于这一步和接下来的几步，将使用一个由九个网格项目组成的网格来显示它们将如何被放置（指的是网格容器有九个子元素，即<code>i1 ~ i9</code>网格项目，它们是怎么被放置）。即：</p>
+
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>在 <code>i1</code> 和 <code>i2</code> 两个网格项目通过使用<code>grid-area</code>属性指定网格线索引号明确指定其位置，其他七个网格项目未显式明确指定放置位置：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="550" style="width: 100%;" scrolling="no" title="Placing Elements with Explicit Positions" src="./Grid布局：10-网格项目自动放置算法_files/bGqXEKW.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/bGqXEKW">
+  Placing Elements with Explicit Positions</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>该算法根据网格项目<code>i1</code>和<code>i2</code>各自的<code>grid-area</code>属性的值来定位（放置）。该算法是：</p>
+
+<ul>
+<li>使用<code>grid-area</code>属性的第一个（<code>grid-row-start</code>）和第二个值（<code>grid-column-start</code>）来设置网格项目 <code>i1</code> 和 <code>i2</code> 的“左上角”的位置</li>
+<li>使用<code>grid-area</code>属性的第三个（<code>grid-row-end</code>）和第四个值（<code>grid-column-end</code>）来设置网格项目 <code>i1</code> 和 <code>i2</code> 的“右下角”的位置</li>
+</ul>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-231.jpg" alt=""></p>
+
+<h2 class="content-title" data-index="2">步骤3：仅明确指定行位置</h2>
+
+<p>接下来，算法会通过使用 <code>grid-row-start</code> 和 <code>grid-row-end</code> （即 <code>grid-row</code>）来明确放置那些已明确设置了行位置的网格项目。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="rule">// 等同
+    <span class="attribute"><span class="attribute">grid-row</span></span>:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="rule">// 等同
+    <span class="attribute"><span class="attribute">grid-row</span></span>:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> /  <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="550" style="width: 100%;" scrolling="no" title="" src="./Grid布局：10-网格项目自动放置算法_files/zYZgqer.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/zYZgqer">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>这个示例，只使用<code>grid-row</code>指定网格线编号来明确放置网格项目<code>i1</code>和<code>i2</code>位置：</p>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-232.jpg" alt=""></p>
+
+<p>对于每个有明确行位置的网格项目（即<code>grid-row-start</code>、<code>grid-row-end</code>或简写属性<code>grid-row</code>明确放置的网格项目），按照顺序修改（Order-Modified）后的文档顺序。换句话说，为了确定没有明确设置的列的位置（即，没有显式使用<code>grid-column-start</code>、<code>grid-column-end</code>或它们简写属性<code>grid-column</code>放置网格项目），该算法根据下面模式来处理：</p>
+
+<ul>
+<li><strong>稀疏算法（<code>Sparse</code>）</strong>，也是默认算法：将其放置的列开始网格线设置为最早的（最小的正指数）网格线索引值，以确保此网格项目的网格区域不会与任何被占用的网格单元格重叠，并且该行超过了此步骤之前放置在此行的任何网格项目</li>
+<li><strong>密集算法（<code>Dense</code>）</strong>：将其放置的列开始网格线设置为最早的（最小的正指数）网格线索引值，以确保这个网格项目的网格区域不会与任何占用的网格单元格重叠</li>
+</ul>
+
+<p>前面提到过，稀疏算法（Sparse）是默认的网格项目自动放置的默认算法。网格项目的列开始网格线开始索引号将被设置为最小的网格线索引号，以确保网格项目自己的网格区域和已经被其他网格项目占用的网格单元格之间不会有任何重叠。</p>
+
+<p>我们用下面这个Demo来进一步澄清这一点：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="" src="./Grid布局：10-网格项目自动放置算法_files/ZEKQpJN.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/ZEKQpJN">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>上面示例中的网格项目<code>i4</code>并没有移动到网格项目<code>i1</code>的左侧，尽管它可以放在那里而没有任何重叠。这是由于该算法不允许任何明确设置了行位置但没有设置列位置的网格项目被放在该特定行中任何其他类似位置的网格项目（比如示例中的网格项目<code>i3</code>）之前。事实上，如果你删除应用于网格项目<code>i3</code>的网格线规则，那么网格项目<code>i4</code>将移动到网格项目<code>i1</code>的左边：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2107/css-grid-233.jpg">
+    <source src="/sites/default/files/blogs/2021/2107/css-grid-233.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>简而言之，网格项目<code>i4</code>明确的设置了行位置（<code>grid-row-start: 1</code>），但没有明确的列位置，最终可以被放置在网格项目<code>i1</code>之前，但前提是网格项目<code>i3</code>没有干扰（在这种情况下发生干扰是因为网格项目<code>i3</code>和网格项目<code>i4</code>一样，有明确的行位置设置，但没有列位置设置，而且和网格项目<code>i4</code>在同一行）。</p>
+
+<p>如果你想用网格项目<code>i4</code>来填补网格网格<code>i1</code>之间的空隙，就必须将<code>grid-auto-flow</code>值设置为<code>row dense</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> row dense;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="" src="./Grid布局：10-网格项目自动放置算法_files/GRmoNPa.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/GRmoNPa">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>在这种情况下，列开始网格线也是从最小索引号开始，不会与其他网格项目产生任何重叠。唯一不同的是，这一次，如果在某一行有一些空位（空的网格），那么网格项目可以不重叠地放置在那些空位，而不用考虑同一行中具有相同位置规则的前一个网格项目（在这个例子中是网格项目<code>i3</code>）。</p>
+
+<h2 class="content-title" data-index="2">步骤4：确定隐式网格中的列数</h2>
+
+<p>接下来，该算法试图确定隐式网格中的列数。可以通过下面的步骤来完成：</p>
+
+<ul>
+<li>该算法从显式网格中的列数开始</li>
+<li>然后，它浏览所有有明确列位置的网格项目，并在隐式网格的开头和结尾增加列轨道，以容纳所有网格项目</li>
+<li>最后，它通过所有没有明确列位置的网格项目。如果所有没有明确列位置的网格项目中最大的列跨度大于显式网格的宽度，则在网格的末端增加列以适应这个列跨度</li>
+</ul>
+
+<p>比如下面这个示例：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">5</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> row dense;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span> / span <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Determine the columns in the implicit grid" src="./Grid布局：10-网格项目自动放置算法_files/bGWEgee.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/bGWEgee">
+  Determine the columns in the implicit grid</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>上面示例，默认情况之下：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">5</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> row dense;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>创建了一个<code>5 x 3</code>的显式网格（由<code>grid-template-columns:repeat(5, 1fr)</code>），但在网格项目<code>i1</code>上，显式设置了：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span> / span <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>明确指定网格项目<code>i1</code>的位置，网格列起始网格线是<code>4</code>（即<code>grid-column-start: 4</code>），同时该网格项目合并三个列网格单元格（<code>span 3</code>，相当于<code>grid-column-end: span 3</code>），意味着网格项目<code>i1</code>的列网格线结束索引号是<code>7</code>，就需要在显多网格的末尾再创建一列，从而创建了一个<code>6 x 3</code>的隐式网格：</p>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-234.jpg" alt=""></p>
+
+<h2 class="content-title" data-index="2">步骤5：放置剩余的网格项目</h2>
+
+<p>在这一点上，网格自动放置算法已经放置了所有被明确指定位置的网格项目，以及已经知道行位置的网格项目。现在，它将定位网格系统中所有其他剩余的网格项目。</p>
+
+<p>在我们聊这方面的细节之前，我们有必要了解一下自动定位光标（Auto-Placement Cursor）这个术语。它定义了网格中的当前插入点，指定为一对行和列的网格线。开始时，自动定位光标被放置在隐式网格最开始的行和列。</p>
+
+<p>再一次，由<code>grid-auto-flow</code>属性的值决定算法模式，控制了这些网格项目的定位方式。</p>
+
+<p>先来看稀疏（Sparse）算法，也就是默认行为的模式。对于每一个还没有被前面步骤定位的网格项目，则会按照顺序修改（Order Modified）的文档顺序。先来看网格项目有明确的列位置情况：</p>
+
+<ul>
+<li>将光标的列位置设置为该网格项目的列开始网格线。如果它小于光标的前一列位置，则将行的位置递增<code>1</code></li>
+<li>增加光标的行位置，直到找到一个网格项目不与任何占用的网格单元格重叠的值（必要时在隐式网格中创建新的行）</li>
+<li>将该网格项目的行开始网格线设置为光标的行位置，并根据其与该位置的跨度设置为该网格项目的行结束线</li>
+</ul>
+
+<p>如果网格项目在两个轴上都有一个自动网格位置（网格自动放置的位置）：</p>
+
+<ul>
+<li>增加自动定位光标的列位置，直到这个网格项目的网格区域不与任何被占用的网格单元格重叠，或者光标的列位置，加上网格项目的列跨度，超过隐式网格的列数，这是在本算法的前面确定的</li>
+<li>如果在上一步中发现一个非重叠的位置，那么将该网格项目的行开始和列开始网格线设置为光标的位置。否则，增加自动放置光标的行位置（必要时在隐式网格中创建新的行），将其列位置设置为隐式网格中最开始的列网格线，并返回到上一步</li>
+</ul>
+
+<p>如果上面的描述比较晦涩，我们可以这样来理解。即，如果网格项目在任一轴上没有明确的位置，算法会增加光标的列的位置，直到：</p>
+
+<ul>
+<li>已经放置的网格项目与当前的网格项目没有重叠</li>
+<li>或者光标的列位置加上网格项目的跨度超过了隐式网格中的列数</li>
+</ul>
+
+<p>如果找到了这样一个不重叠的位置，算法会将网格项目的行开始（<code>row-start</code>）和列开始（<code>column-start</code>）设置为光标的当前位置。否则，它将行位置增加<code>1</code>，将列开始值设置为隐式网格中最开始的一行，并重复上一步的操作。</p>
+
+<p>如果该网格项目有明确的列位置，则会：</p>
+
+<ul>
+<li>自动放置光标的列位置被设置为网格项目的列开始网格线。如果这个新位置的值小于光标之前的列位置，行位置就会增加<code>1</code></li>
+<li>接下来，行的位置再增加一个，直到算法达到一个值，即网格项目不与任何被占用的网格单元格重叠。如果需要，可以向隐式网格中添加额外的行。现在，网格项目的行开始网格线被设置为光标的行位置，网格项目的行结束网格线则根据其跨度来设置</li>
+</ul>
+
+<p>我们通过下面这个简单地示例来阐述这个算法是怎么计算的：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(7)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(8)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="" src="./Grid布局：10-网格项目自动放置算法_files/rNmevMQ.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/rNmevMQ">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>上面示例中的网格项目<code>i5</code>和<code>i6</code>没有明确指定位置。此时，网格项目自动放置的算法在处理网格项目<code>i5</code>时，它没有明确的设置列或行的位置，自动定位光标被设置为第一行和第一列。网格项目<code>i5</code>只占用了一个网格单元格，它可以放在网格的左上角，没有任何重叠的地方。因此，该算法只是将网格项目<code>i5</code>放在网格的第一行第一列的位置。</p>
+
+<p>下一个没有明确设置列或行位置的网格项目是<code>i6</code>。在这一点上，自动定位光标的列位置被增加到<code>2</code>。然而，第一行第二列的位置已经被网格项目<code>i1</code>占用。这个过程一直持续到自动定位光标到达第四列。由于没有更多的列，自动定位光标的行位置增加了<code>1</code>，列位置被设置为<code>1</code>。现在行的位置是<code>2</code>，列的位置是<code>1</code>。算法再次开始将列的位置增加<code>1</code>，直到到达第四列。网格第二行第四列的空间目前是空的，可以被网格项目<code>i6</code>占用。算法把网格项目<code>i6</code>放在那里，然后继续放置下一个网格项目。</p>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-235.jpg" alt=""></p>
+
+<p>而网格项目<code>i7</code>和网格项目<code>i8</code>有明确的指定列的位置。我们先来看网格项目<code>i7</code>。自动放置光标的列位置被设置为网格项目<code>i7</code>的<code>grid-column-start</code>的值，即<code>3</code>。现在的行和列的位置分别是<code>3</code>和<code>3</code>。网格中的第三行第三列的空间目前是空的，网格项目<code>i7</code>可以放在那里而不会有任何重叠。因此，该算法将网格项目<code>i7</code>放在那里。然后重复同样的步骤来放置网格项目<code>i8</code>：</p>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-236.jpg" alt=""></p>
+
+<p>接下来，再来看“密集”（Dense）算法，即<code>grid-auto-flow</code>值为<code>dense</code>。</p>
+
+<p>对于每个还没有被前面步骤明确指定位置的网格项目，按照顺序修改（Order Modified）后的文档顺序。</p>
+
+<p>如果该网格项目有明确的列位置：</p>
+
+<ul>
+<li>将光标的行位置设置为隐式网格中最开始的一行。将光标的列位置设置为网格项目的列始网格线</li>
+<li>增加自动定位光标的行位置，直到找到一个网格项目不与任何被占用的网格单元格重叠的值（必要时在隐式网格中创建新的行）</li>
+<li>将该网格项目的行起始网格线索引设置为光标的行位置（也隐含地根据网格项目的跨度来设置网格项目的行结束网格索引线）</li>
+</ul>
+
+<p>如果该网格项目在两个轴上都有一个自动放置的网格位置，则会：</p>
+
+<ul>
+<li>将光标的行和列位置设置为隐式网格中最开始的行和列网格线</li>
+<li>增加自动定位光标的列位置，直到这个网格项目的网格区域不与任何被占用的网格单元格重叠，或者光标的列位置加上网格项目的跨度溢出隐式网格中的列数，这在本算法的前面已经确定</li>
+<li>如果在上一步中发现一个非重叠的位置，那么将该网格项目的行开始和列开始网格线设置为光标的位置。否则，增加自动定位光标行的位置（必要时在隐式网格中创建新的行），将其列位置重置为隐式网格中最开始的列网格线，并返回到上一步</li>
+</ul>
+
+<p>也就是说，当<code>grid-auto-flow</code>的值设置为<code>dense</code>时，网格项目自动放置会有所不同。当放置一个没有明确指定位置的网格项目时，在确定网格项目的位置之前，光标的当前位置被设置为隐式网格中最开始的行和列。</p>
+
+<p>与前面的示例不同，网格项目<code>i9</code>被放置在网格项目<code>i8</code>的左边，因为光标的位置被重置为隐式网格中最开始的行和列网格线，而不是从最后放置的网格项目开始。此时，在寻找一个合适的位置来放置网格项目<code>i9</code>而不发生重叠时，光标找到了网格项目<code>i8</code>左边的位置并将其放置在那里。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> row dense;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(7)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(8)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-end</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="" src="./Grid布局：10-网格项目自动放置算法_files/eYWZKEp.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/eYWZKEp">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>如此一来，就有了<code>grid-auto-flow</code>属性的语法规则，而且该属性允许我们确定两个不同的东西：</p>
+
+<ul>
+<li><strong>方向</strong>：<code>row</code>（默认）或 <code>column</code>，定义了在需要插入自动放置网格项目时，网格要增长的方向（增长行或列）</li>
+<li><strong>模式</strong>：稀疏（Sparse，默认的）或 密集（Dense），根据打包模式，算法将在插入自动放置的网格项目时，尝试密集（填充）或稀疏（不填充）网格中的所有洞（没有被占用的网格单元格）</li>
+</ul>
+
+<p>因此，<code>grid-auto-flow</code>属性可以是<code>row dense</code>、<code>column dense</code> 或 <code>dense</code>等，用来决定网格项目自动放置的所需行为。下面这个示例，可以帮助你更好的理解网格项目自动放置的算法相关原理。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">5</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(6)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(8)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：10-网格项目自动放置算法_files/JjNXZVO.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/JjNXZVO">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>对于有明确位置的网格项目<code>i1</code>和<code>i2</code>，你不需要计算任何东西，只要使用网格放置属性（比如<code>grid-row</code>、<code>grid-column</code>或<code>grid-area</code>）指定网格线索引号即可。然而，对于自动放置的网格项目，这是解释如何将自动放置转换为明确位置的算法。</p>
+
+<ul>
+<li>网格项目<code>i7</code>和网格项目<code>i9</code>的两个坐标都是自动的（即没有使用网格放置属性指定网格项目）</li>
+<li>网格项目<code>i6</code>和网格项目<code>i8</code>的主轴是自动的（即只使用<code>grid-column</code>属性指定明确的列网格线索引值）</li>
+<li>网格项目<code>i3</code>、网格项目<code>i4</code>和网格项目<code>i5</code>的短轴是自动的（即使用<code>grid-row</code>属性指定明确的行网格线索引值）</li>
+</ul>
+
+<blockquote>
+  <p>注意，块轴（列轴）也称为主轴，指由<code>grid-auto-flow</code>属性决定的方向，而短轴是指和主轴相反的方向。例如，<code>grid-auto-flow</code>值为<code>column</code>时，主轴即是块轴（列轴），短轴是内联轴（行轴）。</p>
+</blockquote>
+
+<p>我们按下面的过程来向大家呈现该算法（前面根据规范向大家阐述过，有五个步骤）。不过这个示例，将以更直观的方式来阐述该算法（下面给大家演示的是<code>grid-auto-flow</code>为<code>row</code>的效果）。</p>
+
+<p>首先是所有非自动定位的网格项目（即有明确位置的网格项目）都应该被放在网格中。比如上面示例中的网格项目<code>i1</code>和网格项目<code>i2</code>，使用了<code>grid-row</code>和<code>grid-column</code>明确的指定了网格项目在网格中的位置：</p>
+
+<pre class="css"><code class="css"><span class="comment"><span class="comment">/* 网格项目 i1 */</span></span>
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="comment"><span class="comment">/* 网格项目 i2 */</span></span>
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>即，网格项目<code>i1</code> 位于网格的第一行第二列，网格项目<code>i2</code> 位于网格的第二行第一列：</p>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-237.jpg" alt=""></p>
+
+<p>接着是将自动放置的网格项目放在主轴方向，而不是自动的方向，所以它们被锁定在某一行。具体的行为是需要根据包装模式（密集还是稀疏）来决定。</p>
+
+<p><strong>稀疏（Sparse）</strong> 模式，即寻找这一行中第一个适合该网格项目的空网格区域，并且它超过了这一步骤之前在同一行中放置的任何网格项目。</p>
+
+<p>比如上面示例中的网格项目<code>i3</code>、网格项目<code>i4</code>和网格项目<code>i5</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<ul>
+<li>网格项目<code>i3</code>放置在网格的第一行第三列，并且跨两列（即列的结束网格线是<code>5</code>）</li>
+<li>网格项目<code>i4</code>放置在网格的第一行第五列</li>
+<li>网格项目<code>i5</code>放置在网格的第二行第二列</li>
+</ul>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-238.jpg" alt=""></p>
+
+<p><strong>紧密（Dense）</strong>模式，即<code>grid-auto-flow</code>值为<code>row dense</code>。会寻找这一行中第一个适合该网格项目的空网格单元格（并不关心前面的网格项目）。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">5</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> row dense;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<ul>
+<li>网格项目<code>i3</code>放置在第一行第三列，并且跨两列（即列的结束网格线是<code>5</code>）</li>
+<li>网格项目<code>i4</code>放置在第一行第一列</li>
+<li>网格项目<code>i5</code>放置在第二行第二列</li>
+</ul>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-239.jpg" alt=""></p>
+
+<p>最后，剩下的自动放置的网格项目被指定。同样的，其行为取决于包装模式。其描述与上一步中的描述非常相似，但没有行的约束（即<code>grid-auto-flow</code>的有可能是<code>dense</code>、<code>row dense</code> 和<code>column dense</code>）。</p>
+
+<p><strong>稀疏（Sparse）</strong> 模式，即寻找网格项目适合的第一个空网格区域，并且它超过了这一步之前放置的任何网格项目。这意味着，我们从最后放置的网格项目的位置开始寻找空的网格区域。例如上面示例中的：</p>
+
+<ul>
+<li>网格项目<code>i6</code>（<code>grid-column: 2</code>）放置在第三行第二列</li>
+<li>网格项目<code>i7</code>（未明确使用指定放置网格项目的属性）放置在第三行第三列</li>
+<li>网格项目<code>i8</code>（<code>grid-column: 3</code>）放置在第四行第三列</li>
+<li>网格项目<code>i9</code>（未明确使用指定放置网格项目的属性）放置在第四行第四列</li>
+</ul>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-240.jpg" alt=""></p>
+
+<p><strong>密集（Dense）</strong> 模式，即<code>grid-auto-flow</code>的值为<code>row dense</code>。寻找网格项目适合的第一个空网格区域，始终从网格的开头开始寻找。比如：</p>
+
+<ul>
+<li>网格项目<code>i6</code>（<code>grid-column: 2</code>）放置在第三行第二列</li>
+<li>网格项目<code>i7</code>（未明确使用指定放置网格项目的属性）放置在第一行第五列</li>
+<li>网格项目<code>i8</code>（<code>grid-column:3</code>）放置在第二行第三列</li>
+<li>网格项目<code>i9</code>（未明确使用指定放置网格项目的属性）放置在第二行第四列</li>
+</ul>
+
+<p><img src="./Grid布局：10-网格项目自动放置算法_files/css-grid-241.jpg" alt=""></p>
+
+<p>在这节内容中，通过不同的方式向大家阐述了 CSS 网格模块中网格项目自动放置算法所遵循的所有步骤。简单地说，网格项目自动放置的算法是由<code>grid-auto-flow</code>属性控制的。</p>
+
+<p>也就是说，在 CSS 网格中除了使用明确指定网格项目位置的属性之外，还可以使用<code>grid-auto-flow</code>有不同模式来自动放置网格项目。到目前为止，我们所阐述的网格项目都是用不同的网格区域来放置网格项目，但网格布局中的网格项目有可能是会重叠在一起的。那么接下来的一节中，将和大家一起来探讨网格项目重叠和定位相关的知识。</p>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/css/grid-layout-part-9.html" target="_blank">图解CSS: Grid布局（Part9）</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/grid-layout-part-11.html" target="_blank">图解CSS: Grid布局（Part11）</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/grid-layout-part-10.html?expire=1699862097&amp;code=pO48loKzp50&amp;sign=6a5cf5330670ec30c2aed27c9ed5d92b" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-iv5K7ehTxBWMKLpsBBrLeuJ4_6c6OVpkEb01h_RQ8gM">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li><a data-index="0" href="javascript:;" class="active">步骤1：匿名网格项目的生成</a></li><li><a data-index="1" href="javascript:;">步骤2：使用显式网格名称明确放置网格项目</a></li><li><a data-index="2" href="javascript:;">步骤3：仅明确指定行位置</a></li><li><a data-index="3" href="javascript:;">步骤4：确定隐式网格中的列数</a></li><li><a data-index="4" href="javascript:;">步骤5：放置剩余的网格项目</a></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./Grid布局：10-网格项目自动放置算法_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./Grid布局：10-网格项目自动放置算法_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./Grid布局：10-网格项目自动放置算法_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./Grid布局：10-网格项目自动放置算法_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./Grid布局：10-网格项目自动放置算法_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：10-网格项目自动放置算法_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：10-网格项目自动放置算法_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：10-网格项目自动放置算法_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"-316kiTDS4fHdvtc6FF9q444BUbKkXWG-N7nRFr-FwE","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2721"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/grid-layout-part-10.html?expire=1699862097\u0026code=pO48loKzp50\u0026sign=6a5cf5330670ec30c2aed27c9ed5d92b":true}});
+//--><!]]>
+</script>
+<script src="./Grid布局：10-网格项目自动放置算法_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="1d3bb"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

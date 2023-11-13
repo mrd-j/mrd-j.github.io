@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/WNjMjma?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - aspect-ratio</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/WNjMjma">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #f7f7f7;
+
+  padding: 20px;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);
+  border-radius: 3px;
+  gap: 20px;
+}
+
+.container {
+  box-shadow: 0 0 0 1px #f36;
+  position: relative;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 0 1px #09f;
+  white-space: nowrap;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.box:nth-child(1) {
+  background-color: #f1c2c6;
+}
+
+.box:nth-child(2) {
+  background-color: #dac2f1;
+}
+
+.box:nth-child(3) {
+  background-color: #ccf1c2;
+}
+
+.box:nth-child(4) {
+  background-color: #c2e9f1;
+}
+
+form {
+  width: 100%;
+}
+input[type="range"] {
+  width: 100%;
+}
+
+.container {
+  --width: 100%;
+  width: var(--width);
+}
+
+.box {
+  aspect-ratio: 16/9;
+}
+
+.fixed__height {
+  height: 100px;
+}
+
+.fixed__width {
+  width: 200px;
+}
+
+.fixed__height__width {
+  width: 200px;
+  height: 100px;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <section>
+  <div class="container">
+    <div class="box auto"> 16 / 9</div>
+    <div class="box fixed__height">16 / 9</div>
+    <div class="box fixed__width">16 / 9</div>
+    <div class="box fixed__height__width">16 / 9</div>
+  </div>
+  <form action="https://cdpn.io/airen/fullembedgrid/WNjMjma?animations=run&amp;type=embed">
+    <input type="range" min="0" max="100" value="100">
+  </form>
+</section>
+  
+      <script id="rendered-js">
+const range = document.querySelector('input[type="range"]');
+const container = document.querySelector(".container");
+
+range.addEventListener("input", etv => {
+  container.style.setProperty("--width", `${etv.target.value}%`);
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

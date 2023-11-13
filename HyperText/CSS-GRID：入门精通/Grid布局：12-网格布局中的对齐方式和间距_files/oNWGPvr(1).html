@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://codepen.io/airen/embed/oNWGPvr?default-tab= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - justify-items in grid layout</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="RxowR1oa7AZV3toutnURege+SKg55SpyV/+YAZIsBUCBBobZ/HO1yXpPVpp9AsoJglMyZdnz2SBqQ0jRRVA83g==">
+<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/airen/embed/oNWGPvr?default-tab=#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/airen/embed/oNWGPvr?default-tab=#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/airen/embed/oNWGPvr?default-tab=#js-box" role="button" aria-pressed="false">
+Babel
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/airen/embed/oNWGPvr?default-tab=#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/airen/embed/oNWGPvr?default-tab=#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/airen/pen/oNWGPvr" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__container"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"add"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">t</span>=<span class="cm-string">"1621567639573"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button__icon"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 1024 1024"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span> <span class="cm-attribute">p-id</span>=<span class="cm-string">"8088"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"200"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"200"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"</span> <span class="cm-attribute">p-id</span>=<span class="cm-string">"8089"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"</span> <span class="cm-attribute">p-id</span>=<span class="cm-string">"8090"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"subtract"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">t</span>=<span class="cm-string">"1621567672920"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button__icon"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 1024 1024"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span> <span class="cm-attribute">p-id</span>=<span class="cm-string">"8222"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"200"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"200"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M696 480H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"</span> <span class="cm-attribute">p-id</span>=<span class="cm-string">"8223"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"</span> <span class="cm-attribute">p-id</span>=<span class="cm-string">"8224"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">lable</span><span class="cm-tag cm-bracket">&gt;</span>
+    justify-items:
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">select</span> <span class="cm-attribute">name</span>=<span class="cm-string">"justify-items"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"justify-items"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"auto"</span><span class="cm-tag cm-bracket">&gt;</span>auto<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"normal"</span><span class="cm-tag cm-bracket">&gt;</span>normal<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"start"</span><span class="cm-tag cm-bracket">&gt;</span>start<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"end"</span><span class="cm-tag cm-bracket">&gt;</span>end<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"center"</span><span class="cm-tag cm-bracket">&gt;</span>center<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"stretch"</span><span class="cm-tag cm-bracket">&gt;</span>stretch<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"baseline"</span><span class="cm-tag cm-bracket">&gt;</span>baseline<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"first baseline"</span><span class="cm-tag cm-bracket">&gt;</span>first baseline<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"last baseline"</span><span class="cm-tag cm-bracket">&gt;</span>last baseline<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">select</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">lable</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap"</span>);
+
+* {
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100vw</span>;
+  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+  <span class="cm-property">gap</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Exo"</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f7f7f7</span>;
+
+  <span class="cm-property">padding</span>: <span class="cm-number">20px</span>;
+}
+
+<span class="cm-tag">section</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">6px</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> / <span class="cm-number">13%</span>);
+  <span class="cm-property">border-radius</span>: <span class="cm-number">3px</span>;
+  <span class="cm-property">gap</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">40vw</span>;
+  <span class="cm-string-2">aspect-ratio</span>: <span class="cm-number">2</span> / <span class="cm-number">1</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">5px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f7f7f7</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">counter-increment</span>: <span class="cm-variable">item</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>::<span class="cm-variable-3">before</span> {
+  <span class="cm-property">content</span>: <span class="cm-variable cm-callee">counter</span>(<span class="cm-variable">item</span>);
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.2rem</span>;
+  <span class="cm-property">text-shadow</span>: <span class="cm-number">1px</span> <span class="cm-number">1px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> / <span class="cm-number">0.25</span>);
+  <span class="cm-property">z-index</span>: <span class="cm-number">2</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> / <span class="cm-number">0.6</span>);
+  <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">conic-gradient</span>(
+    <span class="cm-atom">from</span> <span class="cm-number">90deg</span> <span class="cm-variable">at</span> <span class="cm-number">40%</span> <span class="cm-number">-25%</span>,
+    <span class="cm-atom">#ffd700</span>,
+    <span class="cm-atom">#f79d03</span>,
+    <span class="cm-atom">#ee6907</span>,
+    <span class="cm-atom">#e6390a</span>,
+    <span class="cm-atom">#de0d0d</span>,
+    <span class="cm-atom">#d61039</span>,
+    <span class="cm-atom">#cf1261</span>,
+    <span class="cm-atom">#c71585</span>,
+    <span class="cm-atom">#cf1261</span>,
+    <span class="cm-atom">#d61039</span>,
+    <span class="cm-atom">#de0d0d</span>,
+    <span class="cm-atom">#ee6907</span>,
+    <span class="cm-atom">#f79d03</span>,
+    <span class="cm-atom">#ffd700</span>,
+    <span class="cm-atom">#ffd700</span>,
+    <span class="cm-atom">#ffd700</span>
+  );
+  <span class="cm-property">width</span>: <span class="cm-number">32px</span>;
+  <span class="cm-string-2">aspect-ratio</span>: <span class="cm-number">1</span> / <span class="cm-number">1</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">inline-flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">1</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f1c2c6</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">2</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#dac2f1</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">3</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#ccf1c2</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">4</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#c2e9f1</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">5</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f1ebc2</span>;
+}
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">6</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#09f</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">7</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#ff5722</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">8</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#8bc34a</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">9</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f66803</span>;
+}
+
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">10</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#0d815f</span>;
+}
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">11</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#28d1c2</span>;
+}
+<span class="cm-qualifier">.grid__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">12</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#4a28d1</span>;
+}
+<span class="cm-tag">h3</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">20px</span> <span class="cm-atom">auto</span>;
+}
+
+<span class="cm-qualifier">.form</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">gap</span>: <span class="cm-number">15px</span>;
+}
+
+<span class="cm-qualifier">.button</span> {
+  <span class="cm-variable-2">--background</span>: <span class="cm-atom">#275efe</span>;
+  <span class="cm-variable-2">--rectangle</span>: <span class="cm-atom">#184fee</span>;
+  <span class="cm-variable-2">--success</span>: <span class="cm-atom">#4672f1</span>;
+  <span class="cm-variable-2">--text</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-variable-2">--arrow</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-variable-2">--checkmark</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-variable-2">--shadow</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">10</span>, <span class="cm-number">22</span>, <span class="cm-number">50</span>, <span class="cm-number">0.24</span>);
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--background</span>);
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">2px</span> <span class="cm-number">8px</span> <span class="cm-number">-1px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--shadow</span>);
+  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--text</span>);
+  <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>, <span class="cm-variable">box-shadow</span> <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>;
+  <span class="cm-property">border</span>: <span class="cm-atom">none</span> <span class="cm-number">0</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">44px</span>;
+  <span class="cm-string-2">aspect-ratio</span>: <span class="cm-number">1</span> / <span class="cm-number">1</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+}
+
+<span class="cm-builtin">#subtract</span> {
+  <span class="cm-variable-2">--background</span>: <span class="cm-atom">#242836</span>;
+  <span class="cm-variable-2">--rectangle</span>: <span class="cm-atom">#1c212e</span>;
+  <span class="cm-variable-2">--arrow</span>: <span class="cm-atom">#f5f9ff</span>;
+  <span class="cm-variable-2">--text</span>: <span class="cm-atom">#f5f9ff</span>;
+  <span class="cm-variable-2">--success</span>: <span class="cm-atom">#2f3545</span>;
+}
+
+<span class="cm-qualifier">.button</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">0.95</span>);
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">1px</span> <span class="cm-number">4px</span> <span class="cm-number">-1px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--shadow</span>);
+}
+
+<span class="cm-qualifier">.button</span> <span class="cm-qualifier">.button__icon</span> {
+  <span class="cm-property">fill</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--text</span>);
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-atom">auto</span>;
+}
+
+<span class="cm-qualifier">.grid__container</span> {
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">2px</span> <span class="cm-keyword">red</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">2px</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-number">80px</span> <span class="cm-number">80px</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-number">1fr</span> <span class="cm-number">1fr</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+
+  <span class="cm-property">justify-items</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--justify-items</span>, <span class="cm-atom">auto</span>);
+}
+</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="jsx" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">gridContainer</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">".grid__container"</span>);
+<span class="cm-keyword">const</span> <span class="cm-def">addItemHander</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"add"</span>);
+<span class="cm-keyword">const</span> <span class="cm-def">subtractItemHander</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"subtract"</span>);
+<span class="cm-keyword">const</span> <span class="cm-def">selectElement</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"justify-items"</span>);
+
+<span class="cm-keyword">function</span> <span class="cm-def">getRandomIntInclusive</span>(<span class="cm-def">min</span>, <span class="cm-def">max</span>) {
+  <span class="cm-variable-2">min</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">ceil</span>(<span class="cm-variable-2">min</span>);
+  <span class="cm-variable-2">max</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable-2">max</span>);
+  <span class="cm-keyword">return</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-variable-2">max</span> <span class="cm-operator">-</span> <span class="cm-variable-2">min</span> <span class="cm-operator">+</span> <span class="cm-number">1</span>)) <span class="cm-operator">+</span> <span class="cm-variable-2">min</span>;
+}
+
+<span class="cm-keyword">function</span> <span class="cm-def">getItemLength</span>() {
+  <span class="cm-keyword">var</span> <span class="cm-def">gridItems</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-string">".grid__item"</span>);
+  <span class="cm-keyword">var</span> <span class="cm-def">len</span> <span class="cm-operator">=</span> <span class="cm-variable-2">gridItems</span>.<span class="cm-property">length</span>;
+  <span class="cm-keyword">return</span> <span class="cm-variable-2">len</span>;
+}
+
+<span class="cm-variable">addItemHander</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"click"</span>, () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-keyword">let</span> <span class="cm-def">newItem</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">createElement</span>(<span class="cm-string">"div"</span>);
+
+  <span class="cm-variable-2">newItem</span>.<span class="cm-property">classList</span>.<span class="cm-property">add</span>(<span class="cm-string">"grid__item"</span>);
+
+  <span class="cm-variable">gridContainer</span>.<span class="cm-property">appendChild</span>(<span class="cm-variable-2">newItem</span>);
+
+  <span class="cm-variable">getItemLength</span>();
+});
+
+<span class="cm-variable">subtractItemHander</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"click"</span>, () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-keyword">const</span> <span class="cm-def">items</span> <span class="cm-operator">=</span> <span class="cm-variable">getItemLength</span>();
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">items</span> <span class="cm-operator">&gt;</span> <span class="cm-number">1</span>) {
+    <span class="cm-variable">gridContainer</span>.<span class="cm-property">removeChild</span>(<span class="cm-variable">gridContainer</span>.<span class="cm-property">children</span>[<span class="cm-variable-2">items</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>]);
+  }
+});
+
+<span class="cm-variable">selectElement</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"change"</span>, (<span class="cm-def">etv</span>) <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">gridContainer</span>.<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(<span class="cm-string">"--justify-items"</span>, <span class="cm-variable-2">etv</span>.<span class="cm-property">target</span>.<span class="cm-property">value</span>);
+});
+</code></pre>
+<a href="https://codepen.io/airen/embed/oNWGPvr?default-tab=#0" id="view-js-compiled-button" class="action-button bottom right view-compiled-button" data-type="js">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for justify-items in grid layout" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for justify-items in grid layout" data-src="https://cdpn.io/airen/fullembedgrid/oNWGPvr?animations=run&amp;type=embed" src="./oNWGPvr.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/airen" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/airen" target="_blank" rel="noopener">大漠</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/airen" target="_blank" rel="noopener" class="about-user-more">
+See more by @airen on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;section&gt;\n  &lt;div class=&quot;grid__container&quot;&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n\n&lt;div class=&quot;form&quot;&gt;\n  &lt;div class=&quot;button&quot; id=&quot;add&quot;&gt;\n    &lt;svg t=&quot;1621567639573&quot; class=&quot;button__icon&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;8088&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;\n      &lt;path d=&quot;M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z&quot; p-id=&quot;8089&quot;&gt;&lt;/path&gt;\n      &lt;path d=&quot;M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z&quot; p-id=&quot;8090&quot;&gt;&lt;/path&gt;\n    &lt;/svg&gt;\n  &lt;/div&gt;\n  &lt;div class=&quot;button&quot; id=&quot;subtract&quot;&gt;\n    &lt;svg t=&quot;1621567672920&quot; class=&quot;button__icon&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;8222&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;\n      &lt;path d=&quot;M696 480H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z&quot; p-id=&quot;8223&quot;&gt;&lt;/path&gt;\n      &lt;path d=&quot;M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z&quot; p-id=&quot;8224&quot;&gt;&lt;/path&gt;\n    &lt;/svg&gt;\n  &lt;/div&gt;\n  &lt;lable&gt;\n    justify-items:\n    &lt;select name=&quot;justify-items&quot; id=&quot;justify-items&quot;&gt;\n      &lt;option value=&quot;auto&quot;&gt;auto&lt;/option&gt;\n      &lt;option value=&quot;normal&quot;&gt;normal&lt;/option&gt;\n      &lt;option value=&quot;start&quot;&gt;start&lt;/option&gt;\n      &lt;option value=&quot;end&quot;&gt;end&lt;/option&gt;\n      &lt;option value=&quot;center&quot;&gt;center&lt;/option&gt;\n      &lt;option value=&quot;stretch&quot;&gt;stretch&lt;/option&gt;\n      &lt;option value=&quot;baseline&quot;&gt;baseline&lt;/option&gt;\n      &lt;option value=&quot;first baseline&quot;&gt;first baseline&lt;/option&gt;\n      &lt;option value=&quot;last baseline&quot;&gt;last baseline&lt;/option&gt;\n    &lt;/select&gt;\n  &lt;/lable&gt;\n&lt;/div&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap&quot;);\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  width: 100vw;\n  min-height: 100vh;\n\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  gap: 20px;\n  font-family: &quot;Exo&quot;, Arial, sans-serif;\n  background-color: #f7f7f7;\n\n  padding: 20px;\n}\n\nsection {\n  margin: 0 auto;\n\n  display: flex;\n  box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);\n  border-radius: 3px;\n  gap: 20px;\n  width: 40vw;\n  aspect-ratio: 2 / 1;\n}\n\n.grid__item {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 5px;\n  background-color: #f7f7f7;\n  position: relative;\n  counter-increment: item;\n}\n\n.grid__item::before {\n  content: counter(item);\n  color: #fff;\n  font-size: 1.2rem;\n  text-shadow: 1px 1px 0 rgba(0 0 0 / 0.25);\n  z-index: 2;\n  background-color: rgb(0 0 0 / 0.6);\n  background-image: conic-gradient(\n    from 90deg at 40% -25%,\n    #ffd700,\n    #f79d03,\n    #ee6907,\n    #e6390a,\n    #de0d0d,\n    #d61039,\n    #cf1261,\n    #c71585,\n    #cf1261,\n    #d61039,\n    #de0d0d,\n    #ee6907,\n    #f79d03,\n    #ffd700,\n    #ffd700,\n    #ffd700\n  );\n  width: 32px;\n  aspect-ratio: 1 / 1;\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n}\n\n.grid__item:nth-child(1) {\n  background-color: #f1c2c6;\n}\n\n.grid__item:nth-child(2) {\n  background-color: #dac2f1;\n}\n\n.grid__item:nth-child(3) {\n  background-color: #ccf1c2;\n}\n\n.grid__item:nth-child(4) {\n  background-color: #c2e9f1;\n}\n\n.grid__item:nth-child(5) {\n  background-color: #f1ebc2;\n}\n.grid__item:nth-child(6) {\n  background-color: #09f;\n}\n\n.grid__item:nth-child(7) {\n  background-color: #ff5722;\n}\n\n.grid__item:nth-child(8) {\n  background-color: #8bc34a;\n}\n\n.grid__item:nth-child(9) {\n  background-color: #f66803;\n}\n\n.grid__item:nth-child(10) {\n  background-color: #0d815f;\n}\n.grid__item:nth-child(11) {\n  background-color: #28d1c2;\n}\n.grid__item:nth-child(12) {\n  background-color: #4a28d1;\n}\nh3 {\n  margin: 20px auto;\n}\n\n.form {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 15px;\n}\n\n.button {\n  --background: #275efe;\n  --rectangle: #184fee;\n  --success: #4672f1;\n  --text: #fff;\n  --arrow: #fff;\n  --checkmark: #fff;\n  --shadow: rgba(10, 22, 50, 0.24);\n  display: flex;\n  background: var(--background);\n  border-radius: 50%;\n  box-shadow: 0 2px 8px -1px var(--shadow);\n  color: var(--text);\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n  border: none 0;\n  width: 44px;\n  aspect-ratio: 1 / 1;\n  cursor: pointer;\n}\n\n#subtract {\n  --background: #242836;\n  --rectangle: #1c212e;\n  --arrow: #f5f9ff;\n  --text: #f5f9ff;\n  --success: #2f3545;\n}\n\n.button:hover {\n  transform: scale(0.95);\n  box-shadow: 0 1px 4px -1px var(--shadow);\n}\n\n.button .button__icon {\n  fill: var(--text);\n  width: 100%;\n  height: auto;\n}\n\n.grid__container {\n  box-shadow: 0 0 0 2px red;\n  border-radius: 2px;\n  display: grid;\n  grid-template-rows: 80px 80px;\n  grid-template-columns: 1fr 1fr;\n  width: 100%;\n\n  justify-items: var(--justify-items, auto);\n}","js":"const gridContainer = document.querySelector(&quot;.grid__container&quot;);\nconst addItemHander = document.getElementById(&quot;add&quot;);\nconst subtractItemHander = document.getElementById(&quot;subtract&quot;);\nconst selectElement = document.getElementById(&quot;justify-items&quot;);\n\nfunction getRandomIntInclusive(min, max) {\n  min = Math.ceil(min);\n  max = Math.floor(max);\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nfunction getItemLength() {\n  var gridItems = document.querySelectorAll(&quot;.grid__item&quot;);\n  var len = gridItems.length;\n  return len;\n}\n\naddItemHander.addEventListener(&quot;click&quot;, () =&gt; {\n  let newItem = document.createElement(&quot;div&quot;);\n\n  newItem.classList.add(&quot;grid__item&quot;);\n\n  gridContainer.appendChild(newItem);\n\n  getItemLength();\n});\n\nsubtractItemHander.addEventListener(&quot;click&quot;, () =&gt; {\n  const items = getItemLength();\n  if (items &gt; 1) {\n    gridContainer.removeChild(gridContainer.children[items - 1]);\n  }\n});\n\nselectElement.addEventListener(&quot;change&quot;, etv =&gt; {\n  gridContainer.style.setProperty(&quot;--justify-items&quot;, etv.target.value);\n});"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "babel"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "Babel"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+
+</body></html>

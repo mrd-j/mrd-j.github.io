@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://codepen.io/airen/embed/ExPKGvZ?height=500&theme-id=3655&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Flexbox Layout Model: align-items( start vs. end)</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="vWI45J796EGoOVeJUlyMU7kwTCi1cuGFukvuVe3c1h97fo56OJSxjoeo2z2ZK1cgPN025VVkEteH9z6FOqDvgQ==">
+<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #76daff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #76daff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #cccccc;
+      color: #000000;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
+</head>
+<body id="the-body" style="--borderWidth: 0;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/airen/embed/ExPKGvZ?height=500&amp;theme-id=3655&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/airen/embed/ExPKGvZ?height=500&amp;theme-id=3655&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/airen/embed/ExPKGvZ?height=500&amp;theme-id=3655&amp;default-tab=result#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/airen/embed/ExPKGvZ?height=500&amp;theme-id=3655&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/airen/embed/ExPKGvZ?height=500&amp;theme-id=3655&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/airen/pen/ExPKGvZ" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="none" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"forms"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"controls"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"direction"</span><span class="cm-tag cm-bracket">&gt;</span>direction:<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">select</span> <span class="cm-attribute">id</span>=<span class="cm-string">"direction"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"ltr"</span><span class="cm-tag cm-bracket">&gt;</span>ltr<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"rtl"</span><span class="cm-tag cm-bracket">&gt;</span>rtl<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">select</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"controls"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"writingmode"</span><span class="cm-tag cm-bracket">&gt;</span>writing-mode:<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">select</span> <span class="cm-attribute">id</span>=<span class="cm-string">"writingmode"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"horizontal-tb"</span><span class="cm-tag cm-bracket">&gt;</span>horizontal-tb<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"vertical-lr"</span><span class="cm-tag cm-bracket">&gt;</span>vertical-lr<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"vertical-rl"</span><span class="cm-tag cm-bracket">&gt;</span>vertical-rl<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"sideways-rl"</span><span class="cm-tag cm-bracket">&gt;</span>sideways-rl<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"sideways-lr"</span><span class="cm-tag cm-bracket">&gt;</span>sideways-lr<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">select</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"controls"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"flexFlow"</span><span class="cm-tag cm-bracket">&gt;</span>flex-flow:<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">select</span> <span class="cm-attribute">id</span>=<span class="cm-string">"flexFlow"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>row<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row-reverse"</span><span class="cm-tag cm-bracket">&gt;</span>row-reverse<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column"</span><span class="cm-tag cm-bracket">&gt;</span>column<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column-reverse"</span><span class="cm-tag cm-bracket">&gt;</span>column-reverse<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"nowrap"</span><span class="cm-tag cm-bracket">&gt;</span>nowrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"wrap"</span><span class="cm-tag cm-bracket">&gt;</span>wrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"wrap-reverse"</span><span class="cm-tag cm-bracket">&gt;</span>wrap-reverse<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row nowrap"</span><span class="cm-tag cm-bracket">&gt;</span>row nowrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row wrap"</span><span class="cm-tag cm-bracket">&gt;</span>row wrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row wrap-reverse"</span><span class="cm-tag cm-bracket">&gt;</span>row wrap-reverse<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row-reverse nowrap"</span><span class="cm-tag cm-bracket">&gt;</span>row-reverse nowrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row-reverse wrap"</span><span class="cm-tag cm-bracket">&gt;</span>row-reverse wrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"row-reverse wrap-reverse"</span><span class="cm-tag cm-bracket">&gt;</span>row-reverse wrap-reverse<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column nowrap"</span><span class="cm-tag cm-bracket">&gt;</span>column nowrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column wrap"</span><span class="cm-tag cm-bracket">&gt;</span>column wrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column wrap-reverse"</span><span class="cm-tag cm-bracket">&gt;</span>column wrap-reverse<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column-reverse nowrap"</span><span class="cm-tag cm-bracket">&gt;</span>column-reverse nowrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column-reverse wrap"</span><span class="cm-tag cm-bracket">&gt;</span>column-reverse wrap<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"column-reverse wrap-reverse"</span><span class="cm-tag cm-bracket">&gt;</span>column-reverse wrap-reverse<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">select</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__container"</span> <span class="cm-attribute">data-align-items</span>=<span class="cm-string">"start"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__container"</span> <span class="cm-attribute">data-align-items</span>=<span class="cm-string">"end"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"flex__item"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css?family=Gochi+Hand"</span>);
+
+* {
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100vw</span>;
+  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">10vh</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#291642</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Gochi Hand"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">130%</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">0.1rem</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+}
+
+<span class="cm-qualifier">.forms</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">3vh</span>;
+}
+<span class="cm-qualifier">.controls</span> {
+  <span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.1</span>);
+  <span class="cm-property">padding</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0.5em</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.2</span>);
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+}
+
+<span class="cm-qualifier">.controls</span> <span class="cm-tag">select</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-number">0.9em</span>;
+}
+
+:<span class="cm-variable-3">root</span> {
+  <span class="cm-variable-2">--writingMode</span>: <span class="cm-variable">horizontal-tb</span>;
+  <span class="cm-variable-2">--direction</span>: <span class="cm-atom">ltr</span>;
+  <span class="cm-variable-2">--flexFlow</span>: <span class="cm-atom">row</span> <span class="cm-atom">nowrap</span>;
+  <span class="cm-variable-2">--alignItems</span>: <span class="cm-atom">flex-start</span>;
+}
+
+<span class="cm-qualifier">.grid</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+}
+
+<span class="cm-builtin">#container</span> {
+  <span class="cm-property">writing-mode</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--writingMode</span>);
+  <span class="cm-property">direction</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--direction</span>);
+  <span class="cm-property">margin</span>: <span class="cm-number">10vh</span>;
+}
+
+<span class="cm-qualifier">.flex__container</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-flow</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--flexFlow</span>);
+  <span class="cm-property">align-items</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--alignItems</span>);
+  <span class="cm-property">inline-size</span>: <span class="cm-number">80vh</span>;
+  <span class="cm-property">block-size</span>: <span class="cm-number">30vh</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">dashed</span> <span class="cm-atom">#e91e63</span>;
+  <span class="cm-property">border-color</span>: <span class="cm-atom">#ffeb3b</span> <span class="cm-atom">#ff5722</span> <span class="cm-atom">#fff</span> <span class="cm-atom">#00bcd4</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">counter-reset</span>: <span class="cm-variable">listCounter</span>;
+}
+
+<span class="cm-qualifier">.flex__item</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">min-inline-size</span>: <span class="cm-number">10vh</span>;
+  <span class="cm-property">counter-increment</span>: <span class="cm-variable">listCounter</span>;
+}
+
+<span class="cm-qualifier">.flex__item</span>::<span class="cm-variable-3">before</span> {
+  <span class="cm-property">content</span>: <span class="cm-string">"["</span> <span class="cm-variable cm-callee">counter</span>(<span class="cm-variable">listCounter</span>) <span class="cm-string">"]"</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">2rem</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.65</span>);
+  <span class="cm-property">padding</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">4px</span>;
+}
+
+<span class="cm-qualifier">.flex__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">1</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f36</span>;
+}
+
+<span class="cm-qualifier">.flex__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">2</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#cddc39</span>;
+}
+
+<span class="cm-qualifier">.flex__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">3</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#2196f3</span>;
+}
+
+<span class="cm-qualifier">.flex__item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">4</span>) {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#ff5722</span>;
+}
+
+<span class="cm-qualifier">.flex__container</span>::<span class="cm-variable-3">after</span> {
+  <span class="cm-property">content</span>: <span class="cm-variable cm-callee">attr</span>(<span class="cm-variable">data-align-items</span>);
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">top</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> + <span class="cm-number">5vh</span>);
+  <span class="cm-property">left</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">0</span>);
+}
+
+<span class="cm-qualifier">.flex__container</span>[<span class="cm-tag">data-align-items</span>=<span class="cm-string">"start"</span>] {
+  <span class="cm-variable-2">--alignItems</span>: <span class="cm-atom">start</span>;
+}
+
+<span class="cm-qualifier">.flex__container</span>[<span class="cm-tag">data-align-items</span>=<span class="cm-string">"end"</span>] {
+  <span class="cm-variable-2">--alignItems</span>: <span class="cm-atom">end</span>;
+}
+</code></pre>
+<a href="https://codepen.io/airen/embed/ExPKGvZ?height=500&amp;theme-id=3655&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">writingMode</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"writingmode"</span>);
+<span class="cm-keyword">const</span> <span class="cm-def">direction</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"direction"</span>);
+<span class="cm-keyword">const</span> <span class="cm-def">flexFlow</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"flexFlow"</span>);
+
+<span class="cm-keyword">const</span> <span class="cm-def">documentElement</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">documentElement</span>;
+
+<span class="cm-variable">writingMode</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"change"</span>, <span class="cm-keyword">function</span> (<span class="cm-def">evt</span>) {
+  <span class="cm-variable">documentElement</span>.<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(<span class="cm-string">"--writingMode"</span>, <span class="cm-variable-2">evt</span>.<span class="cm-property">target</span>.<span class="cm-property">value</span>);
+});
+
+<span class="cm-variable">direction</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"change"</span>, <span class="cm-keyword">function</span> (<span class="cm-def">evt</span>) {
+  <span class="cm-variable">documentElement</span>.<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(<span class="cm-string">"--direction"</span>, <span class="cm-variable-2">evt</span>.<span class="cm-property">target</span>.<span class="cm-property">value</span>);
+});
+
+<span class="cm-variable">flexFlow</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"change"</span>, <span class="cm-keyword">function</span> (<span class="cm-def">evt</span>) {
+  <span class="cm-variable">documentElement</span>.<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(<span class="cm-string">"--flexFlow"</span>, <span class="cm-variable-2">evt</span>.<span class="cm-property">target</span>.<span class="cm-property">value</span>);
+});
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Flexbox Layout Model: align-items( start vs. end)" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Flexbox Layout Model: align-items( start vs. end)" data-src="https://cdpn.io/airen/fullembedgrid/ExPKGvZ?animations=stop-after-5&amp;type=embed" src="./ExPKGvZ(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/airen" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/airen" target="_blank" rel="noopener">大漠</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/airen" target="_blank" rel="noopener" class="about-user-more">
+See more by @airen on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;forms&quot;&gt;\n  &lt;div class=&quot;controls&quot;&gt;\n    &lt;label for=&quot;direction&quot;&gt;direction:&lt;/label&gt;\n    &lt;select id=&quot;direction&quot;&gt;\n      &lt;option value=&quot;ltr&quot;&gt;ltr&lt;/option&gt;\n      &lt;option value=&quot;rtl&quot;&gt;rtl&lt;/option&gt;\n    &lt;/select&gt;\n  &lt;/div&gt;\n  &lt;div class=&quot;controls&quot;&gt;\n    &lt;label for=&quot;writingmode&quot;&gt;writing-mode:&lt;/label&gt;\n    &lt;select id=&quot;writingmode&quot;&gt;\n      &lt;option value=&quot;horizontal-tb&quot;&gt;horizontal-tb&lt;/option&gt;\n      &lt;option value=&quot;vertical-lr&quot;&gt;vertical-lr&lt;/option&gt;\n      &lt;option value=&quot;vertical-rl&quot;&gt;vertical-rl&lt;/option&gt;\n      &lt;option value=&quot;sideways-rl&quot;&gt;sideways-rl&lt;/option&gt;\n      &lt;option value=&quot;sideways-lr&quot;&gt;sideways-lr&lt;/option&gt;\n    &lt;/select&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;controls&quot;&gt;\n    &lt;label for=&quot;flexFlow&quot;&gt;flex-flow:&lt;/label&gt;\n    &lt;select id=&quot;flexFlow&quot;&gt;\n      &lt;option value=&quot;row&quot;&gt;row&lt;/option&gt;\n      &lt;option value=&quot;row-reverse&quot;&gt;row-reverse&lt;/option&gt;\n      &lt;option value=&quot;column&quot;&gt;column&lt;/option&gt;\n      &lt;option value=&quot;column-reverse&quot;&gt;column-reverse&lt;/option&gt;\n      &lt;option value=&quot;nowrap&quot;&gt;nowrap&lt;/option&gt;\n      &lt;option value=&quot;wrap&quot;&gt;wrap&lt;/option&gt;\n      &lt;option value=&quot;wrap-reverse&quot;&gt;wrap-reverse&lt;/option&gt;\n      &lt;option value=&quot;row nowrap&quot;&gt;row nowrap&lt;/option&gt;\n      &lt;option value=&quot;row wrap&quot;&gt;row wrap&lt;/option&gt;\n      &lt;option value=&quot;row wrap-reverse&quot;&gt;row wrap-reverse&lt;/option&gt;\n      &lt;option value=&quot;row-reverse nowrap&quot;&gt;row-reverse nowrap&lt;/option&gt;\n      &lt;option value=&quot;row-reverse wrap&quot;&gt;row-reverse wrap&lt;/option&gt;\n      &lt;option value=&quot;row-reverse wrap-reverse&quot;&gt;row-reverse wrap-reverse&lt;/option&gt;\n      &lt;option value=&quot;column nowrap&quot;&gt;column nowrap&lt;/option&gt;\n      &lt;option value=&quot;column wrap&quot;&gt;column wrap&lt;/option&gt;\n      &lt;option value=&quot;column wrap-reverse&quot;&gt;column wrap-reverse&lt;/option&gt;\n      &lt;option value=&quot;column-reverse nowrap&quot;&gt;column-reverse nowrap&lt;/option&gt;\n      &lt;option value=&quot;column-reverse wrap&quot;&gt;column-reverse wrap&lt;/option&gt;\n      &lt;option value=&quot;column-reverse wrap-reverse&quot;&gt;column-reverse wrap-reverse&lt;/option&gt;\n    &lt;/select&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div class=&quot;grid&quot;&gt;\n  &lt;div id=&quot;container&quot;&gt;\n    &lt;div class=&quot;flex__container&quot; data-align-items=&quot;start&quot;&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;div id=&quot;container&quot;&gt;\n    &lt;div class=&quot;flex__container&quot; data-align-items=&quot;end&quot;&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;flex__item&quot;&gt;&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n&lt;/div&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css?family=Gochi+Hand&quot;);\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  width: 100vw;\n  min-height: 100vh;\n  margin: 0;\n  padding: 10vh;\n  background-color: #291642;\n  font-family: &quot;Gochi Hand&quot;, sans-serif;\n  font-size: 130%;\n  letter-spacing: 0.1rem;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n}\n\n.forms {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 3vh;\n}\n\n.controls {\n  background-color: rgba(0, 0, 0, 0.1);\n  padding: 10px;\n  border-radius: 0.5em;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  margin: 0 10px;\n}\n\n.controls select {\n  font-size: 0.9em;\n}\n\n:root {\n  --writingMode: horizontal-tb;\n  --direction: ltr;\n  --flexFlow: row nowrap;\n  --alignItems: flex-start;\n}\n\n.grid {\n  display: flex;\n  justify-content: center;\n}\n\n#container {\n  writing-mode: var(--writingMode);\n  direction: var(--direction);\n  margin: 10vh;\n}\n\n.flex__container {\n  display: flex;\n  flex-flow: var(--flexFlow);\n  align-items: var(--alignItems);\n  inline-size: 80vh;\n  block-size: 30vh;\n  border: 1px dashed #e91e63;\n  border-color: #ffeb3b #ff5722 #fff #00bcd4;\n  position: relative;\n  counter-reset: listCounter;\n}\n\n.flex__item {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-inline-size: 10vh;\n  counter-increment: listCounter;\n}\n\n.flex__item::before {\n  content: &quot;[&quot; counter(listCounter) &quot;]&quot;;\n  font-size: 2rem;\n  background: rgba(0, 0, 0, 0.65);\n  padding: 4px;\n  border-radius: 4px;\n}\n\n.flex__item:nth-child(1) {\n  background-color: #f36;\n}\n\n.flex__item:nth-child(2) {\n  background-color: #cddc39;\n}\n\n.flex__item:nth-child(3) {\n  background-color: #2196f3;\n}\n\n.flex__item:nth-child(4) {\n  background-color: #ff5722;\n}\n\n.flex__container::after {\n  content: attr(data-align-items);\n  position: absolute;\n  top: calc(100% + 5vh);\n  left: 50%;\n  transform: translate(-50%, 0);\n}\n\n.flex__container[data-align-items=start] {\n  --alignItems: start;\n}\n\n.flex__container[data-align-items=end] {\n  --alignItems: end;\n}","js":"const writingMode = document.getElementById(&quot;writingmode&quot;);\nconst direction = document.getElementById(&quot;direction&quot;);\nconst flexFlow = document.getElementById(&quot;flexFlow&quot;);\n\nconst documentElement = document.documentElement;\n\nwritingMode.addEventListener(&quot;change&quot;, function (evt) {\n  documentElement.style.setProperty(&quot;--writingMode&quot;, evt.target.value);\n});\n\ndirection.addEventListener(&quot;change&quot;, function (evt) {\n  documentElement.style.setProperty(&quot;--direction&quot;, evt.target.value);\n});\n\nflexFlow.addEventListener(&quot;change&quot;, function (evt) {\n  documentElement.style.setProperty(&quot;--flexFlow&quot;, evt.target.value);\n});"};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+
+</body></html>

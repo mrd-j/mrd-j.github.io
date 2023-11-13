@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/NWjbaKg?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Overlapping Grid Items(Demo)</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/NWjbaKg">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+  max-width: 80vmin;
+  min-width: 600px;
+}
+
+header {
+  grid-row: 2 / 4;
+  grid-column: 2 / 4;
+  z-index: 2;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 128, 172, 1) 0%,
+    rgba(0, 128, 172, 1) 70%,
+    rgba(0, 128, 172, 0) 70.3%
+  );
+  position: relative;
+  margin: 0;
+  color: white;
+  aspect-ratio: 1;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  float: left;
+  shape-outside: polygon(
+    0 0,
+    98% 0,
+    50% 6%,
+    23.4% 17.3%,
+    6% 32.6%,
+    0 50%,
+    6% 65.6%,
+    23.4% 82.7%,
+    50% 94%,
+    98% 100%,
+    0 100%
+  );
+  shape-margin: 7%;
+}
+
+header p {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 1px rgb(0 0 0 / 30%);
+}
+
+header p::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  float: right;
+  shape-outside: polygon(
+    2% 0%,
+    100% 0%,
+    100% 100%,
+    2% 100%,
+    50% 94%,
+    76.6% 82.7%,
+    94% 65.6%,
+    100% 50%,
+    94% 32.6%,
+    76.6% 17.3%,
+    50% 6%
+  );
+  shape-margin: 7%;
+}
+
+figure:nth-of-type(1) {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  align-self: end;
+}
+
+figure:nth-of-type(2) {
+  grid-row: 1 / 3;
+  grid-column: 3 / 5;
+  align-self: end;
+}
+
+figure:nth-of-type(3) {
+  grid-row: 3 / 5;
+  grid-column: 1 / 3;
+}
+
+figure:nth-of-type(4) {
+  grid-row: 3 / 5;
+  grid-column: 3 / 5;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  vertical-align: top;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <main>
+  <header>
+    <p>Experience design is the design of anything, independent of medium, or across media, with human experience as an
+      explicit outcome, and human engagement as an explicit goal.</p>
+  </header>
+  <figure>
+    <img src="./678-800x800.jpg" alt="">
+  </figure>
+  <figure>
+    <img src="./840-800x800.jpg" alt="">
+  </figure>
+  <figure>
+    <img src="./844-800x800.jpg" alt="">
+  </figure>
+  <figure>
+    <img src="./441-800x800.jpg" alt="">
+  </figure>
+</main>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

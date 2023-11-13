@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/OJmbjjP?animations=run&type=embed -->
+<html lang="en" class=" -webkit-"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Overlapping Grid Items(Demo)</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/OJmbjjP">
+  
+  <style media="" data-href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}/*# sourceMappingURL=normalize.min.css.map */</style>
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+  max-width: 80vmin;
+  min-width: 600px;
+}
+
+header,
+section {
+  grid-row: 2 / 4;
+  padding: 2rem;
+  grid-column: 2 / 4;
+  text-align: center;
+  align-self: center;
+  z-index: 2;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+header h2 {
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+section {
+  background-color: #fff;
+  z-index: 1;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  aspect-ratio: 1 / 1;
+}
+
+figure:nth-of-type(1) {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  align-self: end;
+}
+
+figure:nth-of-type(2) {
+  grid-row: 1 / 3;
+  grid-column: 3 / 5;
+  align-self: end;
+}
+
+figure:nth-of-type(3) {
+  grid-row: 3 / 5;
+  grid-column: 1 / 3;
+}
+
+figure:nth-of-type(4) {
+  grid-row: 3 / 5;
+  grid-column: 3 / 5;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: top;
+}
+</style>
+
+  
+  <script src="./prefixfree.min.js.下载"></script>
+
+  
+</head>
+
+<body translate="no">
+  <main>
+  <header>
+    <h1>
+      Portraits of
+      <br>
+      American women
+    </h1>
+    <h2>Dorothea Lange</h2>
+  </header>
+  <section></section>
+  <figure>
+    <img src="./678-800x800.jpg" alt="">
+  </figure>
+  <figure>
+    <img src="./840-800x800.jpg" alt="">
+  </figure>
+  <figure>
+    <img src="./844-800x800.jpg" alt="">
+  </figure>
+  <figure>
+    <img src="./441-800x800.jpg" alt="">
+  </figure>
+</main>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

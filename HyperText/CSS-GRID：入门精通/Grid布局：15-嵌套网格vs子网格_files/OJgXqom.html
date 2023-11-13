@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/OJgXqom?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Nested Grid</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/OJgXqom">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #557;
+  padding: 4rem 0;
+}
+
+.grid__container {
+  height: calc(100vh - 8rem);
+  max-width: 1024px;
+  margin: 0 auto;
+  outline: 3px solid #111;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+
+  display: grid;
+  grid-template-columns:
+    [header-start nav-start footer-start] fit-content(100px)
+    [nav-end main-start] 1fr [main-end aside-start] fit-content(100px)
+    [header-end aside-end footer-end];
+  grid-template-rows: [header-start] 80px [header-end nav-start main-start aside-start] 1fr [nav-end main-end aside-end footer-start] 60px [footer-end];
+  grid-template-areas:
+    "header header header"
+    "nav    main   aside"
+    "footer footer footer";
+  padding: 1rem;
+  gap: 1rem;
+}
+.grid__container * {
+  outline: 4px solid #111;
+  background: #557;
+  position: relative;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grid__container--subgrid {
+  display: inherit;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
+  grid-template-areas: inherit;
+  gap: inherit;
+
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.grid__container--subgrid > * {
+  outline: 3px solid #999;
+  background: #ccc;
+  position: relative;
+  color: #000;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <div class="grid__container">
+  <header>Header Section</header>
+  <nav>Nav Section</nav>
+  <main class="grid__container--subgrid">
+    <header>Sub Header Section</header>
+    <nav>Sub Nav Section</nav>
+    <main>Sub Main Section</main>
+    <aside>Sub Sidebar Section</aside>
+    <footer>Sub Footer Section</footer>
+  </main>
+  <aside>Sidebar Section</aside>
+  <footer>Footer Section</footer>
+</div>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

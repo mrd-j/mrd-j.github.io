@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://codepen.io/airen/embed/OJgRoQv?default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Card Layout with subgid（or Nested Grid)</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="iUYmb/3E46KlNYq/PARIbj9/N8hVdeCsb32I0/lLXM9PWpDxW626bYqkBgv3c5MdupJNBbVjE/5SwVgDLjdlUQ==">
+<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/airen/embed/OJgRoQv?default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/airen/embed/OJgRoQv?default-tab=result#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/airen/embed/OJgRoQv?default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/airen/embed/OJgRoQv?default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/airen/pen/OJgRoQv" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cards-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>The cosmos awaits<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>Great turbulent clouds<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1476814607969-0dfe98b9be5c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1512547770769-0eb554dbaa73?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>With pretty stories for which there's little good evidence star stuff harvesting star light circumnavigated invent the universe billions upon billions of brilliant syntheses.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>Harvesting star light<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>Realm of the galaxies<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1583994009906-c00c0bd8acb2?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1503389152951-9f343605f61e?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>Descended from astronomers encyclopaedia galactica Sea of Tranquility encyclopaedia galactica vanquish the impossible courage of our questions. Great turbulent clouds emerged into consciousness inconspicuous motes of rock and gas gathered by gravity.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>Impossible courage of our questions<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>The ash of stellar alchemy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1511546395756-590dffdcdbd1?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1485846753954-dff2171ddb2b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>Brain is the seed of intelligence from which we spring not a sunrise but a galaxyrise consciousness take root and flourish Cambrian explosion. Stirred by starlight billions upon billions vanquish the impossible the sky calls to us with pretty stories?<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>A mote of dust suspended in a sunbeam<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>Interiors of collapsing stars<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1553669006-0b3882afea8d?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1498452572341-c087c3ee25fc?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>Orion's sword venture take root and flourish inconspicuous motes of rock and gas vanquish the impossible muse about. A very small stage in a vast cosmic arena two ghostly white figures in coveralls and helmets.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>The cosmos awaits<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>Great turbulent clouds<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1476814607969-0dfe98b9be5c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1512547770769-0eb554dbaa73?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>With pretty stories for which there's little good evidence star stuff harvesting star light circumnavigated invent the universe billions upon billions of brilliant syntheses.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>Harvesting star light<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>Realm of the galaxies<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1583994009906-c00c0bd8acb2?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1503389152951-9f343605f61e?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>Descended from astronomers encyclopaedia galactica Sea of Tranquility encyclopaedia galactica vanquish the impossible courage of our questions. Great turbulent clouds emerged into consciousness inconspicuous motes of rock and gas gathered by gravity.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>Impossible courage of our questions<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>The ash of stellar alchemy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1511546395756-590dffdcdbd1?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1485846753954-dff2171ddb2b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>Brain is the seed of intelligence from which we spring not a sunrise but a galaxyrise consciousness take root and flourish Cambrian explosion. Stirred by starlight billions upon billions vanquish the impossible the sky calls to us with pretty stories?<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-header-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-title"</span><span class="cm-tag cm-bracket">&gt;</span>A mote of dust suspended in a sunbeam<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-subtitle"</span><span class="cm-tag cm-bracket">&gt;</span>Interiors of collapsing stars<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-avatar"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1553669006-0b3882afea8d?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo-wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-photo"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://images.unsplash.com/photo-1498452572341-c087c3ee25fc?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-text"</span><span class="cm-tag cm-bracket">&gt;</span>Orion's sword venture take root and flourish inconspicuous motes of rock and gas vanquish the impossible muse about. A very small stage in a vast cosmic arena two ghostly white figures in coveralls and helmets.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-like"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"enable-background:new 0 0 32 32;"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 512 512"</span> <span class="cm-attribute">xml:space</span>=<span class="cm-string">"preserve"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-button"</span><span class="cm-tag cm-bracket">&gt;</span>More<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap"</span>);
+
+* {
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100vw</span>;
+  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Exo"</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#557</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.4</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">11px</span>, <span class="cm-number">3vw</span>, <span class="cm-number">14px</span>);
+}
+
+<span class="cm-comment">/* MAIN GRID */</span>
+<span class="cm-qualifier">.cards-container</span> {
+  <span class="cm-property">max-width</span>: <span class="cm-number">1400px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">2rem</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">95%</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">3</span>, [<span class="cm-variable">col-start</span>] <span class="cm-variable cm-callee">fit-content</span>(<span class="cm-number">9rem</span>));
+  <span class="cm-property">grid-auto-rows</span>: <span class="cm-variable cm-callee">fit-content</span>(<span class="cm-number">12rem</span>) <span class="cm-variable cm-callee">minmax</span>(<span class="cm-number">10rem</span>, <span class="cm-number">14rem</span>) <span class="cm-atom">auto</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">gap</span>: <span class="cm-number">0.5rem</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+}
+
+<span class="cm-comment">/* SUBGRID */</span>
+
+<span class="cm-qualifier">.card</span> {
+  <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+  <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">4</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable">subgrid</span> [<span class="cm-variable">card-start</span>][<span class="cm-variable">button-start</span>][<span class="cm-variable">col</span>][<span class="cm-variable">card-end</span> <span class="cm-variable">button-end</span>];
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable">subgrid</span> [<span class="cm-variable">title-start</span>][<span class="cm-variable">title-end</span> <span class="cm-variable">photo-start</span>] [<span class="cm-variable">photo-end</span> <span class="cm-variable">text-start</span>] [<span class="cm-variable">text-end</span> <span class="cm-variable">button-start</span>] [<span class="cm-variable">button-end</span>];
+  <span class="cm-property">row-gap</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">1px</span> <span class="cm-number">3px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.12</span>), <span class="cm-number">0</span> <span class="cm-number">1px</span> <span class="cm-number">2px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.24</span>);
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">0.5rem</span> <span class="cm-number">1rem</span> <span class="cm-number">0.5rem</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">1rem</span>;
+}
+
+<span class="cm-comment">/* SUBGRID IN SUBGRID */</span>
+
+<span class="cm-qualifier">.card-header-wrapper</span> {
+  <span class="cm-property">grid-column</span>: <span class="cm-variable">card</span>;
+  <span class="cm-property">grid-row</span>: <span class="cm-variable">title</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable">subgrid</span>;
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">fit-content</span>(<span class="cm-number">6rem</span>) <span class="cm-variable cm-callee">fit-content</span>(<span class="cm-number">6rem</span>);
+  <span class="cm-property">grid-template-areas</span>: <span class="cm-string">"subtitle subtitle avatar"</span> <span class="cm-string">"title title title"</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">end</span>;
+}
+
+<span class="cm-comment">/* CARD DETAILS */</span>
+
+<span class="cm-qualifier">.card-title</span> {
+  <span class="cm-property">grid-area</span>: <span class="cm-variable">title</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.25rem</span>;
+}
+
+<span class="cm-qualifier">.card-subtitle</span> {
+  <span class="cm-property">grid-area</span>: <span class="cm-variable">subtitle</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-atom">normal</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+}
+
+<span class="cm-qualifier">.card-avatar-wrapper</span> {
+  <span class="cm-property">grid-area</span>: <span class="cm-variable">avatar</span>;
+  <span class="cm-property">align-self</span>: <span class="cm-atom">start</span>;
+  <span class="cm-property">justify-self</span>: <span class="cm-atom">end</span>;
+}
+
+<span class="cm-qualifier">.card-avatar</span> {
+  <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">3.5rem</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">3.5rem</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+}
+
+<span class="cm-qualifier">.card-photo-wrapper</span> {
+  <span class="cm-property">grid-column</span>: <span class="cm-variable">card</span>;
+  <span class="cm-property">grid-row</span>: <span class="cm-variable">photo</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.5rem</span>;
+}
+
+<span class="cm-qualifier">.card-photo</span> {
+  <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+}
+
+<span class="cm-qualifier">.card-text</span> {
+  <span class="cm-property">grid-column</span>: <span class="cm-variable">col-start</span> / <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+  <span class="cm-property">grid-row</span>: <span class="cm-atom">text</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">2rem</span>;
+}
+
+<span class="cm-qualifier">.card-like</span> {
+  <span class="cm-property">grid-column</span>: <span class="cm-number">1</span>/<span class="cm-number">2</span>;
+  <span class="cm-property">grid-row</span>: <span class="cm-atom">button</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">2.5rem</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">2.5rem</span>;
+  <span class="cm-property">align-self</span>: <span class="cm-atom">end</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+}
+
+<span class="cm-qualifier">.card-button</span> {
+  <span class="cm-property">grid-area</span>: <span class="cm-atom">button</span>;
+  <span class="cm-property">min-width</span>: <span class="cm-number">4rem</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">3rem</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#66a9d6</span>;
+  <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0.25rem</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">0.75rem</span>;
+  <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">0.9rem</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">0.09rem</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+  <span class="cm-property">justify-self</span>: <span class="cm-atom">end</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">text-overflow</span>: <span class="cm-atom">ellipsis</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">8rem</span>;
+}
+
+<span class="cm-qualifier">.caption</span> {
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">13px</span>;
+  <span class="cm-property">padding-bottom</span>: <span class="cm-number">30px</span>;
+}
+
+<span class="cm-qualifier">.caption</span> <span class="cm-tag">a</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#0086b3</span>;
+}
+
+<span class="cm-comment">/* browsers without support for the subgrid feature */</span>
+
+<span class="cm-def">@supports</span> <span class="cm-keyword">not</span> (<span class="cm-property">grid-template-columns</span>: <span class="cm-error">subgrid</span>) {
+  <span class="cm-qualifier">.card</span> {
+    <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">3</span>, [<span class="cm-variable">col-start</span>] <span class="cm-variable cm-callee">fit-content</span>(<span class="cm-number">9rem</span>));
+    <span class="cm-property">grid-template-rows</span>: <span class="cm-number">9rem</span> <span class="cm-number">15rem</span> <span class="cm-atom">auto</span> <span class="cm-atom">auto</span>;
+  }
+
+  <span class="cm-qualifier">.card-header-wrapper</span>,
+  <span class="cm-qualifier">.card-photo-wrapper</span>,
+  <span class="cm-qualifier">.card-text</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span>/<span class="cm-number">-1</span>;
+    <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">1</span>;
+  }
+
+  <span class="cm-qualifier">.card-text</span> {
+    <span class="cm-property">margin-bottom</span>: <span class="cm-number">0</span>;
+  }
+
+  <span class="cm-qualifier">.card-button</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">3</span>/<span class="cm-number">-1</span>;
+    <span class="cm-property">align-self</span>: <span class="cm-atom">end</span>;
+  }
+}
+
+<span class="cm-def">@media</span> <span class="cm-attribute">screen</span> <span class="cm-keyword">and</span> (<span class="cm-property">min-width</span>: <span class="cm-number">480px</span>) {
+  <span class="cm-tag">html</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">11px</span>, <span class="cm-number">2vw</span>, <span class="cm-number">14px</span>);
+  }
+
+  <span class="cm-qualifier">.cards-container</span> {
+    <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">6</span>, [<span class="cm-variable">col-start</span>] <span class="cm-variable cm-callee">fit-content</span>(<span class="cm-number">9rem</span>));
+  }
+}
+
+<span class="cm-def">@media</span> <span class="cm-attribute">screen</span> <span class="cm-keyword">and</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+  <span class="cm-tag">html</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">11px</span>, <span class="cm-number">1vw</span>, <span class="cm-number">14px</span>);
+  }
+
+  <span class="cm-qualifier">.cards-container</span> {
+    <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">12</span>, [<span class="cm-variable">col-start</span>] <span class="cm-variable cm-callee">fit-content</span>(<span class="cm-number">9rem</span>));
+  }
+}
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Card Layout with subgid（or Nested Grid)" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Card Layout with subgid（or Nested Grid)" data-src="https://cdpn.io/airen/fullembedgrid/OJgRoQv?animations=run&amp;type=embed" src="./OJgRoQv(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/airen" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/airen" target="_blank" rel="noopener">大漠</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/airen" target="_blank" rel="noopener" class="about-user-more">
+See more by @airen on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;cards-container&quot;&gt;\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;The cosmos awaits&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;Great turbulent clouds&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1476814607969-0dfe98b9be5c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;\n      &lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1512547770769-0eb554dbaa73?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n    &lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;With pretty stories for which there&#39;s little good evidence star stuff harvesting star light circumnavigated invent the universe billions upon billions of brilliant syntheses.&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;Harvesting star light&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;Realm of the galaxies&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1583994009906-c00c0bd8acb2?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;\n      &lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1503389152951-9f343605f61e?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n    &lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;Descended from astronomers encyclopaedia galactica Sea of Tranquility encyclopaedia galactica vanquish the impossible courage of our questions. Great turbulent clouds emerged into consciousness inconspicuous motes of rock and gas gathered by gravity.&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;Impossible courage of our questions&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;The ash of stellar alchemy&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1511546395756-590dffdcdbd1?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;&lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1485846753954-dff2171ddb2b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;&lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;Brain is the seed of intelligence from which we spring not a sunrise but a galaxyrise consciousness take root and flourish Cambrian explosion. Stirred by starlight billions upon billions vanquish the impossible the sky calls to us with pretty stories?&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;A mote of dust suspended in a sunbeam&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;Interiors of collapsing stars&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1553669006-0b3882afea8d?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;\n      &lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1498452572341-c087c3ee25fc?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n    &lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;Orion&#39;s sword venture take root and flourish inconspicuous motes of rock and gas vanquish the impossible muse about. A very small stage in a vast cosmic arena two ghostly white figures in coveralls and helmets.&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;The cosmos awaits&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;Great turbulent clouds&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1476814607969-0dfe98b9be5c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;\n      &lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1512547770769-0eb554dbaa73?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n    &lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;With pretty stories for which there&#39;s little good evidence star stuff harvesting star light circumnavigated invent the universe billions upon billions of brilliant syntheses.&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;Harvesting star light&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;Realm of the galaxies&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1583994009906-c00c0bd8acb2?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;\n      &lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1503389152951-9f343605f61e?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n    &lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;Descended from astronomers encyclopaedia galactica Sea of Tranquility encyclopaedia galactica vanquish the impossible courage of our questions. Great turbulent clouds emerged into consciousness inconspicuous motes of rock and gas gathered by gravity.&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;Impossible courage of our questions&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;The ash of stellar alchemy&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1511546395756-590dffdcdbd1?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;&lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1485846753954-dff2171ddb2b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;&lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;Brain is the seed of intelligence from which we spring not a sunrise but a galaxyrise consciousness take root and flourish Cambrian explosion. Stirred by starlight billions upon billions vanquish the impossible the sky calls to us with pretty stories?&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;card-header-wrapper&quot;&gt;\n      &lt;h2 class=&quot;card-title&quot;&gt;A mote of dust suspended in a sunbeam&lt;/h2&gt;\n      &lt;h4 class=&quot;card-subtitle&quot;&gt;Interiors of collapsing stars&lt;/h4&gt;\n      &lt;div class=&quot;card-avatar-wrapper&quot;&gt;\n        &lt;img class=&quot;card-avatar&quot; src=&quot;https://images.unsplash.com/photo-1553669006-0b3882afea8d?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-photo-wrapper&quot;&gt;\n      &lt;img class=&quot;card-photo&quot; src=&quot;https://images.unsplash.com/photo-1498452572341-c087c3ee25fc?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot; alt=&quot;&quot;&gt;\n    &lt;/div&gt;\n    &lt;p class=&quot;card-text&quot;&gt;Orion&#39;s sword venture take root and flourish inconspicuous motes of rock and gas vanquish the impossible muse about. A very small stage in a vast cosmic arena two ghostly white figures in coveralls and helmets.&lt;/p&gt;\n    &lt;svg class=&quot;card-like&quot; height=&quot;32&quot; width=&quot;32&quot; style=&quot;enable-background:new 0 0 32 32;&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 512 512&quot; xml:space=&quot;preserve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n      &lt;path d=&quot;M340.8 98.4c50.7 0 91.9 41.3 91.9 92.3 0 26.2-10.9 49.8-28.3 66.6L256 407.1 105 254.6c-15.8-16.6-25.6-39.1-25.6-63.9 0-51 41.1-92.3 91.9-92.3 38.2 0 70.9 23.4 84.8 56.8 13.7-33.3 46.5-56.8 84.7-56.8m0-15.4C307 83 276 98.8 256 124.8c-20-26-51-41.8-84.8-41.8C112.1 83 64 131.3 64 190.7c0 27.9 10.6 54.4 29.9 74.6L245.1 418l10.9 11 10.9-11 148.3-149.8c21-20.3 32.8-47.9 32.8-77.5C448 131.3 399.9 83 340.8 83z&quot; /&gt;\n    &lt;/svg&gt;\n    &lt;button class=&quot;card-button&quot;&gt;More&lt;/button&gt;\n  &lt;/div&gt;\n\n&lt;/div&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap&quot;);\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  width: 100vw;\n  min-height: 100vh;\n  font-family: &quot;Exo&quot;, Arial, sans-serif;\n  background-color: #557;\n  line-height: 1.4;\n  font-size: clamp(11px, 3vw, 14px);\n}\n\n/* MAIN GRID */\n.cards-container {\n  max-width: 1400px;\n  margin: 2rem auto;\n  width: 95%;\n  display: grid;\n  grid-template-columns: repeat(3, [col-start] fit-content(9rem));\n  grid-auto-rows: fit-content(12rem) minmax(10rem, 14rem) auto auto;\n  gap: 0.5rem;\n  justify-content: center;\n}\n\n/* SUBGRID */\n\n.card {\n  grid-column: span 3;\n  grid-row: span 4;\n  display: grid;\n  grid-template-columns: subgrid [card-start][button-start][col][card-end button-end];\n  grid-template-rows: subgrid [title-start][title-end photo-start] [photo-end text-start] [text-end button-start] [button-end];\n  row-gap: 0;\n  background-color: #fff;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  margin: 0 0.5rem 1rem 0.5rem;\n  padding: 1rem;\n}\n\n/* SUBGRID IN SUBGRID */\n\n.card-header-wrapper {\n  grid-column: card;\n  grid-row: title;\n  display: grid;\n  grid-template-columns: subgrid;\n  grid-template-rows: fit-content(6rem) fit-content(6rem);\n  grid-template-areas: &quot;subtitle subtitle avatar&quot; &quot;title title title&quot;;\n  align-items: end;\n}\n\n/* CARD DETAILS */\n\n.card-title {\n  grid-area: title;\n  font-size: 1.25rem;\n}\n\n.card-subtitle {\n  grid-area: subtitle;\n  font-weight: normal;\n  margin: 0;\n}\n\n.card-avatar-wrapper {\n  grid-area: avatar;\n  align-self: start;\n  justify-self: end;\n}\n\n.card-avatar {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 3.5rem;\n  height: 3.5rem;\n  border-radius: 50%;\n}\n\n.card-photo-wrapper {\n  grid-column: card;\n  grid-row: photo;\n  margin-bottom: 0.5rem;\n}\n\n.card-photo {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 100%;\n  height: 100%;\n}\n\n.card-text {\n  grid-column: col-start / span 3;\n  grid-row: text;\n  margin-bottom: 2rem;\n}\n\n.card-like {\n  grid-column: 1/2;\n  grid-row: button;\n  width: 2.5rem;\n  height: 2.5rem;\n  align-self: end;\n  cursor: pointer;\n}\n\n.card-button {\n  grid-area: button;\n  min-width: 4rem;\n  height: 3rem;\n  background-color: #66a9d6;\n  border: none;\n  border-radius: 0.25rem;\n  padding: 0 0.75rem;\n  color: white;\n  font-size: 0.9rem;\n  text-transform: uppercase;\n  letter-spacing: 0.09rem;\n  cursor: pointer;\n  justify-self: end;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 8rem;\n}\n\n.caption {\n  text-align: center;\n  font-size: 13px;\n  padding-bottom: 30px;\n}\n\n.caption a {\n  color: #0086b3;\n}\n\n/* browsers without support for the subgrid feature */\n\n@supports not (grid-template-columns: subgrid) {\n  .card {\n    grid-template-columns: repeat(3, [col-start] fit-content(9rem));\n    grid-template-rows: 9rem 15rem auto auto;\n  }\n\n  .card-header-wrapper,\n  .card-photo-wrapper,\n  .card-text {\n    grid-column: 1/-1;\n    grid-row: span 1;\n  }\n\n  .card-text {\n    margin-bottom: 0;\n  }\n\n  .card-button {\n    grid-column: 3/-1;\n    align-self: end;\n  }\n}\n\n@media screen and (min-width: 480px) {\n  html {\n    font-size: clamp(11px, 2vw, 14px);\n  }\n\n  .cards-container {\n    grid-template-columns: repeat(6, [col-start] fit-content(9rem));\n  }\n}\n\n@media screen and (min-width: 1024px) {\n  html {\n    font-size: clamp(11px, 1vw, 14px);\n  }\n\n  .cards-container {\n    grid-template-columns: repeat(12, [col-start] fit-content(9rem));\n  }\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+
+</body></html>

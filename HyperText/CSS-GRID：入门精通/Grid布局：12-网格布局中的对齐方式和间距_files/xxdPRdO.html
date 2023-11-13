@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/xxdPRdO?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - justify-items &amp; justify-self</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/xxdPRdO">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #f7f7f7;
+
+  padding: 20px;
+}
+
+section {
+  margin: 0 auto;
+
+  display: flex;
+  box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);
+  border-radius: 3px;
+  gap: 20px;
+  width: 40vw;
+  aspect-ratio: 2 / 1;
+}
+
+.grid__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #f7f7f7;
+  position: relative;
+  counter-increment: item;
+}
+
+.grid__item::before {
+  content: counter(item);
+  color: #fff;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 0 rgba(0 0 0 / 0.25);
+  z-index: 2;
+  background-color: rgb(0 0 0 / 0.6);
+  background-image: conic-gradient(
+    from 90deg at 40% -25%,
+    #ffd700,
+    #f79d03,
+    #ee6907,
+    #e6390a,
+    #de0d0d,
+    #d61039,
+    #cf1261,
+    #c71585,
+    #cf1261,
+    #d61039,
+    #de0d0d,
+    #ee6907,
+    #f79d03,
+    #ffd700,
+    #ffd700,
+    #ffd700
+  );
+  width: 32px;
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.grid__item:nth-child(1) {
+  background-color: #f1c2c6;
+}
+
+.grid__item:nth-child(2) {
+  background-color: #dac2f1;
+}
+
+.grid__item:nth-child(3) {
+  background-color: #ccf1c2;
+}
+
+.grid__item:nth-child(4) {
+  background-color: #c2e9f1;
+}
+
+.grid__item:nth-child(5) {
+  background-color: #f1ebc2;
+}
+.grid__item:nth-child(6) {
+  background-color: #09f;
+}
+
+.grid__item:nth-child(7) {
+  background-color: #ff5722;
+}
+
+.grid__item:nth-child(8) {
+  background-color: #8bc34a;
+}
+
+.grid__item:nth-child(9) {
+  background-color: #f66803;
+}
+
+.grid__item:nth-child(10) {
+  background-color: #0d815f;
+}
+.grid__item:nth-child(11) {
+  background-color: #28d1c2;
+}
+.grid__item:nth-child(12) {
+  background-color: #4a28d1;
+}
+h3 {
+  margin: 20px auto;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.button {
+  --background: #275efe;
+  --rectangle: #184fee;
+  --success: #4672f1;
+  --text: #fff;
+  --arrow: #fff;
+  --checkmark: #fff;
+  --shadow: rgba(10, 22, 50, 0.24);
+  display: flex;
+  background: var(--background);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px -1px var(--shadow);
+  color: var(--text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none 0;
+  width: 44px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+#subtract {
+  --background: #242836;
+  --rectangle: #1c212e;
+  --arrow: #f5f9ff;
+  --text: #f5f9ff;
+  --success: #2f3545;
+}
+
+.button:hover {
+  transform: scale(0.95);
+  box-shadow: 0 1px 4px -1px var(--shadow);
+}
+
+.button .button__icon {
+  fill: var(--text);
+  width: 100%;
+  height: auto;
+}
+
+.grid__container {
+  box-shadow: 0 0 0 2px red;
+  border-radius: 2px;
+  display: grid;
+  grid-template-rows: 80px 80px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "content content"
+    "content content";
+  width: 100%;
+
+  --justify-self: auto;
+  --justify-items: auto;
+  justify-items: var(--justify-items, auto);
+}
+
+.grid__item {
+  grid-area: content;
+  justify-self: var(--justify-self, auto);
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <section>
+  <div class="grid__container">
+    <div class="grid__item">
+    </div>
+  </div>
+</section>
+
+<div class="form">
+  <lable>
+    justify-items:
+    <select name="justify-items" id="justify-items">
+      <option value="auto">auto</option>
+      <option value="normal">normal</option>
+      <option value="start">start</option>
+      <option value="end">end</option>
+      <option value="center">center</option>
+      <option value="stretch">stretch</option>
+      <option value="baseline">baseline</option>
+      <option value="first baseline">first baseline</option>
+      <option value="last baseline">last baseline</option>
+    </select>
+  </lable>
+  <lable>
+    justify-self:
+    <select name="justify-self" id="justify-self">
+      <option value="auto">auto</option>
+      <option value="normal">normal</option>
+      <option value="start">start</option>
+      <option value="end">end</option>
+      <option value="center">center</option>
+      <option value="stretch">stretch</option>
+      <option value="baseline">baseline</option>
+      <option value="first baseline">first baseline</option>
+      <option value="last baseline">last baseline</option>
+    </select>
+  </lable>
+</div>
+  
+      <script id="rendered-js">
+const gridContainer = document.querySelector(".grid__container");
+const selects = document.querySelectorAll("select");
+
+selects.forEach(select => {
+  select.addEventListener("change", etv => {
+    gridContainer.style.setProperty(`--${etv.target.id}`, etv.target.value);
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

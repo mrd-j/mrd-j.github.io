@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/yLXajVG?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Card Lists with subgrid</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/yLXajVG">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #557;
+  padding: 4rem 0;
+  color: #f5f5f5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(7em, 12em) -webkit-max-content -webkit-max-content -webkit-max-content 1fr;
+  grid-template-columns: minmax(7em, 12em) max-content max-content max-content 1fr;
+  row-gap: 2em;
+
+  padding: 1em;
+}
+
+.subgrid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: -webkit-min-content -webkit-max-content -webkit-min-content;
+  grid-template-rows: min-content max-content min-content;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 0 #222;
+  padding: 1.5em;
+}
+
+h2 {
+  grid-column: 1 / -1;
+
+  margin-bottom: 1em;
+}
+
+p {
+  grid-column: 2 / -1;
+
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+img {
+  grid-row: 2 / -1;
+  align-self: center;
+
+  border-radius: 50%;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.warning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #fed7d7;
+  border-top: 1px solid #f56565;
+  padding: 10px;
+  color: #f56565;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .warning {
+    display: none;
+  }
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <div class="grid">
+  <div class="subgrid">
+    <h2>Awesome speaker</h2>
+    <img src="./554-200x200.jpg" alt="">
+    <p>Chocolate bar gummies powder bear claw cake dragée oat cake cake. Chupa chups marzipan ice cream croissant topping liquorice toffee chupa chups chocolate. Pie pie gummies sweet chocolate.</p>
+    <span>🌐 https://websi.te</span>
+    <span>🐦 @twitter_handle</span>
+    <span>💻 github_username</span>
+  </div>
+  <div class="subgrid">
+    <h2>Incredible speaker</h2>
+    <img src="./905-200x200.jpg" alt="">
+    <p>Chocolate bar gummies powder bear claw cake dragée Lemon drops I love tootsie roll dragée gingerbread tart danish halvah cake. Caramels dragée jelly beans tiramisu gummi bears I love danish. Cupcake dessert chocolate cake sesame snaps marzipan chocolate bar muffin sweet. Pudding biscuit topping I love cotton candy soufflé. Dragée pastry gummi bears. Cookie jelly beans liquorice. Sugar plum I love sugar plum pie I love. Chupa chups sesame snaps dessert chupa chups.</p>
+    <span>🌐 https://longer.website.url</span>
+    <span>🐦 @twt</span>
+    <span>💻 github_name</span>
+  </div>
+  <div class="subgrid">
+    <h2>Amazing speaker</h2>
+    <img src="./102-200x200.jpg" alt="">
+    <p>Pie dragée marzipan lemon drops sugar plum wafer I love. Topping tiramisu sweet roll apple pie gummi bears. Toffee ice cream powder. Muffin sesame snaps I love marshmallow. Lemon drops cotton candy macaroon marzipan carrot cake bonbon candy canes powder. Sesame snaps lemon drops fruitcake jujubes topping jujubes cupcake jujubes. Cookie cupcake I love.</p>
+    <span>🌐 https://shrt.url</span>
+    <span>🐦 @but_super_long_twitter</span>
+    <span>💻 github_lover</span>
+  </div>
+</div>
+
+<div class="warning">
+  <p>Subgrid support required to get the most out of this pen</p>
+</div>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

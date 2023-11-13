@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/jOwMMzJ?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - subgrid</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/jOwMMzJ">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #557;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
+    0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
+    0 32px 16px rgba(0, 0, 0, 0.09);
+}
+.card h2 {
+  padding: 1rem 1rem 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card p {
+  line-height: 1.5;
+  padding: 0 1rem;
+  margin: 0 0 1rem;
+}
+
+.warning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #fed7d7;
+  border-top: 1px solid #f56565;
+  padding: 10px;
+  color: #f56565;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .warning {
+    display: none;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <div class="card">
+  <h2>Standard card</h2>
+  <img src="./755-400x400.jpg" alt="">
+  <p>Pastry sugar croissant jelly sugar sprinkles. Sprinkles sweet apple lollipop tiramisu sprinkles. Dolor croissant vanilla donut vanilla donut. Sugar lollipop lollipop sugar ipsum orange.</p>
+</div>
+<div class="card">
+  <h2>Card title that's longer than others</h2>
+  <img src="./430-400x400.jpg" alt="">
+  <p>Pastry donut pastry sweet sweet vanilla sweet sugar donut orange. Jelly cream cookie biscuit pastry lollipop sugar jelly candy ipsum. Cookie ipsum sugar lollipop vanilla lollipop tiramisu vanilla sugar ipsum. Dolor orange donut apple apple jelly apple jelly sweet muffin.</p>
+</div>
+<div class="card">
+  <h2>Card with long body</h2>
+  <img src="./1056-400x400.jpg" alt="">
+  <p>Dolor cake biscuit sweet jelly biscuit cake dolor sweet tiramisu orange dolor cake marzipan pastry marzipan cookie lollipop apple sweet. Dolor ipsum orange donut cream cream ipsum croissant muffin candy vanilla sweet marzipan muffin sprinkles orange vanilla orange orange orange. Croissant biscuit sweet jelly dolor sprinkles sugar croissant jelly marzipan candy cake cookie croissant pastry croissant marzipan ipsum sprinkles sweet. </p>
+</div>
+
+<div class="card">
+  <h2>Standard card</h2>
+  <img src="./487-400x400.jpg" alt="">
+  <p>Pastry sugar croissant jelly sugar sprinkles. Sprinkles sweet apple lollipop tiramisu sprinkles. Dolor croissant vanilla donut vanilla donut. Sugar lollipop lollipop sugar ipsum orange.</p>
+</div>
+<div class="card">
+  <h2>Card title that's longer than others</h2>
+  <img src="./570-400x400.jpg" alt="">
+  <p>Pastry donut pastry sweet sweet vanilla sweet sugar donut orange. Jelly cream cookie biscuit pastry lollipop sugar jelly candy ipsum. Cookie ipsum sugar lollipop vanilla lollipop tiramisu vanilla sugar ipsum. Dolor orange donut apple apple jelly apple jelly sweet muffin.</p>
+</div>
+<div class="card">
+  <h2>Card with long body</h2>
+  <img src="./134-400x400.jpg" alt="">
+  <p>Dolor cake biscuit sweet jelly biscuit cake dolor sweet tiramisu orange dolor cake marzipan pastry marzipan cookie lollipop apple sweet. Dolor ipsum orange donut cream cream ipsum croissant muffin candy vanilla sweet marzipan muffin sprinkles orange vanilla orange orange orange. Croissant biscuit sweet jelly dolor sprinkles sugar croissant jelly marzipan candy cake cookie croissant pastry croissant marzipan ipsum sprinkles sweet. </p>
+</div>
+
+<div class="card">
+  <h2>Standard card</h2>
+  <img src="./351-400x400.jpg" alt="">
+  <p>Pastry sugar croissant jelly sugar sprinkles. Sprinkles sweet apple lollipop tiramisu sprinkles. Dolor croissant vanilla donut vanilla donut. Sugar lollipop lollipop sugar ipsum orange.</p>
+</div>
+<div class="card">
+  <h2>Card title that's longer than others</h2>
+  <img src="./669-400x400.jpg" alt="">
+  <p>Pastry donut pastry sweet sweet vanilla sweet sugar donut orange. Jelly cream cookie biscuit pastry lollipop sugar jelly candy ipsum. Cookie ipsum sugar lollipop vanilla lollipop tiramisu vanilla sugar ipsum. Dolor orange donut apple apple jelly apple jelly sweet muffin.</p>
+</div>
+<div class="card">
+  <h2>Card with long body</h2>
+  <img src="./722-400x400.jpg" alt="">
+  <p>Dolor cake biscuit sweet jelly biscuit cake dolor sweet tiramisu orange dolor cake marzipan pastry marzipan cookie lollipop apple sweet. Dolor ipsum orange donut cream cream ipsum croissant muffin candy vanilla sweet marzipan muffin sprinkles orange vanilla orange orange orange. Croissant biscuit sweet jelly dolor sprinkles sugar croissant jelly marzipan candy cake cookie croissant pastry croissant marzipan ipsum sprinkles sweet. </p>
+</div>
+
+<div class="card">
+  <h2>Standard card</h2>
+  <img src="./467-400x400.jpg" alt="">
+  <p>Pastry sugar croissant jelly sugar sprinkles. Sprinkles sweet apple lollipop tiramisu sprinkles. Dolor croissant vanilla donut vanilla donut. Sugar lollipop lollipop sugar ipsum orange.</p>
+</div>
+<div class="card">
+  <h2>Card title that's longer than others</h2>
+  <img src="./379-400x400.jpg" alt="">
+  <p>Pastry donut pastry sweet sweet vanilla sweet sugar donut orange. Jelly cream cookie biscuit pastry lollipop sugar jelly candy ipsum. Cookie ipsum sugar lollipop vanilla lollipop tiramisu vanilla sugar ipsum. Dolor orange donut apple apple jelly apple jelly sweet muffin.</p>
+</div>
+<div class="card">
+  <h2>Card with long body</h2>
+  <img src="./776-400x400.jpg" alt="">
+  <p>Dolor cake biscuit sweet jelly biscuit cake dolor sweet tiramisu orange dolor cake marzipan pastry marzipan cookie lollipop apple sweet. Dolor ipsum orange donut cream cream ipsum croissant muffin candy vanilla sweet marzipan muffin sprinkles orange vanilla orange orange orange. Croissant biscuit sweet jelly dolor sprinkles sugar croissant jelly marzipan candy cake cookie croissant pastry croissant marzipan ipsum sprinkles sweet. </p>
+</div>
+
+<div class="card">
+  <h2>Standard card</h2>
+  <img src="./258-400x400.jpg" alt="">
+  <p>Pastry sugar croissant jelly sugar sprinkles. Sprinkles sweet apple lollipop tiramisu sprinkles. Dolor croissant vanilla donut vanilla donut. Sugar lollipop lollipop sugar ipsum orange.</p>
+</div>
+<div class="card">
+  <h2>Card title that's longer than others</h2>
+  <img src="./487-400x400(1).jpg" alt="">
+  <p>Pastry donut pastry sweet sweet vanilla sweet sugar donut orange. Jelly cream cookie biscuit pastry lollipop sugar jelly candy ipsum. Cookie ipsum sugar lollipop vanilla lollipop tiramisu vanilla sugar ipsum. Dolor orange donut apple apple jelly apple jelly sweet muffin.</p>
+</div>
+<div class="card">
+  <h2>Card with long body</h2>
+  <img src="./265-400x400.jpg" alt="">
+  <p>Dolor cake biscuit sweet jelly biscuit cake dolor sweet tiramisu orange dolor cake marzipan pastry marzipan cookie lollipop apple sweet. Dolor ipsum orange donut cream cream ipsum croissant muffin candy vanilla sweet marzipan muffin sprinkles orange vanilla orange orange orange. Croissant biscuit sweet jelly dolor sprinkles sugar croissant jelly marzipan candy cake cookie croissant pastry croissant marzipan ipsum sprinkles sweet. </p>
+</div>
+
+<div class="warning">
+  <p>Subgrid support required to get the most out of this pen</p>
+</div>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

