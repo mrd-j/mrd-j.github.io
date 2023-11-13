@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Magazine Layout with CSS Grid</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/NWvgEGW">
+  <link href="./css2" rel="stylesheet">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  <link rel="stylesheet" href="./fonts.css">
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+@font-face {
+  font-family: "Decovar Regular24";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf");
+}
+
+@font-face {
+  font-family: "Decovar Regular24";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #557;
+  color: #fff;
+
+  display: grid;
+  place-content: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: clamp(1.3rem, 2rem + 2vw, 3rem);
+  margin: 0;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: right;
+  font-family: "Decovar Regular24", sans-serif;
+  font-family: "Decovar Regular24", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-variation-settings: "SSTR" 183, "INLN" 648, "TSHR" 460, "TRSB" 312,
+    "TWRM" 638, "SINL" 557, "TOIL" 333, "TINL" 526, "WORM" 523;
+  text-shadow: -1px -1px 0 #6e1f58, 1px -1px 0 #6e1f58, -1px 1px 0 #6e1f58,
+    1px 1px 0 #6e1f58, 1px 0px 0px #ff0080, 0px 1px 0px #ff0080,
+    2px 1px 0px #ff0080, 1px 2px 0px #ff0080, 3px 2px 0px #ff0080,
+    2px 3px 0px #ff0080, 4px 3px 0px #ff0080, 3px 4px 0px #ff0080,
+    5px 4px 0px #ff0080, 3px 5px 0px #6e1f58, 6px 5px 0px #6e1f58,
+    -1px 2px 0 black, 0 3px 0 #6e1f58, 1px 4px 0 #6e1f58, 2px 5px 0px #6e1f58,
+    2px -1px 0 #6e1f58, 3px 0 0 #6e1f58, 4px 1px 0 #6e1f58, 5px 2px 0px #6e1f58,
+    6px 3px 0 #6e1f58, 7px 4px 0 #6e1f58;
+}
+
+h2 {
+  color: #f9423a;
+  text-transform: uppercase;
+  font-size: clamp(1.3rem, 2rem + 2vw, 3rem);
+  line-height: 1.3;
+  white-space: nowrap;
+  font-weight: 700;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  margin-top: -0.25em;
+  margin-right: -0.25em;
+
+  font-family: "Crimson Pro";
+  text-transform: uppercase;
+  color: #52d9da;
+  text-shadow: -1px -1px 0 #2f3e9c, 1px -1px 0 #2f3e9c, -1px 1px 0 #2f3e9c,
+    1px 1px 0 #2f3e9c, 1px 0px 0px #f98ca4, 0px 1px 0px #f98ca4,
+    2px 1px 0px #f98ca4, 1px 2px 0px #f98ca4, 3px 2px 0px #f98ca4,
+    2px 3px 0px #f98ca4, 4px 3px 0px #f98ca4, 3px 4px 0px #f98ca4,
+    5px 4px 0px #f98ca4, 3px 5px 0px #2f3e9c, 6px 5px 0px #2f3e9c,
+    -1px 2px 0 black, 0 3px 0 #2f3e9c, 1px 4px 0 #2f3e9c, 2px 5px 0px #2f3e9c,
+    2px -1px 0 #2f3e9c, 3px 0 0 #2f3e9c, 4px 1px 0 #2f3e9c, 5px 2px 0px #2f3e9c,
+    6px 3px 0 #2f3e9c, 7px 4px 0 #2f3e9c, 10px 10px 4px rgb(106 241 119 / 80%);
+}
+
+.lists {
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+ol,
+ul {
+  list-style: none inside none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@counter-style custom-counter-style {
+  system: cyclic;
+  symbols: "❤️" "✨" "🔥" "❤️‍🔥" "🐻" "🍔" "⚽" "💨" "🎨" " 🐶";
+  suffix: "";
+  prefix: " ";
+  fallback: disc;
+}
+
+ul {
+  list-style-type: custom-counter-style;
+}
+
+.lists li {
+  border-top: 5px solid rgba(12, 12, 10, 0.8);
+  text-align: left;
+  padding: 4px 0;
+}
+
+.lists li:last-child {
+  border-bottom: 5px solid rgba(12, 12, 10, 0.8);
+}
+
+.follow {
+  font-size: 0.9rem;
+  border-bottom: 25px solid #f9423a;
+  line-height: 1.3;
+  padding-bottom: 5px;
+  font-weight: 400;
+
+  margin: 0;
+  color: rgb(212 212 110 / 0.8);
+}
+
+.workshop {
+  border-top: 5px solid rgb(12 12 10 / 0.8);
+  border-bottom: 5px solid rgb(12 12 10 / 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: auto 1fr 1fr auto auto;
+  gap: 1rem;
+  max-width: 60vw;
+  transform: rotate(-47deg) scale(0.9);
+  transform-origin: center;
+}
+
+h1 {
+  grid-column: 1 / 4;
+}
+
+h2 {
+  grid-area: 2 / 3 / 5 / 4;
+  justify-self: end;
+}
+
+.lists {
+  grid-area: 4 / 1 / span 2 / 3;
+}
+
+.workshop {
+  grid-area: 3 / 4 / 4 / 6;
+}
+
+.follow {
+  grid-area: 5 / 3 / 6 / 6;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <!-- HTML -->
+<div class="grid__container">
+  <h1>The Experimental Layout Lab</h1>
+  <h2>of Jen Simmons</h2>
+  <div class="lists">
+    <h3>The Conference Talks</h3>
+    <ul>
+      <li>
+        <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">Modern Layouts: Getting Out of Our Ruts</a>
+      </li>
+      <li>
+        <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">Revolutionize Your Page: Real Art Direction on the Web</a>
+      </li>
+      <li>
+        <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">Designing with Grid</a>
+      </li>
+      <li>
+        <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">Everything You Know About Web Design Just Changed</a>
+      </li>
+      <li>
+        <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">Designing Intrinsic Layouts</a>
+      </li>
+    </ul>
+  </div>
+  <ul class="workshop">
+    <li>
+      <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">Layout Land Videos</a>
+    </li>
+    <li>
+      <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">jensimmons.com</a>
+    </li>
+  </ul>
+  <p class="follow">Follow <a href="https://cdpn.io/airen/fullembedgrid/NWvgEGW?animations=run&amp;type=embed#">@jensimmons</a> on Twitter for more as it happens.</p>
+</div>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

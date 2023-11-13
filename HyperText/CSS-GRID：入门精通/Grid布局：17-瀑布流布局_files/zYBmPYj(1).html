@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/zYBmPYj?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - Masonry Layout: align-tracks</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/zYBmPYj">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: calc(100vw - 12px);
+  min-height: calc(100vh - 12px);
+  counter-reset: section;
+  font-family: "Exo", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #222;
+  border: 1px dashed #fff;
+  margin: 5px;
+}
+
+.item {
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  height: 10vh;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.item::before {
+  counter-increment: section;
+  content: counter(section);
+  background-image: radial-gradient(
+      50% 105%,
+      #fffff5 15%,
+      #fff3d5 31%,
+      #ffd484 100%
+    ),
+    radial-gradient(51% 200%, #fffcf5 100%, rgba(251, 213, 142, 0) 100%),
+    radial-gradient(50% 103%, #ff5f49 15%, #ff1919 100%);
+  background-origin: border-box;
+  background-clip: padding-box, padding-box, border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 10px 0 rgba(96, 43, 43, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 0px 0 rgb(103 105 171), 0px 1px 0 rgb(221 17 17),
+    -1px 0px 0 rgb(113 12 206), 0px -1px 0 rgb(207 107 225),
+    2px 0px 0 rgb(103 105 171), 0px 2px 0 rgb(221 17 17),
+    -2px 0px 0 rgb(113 12 206), 0px -2px 0 rgb(207 107 225);
+  width: 32px;
+  height: 32px;
+  mix-blend-mode: difference;
+  filter: hue-rotate(180deg);
+  -webkit-backdrop-filter: saturate(0.8);
+          backdrop-filter: saturate(0.8);
+}
+
+.item:nth-child(2n) {
+  height: 14vh;
+}
+.item:nth-child(3n) {
+  height: 18vh;
+}
+.item:nth-child(4n) {
+  height: 22vh;
+}
+.item:nth-child(5n) {
+  height: 24vh;
+}
+.item:nth-child(6n) {
+  height: 30vh;
+}
+.item:nth-child(7n) {
+  height: 34vh;
+}
+
+.item:nth-child(8n) {
+  height: 40vh;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  z-index: 999;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+}
+
+footer label {
+  margin: 0 5px;
+}
+
+:root {
+  --justify-content: normal;
+  --align-content: normal;
+  --align-tracks: normal;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  grid-template-rows: masonry;
+  gap: 10px;
+
+  justify-content: var(--justify-content);
+  align-content: var(--align-content);
+  align-tracks: var(--align-tracks);
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <footer>
+  <div class="control">
+    <label for="justify-content">justify-content:</label>
+    <select name="justify-content" id="justify-content">
+      <option value="normal">normal</option>
+      <optgroup label="content-distribution">
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+      </optgroup>
+      <optgroup label="overflow-position">
+        <option value="unsafe">unsafe</option>
+        <option value="safe">safe</option>
+      </optgroup>
+      <optgroup label="content-position">
+        <option value="center">center</option>
+        <option value="start">start</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+      </optgroup>
+      <option value="left">left</option>
+      <option value="right">right</option>
+    </select>
+  </div>
+  <div class="control">
+    <label for="align-content">align-content:</label>
+    <select name="align-content" id="align-content">
+      <option value="normal">normal</option>
+      <optgroup label="baseline-position">
+        <option value="baseline">baseline</option>
+        <option value="first baseline">first baseline</option>
+        <option value="last baseline">last baseline</option>
+      </optgroup>
+      <optgroup label="content-distribution">
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+      </optgroup>
+      <optgroup label="overflow-position">
+        <option value="unsafe">unsafe</option>
+        <option value="safe">safe</option>
+      </optgroup>
+      <optgroup label="content-position">
+        <option value="center">center</option>
+        <option value="start">start</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+      </optgroup>
+    </select>
+  </div>
+  <div class="control">
+    <label for="align-tracks">align-tracks:</label>
+    <select name="align-tracks" id="align-tracks">
+      <option value="normal">normal</option>
+      <optgroup label="baseline-position">
+        <option value="baseline">baseline</option>
+        <option value="first baseline">first baseline</option>
+        <option value="last baseline">last baseline</option>
+      </optgroup>
+      <optgroup label="content-distribution">
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+      </optgroup>
+      <optgroup label="overflow-position">
+        <option value="unsafe">unsafe</option>
+        <option value="safe">safe</option>
+      </optgroup>
+      <optgroup label="content-position">
+        <option value="center">center</option>
+        <option value="start">start</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+      </optgroup>
+    </select>
+  </div>
+</footer>
+  
+      <script id="rendered-js">
+for (let i = 0; i <= 10; i++) {if (window.CP.shouldStopExecution(0)) break;
+  const div = document.createElement("div");
+  div.classList.add("item");
+  div.style.backgroundImage = `url(https://picsum.photos/500/500?random=${i})`;
+  document.body.appendChild(div);
+}window.CP.exitedLoop(0);
+
+const rootElement = document.documentElement;
+
+const selects = document.querySelectorAll("select");
+
+selects.forEach((select) =>
+select.addEventListener("change", e => {
+  rootElement.style.setProperty(`--${e.target.id}`, e.target.value);
+}));
+//# sourceURL=pen.js
+    </script><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=0&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=1&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=2&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=3&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=4&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=5&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=6&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=7&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=8&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=9&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=10&quot;);"></div>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

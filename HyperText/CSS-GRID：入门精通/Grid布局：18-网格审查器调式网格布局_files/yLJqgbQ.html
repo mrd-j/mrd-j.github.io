@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/yLJqgbQ?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - Masonry Layout with CSS Multi-column</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/yLJqgbQ">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  counter-reset: section;
+  font-family: "Exo", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.item {
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  height: 10em;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+
+.item::before {
+  counter-increment: section;
+  content: counter(section);
+  background-image: radial-gradient(
+      50% 105%,
+      #fffff5 15%,
+      #fff3d5 31%,
+      #ffd484 100%
+    ),
+    radial-gradient(51% 200%, #fffcf5 100%, rgba(251, 213, 142, 0) 100%),
+    radial-gradient(50% 103%, #ff5f49 15%, #ff1919 100%);
+  background-origin: border-box;
+  background-clip: padding-box, padding-box, border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 10px 0 rgba(96, 43, 43, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 2em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 0px 0 rgb(103 105 171), 0px 1px 0 rgb(221 17 17),
+    -1px 0px 0 rgb(113 12 206), 0px -1px 0 rgb(207 107 225),
+    2px 0px 0 rgb(103 105 171), 0px 2px 0 rgb(221 17 17),
+    -2px 0px 0 rgb(113 12 206), 0px -2px 0 rgb(207 107 225);
+  width: 48px;
+  height: 48px;
+  mix-blend-mode: difference;
+  filter: hue-rotate(180deg);
+  -webkit-backdrop-filter: saturate(0.8);
+          backdrop-filter: saturate(0.8);
+}
+
+.item:nth-child(2n) {
+  height: 14em;
+}
+.item:nth-child(3n) {
+  height: 18em;
+}
+.item:nth-child(4n) {
+  height: 22em;
+}
+.item:nth-child(5n) {
+  height: 24em;
+}
+.item:nth-child(6n) {
+  height: 30em;
+}
+.item:nth-child(7n) {
+  height: 34em;
+}
+
+.item:nth-child(8n) {
+  height: 40em;
+}
+
+body {
+  -moz-column-count: 4;
+       column-count: 4;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  
+  
+      <script id="rendered-js">
+for (let i = 0; i <= 50; i++) {if (window.CP.shouldStopExecution(0)) break;
+  const div = document.createElement("div");
+  div.classList.add("item");
+  div.style.backgroundImage = `url(https://picsum.photos/500/500?random=${i})`;
+  document.body.appendChild(div);
+}window.CP.exitedLoop(0);
+//# sourceURL=pen.js
+    </script><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=0&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=1&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=2&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=3&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=4&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=5&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=6&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=7&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=8&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=9&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=10&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=11&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=12&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=13&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=14&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=15&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=16&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=17&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=18&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=19&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=20&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=21&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=22&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=23&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=24&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=25&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=26&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=27&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=28&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=29&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=30&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=31&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=32&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=33&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=34&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=35&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=36&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=37&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=38&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=39&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=40&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=41&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=42&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=43&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=44&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=45&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=46&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=47&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=48&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=49&quot;);"></div><div class="item" style="background-image: url(&quot;https://picsum.photos/500/500?random=50&quot;);"></div>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

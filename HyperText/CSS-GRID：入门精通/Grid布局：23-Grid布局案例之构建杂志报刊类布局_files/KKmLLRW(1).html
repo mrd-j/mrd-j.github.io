@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://codepen.io/Jakeyikapp/embed/KKmLLRW?default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Food truck menu CPC using CSS grid</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="uEkg3luIDBt5iqvKIIHaM8RxrkywMtY03UKKVBn9fsp+VZZA/eFV1FYbJ37r9gFAQZzUgVAkJWbg/lqEzoFHVA==">
+<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/Jakeyikapp/embed/KKmLLRW?default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/Jakeyikapp/embed/KKmLLRW?default-tab=result#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/Jakeyikapp/embed/KKmLLRW?default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/Jakeyikapp/embed/KKmLLRW?default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/Jakeyikapp/pen/KKmLLRW" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"background"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"whole-menu"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"header"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"logo quick-logo"</span><span class="cm-tag cm-bracket">&gt;</span>QUICK<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"logo eats-logo"</span><span class="cm-tag cm-bracket">&gt;</span>EATS<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container bar-container hotdog-menu"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bar-title-hotdog"</span><span class="cm-tag cm-bracket">&gt;</span>Hot Dogs<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"items right-spacer"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Hot Dog<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Chilli Dog<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>5.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Veggie Hot Dog<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container bar-container burger-menu"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bar-title-burgurs"</span><span class="cm-tag cm-bracket">&gt;</span>Burgers<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"items left-spacer"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Hamburger<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Cheeseburger<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.50<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Double Cheese<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>4.50<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Veggie Burger<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container right-spacer filled-container sides-menu"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"round-titles"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"sides"</span><span class="cm-tag cm-bracket">&gt;</span>Glorious<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">&gt;</span>Sides<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"items filled-items"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Chips<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>1.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Fries<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>2.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Sweet Potato Fries<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Onion Rings<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Cheese sticks<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>3.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Jalepeno poppers<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>2.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container left-spacer outline-container chili-menu"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"round-titles thin-titles"</span><span class="cm-tag cm-bracket">&gt;</span>Chili<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"items"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Cup<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>2.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Bowl<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>4.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container right-spacer outline-container drinks-menu"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"items"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>20oz<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>1.50<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>32oz<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price"</span><span class="cm-tag cm-bracket">&gt;</span>2.00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span> <span class="cm-attribute">class</span>=<span class="cm-string">"thin-titles"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"opposite-round"</span><span class="cm-tag cm-bracket">&gt;</span>Drinks<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"combo-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"combo"</span><span class="cm-tag cm-bracket">&gt;</span>COMBO<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"combo-description"</span><span class="cm-tag cm-bracket">&gt;</span>Includes a hamburger, veggie burger or a regular hot dog with any side and a drink.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"price-sticker"</span><span class="cm-tag cm-bracket">&gt;</span>$5
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://assets.codepen.io/1026437/jlSqLogo.png"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">"jl-logo"</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css2?family=Noto+Sans&amp;family=Oswald:wght@400;500&amp;display=swap"</span>);
+
+<span class="cm-tag">img</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">3rem</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">fixed</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">opacity</span>: <span class="cm-number">40%</span>;
+}
+
+* {
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#c2f2ec</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+}
+
+<span class="cm-qualifier">.background</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#e5fff3</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">1rem</span>;
+  <span class="cm-property">margin</span>: <span class="cm-atom">auto</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">10deg</span>);
+}
+
+<span class="cm-qualifier">.whole-menu</span> {
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">1rem</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#c1ffd8</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">gap</span>: <span class="cm-number">0.8rem</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">2</span>, <span class="cm-number">1fr</span>);
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-number">24%</span> <span class="cm-number">33%</span> <span class="cm-atom">auto</span> <span class="cm-number">18%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">32.7rem</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-10deg</span>);
+  <span class="cm-property">width</span>: <span class="cm-number">25rem</span>;
+}
+
+<span class="cm-qualifier">.header</span> {
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#4b7b81</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">1rem</span> <span class="cm-number">0</span> <span class="cm-number">0.65rem</span> <span class="cm-number">0</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">justify-items</span>: <span class="cm-atom">end</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+}
+
+<span class="cm-qualifier">.logo</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Oswald"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">3.125rem</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">400</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">0.4375rem</span>;
+}
+
+<span class="cm-qualifier">.quick-logo</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#ffd370</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">0.9</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">10px</span> <span class="cm-number">0px</span> <span class="cm-number">2px</span> <span class="cm-number">0</span>;
+}
+
+<span class="cm-qualifier">.eats-logo</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#ff9b9c</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">0.625rem</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">1rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">1rem</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#4b7b81</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">500</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.05</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0.3rem</span> <span class="cm-number">0.875rem</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+}
+
+<span class="cm-qualifier">.hotdog-menu</span> {
+  <span class="cm-property">align-self</span>: <span class="cm-atom">end</span>;
+}
+
+<span class="cm-qualifier">.items</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#6a696a</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Noto Sans"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">0.8125rem</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.7</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0.5rem</span>;
+}
+
+<span class="cm-qualifier">.left-spacer</span> {
+  <span class="cm-property">margin-left</span>: <span class="cm-number">1rem</span>;
+}
+
+<span class="cm-qualifier">.right-spacer</span> {
+  <span class="cm-property">margin-right</span>: <span class="cm-number">1rem</span>;
+}
+
+<span class="cm-tag">h2</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#4b7b81</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#ffd370</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Oswald"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1rem</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">400</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">0.1rem</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0.13rem</span> <span class="cm-number">0.5rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">end</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+}
+
+<span class="cm-qualifier">.bar-title-hotdog</span> {
+  <span class="cm-property">border-radius</span>: <span class="cm-number">1rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">1rem</span>;
+  <span class="cm-property">padding-right</span>: <span class="cm-number">1.5em</span>;
+}
+
+<span class="cm-qualifier">.bar-title-burgurs</span> {
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0</span> <span class="cm-number">1rem</span> <span class="cm-number">1rem</span> <span class="cm-number">0</span>;
+}
+
+<span class="cm-qualifier">.price</span> {
+  <span class="cm-property">float</span>: <span class="cm-atom">right</span>;
+}
+
+<span class="cm-builtin">#sides</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#ff9b9c</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#4b7b81</span>;
+}
+<span class="cm-qualifier">.sides-menu</span> {
+  <span class="cm-property">align-self</span>: <span class="cm-atom">start</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#ff9b9c</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">1rem</span>;
+}
+
+<span class="cm-qualifier">.filled-items</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#6a696a</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">11px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">5px</span> <span class="cm-number">12px</span> <span class="cm-number">12px</span> <span class="cm-number">12px</span>;
+}
+
+<span class="cm-qualifier">.round-titles</span> {
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0.7rem</span> <span class="cm-number">0.7rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+}
+
+<span class="cm-builtin">#opposite-round</span> {
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0.7rem</span> <span class="cm-number">0.7rem</span>;
+}
+
+<span class="cm-qualifier">.outline-container</span> {
+  <span class="cm-property">border</span>: <span class="cm-number">0.125rem</span> <span class="cm-atom">solid</span> <span class="cm-atom">#4b7b81</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">1.1rem</span>;
+}
+
+<span class="cm-qualifier">.combo-container</span> {
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-self</span>: <span class="cm-atom">start</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#ff9b9c</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0</span> <span class="cm-number">1rem</span> <span class="cm-number">1rem</span> <span class="cm-number">0</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> / <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-number">12.5rem</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">85%</span>;
+  <span class="cm-property">margin-right</span>: <span class="cm-number">1rem</span>;
+  <span class="cm-property">padding-right</span>: <span class="cm-number">0.8rem</span>;
+}
+
+<span class="cm-qualifier">.combo</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#4b7b81</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Oswald"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">2.5rem</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">400</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">0.4375rem</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">end</span>;
+}
+
+<span class="cm-qualifier">.combo-description</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#6a696a</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">0.75em</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Noto Sans"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.3</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">2em</span> <span class="cm-number">0</span> <span class="cm-number">1em</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+}
+
+<span class="cm-qualifier">.price-sticker</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#fed370</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">3.5rem</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#4b7b81</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"chalkduster"</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.5rem</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">3rem</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">3rem</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">0.1875rem</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">25deg</span>);
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">3rem</span>;
+}
+
+<span class="cm-comment">/* colors ---</span>
+
+<span class="cm-comment">dark green : #4b7b81</span>
+<span class="cm-comment">dark grey for text : #6a696a</span>
+<span class="cm-comment">yellow : #ffd370</span>
+<span class="cm-comment">red : #ff9b9c</span>
+
+<span class="cm-comment">*/</span>
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Food truck menu CPC using CSS grid" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Food truck menu CPC using CSS grid" data-src="https://cdpn.io/Jakeyikapp/fullembedgrid/KKmLLRW?animations=run&amp;type=embed" src="./KKmLLRW.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/Jakeyikapp" target="_blank" rel="noopener"><img src="./default(3).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/Jakeyikapp" target="_blank" rel="noopener">Jakob Lewis</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/Jakeyikapp" target="_blank" rel="noopener" class="about-user-more">
+See more by @Jakeyikapp on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;background&quot;&gt;\n\t&lt;div class=&quot;whole-menu&quot;&gt;\n\t\t&lt;header class=&quot;header&quot;&gt;\n\t\t\t&lt;div class=&quot;logo quick-logo&quot;&gt;QUICK&lt;/div&gt;\n\t\t\t&lt;div class=&quot;logo eats-logo&quot;&gt;EATS&lt;/div&gt;\n\t\t&lt;/header&gt;\n\t\t&lt;div class=&quot;container bar-container hotdog-menu&quot;&gt;\n\t\t\t&lt;h2 class=&quot;bar-title-hotdog&quot;&gt;Hot Dogs&lt;/h2&gt;\n\t\t\t&lt;div class=&quot;items right-spacer&quot;&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Hot Dog&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;3.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Chilli Dog&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;5.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Veggie Hot Dog&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;3.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t\t&lt;div class=&quot;container bar-container burger-menu&quot;&gt;\n\t\t\t&lt;h2 class=&quot;bar-title-burgurs&quot;&gt;Burgers&lt;/h2&gt;\n\t\t\t&lt;div class=&quot;items left-spacer&quot;&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Hamburger&lt;/span&gt;\n\t\t\t\t\t&lt;span class=&quot;price&quot;&gt;3.00&lt;/span&gt;\n\t\t\t\t&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Cheeseburger&lt;/span&gt;\n\t\t\t\t\t&lt;span class=&quot;price&quot;&gt;3.50&lt;/span&gt;\n\t\t\t\t&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Double Cheese&lt;/span&gt;\n\t\t\t\t\t&lt;span class=&quot;price&quot;&gt;4.50&lt;/span&gt;\n\t\t\t\t&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Veggie Burger&lt;/span&gt;\n\t\t\t\t\t&lt;span class=&quot;price&quot;&gt;3.00&lt;/span&gt;\n\t\t\t\t&lt;/p&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t\t&lt;div class=&quot;container right-spacer filled-container sides-menu&quot;&gt;\n\t\t\t&lt;h2 class=&quot;round-titles&quot; id=&quot;sides&quot;&gt;Glorious&lt;br&gt;Sides&lt;/h2&gt;\n\t\t\t&lt;div class=&quot;items filled-items&quot;&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Chips&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;1.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Fries&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;2.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Sweet Potato Fries&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;3.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Onion Rings&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;3.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Cheese sticks&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;3.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Jalepeno poppers&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;2.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t\t&lt;div class=&quot;container left-spacer outline-container chili-menu&quot;&gt;\n\t\t\t&lt;h2 class=&quot;round-titles thin-titles&quot;&gt;Chili&lt;/h2&gt;\n\t\t\t&lt;div class=&quot;items&quot;&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Cup&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;2.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;Bowl&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;4.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t\t&lt;div class=&quot;container right-spacer outline-container drinks-menu&quot;&gt;\n\t\t\t&lt;div class=&quot;items&quot;&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;20oz&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;1.50&lt;/span&gt;&lt;/p&gt;\n\t\t\t\t&lt;p&gt;&lt;span&gt;32oz&lt;/span&gt; &lt;span class=&quot;price&quot;&gt;2.00&lt;/span&gt;&lt;/p&gt;\n\t\t\t&lt;/div&gt;\n\t\t\t&lt;h2 class=&quot;thin-titles&quot; id=&quot;opposite-round&quot;&gt;Drinks&lt;/h2&gt;\n\t\t&lt;/div&gt;\n\t\t&lt;div class=&quot;combo-container&quot;&gt;\n\t\t\t&lt;p class=&quot;combo&quot;&gt;COMBO&lt;/p&gt;\n\t\t\t&lt;p class=&quot;combo-description&quot;&gt;Includes a hamburger, veggie burger or a regular hot dog with any side and a drink.&lt;/p&gt;\n\n\t\t&lt;/div&gt;\n\t\t&lt;div class=&quot;price-sticker&quot;&gt;$5\n\t\t&lt;/div&gt;\n\n\t&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;img src=&quot;https://assets.codepen.io/1026437/jlSqLogo.png&quot; alt=&quot;jl-logo&quot;&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css2?family=Noto+Sans&amp;family=Oswald:wght@400;500&amp;display=swap&quot;);\n\nimg {\n\theight: 3rem;\n\tposition: fixed;\n\tbottom: 0;\n\tright: 0;\n\topacity: 40%;\n}\n\n* {\n\tmargin: 0;\n}\n\nbody {\n\tbackground: #c2f2ec;\n\tdisplay: flex;\n\theight: 100vh;\n\tmargin: 0;\n}\n\n.background {\n\tbackground: #e5fff3;\n\tborder-radius: 1rem;\n\tmargin: auto;\n\ttransform: rotate(10deg);\n}\n\n.whole-menu {\n\talign-items: center;\n\tborder-radius: 1rem;\n\tbackground: #c1ffd8;\n\tdisplay: grid;\n\tgap: 0.8rem;\n\tgrid-template-columns: repeat(2, 1fr);\n\tgrid-template-rows: 24% 33% auto 18%;\n\theight: 32.7rem;\n\ttransform: rotate(-10deg);\n\twidth: 25rem;\n}\n\n.header {\n\talign-items: center;\n\tbackground: #4b7b81;\n\tborder-radius: 1rem 0 0.65rem 0;\n\tdisplay: grid;\n\theight: 100%;\n\tjustify-items: end;\n\twidth: 100%;\n}\n\n.logo {\n\tfont-family: &quot;Oswald&quot;, sans-serif;\n\tfont-size: 3.125rem;\n\tfont-weight: 400;\n\tletter-spacing: 0.4375rem;\n}\n\n.quick-logo {\n\tcolor: #ffd370;\n\tline-height: 0.9;\n\tpadding: 10px 0px 2px 0;\n}\n\n.eats-logo {\n\tbackground: #ff9b9c;\n\tbottom: 0.625rem;\n\tborder-radius: 1rem 0 0 1rem;\n\tcolor: #4b7b81;\n\tfont-weight: 500;\n\tline-height: 1.05;\n\tpadding: 0 0 0.3rem 0.875rem;\n\tposition: relative;\n}\n\n.hotdog-menu {\n\talign-self: end;\n}\n\n.items {\n\tcolor: #6a696a;\n\tfont-family: &quot;Noto Sans&quot;, sans-serif;\n\tfont-size: 0.8125rem;\n\tline-height: 1.7;\n\tmargin: 0;\n\tpadding: 0.5rem;\n}\n\n.left-spacer {\n\tmargin-left: 1rem;\n}\n\n.right-spacer {\n\tmargin-right: 1rem;\n}\n\nh2 {\n\tbackground: #4b7b81;\n\tcolor: #ffd370;\n\tfont-family: &quot;Oswald&quot;, sans-serif;\n\tfont-size: 1rem;\n\tfont-weight: 400;\n\tletter-spacing: 0.1rem;\n\tmargin: 0;\n\tpadding: 0.13rem 0.5rem 0 0;\n\ttext-align: end;\n\ttext-transform: uppercase;\n}\n\n.bar-title-hotdog {\n\tborder-radius: 1rem 0 0 1rem;\n\tpadding-right: 1.5em;\n}\n\n.bar-title-burgurs {\n\tborder-radius: 0 1rem 1rem 0;\n}\n\n.price {\n\tfloat: right;\n}\n\n#sides {\n\tbackground: #ff9b9c;\n\tcolor: #4b7b81;\n}\n.sides-menu {\n\talign-self: start;\n\tbackground: #ff9b9c;\n\tborder-radius: 1rem;\n}\n\n.filled-items {\n\tcolor: #6a696a;\n\tfont-size: 11px;\n\tpadding: 5px 12px 12px 12px;\n}\n\n.round-titles {\n\tborder-radius: 0.7rem 0.7rem 0 0;\n}\n\n#opposite-round {\n\tborder-radius: 0 0 0.7rem 0.7rem;\n}\n\n.outline-container {\n\tborder: 0.125rem solid #4b7b81;\n\tborder-radius: 1.1rem;\n}\n\n.combo-container {\n\talign-items: center;\n\talign-self: start;\n\tbackground: #ff9b9c;\n\tborder-radius: 0 1rem 1rem 0;\n\tdisplay: grid;\n\tgrid-column: 1 / span 2;\n\tgrid-template-columns: 12.5rem auto;\n\theight: 85%;\n\tmargin-right: 1rem;\n\tpadding-right: 0.8rem;\n}\n\n.combo {\n\tcolor: #4b7b81;\n\tfont-family: &quot;Oswald&quot;, sans-serif;\n\tfont-size: 2.5rem;\n\tfont-weight: 400;\n\tletter-spacing: 0.4375rem;\n\ttext-align: end;\n}\n\n.combo-description {\n\tcolor: #6a696a;\n\tfont-size: 0.75em;\n\tfont-family: &quot;Noto Sans&quot;, sans-serif;\n\tline-height: 1.3;\n\tpadding: 0 2em 0 1em;\n\ttext-align: center;\n}\n\n.price-sticker {\n\tbackground: #fed370;\n\tborder-radius: 50%;\n\tbottom: 3.5rem;\n\tcolor: #4b7b81;\n\tfont-family: &quot;chalkduster&quot;;\n\tfont-size: 1.5rem;\n\theight: 3rem;\n\tline-height: 3rem;\n\tposition: absolute;\n\tright: 0.1875rem;\n\ttransform: rotate(25deg);\n\ttext-align: center;\n\twidth: 3rem;\n}\n\n/* colors ---\n\ndark green : #4b7b81\ndark grey for text : #6a696a\nyellow : #ffd370\nred : #ff9b9c\n\n*/","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+
+</body></html>

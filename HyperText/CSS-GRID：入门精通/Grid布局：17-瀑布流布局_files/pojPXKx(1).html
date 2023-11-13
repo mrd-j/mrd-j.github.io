@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://cdpn.io/iamvdo/fullembedgrid/pojPXKx?animations=run&type=embed -->
+<html lang="en" class=" -webkit-"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - CSS Houdini Layout API: Masonry</title>
+
+    <link rel="canonical" href="https://codepen.io/iamvdo/pen/pojPXKx">
+  
+  <style media="" data-href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}/*# sourceMappingURL=normalize.min.css.map */</style>
+
+  
+  
+<style>
+#masonry {
+  display: layout(masonry);
+  --padding: 20;
+  --columns: 3;
+}
+#masonry > div {
+  background: #ff0;
+  color: #111;
+  font: 1em sans-serif;
+  padding: 20px;
+}
+#masonry > div:nth-child(odd) {
+  background: #08c4c4;
+}
+#masonry > div::first-letter {
+  font-size: 200%;
+} 
+
+
+
+
+
+
+
+/* styles */
+html {
+  background: #112;
+}
+</style>
+
+  
+  <script src="./prefixfree.min.js.下载"></script>
+
+  
+</head>
+
+<body translate="no">
+  <div id="masonry"> <div>1 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret. Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div> <div>2 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div> <div>3 Lorem ipsum dolor sit amet.</div> <div>4 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div> <div>5 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an.</div> <div>6 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea.</div> <div>7 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div> <div>8 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix.</div> <div>9 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea..</div> </div>
+
+<script>
+CSS.layoutWorklet.addModule('/iamvdo/pen/pojPXKx.js');
+</script>
+  
+      <script id="rendered-js">
+/**
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+if (typeof registerLayout !== undefined) {
+  registerLayout('masonry', class {
+    static get inputProperties() {
+      return ['--padding', '--columns'];
+    }
+
+    async intrinsicSizes() {/* TODO implement :) */}
+    async layout(children, edges, constraints, styleMap) {
+      const inlineSize = constraints.fixedInlineSize;
+
+      const padding = parseInt(styleMap.get('--padding').toString());
+      const columnValue = styleMap.get('--columns').toString();
+
+      // We also accept 'auto', which will select the BEST number of columns.
+      let columns = parseInt(columnValue);
+      if (columnValue == 'auto' || !columns) {
+        columns = Math.ceil(inlineSize / 350); // MAGIC NUMBER \o/.
+      }
+
+      // Layout all children with simply their column size.
+      const childInlineSize = (inlineSize - (columns + 1) * padding) / columns;
+      const childFragments = await Promise.all(children.map(child => {
+        return child.layoutNextFragment({ fixedInlineSize: childInlineSize });
+      }));
+
+      let autoBlockSize = 0;
+      const columnOffsets = Array(columns).fill(0);
+      for (let childFragment of childFragments) {
+        // Select the column with the least amount of stuff in it.
+        const min = columnOffsets.reduce((acc, val, idx) => {
+          if (!acc || val < acc.val) {
+            return { idx, val };
+          }
+
+          return acc;
+        }, { val: +Infinity, idx: -1 });
+
+        childFragment.inlineOffset = padding + (childInlineSize + padding) * min.idx;
+        childFragment.blockOffset = padding + min.val;
+
+        columnOffsets[min.idx] = childFragment.blockOffset + childFragment.blockSize;
+        autoBlockSize = Math.max(autoBlockSize, columnOffsets[min.idx] + padding);
+      }
+
+      return { autoBlockSize, childFragments };
+    }});
+
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - CSS Grid: Newspaper Layout</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="1+4cvhfG+yJDUBWvd2meU66I2j+dnah0wfUNhkr5aYAR8qogsa+i7WzBmRu8HkUgK2Wg8n2LWyb8Sd1WnYVQHg==">
+<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result#html-box" role="button" aria-pressed="false">
+Pug
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/oliviale/pen/BaoXOOP" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="pug" id="actual-html-code" class=" cm-s-default"><span class="cm-qualifier">.main__wrapper</span>
+<span class="cm-indent">  </span><span class="cm-tag">main</span>
+<span class="cm-indent">    </span><span class="cm-tag">h1</span><span class="cm-string"> The Codepen Times</span>
+<span class="cm-indent">    </span><span class="cm-tag">aside</span> 
+<span class="cm-indent">      </span><span class="cm-tag">div</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.issue</span><span class="cm-string"> Issue #1 </span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.date</span><span class="cm-string"> Tuesday, 26 May, 2020</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.edition</span><span class="cm-string"> Two memes Edition</span>
+
+<span class="cm-indent">    </span><span class="cm-tag">h2</span><span class="cm-qualifier">.title--large</span><span class="cm-qualifier">.main-title</span><span class="cm-string"> Woman spends too much time on Codepens despite advice; no plans to stop</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.main-text</span><span class="cm-qualifier">.multi-column</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> Sometimes, Internet users land themselves in an uncommon situation where an app or website can be used for both work and personal situations. Well, a young front-end designer was spending up to 13 hours on the site, Codepen for work and her hobby, which unfortunately, is also coding. </span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> The designer, whose work includes a  </span>
+<span class="cm-indent">          </span><span class="cm-tag">em</span><span class="cm-string"> To-Do Terrarium</span>
+<span class="cm-indent">          </span><span class="cm-string">| , clarified, "Well, I didn't  </span>
+<span class="cm-indent">          </span><span class="cm-tag">em</span><span class="cm-string">  have  </span>
+<span class="cm-indent">          </span><span class="cm-string">| to use it for work but it was already part of my workflow. It just made sense as it was more efficient."   The biggest issue, she said, is that she would hop on Codepen for work, but would get distracted by pens made by others in the community for unexpectedly long periods of time, which then causes her to spend even more time on the site.</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string">  "I mean, that's terrible right?" she asked. Codepen, which brands itself as the best place to build, test, and discover front-end code, has declined to comment at this time.</span>
+
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/oNXJgEM"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.terrarium</span>
+<span class="cm-indent">      </span><span class="cm-tag">figure</span>
+<span class="cm-indent">        </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-terrarium.jpg"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">        </span><span class="cm-tag">figcaption</span><span class="cm-string"> A to-do list that grows succulents when you've completed a task</span>
+
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/moLrBq"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.item-with-image</span><span class="cm-qualifier">.plan</span><span class="cm-qualifier">.span--2</span><span class="cm-qualifier">.long--2</span>
+<span class="cm-indent">      </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-floorplan.jpg"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">      </span><span class="cm-tag">h4</span><span class="cm-string"> Can you get inspired to make your own floor plans?</span>
+<span class="cm-indent">      </span><span class="cm-tag">div</span><span class="cm-qualifier">.multi-column</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> Making a floor Plan with CSS Grid? Talk about using the wrong tool for the job. But I guess this is what happens when someone isn't happy with any of the floor plans found on Pinterest; she'll start making her own for the eventual home that she will never own. Nevertheless, there's a home office with a large window to look out of pensively during rainy days and a ton of "white space" for the cats to run around.</span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/MZZYyO"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.hogwarts</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.hogwarts__title</span><span class="cm-string"> 50% Off Hogwarts Express tickets</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.hogwarts__image</span> 
+<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-string"> Limited time offer</span>
+<span class="cm-indent">        </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-hogwarts.svg"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/zYvxXWw"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.item-with-image</span><span class="cm-qualifier">.pasta</span><span class="cm-qualifier">.with-border</span>
+<span class="cm-indent">        </span><span class="cm-tag">h4</span><span class="cm-string"> A pasta menu</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> Everybody loves pasta. It's impossible to not love them, so here are 15 recipes, served with GSAP. Note the easter egg — the menu icon changes according to the pasta that you choose.</span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">        </span>
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/GRKQoKM"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.item-with-image</span><span class="cm-qualifier">.magazine</span><span class="cm-qualifier">.with-border</span>
+<span class="cm-indent">        </span><span class="cm-tag">h4</span><span class="cm-string"> Marvel at a magazine</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> A tribute of sorts to an era of cool superhero movies, this is a Marvel-themed magazine! Recommended, because it took 45 hours, so you know some serious dedication has been poured into this.</span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/collection/XJyNPm"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.item-with-image</span><span class="cm-qualifier">.style</span>
+<span class="cm-indent">        </span><span class="cm-tag">h4</span><span class="cm-string"> Let's adopt, don't shop.</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> Explore a style guide and various page layouts for a pet adoption site in the  </span>
+<span class="cm-indent">          </span><span class="cm-tag">em</span><span class="cm-string"> Style Guide</span>
+<span class="cm-indent">          </span><span class="cm-string">|  collection. Inspired by the </span>
+<span class="cm-indent">          </span><span class="cm-tag">em</span><span class="cm-string"> Atomic Design</span>
+<span class="cm-indent">          </span><span class="cm-string">|  principle, this 8-pen collection includes a 404 page concept, an admin dashboard and what a Twitter user calls a 'media card zen garden'. Each pen comes with five (yes, five) color themes, including the  precious dark mode.</span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/xxboXzo"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.item-with-image</span><span class="cm-qualifier">.toggles</span>
+<span class="cm-indent">        </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-toggle.gif"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">        </span><span class="cm-tag">h4</span><span class="cm-string"> Toggles</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> Eight playful toggles to toggle on and off for your amusement. Is it possible to use these on your site and still adhere to assessibility rules? No. But there's a really cute dog one you </span>
+<span class="cm-indent">          </span><span class="cm-tag">em</span><span class="cm-string"> have  </span>
+<span class="cm-indent">          </span><span class="cm-string">| to see.</span>
+<span class="cm-indent">        </span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/LYYrKMV"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.menu</span>
+<span class="cm-indent">      </span><span class="cm-tag">figure</span>
+<span class="cm-indent">        </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-menu.jpg"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">        </span><span class="cm-tag">figcaption</span><span class="cm-string"> See the new and improved menu for Toasty!</span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/QWjjrZX"</span> <span class="cm-attribute">tagrget</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.social</span>
+<span class="cm-indent">      </span><span class="cm-tag">img</span><span class="cm-qualifier">.social__image</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-social.gif"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.social__subtitle</span><span class="cm-string"> World News</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.social__content</span><span class="cm-string"> Looks like Covid-19 is gonna be around for a while so here is another friendly reminder to practice social distancing. Oh, and wear a mask! </span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.item-with-image</span><span class="cm-qualifier">.cssgrid-collection</span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/collection/DQvYpQ"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.cssgrid-collection__image</span>
+<span class="cm-indent">        </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-co-grid.jpg"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.cssgrid-collection__content</span>
+<span class="cm-indent">        </span><span class="cm-tag">h4</span> 
+<span class="cm-indent">          </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/collection/DQvYpQ"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> More CSS Grid things like this one. Shelves, coupons and more!  </span>
+<span class="cm-indent">        </span><span class="cm-tag">div</span><span class="cm-qualifier">.multi-column-3</span>
+<span class="cm-indent">          </span><span class="cm-tag">p</span><span class="cm-string"> Get your fill of more CSS Grid items in this collection. There are a total of 32 pens to date... well, 33, if you count this one too. What can you expect in this collection? The hidden gems, in my totally  unbiased opinion, are </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/wbyVWr"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> the recreation of the Pac-Man layout</span>
+<span class="cm-indent">            </span><span class="cm-string">|  and  </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/pen/wbyVWr"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> coupons inspired by junk mail</span>
+<span class="cm-indent">            </span><span class="cm-string">|. A lot of joke items of things that shouldn't be done in CSS Grid, such as </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/PXGgMG"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> a shelf</span>
+<span class="cm-indent">            </span><span class="cm-string">| ?   </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/qggOog"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> Bathroom tiles wtf</span>
+<span class="cm-indent">            </span><span class="cm-string">| ? and  </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/bOWqbj"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> makeup palettes </span>
+<span class="cm-indent">            </span><span class="cm-string">| . If you are a cultured person, you will have a chance to enjoy a couple of pens inspired by </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/JxVZpX"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> Harry Potter  </span>
+<span class="cm-indent">            </span><span class="cm-string">| and  </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/RwNdeeQ"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> Pokemon.</span>
+<span class="cm-indent">            </span><span class="cm-string">|  On the rare occasion that you are looking at this profile for something you can use in production, you really shouldn't. But, there are </span>
+<span class="cm-indent">            </span><span class="cm-tag">em</span><span class="cm-string">  some   </span>
+<span class="cm-indent">            </span><span class="cm-string">| real-world applications, such as </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/GPXozx"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> the recipe layout</span>
+<span class="cm-indent">            </span><span class="cm-string">| ,   </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/pqoEoJ"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> the product catalog</span>
+<span class="cm-indent">            </span><span class="cm-string">|, and  </span>
+<span class="cm-indent">            </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/XyqQYL"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> color palettes for a style guide</span>
+<span class="cm-indent">            </span><span class="cm-string">| .</span>
+<span class="cm-indent">      </span>
+<span class="cm-indent">      </span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.sidebar</span>
+<span class="cm-indent">      </span><span class="cm-tag">h3</span><span class="cm-qualifier">.title--big</span><span class="cm-string"> Hot this month</span>
+<span class="cm-indent">      </span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/BaovGmg"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.codepen-item</span><span class="cm-qualifier">.pie</span>
+<span class="cm-indent">        </span><span class="cm-tag">img</span><span class="cm-qualifier">.pie__image</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-pie.jpg"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.pie__subtitle</span><span class="cm-string"> Food </span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.pie__content</span>
+<span class="cm-indent">          </span><span class="cm-tag">h4</span><span class="cm-string"> Pies for everyone!</span>
+<span class="cm-indent">          </span><span class="cm-tag">p</span><span class="cm-string"> No man is left behind. There's infinite pie with this one div and a repeating background.</span>
+<span class="cm-indent">      </span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/RwWdNRd"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.sidebar-item</span><span class="cm-qualifier">.captcha</span>
+<span class="cm-indent">        </span><span class="cm-tag">h5</span><span class="cm-string"> Frustrated designer runs amok with Captcha ideas</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> From Tic Tac Toe to solving meme-based questions, this is a different take on how web captchas should be. "I have not successfully picked out all photos of a truck on the first try. Something's gotta change," says the designer, who has requested to remain anonymous.</span>
+
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/GRpvNBa"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.sidebar-item</span><span class="cm-qualifier">.slack-ui</span><span class="cm-qualifier">.with-border</span>
+<span class="cm-indent">        </span><span class="cm-tag">h5</span><span class="cm-string"> Slack UI gets reverse engineered</span>
+<span class="cm-indent">        </span><span class="cm-tag">p</span><span class="cm-string"> Another valiant effort to reverse engineer a web app. However, the UI is repurposed to showcase Codepens instead of mock conversations. This is a codepen showcase inception situation.</span>
+
+<span class="cm-indent">      </span>
+<span class="cm-indent">        </span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/oliviale/full/RwWKybY"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.workout</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.workout__image</span>
+<span class="cm-indent">          </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-string">"https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-workout.jpg"</span> <span class="cm-attribute">alt</span><span class="cm-operator">=</span><span class="cm-string">"Workout"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.workout__blurb</span><span class="cm-string"> Always failing to keep track of your workouts? </span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.workout__title</span><span class="cm-string"> Use this tool!</span>
+<span class="cm-indent">      </span>
+</code></pre>
+<a href="https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
+View Compiled
+</a>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default">:<span class="cm-variable-3">root</span> {
+  <span class="cm-variable-2">--font</span>: <span class="cm-string">"EB Garamond"</span>, <span class="cm-atom">serif</span>;
+  <span class="cm-variable-2">--font-title</span>: <span class="cm-string">"Playfair Display"</span>, <span class="cm-atom">serif</span>;
+  <span class="cm-variable-2">--font-sans-serif</span>: <span class="cm-string">"Manrope"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-variable-2">--black</span>: <span class="cm-atom">#1c1f33</span>;
+  <span class="cm-variable-2">--black--acc</span>: <span class="cm-atom">#222</span>;
+  <span class="cm-variable-2">--gray</span>: <span class="cm-atom">#eee</span>;
+  <span class="cm-variable-2">--gray-1</span>: <span class="cm-atom">#ededed</span>;
+}
+
+* {
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+
+<span class="cm-def">@mixin</span> <span class="cm-tag">double-border</span> {
+  <span class="cm-property">border</span>: <span class="cm-number">2px</span> <span class="cm-atom">solid</span> <span class="cm-atom">transparent</span>;
+  <span class="cm-property">outline</span>: <span class="cm-number">3px</span> <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+  <span class="cm-property">box-shadow</span>: <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">1px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.1rem</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--preview-bg</span>);
+  <span class="cm-property">font-family</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font</span>);
+  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png</span>)
+    <span class="cm-atom">repeat</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">4rem</span> <span class="cm-number">2rem</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.3</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">justify</span>;
+  <span class="cm-property">column-break-inside</span>: <span class="cm-variable-3">avoid</span>;
+}
+
+<span class="cm-tag">a</span> {
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+  &amp;:<span class="cm-variable-3">hover</span>,
+  &amp;:<span class="cm-variable-3">focus</span>,
+  &amp;:<span class="cm-variable-3">active</span>,
+  &amp;:<span class="cm-variable-3">visited</span> {
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black--acc</span>);
+  }
+}
+
+<span class="cm-qualifier">.main__wrapper</span> {
+  <span class="cm-property">max-width</span>: <span class="cm-number">1135px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-atom">auto</span>;
+}
+
+<span class="cm-tag">h1</span> {
+  <span class="cm-property">font</span>: <span class="cm-number">50px</span><span class="cm-operator">/</span><span class="cm-number">1</span> <span class="cm-string">"Playfair Display SC"</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+    <span class="cm-property">font</span>: <span class="cm-number">70px</span><span class="cm-operator">/</span><span class="cm-number">1</span> <span class="cm-string">"Playfair Display SC"</span>;
+  }
+}
+
+<span class="cm-tag">h3</span> {
+  <span class="cm-property">font</span>: <span class="cm-atom">italic</span> <span class="cm-number">20px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-title</span>);
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">1rem</span>;
+}
+
+<span class="cm-tag">h4</span> {
+  <span class="cm-property">font</span>: <span class="cm-number">20px</span><span class="cm-operator">/</span><span class="cm-number">1.2</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-title</span>);
+}
+
+<span class="cm-tag">h5</span> {
+  <span class="cm-property">font</span>: <span class="cm-number">700</span> <span class="cm-number">20px</span><span class="cm-operator">/</span><span class="cm-number">1</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font</span>);
+  <span class="cm-property">transition</span>: <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+}
+
+<span class="cm-tag">p</span> {
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.3</span>;
+  <span class="cm-tag">a</span> {
+    <span class="cm-property">display</span>: <span class="cm-atom">inline</span>;
+  }
+}
+
+<span class="cm-tag">em</span> {
+  <span class="cm-property">font-style</span>: <span class="cm-atom">italic</span>;
+}
+
+<span class="cm-qualifier">.title--large</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-title</span>);
+  <span class="cm-property">font-size</span>: <span class="cm-number">32px</span>;
+  <span class="cm-property">font-style</span>: <span class="cm-atom">italic</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">left</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.8rem</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+    <span class="cm-property">font-size</span>: <span class="cm-number">42px</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  }
+}
+
+<span class="cm-tag">main</span> {
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+    <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+    <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">4</span>, <span class="cm-number">1fr</span>) <span class="cm-number">23%</span>;
+    <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">5</span>, <span class="cm-atom">auto</span>);
+    <span class="cm-property">grid-gap</span>: <span class="cm-number">1.2rem</span>;
+  }
+
+  <span class="cm-tag">h1</span>,
+  <span class="cm-tag">aside</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-1</span>;
+  }
+  <span class="cm-qualifier">.main-title</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-1</span>;
+    }
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-2</span>;
+    }
+  }
+  <span class="cm-qualifier">.terrarium</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-1</span>;
+    }
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+    }
+  }
+  <span class="cm-qualifier">.main-text</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">5</span>;
+    }
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+    }
+  }
+  <span class="cm-qualifier">.sidebar</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-1</span>;
+    }
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-row</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-number">9</span>;
+      <span class="cm-property">grid-column</span>: <span class="cm-number">5</span> <span class="cm-operator">/</span> <span class="cm-number">6</span>;
+    }
+  }
+  <span class="cm-qualifier">.social</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-2</span>;
+    <span class="cm-property">grid-row</span>: <span class="cm-number">8</span> <span class="cm-operator">/</span> <span class="cm-number">9</span>;
+  }
+  <span class="cm-qualifier">.article-bar-1</span> {
+    <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">4</span>;
+  }
+  <span class="cm-qualifier">.hogwarts</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+      <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+    }
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">3</span>;
+      <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+    }
+  }
+  <span class="cm-qualifier">.menu</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-1</span>;
+      <span class="cm-property">grid-row</span>: <span class="cm-number">13</span>;
+    }
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-row</span>: <span class="cm-number">7</span> <span class="cm-operator">/</span> <span class="cm-number">8</span>;
+      <span class="cm-property">grid-column</span>: <span class="cm-number">2</span> <span class="cm-operator">/</span> <span class="cm-number">4</span>;
+    }
+  }
+  <span class="cm-qualifier">.toggles</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-number">6</span>;
+      <span class="cm-property">grid-row</span>: <span class="cm-number">10</span> <span class="cm-operator">/</span> <span class="cm-number">13</span>;
+    }
+  }
+  <span class="cm-qualifier">.plan</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">4</span>;
+    }
+  }
+  <span class="cm-qualifier">.style</span>,
+  <span class="cm-qualifier">.magazine</span>,
+  <span class="cm-qualifier">.pasta</span> {
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">3</span>;
+    }
+  }
+  <span class="cm-qualifier">.cssgrid-collection</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">-1</span>;
+    <span class="cm-property">grid-row</span>: <span class="cm-number">9</span>;
+  }
+}
+
+<span class="cm-qualifier">.span--2</span> {
+  <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+}
+
+<span class="cm-qualifier">.long--2</span> {
+  <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+}
+
+<span class="cm-qualifier">.long--4</span> {
+  <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">4</span>;
+}
+
+<span class="cm-qualifier">.with-border</span> {
+  <span class="cm-property">border-top</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span>;
+  <span class="cm-property">padding-top</span>: <span class="cm-number">0.6rem</span>;
+}
+
+<span class="cm-tag">img</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">grayscale</span>(<span class="cm-number">95%</span>);
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.5rem</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+  <span class="cm-property">transition</span>: <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+}
+
+<span class="cm-tag">figcaption</span> {
+  <span class="cm-property">font-style</span>: <span class="cm-atom">italic</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">90%</span>;
+}
+
+<span class="cm-tag">aside</span> {
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">3px</span> <span class="cm-number">0</span>;
+  <span class="cm-property">border</span>: <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+  <span class="cm-property">border-width</span>: <span class="cm-number">2px</span> <span class="cm-number">0</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">1px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">1.5rem</span> <span class="cm-number">0</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  }
+  &gt; <span class="cm-tag">div</span> {
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">border</span>: <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+    <span class="cm-property">border-width</span>: <span class="cm-number">1px</span> <span class="cm-number">0</span>;
+    &gt; <span class="cm-tag">div</span> {
+      <span class="cm-property">flex</span>: <span class="cm-number">1</span>;
+      <span class="cm-property">padding</span>: <span class="cm-number">8px</span>;
+    }
+  }
+}
+
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+  <span class="cm-qualifier">.multi-column</span> {
+    <span class="cm-property">column-count</span>: <span class="cm-number">2</span>;
+    <span class="cm-property">column-gap</span>: <span class="cm-number">1.3rem</span>;
+    <span class="cm-property">margin-top</span>: <span class="cm-number">0.75rem</span>;
+    &amp;<span class="cm-number">-3</span> {
+      <span class="cm-property">column-count</span>: <span class="cm-number">3</span>;
+    }
+  }
+}
+<span class="cm-qualifier">.sidebar</span> {
+  <span class="cm-property">margin-top</span>: <span class="cm-number">3rem</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>) {
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">flex-wrap</span>: <span class="cm-atom">wrap</span>;
+    <span class="cm-property">justify-content</span>: <span class="cm-atom">space-between</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">flex-start</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+    <span class="cm-tag">h3</span> {
+      <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+      <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+    }
+    &gt; <span class="cm-tag">a</span> {
+      <span class="cm-property">flex</span>: <span class="cm-number">0</span> <span class="cm-number">1</span> <span class="cm-number">48%</span>;
+      <span class="cm-property">margin</span>: <span class="cm-number">1.5rem</span> <span class="cm-number">0</span>;
+      <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+    }
+    <span class="cm-qualifier">.slack-ui</span> {
+      <span class="cm-property">border-top</span>: <span class="cm-number">0</span>;
+    }
+    <span class="cm-qualifier">.pie</span> {
+      <span class="cm-property">order</span>: <span class="cm-number">3</span>;
+    }
+  }
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+    <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+    <span class="cm-property">border-left</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span>;
+    <span class="cm-property">padding-left</span>: <span class="cm-number">1.2rem</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  }
+}
+
+<span class="cm-qualifier">.main-text</span><span class="cm-qualifier">.multi-column</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-tag">p</span> {
+    <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.8rem</span>;
+  }
+}
+
+<span class="cm-qualifier">.hogwarts</span> {
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-def">@include</span> <span class="cm-tag">double-border</span>;
+  <span class="cm-property">width</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> - <span class="cm-number">4px</span>);
+  <span class="cm-property">margin</span>: <span class="cm-number">1.5rem</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  }
+  &amp;<span class="cm-tag">__title</span> {
+    <span class="cm-property">font</span>: <span class="cm-number">800</span> <span class="cm-number">24px</span><span class="cm-operator">/</span><span class="cm-number">1</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-sans-serif</span>);
+    <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+    <span class="cm-property">padding</span>: <span class="cm-number">0.8rem</span> <span class="cm-number">0.8rem</span> <span class="cm-number">0.9rem</span>;
+    <span class="cm-property">transition</span>: <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>;
+    <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>) {
+      <span class="cm-property">font</span>: <span class="cm-number">800</span> <span class="cm-number">21px</span><span class="cm-operator">/</span><span class="cm-number">1.2</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-sans-serif</span>);
+      <span class="cm-property">padding</span>: <span class="cm-number">1.5rem</span> <span class="cm-number">0.5rem</span>;
+    }
+  }
+  &amp;<span class="cm-tag">__image</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+
+    <span class="cm-tag">img</span> {
+      <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">60deg</span>);
+      <span class="cm-property">height</span>: <span class="cm-number">150%</span>;
+      <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+      <span class="cm-property">border</span>: <span class="cm-number">0</span>;
+      <span class="cm-property">width</span>: <span class="cm-number">250%</span>;
+      <span class="cm-property">left</span>: <span class="cm-number">-70%</span>;
+      <span class="cm-property">bottom</span>: <span class="cm-number">-35%</span>;
+      <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>) {
+        <span class="cm-property">bottom</span>: <span class="cm-number">-20%</span>;
+      }
+    }
+    <span class="cm-tag">span</span> {
+      <span class="cm-property">font-style</span>: <span class="cm-atom">italic</span>;
+      <span class="cm-property">max-width</span>: <span class="cm-number">110px</span>;
+      <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+      <span class="cm-property">top</span>: <span class="cm-number">7%</span>;
+      <span class="cm-property">left</span>: <span class="cm-number">18%</span>;
+      <span class="cm-property">font-size</span>: <span class="cm-number">22px</span>;
+      <span class="cm-property">line-height</span>: <span class="cm-number">0.9</span>;
+      <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-5deg</span>);
+    }
+  }
+}
+
+<span class="cm-qualifier">.terrarium</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">1.5rem</span> <span class="cm-number">0</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">1.5rem</span>;
+  }
+  <span class="cm-tag">figure</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  }
+  <span class="cm-tag">img</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">96%</span>;
+    <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+    <span class="cm-property">object-position</span>: <span class="cm-atom">right</span>;
+  }
+}
+
+<span class="cm-qualifier">.pie</span> {
+  <span class="cm-property">line-height</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+  <span class="cm-property">text-align</span>: <span class="cm-atom">left</span>;
+  &amp;<span class="cm-tag">__image</span> {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">max-height</span>: <span class="cm-number">15rem</span>;
+    <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+  }
+  &amp;<span class="cm-tag">__subtitle</span> {
+    <span class="cm-property">background</span>: <span class="cm-atom">#999</span>;
+    <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-number">1</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0.4rem</span> <span class="cm-number">1rem</span>;
+    <span class="cm-property">font</span>: <span class="cm-number">14px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-sans-serif</span>);
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+  }
+  &amp;<span class="cm-tag">__content</span> {
+    <span class="cm-property">background</span>: <span class="cm-atom">#666</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">1rem</span> <span class="cm-number">1rem</span> <span class="cm-number">1.2rem</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+    <span class="cm-tag">p</span> {
+      <span class="cm-property">margin-top</span>: <span class="cm-number">0.5rem</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.sidebar-item</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">2rem</span> <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">2rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+  <span class="cm-tag">h5</span> {
+    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+<span class="cm-property">padding</span>: <span class="cm-number">.5rem</span>;
+    <span class="cm-property">margin</span>: <span class="cm-atom">auto</span>;
+  }
+  <span class="cm-tag">p</span> {
+    <span class="cm-property">margin-top</span>: <span class="cm-number">1rem</span>;
+  }
+  &amp;:<span class="cm-variable-3">hover</span> {
+    <span class="cm-tag">h5</span> {
+      <span class="cm-property">transition</span>: <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+      <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+      <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.item-with-image</span> {
+  <span class="cm-property">margin-top</span>: <span class="cm-number">1.5rem</span>;
+  <span class="cm-tag">h4</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-number">24px</span>;
+    <span class="cm-property">text-align</span>: <span class="cm-atom">left</span>;
+    <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.5rem</span>;
+    <span class="cm-property">transition</span>: <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>;
+  }
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  }
+  &amp;:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.cssgrid-collection</span>):<span class="cm-variable-3">hover</span> {
+    <span class="cm-tag">h4</span> {
+      <span class="cm-property">color</span>: <span class="cm-keyword">white</span> <span class="cm-keyword">!important</span>;
+      <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+    }
+  }
+  <span class="cm-tag">p</span> {
+  }
+  <span class="cm-tag">img</span> {
+  }
+}
+
+<span class="cm-qualifier">.magazine</span> {
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span>;
+  <span class="cm-property">border-width</span>: <span class="cm-number">1px</span> <span class="cm-number">0</span>;
+  <span class="cm-property">padding-bottom</span>: <span class="cm-number">1rem</span>;
+}
+
+<span class="cm-qualifier">.menu</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">1.5rem</span> <span class="cm-number">0</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  }
+  <span class="cm-tag">figure</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  }
+  <span class="cm-tag">img</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">90%</span>;
+    <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+    <span class="cm-property">object-position</span>: <span class="cm-atom">left</span>;
+  }
+}
+
+<span class="cm-qualifier">.cssgrid-collection</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">align-content</span>: <span class="cm-atom">stretch</span>;
+  <span class="cm-property">border-top</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span>;
+  <span class="cm-property">padding-top</span>: <span class="cm-number">1rem</span>;
+  <span class="cm-tag">h4</span> {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0.8rem</span>;
+  }
+  &amp;<span class="cm-tag">__image</span> {
+    <span class="cm-property">flex</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">32%</span>;
+    <span class="cm-property">margin-right</span>: <span class="cm-number">1.5rem</span>;
+  }
+  <span class="cm-tag">img</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+    <span class="cm-property">object-position</span>: <span class="cm-atom">left</span>;
+  }
+  <span class="cm-tag">p</span> <span class="cm-tag">a</span> {
+    <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">dashed</span>;
+    &amp;:<span class="cm-variable-3">hover</span> {
+      <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.captcha</span> {
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+    <span class="cm-property">margin-top</span>: <span class="cm-number">0</span>;
+  }
+}
+
+<span class="cm-qualifier">.workout</span> {
+  <span class="cm-def">@include</span> <span class="cm-tag">double-border</span>;
+  <span class="cm-property">width</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> - <span class="cm-number">4px</span>);
+  <span class="cm-property">margin</span>: <span class="cm-number">3rem</span> <span class="cm-atom">auto</span> <span class="cm-number">0.2rem</span>;
+  &amp;<span class="cm-tag">__image</span> {
+    <span class="cm-property">padding</span>: <span class="cm-number">2px</span>;
+    <span class="cm-tag">img</span> {
+      <span class="cm-property">height</span>: <span class="cm-number">16rem</span>;
+      <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+      <span class="cm-property">object-position</span>: <span class="cm-atom">left</span>;
+      <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
+      <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+        <span class="cm-property">height</span>: <span class="cm-number">25rem</span>;
+      }
+    }
+  }
+  &amp;<span class="cm-tag">__blurb</span> {
+    <span class="cm-property">font</span>: <span class="cm-number">22px</span><span class="cm-operator">/</span><span class="cm-number">1.1</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-sans-serif</span>);
+    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0.5rem</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+    <span class="cm-property">margin</span>: <span class="cm-number">-1rem</span> <span class="cm-number">0.5rem</span> <span class="cm-number">0.3rem</span>;
+  }
+  &amp;<span class="cm-tag">__title</span> {
+    <span class="cm-property">font</span>: <span class="cm-number">18px</span><span class="cm-operator">/</span><span class="cm-number">1.1</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-sans-serif</span>);
+    <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">1rem</span>;
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+    <span class="cm-property">transition</span>: <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>;
+  }
+}
+
+<span class="cm-qualifier">.social</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-number">1fr</span> <span class="cm-number">3fr</span>;
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable">max-content</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+  <span class="cm-property">text-align</span>: <span class="cm-atom">left</span>;
+  &amp;<span class="cm-tag">__image</span> {
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
+  }
+  &amp;<span class="cm-tag">__subtitle</span> {
+    <span class="cm-property">background</span>: <span class="cm-atom">#999</span>;
+    <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-number">1</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0.4rem</span> <span class="cm-number">1rem</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+    <span class="cm-property">font</span>: <span class="cm-number">14px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font-sans-serif</span>);
+  }
+  &amp;<span class="cm-tag">__content</span> {
+    <span class="cm-property">background</span>: <span class="cm-atom">#666</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">1rem</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--gray</span>);
+    <span class="cm-property">grid-column</span>: <span class="cm-number">2</span>;
+  }
+}
+
+<span class="cm-qualifier">.plan</span> {
+  <span class="cm-property">padding-bottom</span>: <span class="cm-number">1rem</span>;
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">700px</span>) <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>) {
+    <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">1.5rem</span>;
+  }
+  <span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1024px</span>) {
+    <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span>;
+  }
+}
+
+<span class="cm-qualifier">.pie</span>,
+<span class="cm-qualifier">.social</span>,
+<span class="cm-qualifier">.menu</span>,
+<span class="cm-qualifier">.terrarium</span>,
+<span class="cm-qualifier">.plan</span>,
+<span class="cm-qualifier">.toggles</span>,
+<span class="cm-qualifier">.workout</span>,
+<span class="cm-qualifier">.cssgrid-collection__image</span> {
+  &amp;:<span class="cm-variable-3">hover</span> <span class="cm-tag">img</span> {
+    <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">grayscale</span>(<span class="cm-number">0</span>);
+  }
+}
+
+<span class="cm-qualifier">.workout</span> {
+  &amp;:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.workout__title</span> {
+    <span class="cm-property">background</span>: <span class="cm-atom">transparent</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+  }
+}
+
+<span class="cm-qualifier">.hogwarts</span> {
+  &amp;:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.hogwarts__title</span> {
+    <span class="cm-property">background</span>: <span class="cm-atom">transparent</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--black</span>);
+  }
+}
+</code></pre>
+<a href="https://codepen.io/oliviale/embed/BaoXOOP?default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">// 🦝 trash panda 🦝</span></code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for CSS Grid: Newspaper Layout" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for CSS Grid: Newspaper Layout" data-src="https://cdpn.io/oliviale/fullembedgrid/BaoXOOP?animations=run&amp;type=embed" src="./BaoXOOP.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/oliviale" target="_blank" rel="noopener"><img src="./default(1).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/oliviale" target="_blank" rel="noopener">Olivia Ng</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/oliviale" target="_blank" rel="noopener" class="about-user-more">
+See more by @oliviale on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css</a>
+</li>
+</ol>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;main__wrapper&quot;&gt;\n  &lt;main&gt;\n    &lt;h1&gt;The Codepen Times&lt;/h1&gt;\n    &lt;aside&gt; \n      &lt;div&gt;\n        &lt;div class=&quot;issue&quot;&gt;Issue #1 &lt;/div&gt;\n        &lt;div class=&quot;date&quot;&gt;Tuesday, 26 May, 2020&lt;/div&gt;\n        &lt;div class=&quot;edition&quot;&gt;Two memes Edition&lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/aside&gt;\n    &lt;h2 class=&quot;title--large main-title&quot;&gt;Woman spends too much time on Codepens despite advice; no plans to stop&lt;/h2&gt;\n    &lt;div class=&quot;main-text multi-column&quot;&gt;\n      &lt;p&gt;Sometimes, Internet users land themselves in an uncommon situation where an app or website can be used for both work and personal situations. Well, a young front-end designer was spending up to 13 hours on the site, Codepen for work and her hobby, which unfortunately, is also coding. &lt;/p&gt;\n      &lt;p&gt;The designer, whose work includes a  &lt;em&gt;To-Do Terrarium&lt;/em&gt;, clarified, &quot;Well, I didn&#39;t  &lt;em&gt; have  &lt;/em&gt;to use it for work but it was already part of my workflow. It just made sense as it was more efficient.&quot;   The biggest issue, she said, is that she would hop on Codepen for work, but would get distracted by pens made by others in the community for unexpectedly long periods of time, which then causes her to spend even more time on the site.&lt;/p&gt;\n      &lt;p&gt; &quot;I mean, that&#39;s terrible right?&quot; she asked. Codepen, which brands itself as the best place to build, test, and discover front-end code, has declined to comment at this time.&lt;/p&gt;\n    &lt;/div&gt;&lt;a class=&quot;terrarium&quot; href=&quot;https://codepen.io/oliviale/full/oNXJgEM&quot; target=&quot;_blank&quot;&gt;\n      &lt;figure&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-terrarium.jpg&quot;/&gt;\n        &lt;figcaption&gt;A to-do list that grows succulents when you&#39;ve completed a task&lt;/figcaption&gt;\n      &lt;/figure&gt;&lt;/a&gt;&lt;a class=&quot;item-with-image plan span--2 long--2&quot; href=&quot;https://codepen.io/oliviale/full/moLrBq&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-floorplan.jpg&quot;/&gt;\n      &lt;h4&gt;Can you get inspired to make your own floor plans?&lt;/h4&gt;\n      &lt;div class=&quot;multi-column&quot;&gt;\n        &lt;p&gt;Making a floor Plan with CSS Grid? Talk about using the wrong tool for the job. But I guess this is what happens when someone isn&#39;t happy with any of the floor plans found on Pinterest; she&#39;ll start making her own for the eventual home that she will never own. Nevertheless, there&#39;s a home office with a large window to look out of pensively during rainy days and a ton of &quot;white space&quot; for the cats to run around.&lt;/p&gt;\n      &lt;/div&gt;&lt;/a&gt;&lt;a class=&quot;hogwarts&quot; href=&quot;https://codepen.io/oliviale/full/MZZYyO&quot; target=&quot;_blank&quot;&gt;\n      &lt;div class=&quot;hogwarts__title&quot;&gt;50% Off Hogwarts Express tickets&lt;/div&gt;\n      &lt;div class=&quot;hogwarts__image&quot;&gt; &lt;span&gt;Limited time offer&lt;/span&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-hogwarts.svg&quot;/&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class=&quot;item-with-image pasta with-border&quot; href=&quot;https://codepen.io/oliviale/full/zYvxXWw&quot; target=&quot;_blank&quot;&gt;\n      &lt;h4&gt;A pasta menu&lt;/h4&gt;\n      &lt;p&gt;Everybody loves pasta. It&#39;s impossible to not love them, so here are 15 recipes, served with GSAP. Note the easter egg — the menu icon changes according to the pasta that you choose.&lt;/p&gt;&lt;/a&gt;&lt;a class=&quot;item-with-image magazine with-border&quot; href=&quot;https://codepen.io/oliviale/full/GRKQoKM&quot; target=&quot;_blank&quot;&gt;\n      &lt;h4&gt;Marvel at a magazine&lt;/h4&gt;\n      &lt;p&gt;A tribute of sorts to an era of cool superhero movies, this is a Marvel-themed magazine! Recommended, because it took 45 hours, so you know some serious dedication has been poured into this.&lt;/p&gt;&lt;/a&gt;&lt;a class=&quot;item-with-image style&quot; href=&quot;https://codepen.io/collection/XJyNPm&quot; target=&quot;_blank&quot;&gt;\n      &lt;h4&gt;Let&#39;s adopt, don&#39;t shop.&lt;/h4&gt;\n      &lt;p&gt;Explore a style guide and various page layouts for a pet adoption site in the  &lt;em&gt;Style Guide&lt;/em&gt; collection. Inspired by the &lt;em&gt;Atomic Design&lt;/em&gt; principle, this 8-pen collection includes a 404 page concept, an admin dashboard and what a Twitter user calls a &#39;media card zen garden&#39;. Each pen comes with five (yes, five) color themes, including the  precious dark mode.&lt;/p&gt;&lt;/a&gt;&lt;a class=&quot;item-with-image toggles&quot; href=&quot;https://codepen.io/oliviale/full/xxboXzo&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-toggle.gif&quot;/&gt;\n      &lt;h4&gt;Toggles&lt;/h4&gt;\n      &lt;p&gt;Eight playful toggles to toggle on and off for your amusement. Is it possible to use these on your site and still adhere to assessibility rules? No. But there&#39;s a really cute dog one you &lt;em&gt;have  &lt;/em&gt;to see.&lt;/p&gt;&lt;/a&gt;&lt;a class=&quot;menu&quot; href=&quot;https://codepen.io/oliviale/full/LYYrKMV&quot; target=&quot;_blank&quot;&gt;\n      &lt;figure&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-menu.jpg&quot;/&gt;\n        &lt;figcaption&gt;See the new and improved menu for Toasty!&lt;/figcaption&gt;\n      &lt;/figure&gt;&lt;/a&gt;&lt;a class=&quot;social&quot; href=&quot;https://codepen.io/oliviale/full/QWjjrZX&quot; tagrget=&quot;_blank&quot;&gt;&lt;img class=&quot;social__image&quot; src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-social.gif&quot;/&gt;\n      &lt;div class=&quot;social__subtitle&quot;&gt;World News&lt;/div&gt;\n      &lt;div class=&quot;social__content&quot;&gt;Looks like Covid-19 is gonna be around for a while so here is another friendly reminder to practice social distancing. Oh, and wear a mask! &lt;/div&gt;&lt;/a&gt;\n    &lt;div class=&quot;item-with-image cssgrid-collection&quot;&gt;&lt;a class=&quot;cssgrid-collection__image&quot; href=&quot;https://codepen.io/collection/DQvYpQ&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-co-grid.jpg&quot;/&gt;&lt;/a&gt;\n      &lt;div class=&quot;cssgrid-collection__content&quot;&gt;\n        &lt;h4&gt; &lt;a href=&quot;https://codepen.io/collection/DQvYpQ&quot; target=&quot;_blank&quot;&gt;More CSS Grid things like this one. Shelves, coupons and more!  &lt;/a&gt;&lt;/h4&gt;\n        &lt;div class=&quot;multi-column-3&quot;&gt;\n          &lt;p&gt;Get your fill of more CSS Grid items in this collection. There are a total of 32 pens to date... well, 33, if you count this one too. What can you expect in this collection? The hidden gems, in my totally  unbiased opinion, are &lt;a href=&quot;https://codepen.io/oliviale/full/wbyVWr&quot; target=&quot;_blank&quot;&gt;the recreation of the Pac-Man layout&lt;/a&gt; and  &lt;a href=&quot;https://codepen.io/oliviale/pen/wbyVWr&quot; target=&quot;_blank&quot;&gt;coupons inspired by junk mail&lt;/a&gt;. A lot of joke items of things that shouldn&#39;t be done in CSS Grid, such as &lt;a href=&quot;https://codepen.io/oliviale/full/PXGgMG&quot; target=&quot;_blank&quot;&gt;a shelf&lt;/a&gt;?   &lt;a href=&quot;https://codepen.io/oliviale/full/qggOog&quot; target=&quot;_blank&quot;&gt;Bathroom tiles wtf&lt;/a&gt;? and  &lt;a href=&quot;https://codepen.io/oliviale/full/bOWqbj&quot; target=&quot;_blank&quot;&gt;makeup palettes &lt;/a&gt;. If you are a cultured person, you will have a chance to enjoy a couple of pens inspired by &lt;a href=&quot;https://codepen.io/oliviale/full/JxVZpX&quot; target=&quot;_blank&quot;&gt;Harry Potter  &lt;/a&gt;and  &lt;a href=&quot;https://codepen.io/oliviale/full/RwNdeeQ&quot; target=&quot;_blank&quot;&gt;Pokemon.&lt;/a&gt; On the rare occasion that you are looking at this profile for something you can use in production, you really shouldn&#39;t. But, there are &lt;em&gt; some   &lt;/em&gt;real-world applications, such as &lt;a href=&quot;https://codepen.io/oliviale/full/GPXozx&quot; target=&quot;_blank&quot;&gt;the recipe layout&lt;/a&gt;,   &lt;a href=&quot;https://codepen.io/oliviale/full/pqoEoJ&quot; target=&quot;_blank&quot;&gt;the product catalog&lt;/a&gt;, and  &lt;a href=&quot;https://codepen.io/oliviale/full/XyqQYL&quot; target=&quot;_blank&quot;&gt;color palettes for a style guide&lt;/a&gt;.&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;sidebar&quot;&gt;\n      &lt;h3 class=&quot;title--big&quot;&gt;Hot this month&lt;/h3&gt;&lt;a class=&quot;codepen-item pie&quot; href=&quot;https://codepen.io/oliviale/full/BaovGmg&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;pie__image&quot; src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-pie.jpg&quot;/&gt;\n        &lt;div class=&quot;pie__subtitle&quot;&gt;Food &lt;/div&gt;\n        &lt;div class=&quot;pie__content&quot;&gt;\n          &lt;h4&gt;Pies for everyone!&lt;/h4&gt;\n          &lt;p&gt;No man is left behind. There&#39;s infinite pie with this one div and a repeating background.&lt;/p&gt;\n        &lt;/div&gt;&lt;/a&gt;&lt;a class=&quot;sidebar-item captcha&quot; href=&quot;https://codepen.io/oliviale/full/RwWdNRd&quot; target=&quot;_blank&quot;&gt;\n        &lt;h5&gt;Frustrated designer runs amok with Captcha ideas&lt;/h5&gt;\n        &lt;p&gt;From Tic Tac Toe to solving meme-based questions, this is a different take on how web captchas should be. &quot;I have not successfully picked out all photos of a truck on the first try. Something&#39;s gotta change,&quot; says the designer, who has requested to remain anonymous.&lt;/p&gt;&lt;/a&gt;&lt;a class=&quot;sidebar-item slack-ui with-border&quot; href=&quot;https://codepen.io/oliviale/full/GRpvNBa&quot; target=&quot;_blank&quot;&gt;\n        &lt;h5&gt;Slack UI gets reverse engineered&lt;/h5&gt;\n        &lt;p&gt;Another valiant effort to reverse engineer a web app. However, the UI is repurposed to showcase Codepens instead of mock conversations. This is a codepen showcase inception situation.&lt;/p&gt;&lt;/a&gt;&lt;a class=&quot;workout&quot; href=&quot;https://codepen.io/oliviale/full/RwWKybY&quot; target=&quot;_blank&quot;&gt;\n        &lt;div class=&quot;workout__image&quot;&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/showcase-workout.jpg&quot; alt=&quot;Workout&quot;/&gt;&lt;/div&gt;\n        &lt;div class=&quot;workout__blurb&quot;&gt;Always failing to keep track of your workouts? &lt;/div&gt;\n        &lt;div class=&quot;workout__title&quot;&gt;Use this tool!&lt;/div&gt;&lt;/a&gt;\n    &lt;/div&gt;\n  &lt;/main&gt;\n&lt;/div&gt;","css":":root {\n  --font: &quot;EB Garamond&quot;, serif;\n  --font-title: &quot;Playfair Display&quot;, serif;\n  --font-sans-serif: &quot;Manrope&quot;, sans-serif;\n  --black: #1c1f33;\n  --black--acc: #222;\n  --gray: #eee;\n  --gray-1: #ededed;\n}\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  font-size: 1.1rem;\n  background: var(--preview-bg);\n  font-family: var(--font);\n  color: var(--black);\n  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png) repeat;\n  padding: 4rem 2rem;\n  line-height: 1.3;\n  text-align: justify;\n  column-break-inside: avoid;\n}\n\na {\n  text-decoration: none;\n  display: block;\n  color: var(--black);\n}\na:hover, a:focus, a:active, a:visited {\n  color: var(--black--acc);\n}\n\n.main__wrapper {\n  max-width: 1135px;\n  margin: auto;\n}\n\nh1 {\n  font: 50px/1 &quot;Playfair Display SC&quot;;\n  text-align: center;\n}\n@media (min-width: 700px) {\n  h1 {\n    font: 70px/1 &quot;Playfair Display SC&quot;;\n  }\n}\n\nh3 {\n  font: italic 20px var(--font-title);\n  margin-bottom: 1rem;\n}\n\nh4 {\n  font: 20px/1.2 var(--font-title);\n}\n\nh5 {\n  font: 700 20px/1 var(--font);\n  transition: 0.3s ease;\n}\n\np {\n  line-height: 1.3;\n}\np a {\n  display: inline;\n}\n\nem {\n  font-style: italic;\n}\n\n.title--large {\n  font-family: var(--font-title);\n  font-size: 32px;\n  font-style: italic;\n  text-align: left;\n  margin-bottom: 0.8rem;\n}\n@media (min-width: 700px) {\n  .title--large {\n    font-size: 42px;\n    margin: 0;\n  }\n}\n\n@media (min-width: 700px) {\n  main {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr) 23%;\n    grid-template-rows: repeat(5, auto);\n    grid-gap: 1.2rem;\n  }\n}\nmain h1,\nmain aside {\n  grid-column: 1/-1;\n}\n@media (min-width: 700px) {\n  main .main-title {\n    grid-column: 1/-1;\n  }\n}\n@media (min-width: 1024px) {\n  main .main-title {\n    grid-column: 1/-2;\n  }\n}\n@media (min-width: 700px) {\n  main .terrarium {\n    grid-column: 1/-1;\n  }\n}\n@media (min-width: 1024px) {\n  main .terrarium {\n    grid-column: 3/span 2;\n  }\n}\n@media (min-width: 700px) {\n  main .main-text {\n    grid-column: span 5;\n  }\n}\n@media (min-width: 1024px) {\n  main .main-text {\n    grid-column: span 2;\n  }\n}\n@media (min-width: 700px) {\n  main .sidebar {\n    grid-column: 1/-1;\n  }\n}\n@media (min-width: 1024px) {\n  main .sidebar {\n    grid-row: 3/9;\n    grid-column: 5/6;\n  }\n}\nmain .social {\n  grid-column: 1/-2;\n  grid-row: 8/9;\n}\nmain .article-bar-1 {\n  grid-row: span 4;\n}\n@media (min-width: 700px) {\n  main .hogwarts {\n    grid-row: span 3;\n  }\n}\n@media (min-width: 1024px) {\n  main .hogwarts {\n    grid-column: 3;\n    grid-row: span 2;\n  }\n}\n@media (min-width: 700px) {\n  main .menu {\n    grid-column: 1/-1;\n    grid-row: 13;\n  }\n}\n@media (min-width: 1024px) {\n  main .menu {\n    grid-row: 7/8;\n    grid-column: 2/4;\n  }\n}\n@media (min-width: 700px) and (max-width: 1024px) {\n  main .toggles {\n    grid-column: 3/6;\n    grid-row: 10/13;\n  }\n}\n@media (min-width: 700px) and (max-width: 1024px) {\n  main .plan {\n    grid-column: span 4;\n  }\n}\n@media (min-width: 700px) and (max-width: 1024px) {\n  main .style,\nmain .magazine,\nmain .pasta {\n    grid-column: 1/3;\n  }\n}\nmain .cssgrid-collection {\n  grid-column: 1/-1;\n  grid-row: 9;\n}\n\n.span--2 {\n  grid-column: span 2;\n}\n\n.long--2 {\n  grid-row: span 2;\n}\n\n.long--4 {\n  grid-row: span 4;\n}\n\n.with-border {\n  border-top: 1px solid;\n  padding-top: 0.6rem;\n}\n\nimg {\n  width: 100%;\n  filter: grayscale(95%);\n  margin-bottom: 0.5rem;\n  border: 1px solid var(--black);\n  transition: 0.3s ease;\n}\n\nfigcaption {\n  font-style: italic;\n  font-size: 90%;\n}\n\naside {\n  text-align: center;\n  padding: 3px 0;\n  border: solid var(--black);\n  border-width: 2px 0;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  margin: 1.5rem 0;\n}\n@media (min-width: 700px) {\n  aside {\n    margin: 0;\n  }\n}\naside &gt; div {\n  display: flex;\n  align-items: center;\n  border: solid var(--black);\n  border-width: 1px 0;\n}\naside &gt; div &gt; div {\n  flex: 1;\n  padding: 8px;\n}\n\n@media (min-width: 700px) {\n  .multi-column {\n    column-count: 2;\n    column-gap: 1.3rem;\n    margin-top: 0.75rem;\n  }\n  .multi-column-3 {\n    column-count: 3;\n  }\n}\n.sidebar {\n  margin-top: 3rem;\n}\n@media (min-width: 700px) and (max-width: 1024px) {\n  .sidebar {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    align-items: flex-start;\n    margin: 0;\n  }\n  .sidebar h3 {\n    width: 100%;\n    text-align: center;\n  }\n  .sidebar &gt; a {\n    flex: 0 1 48%;\n    margin: 1.5rem 0;\n    padding: 0;\n  }\n  .sidebar .slack-ui {\n    border-top: 0;\n  }\n  .sidebar .pie {\n    order: 3;\n  }\n}\n@media (min-width: 1024px) {\n  .sidebar {\n    display: block;\n    border-left: 1px solid;\n    padding-left: 1.2rem;\n    margin: 0;\n  }\n}\n\n.main-text.multi-column {\n  margin: 0;\n}\n.main-text.multi-column p {\n  margin-bottom: 0.8rem;\n}\n\n.hogwarts {\n  text-align: center;\n  height: 100%;\n  border: 2px solid transparent;\n  outline: 3px solid var(--black);\n  box-shadow: inset 0 0 0 1px var(--black);\n  width: calc(100% - 4px);\n  margin: 1.5rem auto;\n  overflow: hidden;\n}\n@media (min-width: 700px) {\n  .hogwarts {\n    margin: 0;\n  }\n}\n.hogwarts__title {\n  font: 800 24px/1 var(--font-sans-serif);\n  text-transform: uppercase;\n  background: var(--black);\n  color: var(--gray);\n  padding: 0.8rem 0.8rem 0.9rem;\n  transition: 0.2s ease;\n}\n@media (min-width: 700px) and (max-width: 1024px) {\n  .hogwarts__title {\n    font: 800 21px/1.2 var(--font-sans-serif);\n    padding: 1.5rem 0.5rem;\n  }\n}\n.hogwarts__image {\n  height: 100%;\n  position: relative;\n}\n.hogwarts__image img {\n  transform: rotate(60deg);\n  height: 150%;\n  position: absolute;\n  border: 0;\n  width: 250%;\n  left: -70%;\n  bottom: -35%;\n}\n@media (min-width: 700px) and (max-width: 1024px) {\n  .hogwarts__image img {\n    bottom: -20%;\n  }\n}\n.hogwarts__image span {\n  font-style: italic;\n  max-width: 110px;\n  position: absolute;\n  top: 7%;\n  left: 18%;\n  font-size: 22px;\n  line-height: 0.9;\n  transform: rotate(-5deg);\n}\n\n.terrarium {\n  margin: 1.5rem 0;\n}\n@media (min-width: 700px) {\n  .terrarium {\n    margin: 0 0 1.5rem;\n  }\n}\n.terrarium figure {\n  height: 100%;\n}\n.terrarium img {\n  height: 96%;\n  object-fit: cover;\n  object-position: right;\n}\n\n.pie {\n  line-height: 0;\n  color: var(--gray);\n  text-align: left;\n}\n.pie__image {\n  margin: 0;\n  border: 0;\n  max-height: 15rem;\n  object-fit: cover;\n}\n.pie__subtitle {\n  background: #999;\n  text-transform: uppercase;\n  line-height: 1;\n  padding: 0.4rem 1rem;\n  font: 14px var(--font-sans-serif);\n  color: var(--gray);\n}\n.pie__content {\n  background: #666;\n  padding: 1rem 1rem 1.2rem;\n  color: var(--gray);\n}\n.pie__content p {\n  margin-top: 0.5rem;\n}\n\n.sidebar-item {\n  margin: 2rem 0;\n  padding: 2rem 0 0;\n}\n.sidebar-item h5 {\n  text-align: center;\n  width: 100%;\n  padding: 0.5rem;\n  margin: auto;\n}\n.sidebar-item p {\n  margin-top: 1rem;\n}\n.sidebar-item:hover h5 {\n  transition: 0.3s ease;\n  background: var(--black);\n  color: #fff;\n}\n\n.item-with-image {\n  margin-top: 1.5rem;\n}\n.item-with-image h4 {\n  font-size: 24px;\n  text-align: left;\n  margin-bottom: 0.5rem;\n  transition: 0.2s ease;\n}\n@media (min-width: 700px) {\n  .item-with-image {\n    margin: 0;\n  }\n}\n.item-with-image:not(.cssgrid-collection):hover h4 {\n  color: white !important;\n  background: var(--black);\n}\n.magazine {\n  border: 1px solid;\n  border-width: 1px 0;\n  padding-bottom: 1rem;\n}\n\n.menu {\n  margin: 1.5rem 0;\n}\n@media (min-width: 1024px) {\n  .menu {\n    margin: 0;\n  }\n}\n.menu figure {\n  height: 100%;\n}\n.menu img {\n  height: 90%;\n  object-fit: cover;\n  object-position: left;\n}\n\n.cssgrid-collection {\n  display: flex;\n  align-content: stretch;\n  border-top: 1px solid;\n  padding-top: 1rem;\n}\n.cssgrid-collection h4 {\n  margin: 0 0 0.8rem;\n}\n.cssgrid-collection__image {\n  flex: 0 0 32%;\n  margin-right: 1.5rem;\n}\n.cssgrid-collection img {\n  height: 100%;\n  object-fit: cover;\n  object-position: left;\n}\n.cssgrid-collection p a {\n  border-bottom: 1px dashed;\n}\n.cssgrid-collection p a:hover {\n  border-bottom: 1px solid;\n}\n\n@media (min-width: 1024px) {\n  .captcha {\n    margin-top: 0;\n  }\n}\n\n.workout {\n  border: 2px solid transparent;\n  outline: 3px solid var(--black);\n  box-shadow: inset 0 0 0 1px var(--black);\n  width: calc(100% - 4px);\n  margin: 3rem auto 0.2rem;\n}\n.workout__image {\n  padding: 2px;\n}\n.workout__image img {\n  height: 16rem;\n  object-fit: cover;\n  object-position: left;\n  border: none;\n}\n@media (min-width: 1024px) {\n  .workout__image img {\n    height: 25rem;\n  }\n}\n.workout__blurb {\n  font: 22px/1.1 var(--font-sans-serif);\n  text-align: center;\n  padding: 0.5rem;\n  color: var(--black);\n  margin: -1rem 0.5rem 0.3rem;\n}\n.workout__title {\n  font: 18px/1.1 var(--font-sans-serif);\n  text-transform: uppercase;\n  text-align: center;\n  padding: 1rem;\n  background: var(--black);\n  color: var(--gray);\n  transition: 0.2s ease;\n}\n\n.social {\n  display: grid;\n  grid-template-columns: 1fr 3fr;\n  grid-template-rows: max-content auto;\n  color: var(--gray);\n  text-align: left;\n}\n.social__image {\n  margin: 0;\n  border: 0;\n  grid-row: span 2;\n  height: 100%;\n  object-fit: cover;\n}\n.social__subtitle {\n  background: #999;\n  text-transform: uppercase;\n  line-height: 1;\n  padding: 0.4rem 1rem;\n  color: var(--gray);\n  font: 14px var(--font-sans-serif);\n}\n.social__content {\n  background: #666;\n  padding: 1rem;\n  color: var(--gray);\n  grid-column: 2;\n}\n\n.plan {\n  padding-bottom: 1rem;\n}\n@media (min-width: 700px) and (max-width: 1024px) {\n  .plan {\n    grid-column: span 3;\n    margin: 0 0 1.5rem;\n  }\n}\n@media (min-width: 1024px) {\n  .plan {\n    border-bottom: 1px solid;\n  }\n}\n\n.pie:hover img,\n.social:hover img,\n.menu:hover img,\n.terrarium:hover img,\n.plan:hover img,\n.toggles:hover img,\n.workout:hover img,\n.cssgrid-collection__image:hover img {\n  filter: grayscale(0);\n}\n\n.workout:hover .workout__title {\n  background: transparent;\n  color: var(--black);\n}\n\n.hogwarts:hover .hogwarts__title {\n  background: transparent;\n  color: var(--black);\n}","js":"// 🦝 trash panda 🦝"};
+    __preprocessors = {
+      "html": "pug",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "Pug",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+
+</body></html>

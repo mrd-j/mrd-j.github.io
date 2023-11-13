@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Generative Concert Tix</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="3dwU6kqQlQaUMxW8v1JsJCKMNuteSbWvBxFZw5BfQq4bwKJ07PnMybuimQh0JbdXp2FMJr5fRv06rYkTRyN7MA==">
+<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab=#html-box" role="button" aria-pressed="false">
+Haml
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab=#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab=#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab=#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab=#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/cobra_winfrey/pen/BaRbKjQ" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="haml" id="actual-html-code" class=" cm-s-default"><span class="cm-attribute">#wrap</span>
+ <span class="cm-operator">-</span><span class="cm-number">6</span><span class="cm-operator">.</span><span class="cm-property">times</span> <span class="cm-keyword">do</span>
+  <span class="cm-attribute">.ticket</span></code></pre>
+<a href="https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab=#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
+View Compiled
+</a>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@font-face</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Cooper"</span>;
+  <span class="cm-property">src</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://assets.codepen.io/383755/cooper-black-webfont.woff"</span>)
+    <span class="cm-variable cm-callee">format</span>(<span class="cm-string">"woff"</span>);
+}
+
+<span class="cm-def">@font-face</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Aharoni"</span>;
+  <span class="cm-property">src</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://assets.codepen.io/383755/telefon.woff2"</span>) <span class="cm-variable cm-callee">format</span>(<span class="cm-string">"woff"</span>);
+}
+
+<span class="cm-def">@font-face</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Bogart"</span>;
+  <span class="cm-property">src</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://assets.codepen.io/383755/bogart-semibold.woff2"</span>)
+    <span class="cm-variable cm-callee">format</span>(<span class="cm-string">"woff2"</span>);
+  <span class="cm-property">font-weight</span>: <span class="cm-atom">normal</span>;
+  <span class="cm-property">font-style</span>: <span class="cm-atom">normal</span>;
+}
+
+<span class="cm-def">@font-face</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Dot"</span>;
+  <span class="cm-property">src</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://assets.codepen.io/383755/Dot-Matrix.ttf.woff"</span>) <span class="cm-variable cm-callee">format</span>(<span class="cm-string">"woff"</span>);
+}
+
+<span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&amp;display=swap"</span>);
+
+<span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css2?family=Coustard:wght@900&amp;display=swap"</span>);
+
+<span class="cm-variable-2">$noise</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"data:image/png;base64,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"</span>);
+
+* {
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+
+<span class="cm-def">@mixin</span> <span class="cm-variable cm-callee">flex-center</span>() {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">flex-wrap</span>: <span class="cm-atom">wrap</span>;
+}
+
+<span class="cm-def">@function</span> <span class="cm-variable cm-callee">text-stroke</span>(<span class="cm-variable-2">$size</span>: <span class="cm-number">2</span>, <span class="cm-variable-2">$color</span>: <span class="cm-builtin">#fff</span>, <span class="cm-variable-2">$correction</span>: <span class="cm-number">0</span>) {
+  <span class="cm-variable-2">$radius</span>: <span class="cm-variable-2">$size</span> - <span class="cm-variable-2">$correction</span>;
+  <span class="cm-variable-2">$stroke</span>: ();
+
+  <span class="cm-def">@for</span> <span class="cm-variable-2">$i</span> <span class="cm-tag">from</span> <span class="cm-tag">-</span><span class="cm-variable-2">$size</span> <span class="cm-tag">through</span> <span class="cm-variable-2">$size</span> {
+    <span class="cm-def">@for</span> <span class="cm-variable-2">$k</span> <span class="cm-tag">from</span> <span class="cm-tag">-</span><span class="cm-variable-2">$size</span> <span class="cm-tag">through</span> <span class="cm-variable-2">$size</span> {
+      <span class="cm-variable-2">$x</span>: <span class="cm-variable-2">$k</span>;
+      <span class="cm-variable-2">$y</span>: <span class="cm-variable-2">$i</span>;
+
+      <span class="cm-def">@if</span> <span class="cm-variable-2">$k</span> &gt; <span class="cm-number">0</span> {
+        <span class="cm-variable-2">$x</span>: <span class="cm-variable-2">$k</span> - <span class="cm-number">0.5</span>;
+      }
+      <span class="cm-def">@elseif</span> <span class="cm-variable-2">$k</span> &lt; <span class="cm-number">0</span> {
+        <span class="cm-variable-2">$x</span>: <span class="cm-variable-2">$k</span> + <span class="cm-number">0.5</span>;
+      }
+
+      <span class="cm-def">@if</span> <span class="cm-variable-2">$i</span> &gt; <span class="cm-number">0</span> {
+        <span class="cm-variable-2">$y</span>: <span class="cm-variable-2">$i</span> - <span class="cm-number">0.5</span>;
+      }
+      <span class="cm-def">@elseif</span> <span class="cm-variable-2">$i</span> &lt; <span class="cm-number">0</span> {
+        <span class="cm-variable-2">$y</span>: <span class="cm-variable-2">$i</span> + <span class="cm-number">0.5</span>;
+      }
+
+      <span class="cm-def">@if</span> (<span class="cm-variable-2">$x</span> * <span class="cm-variable-2">$x</span> + <span class="cm-variable-2">$y</span> * <span class="cm-variable-2">$y</span> &lt;= <span class="cm-variable-2">$radius</span> * <span class="cm-variable-2">$radius</span>) {
+        <span class="cm-variable-2">$stroke</span>: <span class="cm-variable cm-callee">append</span>(<span class="cm-variable-2">$stroke</span>, <span class="cm-variable-2">$i</span> * <span class="cm-number">1px</span> <span class="cm-variable-2">$k</span> * <span class="cm-number">1px</span> <span class="cm-number">0</span> <span class="cm-variable-2">$color</span>, <span class="cm-variable">comma</span>);
+      }
+    }
+  }
+
+  <span class="cm-def">@return</span> <span class="cm-variable-2">$stroke</span>;
+}
+
+<span class="cm-def">@mixin</span> <span class="cm-variable cm-callee">text-stroke</span>(<span class="cm-variable-2">$size</span>: <span class="cm-number">2</span>, <span class="cm-variable-2">$color</span>: <span class="cm-builtin">#fff</span>, <span class="cm-variable-2">$correction</span>: <span class="cm-number">0</span>) {
+  <span class="cm-property">text-shadow</span>: <span class="cm-variable cm-callee">text-stroke</span>(<span class="cm-variable-2">$size</span>, <span class="cm-variable-2">$color</span>, <span class="cm-variable-2">$correction</span>);
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">0px</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Oswald"</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+  <span class="cm-variable-2">--dark</span>: <span class="cm-atom">#50303f</span>;
+  <span class="cm-variable-2">--font1</span>: <span class="cm-string">"Cooper"</span>;
+  <span class="cm-variable-2">--font2</span>: <span class="cm-string">"Oswald"</span>;
+  <span class="cm-variable-2">--font4</span>: <span class="cm-string">"Cooper"</span>;
+  <span class="cm-variable-2">--font5</span>: <span class="cm-string">"Bogart"</span>;
+  <span class="cm-variable-2">--font6</span>: <span class="cm-string">"Oswald"</span>;
+  <span class="cm-variable-2">--font7</span>: <span class="cm-string">"Aharoni"</span>;
+  <span class="cm-variable-2">--font8</span>: <span class="cm-string">"Coustard"</span>;
+  <span class="cm-variable-2">--color1</span>: <span class="cm-atom">#fe2fd9</span>;
+  <span class="cm-variable-2">--color2</span>: <span class="cm-atom">#fa6c4b</span>;
+  <span class="cm-variable-2">--color3</span>: <span class="cm-atom">#e5f31b</span>;
+  <span class="cm-variable-2">--color4</span>: <span class="cm-atom">#5030da</span>;
+  <span class="cm-variable-2">--color5</span>: <span class="cm-atom">#ff3641</span>;
+  <span class="cm-variable-2">--color6</span>: <span class="cm-atom">#e5f31b</span>;
+  <span class="cm-variable-2">--color7</span>: <span class="cm-atom">#fe2fd9</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">repeating-radial-gradient</span>(
+      <span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>,
+      <span class="cm-atom">transparent</span> <span class="cm-number">0px</span>,
+      <span class="cm-atom">#fff</span> <span class="cm-number">0px</span>,
+      <span class="cm-atom">#fff</span> <span class="cm-number">2px</span>,
+      <span class="cm-atom">transparent</span> <span class="cm-number">2px</span>,
+      <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>
+    ),
+    <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>, <span class="cm-atom">#fff</span> <span class="cm-number">25vw</span>, <span class="cm-atom">#e5f4d1</span>);
+  &amp;:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">content</span>: <span class="cm-string">"click to remix"</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">bottom</span>: <span class="cm-number">5px</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>);
+  }
+  &amp;<span class="cm-qualifier">.active</span> {
+    <span class="cm-builtin">#wrap</span> {
+      <span class="cm-qualifier">.ticket</span> {
+        <span class="cm-def">@for</span> <span class="cm-variable-2">$i</span> <span class="cm-tag">from</span> <span class="cm-number">1</span> <span class="cm-tag">through</span> <span class="cm-number">6</span> {
+          &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(#{<span class="cm-variable-2">$i</span>}) {
+            <span class="cm-property">z-index</span>: #{<span class="cm-error">6</span> <span class="cm-error">-</span> <span class="cm-variable-2">$i</span>};
+            <span class="cm-qualifier">.inner</span> {
+              &amp;:<span class="cm-variable-3">before</span> {
+                <span class="cm-property">transition-delay</span>: #{<span class="cm-error">0.15</span> <span class="cm-error">+</span> (<span class="cm-variable-2">$i</span><span class="cm-error">/</span><span class="cm-error">10</span>)}<span class="cm-variable">s</span>;
+                <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+              }
+              &gt; <span class="cm-tag">div</span> {
+                <span class="cm-property">transition-delay</span>: #{<span class="cm-variable-2">$i</span><span class="cm-error">/</span><span class="cm-error">10</span>}<span class="cm-variable">s</span>;
+                &amp;:<span class="cm-variable-3">before</span>,
+                &amp;:<span class="cm-variable-3">after</span> {
+                  <span class="cm-property">transition-delay</span>: #{<span class="cm-error">0.15</span> <span class="cm-error">+</span> (<span class="cm-variable-2">$i</span><span class="cm-error">/</span><span class="cm-error">10</span>)}<span class="cm-variable">s</span>;
+                  <span class="cm-property">box-shadow</span>: <span class="cm-atom">inset</span> <span class="cm-number">-100px</span> <span class="cm-number">0px</span> <span class="cm-number">100px</span> <span class="cm-number">-200px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.15</span>),
+                    <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">3rem</span> <span class="cm-number">-3rem</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>), <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0.5rem</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>);
+                }
+                &amp;:<span class="cm-variable-3">after</span> {
+                  <span class="cm-property">box-shadow</span>: <span class="cm-atom">inset</span> <span class="cm-number">100px</span> <span class="cm-number">0px</span> <span class="cm-number">100px</span> <span class="cm-number">100px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.15</span>),
+                    <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">2rem</span> <span class="cm-number">0.075rem</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>),
+                    <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0.5rem</span> <span class="cm-variable cm-callee">lighten</span>(<span class="cm-atom">#e5f4d1</span>, <span class="cm-number">5%</span>);
+                }
+              }
+            }
+          }
+        }
+        <span class="cm-qualifier">.inner</span> {
+          &gt; <span class="cm-tag">div</span> {
+            <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+          }
+        }
+      }
+    }
+  }
+  &amp;<span class="cm-qualifier">.loaded</span> {
+    <span class="cm-builtin">#wrap</span> {
+      <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+    }
+  }
+  <span class="cm-builtin">#wrap</span> {
+    <span class="cm-property">width</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">662.5px</span>, <span class="cm-number">80vw</span>, <span class="cm-number">1325px</span>);
+    <span class="cm-property">min-width</span>: <span class="cm-number">662.5px</span>;
+    <span class="cm-property">height</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">500px</span>, <span class="cm-number">60vw</span>, <span class="cm-number">1000px</span>);
+    <span class="cm-property">min-height</span>: <span class="cm-number">500px</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+    <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">8</span>, <span class="cm-number">1fr</span>);
+    <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">6</span>, <span class="cm-number">1fr</span>);
+    <span class="cm-property">grid-gap</span>: <span class="cm-number">0rem</span>;
+    <span class="cm-property">transition</span>: <span class="cm-number">0.5s</span> <span class="cm-atom">ease-in-out</span>;
+    <span class="cm-property">transition-delay</span>: <span class="cm-number">1s</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+    <span class="cm-qualifier">.ticket</span> {
+      <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+      <span class="cm-def">@for</span> <span class="cm-variable-2">$i</span> <span class="cm-tag">from</span> <span class="cm-number">1</span> <span class="cm-tag">through</span> <span class="cm-number">6</span> {
+        &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(#{<span class="cm-variable-2">$i</span>}) {
+          <span class="cm-property">z-index</span>: #{<span class="cm-error">8</span> <span class="cm-error">-</span> <span class="cm-variable-2">$i</span>};
+          <span class="cm-qualifier">.inner</span> {
+            &amp;:<span class="cm-variable-3">before</span> {
+              <span class="cm-property">transition</span>: <span class="cm-number">0.5s</span> <span class="cm-variable cm-callee">cubic-bezier</span>(<span class="cm-number">0.5</span>, <span class="cm-number">0.15</span>, <span class="cm-number">0.35</span>, <span class="cm-number">1</span>);
+              <span class="cm-property">transition-delay</span>: #{(<span class="cm-error">6</span> <span class="cm-error">-</span> <span class="cm-variable-2">$i</span>) <span class="cm-error">/</span> <span class="cm-error">10</span>}<span class="cm-variable">s</span>;
+              <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+            }
+            &gt; <span class="cm-tag">div</span> {
+              <span class="cm-property">transition-delay</span>: #{(<span class="cm-error">6</span> <span class="cm-error">-</span> <span class="cm-variable-2">$i</span>) <span class="cm-error">/</span> <span class="cm-error">10</span>}<span class="cm-variable">s</span>;
+              &amp;:<span class="cm-variable-3">before</span>,
+              &amp;:<span class="cm-variable-3">after</span> {
+                <span class="cm-property">transition-delay</span>: #{<span class="cm-error">0.15</span> <span class="cm-error">+</span> (<span class="cm-error">6</span> <span class="cm-error">-</span> <span class="cm-variable-2">$i</span>)<span class="cm-error">/</span><span class="cm-error">10</span>}<span class="cm-variable">s</span>;
+              }
+            }
+          }
+        }
+      }
+      <span class="cm-qualifier">.inner</span> {
+        <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+        <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+        <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+        <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+        <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+        <span class="cm-property">padding</span>: <span class="cm-number">1rem</span>;
+        <span class="cm-property">clip-path</span>: <span class="cm-variable cm-callee">polygon</span>(<span class="cm-number">-10%</span> <span class="cm-number">-10%</span>, <span class="cm-number">110%</span> <span class="cm-number">-10%</span>, <span class="cm-number">110%</span> <span class="cm-number">110%</span>, <span class="cm-number">-10%</span> <span class="cm-number">110%</span>);
+        <span class="cm-property">transform-style</span>: <span class="cm-atom">preserve-3d</span>;
+        <span class="cm-property">perspective</span>: <span class="cm-number">900px</span>;
+        &amp;:<span class="cm-variable-3">before</span> {
+          <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+          <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+          <span class="cm-property">width</span>: <span class="cm-number">90%</span>;
+          <span class="cm-property">height</span>: <span class="cm-number">90%</span>;
+          <span class="cm-property">top</span>: <span class="cm-number">10%</span>;
+          <span class="cm-property">left</span>: <span class="cm-number">5%</span>;
+          <span class="cm-property">background</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.25</span>);
+          <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">blur</span>(<span class="cm-number">15px</span>);
+        }
+        &amp;<span class="cm-qualifier">.class1</span> {
+          <span class="cm-qualifier">.details</span> {
+            <span class="cm-property">grid-row</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">1</span>;
+          }
+        }
+        &amp;<span class="cm-qualifier">.class2</span> {
+          <span class="cm-qualifier">.seat</span> {
+            <span class="cm-property">grid-row</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">1</span>;
+          }
+        }
+        &amp;<span class="cm-qualifier">.class2</span>,
+        &amp;<span class="cm-qualifier">.class3</span> {
+          <span class="cm-qualifier">.band</span> {
+            <span class="cm-property">background</span>: <span class="cm-variable cm-callee">radial-gradient</span>(
+                <span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>,
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">35%</span>,
+                <span class="cm-atom">transparent</span> <span class="cm-number">35%</span>,
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">75%</span>
+              ),
+              <span class="cm-variable cm-callee">radial-gradient</span>(
+                  <span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>,
+                  <span class="cm-atom">#e5f4d1</span> <span class="cm-number">2px</span>,
+                  <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">1px</span>,
+                  <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">5px</span>
+                )
+                <span class="cm-number">50%</span> <span class="cm-number">50%</span> <span class="cm-operator">/</span> <span class="cm-number">8px</span> <span class="cm-number">8px</span> <span class="cm-atom">repeat</span>;
+          }
+        }
+        &amp;<span class="cm-qualifier">.class3</span> {
+          <span class="cm-qualifier">.band</span> {
+            <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+          }
+        }
+        &amp;<span class="cm-qualifier">.class5</span>,
+        &amp;<span class="cm-qualifier">.class6</span> {
+          &gt; <span class="cm-tag">div</span> {
+            <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">33%</span> - <span class="cm-number">0.125rem</span>) <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">33%</span> - <span class="cm-number">0.125rem</span>) <span class="cm-variable cm-callee">calc</span>(
+                <span class="cm-number">33%</span> - <span class="cm-number">0.125rem</span>
+              );
+            &gt; <span class="cm-tag">div</span> {
+              <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+
+              &amp;<span class="cm-qualifier">.band</span> {
+                <span class="cm-tag">strong</span> {
+                  <span class="cm-tag">span</span><span class="cm-qualifier">.word</span> {
+                    <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+                    <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">0.15vw</span>;
+                  }
+                }
+              }
+              &amp;<span class="cm-qualifier">.band</span>,
+              &amp;<span class="cm-qualifier">.location</span> {
+                <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+                <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">6</span>;
+                <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+                <span class="cm-tag">strong</span> {
+                  <span class="cm-property">width</span>: <span class="cm-number">200%</span>;
+                  <span class="cm-property">left</span>: <span class="cm-number">-50%</span>;
+                  <span class="cm-property">height</span>: <span class="cm-number">50%</span>;
+                  <span class="cm-property">top</span>: <span class="cm-number">25%</span>;
+                  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+                  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">1rem</span>;
+                  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">90deg</span>);
+                  <span class="cm-property">word-break</span>: <span class="cm-atom">break-word</span>;
+                }
+              }
+              &amp;<span class="cm-qualifier">.location</span> {
+                <span class="cm-property">grid-column</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">1</span>;
+                <span class="cm-tag">strong</span> {
+                  <span class="cm-property">width</span>: <span class="cm-number">400%</span>;
+                  <span class="cm-property">height</span>: <span class="cm-number">12.5%</span>;
+                  <span class="cm-property">top</span>: <span class="cm-number">45%</span>;
+                  <span class="cm-property">left</span>: <span class="cm-number">-150%</span>;
+                  <span class="cm-def">@include</span> <span class="cm-variable cm-callee">flex-center</span>();
+                  <span class="cm-def">@include</span> <span class="cm-variable cm-callee">text-stroke</span>(<span class="cm-number">1</span>, <span class="cm-builtin">#e5f4d1</span>);
+                  &amp;:<span class="cm-variable-3">before</span> {
+                    <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+                    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+                    <span class="cm-property">width</span>: <span class="cm-number">90%</span>;
+                    <span class="cm-property">left</span>: <span class="cm-number">5%</span>;
+                    <span class="cm-property">top</span>: <span class="cm-number">-5%</span>;
+                    <span class="cm-property">height</span>: <span class="cm-number">110%</span>;
+                    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>);
+                    <span class="cm-meta">-webkit-</span><span class="cm-property">mask</span>: <span class="cm-variable-2">$noise</span>;
+                    <span class="cm-property">opacity</span>: <span class="cm-number">0.75</span>;
+                  }
+                  <span class="cm-tag">span</span> {
+                    <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+                    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+                    <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">10px</span>, <span class="cm-number">1vw</span>, <span class="cm-number">1vw</span>);
+                    &amp;:<span class="cm-variable-3">first-of-type</span> {
+                      <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">12px</span>, <span class="cm-number">1.35vw</span>, <span class="cm-number">1.35vw</span>);
+                      <span class="cm-def">@include</span> <span class="cm-variable cm-callee">text-stroke</span>(<span class="cm-number">1</span>, <span class="cm-builtin">#e5f4d1</span>);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &amp;<span class="cm-qualifier">.class7</span> {
+          <span class="cm-qualifier">.band</span> {
+            <span class="cm-property">background</span>: <span class="cm-variable cm-callee">radial-gradient</span>(
+                <span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>,
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">35%</span>,
+                <span class="cm-atom">transparent</span> <span class="cm-number">35%</span>,
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">75%</span>
+              ),
+              <span class="cm-variable cm-callee">repeating-linear-gradient</span>(
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--rotate</span>),
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">2px</span>,
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">2px</span>,
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">10px</span>,
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">10px</span>,
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">12px</span>
+              );
+          }
+        }
+        &amp;<span class="cm-qualifier">.class9</span> {
+          <span class="cm-qualifier">.band</span> {
+            <span class="cm-tag">strong</span> {
+              <span class="cm-tag">span</span><span class="cm-qualifier">.word</span> {
+                <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">skew</span>(<span class="cm-number">5deg</span>);
+              }
+            }
+          }
+        }
+        &amp;<span class="cm-qualifier">.class10</span>,
+        &amp;<span class="cm-qualifier">.class11</span> {
+          <span class="cm-qualifier">.band</span> {
+            <span class="cm-property">background</span>: <span class="cm-variable cm-callee">radial-gradient</span>(
+                <span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>,
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">35%</span>,
+                <span class="cm-atom">transparent</span> <span class="cm-number">35%</span>,
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">75%</span>
+              ),
+              <span class="cm-variable cm-callee">repeating-linear-gradient</span>(
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--rotate</span>),
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">2px</span>,
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">2px</span>,
+                <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">10px</span>,
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">10px</span>,
+                <span class="cm-atom">#e5f4d1</span> <span class="cm-number">12px</span>
+              );
+          }
+        }
+        &gt; <span class="cm-tag">div</span> {
+          <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+          <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> - <span class="cm-number">0.25rem</span>);
+          <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">10</span>, <span class="cm-number">1fr</span>);
+          <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+          <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+          <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>);
+          <span class="cm-property">grid-gap</span>: <span class="cm-number">0.125rem</span>;
+          <span class="cm-property">padding</span>: <span class="cm-number">0.125rem</span> <span class="cm-number">0</span>;
+          <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+          <span class="cm-property">transition</span>: <span class="cm-number">0.5s</span> <span class="cm-variable cm-callee">cubic-bezier</span>(<span class="cm-number">0.5</span>, <span class="cm-number">0.15</span>, <span class="cm-number">0.35</span>, <span class="cm-number">1</span>);
+          <span class="cm-property">transform-style</span>: <span class="cm-atom">preserve-3d</span>;
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">180deg</span>);
+          &amp;:<span class="cm-variable-3">before</span>,
+          &amp;:<span class="cm-variable-3">after</span> {
+            <span class="cm-property">transform-style</span>: <span class="cm-atom">preserve-3d</span>;
+            <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+            <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+            <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+            <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+            <span class="cm-property">z-index</span>: <span class="cm-number">2</span>;
+            <span class="cm-property">box-shadow</span>: <span class="cm-atom">inset</span> <span class="cm-number">-200px</span> <span class="cm-number">0px</span> <span class="cm-number">100px</span> <span class="cm-number">100px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.25</span>),
+              <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">3rem</span> <span class="cm-number">-2rem</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>), <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0.5rem</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>);
+            <span class="cm-property">transition</span>: <span class="cm-variable">box-shadow</span> <span class="cm-number">0.5s</span> <span class="cm-variable cm-callee">cubic-bezier</span>(<span class="cm-number">0.5</span>, <span class="cm-number">0.15</span>, <span class="cm-number">0.35</span>, <span class="cm-number">1</span>);
+          }
+          &amp;:<span class="cm-variable-3">before</span> {
+            <span class="cm-property">background</span>: <span class="cm-atom">#e5f4d1</span>;
+            <span class="cm-meta">-webkit-</span><span class="cm-property">mask</span>: <span class="cm-variable-2">$noise</span>;
+            <span class="cm-property">opacity</span>: <span class="cm-number">0.5</span>;
+            <span class="cm-property">width</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> + <span class="cm-number">0.5vw</span>);
+            <span class="cm-property">height</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> + <span class="cm-number">0.5vw</span>);
+            <span class="cm-property">left</span>: <span class="cm-number">-0.25vw</span>;
+            <span class="cm-property">top</span>: <span class="cm-number">-0.25vw</span>;
+            <span class="cm-property">backface-visibility</span>: <span class="cm-atom">hidden</span>;
+          }
+          &amp;:<span class="cm-variable-3">after</span> {
+            <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">-180deg</span>) <span class="cm-variable cm-callee">translateZ</span>(<span class="cm-number">0.05px</span>);
+            <span class="cm-property">background</span>: <span class="cm-variable cm-callee">lighten</span>(<span class="cm-atom">#e5f4d1</span>, <span class="cm-number">5%</span>);
+            <span class="cm-property">box-shadow</span>: <span class="cm-atom">inset</span> <span class="cm-number">100px</span> <span class="cm-number">0px</span> <span class="cm-number">100px</span> <span class="cm-number">-200px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.15</span>),
+              <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">6rem</span> <span class="cm-number">-6rem</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>), <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0.5rem</span> <span class="cm-variable cm-callee">lighten</span>(<span class="cm-atom">#e5f4d1</span>, <span class="cm-number">5%</span>);
+          }
+          &gt; <span class="cm-tag">div</span> {
+            <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+            <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>);
+            <span class="cm-property">box-shadow</span>: <span class="cm-atom">inherit</span>;
+            <span class="cm-property">line-height</span>: <span class="cm-number">1</span>;
+            <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">1</span>;
+            <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+            <span class="cm-def">@include</span> <span class="cm-variable cm-callee">flex-center</span>();
+          }
+        }
+        <span class="cm-qualifier">.date</span> {
+          <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+          <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+          <span class="cm-def">@include</span> <span class="cm-variable cm-callee">flex-center</span>();
+          <span class="cm-property">padding</span>: <span class="cm-number">0.75vw</span> <span class="cm-number">0</span>;
+          <span class="cm-property">background</span>: <span class="cm-atom">#e5f4d1</span>;
+          <span class="cm-tag">span</span> {
+            <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+            <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">10px</span>, <span class="cm-number">1vw</span>, <span class="cm-number">1vw</span>);
+            <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+          }
+          &gt; <span class="cm-tag">span</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">2</span>) {
+            <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">16px</span>, <span class="cm-number">2vw</span>, <span class="cm-number">2vw</span>);
+            <span class="cm-property">font-family</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font2</span>);
+          }
+        }
+        <span class="cm-qualifier">.band</span> {
+          <span class="cm-property">grid-row</span>: <span class="cm-variable">span</span> <span class="cm-number">5</span>;
+          <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+          <span class="cm-property">font-family</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font1</span>);
+          <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+          <span class="cm-property">background</span>: <span class="cm-variable cm-callee">radial-gradient</span>(
+              <span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>,
+              <span class="cm-atom">#e5f4d1</span> <span class="cm-number">37.5%</span>,
+              <span class="cm-atom">transparent</span> <span class="cm-number">35%</span>,
+              <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">90%</span>
+            ),
+            <span class="cm-variable cm-callee">repeating-radial-gradient</span>(
+              <span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-atom">center</span>,
+              <span class="cm-atom">transparent</span> <span class="cm-number">0px</span>,
+              <span class="cm-atom">#e5f4d1</span> <span class="cm-number">0px</span>,
+              <span class="cm-atom">#e5f4d1</span> <span class="cm-number">2px</span>,
+              <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">2px</span>,
+              <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color1</span>) <span class="cm-number">10px</span>
+            );
+          <span class="cm-tag">strong</span> {
+            <span class="cm-def">@include</span> <span class="cm-variable cm-callee">flex-center</span>();
+            <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+            <span class="cm-property">width</span>: <span class="cm-number">102.5%</span>;
+            <span class="cm-property">height</span>: <span class="cm-number">75%</span>;
+            <span class="cm-property">left</span>: <span class="cm-number">-1.25%</span>;
+            <span class="cm-property">top</span>: <span class="cm-number">12.5%</span>;
+            <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">0.5rem</span>;
+            <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">90deg</span>);
+            <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">20px</span>, <span class="cm-number">2.35vw</span>, <span class="cm-number">2.35vw</span>);
+            <span class="cm-property">word-break</span>: <span class="cm-atom">break-word</span>;
+            <span class="cm-property">line-height</span>: <span class="cm-number">0.95</span>;
+            <span class="cm-variable-2">--words</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--word-total</span>);
+            <span class="cm-property">letter-spacing</span>: <span class="cm-number">0.15rem</span>;
+            <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-variable cm-callee">calc</span>(<span class="cm-number">1</span> + (<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--word-total</span>) <span class="cm-operator">/</span> <span class="cm-number">20</span>)));
+            &gt; <span class="cm-tag">span</span><span class="cm-qualifier">.word</span> {
+              <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+            }
+            &gt; <span class="cm-tag">span</span> &gt; <span class="cm-tag">span</span><span class="cm-qualifier">.word</span> {
+              <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+              <span class="cm-def">@include</span> <span class="cm-variable cm-callee">text-stroke</span>(<span class="cm-number">1</span>, <span class="cm-builtin">#e5f4d1</span>);
+              <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(
+                <span class="cm-number">18px</span>,
+                <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">7vw</span> - (((<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--char-total</span>) * <span class="cm-number">1</span>) * (<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--words</span>) <span class="cm-operator">/</span> <span class="cm-number">1.5</span>)) * <span class="cm-number">0.35vw</span>)),
+                <span class="cm-number">2.75vw</span>
+              );
+            }
+          }
+        }
+        <span class="cm-qualifier">.details</span> {
+          <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+          <span class="cm-property">align-items</span>: <span class="cm-atom">stretch</span>;
+          <span class="cm-tag">strong</span> {
+            <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+            <span class="cm-tag">span</span> {
+              <span class="cm-property">width</span>: <span class="cm-number">50%</span>;
+              <span class="cm-property">box-shadow</span>: <span class="cm-atom">inset</span> <span class="cm-number">0.05vw</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>), <span class="cm-atom">inset</span> <span class="cm-number">-0.05vw</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>);
+              <span class="cm-def">@include</span> <span class="cm-variable cm-callee">flex-center</span>();
+            }
+          }
+        }
+        <span class="cm-qualifier">.location</span> {
+          <span class="cm-tag">strong</span> <span class="cm-tag">span</span> {
+            <span class="cm-property">font-size</span>: <span class="cm-number">1vw</span>;
+            <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+            <span class="cm-property">font-weight</span>: <span class="cm-number">200</span>;
+            <span class="cm-property">line-height</span>: <span class="cm-number">1.25</span>;
+            &amp;:<span class="cm-variable-3">first-of-type</span> {
+              <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">8px</span>, <span class="cm-number">1.25vw</span>, <span class="cm-number">1.25vw</span>);
+              <span class="cm-property">font-weight</span>: <span class="cm-number">900</span>;
+            }
+          }
+        }
+        <span class="cm-qualifier">.seat</span> {
+          <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+          <span class="cm-property">justify-content</span>: <span class="cm-atom">space-between</span>;
+          <span class="cm-property">background</span>: <span class="cm-atom">#e5f4d1</span>;
+          <span class="cm-tag">strong</span> {
+            <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">8px</span>, <span class="cm-number">1.25vw</span>, <span class="cm-number">1.25vw</span>);
+            <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+            <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+            <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+            <span class="cm-property">flex-wrap</span>: <span class="cm-atom">wrap</span>;
+            <span class="cm-property">width</span>: <span class="cm-number">33.33%</span>;
+            <span class="cm-property">padding</span>: <span class="cm-number">0.5rem</span>;
+            &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">2</span>) {
+              <span class="cm-property">box-shadow</span>: <span class="cm-number">0.075rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>), <span class="cm-number">-0.075rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>),
+                <span class="cm-atom">inset</span> <span class="cm-number">0.075rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>), <span class="cm-atom">inset</span> <span class="cm-number">-0.075rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dark</span>);
+            }
+            &gt; <span class="cm-tag">span</span> {
+              <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+              <span class="cm-property">margin</span>: <span class="cm-number">0.25rem</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+              <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+              <span class="cm-property">font-size</span>: <span class="cm-variable cm-callee">clamp</span>(<span class="cm-number">16px</span>, <span class="cm-number">2vw</span>, <span class="cm-number">2vw</span>);
+              <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+              <span class="cm-property">font-family</span>: <span class="cm-string">"Dot"</span>, <span class="cm-atom">cursive</span>;
+              <span class="cm-property">font-weight</span>: <span class="cm-number">100</span>;
+              <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--color2</span>);
+            }
+          }
+        }
+      }
+      &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">1</span>) {
+        <span class="cm-property">grid-area</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">7</span> <span class="cm-operator">/</span> <span class="cm-number">3</span>;
+        <span class="cm-qualifier">.inner</span> {
+          <span class="cm-property">transform-origin</span>: <span class="cm-number">0%</span> <span class="cm-number">0%</span>;
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-90deg</span>);
+        }
+      }
+      &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">2</span>) {
+        <span class="cm-property">grid-area</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">7</span> <span class="cm-operator">/</span> <span class="cm-number">3</span>;
+      }
+      &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">3</span>) {
+        <span class="cm-property">grid-area</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-number">7</span> <span class="cm-operator">/</span> <span class="cm-number">5</span>;
+      }
+      &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">4</span>) {
+        <span class="cm-property">grid-area</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">5</span> <span class="cm-operator">/</span> <span class="cm-number">5</span> <span class="cm-operator">/</span> <span class="cm-number">7</span>;
+      }
+      &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">5</span>) {
+        <span class="cm-property">grid-area</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">7</span> <span class="cm-operator">/</span> <span class="cm-number">5</span> <span class="cm-operator">/</span> <span class="cm-number">9</span>;
+      }
+      &amp;:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">6</span>) {
+        <span class="cm-property">grid-area</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-number">5</span> <span class="cm-operator">/</span> <span class="cm-number">5</span> <span class="cm-operator">/</span> <span class="cm-number">7</span>;
+        <span class="cm-qualifier">.inner</span> {
+          <span class="cm-property">transform-origin</span>: <span class="cm-number">0%</span> <span class="cm-number">100%</span>;
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">90deg</span>);
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<a href="https://codepen.io/cobra_winfrey/embed/BaRbKjQ?default-tab=#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">bands</span> <span class="cm-operator">=</span> [];
+<span class="cm-keyword">const</span> <span class="cm-def">cities</span> <span class="cm-operator">=</span> [];
+<span class="cm-keyword">const</span> <span class="cm-def">venues</span> <span class="cm-operator">=</span> [];
+<span class="cm-keyword">const</span> <span class="cm-def">row</span> <span class="cm-operator">=</span> <span class="cm-string">"abcdefghijklmnopqrstuvwxyz"</span>;
+
+<span class="cm-keyword">let</span> <span class="cm-def">days</span> <span class="cm-operator">=</span> [
+  <span class="cm-string">"Sunday"</span>,
+  <span class="cm-string">"Monday"</span>,
+  <span class="cm-string">"Tuesday"</span>,
+  <span class="cm-string">"Wednesday"</span>,
+  <span class="cm-string">"Thursday"</span>,
+  <span class="cm-string">"Friday"</span>,
+  <span class="cm-string">"Saturday"</span>
+];
+<span class="cm-keyword">let</span> <span class="cm-def">months</span> <span class="cm-operator">=</span> [
+  <span class="cm-string">"January"</span>,
+  <span class="cm-string">"February"</span>,
+  <span class="cm-string">"March"</span>,
+  <span class="cm-string">"April"</span>,
+  <span class="cm-string">"May"</span>,
+  <span class="cm-string">"June"</span>,
+  <span class="cm-string">"July"</span>,
+  <span class="cm-string">"August"</span>,
+  <span class="cm-string">"September"</span>,
+  <span class="cm-string">"October"</span>,
+  <span class="cm-string">"November"</span>,
+  <span class="cm-string">"December"</span>
+];
+
+<span class="cm-keyword">function</span> <span class="cm-def">randomDate</span>(<span class="cm-def">start</span>, <span class="cm-def">end</span>) {
+  <span class="cm-keyword">return</span> <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>(
+    <span class="cm-variable-2">start</span>.<span class="cm-property">getTime</span>() <span class="cm-operator">+</span> <span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-variable-2">end</span>.<span class="cm-property">getTime</span>() <span class="cm-operator">-</span> <span class="cm-variable-2">start</span>.<span class="cm-property">getTime</span>())
+  );
+}
+
+<span class="cm-variable">$</span>(<span class="cm-variable">document</span>).<span class="cm-property">ready</span>(<span class="cm-keyword">function</span> () {
+  <span class="cm-keyword">var</span> <span class="cm-def">lastFM</span> <span class="cm-operator">=</span>
+    <span class="cm-string">"https://ws.audioscrobbler.com/2.0/?api_key=5908c0487c4b5f26281c158dd83b59d6&amp;format=json&amp;method=user.getTopArtists&amp;user=adamkuhn&amp;period=overall&amp;limit=200"</span>;
+  <span class="cm-keyword">var</span> <span class="cm-def">cityData</span> <span class="cm-operator">=</span>
+    <span class="cm-string">"https://random-data-api.com/api/address/random_address?size=50"</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">getJSON</span>(<span class="cm-variable-2">cityData</span>, <span class="cm-keyword">function</span> (<span class="cm-def">data</span>) {
+    <span class="cm-variable">$</span>.<span class="cm-property">each</span>(<span class="cm-variable-2">data</span>, <span class="cm-keyword">function</span> (<span class="cm-def">i</span>, <span class="cm-def">item</span>) {
+      <span class="cm-variable">venues</span>.<span class="cm-property">push</span>(<span class="cm-variable-2">data</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">community</span> <span class="cm-operator">+</span> <span class="cm-string">" Theater"</span>);
+      <span class="cm-variable">cities</span>.<span class="cm-property">push</span>(<span class="cm-variable-2">data</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">city</span> <span class="cm-operator">+</span> <span class="cm-string">", "</span> <span class="cm-operator">+</span> <span class="cm-variable-2">data</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">state</span>);
+    });
+    <span class="cm-variable">$</span>.<span class="cm-property">getJSON</span>(<span class="cm-variable-2">lastFM</span>, <span class="cm-keyword">function</span> (<span class="cm-def">data</span>) {
+      <span class="cm-variable">$</span>.<span class="cm-property">each</span>(<span class="cm-variable-2">data</span>.<span class="cm-property">topartists</span>.<span class="cm-property">artist</span>, <span class="cm-keyword">function</span> (<span class="cm-def">i</span>, <span class="cm-def">item</span>) {
+        <span class="cm-variable">bands</span>.<span class="cm-property">push</span>(<span class="cm-variable-2">data</span>.<span class="cm-property">topartists</span>.<span class="cm-property">artist</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">name</span>);
+      });
+      <span class="cm-variable">createTicket</span>();
+      <span class="cm-variable">$</span>(<span class="cm-string">"body"</span>).<span class="cm-property">addClass</span>(<span class="cm-string">"loaded"</span>);
+    });
+  });
+});
+
+<span class="cm-variable">$</span>(<span class="cm-variable">document</span>).<span class="cm-property">click</span>(<span class="cm-keyword">function</span> () {
+  <span class="cm-variable">createTicket</span>();
+});
+
+<span class="cm-keyword">function</span> <span class="cm-def">createTicket</span>() {
+  <span class="cm-variable">$</span>(<span class="cm-string">"body"</span>).<span class="cm-property">removeClass</span>(<span class="cm-string">"active"</span>);
+  <span class="cm-variable">setTimeout</span>(() <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable">$</span>(<span class="cm-string">".ticket"</span>).<span class="cm-property">each</span>(<span class="cm-keyword">function</span> () {
+      <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">find</span>(<span class="cm-string">".inner"</span>).<span class="cm-property">remove</span>();
+      <span class="cm-keyword">let</span> <span class="cm-def">randBand</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> <span class="cm-variable">bands</span>.<span class="cm-property">length</span>);
+      <span class="cm-keyword">let</span> <span class="cm-def">randCity</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> <span class="cm-variable">cities</span>.<span class="cm-property">length</span>);
+      <span class="cm-keyword">let</span> <span class="cm-def">randVenue</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> <span class="cm-variable">venues</span>.<span class="cm-property">length</span>);
+      <span class="cm-keyword">let</span> <span class="cm-def">randDate</span> <span class="cm-operator">=</span> <span class="cm-variable">randomDate</span>(<span class="cm-keyword">new</span> <span class="cm-variable">Date</span>(<span class="cm-number">2021</span>, <span class="cm-number">0</span>, <span class="cm-number">1</span>), <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>());
+      <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>)
+        .<span class="cm-property">get</span>(<span class="cm-number">0</span>)
+        .<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(
+          <span class="cm-string">"--font1"</span>,
+          <span class="cm-string">"var(--font"</span> <span class="cm-operator">+</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">7</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">4</span>) <span class="cm-operator">+</span> <span class="cm-string">")"</span>
+        );
+      <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>)
+        .<span class="cm-property">get</span>(<span class="cm-number">0</span>)
+        .<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(
+          <span class="cm-string">"--font2"</span>,
+          <span class="cm-string">"var(--font"</span> <span class="cm-operator">+</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">7</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">4</span>) <span class="cm-operator">+</span> <span class="cm-string">")"</span>
+        );
+      <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>)
+        .<span class="cm-property">get</span>(<span class="cm-number">0</span>)
+        .<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(
+          <span class="cm-string">"--color1"</span>,
+          <span class="cm-string">"var(--color"</span> <span class="cm-operator">+</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">6</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">3</span>) <span class="cm-operator">+</span> <span class="cm-string">")"</span>
+        );
+      <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>)
+        .<span class="cm-property">get</span>(<span class="cm-number">0</span>)
+        .<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(
+          <span class="cm-string">"--rotate"</span>,
+          <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">5</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">1</span>) <span class="cm-operator">*</span> <span class="cm-number">45</span> <span class="cm-operator">+</span> <span class="cm-string">"deg"</span>
+        );
+      <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">append</span>(
+        <span class="cm-string">"&lt;div class='inner class"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">8</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span>
+          <span class="cm-string">" class"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">8</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">7</span>) <span class="cm-operator">+</span>
+          <span class="cm-string">"'&gt;&lt;div&gt;&lt;div class='date'&gt;&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">days</span>[<span class="cm-variable-2">randDate</span>.<span class="cm-property">getDay</span>()] <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">months</span>[<span class="cm-variable-2">randDate</span>.<span class="cm-property">getMonth</span>()] <span class="cm-operator">+</span>
+          <span class="cm-string">" "</span> <span class="cm-operator">+</span>
+          <span class="cm-variable-2">randDate</span>.<span class="cm-property">getDate</span>() <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">12</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span>
+          <span class="cm-string">":00 PM&lt;/span&gt;&lt;/div&gt;&lt;div class='band'&gt;&lt;strong data-splitting='words'&gt;&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">bands</span>[<span class="cm-variable-2">randBand</span>] <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;div class='location'&gt;&lt;strong&gt;&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">venues</span>[<span class="cm-variable-2">randVenue</span>] <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">cities</span>[<span class="cm-variable-2">randCity</span>] <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;div class='seat'&gt;&lt;strong&gt;Section&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">40</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;/strong&gt;&lt;strong&gt;Row&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">row</span>[<span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> <span class="cm-variable">row</span>.<span class="cm-property">length</span>)] <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;/strong&gt;&lt;strong&gt;Seat&lt;span&gt;"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">40</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span> <span class="cm-number">1</span>) <span class="cm-operator">+</span>
+          <span class="cm-string">"&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;div class='details'&gt;&lt;strong&gt;&lt;span&gt;$"</span> <span class="cm-operator">+</span>
+          <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-number">20</span> <span class="cm-operator">-</span> <span class="cm-number">5</span>) <span class="cm-operator">+</span> <span class="cm-number">5</span>) <span class="cm-operator">+</span>
+          <span class="cm-string">".00&lt;/span&gt;&lt;span&gt;All Ages&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"</span>
+      );
+    });
+    <span class="cm-variable">Splitting</span>();
+    <span class="cm-variable">$</span>(<span class="cm-string">"span.word"</span>).<span class="cm-property">attr</span>(<span class="cm-string">"data-splitting"</span>, <span class="cm-string">"chars"</span>);
+    <span class="cm-variable">Splitting</span>();
+  }, <span class="cm-number">1000</span>);
+  <span class="cm-variable">setTimeout</span>(() <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable">$</span>(<span class="cm-string">"body"</span>).<span class="cm-property">addClass</span>(<span class="cm-string">"active"</span>);
+  }, <span class="cm-number">1500</span>);
+}
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Generative Concert Tix" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Generative Concert Tix" data-src="https://cdpn.io/cobra_winfrey/fullembedgrid/BaRbKjQ?animations=run&amp;type=embed" src="./BaRbKjQ.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/cobra_winfrey" target="_blank" rel="noopener"><img src="./default(2).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/cobra_winfrey" target="_blank" rel="noopener">Adam Kuhn</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/cobra_winfrey" target="_blank" rel="noopener" class="about-user-more">
+See more by @cobra_winfrey on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js</a>
+</li>
+<li>
+<a href="https://unpkg.com/splitting@1.0.5/dist/splitting.min.js" target="_blank">https://unpkg.com/splitting@1.0.5/dist/splitting.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div id=&#39;wrap&#39;&gt;\n  &lt;div class=&#39;ticket&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;ticket&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;ticket&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;ticket&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;ticket&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;ticket&#39;&gt;&lt;/div&gt;\n&lt;/div&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&amp;display=swap&quot;);\n@import url(&quot;https://fonts.googleapis.com/css2?family=Coustard:wght@900&amp;display=swap&quot;);\n@font-face {\n  font-family: &quot;Cooper&quot;;\n  src: url(&quot;https://assets.codepen.io/383755/cooper-black-webfont.woff&quot;) format(&quot;woff&quot;);\n}\n@font-face {\n  font-family: &quot;Aharoni&quot;;\n  src: url(&quot;https://assets.codepen.io/383755/telefon.woff2&quot;) format(&quot;woff&quot;);\n}\n@font-face {\n  font-family: &quot;Bogart&quot;;\n  src: url(&quot;https://assets.codepen.io/383755/bogart-semibold.woff2&quot;) format(&quot;woff2&quot;);\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: &quot;Dot&quot;;\n  src: url(&quot;https://assets.codepen.io/383755/Dot-Matrix.ttf.woff&quot;) format(&quot;woff&quot;);\n}\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  overflow: hidden;\n  font-family: &quot;Oswald&quot;;\n  cursor: pointer;\n  --dark: #50303f;\n  --font1: &quot;Cooper&quot;;\n  --font2: &quot;Oswald&quot;;\n  --font4: &quot;Cooper&quot;;\n  --font5: &quot;Bogart&quot;;\n  --font6: &quot;Oswald&quot;;\n  --font7: &quot;Aharoni&quot;;\n  --font8: &quot;Coustard&quot;;\n  --color1: #fe2fd9;\n  --color2: #fa6c4b;\n  --color3: #e5f31b;\n  --color4: #5030da;\n  --color5: #ff3641;\n  --color6: #e5f31b;\n  --color7: #fe2fd9;\n  background: repeating-radial-gradient(circle at center, transparent 0px, #fff 0px, #fff 2px, transparent 2px, transparent 10px), radial-gradient(circle at center, #fff 25vw, #e5f4d1);\n}\nbody:before {\n  content: &quot;click to remix&quot;;\n  position: absolute;\n  bottom: 5px;\n  width: 100%;\n  left: 0;\n  text-align: center;\n  color: var(--dark);\n}\nbody.active #wrap .ticket:nth-of-type(1) {\n  z-index: 5;\n}\nbody.active #wrap .ticket:nth-of-type(1) .inner:before {\n  transition-delay: 0.25s;\n  opacity: 1;\n}\nbody.active #wrap .ticket:nth-of-type(1) .inner &gt; div {\n  transition-delay: 0.1s;\n}\nbody.active #wrap .ticket:nth-of-type(1) .inner &gt; div:before, body.active #wrap .ticket:nth-of-type(1) .inner &gt; div:after {\n  transition-delay: 0.25s;\n  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);\n}\nbody.active #wrap .ticket:nth-of-type(1) .inner &gt; div:after {\n  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;\n}\nbody.active #wrap .ticket:nth-of-type(2) {\n  z-index: 4;\n}\nbody.active #wrap .ticket:nth-of-type(2) .inner:before {\n  transition-delay: 0.35s;\n  opacity: 1;\n}\nbody.active #wrap .ticket:nth-of-type(2) .inner &gt; div {\n  transition-delay: 0.2s;\n}\nbody.active #wrap .ticket:nth-of-type(2) .inner &gt; div:before, body.active #wrap .ticket:nth-of-type(2) .inner &gt; div:after {\n  transition-delay: 0.35s;\n  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);\n}\nbody.active #wrap .ticket:nth-of-type(2) .inner &gt; div:after {\n  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;\n}\nbody.active #wrap .ticket:nth-of-type(3) {\n  z-index: 3;\n}\nbody.active #wrap .ticket:nth-of-type(3) .inner:before {\n  transition-delay: 0.45s;\n  opacity: 1;\n}\nbody.active #wrap .ticket:nth-of-type(3) .inner &gt; div {\n  transition-delay: 0.3s;\n}\nbody.active #wrap .ticket:nth-of-type(3) .inner &gt; div:before, body.active #wrap .ticket:nth-of-type(3) .inner &gt; div:after {\n  transition-delay: 0.45s;\n  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);\n}\nbody.active #wrap .ticket:nth-of-type(3) .inner &gt; div:after {\n  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;\n}\nbody.active #wrap .ticket:nth-of-type(4) {\n  z-index: 2;\n}\nbody.active #wrap .ticket:nth-of-type(4) .inner:before {\n  transition-delay: 0.55s;\n  opacity: 1;\n}\nbody.active #wrap .ticket:nth-of-type(4) .inner &gt; div {\n  transition-delay: 0.4s;\n}\nbody.active #wrap .ticket:nth-of-type(4) .inner &gt; div:before, body.active #wrap .ticket:nth-of-type(4) .inner &gt; div:after {\n  transition-delay: 0.55s;\n  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);\n}\nbody.active #wrap .ticket:nth-of-type(4) .inner &gt; div:after {\n  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;\n}\nbody.active #wrap .ticket:nth-of-type(5) {\n  z-index: 1;\n}\nbody.active #wrap .ticket:nth-of-type(5) .inner:before {\n  transition-delay: 0.65s;\n  opacity: 1;\n}\nbody.active #wrap .ticket:nth-of-type(5) .inner &gt; div {\n  transition-delay: 0.5s;\n}\nbody.active #wrap .ticket:nth-of-type(5) .inner &gt; div:before, body.active #wrap .ticket:nth-of-type(5) .inner &gt; div:after {\n  transition-delay: 0.65s;\n  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);\n}\nbody.active #wrap .ticket:nth-of-type(5) .inner &gt; div:after {\n  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;\n}\nbody.active #wrap .ticket:nth-of-type(6) {\n  z-index: 0;\n}\nbody.active #wrap .ticket:nth-of-type(6) .inner:before {\n  transition-delay: 0.75s;\n  opacity: 1;\n}\nbody.active #wrap .ticket:nth-of-type(6) .inner &gt; div {\n  transition-delay: 0.6s;\n}\nbody.active #wrap .ticket:nth-of-type(6) .inner &gt; div:before, body.active #wrap .ticket:nth-of-type(6) .inner &gt; div:after {\n  transition-delay: 0.75s;\n  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);\n}\nbody.active #wrap .ticket:nth-of-type(6) .inner &gt; div:after {\n  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;\n}\nbody.active #wrap .ticket .inner &gt; div {\n  transform: translateY(0);\n}\nbody.loaded #wrap {\n  opacity: 1;\n}\nbody #wrap {\n  width: clamp(662.5px, 80vw, 1325px);\n  min-width: 662.5px;\n  height: clamp(500px, 60vw, 1000px);\n  min-height: 500px;\n  display: grid;\n  grid-template-columns: repeat(8, 1fr);\n  grid-template-rows: repeat(6, 1fr);\n  grid-gap: 0rem;\n  transition: 0.5s ease-in-out;\n  transition-delay: 1s;\n  opacity: 0;\n}\nbody #wrap .ticket {\n  position: relative;\n}\nbody #wrap .ticket:nth-of-type(1) {\n  z-index: 7;\n}\nbody #wrap .ticket:nth-of-type(1) .inner:before {\n  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n  transition-delay: 0.5s;\n  opacity: 0;\n}\nbody #wrap .ticket:nth-of-type(1) .inner &gt; div {\n  transition-delay: 0.5s;\n}\nbody #wrap .ticket:nth-of-type(1) .inner &gt; div:before, body #wrap .ticket:nth-of-type(1) .inner &gt; div:after {\n  transition-delay: 0.65s;\n}\nbody #wrap .ticket:nth-of-type(2) {\n  z-index: 6;\n}\nbody #wrap .ticket:nth-of-type(2) .inner:before {\n  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n  transition-delay: 0.4s;\n  opacity: 0;\n}\nbody #wrap .ticket:nth-of-type(2) .inner &gt; div {\n  transition-delay: 0.4s;\n}\nbody #wrap .ticket:nth-of-type(2) .inner &gt; div:before, body #wrap .ticket:nth-of-type(2) .inner &gt; div:after {\n  transition-delay: 0.55s;\n}\nbody #wrap .ticket:nth-of-type(3) {\n  z-index: 5;\n}\nbody #wrap .ticket:nth-of-type(3) .inner:before {\n  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n  transition-delay: 0.3s;\n  opacity: 0;\n}\nbody #wrap .ticket:nth-of-type(3) .inner &gt; div {\n  transition-delay: 0.3s;\n}\nbody #wrap .ticket:nth-of-type(3) .inner &gt; div:before, body #wrap .ticket:nth-of-type(3) .inner &gt; div:after {\n  transition-delay: 0.45s;\n}\nbody #wrap .ticket:nth-of-type(4) {\n  z-index: 4;\n}\nbody #wrap .ticket:nth-of-type(4) .inner:before {\n  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n  transition-delay: 0.2s;\n  opacity: 0;\n}\nbody #wrap .ticket:nth-of-type(4) .inner &gt; div {\n  transition-delay: 0.2s;\n}\nbody #wrap .ticket:nth-of-type(4) .inner &gt; div:before, body #wrap .ticket:nth-of-type(4) .inner &gt; div:after {\n  transition-delay: 0.35s;\n}\nbody #wrap .ticket:nth-of-type(5) {\n  z-index: 3;\n}\nbody #wrap .ticket:nth-of-type(5) .inner:before {\n  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n  transition-delay: 0.1s;\n  opacity: 0;\n}\nbody #wrap .ticket:nth-of-type(5) .inner &gt; div {\n  transition-delay: 0.1s;\n}\nbody #wrap .ticket:nth-of-type(5) .inner &gt; div:before, body #wrap .ticket:nth-of-type(5) .inner &gt; div:after {\n  transition-delay: 0.25s;\n}\nbody #wrap .ticket:nth-of-type(6) {\n  z-index: 2;\n}\nbody #wrap .ticket:nth-of-type(6) .inner:before {\n  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n  transition-delay: 0s;\n  opacity: 0;\n}\nbody #wrap .ticket:nth-of-type(6) .inner &gt; div {\n  transition-delay: 0s;\n}\nbody #wrap .ticket:nth-of-type(6) .inner &gt; div:before, body #wrap .ticket:nth-of-type(6) .inner &gt; div:after {\n  transition-delay: 0.15s;\n}\nbody #wrap .ticket .inner {\n  position: absolute;\n  height: 100%;\n  width: 100%;\n  left: 0;\n  top: 0;\n  padding: 1rem;\n  clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%);\n  transform-style: preserve-3d;\n  perspective: 900px;\n}\nbody #wrap .ticket .inner:before {\n  content: &quot;&quot;;\n  position: absolute;\n  width: 90%;\n  height: 90%;\n  top: 10%;\n  left: 5%;\n  background: rgba(0, 0, 0, 0.25);\n  filter: blur(15px);\n}\nbody #wrap .ticket .inner.class1 .details {\n  grid-row: 1/span 1;\n}\nbody #wrap .ticket .inner.class2 .seat {\n  grid-row: 3/span 1;\n}\nbody #wrap .ticket .inner.class2 .band, body #wrap .ticket .inner.class3 .band {\n  background: radial-gradient(circle at center, #e5f4d1 35%, transparent 35%, var(--color1) 75%), radial-gradient(circle at center, #e5f4d1 2px, var(--color1) 1px, var(--color1) 5px) 50% 50%/8px 8px repeat;\n}\nbody #wrap .ticket .inner.class3 .band {\n  text-transform: uppercase;\n}\nbody #wrap .ticket .inner.class5 &gt; div, body #wrap .ticket .inner.class6 &gt; div {\n  grid-template-columns: calc(33% - 0.125rem) calc(33% - 0.125rem) calc( \t\t\t\t\t\t\t\t33% - 0.125rem \t\t\t\t\t\t\t);\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div, body #wrap .ticket .inner.class6 &gt; div &gt; div {\n  grid-column: span 3;\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.band strong span.word, body #wrap .ticket .inner.class6 &gt; div &gt; div.band strong span.word {\n  display: inline-block;\n  margin: 0 0.15vw;\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.band, body #wrap .ticket .inner.class5 &gt; div &gt; div.location, body #wrap .ticket .inner.class6 &gt; div &gt; div.band, body #wrap .ticket .inner.class6 &gt; div &gt; div.location {\n  grid-column: 1/span 2;\n  grid-row: span 6;\n  position: relative;\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.band strong, body #wrap .ticket .inner.class5 &gt; div &gt; div.location strong, body #wrap .ticket .inner.class6 &gt; div &gt; div.band strong, body #wrap .ticket .inner.class6 &gt; div &gt; div.location strong {\n  width: 200%;\n  left: -50%;\n  height: 50%;\n  top: 25%;\n  position: absolute;\n  padding: 0 1rem;\n  transform: rotate(90deg);\n  word-break: break-word;\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.location, body #wrap .ticket .inner.class6 &gt; div &gt; div.location {\n  grid-column: 3/span 1;\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.location strong, body #wrap .ticket .inner.class6 &gt; div &gt; div.location strong {\n  width: 400%;\n  height: 12.5%;\n  top: 45%;\n  left: -150%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  text-shadow: -1px -1px 0 #e5f4d1, -1px 0px 0 #e5f4d1, -1px 1px 0 #e5f4d1, 0px -1px 0 #e5f4d1, 0px 0px 0 #e5f4d1, 0px 1px 0 #e5f4d1, 1px -1px 0 #e5f4d1, 1px 0px 0 #e5f4d1, 1px 1px 0 #e5f4d1;\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.location strong:before, body #wrap .ticket .inner.class6 &gt; div &gt; div.location strong:before {\n  content: &quot;&quot;;\n  position: absolute;\n  width: 90%;\n  left: 5%;\n  top: -5%;\n  height: 110%;\n  background: var(--color1);\n  -webkit-mask: url(&quot;data:image/png;base64,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&quot;);\n  opacity: 0.75;\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.location strong span, body #wrap .ticket .inner.class6 &gt; div &gt; div.location strong span {\n  display: block;\n  width: 100%;\n  font-size: clamp(10px, 1vw, 1vw);\n}\nbody #wrap .ticket .inner.class5 &gt; div &gt; div.location strong span:first-of-type, body #wrap .ticket .inner.class6 &gt; div &gt; div.location strong span:first-of-type {\n  font-size: clamp(12px, 1.35vw, 1.35vw);\n  text-shadow: -1px -1px 0 #e5f4d1, -1px 0px 0 #e5f4d1, -1px 1px 0 #e5f4d1, 0px -1px 0 #e5f4d1, 0px 0px 0 #e5f4d1, 0px 1px 0 #e5f4d1, 1px -1px 0 #e5f4d1, 1px 0px 0 #e5f4d1, 1px 1px 0 #e5f4d1;\n}\nbody #wrap .ticket .inner.class7 .band {\n  background: radial-gradient(circle at center, #e5f4d1 35%, transparent 35%, var(--color1) 75%), repeating-linear-gradient(var(--rotate), #e5f4d1 2px, var(--color1) 2px, var(--color1) 10px, #e5f4d1 10px, #e5f4d1 12px);\n}\nbody #wrap .ticket .inner.class9 .band strong span.word {\n  transform: skew(5deg);\n}\nbody #wrap .ticket .inner.class10 .band, body #wrap .ticket .inner.class11 .band {\n  background: radial-gradient(circle at center, #e5f4d1 35%, transparent 35%, var(--color1) 75%), repeating-linear-gradient(var(--rotate), #e5f4d1 2px, var(--color1) 2px, var(--color1) 10px, #e5f4d1 10px, #e5f4d1 12px);\n}\nbody #wrap .ticket .inner &gt; div {\n  display: grid;\n  grid-template-columns: calc(100% - 0.25rem);\n  grid-template-rows: repeat(10, 1fr);\n  justify-content: center;\n  height: 100%;\n  background: var(--dark);\n  grid-gap: 0.125rem;\n  padding: 0.125rem 0;\n  position: relative;\n  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n  transform-style: preserve-3d;\n  transform: rotateY(180deg);\n}\nbody #wrap .ticket .inner &gt; div:before, body #wrap .ticket .inner &gt; div:after {\n  transform-style: preserve-3d;\n  content: &quot;&quot;;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  z-index: 2;\n  box-shadow: inset -200px 0px 100px 100px rgba(0, 0, 0, 0.25), inset 0 0 3rem -2rem var(--dark), inset 0 0 0 0.5rem var(--color1);\n  transition: box-shadow 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);\n}\nbody #wrap .ticket .inner &gt; div:before {\n  background: #e5f4d1;\n  -webkit-mask: url(&quot;data:image/png;base64,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&quot;);\n  opacity: 0.5;\n  width: calc(100% + 0.5vw);\n  height: calc(100% + 0.5vw);\n  left: -0.25vw;\n  top: -0.25vw;\n  backface-visibility: hidden;\n}\nbody #wrap .ticket .inner &gt; div:after {\n  transform: rotateY(-180deg) translateZ(0.05px);\n  background: #f1f9e6;\n  box-shadow: inset 100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 6rem -6rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;\n}\nbody #wrap .ticket .inner &gt; div &gt; div {\n  box-sizing: border-box;\n  background: var(--color1);\n  box-shadow: inherit;\n  line-height: 1;\n  grid-row: span 1;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n}\nbody #wrap .ticket .inner .date {\n  text-transform: uppercase;\n  grid-row: span 2;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  padding: 0.75vw 0;\n  background: #e5f4d1;\n}\nbody #wrap .ticket .inner .date span {\n  display: block;\n  font-size: clamp(10px, 1vw, 1vw);\n  width: 100%;\n}\nbody #wrap .ticket .inner .date &gt; span:nth-of-type(2) {\n  font-size: clamp(16px, 2vw, 2vw);\n  font-family: var(--font2);\n}\nbody #wrap .ticket .inner .band {\n  grid-row: span 5;\n  position: relative;\n  font-family: var(--font1);\n  overflow: hidden;\n  background: radial-gradient(circle at center, #e5f4d1 37.5%, transparent 35%, var(--color1) 90%), repeating-radial-gradient(circle at center, transparent 0px, #e5f4d1 0px, #e5f4d1 2px, var(--color1) 2px, var(--color1) 10px);\n}\nbody #wrap .ticket .inner .band strong {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  position: absolute;\n  width: 102.5%;\n  height: 75%;\n  left: -1.25%;\n  top: 12.5%;\n  padding: 0 0.5rem;\n  transform: rotate(90deg);\n  font-size: clamp(20px, 2.35vw, 2.35vw);\n  word-break: break-word;\n  line-height: 0.95;\n  --words: var(--word-total);\n  letter-spacing: 0.15rem;\n  transform: scale(calc(1 + (var(--word-total) / 20)));\n}\nbody #wrap .ticket .inner .band strong &gt; span.word {\n  display: inline-block;\n}\nbody #wrap .ticket .inner .band strong &gt; span &gt; span.word {\n  display: block;\n  text-shadow: -1px -1px 0 #e5f4d1, -1px 0px 0 #e5f4d1, -1px 1px 0 #e5f4d1, 0px -1px 0 #e5f4d1, 0px 0px 0 #e5f4d1, 0px 1px 0 #e5f4d1, 1px -1px 0 #e5f4d1, 1px 0px 0 #e5f4d1, 1px 1px 0 #e5f4d1;\n  font-size: clamp( \t\t\t\t\t\t\t\t18px, \t\t\t\t\t\t\t\tcalc(7vw - (((var(--char-total) * 1) * (var(--words) / 1.5)) * 0.35vw)), \t\t\t\t\t\t\t\t2.75vw \t\t\t\t\t\t\t);\n}\nbody #wrap .ticket .inner .details {\n  display: flex;\n  align-items: stretch;\n}\nbody #wrap .ticket .inner .details strong {\n  width: 100%;\n  display: flex;\n}\nbody #wrap .ticket .inner .details strong span {\n  width: 50%;\n  box-shadow: inset 0.05vw 0 0 var(--dark), inset -0.05vw 0 0 var(--dark);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n}\nbody #wrap .ticket .inner .location strong span {\n  font-size: 1vw;\n  display: block;\n  font-weight: 200;\n  line-height: 1.25;\n}\nbody #wrap .ticket .inner .location strong span:first-of-type {\n  font-size: clamp(8px, 1.25vw, 1.25vw);\n  font-weight: 900;\n}\nbody #wrap .ticket .inner .seat {\n  display: flex;\n  justify-content: space-between;\n  background: #e5f4d1;\n}\nbody #wrap .ticket .inner .seat strong {\n  font-size: clamp(8px, 1.25vw, 1.25vw);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  width: 33.33%;\n  padding: 0.5rem;\n}\nbody #wrap .ticket .inner .seat strong:nth-of-type(2) {\n  box-shadow: 0.075rem 0 0 var(--dark), -0.075rem 0 0 var(--dark), inset 0.075rem 0 0 var(--dark), inset -0.075rem 0 0 var(--dark);\n}\nbody #wrap .ticket .inner .seat strong &gt; span {\n  display: block;\n  margin: 0.25rem 0 0;\n  width: 100%;\n  font-size: clamp(16px, 2vw, 2vw);\n  text-transform: uppercase;\n  font-family: &quot;Dot&quot;, cursive;\n  font-weight: 100;\n  color: var(--color2);\n}\nbody #wrap .ticket:nth-of-type(1) {\n  grid-area: 3/1/7/3;\n}\nbody #wrap .ticket:nth-of-type(1) .inner {\n  transform-origin: 0% 0%;\n  transform: rotate(-90deg);\n}\nbody #wrap .ticket:nth-of-type(2) {\n  grid-area: 3/1/7/3;\n}\nbody #wrap .ticket:nth-of-type(3) {\n  grid-area: 3/3/7/5;\n}\nbody #wrap .ticket:nth-of-type(4) {\n  grid-area: 1/5/5/7;\n}\nbody #wrap .ticket:nth-of-type(5) {\n  grid-area: 1/7/5/9;\n}\nbody #wrap .ticket:nth-of-type(6) {\n  grid-area: 1/5/5/7;\n}\nbody #wrap .ticket:nth-of-type(6) .inner {\n  transform-origin: 0% 100%;\n  transform: rotate(90deg);\n}","js":"const bands = [];\nconst cities = [];\nconst venues = [];\nconst row = &quot;abcdefghijklmnopqrstuvwxyz&quot;;\n\nlet days = [\n&quot;Sunday&quot;,\n&quot;Monday&quot;,\n&quot;Tuesday&quot;,\n&quot;Wednesday&quot;,\n&quot;Thursday&quot;,\n&quot;Friday&quot;,\n&quot;Saturday&quot;];\n\nlet months = [\n&quot;January&quot;,\n&quot;February&quot;,\n&quot;March&quot;,\n&quot;April&quot;,\n&quot;May&quot;,\n&quot;June&quot;,\n&quot;July&quot;,\n&quot;August&quot;,\n&quot;September&quot;,\n&quot;October&quot;,\n&quot;November&quot;,\n&quot;December&quot;];\n\n\nfunction randomDate(start, end) {\n  return new Date(\n  start.getTime() + Math.random() * (end.getTime() - start.getTime()));\n\n}\n\n$(document).ready(function () {\n  var lastFM =\n  &quot;https://ws.audioscrobbler.com/2.0/?api_key=5908c0487c4b5f26281c158dd83b59d6&amp;format=json&amp;method=user.getTopArtists&amp;user=adamkuhn&amp;period=overall&amp;limit=200&quot;;\n  var cityData =\n  &quot;https://random-data-api.com/api/address/random_address?size=50&quot;;\n  $.getJSON(cityData, function (data) {\n    $.each(data, function (i, item) {\n      venues.push(data[i].community + &quot; Theater&quot;);\n      cities.push(data[i].city + &quot;, &quot; + data[i].state);\n    });\n    $.getJSON(lastFM, function (data) {\n      $.each(data.topartists.artist, function (i, item) {\n        bands.push(data.topartists.artist[i].name);\n      });\n      createTicket();\n      $(&quot;body&quot;).addClass(&quot;loaded&quot;);\n    });\n  });\n});\n\n$(document).click(function () {\n  createTicket();\n});\n\nfunction createTicket() {\n  $(&quot;body&quot;).removeClass(&quot;active&quot;);\n  setTimeout(() =&gt; {\n    $(&quot;.ticket&quot;).each(function () {\n      $(this).find(&quot;.inner&quot;).remove();\n      let randBand = Math.floor(Math.random() * bands.length);\n      let randCity = Math.floor(Math.random() * cities.length);\n      let randVenue = Math.floor(Math.random() * venues.length);\n      let randDate = randomDate(new Date(2021, 0, 1), new Date());\n      $(this).\n      get(0).\n      style.setProperty(\n      &quot;--font1&quot;,\n      &quot;var(--font&quot; + Math.floor(Math.random() * (7 - 1) + 4) + &quot;)&quot;);\n\n      $(this).\n      get(0).\n      style.setProperty(\n      &quot;--font2&quot;,\n      &quot;var(--font&quot; + Math.floor(Math.random() * (7 - 1) + 4) + &quot;)&quot;);\n\n      $(this).\n      get(0).\n      style.setProperty(\n      &quot;--color1&quot;,\n      &quot;var(--color&quot; + Math.floor(Math.random() * (6 - 1) + 3) + &quot;)&quot;);\n\n      $(this).\n      get(0).\n      style.setProperty(\n      &quot;--rotate&quot;,\n      Math.floor(Math.random() * (5 - 1) + 1) * 45 + &quot;deg&quot;);\n\n      $(this).append(\n      &quot;&lt;div class=&#39;inner class&quot; +\n      Math.floor(Math.random() * (8 - 1) + 1) +\n      &quot; class&quot; +\n      Math.floor(Math.random() * (8 - 1) + 7) +\n      &quot;&#39;&gt;&lt;div&gt;&lt;div class=&#39;date&#39;&gt;&lt;span&gt;&quot; +\n      days[randDate.getDay()] +\n      &quot;&lt;/span&gt;&lt;span&gt;&quot; +\n      months[randDate.getMonth()] +\n      &quot; &quot; +\n      randDate.getDate() +\n      &quot;&lt;/span&gt;&lt;span&gt;&quot; +\n      Math.floor(Math.random() * (12 - 1) + 1) +\n      &quot;:00 PM&lt;/span&gt;&lt;/div&gt;&lt;div class=&#39;band&#39;&gt;&lt;strong data-splitting=&#39;words&#39;&gt;&lt;span&gt;&quot; +\n      bands[randBand] +\n      &quot;&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;div class=&#39;location&#39;&gt;&lt;strong&gt;&lt;span&gt;&quot; +\n      venues[randVenue] +\n      &quot;&lt;/span&gt;&lt;span&gt;&quot; +\n      cities[randCity] +\n      &quot;&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;div class=&#39;seat&#39;&gt;&lt;strong&gt;Section&lt;span&gt;&quot; +\n      Math.floor(Math.random() * (40 - 1) + 1) +\n      &quot;&lt;/span&gt;&lt;/strong&gt;&lt;strong&gt;Row&lt;span&gt;&quot; +\n      row[Math.floor(Math.random() * row.length)] +\n      &quot;&lt;/span&gt;&lt;/strong&gt;&lt;strong&gt;Seat&lt;span&gt;&quot; +\n      Math.floor(Math.random() * (40 - 1) + 1) +\n      &quot;&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;div class=&#39;details&#39;&gt;&lt;strong&gt;&lt;span&gt;$&quot; +\n      Math.floor(Math.random() * (20 - 5) + 5) +\n      &quot;.00&lt;/span&gt;&lt;span&gt;All Ages&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;);\n\n    });\n    Splitting();\n    $(&quot;span.word&quot;).attr(&quot;data-splitting&quot;, &quot;chars&quot;);\n    Splitting();\n  }, 1000);\n  setTimeout(() =&gt; {\n    $(&quot;body&quot;).addClass(&quot;active&quot;);\n  }, 1500);\n}"};
+    __preprocessors = {
+      "html": "haml",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "Haml",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+
+</body></html>

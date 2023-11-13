@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://codepen.io/airen/embed/oNLPNax?default-tab= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Masonry Layout: masonry spanning</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="gbGPmP6nsJ/N3vC32i/rmweJmnpFgp0coJ8kHnqr1FZHrTkGWM7pUOJPfAMRWDDogmTgt6WUbk6dI/TOrdftyA==">
+<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/airen/embed/oNLPNax?default-tab=#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/airen/embed/oNLPNax?default-tab=#js-box" role="button" aria-pressed="false">
+Babel
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/airen/embed/oNLPNax?default-tab=#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/airen/embed/oNLPNax?default-tab=#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/airen/pen/oNLPNax" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap"</span>);
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100vw</span>;
+  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">counter-reset</span>: <span class="cm-variable">section</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Exo"</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">600</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+
+<span class="cm-qualifier">.item</span> {
+  <span class="cm-property">border-radius</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">background-size</span>: <span class="cm-atom">cover</span>;
+  <span class="cm-property">background-position</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">10em</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+}
+
+<span class="cm-qualifier">.item</span>::<span class="cm-variable-3">before</span> {
+  <span class="cm-property">counter-increment</span>: <span class="cm-variable">section</span>;
+  <span class="cm-property">content</span>: <span class="cm-variable cm-callee">counter</span>(<span class="cm-variable">section</span>);
+  <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">radial-gradient</span>(
+      <span class="cm-number">50%</span> <span class="cm-number">105%</span>,
+      <span class="cm-atom">#fffff5</span> <span class="cm-number">15%</span>,
+      <span class="cm-atom">#fff3d5</span> <span class="cm-number">31%</span>,
+      <span class="cm-atom">#ffd484</span> <span class="cm-number">100%</span>
+    ),
+    <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-number">51%</span> <span class="cm-number">200%</span>, <span class="cm-atom">#fffcf5</span> <span class="cm-number">100%</span>, <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">251</span>, <span class="cm-number">213</span>, <span class="cm-number">142</span>, <span class="cm-number">0</span>) <span class="cm-number">100%</span>),
+    <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-number">50%</span> <span class="cm-number">103%</span>, <span class="cm-atom">#ff5f49</span> <span class="cm-number">15%</span>, <span class="cm-atom">#ff1919</span> <span class="cm-number">100%</span>);
+  <span class="cm-property">background-origin</span>: <span class="cm-atom">border-box</span>;
+  <span class="cm-property">background-clip</span>: <span class="cm-atom">padding-box</span>, <span class="cm-atom">padding-box</span>, <span class="cm-atom">border-box</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">2px</span> <span class="cm-atom">solid</span> <span class="cm-atom">transparent</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">2px</span> <span class="cm-number">10px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">96</span>, <span class="cm-number">43</span>, <span class="cm-number">43</span>, <span class="cm-number">0.5</span>);
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">2em</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">inline-flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">text-shadow</span>: <span class="cm-number">1px</span> <span class="cm-number">0px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">103</span> <span class="cm-number">105</span> <span class="cm-number">171</span>), <span class="cm-number">0px</span> <span class="cm-number">1px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">221</span> <span class="cm-number">17</span> <span class="cm-number">17</span>),
+    <span class="cm-number">-1px</span> <span class="cm-number">0px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">113</span> <span class="cm-number">12</span> <span class="cm-number">206</span>), <span class="cm-number">0px</span> <span class="cm-number">-1px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">207</span> <span class="cm-number">107</span> <span class="cm-number">225</span>),
+    <span class="cm-number">2px</span> <span class="cm-number">0px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">103</span> <span class="cm-number">105</span> <span class="cm-number">171</span>), <span class="cm-number">0px</span> <span class="cm-number">2px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">221</span> <span class="cm-number">17</span> <span class="cm-number">17</span>),
+    <span class="cm-number">-2px</span> <span class="cm-number">0px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">113</span> <span class="cm-number">12</span> <span class="cm-number">206</span>), <span class="cm-number">0px</span> <span class="cm-number">-2px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">207</span> <span class="cm-number">107</span> <span class="cm-number">225</span>);
+  <span class="cm-property">width</span>: <span class="cm-number">48px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">48px</span>;
+  <span class="cm-property">mix-blend-mode</span>: <span class="cm-atom">difference</span>;
+  <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">hue-rotate</span>(<span class="cm-number">180deg</span>);
+  <span class="cm-property">backdrop-filter</span>: <span class="cm-variable cm-callee">saturate</span>(<span class="cm-number">0.8</span>);
+}
+
+<span class="cm-qualifier">.item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">2n</span>) {
+  <span class="cm-property">height</span>: <span class="cm-number">14em</span>;
+}
+<span class="cm-qualifier">.item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">3n</span>) {
+  <span class="cm-property">height</span>: <span class="cm-number">18em</span>;
+}
+<span class="cm-qualifier">.item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">4n</span>) {
+  <span class="cm-property">height</span>: <span class="cm-number">22em</span>;
+}
+<span class="cm-qualifier">.item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">5n</span>) {
+  <span class="cm-property">height</span>: <span class="cm-number">24em</span>;
+}
+<span class="cm-qualifier">.item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">6n</span>) {
+  <span class="cm-property">height</span>: <span class="cm-number">30em</span>;
+}
+<span class="cm-qualifier">.item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">7n</span>) {
+  <span class="cm-property">height</span>: <span class="cm-number">34em</span>;
+}
+
+<span class="cm-qualifier">.item</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">8n</span>) {
+  <span class="cm-property">height</span>: <span class="cm-number">40em</span>;
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">4</span>, <span class="cm-number">1fr</span>);
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable">masonry</span>;
+  <span class="cm-property">gap</span>: <span class="cm-number">10px</span>;
+}
+
+<span class="cm-tag">div</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">1</span>) {
+  <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> / <span class="cm-number">3</span>;
+}
+
+<span class="cm-tag">div</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">2</span>) {
+  <span class="cm-property">grid-area</span>: <span class="cm-number">1</span> / <span class="cm-number">3</span> / <span class="cm-number">2</span> / <span class="cm-number">5</span>;
+}
+
+<span class="cm-tag">div</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">3</span>) {
+  <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+}
+</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="jsx" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">for</span> (<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;=</span> <span class="cm-number">50</span>; <span class="cm-variable-2">i</span><span class="cm-operator">++</span>) {
+  <span class="cm-keyword">const</span> <span class="cm-def">div</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">createElement</span>(<span class="cm-string">"div"</span>);
+  <span class="cm-variable-2">div</span>.<span class="cm-property">classList</span>.<span class="cm-property">add</span>(<span class="cm-string">"item"</span>);
+  <span class="cm-variable-2">div</span>.<span class="cm-property">style</span>.<span class="cm-property">backgroundImage</span> <span class="cm-operator">=</span> <span class="cm-string-2">`url(https://picsum.photos/500/500?random=${</span><span class="cm-variable-2">i</span><span class="cm-string-2">}</span><span class="cm-string-2">)`</span>;
+  <span class="cm-variable">document</span>.<span class="cm-property">body</span>.<span class="cm-property">appendChild</span>(<span class="cm-variable-2">div</span>);
+}
+</code></pre>
+<a href="https://codepen.io/airen/embed/oNLPNax?default-tab=#0" id="view-js-compiled-button" class="action-button bottom right view-compiled-button" data-type="js">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Masonry Layout: masonry spanning" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Masonry Layout: masonry spanning" data-src="https://cdpn.io/airen/fullembedgrid/oNLPNax?animations=run&amp;type=embed" src="./oNLPNax(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/airen" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/airen" target="_blank" rel="noopener">大漠</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/airen" target="_blank" rel="noopener" class="about-user-more">
+See more by @airen on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"","css":"@import url(&quot;https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap&quot;);\n\nbody {\n  width: 100vw;\n  min-height: 100vh;\n  counter-reset: section;\n  font-family: &quot;Exo&quot;, Arial, sans-serif;\n  font-size: 20px;\n  font-weight: 600;\n  padding: 10px;\n  box-sizing: border-box;\n}\n\n.item {\n  border-radius: 10px;\n  background-size: cover;\n  background-position: center;\n  height: 10em;\n  position: relative;\n}\n\n.item::before {\n  counter-increment: section;\n  content: counter(section);\n  background-image: radial-gradient(\n      50% 105%,\n      #fffff5 15%,\n      #fff3d5 31%,\n      #ffd484 100%\n    ),\n    radial-gradient(51% 200%, #fffcf5 100%, rgba(251, 213, 142, 0) 100%),\n    radial-gradient(50% 103%, #ff5f49 15%, #ff1919 100%);\n  background-origin: border-box;\n  background-clip: padding-box, padding-box, border-box;\n  border: 2px solid transparent;\n  box-shadow: 0 2px 10px 0 rgba(96, 43, 43, 0.5);\n  border-radius: 50%;\n  padding: 10px;\n  font-size: 2em;\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 10px;\n  bottom: 10px;\n  color: #fff;\n  text-shadow: 1px 0px 0 rgb(103 105 171), 0px 1px 0 rgb(221 17 17),\n    -1px 0px 0 rgb(113 12 206), 0px -1px 0 rgb(207 107 225),\n    2px 0px 0 rgb(103 105 171), 0px 2px 0 rgb(221 17 17),\n    -2px 0px 0 rgb(113 12 206), 0px -2px 0 rgb(207 107 225);\n  width: 48px;\n  height: 48px;\n  mix-blend-mode: difference;\n  filter: hue-rotate(180deg);\n  -webkit-backdrop-filter: saturate(0.8);\n          backdrop-filter: saturate(0.8);\n}\n\n.item:nth-child(2n) {\n  height: 14em;\n}\n.item:nth-child(3n) {\n  height: 18em;\n}\n.item:nth-child(4n) {\n  height: 22em;\n}\n.item:nth-child(5n) {\n  height: 24em;\n}\n.item:nth-child(6n) {\n  height: 30em;\n}\n.item:nth-child(7n) {\n  height: 34em;\n}\n\n.item:nth-child(8n) {\n  height: 40em;\n}\n\nbody {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: masonry;\n  gap: 10px;\n}\n\ndiv:nth-of-type(1) {\n  grid-column: 1 / 3;\n}\n\ndiv:nth-of-type(2) {\n  grid-area: 1 / 3 / 2 / 5;\n}\n\ndiv:nth-of-type(3) {\n  grid-column: span 3;\n}","js":"for (let i = 0; i &lt;= 50; i++) {if (window.CP.shouldStopExecution(0)) break;\n  const div = document.createElement(&quot;div&quot;);\n  div.classList.add(&quot;item&quot;);\n  div.style.backgroundImage = `url(https://picsum.photos/500/500?random=${i})`;\n  document.body.appendChild(div);\n}window.CP.exitedLoop(0);"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "babel"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "Babel"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+
+</body></html>

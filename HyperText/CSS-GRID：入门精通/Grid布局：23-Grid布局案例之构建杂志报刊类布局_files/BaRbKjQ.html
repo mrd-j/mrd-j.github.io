@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://cdpn.io/cobra_winfrey/fullembedgrid/BaRbKjQ?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - Generative Concert Tix</title>
+
+    <link rel="canonical" href="https://codepen.io/cobra_winfrey/pen/BaRbKjQ">
+  
+  
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap");
+@font-face {
+  font-family: "Cooper";
+  src: url("https://assets.codepen.io/383755/cooper-black-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Aharoni";
+  src: url("https://assets.codepen.io/383755/telefon.woff2") format("woff");
+}
+@font-face {
+  font-family: "Bogart";
+  src: url("https://assets.codepen.io/383755/bogart-semibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dot";
+  src: url("https://assets.codepen.io/383755/Dot-Matrix.ttf.woff") format("woff");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Oswald";
+  cursor: pointer;
+  --dark: #50303f;
+  --font1: "Cooper";
+  --font2: "Oswald";
+  --font4: "Cooper";
+  --font5: "Bogart";
+  --font6: "Oswald";
+  --font7: "Aharoni";
+  --font8: "Coustard";
+  --color1: #fe2fd9;
+  --color2: #fa6c4b;
+  --color3: #e5f31b;
+  --color4: #5030da;
+  --color5: #ff3641;
+  --color6: #e5f31b;
+  --color7: #fe2fd9;
+  background: repeating-radial-gradient(circle at center, transparent 0px, #fff 0px, #fff 2px, transparent 2px, transparent 10px), radial-gradient(circle at center, #fff 25vw, #e5f4d1);
+}
+body:before {
+  content: "click to remix";
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  color: var(--dark);
+}
+body.active #wrap .ticket:nth-of-type(1) {
+  z-index: 5;
+}
+body.active #wrap .ticket:nth-of-type(1) .inner:before {
+  transition-delay: 0.25s;
+  opacity: 1;
+}
+body.active #wrap .ticket:nth-of-type(1) .inner > div {
+  transition-delay: 0.1s;
+}
+body.active #wrap .ticket:nth-of-type(1) .inner > div:before, body.active #wrap .ticket:nth-of-type(1) .inner > div:after {
+  transition-delay: 0.25s;
+  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);
+}
+body.active #wrap .ticket:nth-of-type(1) .inner > div:after {
+  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;
+}
+body.active #wrap .ticket:nth-of-type(2) {
+  z-index: 4;
+}
+body.active #wrap .ticket:nth-of-type(2) .inner:before {
+  transition-delay: 0.35s;
+  opacity: 1;
+}
+body.active #wrap .ticket:nth-of-type(2) .inner > div {
+  transition-delay: 0.2s;
+}
+body.active #wrap .ticket:nth-of-type(2) .inner > div:before, body.active #wrap .ticket:nth-of-type(2) .inner > div:after {
+  transition-delay: 0.35s;
+  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);
+}
+body.active #wrap .ticket:nth-of-type(2) .inner > div:after {
+  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;
+}
+body.active #wrap .ticket:nth-of-type(3) {
+  z-index: 3;
+}
+body.active #wrap .ticket:nth-of-type(3) .inner:before {
+  transition-delay: 0.45s;
+  opacity: 1;
+}
+body.active #wrap .ticket:nth-of-type(3) .inner > div {
+  transition-delay: 0.3s;
+}
+body.active #wrap .ticket:nth-of-type(3) .inner > div:before, body.active #wrap .ticket:nth-of-type(3) .inner > div:after {
+  transition-delay: 0.45s;
+  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);
+}
+body.active #wrap .ticket:nth-of-type(3) .inner > div:after {
+  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;
+}
+body.active #wrap .ticket:nth-of-type(4) {
+  z-index: 2;
+}
+body.active #wrap .ticket:nth-of-type(4) .inner:before {
+  transition-delay: 0.55s;
+  opacity: 1;
+}
+body.active #wrap .ticket:nth-of-type(4) .inner > div {
+  transition-delay: 0.4s;
+}
+body.active #wrap .ticket:nth-of-type(4) .inner > div:before, body.active #wrap .ticket:nth-of-type(4) .inner > div:after {
+  transition-delay: 0.55s;
+  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);
+}
+body.active #wrap .ticket:nth-of-type(4) .inner > div:after {
+  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;
+}
+body.active #wrap .ticket:nth-of-type(5) {
+  z-index: 1;
+}
+body.active #wrap .ticket:nth-of-type(5) .inner:before {
+  transition-delay: 0.65s;
+  opacity: 1;
+}
+body.active #wrap .ticket:nth-of-type(5) .inner > div {
+  transition-delay: 0.5s;
+}
+body.active #wrap .ticket:nth-of-type(5) .inner > div:before, body.active #wrap .ticket:nth-of-type(5) .inner > div:after {
+  transition-delay: 0.65s;
+  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);
+}
+body.active #wrap .ticket:nth-of-type(5) .inner > div:after {
+  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;
+}
+body.active #wrap .ticket:nth-of-type(6) {
+  z-index: 0;
+}
+body.active #wrap .ticket:nth-of-type(6) .inner:before {
+  transition-delay: 0.75s;
+  opacity: 1;
+}
+body.active #wrap .ticket:nth-of-type(6) .inner > div {
+  transition-delay: 0.6s;
+}
+body.active #wrap .ticket:nth-of-type(6) .inner > div:before, body.active #wrap .ticket:nth-of-type(6) .inner > div:after {
+  transition-delay: 0.75s;
+  box-shadow: inset -100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 3rem -3rem var(--dark), inset 0 0 0 0.5rem var(--color1);
+}
+body.active #wrap .ticket:nth-of-type(6) .inner > div:after {
+  box-shadow: inset 100px 0px 100px 100px rgba(0, 0, 0, 0.15), inset 0 0 2rem 0.075rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;
+}
+body.active #wrap .ticket .inner > div {
+  transform: translateY(0);
+}
+body.loaded #wrap {
+  opacity: 1;
+}
+body #wrap {
+  width: clamp(662.5px, 80vw, 1325px);
+  min-width: 662.5px;
+  height: clamp(500px, 60vw, 1000px);
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 0rem;
+  transition: 0.5s ease-in-out;
+  transition-delay: 1s;
+  opacity: 0;
+}
+body #wrap .ticket {
+  position: relative;
+}
+body #wrap .ticket:nth-of-type(1) {
+  z-index: 7;
+}
+body #wrap .ticket:nth-of-type(1) .inner:before {
+  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+  transition-delay: 0.5s;
+  opacity: 0;
+}
+body #wrap .ticket:nth-of-type(1) .inner > div {
+  transition-delay: 0.5s;
+}
+body #wrap .ticket:nth-of-type(1) .inner > div:before, body #wrap .ticket:nth-of-type(1) .inner > div:after {
+  transition-delay: 0.65s;
+}
+body #wrap .ticket:nth-of-type(2) {
+  z-index: 6;
+}
+body #wrap .ticket:nth-of-type(2) .inner:before {
+  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+  transition-delay: 0.4s;
+  opacity: 0;
+}
+body #wrap .ticket:nth-of-type(2) .inner > div {
+  transition-delay: 0.4s;
+}
+body #wrap .ticket:nth-of-type(2) .inner > div:before, body #wrap .ticket:nth-of-type(2) .inner > div:after {
+  transition-delay: 0.55s;
+}
+body #wrap .ticket:nth-of-type(3) {
+  z-index: 5;
+}
+body #wrap .ticket:nth-of-type(3) .inner:before {
+  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+body #wrap .ticket:nth-of-type(3) .inner > div {
+  transition-delay: 0.3s;
+}
+body #wrap .ticket:nth-of-type(3) .inner > div:before, body #wrap .ticket:nth-of-type(3) .inner > div:after {
+  transition-delay: 0.45s;
+}
+body #wrap .ticket:nth-of-type(4) {
+  z-index: 4;
+}
+body #wrap .ticket:nth-of-type(4) .inner:before {
+  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+  transition-delay: 0.2s;
+  opacity: 0;
+}
+body #wrap .ticket:nth-of-type(4) .inner > div {
+  transition-delay: 0.2s;
+}
+body #wrap .ticket:nth-of-type(4) .inner > div:before, body #wrap .ticket:nth-of-type(4) .inner > div:after {
+  transition-delay: 0.35s;
+}
+body #wrap .ticket:nth-of-type(5) {
+  z-index: 3;
+}
+body #wrap .ticket:nth-of-type(5) .inner:before {
+  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+  transition-delay: 0.1s;
+  opacity: 0;
+}
+body #wrap .ticket:nth-of-type(5) .inner > div {
+  transition-delay: 0.1s;
+}
+body #wrap .ticket:nth-of-type(5) .inner > div:before, body #wrap .ticket:nth-of-type(5) .inner > div:after {
+  transition-delay: 0.25s;
+}
+body #wrap .ticket:nth-of-type(6) {
+  z-index: 2;
+}
+body #wrap .ticket:nth-of-type(6) .inner:before {
+  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+  transition-delay: 0s;
+  opacity: 0;
+}
+body #wrap .ticket:nth-of-type(6) .inner > div {
+  transition-delay: 0s;
+}
+body #wrap .ticket:nth-of-type(6) .inner > div:before, body #wrap .ticket:nth-of-type(6) .inner > div:after {
+  transition-delay: 0.15s;
+}
+body #wrap .ticket .inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 1rem;
+  clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%);
+  transform-style: preserve-3d;
+  perspective: 900px;
+}
+body #wrap .ticket .inner:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 10%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.25);
+  filter: blur(15px);
+}
+body #wrap .ticket .inner.class1 .details {
+  grid-row: 1/span 1;
+}
+body #wrap .ticket .inner.class2 .seat {
+  grid-row: 3/span 1;
+}
+body #wrap .ticket .inner.class2 .band, body #wrap .ticket .inner.class3 .band {
+  background: radial-gradient(circle at center, #e5f4d1 35%, transparent 35%, var(--color1) 75%), radial-gradient(circle at center, #e5f4d1 2px, var(--color1) 1px, var(--color1) 5px) 50% 50%/8px 8px repeat;
+}
+body #wrap .ticket .inner.class3 .band {
+  text-transform: uppercase;
+}
+body #wrap .ticket .inner.class5 > div, body #wrap .ticket .inner.class6 > div {
+  grid-template-columns: calc(33% - 0.125rem) calc(33% - 0.125rem) calc( 								33% - 0.125rem 							);
+}
+body #wrap .ticket .inner.class5 > div > div, body #wrap .ticket .inner.class6 > div > div {
+  grid-column: span 3;
+}
+body #wrap .ticket .inner.class5 > div > div.band strong span.word, body #wrap .ticket .inner.class6 > div > div.band strong span.word {
+  display: inline-block;
+  margin: 0 0.15vw;
+}
+body #wrap .ticket .inner.class5 > div > div.band, body #wrap .ticket .inner.class5 > div > div.location, body #wrap .ticket .inner.class6 > div > div.band, body #wrap .ticket .inner.class6 > div > div.location {
+  grid-column: 1/span 2;
+  grid-row: span 6;
+  position: relative;
+}
+body #wrap .ticket .inner.class5 > div > div.band strong, body #wrap .ticket .inner.class5 > div > div.location strong, body #wrap .ticket .inner.class6 > div > div.band strong, body #wrap .ticket .inner.class6 > div > div.location strong {
+  width: 200%;
+  left: -50%;
+  height: 50%;
+  top: 25%;
+  position: absolute;
+  padding: 0 1rem;
+  transform: rotate(90deg);
+  word-break: break-word;
+}
+body #wrap .ticket .inner.class5 > div > div.location, body #wrap .ticket .inner.class6 > div > div.location {
+  grid-column: 3/span 1;
+}
+body #wrap .ticket .inner.class5 > div > div.location strong, body #wrap .ticket .inner.class6 > div > div.location strong {
+  width: 400%;
+  height: 12.5%;
+  top: 45%;
+  left: -150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-shadow: -1px -1px 0 #e5f4d1, -1px 0px 0 #e5f4d1, -1px 1px 0 #e5f4d1, 0px -1px 0 #e5f4d1, 0px 0px 0 #e5f4d1, 0px 1px 0 #e5f4d1, 1px -1px 0 #e5f4d1, 1px 0px 0 #e5f4d1, 1px 1px 0 #e5f4d1;
+}
+body #wrap .ticket .inner.class5 > div > div.location strong:before, body #wrap .ticket .inner.class6 > div > div.location strong:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: -5%;
+  height: 110%;
+  background: var(--color1);
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAABBCAMAAAC5KTl3AAAAgVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtFS1lAAAAK3RSTlMWi3QSa1uQOKBWCTwcb6V4gWInTWYOqQSGfa6XLyszmyABlFFJXySxQ0BGn2PQBgAAC4NJREFUWMMV1kWO5UAQRdFk5kwzs/33v8Cunr7ZUehKAdaRUAse99ozDjF5BqswrPKm7btzJ2tRziN3rMYXC236humIV5Our7nHWnVdFOBojW2XVnkeu1IZHNJH5OPHj9TjgVxBGBwAAmp60WoA1gBBvg3XMFhxUQ4KuLqx0CritYZPPXinsOqB7I76+OHaZlPzLEcftrqOlOwjeXvuEuH6t6emkaofgVUDIb4fEZB6CmRAeFCTq11lxbAgUyx4rXkqlH9I4bTUDRRVD1xjbqb9HyUBn7rhtr1x+x9Y0e3BdX31/loYvZaLxqnjbRuokz+pPG7WebnSNKE3yE6Tka4aDEDMVYr6Neq126c+ZR2nzzm3yyiC7PGWG/1uueqZudrVGYNdsgOMDvt1cI8CXu63QIcPvYNY8z870WwYazTS7DqpDEknZqS0AFXObWUxTaw0q5pnHlq4oQImakpLfJkmErdvAfhsc7lod0DVT4tuob25C0tQjzdiFObCz7U7eaKGP3s6yQVgQ/y+q+nY6K5dfV75iXzcNlGIP38aj22sVwtWWKMRb7B5HoHPaBvI1Ve5TSXATi66vV6utxsV+aZNFu+93VvlrG/oj8Wp67YT8l+Oq6PjwdGatFm7SEAP13kE0y9CEcf9qhtEWCMIq5AGq71moEAI9vrmFcmO8+7ZyDnmRN/VUaFkM2ce8KuBGFzDMmY6myLfQGra2ofgHhbJRXuRDZ4H+HmliWBHXQ0ysLGfv6FetbxtxzRgIZWjIsGVFl5imPXeyvVyayNek+dSWzjXd4t310YBdaF8sXeKs481PjsXbAtIru2+wHbv3GVh3sQY6Dnu6pF3pZ714VYdDi9A5GkXR/6xgaZN/tpQ8wVV3zeBuB+njoBNE4wjc+uA523ysXGd/P2sntmOb3OdHNWP5OVrxD3eJHdtH8QVkEIAqCor3hReR96yqt6PkTQfenllooQ447h6tOrnnuzwA8fMpq+jqg1oW8fTYYIncAYpVeTvkEFr/khQSbjoE8ykx9049OkE5MQEO9lC24tT7DwThQgf4Fhf8nGgAo3GYaON3crODpOr2pu5dBABz69t7F5yJBBo+r6QJdeLDWEoO7r1tceR3haA7gc7eZrCvpxSXXeKpo4P+hRixo9DeOFbqQVjKyWfBg9pnrEZKzK7R437YTTwhfoySG/YOCt3fs4aXlU3FjKortqQ6XyXaD0+Y/8VoqpyU9TRW45eN4oBxAH8Y/jLnNXfELJW+/p/MgO9Z+mBli2qqAP7dV/Arc2+YZRZwtBW8/p32y5ZsEuCS4O5AAgfR7Dde7zhiGfgvurQkfAXIrUG61rmxc2EZo18ph4vaWZI+QM0JdsbNlBJlPlwf9uguujQJy0j7TgTHdtRnjybTg55Hkk9S6l2rpYahumSewKHVosa1bh2Y6r9JGkdKvIDN/eeAwScrfjoLkCxWJuFZQ53FNP5w9XbQd1HhgHcVB/0fATG3sUUid1RTfc2+7pZVKldFSsaEK0v4k90tapQOk2HIbMhaJQtrUEL5+3sDanh8sOpbYRoQoqXWu6SQcUTQL9jzOrXNPWCJwXge4U7tlU1hkF012cAmvp8llQxf1IEMcw14pURxVOWATz4ITnYQjuF+vDXg5hgoiqXzO6mS91FQUBheURHIJxUeU1i3P0WOMpsm7vFYk0JJi/Ev+X3FwYD69cARPuP5GIc0PxoAFjcLRbNur0iMTrQmBBNYJ2ngU4x7SWfdTRl52Bqv7LmYW3C1CyTCPTHeWWIAM/Whm32COHsaj+2UQ739XB9t6NV0o9E9b7CW3XNiXzi9e0KiE+3rntukdIDBWrU2jsfQWuyFJRANxq8StHVv1JPy2C3Byco7qdNbASrnNXZ8G0L/Wp/pif4Ai9aEZ9Bb+TRx+REBdGlkF/s0dUdMSMr+6YCbuGxqPWdzcdqutvqkBzCksFcwAtjf55TeuH79M6AQa7r5PLeXxMFIlQKrXP9VJ275WGX+ptpf+tvTDBsecPnYQAlAWrVbRVJ7K2pRHwIjtSpbX96Y/lbKk6ZWXlBmh15r8yAWQsYxXgBOXYMAfHnUXF+rDqnB8bXDRtAn7bCziIqetSboK3NexMePvsCRLvmsoREA+kH8j4HWFpnNEaWgOmR7xyXHfTaz3slHc/YA6H6tl/L8d5tPcIwwD0tjvRaq3Y5BmYBSDClpv0VIX4s8D0XK3sPdpAb94HjPLkgboEz9EdZATW6ZdcmQvtKUwoWw+nAVKA7IcdY1UHnvNnIBplKci+knzewLz5/GGnzkGuuGky+0LTjtGBGR85EQICDqKChnm5pH3Z44nnWAk1YRdyu3g7QoFZ0h8jkr2ffjKmi+Qvsp+9GvNGZHmgW+YQAGUw7PPt8IPKbdy432vhKtRJjKWcSqq7helj81o3nfmaxVZ7Sqie8OOBk9WsyTD/ab7fQ5aWwQeJvnH6+ayo4IdIkOSBJjzXkgr+1TPhAx1AXDsxtCCj3TzQTLA1p782f7a8vdgPfwwrXmZxxbqo2h+6Zlo6mcMY4V7cFBOLm17VCvx9Qa2tAnkxEB+KYyQgbgAAnmNDOdOO6y2Cb+lke1MWQc9o+EMdQf7ubIG3Ek8GZ4k1PtGjbhwgOMPp5Em59JMVk/jU8/aF73Xcrd3UBNZyueQu0/xz2aGtZT8CRziOax2BWFXaeDzgZNV7oRtUzFoijoETf3xkAFFk3OMb7SgPh5wxU1+MygDIp9gZChH2qEcpgLh8pBIK90PXT1ZSU+ZExFK4Vm4GL/J7+K13lS5dQkW4HQwl6GX4yLqu8GhGWS2k75yel5IZIfFNdAL0NpKr2N5dQesBnxa42DLgJd6agS1jJsp1mO1dip7PU4P6diLLoTsZ4m3Q0QweiqeFfIGPLgF6v6mSVv6xe85VBD/1Mpe3AurRbcJ9SEo8NszNVy8rOCEexyIFcJRvYAlI/wk2I7r3p60FFLQXoH2q9xri/m41svRPbW0/EnPn2DWsmk0IiPpB60aa3+hiFfWuC8ZvWKEd9LxAk3HcOof6d77RewPaPsGw5lQAHcZN2vx1448u9pLfMLGQ3BSRRjBzRhKt7HcCw/7aqjtCDs5q76b4ZGphxN2th1WeXYlfnozX3ebKtX4Te11hf1tZP1diiGjIDAB1cR4Sb9rcFPC/nBARjlgDxd+tCBb1t91j71xJcgGjT3g/dUFnXXNiDrxkyoHANPk58ACPUa42hj8tgGrhiXOCmygxFZBiT2wyAJTDJ4wJEPmp6JIrDaSWYNqv4xH2wwdSTGYb3E0pXnS39nmLUsqoVZxzSoegqzd0o06wdbTXsaHGL+IF4JtIcXddTcD/dCd8hVf+fWPSV553kjMmMEULLS8HcgmptDO955dLGX78PjiDA6IsTHPm5IA6bc5ha0gaGkoEttXuxU11B2dOJ65/Q08tEF1+Y9cr2Nh/VECfQ33GyvR/gsdN1LuIeLpKMCAF2yRr769g9/4aJLZNRI71m2S91+Kp+Q0zubTcxoG2/6gm1Q79wkMj2XNO2ui7nWw8ULtu27CCvqTGX2PffD+xcwgh/TrOKvGZMM5jRFGDTn4NO/lwnDR/GY/waDZtkWDUPI0O8ztcFVqp6r2ZW+2bvkJ3raptYagFqu95VdIaml2CIp6CKets34x+fH2C+zH4cVFO7vj+6k2FU39PtRhWluYeZ3gDz1TLB9K2v7SD9gJU1qDxoRDrAWcrFGLyndhdtd0505+gEP79adK8fmFCWNYC+ahzVNcRH79E8dA1iqX/N0qq22xcOc20ALxLDspEj4QCFBQMgaIwoKbxr0Bd7Sbws6GiRK6tqoPfpiCle23axejRLyO1I+ahsEpWrzT5ZsCyS5RcY9jMfENFxSnhKsrfW8JHH6/rdQUMfmQPT3Uz9gY0C/pu1yuCnrPUvio0a1qMEosA/EwIzzid7cqsAAAAASUVORK5CYII=");
+  opacity: 0.75;
+}
+body #wrap .ticket .inner.class5 > div > div.location strong span, body #wrap .ticket .inner.class6 > div > div.location strong span {
+  display: block;
+  width: 100%;
+  font-size: clamp(10px, 1vw, 1vw);
+}
+body #wrap .ticket .inner.class5 > div > div.location strong span:first-of-type, body #wrap .ticket .inner.class6 > div > div.location strong span:first-of-type {
+  font-size: clamp(12px, 1.35vw, 1.35vw);
+  text-shadow: -1px -1px 0 #e5f4d1, -1px 0px 0 #e5f4d1, -1px 1px 0 #e5f4d1, 0px -1px 0 #e5f4d1, 0px 0px 0 #e5f4d1, 0px 1px 0 #e5f4d1, 1px -1px 0 #e5f4d1, 1px 0px 0 #e5f4d1, 1px 1px 0 #e5f4d1;
+}
+body #wrap .ticket .inner.class7 .band {
+  background: radial-gradient(circle at center, #e5f4d1 35%, transparent 35%, var(--color1) 75%), repeating-linear-gradient(var(--rotate), #e5f4d1 2px, var(--color1) 2px, var(--color1) 10px, #e5f4d1 10px, #e5f4d1 12px);
+}
+body #wrap .ticket .inner.class9 .band strong span.word {
+  transform: skew(5deg);
+}
+body #wrap .ticket .inner.class10 .band, body #wrap .ticket .inner.class11 .band {
+  background: radial-gradient(circle at center, #e5f4d1 35%, transparent 35%, var(--color1) 75%), repeating-linear-gradient(var(--rotate), #e5f4d1 2px, var(--color1) 2px, var(--color1) 10px, #e5f4d1 10px, #e5f4d1 12px);
+}
+body #wrap .ticket .inner > div {
+  display: grid;
+  grid-template-columns: calc(100% - 0.25rem);
+  grid-template-rows: repeat(10, 1fr);
+  justify-content: center;
+  height: 100%;
+  background: var(--dark);
+  grid-gap: 0.125rem;
+  padding: 0.125rem 0;
+  position: relative;
+  transition: 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+body #wrap .ticket .inner > div:before, body #wrap .ticket .inner > div:after {
+  transform-style: preserve-3d;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: inset -200px 0px 100px 100px rgba(0, 0, 0, 0.25), inset 0 0 3rem -2rem var(--dark), inset 0 0 0 0.5rem var(--color1);
+  transition: box-shadow 0.5s cubic-bezier(0.5, 0.15, 0.35, 1);
+}
+body #wrap .ticket .inner > div:before {
+  background: #e5f4d1;
+  -webkit-mask: url("data:image/png;base64,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");
+  opacity: 0.5;
+  width: calc(100% + 0.5vw);
+  height: calc(100% + 0.5vw);
+  left: -0.25vw;
+  top: -0.25vw;
+  backface-visibility: hidden;
+}
+body #wrap .ticket .inner > div:after {
+  transform: rotateY(-180deg) translateZ(0.05px);
+  background: #f1f9e6;
+  box-shadow: inset 100px 0px 100px -200px rgba(0, 0, 0, 0.15), inset 0 0 6rem -6rem var(--dark), inset 0 0 0 0.5rem #f1f9e6;
+}
+body #wrap .ticket .inner > div > div {
+  box-sizing: border-box;
+  background: var(--color1);
+  box-shadow: inherit;
+  line-height: 1;
+  grid-row: span 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body #wrap .ticket .inner .date {
+  text-transform: uppercase;
+  grid-row: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.75vw 0;
+  background: #e5f4d1;
+}
+body #wrap .ticket .inner .date span {
+  display: block;
+  font-size: clamp(10px, 1vw, 1vw);
+  width: 100%;
+}
+body #wrap .ticket .inner .date > span:nth-of-type(2) {
+  font-size: clamp(16px, 2vw, 2vw);
+  font-family: var(--font2);
+}
+body #wrap .ticket .inner .band {
+  grid-row: span 5;
+  position: relative;
+  font-family: var(--font1);
+  overflow: hidden;
+  background: radial-gradient(circle at center, #e5f4d1 37.5%, transparent 35%, var(--color1) 90%), repeating-radial-gradient(circle at center, transparent 0px, #e5f4d1 0px, #e5f4d1 2px, var(--color1) 2px, var(--color1) 10px);
+}
+body #wrap .ticket .inner .band strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 102.5%;
+  height: 75%;
+  left: -1.25%;
+  top: 12.5%;
+  padding: 0 0.5rem;
+  transform: rotate(90deg);
+  font-size: clamp(20px, 2.35vw, 2.35vw);
+  word-break: break-word;
+  line-height: 0.95;
+  --words: var(--word-total);
+  letter-spacing: 0.15rem;
+  transform: scale(calc(1 + (var(--word-total) / 20)));
+}
+body #wrap .ticket .inner .band strong > span.word {
+  display: inline-block;
+}
+body #wrap .ticket .inner .band strong > span > span.word {
+  display: block;
+  text-shadow: -1px -1px 0 #e5f4d1, -1px 0px 0 #e5f4d1, -1px 1px 0 #e5f4d1, 0px -1px 0 #e5f4d1, 0px 0px 0 #e5f4d1, 0px 1px 0 #e5f4d1, 1px -1px 0 #e5f4d1, 1px 0px 0 #e5f4d1, 1px 1px 0 #e5f4d1;
+  font-size: clamp( 								18px, 								calc(7vw - (((var(--char-total) * 1) * (var(--words) / 1.5)) * 0.35vw)), 								2.75vw 							);
+}
+body #wrap .ticket .inner .details {
+  display: flex;
+  align-items: stretch;
+}
+body #wrap .ticket .inner .details strong {
+  width: 100%;
+  display: flex;
+}
+body #wrap .ticket .inner .details strong span {
+  width: 50%;
+  box-shadow: inset 0.05vw 0 0 var(--dark), inset -0.05vw 0 0 var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body #wrap .ticket .inner .location strong span {
+  font-size: 1vw;
+  display: block;
+  font-weight: 200;
+  line-height: 1.25;
+}
+body #wrap .ticket .inner .location strong span:first-of-type {
+  font-size: clamp(8px, 1.25vw, 1.25vw);
+  font-weight: 900;
+}
+body #wrap .ticket .inner .seat {
+  display: flex;
+  justify-content: space-between;
+  background: #e5f4d1;
+}
+body #wrap .ticket .inner .seat strong {
+  font-size: clamp(8px, 1.25vw, 1.25vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 33.33%;
+  padding: 0.5rem;
+}
+body #wrap .ticket .inner .seat strong:nth-of-type(2) {
+  box-shadow: 0.075rem 0 0 var(--dark), -0.075rem 0 0 var(--dark), inset 0.075rem 0 0 var(--dark), inset -0.075rem 0 0 var(--dark);
+}
+body #wrap .ticket .inner .seat strong > span {
+  display: block;
+  margin: 0.25rem 0 0;
+  width: 100%;
+  font-size: clamp(16px, 2vw, 2vw);
+  text-transform: uppercase;
+  font-family: "Dot", cursive;
+  font-weight: 100;
+  color: var(--color2);
+}
+body #wrap .ticket:nth-of-type(1) {
+  grid-area: 3/1/7/3;
+}
+body #wrap .ticket:nth-of-type(1) .inner {
+  transform-origin: 0% 0%;
+  transform: rotate(-90deg);
+}
+body #wrap .ticket:nth-of-type(2) {
+  grid-area: 3/1/7/3;
+}
+body #wrap .ticket:nth-of-type(3) {
+  grid-area: 3/3/7/5;
+}
+body #wrap .ticket:nth-of-type(4) {
+  grid-area: 1/5/5/7;
+}
+body #wrap .ticket:nth-of-type(5) {
+  grid-area: 1/7/5/9;
+}
+body #wrap .ticket:nth-of-type(6) {
+  grid-area: 1/5/5/7;
+}
+body #wrap .ticket:nth-of-type(6) .inner {
+  transform-origin: 0% 100%;
+  transform: rotate(90deg);
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no" class="loaded active">
+  <div id="wrap">
+  <div class="ticket" style="--font1:var(--font8); --font2:var(--font4); --color1:var(--color7); --rotate:45deg;"><div class="inner class5 class7"><div><div class="date"><span>Wednesday</span><span>November 1</span><span>7:00 PM</span></div><div class="band"><strong data-splitting="words" class="words splitting" style="--word-total:1;"><span><span class="word words chars splitting" data-word="Slices" data-splitting="chars" style="--word-index:0; --word-total:1; --char-total:6;"><span class="word" data-word="Slices" style="--word-index:0;"><span class="word" data-word="Slices" style="--word-index:0;"><span class="char" data-char="S" style="--char-index:0;">S</span><span class="char" data-char="l" style="--char-index:1;">l</span><span class="char" data-char="i" style="--char-index:2;">i</span><span class="char" data-char="c" style="--char-index:3;">c</span><span class="char" data-char="e" style="--char-index:4;">e</span><span class="char" data-char="s" style="--char-index:5;">s</span></span></span></span></span></strong></div><div class="location"><strong><span>Autumn Court Theater</span><span>New Numbersview, Montana</span></strong></div><div class="seat"><strong>Section<span>26</span></strong><strong>Row<span>b</span></strong><strong>Seat<span>5</span></strong></div><div class="details"><strong><span>$19.00</span><span>All Ages</span></strong></div></div></div></div>
+  <div class="ticket" style="--font1:var(--font7); --font2:var(--font7); --color1:var(--color7); --rotate:45deg;"><div class="inner class7 class12"><div><div class="date"><span>Tuesday</span><span>November 8</span><span>6:00 PM</span></div><div class="band"><strong data-splitting="words" class="words splitting" style="--word-total:2;"><span><span class="word words chars splitting" data-word="Gap" data-splitting="chars" style="--word-index:0; --word-total:1; --char-total:3;"><span class="word" data-word="Gap" style="--word-index:0;"><span class="word" data-word="Gap" style="--word-index:0;"><span class="char" data-char="G" style="--char-index:0;">G</span><span class="char" data-char="a" style="--char-index:1;">a</span><span class="char" data-char="p" style="--char-index:2;">p</span></span></span></span><span class="whitespace"></span><span class="word words chars splitting" data-word="Dream" data-splitting="chars" style="--word-index:1; --word-total:1; --char-total:5;"><span class="word" data-word="Dream" style="--word-index:1;"><span class="word" data-word="Dream" style="--word-index:0;"><span class="char" data-char="D" style="--char-index:0;">D</span><span class="char" data-char="r" style="--char-index:1;">r</span><span class="char" data-char="e" style="--char-index:2;">e</span><span class="char" data-char="a" style="--char-index:3;">a</span><span class="char" data-char="m" style="--char-index:4;">m</span></span></span></span></span></strong></div><div class="location"><strong><span>Willow Creek Theater</span><span>Derickstad, New Mexico</span></strong></div><div class="seat"><strong>Section<span>39</span></strong><strong>Row<span>n</span></strong><strong>Seat<span>24</span></strong></div><div class="details"><strong><span>$10.00</span><span>All Ages</span></strong></div></div></div></div>
+  <div class="ticket" style="--font1:var(--font8); --font2:var(--font5); --color1:var(--color3); --rotate:135deg;"><div class="inner class6 class8"><div><div class="date"><span>Tuesday</span><span>March 30</span><span>5:00 PM</span></div><div class="band"><strong data-splitting="words" class="words splitting" style="--word-total:2;"><span><span class="word words chars splitting" data-word="Mitch" data-splitting="chars" style="--word-index:0; --word-total:1; --char-total:5;"><span class="word" data-word="Mitch" style="--word-index:0;"><span class="word" data-word="Mitch" style="--word-index:0;"><span class="char" data-char="M" style="--char-index:0;">M</span><span class="char" data-char="i" style="--char-index:1;">i</span><span class="char" data-char="t" style="--char-index:2;">t</span><span class="char" data-char="c" style="--char-index:3;">c</span><span class="char" data-char="h" style="--char-index:4;">h</span></span></span></span><span class="whitespace"></span><span class="word words chars splitting" data-word="Murder" data-splitting="chars" style="--word-index:1; --word-total:1; --char-total:6;"><span class="word" data-word="Murder" style="--word-index:1;"><span class="word" data-word="Murder" style="--word-index:0;"><span class="char" data-char="M" style="--char-index:0;">M</span><span class="char" data-char="u" style="--char-index:1;">u</span><span class="char" data-char="r" style="--char-index:2;">r</span><span class="char" data-char="d" style="--char-index:3;">d</span><span class="char" data-char="e" style="--char-index:4;">e</span><span class="char" data-char="r" style="--char-index:5;">r</span></span></span></span></span></strong></div><div class="location"><strong><span>Willow Estates Theater</span><span>Emmerichfort, Massachusetts</span></strong></div><div class="seat"><strong>Section<span>24</span></strong><strong>Row<span>q</span></strong><strong>Seat<span>39</span></strong></div><div class="details"><strong><span>$9.00</span><span>All Ages</span></strong></div></div></div></div>
+  <div class="ticket" style="--font1:var(--font9); --font2:var(--font5); --color1:var(--color4); --rotate:135deg;"><div class="inner class3 class9"><div><div class="date"><span>Saturday</span><span>October 16</span><span>11:00 PM</span></div><div class="band"><strong data-splitting="words" class="words splitting" style="--word-total:3;"><span><span class="word words chars splitting" data-word="Ty" data-splitting="chars" style="--word-index:0; --word-total:1; --char-total:2;"><span class="word" data-word="Ty" style="--word-index:0;"><span class="word" data-word="Ty" style="--word-index:0;"><span class="char" data-char="T" style="--char-index:0;">T</span><span class="char" data-char="y" style="--char-index:1;">y</span></span></span></span><span class="whitespace"></span><span class="word words chars splitting" data-word="Segall" data-splitting="chars" style="--word-index:1; --word-total:1; --char-total:6;"><span class="word" data-word="Segall" style="--word-index:1;"><span class="word" data-word="Segall" style="--word-index:0;"><span class="char" data-char="S" style="--char-index:0;">S</span><span class="char" data-char="e" style="--char-index:1;">e</span><span class="char" data-char="g" style="--char-index:2;">g</span><span class="char" data-char="a" style="--char-index:3;">a</span><span class="char" data-char="l" style="--char-index:4;">l</span><span class="char" data-char="l" style="--char-index:5;">l</span></span></span></span><span class="whitespace"></span><span class="word words chars splitting" data-word="Band" data-splitting="chars" style="--word-index:2; --word-total:1; --char-total:4;"><span class="word" data-word="Band" style="--word-index:2;"><span class="word" data-word="Band" style="--word-index:0;"><span class="char" data-char="B" style="--char-index:0;">B</span><span class="char" data-char="a" style="--char-index:1;">a</span><span class="char" data-char="n" style="--char-index:2;">n</span><span class="char" data-char="d" style="--char-index:3;">d</span></span></span></span></span></strong></div><div class="location"><strong><span>Autumn Square Theater</span><span>North Carenshire, Maryland</span></strong></div><div class="seat"><strong>Section<span>29</span></strong><strong>Row<span>s</span></strong><strong>Seat<span>9</span></strong></div><div class="details"><strong><span>$13.00</span><span>All Ages</span></strong></div></div></div></div>
+  <div class="ticket" style="--font1:var(--font6); --font2:var(--font5); --color1:var(--color4); --rotate:45deg;"><div class="inner class4 class12"><div><div class="date"><span>Sunday</span><span>September 18</span><span>11:00 PM</span></div><div class="band"><strong data-splitting="words" class="words splitting" style="--word-total:2;"><span><span class="word words chars splitting" data-word="Ooga" data-splitting="chars" style="--word-index:0; --word-total:1; --char-total:4;"><span class="word" data-word="Ooga" style="--word-index:0;"><span class="word" data-word="Ooga" style="--word-index:0;"><span class="char" data-char="O" style="--char-index:0;">O</span><span class="char" data-char="o" style="--char-index:1;">o</span><span class="char" data-char="g" style="--char-index:2;">g</span><span class="char" data-char="a" style="--char-index:3;">a</span></span></span></span><span class="whitespace"></span><span class="word words chars splitting" data-word="Boogas" data-splitting="chars" style="--word-index:1; --word-total:1; --char-total:6;"><span class="word" data-word="Boogas" style="--word-index:1;"><span class="word" data-word="Boogas" style="--word-index:0;"><span class="char" data-char="B" style="--char-index:0;">B</span><span class="char" data-char="o" style="--char-index:1;">o</span><span class="char" data-char="o" style="--char-index:2;">o</span><span class="char" data-char="g" style="--char-index:3;">g</span><span class="char" data-char="a" style="--char-index:4;">a</span><span class="char" data-char="s" style="--char-index:5;">s</span></span></span></span></span></strong></div><div class="location"><strong><span>Royal Acres Theater</span><span>O'Harachester, Rhode Island</span></strong></div><div class="seat"><strong>Section<span>3</span></strong><strong>Row<span>v</span></strong><strong>Seat<span>7</span></strong></div><div class="details"><strong><span>$5.00</span><span>All Ages</span></strong></div></div></div></div>
+  <div class="ticket" style="--font1:var(--font6); --font2:var(--font5); --color1:var(--color6); --rotate:180deg;"><div class="inner class3 class12"><div><div class="date"><span>Thursday</span><span>February 23</span><span>4:00 PM</span></div><div class="band"><strong data-splitting="words" class="words splitting" style="--word-total:2;"><span><span class="word words chars splitting" data-word="Gun" data-splitting="chars" style="--word-index:0; --word-total:1; --char-total:3;"><span class="word" data-word="Gun" style="--word-index:0;"><span class="word" data-word="Gun" style="--word-index:0;"><span class="char" data-char="G" style="--char-index:0;">G</span><span class="char" data-char="u" style="--char-index:1;">u</span><span class="char" data-char="n" style="--char-index:2;">n</span></span></span></span><span class="whitespace"></span><span class="word words chars splitting" data-word="Outfit" data-splitting="chars" style="--word-index:1; --word-total:1; --char-total:6;"><span class="word" data-word="Outfit" style="--word-index:1;"><span class="word" data-word="Outfit" style="--word-index:0;"><span class="char" data-char="O" style="--char-index:0;">O</span><span class="char" data-char="u" style="--char-index:1;">u</span><span class="char" data-char="t" style="--char-index:2;">t</span><span class="char" data-char="f" style="--char-index:3;">f</span><span class="char" data-char="i" style="--char-index:4;">i</span><span class="char" data-char="t" style="--char-index:5;">t</span></span></span></span></span></strong></div><div class="location"><strong><span>Paradise Crossing Theater</span><span>Derickstad, New Mexico</span></strong></div><div class="seat"><strong>Section<span>35</span></strong><strong>Row<span>g</span></strong><strong>Seat<span>25</span></strong></div><div class="details"><strong><span>$14.00</span><span>All Ages</span></strong></div></div></div></div>
+</div>
+  <script src="./jquery.min.js(1).下载"></script>
+<script src="./splitting.min.js.下载"></script>
+      <script id="rendered-js">
+const bands = [];
+const cities = [];
+const venues = [];
+const row = "abcdefghijklmnopqrstuvwxyz";
+
+let days = [
+"Sunday",
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday"];
+
+let months = [
+"January",
+"February",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"December"];
+
+
+function randomDate(start, end) {
+  return new Date(
+  start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+}
+
+$(document).ready(function () {
+  var lastFM =
+  "https://ws.audioscrobbler.com/2.0/?api_key=5908c0487c4b5f26281c158dd83b59d6&format=json&method=user.getTopArtists&user=adamkuhn&period=overall&limit=200";
+  var cityData =
+  "https://random-data-api.com/api/address/random_address?size=50";
+  $.getJSON(cityData, function (data) {
+    $.each(data, function (i, item) {
+      venues.push(data[i].community + " Theater");
+      cities.push(data[i].city + ", " + data[i].state);
+    });
+    $.getJSON(lastFM, function (data) {
+      $.each(data.topartists.artist, function (i, item) {
+        bands.push(data.topartists.artist[i].name);
+      });
+      createTicket();
+      $("body").addClass("loaded");
+    });
+  });
+});
+
+$(document).click(function () {
+  createTicket();
+});
+
+function createTicket() {
+  $("body").removeClass("active");
+  setTimeout(() => {
+    $(".ticket").each(function () {
+      $(this).find(".inner").remove();
+      let randBand = Math.floor(Math.random() * bands.length);
+      let randCity = Math.floor(Math.random() * cities.length);
+      let randVenue = Math.floor(Math.random() * venues.length);
+      let randDate = randomDate(new Date(2021, 0, 1), new Date());
+      $(this).
+      get(0).
+      style.setProperty(
+      "--font1",
+      "var(--font" + Math.floor(Math.random() * (7 - 1) + 4) + ")");
+
+      $(this).
+      get(0).
+      style.setProperty(
+      "--font2",
+      "var(--font" + Math.floor(Math.random() * (7 - 1) + 4) + ")");
+
+      $(this).
+      get(0).
+      style.setProperty(
+      "--color1",
+      "var(--color" + Math.floor(Math.random() * (6 - 1) + 3) + ")");
+
+      $(this).
+      get(0).
+      style.setProperty(
+      "--rotate",
+      Math.floor(Math.random() * (5 - 1) + 1) * 45 + "deg");
+
+      $(this).append(
+      "<div class='inner class" +
+      Math.floor(Math.random() * (8 - 1) + 1) +
+      " class" +
+      Math.floor(Math.random() * (8 - 1) + 7) +
+      "'><div><div class='date'><span>" +
+      days[randDate.getDay()] +
+      "</span><span>" +
+      months[randDate.getMonth()] +
+      " " +
+      randDate.getDate() +
+      "</span><span>" +
+      Math.floor(Math.random() * (12 - 1) + 1) +
+      ":00 PM</span></div><div class='band'><strong data-splitting='words'><span>" +
+      bands[randBand] +
+      "</span></strong></div><div class='location'><strong><span>" +
+      venues[randVenue] +
+      "</span><span>" +
+      cities[randCity] +
+      "</span></strong></div><div class='seat'><strong>Section<span>" +
+      Math.floor(Math.random() * (40 - 1) + 1) +
+      "</span></strong><strong>Row<span>" +
+      row[Math.floor(Math.random() * row.length)] +
+      "</span></strong><strong>Seat<span>" +
+      Math.floor(Math.random() * (40 - 1) + 1) +
+      "</span></strong></div><div class='details'><strong><span>$" +
+      Math.floor(Math.random() * (20 - 5) + 5) +
+      ".00</span><span>All Ages</span></strong></div></div></div>");
+
+    });
+    Splitting();
+    $("span.word").attr("data-splitting", "chars");
+    Splitting();
+  }, 1000);
+  setTimeout(() => {
+    $("body").addClass("active");
+  }, 1500);
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>

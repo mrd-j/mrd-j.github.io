@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/airen/fullembedgrid/jOreBGd?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - justify-content and align-content in Flexbox (Grid) containers</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/jOreBGd">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  counter-reset: section;
+  font-family: "Exo", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #222;
+  color: #777;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 1fr;
+  gap: 10px;
+}
+
+header {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+header label {
+  margin: 0 5px;
+}
+
+.container {
+  border: 1px dotted #fff;
+  counter-reset: section;
+  max-height: calc(100vh - 160px);
+  position: relative;
+}
+
+.item {
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: #3e989b;
+  background-color: var(--color);
+  color: white;
+  display: grid;
+}
+
+.item::before {
+  counter-increment: section;
+  content: counter(section);
+  justify-self: center;
+  align-self: center;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+.flex-container .item {
+  min-width: 70px;
+  min-height: 70px;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 70px);
+  grid-template-rows: repeat(3, 70px);
+  padding: 10px;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container::before {
+  content: "display: flex; flex-wrap: wrap";
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 5px);
+  color: #fff;
+  font-size: 12px;
+}
+
+.flex-container.direction-column::before {
+  content: "display: flex; flex-wrap: wrap; flex-direction: column";
+}
+
+.grid.container::before {
+  content: "display: gird;grid-template-columns: repeat(5, 70px); grid-template-rows: repeat(3, 70px)";
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 5px);
+  color: #fff;
+  font-size: 12px;
+}
+
+:root {
+  --justify-content: normal;
+  --align-content: normal;
+}
+
+.container {
+  justify-content: var(--justify-content);
+  align-content: var(--align-content);
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <header>
+  <div class="control">
+    <label for="justify-content">justify-content:</label>
+    <select name="justify-content" id="justify-content">
+      <option value="normal">normal</option>
+      <optgroup label="content-distribution">
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+      </optgroup>
+      <optgroup label="overflow-position">
+        <option value="unsafe">unsafe</option>
+        <option value="safe">safe</option>
+      </optgroup>
+      <optgroup label="content-position">
+        <option value="center">center</option>
+        <option value="start">start</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+      </optgroup>
+      <option value="left">left</option>
+      <option value="right">right</option>
+    </select>
+  </div>
+  <div class="control">
+    <label for="align-content">align-content:</label>
+    <select name="align-content" id="align-content">
+      <option value="normal">normal</option>
+      <optgroup label="baseline-position">
+        <option value="baseline">baseline</option>
+        <option value="first baseline">first baseline</option>
+        <option value="last baseline">last baseline</option>
+      </optgroup>
+      <optgroup label="content-distribution">
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+      </optgroup>
+      <optgroup label="overflow-position">
+        <option value="unsafe">unsafe</option>
+        <option value="safe">safe</option>
+      </optgroup>
+      <optgroup label="content-position">
+        <option value="center">center</option>
+        <option value="start">start</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+      </optgroup>
+    </select>
+  </div>
+</header>
+<div class="container flex-container">
+  <div class="item" style="--color:#F44336;"></div>
+  <div class="item" style="--color:#E91E63;"></div>
+  <div class="item" style="--color:#9C27B0;"></div>
+  <div class="item" style="--color:#3F51B5;"></div>
+  <div class="item" style="--color:#2196F3;"></div>
+  <div class="item" style="--color:#009688;"></div>
+  <div class="item" style="--color:#CDDC39;"></div>
+  <div class="item" style="--color:#FFC107;"></div>
+  <div class="item" style="--color:#607D8B;"></div>
+  <div class="item" style="--color:#3E989B;"></div>
+</div>
+
+<div class="container flex-container direction-column">
+  <div class="item" style="--color:#F44336;"></div>
+  <div class="item" style="--color:#E91E63;"></div>
+  <div class="item" style="--color:#9C27B0;"></div>
+  <div class="item" style="--color:#3F51B5;"></div>
+  <div class="item" style="--color:#2196F3;"></div>
+  <div class="item" style="--color:#009688;"></div>
+  <div class="item" style="--color:#CDDC39;"></div>
+  <div class="item" style="--color:#FFC107;"></div>
+  <div class="item" style="--color:#607D8B;"></div>
+  <div class="item" style="--color:#3E989B;"></div>
+</div>
+
+<div class="container grid">
+  <div class="item" style="--color:#F44336;"></div>
+  <div class="item" style="--color:#E91E63;"></div>
+  <div class="item" style="--color:#9C27B0;"></div>
+  <div class="item" style="--color:#3F51B5;"></div>
+  <div class="item" style="--color:#2196F3;"></div>
+  <div class="item" style="--color:#009688;"></div>
+  <div class="item" style="--color:#CDDC39;"></div>
+  <div class="item" style="--color:#FFC107;"></div>
+  <div class="item" style="--color:#607D8B;"></div>
+  <div class="item" style="--color:#3E989B;"></div>
+</div>
+  
+      <script id="rendered-js">
+const rootElement = document.documentElement;
+
+const selects = document.querySelectorAll("select");
+
+selects.forEach((select) =>
+select.addEventListener("change", e => {
+  rootElement.style.setProperty(`--${e.target.id}`, e.target.value);
+}));
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
+
+
+</body></html>
