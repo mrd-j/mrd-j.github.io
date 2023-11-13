@@ -1,547 +1,655 @@
 <!DOCTYPE html>
-<!-- saved from url=(0088)https://codepen.io/thebabydino/embed/gOayvpb?height=700&theme-id=3655&default-tab=result -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0084)https://cdpn.io/thebabydino/fullembedgrid/gOayvpb?animations=stop-after-5&type=embed -->
+<html lang="en" class=" -webkit-"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
 
-<meta name="viewport" content="width=device-width">
-<title>CodePen Embed - auto-fit vs. auto-fill #2 (change justify-content/ no of thumbnails per grid)</title>
-<meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="aApW0J2MsdH3XONMMNfVK34IqljV5w6BWI+aHerYbjiuFuBOO+XoHtjNb/j7oA5Y++XQlTXx/dNlM0rNPaRXpg==">
-<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <style>*, *::before, *::after { animation-play-state: paused !important; }</style><script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下载"></script>
+
+
+  <title>CodePen - auto-fit vs. auto-fill #2 (change justify-content/ no of thumbnails per grid)</title>
+
+    <link rel="canonical" href="https://codepen.io/thebabydino/pen/gOayvpb">
+  
+  
+  
+  
 <style>
-    .hide {
-      display: none !important;
-    }
-
-    #result-box {
-      background: #3d3d3e;
-      color: #76daff;
-    }
-    .embed-footer,
-    .embed-nav {
-      background: #3d3d3e;
-      
-    }
-    .embed-nav .code-types a,
-    .embed-nav .result-button-list a,
-    .action-button {
-      color: #76daff;
-      background-color: #666666;
-    }
-    .embed-nav .code-types a.active,
-    .embed-nav .result-button-list a.active,
-    .action-button.active {
-      background: #cccccc;
-      color: #000000;
-      box-shadow: inset 0px 3px #dddddd;
-    }
-    .embed-nav .logo-wrap .edit-on-codepen {
-      color: #ffffff;
-    }
-
-    .embed-nav svg {
-      stroke: #ffffff !important;
-    }
-  </style>
-<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
-</head>
-<body id="the-body" style="--borderWidth: 0;" class="codepen-embed-body static results-active">
-<nav class="embed-nav group" id="embed-nav">
-<ul class="code-types">
-<li class="code-type">
-<a id="html-link" href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#html-box" role="button" aria-pressed="false">
-Pug
-</a>
-</li>
-<li class="code-type">
-<a id="css-link" href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#css-box" role="button" aria-pressed="false">
-SCSS
-</a>
-</li>
-<li class="code-type">
-<a id="js-link" href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#js-box" role="button" aria-pressed="false">
-Babel
-</a>
-</li>
-</ul>
-<ul class="result-button-list">
-<li class="results results-type">
-<a id="result-link" href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
-Result
-</a>
-</li>
-<li>
-<a href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
-</li>
-</ul>
-<div class="logo-wrap" id="edit-area">
-<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/thebabydino/pen/gOayvpb" title="Edit on CodePen">
-<div class="large-logo">
-<span id="edit-on-text" class="open-on">EDIT ON</span>
-<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
-<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
-</svg>
-</div>
-<div class="box-logo">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
-<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
-</svg>
-</div>
-</a>
-</div>
-</nav>
-<div id="output" data-border-style="none" data-header="true">
-<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
-<pre tabindex="0"><code data-lang="pug" id="actual-html-code" class=" cm-s-default"><span class="cm-punctuation">-</span> <span class="cm-keyword">const</span> <span class="cm-def">IMG_DATA</span> <span class="cm-operator">=</span> {
-<span class="cm-punctuation">-</span>   <span class="cm-string cm-property">'dessert 1'</span>: <span class="cm-string">'https://images.unsplash.com/photo-1564844536308-75c540dbf14e?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=950&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ'</span>, 
-<span class="cm-punctuation">-</span>   <span class="cm-string cm-property">'dessert 2'</span>: <span class="cm-string">'https://images.unsplash.com/photo-1548865164-c4e93ca471aa?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=950&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ'</span>, 
-<span class="cm-punctuation">-</span>   <span class="cm-string cm-property">'dessert 3'</span>: <span class="cm-string">'https://images.unsplash.com/photo-1502004960551-dc67f7c24cb3?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=950&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ'</span>, 
-<span class="cm-punctuation">-</span>   <span class="cm-string cm-property">'dessert 4'</span>: <span class="cm-string">'https://images.unsplash.com/photo-1551276705-0503a4b9d38c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=950&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ'</span>, 
-<span class="cm-punctuation">-</span>   <span class="cm-string cm-property">'dessert 5'</span>: <span class="cm-string">'https://images.unsplash.com/photo-1551529563-9dd66d188764?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=950&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ'</span>, 
-<span class="cm-punctuation">-</span>   <span class="cm-string cm-property">'dessert 6'</span>: <span class="cm-string">'https://images.unsplash.com/photo-1473340186413-a68ba9c2564e?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=950&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ'</span>
-<span class="cm-punctuation">-</span> };
-<span class="cm-punctuation">-</span> <span class="cm-keyword">let</span> <span class="cm-def">min</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>, <span class="cm-def">max</span> <span class="cm-operator">=</span> <span class="cm-number">6</span>, <span class="cm-def">val</span> <span class="cm-operator">=</span> <span class="cm-number">6</span>;
-<span class="cm-punctuation">-</span> <span class="cm-keyword">let</span> <span class="cm-def">key</span> <span class="cm-operator">=</span> [<span class="cm-string">'start'</span>, <span class="cm-string">'center'</span>, <span class="cm-string">'end'</span>, <span class="cm-string">'space-between'</span>, <span class="cm-string">'space-around'</span>, <span class="cm-string">'space-evenly'</span>];
-<span class="cm-punctuation">-</span> <span class="cm-keyword">let</span> <span class="cm-def">n</span> <span class="cm-operator">=</span> <span class="cm-variable">key</span>.<span class="cm-property">length</span>;
-<span class="cm-punctuation">-</span> <span class="cm-keyword">let</span> <span class="cm-def">w</span> <span class="cm-operator">=</span> <span class="cm-number">14</span>;
-
-<span class="cm-keyword">mixin</span> <span class="cm-variable">grid</span>(<span class="cm-variable">col_rule</span> <span class="cm-operator">=</span> <span class="cm-string">'auto-fit'</span>)
-<span class="cm-indent">  </span><span class="cm-tag">article</span><span class="cm-punctuation">(</span><span class="cm-attribute">style</span><span class="cm-operator">=</span><span class="cm-string-2">`--col-rule: ${</span><span class="cm-variable">col_rule</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span><span class="cm-punctuation">)</span>
-<span class="cm-indent">    </span><span class="cm-tag">pre</span><span class="cm-qualifier">.dark</span>
-<span class="cm-indent">      </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--prop</span><span class="cm-string"> grid-template-columns</span>
-<span class="cm-indent">      </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--punc</span><span class="cm-string"> :</span>
-<span class="cm-indent">      </span><span class="cm-string">|  </span>
-<span class="cm-indent">      </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--func</span><span class="cm-string"> repeat</span>
-<span class="cm-indent">      </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--punc</span><span class="cm-string"> (</span>
-<span class="cm-indent">      </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--args</span>
-<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--arg</span><span class="cm-qualifier">.token--keyw</span><span class="cm-string"> #{col_rule}</span>
-<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--punc</span><span class="cm-string"> ,</span>
-<span class="cm-indent">        </span><span class="cm-string">|  </span>
-<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--arg</span><span class="cm-qualifier">.token--len</span>
-<span class="cm-indent">          </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--num</span><span class="cm-string"> #{w}</span>
-<span class="cm-indent">          </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--unit</span><span class="cm-string"> vw</span>
-<span class="cm-indent">      </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--punc</span><span class="cm-string"> )</span>
-<span class="cm-indent">    </span><span class="cm-tag">section</span><span class="cm-qualifier">.grid</span>
-<span class="cm-indent">      </span><span class="cm-keyword">- for</span><span class="cm-variable">(let i</span><span class="cm-keyword"> in</span> <span class="cm-variable">IMG_DATA</span>)
-<span class="cm-indent">        </span><span class="cm-tag">img</span><span class="cm-punctuation">(</span><span class="cm-attribute">src</span><span class="cm-operator">=</span><span class="cm-variable">IMG_DATA</span>[<span class="cm-variable">i</span>]<span class="cm-punctuation">)</span>
-
-<span class="cm-tag">body</span><span class="cm-punctuation">(</span><span class="cm-attribute">style</span><span class="cm-operator">=</span><span class="cm-string-2">`--min: ${</span><span class="cm-variable">min</span><span class="cm-string-2">}</span><span class="cm-string-2">; --val: ${</span><span class="cm-variable">val</span><span class="cm-string-2">}</span><span class="cm-string-2">; --max: ${</span><span class="cm-variable">max</span><span class="cm-string-2">}</span><span class="cm-string-2">; --key: ${</span><span class="cm-variable">key</span>[<span class="cm-number">1</span>]<span class="cm-string-2">}</span><span class="cm-string-2">; --w: ${</span><span class="cm-variable">w</span><span class="cm-string-2">}</span><span class="cm-string-2">vw`</span><span class="cm-punctuation">)</span>
-<span class="cm-indent">  </span><span class="cm-tag">pre</span><span class="cm-qualifier">.dark</span>
-<span class="cm-indent">    </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--prop</span><span class="cm-string"> justify-content</span>
-<span class="cm-indent">    </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--punc</span><span class="cm-string"> :</span>
-<span class="cm-indent">    </span><span class="cm-tag">span</span><span class="cm-qualifier">.ctrl</span>
-<span class="cm-indent">      </span><span class="cm-tag">output</span><span class="cm-punctuation">(</span><span class="cm-attribute">for</span><span class="cm-operator">=</span><span class="cm-variable">key</span>.<span class="cm-property">join</span>(<span class="cm-string">' '</span>) <span class="cm-attribute">aria-haspopup</span><span class="cm-operator">=</span><span class="cm-string">'true'</span> <span class="cm-attribute">aria-expanded</span><span class="cm-operator">=</span><span class="cm-string">'false'</span> <span class="cm-attribute">aria-controls</span><span class="cm-operator">=</span><span class="cm-string">'pop'</span><span class="cm-punctuation">)</span><span class="cm-qualifier">.token--keyw</span><span class="cm-punctuation">(</span><span class="cm-attribute">data-val</span><span class="cm-operator">=</span><span class="cm-variable">key</span>[<span class="cm-number">1</span>]<span class="cm-punctuation">)</span>
-<span class="cm-indent">      </span><span class="cm-tag">form</span><span class="cm-builtin">#pop</span><span class="cm-qualifier">.dark</span>
-<span class="cm-indent">        </span><span class="cm-keyword">- for</span><span class="cm-variable">(let i = 0; i &lt; n; i++) {</span>
-<span class="cm-indent">          </span><span class="cm-tag">input</span><span class="cm-punctuation">(</span><span class="cm-attribute">type</span><span class="cm-operator">=</span><span class="cm-string">'radio'</span> <span class="cm-attribute">name</span><span class="cm-operator">=</span><span class="cm-string">'key'</span> <span class="cm-attribute">id</span><span class="cm-operator">=</span><span class="cm-variable">key</span>[<span class="cm-variable">i</span>] <span class="cm-attribute">value</span><span class="cm-operator">=</span><span class="cm-variable">key</span>[<span class="cm-variable">i</span>] <span class="cm-attribute">checked</span><span class="cm-operator">=</span><span class="cm-operator">!</span>(<span class="cm-variable">i</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>)<span class="cm-punctuation">)</span>
-<span class="cm-indent">          </span><span class="cm-tag">label</span><span class="cm-punctuation">(</span><span class="cm-attribute">for</span><span class="cm-operator">=</span><span class="cm-variable">key</span>[<span class="cm-variable">i</span>]<span class="cm-punctuation">)</span><span class="cm-string"> #{key[i]}</span>
-<span class="cm-indent">        </span><span class="cm-punctuation">-</span> }
-<span class="cm-indent">    </span><span class="cm-tag">span</span><span class="cm-qualifier">.token--comm</span><span class="cm-string"> /* change this value */</span>
-<span class="cm-indent">  </span><span class="cm-variable">+grid</span>
-<span class="cm-indent">  </span><span class="cm-variable">+grid</span>(<span class="cm-string">'auto-fill'</span>)
-<span class="cm-indent">  </span><span class="cm-tag">form</span><span class="cm-qualifier">.pan</span><span class="cm-qualifier">.dark</span>
-<span class="cm-indent">    </span><span class="cm-tag">label</span><span class="cm-punctuation">(</span><span class="cm-attribute">for</span><span class="cm-operator">=</span><span class="cm-string">'val'</span><span class="cm-punctuation">)</span><span class="cm-string"> Thumbnails per grid:</span>
-<span class="cm-indent">    </span><span class="cm-tag">input</span><span class="cm-builtin">#val</span><span class="cm-punctuation">(</span><span class="cm-attribute">type</span><span class="cm-operator">=</span><span class="cm-string">'range'</span> <span class="cm-attribute">name</span><span class="cm-operator">=</span><span class="cm-string">'val'</span> <span class="cm-attribute">min</span><span class="cm-operator">=</span><span class="cm-variable">min</span> <span class="cm-attribute">value</span><span class="cm-operator">=</span><span class="cm-variable">val</span> <span class="cm-attribute">max</span><span class="cm-operator">=</span><span class="cm-variable">max</span><span class="cm-punctuation">)</span>
-<span class="cm-indent">    </span><span class="cm-tag">output</span><span class="cm-punctuation">(</span><span class="cm-attribute">for</span><span class="cm-operator">=</span><span class="cm-string">'val'</span> <span class="cm-attribute">data-val</span><span class="cm-operator">=</span><span class="cm-variable">val</span><span class="cm-punctuation">)</span>
-<span class="cm-indent">  </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">'https://codepen.io/thebabydino/pen/QWjovRV'</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">'_blank'</span><span class="cm-punctuation">)</span><span class="cm-string"> Also check out the first version! 😼</span></code></pre>
-<a href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
-View Compiled
-</a>
-</div>
-<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
-<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-variable-2">$pad</span>: <span class="cm-number">.5em</span>;
-<span class="cm-variable-2">$gap</span>: <span class="cm-number">.5vw</span>;
-<span class="cm-variable-2">$c</span>: <span class="cm-keyword">orange</span>;
-<span class="cm-variable-2">$t</span>: <span class="cm-number">.2s</span>;
-
-<span class="cm-variable-2">$b-arrow</span>: <span class="cm-number">.5</span>*<span class="cm-variable-2">$pad</span>;
-
-<span class="cm-variable-2">$track-w</span>: <span class="cm-number">15em</span>;
-<span class="cm-variable-2">$track-h</span>: <span class="cm-number">.25em</span>;
-<span class="cm-variable-2">$track-r</span>: <span class="cm-number">.5</span>*<span class="cm-variable-2">$track-h</span>;
-
-<span class="cm-variable-2">$thumb-d</span>: <span class="cm-number">1em</span>;
-<span class="cm-variable-2">$thumb-r</span>: <span class="cm-number">.5</span>*<span class="cm-variable-2">$thumb-d</span>;
-
-<span class="cm-variable-2">$mover-w</span>: <span class="cm-variable-2">$track-w</span> - <span class="cm-variable-2">$thumb-d</span>;
-
-<span class="cm-def">@mixin</span> <span class="cm-variable cm-callee">track</span>() {
-  <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
-  <span class="cm-property">width</span>: <span class="cm-variable-2">$track-w</span>; <span class="cm-property">height</span>: <span class="cm-variable-2">$track-h</span>;
-  <span class="cm-property">border-radius</span>: <span class="cm-variable-2">$track-r</span>;
-  <span class="cm-property">background</span>: <span class="cm-atom">currentcolor</span>;
-}
-
-<span class="cm-def">@mixin</span> <span class="cm-variable cm-callee">thumb</span>(<span class="cm-variable-2">$f</span>: <span class="cm-number">0</span>) {
-  <span class="cm-property">margin-top</span>: <span class="cm-variable-2">$f</span>*(<span class="cm-variable-2">$track-r</span> - <span class="cm-variable-2">$thumb-r</span>);
-  <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
-  <span class="cm-property">width</span>: <span class="cm-variable-2">$thumb-d</span>; <span class="cm-property">height</span>: <span class="cm-variable-2">$thumb-d</span>;
-  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
-  <span class="cm-property">background</span>: <span class="cm-variable-2">$c</span>
-}
-
 * {
-  <span class="cm-property">box-sizing</span>: <span class="cm-atom">inherit</span>;
-  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
-  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
-  <span class="cm-property">background</span>: <span class="cm-atom">transparent</span>;
-  <span class="cm-property">color</span>: <span class="cm-atom">inherit</span>;
-  <span class="cm-property">font</span>: <span class="cm-atom">inherit</span>
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
 }
 
-<span class="cm-tag">body</span> {
-  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
-  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
-  <span class="cm-property">grid-gap</span>: <span class="cm-number">2</span>*<span class="cm-variable-2">$pad</span>;
-  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable">max-content</span> <span class="cm-number">1fr</span> <span class="cm-number">1fr</span> <span class="cm-variable">max-content</span>;
-  <span class="cm-property">overflow-x</span>: <span class="cm-atom">hidden</span>;
-  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
-  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
-  <span class="cm-property">background</span>: <span class="cm-keyword">whitesmoke</span>;
-  <span class="cm-property">font</span>: <span class="cm-number">1.25em</span> <span class="cm-variable">ubuntu</span> <span class="cm-variable">mono</span>, <span class="cm-variable">consolas</span>, <span class="cm-variable">monaco</span>, <span class="cm-atom">monospace</span>;
-  
-  <span class="cm-def">@media</span> (<span class="cm-property">max-width</span>: <span class="cm-number">385px</span>) { <span class="cm-property">font-size</span>: <span class="cm-number">1em</span> }
+body {
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: max-content 1fr 1fr max-content;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  background: whitesmoke;
+  font: 1.25em ubuntu mono, consolas, monaco, monospace;
 }
-
-<span class="cm-tag">a</span> {
-  <span class="cm-property">margin-top</span>: <span class="cm-number">-2</span>*<span class="cm-variable-2">$pad</span>;
-  <span class="cm-property">padding</span>: <span class="cm-number">.25em</span> <span class="cm-number">.5em</span>;
-  <span class="cm-property">background</span>: <span class="cm-keyword">crimson</span>;
-  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
-  <span class="cm-property">font-weight</span>: <span class="cm-number">900</span>;
-  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>
-}
-
-<span class="cm-tag">pre</span> {
-  <span class="cm-property">z-index</span>: <span class="cm-number">2</span>;
-  <span class="cm-property">padding</span>: <span class="cm-variable-2">$pad</span> }
-
-<span class="cm-tag">form</span> {
-  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
-}
-
-<span class="cm-tag">label</span> {
-  
-}
-
-<span class="cm-tag">output</span> {
-  &amp;::<span class="cm-variable-3">after</span> { <span class="cm-property">content</span>: <span class="cm-variable cm-callee">attr</span>(<span class="cm-variable">data-val</span>) }
-}
-
-<span class="cm-tag">article</span> {
-  <span class="cm-variable-2">--dim</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100vw</span> - <span class="cm-number">1.5em</span>);
-  <span class="cm-property">place-self</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">width</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dim</span>);
-}
-
-<span class="cm-tag">img</span> {
-  <span class="cm-property">place-self</span>: <span class="cm-atom">stretch</span>;
-  <span class="cm-property">height</span>: <span class="cm-number">8em</span>;
-  <span class="cm-property">object-fit</span>: <span class="cm-atom">cover</span>;
-  <span class="cm-property">border-radius</span>: <span class="cm-number">3px</span>;
-  <span class="cm-property">box-shadow</span>: <span class="cm-number">2px</span> <span class="cm-number">2px</span> <span class="cm-number">5px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-atom">#000</span>, <span class="cm-number">.5</span>)
-}
-
-<span class="cm-qualifier">.dark</span> {
-  <span class="cm-property">padding</span>: <span class="cm-variable-2">$pad</span>;
-  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-atom">#000</span>, <span class="cm-number">.9</span>);
-  <span class="cm-property">color</span>: <span class="cm-atom">#d9d9d9</span>;
-  
-  :<span class="cm-variable cm-callee">not</span>(<span class="cm-variable">body</span>) &gt; &amp; { <span class="cm-property">border-radius</span>: <span class="cm-number">5px</span> }
-}
-
-<span class="cm-qualifier">.token</span> {
-  &amp;<span class="cm-variable-2">--prop</span> { <span class="cm-property">color</span>: <span class="cm-atom">#B7E3C0</span> }
-  
-  &amp;<span class="cm-variable-2">--func</span> { <span class="cm-property">color</span>: <span class="cm-atom">#B8D0DD</span> }
-  
-  &amp;<span class="cm-variable-2">--keyw</span> {
-    <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
-    <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">.25em</span>;
-    <span class="cm-property">border-radius</span>: <span class="cm-number">3px</span>;
-    <span class="cm-property">background</span>: <span class="cm-atom">#F8F087</span>;
-    <span class="cm-property">color</span>: <span class="cm-atom">#222</span>;
-    <span class="cm-property">font-weight</span>: <span class="cm-number">900</span>
-  }
-  
-  &amp;<span class="cm-variable-2">--num</span> { <span class="cm-property">color</span>: <span class="cm-atom">#DBBAE5</span> }
-  
-  &amp;<span class="cm-variable-2">--unit</span> { <span class="cm-property">color</span>: <span class="cm-atom">#F39DD4</span> }
-  
-  <span class="cm-def">@media</span> (<span class="cm-property">max-width</span>: <span class="cm-number">565px</span>) {
-    &amp;<span class="cm-variable-2">--prop</span> ~ &amp;<span class="cm-variable-2">--func</span>::<span class="cm-variable">before</span> { <span class="cm-property">content</span>: <span class="cm-string">'\A   '</span> }
+@media (max-width: 385px) {
+  body {
+    font-size: 1em;
   }
 }
 
-<span class="cm-qualifier">.ctrl</span> { <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span> }
-
-[<span class="cm-tag">id</span>=<span class="cm-string">'pop'</span>] {
-  <span class="cm-variable-2">--j</span>: <span class="cm-number">0</span>;
-  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
-  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
-  <span class="cm-property">top</span>: <span class="cm-number">100%</span>; <span class="cm-property">left</span>: <span class="cm-number">0</span>;
-  <span class="cm-property">width</span>: <span class="cm-variable">max-content</span>;
-  <span class="cm-property">transform-origin</span>: <span class="cm-number">0</span> <span class="cm-number">0</span>;
-  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--j</span>));
-  <span class="cm-property">transition</span>: <span class="cm-variable-2">$t</span> <span class="cm-variable cm-callee">calc</span>((<span class="cm-number">1</span> - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--j</span>))*#{<span class="cm-variable-2">$t</span>});
-  
-  <span class="cm-tag">label</span> {
-    <span class="cm-property">opacity</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--j</span>);
-    <span class="cm-property">transition</span>: <span class="cm-variable-2">$t</span> <span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--j</span>)*#{<span class="cm-variable-2">$t</span>})
-  }
-  
-  [<span class="cm-tag">aria-expanded</span>=<span class="cm-string">'true'</span>] + &amp; { <span class="cm-variable-2">--j</span>: <span class="cm-number">1</span> }
+a {
+  margin-top: -1em;
+  padding: 0.25em 0.5em;
+  background: crimson;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
 }
 
-[<span class="cm-tag">type</span>=<span class="cm-string">'radio'</span>] {
-  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
-  <span class="cm-property">right</span>: <span class="cm-number">100%</span>;
-  
-  + <span class="cm-tag">label</span> { <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span> }
-  
-  &amp;:<span class="cm-variable-3">checked</span> + <span class="cm-tag">label</span> { <span class="cm-property">color</span>: <span class="cm-variable-2">$c</span> }
+pre {
+  z-index: 2;
+  padding: 0.5em;
 }
 
-<span class="cm-qualifier">.grid</span> {
-  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
-  <span class="cm-property">justify-content</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--key</span>);
-  <span class="cm-property">grid-gap</span>: <span class="cm-variable-2">$gap</span>;
-  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--col-rule</span>, <span class="cm-variable">auto-fit</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--w</span>));
-  <span class="cm-property">margin-top</span>: <span class="cm-variable-2">$pad</span>;
-  
-  [<span class="cm-tag">style</span>*=<span class="cm-string">'auto-fill'</span>] &gt; &amp; {
-    <span class="cm-variable-2">--g</span>: #{<span class="cm-variable-2">$gap</span>};
-    <span class="cm-property">background</span>: 
-      <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">90deg</span>, 
-          <span class="cm-atom">transparent</span> <span class="cm-number">0</span> <span class="cm-number">0</span>, 
-          <span class="cm-atom">#dfdfdf</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--w</span>) - <span class="cm-number">0px</span>), 
-          <span class="cm-atom">transparent</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--w</span>) + <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--g</span>))) 
-        <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--x</span>, <span class="cm-number">50%</span>) <span class="cm-number">50%</span><span class="cm-operator">/</span> 
-        <span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>)*<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--w</span>) + (<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>) - <span class="cm-number">1</span>)*<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--g</span>)) 
-        <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> - <span class="cm-number">2px</span>) <span class="cm-atom">no-repeat</span>
-  }
-  
-  <span class="cm-tag">body</span>[<span class="cm-tag">style</span>*=<span class="cm-string">'start'</span>] &amp; { <span class="cm-variable-2">--x</span>: <span class="cm-number">0</span> }
-  
-  <span class="cm-tag">body</span>[<span class="cm-tag">style</span>*=<span class="cm-string">'end'</span>] &amp; { <span class="cm-variable-2">--x</span>: <span class="cm-number">100%</span> }
-  
-  <span class="cm-tag">body</span>[<span class="cm-tag">style</span>*=<span class="cm-string">'space-between'</span>] &amp; {
-    <span class="cm-variable-2">--g</span>: <span class="cm-variable cm-callee">calc</span>((<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dim</span>) - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>)*<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--w</span>))<span class="cm-operator">/</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>) - <span class="cm-number">1</span>))
-  }
-  
-  <span class="cm-tag">body</span>[<span class="cm-tag">style</span>*=<span class="cm-string">'space-around'</span>] &amp; {
-    <span class="cm-variable-2">--g</span>: <span class="cm-variable cm-callee">calc</span>((<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dim</span>) - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>)*<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--w</span>) - (<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>) - <span class="cm-number">1</span>)*#{<span class="cm-variable-2">$gap</span>})<span class="cm-operator">/</span><span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>) + #{<span class="cm-variable-2">$gap</span>})
-  }
-  
-  <span class="cm-tag">body</span>[<span class="cm-tag">style</span>*=<span class="cm-string">'space-evenly'</span>] &amp; {
-    <span class="cm-variable-2">--g</span>: <span class="cm-variable cm-callee">calc</span>((<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--dim</span>) - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>)*<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--w</span>) - (<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>) - <span class="cm-number">1</span>)*#{<span class="cm-variable-2">$gap</span>})<span class="cm-operator">/</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>) + <span class="cm-number">1</span>) + #{<span class="cm-variable-2">$gap</span>})
-  }
+form {
+  display: grid;
 }
 
-<span class="cm-qualifier">.ctrl</span> {
-  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
-  <span class="cm-property">white-space</span>: <span class="cm-atom">normal</span>;
-  
-  &gt; <span class="cm-tag">output</span> {
-    <span class="cm-property">white-space</span>: <span class="cm-atom">pre</span>;
-  }
+output::after {
+  content: attr(data-val);
 }
 
-<span class="cm-qualifier">.pan</span> {
-  <span class="cm-variable-2">--i</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--wide</span>, <span class="cm-number">1</span>);
-  <span class="cm-variable-2">--not-i</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">1</span> - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--i</span>));
-  <span class="cm-variable-2">--focus</span>: <span class="cm-number">0</span>;
-  <span class="cm-variable-2">--not-focus</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">1</span> - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--focus</span>));
-  <span class="cm-property">place-content</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">minmax</span>(<span class="cm-variable">max-content</span>, <span class="cm-number">0</span>) <span class="cm-variable-2">$track-w</span> <span class="cm-variable cm-callee">minmax</span>(<span class="cm-variable">max-content</span>, <span class="cm-number">0</span>);
-  <span class="cm-property">grid-gap</span>: <span class="cm-variable-2">$pad</span>;
-  <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">grayScale</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-focus</span>));
-  
-  &amp;:<span class="cm-variable-3">focus-within</span> { <span class="cm-variable-2">--focus</span>: <span class="cm-number">1</span> }
-  
-  <span class="cm-def">@media</span> (<span class="cm-property">max-width</span>: <span class="cm-number">610px</span>) {
-    <span class="cm-variable-2">--wide</span>: <span class="cm-number">0</span>
+article {
+  --dim: calc(100vw - 1.5em);
+  place-self: center;
+  width: var(--dim);
+}
+
+img {
+  place-self: stretch;
+  height: 8em;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dark {
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.9);
+  color: #d9d9d9;
+}
+:not(body) > .dark {
+  border-radius: 5px;
+}
+
+.token--prop {
+  color: #B7E3C0;
+}
+.token--func {
+  color: #B8D0DD;
+}
+.token--keyw {
+  display: inline-block;
+  padding: 0 0.25em;
+  border-radius: 3px;
+  background: #F8F087;
+  color: #222;
+  font-weight: 900;
+}
+.token--num {
+  color: #DBBAE5;
+}
+.token--unit {
+  color: #F39DD4;
+}
+@media (max-width: 565px) {
+  .token--prop ~ .token--func::before {
+    content: "\a   ";
   }
 }
 
-[<span class="cm-tag">for</span>=<span class="cm-string">'val'</span>] {
-  <span class="cm-property">grid-column</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">1</span> + <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>));
-  <span class="cm-property">place-self</span>: <span class="cm-atom">center</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--wide</span>, <span class="cm-atom">end</span>)
+.ctrl {
+  cursor: pointer;
 }
 
-[<span class="cm-tag">type</span>=<span class="cm-string">'range'</span>] {
-  &amp;, &amp;::<span class="cm-meta">-webkit-</span><span class="cm-variable-3">slider-thumb</span>, 
-  &amp;::<span class="cm-meta">-webkit-</span><span class="cm-variable-3">slider-runnable-track</span> { <span class="cm-meta">-webkit-</span><span class="cm-property">appearance</span>: <span class="cm-atom">none</span> }
+[id=pop] {
+  --j: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  transform-origin: 0 0;
+  transform: scale(var(--j));
+  transition: 0.2s calc((1 - var(--j))*0.2s);
+}
+[id=pop] label {
+  opacity: var(--j);
+  transition: 0.2s calc(var(--j)*0.2s);
+}
+[aria-expanded=true] + [id=pop] {
+  --j: 1 ;
+}
 
-  <span class="cm-property">grid-column</span>: <span class="cm-number">2</span>;
-  <span class="cm-property">grid-row</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">1</span> + <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>));
-  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+[type=radio] {
+  position: absolute;
+  right: 100%;
+}
+[type=radio] + label {
+  cursor: pointer;
+}
+[type=radio]:checked + label {
+  color: orange;
+}
 
-  &amp;::<span class="cm-meta">-webkit-</span><span class="cm-variable-3">slider-runnable-track</span> {
-    <span class="cm-def">@include</span> <span class="cm-variable cm-callee">track</span>()
+.grid {
+  display: grid;
+  justify-content: var(--key);
+  grid-gap: 0.5vw;
+  grid-template-columns: repeat(var(--col-rule, auto-fit), var(--w));
+  margin-top: 0.5em;
+}
+[style*=auto-fill] > .grid {
+  --g: 0.5vw;
+  background: repeating-linear-gradient(90deg, transparent 0 0, #dfdfdf 0 calc(var(--w) - 0px), transparent 0 calc(var(--w) + var(--g))) var(--x, 50%) 50%/calc(var(--max)*var(--w) + (var(--max) - 1)*var(--g)) calc(100% - 2px) no-repeat;
+}
+body[style*=start] .grid {
+  --x: 0 ;
+}
+body[style*=end] .grid {
+  --x: 100% ;
+}
+body[style*=space-between] .grid {
+  --g: calc((var(--dim) - var(--max)*var(--w))/(var(--max) - 1)) ;
+}
+body[style*=space-around] .grid {
+  --g: calc((var(--dim) - var(--max)*var(--w) - (var(--max) - 1)*0.5vw)/var(--max) + 0.5vw) ;
+}
+body[style*=space-evenly] .grid {
+  --g: calc((var(--dim) - var(--max)*var(--w) - (var(--max) - 1)*0.5vw)/(var(--max) + 1) + 0.5vw) ;
+}
+
+.ctrl {
+  position: relative;
+  white-space: normal;
+}
+.ctrl > output {
+  white-space: pre;
+}
+
+.pan {
+  --i: var(--wide, 1);
+  --not-i: calc(1 - var(--i));
+  --focus: 0;
+  --not-focus: calc(1 - var(--focus));
+  place-content: center;
+  grid-template-columns: minmax(max-content, 0) 15em minmax(max-content, 0);
+  grid-gap: 0.5em;
+  filter: grayScale(var(--not-focus));
+}
+.pan:focus-within {
+  --focus: 1 ;
+}
+@media (max-width: 610px) {
+  .pan {
+    --wide: 0 ;
   }
+}
 
-  &amp;::<span class="cm-meta">-moz-</span><span class="cm-variable-3">range-track</span> {
-    <span class="cm-def">@include</span> <span class="cm-variable cm-callee">track</span>()
-  }
+[for=val] {
+  grid-column: calc(1 + var(--not-i));
+  place-self: center var(--wide, end);
+}
 
-  &amp;::<span class="cm-meta">-webkit-</span><span class="cm-variable-3">slider-thumb</span> {
-    <span class="cm-def">@include</span> <span class="cm-variable cm-callee">thumb</span>(<span class="cm-number">1</span>)
+[type=range] {
+  grid-column: 2;
+  grid-row: calc(1 + var(--not-i));
+  cursor: pointer;
+}
+[type=range], [type=range]::-webkit-slider-thumb, [type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+}
+[type=range]::-webkit-slider-runnable-track {
+  border: none;
+  width: 15em;
+  height: 0.25em;
+  border-radius: 0.125em;
+  background: currentcolor;
+}
+[type=range]::-moz-range-track {
+  border: none;
+  width: 15em;
+  height: 0.25em;
+  border-radius: 0.125em;
+  background: currentcolor;
+}
+[type=range]::-webkit-slider-thumb {
+  margin-top: -0.375em;
+  border: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: orange;
+}
+[type=range]::-moz-range-thumb {
+  margin-top: 0em;
+  border: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: orange;
+}
+[type=range]:focus {
+  outline: solid 0 transparent;
+}
+
+output[for=val] {
+  grid-column: calc(3 - var(--not-i));
+  grid-row: calc(1 + var(--not-i));
+  place-self: start;
+  transform: translate(calc(var(--not-i)*(0.5em + (var(--val) - var(--min))/(var(--max) - var(--min))*14em - 50%)), calc(var(--not-i)*(0.25em - 100%)));
+}
+output[for=val]::after {
+  display: block;
+  border: solid 0.25em transparent;
+  padding: 0 0.5em;
+  border-radius: calc(0.25em + 3px);
+  transform-origin: 50% 100%;
+  transform: scale(calc(var(--i) + var(--not-i)*var(--focus)));
+  background: orange border-box;
+  color: #222;
+  text-align: center;
+  --xy: calc(var(--not-i)*50%) calc(50%*(1 + var(--not-i)));
+  --mask:
+  	linear-gradient(red, red) padding-box,
+  	conic-gradient(
+  			from calc(45deg - var(--not-i)*90deg)
+  			at var(--xy),
+  			red 0% 25%, transparent 0%)
+  		var(--xy)/ 50% 50% no-repeat border-box;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  transition: transform 0.3s, filter 0.3s;
+}
+</style>
+
+  
+  <script src="./prefixfree.min.js.下载"></script>
+
+    <script>
+    (function() {
+      /*
+      * Capture all errors for this pen
+      **/
+      window.onerror = function(/* message, file, line */) {
+        return true;
+      };
+
+      /*
+      * Capture and kill Web Audio and Speech
+      */
+      if (typeof (AudioContext) != "undefined" || typeof (webkitAudioContext) != "undefined") {
+        AudioContext = function() {
+          return false;
+        };
+
+        webkitAudioContext = function() {
+          return false;
+        };
       }
 
-  &amp;::<span class="cm-meta">-moz-</span><span class="cm-variable-3">range-thumb</span> {
-    <span class="cm-def">@include</span> <span class="cm-variable cm-callee">thumb</span>()
+      if (typeof (mozAudioContext) != "undefined") {
+        mozAudioContext = function() {
+          return false;
+        };
       }
 
-  &amp;:<span class="cm-variable-3">focus</span> { <span class="cm-property">outline</span>: <span class="cm-atom">solid</span> <span class="cm-number">0</span> <span class="cm-atom">transparent</span> }
-}
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis = {};
+      }
+      if ("speak" in speechSynthesis) {
+        speechSynthesis.speak = function() {
+          return false;
+        };
+      }
 
-<span class="cm-tag">output</span>[<span class="cm-tag">for</span>=<span class="cm-string">'val'</span>] {
-  <span class="cm-property">grid-column</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">3</span> - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>));
-  <span class="cm-property">grid-row</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">1</span> + <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>));
-  <span class="cm-property">place-self</span>: <span class="cm-atom">start</span>;
-  <span class="cm-property">transform</span>: 
-    <span class="cm-variable cm-callee">translate</span>(<span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>)*(#{<span class="cm-variable-2">$thumb-r</span>} + (<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--val</span>) - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--min</span>))<span class="cm-operator">/</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--max</span>) - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--min</span>))*#{<span class="cm-variable-2">$mover-w</span>} - <span class="cm-number">50%</span>)), 
-              <span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>)*(#{<span class="cm-variable-2">$b-arrow</span>} - <span class="cm-number">100%</span>)));
-  
-  &amp;::<span class="cm-variable-3">after</span> {
-    <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
-    <span class="cm-property">border</span>: <span class="cm-atom">solid</span> <span class="cm-variable-2">$b-arrow</span> <span class="cm-atom">transparent</span>;
-    <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">.5em</span>;
-    <span class="cm-property">border-radius</span>: <span class="cm-variable cm-callee">calc</span>(#{<span class="cm-variable-2">$b-arrow</span>} + <span class="cm-number">3px</span>);
-    <span class="cm-property">transform-origin</span>: <span class="cm-number">50%</span> <span class="cm-number">100%</span>;
-    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--i</span>) + <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>)*<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--focus</span>)));
-    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">nth</span>(<span class="cm-variable-2">$c</span>, <span class="cm-number">1</span>) <span class="cm-atom">border-box</span>;
-    <span class="cm-property">color</span>: <span class="cm-atom">#222</span>;
-    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
-    <span class="cm-variable-2">--xy</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>)*<span class="cm-number">50%</span>) <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">50%</span>*(<span class="cm-number">1</span> + <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>)));
-    <span class="cm-variable-2">--mask</span>:
-      <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-keyword">red</span>, <span class="cm-keyword">red</span>) <span class="cm-atom">padding-box</span>, 
-      <span class="cm-variable cm-callee">conic-gradient</span>(
-          <span class="cm-atom">from</span> <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">45deg</span> - <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--not-i</span>)*<span class="cm-number">90deg</span>) 
-          <span class="cm-variable">at</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--xy</span>), 
-          <span class="cm-keyword">red</span> <span class="cm-number">0%</span> <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">0%</span>) 
-        <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--xy</span>)<span class="cm-operator">/</span> <span class="cm-number">50%</span> <span class="cm-number">50%</span> <span class="cm-atom">no-repeat</span> <span class="cm-atom">border-box</span>;
-    <span class="cm-meta">-webkit-</span><span class="cm-property">mask</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--mask</span>);
-            <span class="cm-property">mask</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--mask</span>);
-    <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-number">.3s</span>, <span class="cm-variable">filter</span> <span class="cm-number">.3s</span>
-  }
-}</code></pre>
-<a href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
-View Compiled
-</a>
-</div>
-<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
-<pre tabindex="0"><code data-lang="jsx" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">_BODY</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">body</span>, 
-      <span class="cm-def">_GRIDS</span> <span class="cm-operator">=</span> [<span class="cm-meta">...</span><span class="cm-variable">document</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-string">'.grid'</span>)].<span class="cm-property">map</span>(<span class="cm-def">c</span> <span class="cm-operator">=&gt;</span> ({
-        <span class="cm-property">_el</span>: <span class="cm-variable-2">c</span>, 
-        <span class="cm-property">_imgs</span>: [<span class="cm-meta">...</span><span class="cm-variable-2">c</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-string">'img'</span>)]
-      })), 
-      <span class="cm-def">FN</span> <span class="cm-operator">=</span> [<span class="cm-string">'append'</span>, <span class="cm-string">'remove'</span>];
+      // Kill the browser asking for access to the video cam or audio
+      navigator.getUserMedia = function() {
+      };
+      navigator.mozGetUserMedia = function() {
+      };
+      navigator.webkitGetUserMedia = function() {
+      };
+      navigator.mediaDevices.getUserMedia = function() {
+      };
 
-<span class="cm-variable">addEventListener</span>(<span class="cm-string">'click'</span>, <span class="cm-def">e</span> <span class="cm-operator">=&gt;</span> {
-  <span class="cm-keyword">let</span> <span class="cm-def">_tg</span> <span class="cm-operator">=</span> <span class="cm-variable-2">e</span>.<span class="cm-property">target</span>;
-  
-  <span class="cm-keyword">if</span>(<span class="cm-variable-2">_tg</span>.<span class="cm-property">hasAttribute</span>(<span class="cm-string">'aria-haspopup'</span>)) {
-    <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">_tg</span>.<span class="cm-property">getAttribute</span>(<span class="cm-string">'aria-expanded'</span>))
-    <span class="cm-keyword">if</span>(<span class="cm-variable-2">_tg</span>.<span class="cm-property">getAttribute</span>(<span class="cm-string">'aria-expanded'</span>) <span class="cm-operator">===</span> <span class="cm-string">'false'</span>)
-      <span class="cm-variable-2">_tg</span>.<span class="cm-property">setAttribute</span>(<span class="cm-string">'aria-expanded'</span>, <span class="cm-string">'true'</span>)
-  }
-  <span class="cm-keyword">else</span> {
-    <span class="cm-keyword">let</span> <span class="cm-def">_octrl</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'[aria-expanded=true]'</span>);
-    
-    <span class="cm-keyword">if</span>(<span class="cm-variable-2">_octrl</span>) <span class="cm-variable-2">_octrl</span>.<span class="cm-property">setAttribute</span>(<span class="cm-string">'aria-expanded'</span>, <span class="cm-string">'false'</span>)
-  }
-}, <span class="cm-atom">false</span>);
 
-<span class="cm-variable">addEventListener</span>(<span class="cm-string">'input'</span>, <span class="cm-def">e</span> <span class="cm-operator">=&gt;</span> {
-  <span class="cm-keyword">let</span> <span class="cm-def">_tg</span> <span class="cm-operator">=</span> <span class="cm-variable-2">e</span>.<span class="cm-property">target</span>, 
-      <span class="cm-def">new_val</span> <span class="cm-operator">=</span> <span class="cm-variable-2">_tg</span>.<span class="cm-property">value</span>, 
-      <span class="cm-def">_out</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string-2">`output[for*='${</span><span class="cm-variable-2">_tg</span>.<span class="cm-property">id</span><span class="cm-string-2">}</span><span class="cm-string-2">']`</span>), 
-      <span class="cm-def">old_val</span> <span class="cm-operator">=</span> <span class="cm-variable-2">_out</span>.<span class="cm-property">dataset</span>.<span class="cm-property">val</span>;
-  
-  <span class="cm-keyword">if</span>(<span class="cm-variable-2">new_val</span> <span class="cm-operator">!=</span> <span class="cm-variable-2">old_val</span>) {    
-    <span class="cm-keyword">if</span>(<span class="cm-variable-2">_tg</span>.<span class="cm-property">type</span> <span class="cm-operator">===</span> <span class="cm-string">'range'</span>) {
-      <span class="cm-variable">_GRIDS</span>.<span class="cm-property">forEach</span>(<span class="cm-def">g</span> <span class="cm-operator">=&gt;</span> {
-        <span class="cm-keyword">let</span> <span class="cm-def">dif</span> <span class="cm-operator">=</span> <span class="cm-operator">+</span><span class="cm-variable-2">new_val</span> <span class="cm-operator">-</span> <span class="cm-operator">+</span><span class="cm-variable-2">old_val</span>, 
-            <span class="cm-def">sgn</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">sign</span>(<span class="cm-variable-2">dif</span>), 
-            <span class="cm-def">bit</span> <span class="cm-operator">=</span> <span class="cm-number">.5</span><span class="cm-operator">*</span>(<span class="cm-number">1</span> <span class="cm-operator">-</span> <span class="cm-variable-2">sgn</span>);
+      /**
+      * Capture and kill animations after X number of seconds
+      **/
+      var __animationDuration = 4000;
+      var __animationsTimedOut = false;
+      var __animationRequests = [];
+      var __requestAnimationFrame = false;
+      var __cancelAnimationFrame = false;
+      var x, i;
 
-        <span class="cm-keyword">while</span>(<span class="cm-variable-2">dif</span> <span class="cm-operator">!==</span> <span class="cm-number">0</span>) {
-          <span class="cm-variable-2">g</span>.<span class="cm-property">_el</span>[<span class="cm-string-2">`${</span><span class="cm-variable">FN</span>[<span class="cm-variable-2">bit</span>]<span class="cm-string-2">}</span><span class="cm-string-2">Child`</span>](<span class="cm-variable-2">g</span>.<span class="cm-property">_imgs</span>[<span class="cm-variable-2">new_val</span> <span class="cm-operator">-</span> <span class="cm-variable-2">dif</span> <span class="cm-operator">-</span> <span class="cm-variable-2">bit</span>])
-          <span class="cm-variable-2">dif</span> <span class="cm-operator">-=</span> <span class="cm-variable-2">sgn</span>
+      var vendorsRequestAnimationFrame = [
+        "requestAnimationFrame",
+        "mozRequestAnimationFrame",
+        "webkitRequestAnimationFrame"
+      ];
+
+      // find the browsers requestAnimationFrame and cancelAnimationFrame
+      for (x = 0; x < vendorsRequestAnimationFrame.length; x++) {
+        if (!__requestAnimationFrame) {
+          __requestAnimationFrame = window[vendorsRequestAnimationFrame[x]
+          ];
         }
+      }
+
+      __cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+      // Wrap the requestAnimationFrame so we can stop it in the future
+      function __reqFrame(callback, element) {
+        // after the timeout we no longer take requests
+        var timerID;
+        if (__animationsTimedOut) {
+          return 0;
+        } else {
+          timerID = __requestAnimationFrame(callback, element);
+          __animationRequests.push(timerID);
+
+          return timerID;
+        }
+      }
+
+      for (x = 0; x < vendorsRequestAnimationFrame.length; x++) {
+        window[vendorsRequestAnimationFrame[x]] = __reqFrame;
+      }
+
+      // Cancel the animations after expiration
+      setTimeout(function() {
+        for (i = 0; i < __animationRequests.length; i++) {
+          __cancelAnimationFrame(__animationRequests[i]);
+        }
+
+        var ss = window.document.createElement("style");
+        ss.textContent = "*, *::before, *::after { animation-play-state: paused !important; }";
+        var ref = window.document.getElementsByTagName("script")[0];
+        ref.parentNode.insertBefore(ss, ref);
+
+        __animationsTimedOut = true;
+      }, __animationDuration, "push");
+
+      /**
+      * Capture setInterval and setTimeout to kill after X number of seconds
+      **/
+      window.setInterval = (function(oldSetInterval) {
+        var registered = [];
+
+        function f(a,b) {
+          // check if the time has expired,
+          // after __animationDuration expires don't take anymore setIntervals
+          if (this.timedOut) {
+            return 0;
+          } else {
+            return registered[ registered.length ] = oldSetInterval(a,b);
+          }
+        }
+
+        f.clearAll = function() {
+          var r;
+
+          while (r = registered.pop()) {
+            clearInterval( r );
+          }
+
+          this.timedOut = true;
+        };
+
+        f.timedOut = false;
+
+        return f;
+      }(window.setInterval));
+
+      window.setTimeout = (function(oldSetTimeout) {
+        var registered = [];
+
+        // because some of our timeouts may time out afterwards
+        // we want to make sure they know the secret sauce to still use
+        // setTimeout after the time has expired, thats why we have a
+        // third param
+        function f(a, b, push) {
+          // check if the time has expired,
+          // after __animationDuration expires don't take anymore requests
+          if (this.timedOut && typeof(push) == "undefined") {
+            return 0;
+          } else {
+            // If push is there, never clear that interval
+            // so never add it to the registry
+            if (push) {
+              return oldSetTimeout(a,b);
+            } else {
+              return registered[ registered.length ] = oldSetTimeout(a,b);
+            }
+          }
+        }
+
+        f.clearAll = function() {
+          var r;
+
+          while (r = registered.pop()) {
+            clearTimeout( r );
+          }
+
+          this.timedOut = true;
+        };
+
+        f.timedOut = false;
+
+        return f;
+      }(window.setTimeout));
+
+      setTimeout(function() {
+
+        setTimeout.clearAll();
+        setInterval.clearAll();
+
+        // Stop Web Animations API
+        // Idea from Gregor: https://github.com/CodePen/CodePen-Bug-Reporting-Only/issues/173#issuecomment-203443301
+        // Status as of April 2020:
+        //  Chrome 80 = Stops animations
+        //  Firefox 75 = Stops animations
+        //  Safari 13 = Doesn't support WAAPI
+        //  Safari 13.1 = Stops animations
+
+        // Apparently this used to be done via `document.timeline`, but the modern method is to get the animations directly from the document.
+        let animations = ( typeof document.getAnimations === "function" && document.getAnimations() ) || (document.timeline && typeof document.timeline.getAnimations === "function" && document.timeline.getAnimations() )
+
+        if ( animations && animations.length ) {
+          animations.map(function(animation) {
+            animation.pause();
+          });
+        }
+
+      }, __animationDuration, "push");
+
+    }());
+  </script>
+
+</head>
+
+<body translate="no" onload="_l=&#39;t&#39;;" style="--min: 1; --val: 6; --max: 6; --key: center; --w: 14vw">
+  
+  <pre class="dark"><span class="token--prop">justify-content</span><span class="token--punc">:</span><span class="ctrl">
+      <output class="token--keyw" for="start center end space-between space-around space-evenly" aria-haspopup="true" aria-expanded="false" aria-controls="pop" data-val="center"></output>
+      <form class="dark" id="pop">
+        <input type="radio" name="key" id="start" value="start">
+        <label for="start">start</label>
+        <input type="radio" name="key" id="center" value="center" checked="checked">
+        <label for="center">center</label>
+        <input type="radio" name="key" id="end" value="end">
+        <label for="end">end</label>
+        <input type="radio" name="key" id="space-between" value="space-between">
+        <label for="space-between">space-between</label>
+        <input type="radio" name="key" id="space-around" value="space-around">
+        <label for="space-around">space-around</label>
+        <input type="radio" name="key" id="space-evenly" value="space-evenly">
+        <label for="space-evenly">space-evenly</label>
+      </form></span><span class="token--comm">/* change this value */</span></pre>
+  <article style="--col-rule: auto-fit">
+    <pre class="dark"><span class="token--prop">grid-template-columns</span><span class="token--punc">:</span> <span class="token--func">repeat</span><span class="token--punc">(</span><span class="token--args"><span class="token--arg token--keyw">auto-fit</span><span class="token--punc">,</span> <span class="token--arg token--len"><span class="token--num">14</span><span class="token--unit">vw</span></span></span><span class="token--punc">)</span></pre>
+    <section class="grid"><img src="./photo-1564844536308-75c540dbf14e"><img src="./photo-1548865164-c4e93ca471aa"><img src="./photo-1502004960551-dc67f7c24cb3"><img src="./photo-1551276705-0503a4b9d38c"><img src="./photo-1551529563-9dd66d188764"><img src="./photo-1473340186413-a68ba9c2564e">
+    </section>
+  </article>
+  <article style="--col-rule: auto-fill">
+    <pre class="dark"><span class="token--prop">grid-template-columns</span><span class="token--punc">:</span> <span class="token--func">repeat</span><span class="token--punc">(</span><span class="token--args"><span class="token--arg token--keyw">auto-fill</span><span class="token--punc">,</span> <span class="token--arg token--len"><span class="token--num">14</span><span class="token--unit">vw</span></span></span><span class="token--punc">)</span></pre>
+    <section class="grid"><img src="./photo-1564844536308-75c540dbf14e"><img src="./photo-1548865164-c4e93ca471aa"><img src="./photo-1502004960551-dc67f7c24cb3"><img src="./photo-1551276705-0503a4b9d38c"><img src="./photo-1551529563-9dd66d188764"><img src="./photo-1473340186413-a68ba9c2564e">
+    </section>
+  </article>
+  <form class="pan dark">
+    <label for="val">Thumbnails per grid:</label>
+    <input id="val" type="range" name="val" min="1" value="6" max="6">
+    <output for="val" data-val="6"></output>
+  </form><a href="https://codepen.io/thebabydino/pen/QWjovRV" target="_blank">Also check out the first version! 😼</a>
+
+  
+      <script id="rendered-js">
+const _BODY = document.body,
+_GRIDS = [...document.querySelectorAll('.grid')].map(c => ({
+  _el: c,
+  _imgs: [...c.querySelectorAll('img')] })),
+
+FN = ['append', 'remove'];
+
+addEventListener('click', e => {
+  let _tg = e.target;
+
+  if (_tg.hasAttribute('aria-haspopup')) {
+    console.log(_tg.getAttribute('aria-expanded'));
+    if (_tg.getAttribute('aria-expanded') === 'false')
+    _tg.setAttribute('aria-expanded', 'true');
+  } else
+  {
+    let _octrl = document.querySelector('[aria-expanded=true]');
+
+    if (_octrl) _octrl.setAttribute('aria-expanded', 'false');
+  }
+}, false);
+
+addEventListener('input', e => {
+  let _tg = e.target,
+  new_val = _tg.value,
+  _out = document.querySelector(`output[for*='${_tg.id}']`),
+  old_val = _out.dataset.val;
+
+  if (new_val != old_val) {
+    if (_tg.type === 'range') {
+      _GRIDS.forEach(g => {
+        let dif = +new_val - +old_val,
+        sgn = Math.sign(dif),
+        bit = .5 * (1 - sgn);
+
+        while (dif !== 0) {if (window.CP.shouldStopExecution(0)) break;
+          g._el[`${FN[bit]}Child`](g._imgs[new_val - dif - bit]);
+          dif -= sgn;
+        }window.CP.exitedLoop(0);
       });
     }
-    
-    <span class="cm-variable">_BODY</span>.<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(<span class="cm-string-2">`--${</span><span class="cm-variable-2">_tg</span>.<span class="cm-property">name</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>, <span class="cm-variable-2">_out</span>.<span class="cm-property">dataset</span>.<span class="cm-property">val</span> <span class="cm-operator">=</span> <span class="cm-variable-2">new_val</span>)
+
+    _BODY.style.setProperty(`--${_tg.name}`, _out.dataset.val = new_val);
   }
-}, <span class="cm-atom">false</span>);</code></pre>
-<a href="https://codepen.io/thebabydino/embed/gOayvpb?height=700&amp;theme-id=3655&amp;default-tab=result#0" id="view-js-compiled-button" class="action-button bottom right view-compiled-button" data-type="js">
-View Compiled
-</a>
-</div>
-<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
-<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for auto-fit vs. auto-fill #2 (change justify-content/ no of thumbnails per grid)" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for auto-fit vs. auto-fill #2 (change justify-content/ no of thumbnails per grid)" data-src="https://cdpn.io/thebabydino/fullembedgrid/gOayvpb?animations=stop-after-5&amp;type=embed" src="./gOayvpb(1).html">
-  </iframe>
-</div>
-<div id="about-box">
-<div class="about-container">
-<div class="about-user">
-<a href="https://codepen.io/thebabydino" target="_blank" rel="noopener"><img src="./default(1).png" loading="lazy" alt="" class="about-image"></a>
-<div class="about-user-info">
-<p>
-This Pen is owned by <a href="https://codepen.io/thebabydino" target="_blank" rel="noopener">Ana Tudor</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
-</p>
-<p>
-<a href="https://codepen.io/thebabydino" target="_blank" rel="noopener" class="about-user-more">
-See more by @thebabydino on CodePen
-</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="resources-box" class="resources-box">
-<h3>External CSS</h3>
-<p>
-This Pen doesn't use any external CSS resources.
-</p>
-<h3>External JavaScript</h3>
-<p>
-This Pen doesn't use any external JavaScript resources.
-</p>
-</div>
-</div>
-<footer class="embed-footer" id="embed-footer">
-<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
-Resources
-</button>
-<ul class="scaling-choices bottom right">
-<li><button class="action-button" id="zoom-button-1">1×</button></li>
-<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
-<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
-</ul>
-<button id="rerun-button" class="action-button rerun-button bottom right">
-Rerun
-</button>
-</footer>
-<script nonce="">
-    __processedPen = {"html":"&lt;body style=&quot;--min: 1; --val: 6; --max: 6; --key: center; --w: 14vw&quot;&gt;\n  &lt;pre class=&quot;dark&quot;&gt;&lt;span class=&quot;token--prop&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ctrl&quot;&gt;\n      &lt;output class=&quot;token--keyw&quot; for=&quot;start center end space-between space-around space-evenly&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;pop&quot; data-val=&quot;center&quot;&gt;&lt;/output&gt;\n      &lt;form class=&quot;dark&quot; id=&quot;pop&quot;&gt;\n        &lt;input type=&quot;radio&quot; name=&quot;key&quot; id=&quot;start&quot; value=&quot;start&quot;/&gt;\n        &lt;label for=&quot;start&quot;&gt;start&lt;/label&gt;\n        &lt;input type=&quot;radio&quot; name=&quot;key&quot; id=&quot;center&quot; value=&quot;center&quot; checked=&quot;checked&quot;/&gt;\n        &lt;label for=&quot;center&quot;&gt;center&lt;/label&gt;\n        &lt;input type=&quot;radio&quot; name=&quot;key&quot; id=&quot;end&quot; value=&quot;end&quot;/&gt;\n        &lt;label for=&quot;end&quot;&gt;end&lt;/label&gt;\n        &lt;input type=&quot;radio&quot; name=&quot;key&quot; id=&quot;space-between&quot; value=&quot;space-between&quot;/&gt;\n        &lt;label for=&quot;space-between&quot;&gt;space-between&lt;/label&gt;\n        &lt;input type=&quot;radio&quot; name=&quot;key&quot; id=&quot;space-around&quot; value=&quot;space-around&quot;/&gt;\n        &lt;label for=&quot;space-around&quot;&gt;space-around&lt;/label&gt;\n        &lt;input type=&quot;radio&quot; name=&quot;key&quot; id=&quot;space-evenly&quot; value=&quot;space-evenly&quot;/&gt;\n        &lt;label for=&quot;space-evenly&quot;&gt;space-evenly&lt;/label&gt;\n      &lt;/form&gt;&lt;/span&gt;&lt;span class=&quot;token--comm&quot;&gt;/* change this value */&lt;/span&gt;&lt;/pre&gt;\n  &lt;article style=&quot;--col-rule: auto-fit&quot;&gt;\n    &lt;pre class=&quot;dark&quot;&gt;&lt;span class=&quot;token--prop&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token--func&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token--args&quot;&gt;&lt;span class=&quot;token--arg token--keyw&quot;&gt;auto-fit&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token--arg token--len&quot;&gt;&lt;span class=&quot;token--num&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;token--unit&quot;&gt;vw&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;\n    &lt;section class=&quot;grid&quot;&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1564844536308-75c540dbf14e?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1548865164-c4e93ca471aa?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1502004960551-dc67f7c24cb3?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1551276705-0503a4b9d38c?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1551529563-9dd66d188764?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1473340186413-a68ba9c2564e?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;\n    &lt;/section&gt;\n  &lt;/article&gt;\n  &lt;article style=&quot;--col-rule: auto-fill&quot;&gt;\n    &lt;pre class=&quot;dark&quot;&gt;&lt;span class=&quot;token--prop&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token--func&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token--args&quot;&gt;&lt;span class=&quot;token--arg token--keyw&quot;&gt;auto-fill&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token--arg token--len&quot;&gt;&lt;span class=&quot;token--num&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;token--unit&quot;&gt;vw&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token--punc&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;\n    &lt;section class=&quot;grid&quot;&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1564844536308-75c540dbf14e?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1548865164-c4e93ca471aa?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1502004960551-dc67f7c24cb3?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1551276705-0503a4b9d38c?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1551529563-9dd66d188764?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1473340186413-a68ba9c2564e?ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=950&amp;amp;fit=max&amp;amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&quot;/&gt;\n    &lt;/section&gt;\n  &lt;/article&gt;\n  &lt;form class=&quot;pan dark&quot;&gt;\n    &lt;label for=&quot;val&quot;&gt;Thumbnails per grid:&lt;/label&gt;\n    &lt;input id=&quot;val&quot; type=&quot;range&quot; name=&quot;val&quot; min=&quot;1&quot; value=&quot;6&quot; max=&quot;6&quot;/&gt;\n    &lt;output for=&quot;val&quot; data-val=&quot;6&quot;&gt;&lt;/output&gt;\n  &lt;/form&gt;&lt;a href=&quot;https://codepen.io/thebabydino/pen/QWjovRV&quot; target=&quot;_blank&quot;&gt;Also check out the first version! 😼&lt;/a&gt;\n&lt;/body&gt;","css":"* {\n  box-sizing: inherit;\n  margin: 0;\n  padding: 0;\n  background: transparent;\n  color: inherit;\n  font: inherit;\n}\n\nbody {\n  box-sizing: border-box;\n  display: grid;\n  grid-gap: 1em;\n  grid-template-rows: max-content 1fr 1fr max-content;\n  overflow-x: hidden;\n  margin: 0;\n  min-height: 100vh;\n  background: whitesmoke;\n  font: 1.25em ubuntu mono, consolas, monaco, monospace;\n}\n@media (max-width: 385px) {\n  body {\n    font-size: 1em;\n  }\n}\n\na {\n  margin-top: -1em;\n  padding: 0.25em 0.5em;\n  background: crimson;\n  color: #fff;\n  font-weight: 900;\n  text-align: center;\n  text-decoration: none;\n}\n\npre {\n  z-index: 2;\n  padding: 0.5em;\n}\n\nform {\n  display: grid;\n}\n\noutput::after {\n  content: attr(data-val);\n}\n\narticle {\n  --dim: calc(100vw - 1.5em);\n  place-self: center;\n  width: var(--dim);\n}\n\nimg {\n  place-self: stretch;\n  height: 8em;\n  object-fit: cover;\n  border-radius: 3px;\n  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n}\n\n.dark {\n  padding: 0.5em;\n  background: rgba(0, 0, 0, 0.9);\n  color: #d9d9d9;\n}\n:not(body) &gt; .dark {\n  border-radius: 5px;\n}\n\n.token--prop {\n  color: #B7E3C0;\n}\n.token--func {\n  color: #B8D0DD;\n}\n.token--keyw {\n  display: inline-block;\n  padding: 0 0.25em;\n  border-radius: 3px;\n  background: #F8F087;\n  color: #222;\n  font-weight: 900;\n}\n.token--num {\n  color: #DBBAE5;\n}\n.token--unit {\n  color: #F39DD4;\n}\n@media (max-width: 565px) {\n  .token--prop ~ .token--func::before {\n    content: &quot;\\a   &quot;;\n  }\n}\n\n.ctrl {\n  cursor: pointer;\n}\n\n[id=pop] {\n  --j: 0;\n  overflow: hidden;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  width: max-content;\n  transform-origin: 0 0;\n  transform: scale(var(--j));\n  transition: 0.2s calc((1 - var(--j))*0.2s);\n}\n[id=pop] label {\n  opacity: var(--j);\n  transition: 0.2s calc(var(--j)*0.2s);\n}\n[aria-expanded=true] + [id=pop] {\n  --j: 1 ;\n}\n\n[type=radio] {\n  position: absolute;\n  right: 100%;\n}\n[type=radio] + label {\n  cursor: pointer;\n}\n[type=radio]:checked + label {\n  color: orange;\n}\n\n.grid {\n  display: grid;\n  justify-content: var(--key);\n  grid-gap: 0.5vw;\n  grid-template-columns: repeat(var(--col-rule, auto-fit), var(--w));\n  margin-top: 0.5em;\n}\n[style*=auto-fill] &gt; .grid {\n  --g: 0.5vw;\n  background: repeating-linear-gradient(90deg, transparent 0 0, #dfdfdf 0 calc(var(--w) - 0px), transparent 0 calc(var(--w) + var(--g))) var(--x, 50%) 50%/calc(var(--max)*var(--w) + (var(--max) - 1)*var(--g)) calc(100% - 2px) no-repeat;\n}\nbody[style*=start] .grid {\n  --x: 0 ;\n}\nbody[style*=end] .grid {\n  --x: 100% ;\n}\nbody[style*=space-between] .grid {\n  --g: calc((var(--dim) - var(--max)*var(--w))/(var(--max) - 1)) ;\n}\nbody[style*=space-around] .grid {\n  --g: calc((var(--dim) - var(--max)*var(--w) - (var(--max) - 1)*0.5vw)/var(--max) + 0.5vw) ;\n}\nbody[style*=space-evenly] .grid {\n  --g: calc((var(--dim) - var(--max)*var(--w) - (var(--max) - 1)*0.5vw)/(var(--max) + 1) + 0.5vw) ;\n}\n\n.ctrl {\n  position: relative;\n  white-space: normal;\n}\n.ctrl &gt; output {\n  white-space: pre;\n}\n\n.pan {\n  --i: var(--wide, 1);\n  --not-i: calc(1 - var(--i));\n  --focus: 0;\n  --not-focus: calc(1 - var(--focus));\n  place-content: center;\n  grid-template-columns: minmax(max-content, 0) 15em minmax(max-content, 0);\n  grid-gap: 0.5em;\n  filter: grayScale(var(--not-focus));\n}\n.pan:focus-within {\n  --focus: 1 ;\n}\n@media (max-width: 610px) {\n  .pan {\n    --wide: 0 ;\n  }\n}\n\n[for=val] {\n  grid-column: calc(1 + var(--not-i));\n  place-self: center var(--wide, end);\n}\n\n[type=range] {\n  grid-column: 2;\n  grid-row: calc(1 + var(--not-i));\n  cursor: pointer;\n}\n[type=range], [type=range]::-webkit-slider-thumb, [type=range]::-webkit-slider-runnable-track {\n  -webkit-appearance: none;\n}\n[type=range]::-webkit-slider-runnable-track {\n  border: none;\n  width: 15em;\n  height: 0.25em;\n  border-radius: 0.125em;\n  background: currentcolor;\n}\n[type=range]::-moz-range-track {\n  border: none;\n  width: 15em;\n  height: 0.25em;\n  border-radius: 0.125em;\n  background: currentcolor;\n}\n[type=range]::-webkit-slider-thumb {\n  margin-top: -0.375em;\n  border: none;\n  width: 1em;\n  height: 1em;\n  border-radius: 50%;\n  background: orange;\n}\n[type=range]::-moz-range-thumb {\n  margin-top: 0em;\n  border: none;\n  width: 1em;\n  height: 1em;\n  border-radius: 50%;\n  background: orange;\n}\n[type=range]:focus {\n  outline: solid 0 transparent;\n}\n\noutput[for=val] {\n  grid-column: calc(3 - var(--not-i));\n  grid-row: calc(1 + var(--not-i));\n  place-self: start;\n  transform: translate(calc(var(--not-i)*(0.5em + (var(--val) - var(--min))/(var(--max) - var(--min))*14em - 50%)), calc(var(--not-i)*(0.25em - 100%)));\n}\noutput[for=val]::after {\n  display: block;\n  border: solid 0.25em transparent;\n  padding: 0 0.5em;\n  border-radius: calc(0.25em + 3px);\n  transform-origin: 50% 100%;\n  transform: scale(calc(var(--i) + var(--not-i)*var(--focus)));\n  background: orange border-box;\n  color: #222;\n  text-align: center;\n  --xy: calc(var(--not-i)*50%) calc(50%*(1 + var(--not-i)));\n  --mask:\n  \tlinear-gradient(red, red) padding-box,\n  \tconic-gradient(\n  \t\t\tfrom calc(45deg - var(--not-i)*90deg)\n  \t\t\tat var(--xy),\n  \t\t\tred 0% 25%, transparent 0%)\n  \t\tvar(--xy)/ 50% 50% no-repeat border-box;\n  -webkit-mask: var(--mask);\n  mask: var(--mask);\n  transition: transform 0.3s, filter 0.3s;\n}","js":"const _BODY = document.body,\n_GRIDS = [...document.querySelectorAll(&#39;.grid&#39;)].map(c =&gt; ({\n  _el: c,\n  _imgs: [...c.querySelectorAll(&#39;img&#39;)] })),\n\nFN = [&#39;append&#39;, &#39;remove&#39;];\n\naddEventListener(&#39;click&#39;, e =&gt; {\n  let _tg = e.target;\n\n  if (_tg.hasAttribute(&#39;aria-haspopup&#39;)) {\n    console.log(_tg.getAttribute(&#39;aria-expanded&#39;));\n    if (_tg.getAttribute(&#39;aria-expanded&#39;) === &#39;false&#39;)\n    _tg.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);\n  } else\n  {\n    let _octrl = document.querySelector(&#39;[aria-expanded=true]&#39;);\n\n    if (_octrl) _octrl.setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);\n  }\n}, false);\n\naddEventListener(&#39;input&#39;, e =&gt; {\n  let _tg = e.target,\n  new_val = _tg.value,\n  _out = document.querySelector(`output[for*=&#39;${_tg.id}&#39;]`),\n  old_val = _out.dataset.val;\n\n  if (new_val != old_val) {\n    if (_tg.type === &#39;range&#39;) {\n      _GRIDS.forEach(g =&gt; {\n        let dif = +new_val - +old_val,\n        sgn = Math.sign(dif),\n        bit = .5 * (1 - sgn);\n\n        while (dif !== 0) {if (window.CP.shouldStopExecution(0)) break;\n          g._el[`${FN[bit]}Child`](g._imgs[new_val - dif - bit]);\n          dif -= sgn;\n        }window.CP.exitedLoop(0);\n      });\n    }\n\n    _BODY.style.setProperty(`--${_tg.name}`, _out.dataset.val = new_val);\n  }\n}, false);"};
-    __preprocessors = {
-      "html": "pug",
-      "css": "scss",
-      "js": "babel"
-    };
-    __preprocessorNames = {
-      "html": "Pug",
-      "css": "SCSS",
-      "js": "Babel"
-    };
-    __editable = false;
-    __embed_prefill = false;
+}, false);
+//# sourceURL=pen.js
+    </script>
+
+    <script style="display: none !important;">
+  (function() {
+    var __animationDuration = 4000;
+
+    setTimeout(function() {
+      // If onload hasn't been called, stop all requests after 2 seconds
+      if (typeof(_l) == "undefined") {
+        if (window.stop !== undefined) window.stop();
+        else if (document.execCommand !== undefined) document.execCommand("Stop", false);
+      }
+    }, 2000, "push");
+
+    /*
+    * Capture and kill CSS animations after X number of seconds
+    */
+    function pauseAnimations() {
+      var body = document.getElementsByTagName("body")[0];
+
+      if (body.addEventListener) {
+        body.addEventListener("webkitAnimationStart", listener, false);
+        body.addEventListener("webkitAnimationIteration", listener, false);
+        body.addEventListener("animationstart", listener, false);
+        body.addEventListener("animationiteration", listener, false);
+      }
+    }
+
+    function listener(e) {
+
+      var targetEl;
+
+      if (e.type == "webkitAnimationStart" || e.type == "webkitAnimationIteration") {
+
+        targetEl = e.target;
+
+        setTimeout(function() {
+          targetEl.style.webkitAnimationPlayState = "paused";
+        }, __animationDuration, "push");
+
+      } else if (e.type == "animationstart" || e.type == "animationiteration") {
+
+        targetEl = e.target;
+
+        setTimeout(function() {
+          targetEl.style.MozAnimationPlayState = "paused";
+        }, __animationDuration, 'push');
+
+      }
+    }
+
+    pauseAnimations();
+
+    // Pause all audio elements, allow the audio/video
+    // elements to render before stopping them
+    function pauseElementTypes(type) {
+      for (var i = 0, els = document.getElementsByTagName(type); i < els.length; i++) {
+        els[i].pause();
+      }
+    }
+
+    // Wait until the elements have been created to pause them
+    setTimeout(function() {
+      pauseElementTypes("audio");
+      pauseElementTypes("video");
+    }, 100);
+
+  }());
   </script>
-<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
 
 
 </body></html>

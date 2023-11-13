@@ -1,300 +1,460 @@
 <!DOCTYPE html>
-<!-- saved from url=(0082)https://codepen.io/airen/embed/ZEeObxE?height=500&theme-id=3655&default-tab=result -->
+<!-- saved from url=(0078)https://cdpn.io/airen/fullembedgrid/ZEeObxE?animations=stop-after-5&type=embed -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
 
-<meta name="viewport" content="width=device-width">
-<title>CodePen Embed - Grid Tracks size with repeat()</title>
-<meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="E03X5PmD2gRwXQD6aNEw0ez/hJ8DEILrIgkWoVPSZxHVUWF6X+qDy1/MjE6jpuuiaRL+UuMGcbkftcZxhK5ejw==">
-<link rel="stylesheet" media="all" href="./embed-f0d924208cf4291f5723ee203f95125d5b085d22ae56522278c1f7bae6e281da.css">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Grid Tracks size with repeat()</title>
+
+    <link rel="canonical" href="https://codepen.io/airen/pen/ZEeObxE">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
 <style>
-    .hide {
-      display: none !important;
-    }
-
-    #result-box {
-      background: #3d3d3e;
-      color: #76daff;
-    }
-    .embed-footer,
-    .embed-nav {
-      background: #3d3d3e;
-      
-    }
-    .embed-nav .code-types a,
-    .embed-nav .result-button-list a,
-    .action-button {
-      color: #76daff;
-      background-color: #666666;
-    }
-    .embed-nav .code-types a.active,
-    .embed-nav .result-button-list a.active,
-    .action-button.active {
-      background: #cccccc;
-      color: #000000;
-      box-shadow: inset 0px 3px #dddddd;
-    }
-    .embed-nav .logo-wrap .edit-on-codepen {
-      color: #ffffff;
-    }
-
-    .embed-nav svg {
-      stroke: #ffffff !important;
-    }
-  </style>
-<link rel="stylesheet" media="all" href="./twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css">
-</head>
-<body id="the-body" style="--borderWidth: 0;" class="codepen-embed-body static results-active">
-<nav class="embed-nav group" id="embed-nav">
-<ul class="code-types">
-<li class="code-type">
-<a id="html-link" href="https://codepen.io/airen/embed/ZEeObxE?height=500&amp;theme-id=3655&amp;default-tab=result#html-box" role="button" aria-pressed="false">
-HTML
-</a>
-</li>
-<li class="code-type">
-<a id="css-link" href="https://codepen.io/airen/embed/ZEeObxE?height=500&amp;theme-id=3655&amp;default-tab=result#css-box" role="button" aria-pressed="false">
-CSS
-</a>
-</li>
-</ul>
-<ul class="result-button-list">
-<li class="results results-type">
-<a id="result-link" href="https://codepen.io/airen/embed/ZEeObxE?height=500&amp;theme-id=3655&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
-Result
-</a>
-</li>
-<li>
-<a href="https://codepen.io/airen/embed/ZEeObxE?height=500&amp;theme-id=3655&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
-</li>
-</ul>
-<div class="logo-wrap" id="edit-area">
-<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/airen/pen/ZEeObxE" title="Edit on CodePen">
-<div class="large-logo">
-<span id="edit-on-text" class="open-on">EDIT ON</span>
-<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
-<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
-</svg>
-</div>
-<div class="box-logo">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
-<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
-</svg>
-</div>
-</a>
-</div>
-</nav>
-<div id="output" data-border-style="none" data-header="true">
-<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
-<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
-  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__container"</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=1"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>1<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=2"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>2<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=3"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>3<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=4"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>4<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=5"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>5<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=6"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>6<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/150/150?random=7"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>7<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=9"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>8<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=10"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>9<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=11"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>10<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=12"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>11<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=13"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>12<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=14"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>13<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=15"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>14<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=16"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>15<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=18"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>16<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=28"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>17<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid__item"</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://picsum.photos/300/150?random=38"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span>
-      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>18<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
-    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
-<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
-</div>
-<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
-<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">"https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap"</span>);
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
 
 * {
-  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
-  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
-  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-<span class="cm-tag">body</span> {
-  <span class="cm-property">width</span>: <span class="cm-number">100vw</span>;
-  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+body {
+  width: 100vw;
+  min-height: 100vh;
 
-  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
-  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
-  <span class="cm-property">gap</span>: <span class="cm-number">20px</span>;
-  <span class="cm-property">font-family</span>: <span class="cm-string">"Exo"</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;
-  <span class="cm-property">background-color</span>: <span class="cm-atom">#f7f7f7</span>;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Exo", Arial, sans-serif;
+  background-color: #f7f7f7;
 
-  <span class="cm-property">padding</span>: <span class="cm-number">20px</span>;
+  padding: 20px;
 }
 
-<span class="cm-tag">section</span> {
-  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+section {
+  margin: 0 auto;
 
-  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
-  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
-  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">6px</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> / <span class="cm-number">13%</span>);
-  <span class="cm-property">border-radius</span>: <span class="cm-number">3px</span>;
-  <span class="cm-property">gap</span>: <span class="cm-number">20px</span>;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);
+  border-radius: 3px;
+  gap: 20px;
 }
 
-<span class="cm-tag">img</span> {
-  <span class="cm-string-2">aspect-ratio</span>: <span class="cm-number">2</span> /<span class="cm-number">1</span>;
-  <span class="cm-property">height</span>: <span class="cm-number">80px</span>;
-  <span class="cm-property cm-error">min-content</span>: <span class="cm-variable">fit-content</span>;
-  <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">drop-shadow</span>(<span class="cm-number">1px</span> <span class="cm-number">1px</span> <span class="cm-number">2px</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">255</span> <span class="cm-number">255</span> <span class="cm-number">255</span> / <span class="cm-number">0.5</span>))
-    <span class="cm-variable cm-callee">drop-shadow</span>(<span class="cm-number">-1px</span> <span class="cm-number">-1px</span> <span class="cm-number">2px</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">255</span> <span class="cm-number">255</span> <span class="cm-number">255</span> / <span class="cm-number">0.5</span>));
-  <span class="cm-property">mix-blend-mode</span>: <span class="cm-atom">luminosity</span>;
+img {
+  aspect-ratio: 2 /1;
+  height: 80px;
+  min-content: fit-content;
+  filter: drop-shadow(1px 1px 2px rgb(255 255 255 / 0.5))
+    drop-shadow(-1px -1px 2px rgb(255 255 255 / 0.5));
+  mix-blend-mode: luminosity;
 }
 
-<span class="cm-qualifier">.grid__container</span> {
-  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">1px</span> <span class="cm-atom">#f36</span>;
-  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+.grid__container {
+  box-shadow: 0 0 0 1px #f36;
+  position: relative;
 }
 
-<span class="cm-qualifier">.grid__item</span> {
-  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
-  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
-  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
-  <span class="cm-property">background-color</span>: <span class="cm-atom">#f7f7f7</span>;
-  <span class="cm-property">font-size</span>: <span class="cm-number">2rem</span>;
-  <span class="cm-property">color</span>: <span class="cm-atom">#323</span>;
-  <span class="cm-property">text-shadow</span>: <span class="cm-number">1px</span> <span class="cm-number">1px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> / <span class="cm-number">0.25</span>);
+.grid__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  font-size: 2rem;
+  color: #323;
+  text-shadow: 1px 1px 0 rgb(0 0 0 / 0.25);
 }
 
-<span class="cm-qualifier">.grid__container</span> {
-  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
-  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(
-    <span class="cm-number">3</span>,
-    [<span class="cm-variable">col-start</span>] <span class="cm-variable">min-content</span> [<span class="cm-variable">col-middle</span>] <span class="cm-variable">max-content</span> [<span class="cm-variable">col-end</span>]
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    [col-start] -webkit-min-content [col-middle] -webkit-max-content [col-end]
   );
-  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">3</span>, <span class="cm-variable cm-callee">minmax</span>(<span class="cm-number">100px</span>, <span class="cm-number">1fr</span>));
-  <span class="cm-property">gap</span>: <span class="cm-number">5px</span>;
+  grid-template-columns: repeat(
+    3,
+    [col-start] min-content [col-middle] max-content [col-end]
+  );
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
+  gap: 5px;
 }
-</code></pre>
-</div>
-<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
-<iframe allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Grid Tracks size with repeat()" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Grid Tracks size with repeat()" data-src="https://cdpn.io/airen/fullembedgrid/ZEeObxE?animations=stop-after-5&amp;type=embed" src="./ZEeObxE(1).html">
-  </iframe>
-</div>
-<div id="about-box">
-<div class="about-container">
-<div class="about-user">
-<a href="https://codepen.io/airen" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
-<div class="about-user-info">
-<p>
-This Pen is owned by <a href="https://codepen.io/airen" target="_blank" rel="noopener">大漠</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
-</p>
-<p>
-<a href="https://codepen.io/airen" target="_blank" rel="noopener" class="about-user-more">
-See more by @airen on CodePen
-</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="resources-box" class="resources-box">
-<h3>External CSS</h3>
-<p>
-This Pen doesn't use any external CSS resources.
-</p>
-<h3>External JavaScript</h3>
-<p>
-This Pen doesn't use any external JavaScript resources.
-</p>
-</div>
-</div>
-<footer class="embed-footer" id="embed-footer">
-<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
-Resources
-</button>
-<ul class="scaling-choices bottom right">
-<li><button class="action-button" id="zoom-button-1">1×</button></li>
-<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
-<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
-</ul>
-<button id="rerun-button" class="action-button rerun-button bottom right">
-Rerun
-</button>
-</footer>
-<script nonce="">
-    __processedPen = {"html":"&lt;section&gt;\n  &lt;div class=&quot;grid__container&quot;&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=1&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;1&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=2&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;2&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=3&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;3&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=4&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;4&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=5&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;5&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=6&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;6&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/150/150?random=7&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;7&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=9&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;8&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=10&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;9&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=11&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;10&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=12&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;11&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=13&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;12&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=14&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;13&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=15&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;14&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=16&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;15&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=18&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;16&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=28&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;17&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid__item&quot;&gt;\n      &lt;img src=&quot;https://picsum.photos/300/150?random=38&quot; alt=&quot;&quot;&gt;\n      &lt;span&gt;18&lt;/span&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css2?family=Exo:wght@600&amp;display=swap&quot;);\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  width: 100vw;\n  min-height: 100vh;\n\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  gap: 20px;\n  font-family: &quot;Exo&quot;, Arial, sans-serif;\n  background-color: #f7f7f7;\n\n  padding: 20px;\n}\n\nsection {\n  margin: 0 auto;\n\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);\n  border-radius: 3px;\n  gap: 20px;\n}\n\nimg {\n  aspect-ratio: 2 /1;\n  height: 80px;\n  min-content: fit-content;\n  filter: drop-shadow(1px 1px 2px rgb(255 255 255 / 0.5))\n    drop-shadow(-1px -1px 2px rgb(255 255 255 / 0.5));\n  mix-blend-mode: luminosity;\n}\n\n.grid__container {\n  box-shadow: 0 0 0 1px #f36;\n  position: relative;\n}\n\n.grid__item {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  background-color: #f7f7f7;\n  font-size: 2rem;\n  color: #323;\n  text-shadow: 1px 1px 0 rgb(0 0 0 / 0.25);\n}\n\n.grid__container {\n  display: grid;\n  grid-template-columns: repeat(\n    3,\n    [col-start] -webkit-min-content [col-middle] -webkit-max-content [col-end]\n  );\n  grid-template-columns: repeat(\n    3,\n    [col-start] min-content [col-middle] max-content [col-end]\n  );\n  grid-template-rows: repeat(3, minmax(100px, 1fr));\n  gap: 5px;\n}","js":""};
-    __preprocessors = {
-      "html": "none",
-      "css": "none",
-      "js": "none"
-    };
-    __preprocessorNames = {
-      "html": "HTML",
-      "css": "CSS",
-      "js": "JS"
-    };
-    __editable = false;
-    __embed_prefill = false;
+</style>
+
+  
+  
+    <style>*, *::before, *::after { animation-play-state: paused !important; }</style><script>
+    (function() {
+      /*
+      * Capture all errors for this pen
+      **/
+      window.onerror = function(/* message, file, line */) {
+        return true;
+      };
+
+      /*
+      * Capture and kill Web Audio and Speech
+      */
+      if (typeof (AudioContext) != "undefined" || typeof (webkitAudioContext) != "undefined") {
+        AudioContext = function() {
+          return false;
+        };
+
+        webkitAudioContext = function() {
+          return false;
+        };
+      }
+
+      if (typeof (mozAudioContext) != "undefined") {
+        mozAudioContext = function() {
+          return false;
+        };
+      }
+
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis = {};
+      }
+      if ("speak" in speechSynthesis) {
+        speechSynthesis.speak = function() {
+          return false;
+        };
+      }
+
+      // Kill the browser asking for access to the video cam or audio
+      navigator.getUserMedia = function() {
+      };
+      navigator.mozGetUserMedia = function() {
+      };
+      navigator.webkitGetUserMedia = function() {
+      };
+      navigator.mediaDevices.getUserMedia = function() {
+      };
+
+
+      /**
+      * Capture and kill animations after X number of seconds
+      **/
+      var __animationDuration = 4000;
+      var __animationsTimedOut = false;
+      var __animationRequests = [];
+      var __requestAnimationFrame = false;
+      var __cancelAnimationFrame = false;
+      var x, i;
+
+      var vendorsRequestAnimationFrame = [
+        "requestAnimationFrame",
+        "mozRequestAnimationFrame",
+        "webkitRequestAnimationFrame"
+      ];
+
+      // find the browsers requestAnimationFrame and cancelAnimationFrame
+      for (x = 0; x < vendorsRequestAnimationFrame.length; x++) {
+        if (!__requestAnimationFrame) {
+          __requestAnimationFrame = window[vendorsRequestAnimationFrame[x]
+          ];
+        }
+      }
+
+      __cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+      // Wrap the requestAnimationFrame so we can stop it in the future
+      function __reqFrame(callback, element) {
+        // after the timeout we no longer take requests
+        var timerID;
+        if (__animationsTimedOut) {
+          return 0;
+        } else {
+          timerID = __requestAnimationFrame(callback, element);
+          __animationRequests.push(timerID);
+
+          return timerID;
+        }
+      }
+
+      for (x = 0; x < vendorsRequestAnimationFrame.length; x++) {
+        window[vendorsRequestAnimationFrame[x]] = __reqFrame;
+      }
+
+      // Cancel the animations after expiration
+      setTimeout(function() {
+        for (i = 0; i < __animationRequests.length; i++) {
+          __cancelAnimationFrame(__animationRequests[i]);
+        }
+
+        var ss = window.document.createElement("style");
+        ss.textContent = "*, *::before, *::after { animation-play-state: paused !important; }";
+        var ref = window.document.getElementsByTagName("script")[0];
+        ref.parentNode.insertBefore(ss, ref);
+
+        __animationsTimedOut = true;
+      }, __animationDuration, "push");
+
+      /**
+      * Capture setInterval and setTimeout to kill after X number of seconds
+      **/
+      window.setInterval = (function(oldSetInterval) {
+        var registered = [];
+
+        function f(a,b) {
+          // check if the time has expired,
+          // after __animationDuration expires don't take anymore setIntervals
+          if (this.timedOut) {
+            return 0;
+          } else {
+            return registered[ registered.length ] = oldSetInterval(a,b);
+          }
+        }
+
+        f.clearAll = function() {
+          var r;
+
+          while (r = registered.pop()) {
+            clearInterval( r );
+          }
+
+          this.timedOut = true;
+        };
+
+        f.timedOut = false;
+
+        return f;
+      }(window.setInterval));
+
+      window.setTimeout = (function(oldSetTimeout) {
+        var registered = [];
+
+        // because some of our timeouts may time out afterwards
+        // we want to make sure they know the secret sauce to still use
+        // setTimeout after the time has expired, thats why we have a
+        // third param
+        function f(a, b, push) {
+          // check if the time has expired,
+          // after __animationDuration expires don't take anymore requests
+          if (this.timedOut && typeof(push) == "undefined") {
+            return 0;
+          } else {
+            // If push is there, never clear that interval
+            // so never add it to the registry
+            if (push) {
+              return oldSetTimeout(a,b);
+            } else {
+              return registered[ registered.length ] = oldSetTimeout(a,b);
+            }
+          }
+        }
+
+        f.clearAll = function() {
+          var r;
+
+          while (r = registered.pop()) {
+            clearTimeout( r );
+          }
+
+          this.timedOut = true;
+        };
+
+        f.timedOut = false;
+
+        return f;
+      }(window.setTimeout));
+
+      setTimeout(function() {
+
+        setTimeout.clearAll();
+        setInterval.clearAll();
+
+        // Stop Web Animations API
+        // Idea from Gregor: https://github.com/CodePen/CodePen-Bug-Reporting-Only/issues/173#issuecomment-203443301
+        // Status as of April 2020:
+        //  Chrome 80 = Stops animations
+        //  Firefox 75 = Stops animations
+        //  Safari 13 = Doesn't support WAAPI
+        //  Safari 13.1 = Stops animations
+
+        // Apparently this used to be done via `document.timeline`, but the modern method is to get the animations directly from the document.
+        let animations = ( typeof document.getAnimations === "function" && document.getAnimations() ) || (document.timeline && typeof document.timeline.getAnimations === "function" && document.timeline.getAnimations() )
+
+        if ( animations && animations.length ) {
+          animations.map(function(animation) {
+            animation.pause();
+          });
+        }
+
+      }, __animationDuration, "push");
+
+    }());
   </script>
-<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.下载"></script>
+
+</head>
+
+<body translate="no" onload="_l=&#39;t&#39;;">
+  <section>
+  <div class="grid__container">
+    <div class="grid__item">
+      <img src="./104-300x150.jpg" alt="">
+      <span>1</span>
+    </div>
+    <div class="grid__item">
+      <img src="./802-300x150.jpg" alt="">
+      <span>2</span>
+    </div>
+    <div class="grid__item">
+      <img src="./143-300x150.jpg" alt="">
+      <span>3</span>
+    </div>
+    <div class="grid__item">
+      <img src="./743-300x150.jpg" alt="">
+      <span>4</span>
+    </div>
+    <div class="grid__item">
+      <img src="./369-300x150.jpg" alt="">
+      <span>5</span>
+    </div>
+    <div class="grid__item">
+      <img src="./513-300x150.jpg" alt="">
+      <span>6</span>
+    </div>
+    <div class="grid__item">
+      <img src="./683-150x150.jpg" alt="">
+      <span>7</span>
+    </div>
+    <div class="grid__item">
+      <img src="./341-300x150.jpg" alt="">
+      <span>8</span>
+    </div>
+    <div class="grid__item">
+      <img src="./151-300x150.jpg" alt="">
+      <span>9</span>
+    </div>
+    <div class="grid__item">
+      <img src="./628-300x150.jpg" alt="">
+      <span>10</span>
+    </div>
+    <div class="grid__item">
+      <img src="./484-300x150.jpg" alt="">
+      <span>11</span>
+    </div>
+    <div class="grid__item">
+      <img src="./169-300x150.jpg" alt="">
+      <span>12</span>
+    </div>
+    <div class="grid__item">
+      <img src="./90-300x150.jpg" alt="">
+      <span>13</span>
+    </div>
+    <div class="grid__item">
+      <img src="./900-300x150.jpg" alt="">
+      <span>14</span>
+    </div>
+    <div class="grid__item">
+      <img src="./626-300x150.jpg" alt="">
+      <span>15</span>
+    </div>
+    <div class="grid__item">
+      <img src="./287-300x150.jpg" alt="">
+      <span>16</span>
+    </div>
+    <div class="grid__item">
+      <img src="./545-300x150.jpg" alt="">
+      <span>17</span>
+    </div>
+    <div class="grid__item">
+      <img src="./685-300x150.jpg" alt="">
+      <span>18</span>
+    </div>
+  </div>
+</section>
+  
+  
+    <script style="display: none !important;">
+  (function() {
+    var __animationDuration = 4000;
+
+    setTimeout(function() {
+      // If onload hasn't been called, stop all requests after 2 seconds
+      if (typeof(_l) == "undefined") {
+        if (window.stop !== undefined) window.stop();
+        else if (document.execCommand !== undefined) document.execCommand("Stop", false);
+      }
+    }, 2000, "push");
+
+    /*
+    * Capture and kill CSS animations after X number of seconds
+    */
+    function pauseAnimations() {
+      var body = document.getElementsByTagName("body")[0];
+
+      if (body.addEventListener) {
+        body.addEventListener("webkitAnimationStart", listener, false);
+        body.addEventListener("webkitAnimationIteration", listener, false);
+        body.addEventListener("animationstart", listener, false);
+        body.addEventListener("animationiteration", listener, false);
+      }
+    }
+
+    function listener(e) {
+
+      var targetEl;
+
+      if (e.type == "webkitAnimationStart" || e.type == "webkitAnimationIteration") {
+
+        targetEl = e.target;
+
+        setTimeout(function() {
+          targetEl.style.webkitAnimationPlayState = "paused";
+        }, __animationDuration, "push");
+
+      } else if (e.type == "animationstart" || e.type == "animationiteration") {
+
+        targetEl = e.target;
+
+        setTimeout(function() {
+          targetEl.style.MozAnimationPlayState = "paused";
+        }, __animationDuration, 'push');
+
+      }
+    }
+
+    pauseAnimations();
+
+    // Pause all audio elements, allow the audio/video
+    // elements to render before stopping them
+    function pauseElementTypes(type) {
+      for (var i = 0, els = document.getElementsByTagName(type); i < els.length; i++) {
+        els[i].pause();
+      }
+    }
+
+    // Wait until the elements have been created to pause them
+    setTimeout(function() {
+      pauseElementTypes("audio");
+      pauseElementTypes("video");
+    }, 100);
+
+  }());
+  </script>
+
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下载"></script>
+
 
 
 </body></html>

