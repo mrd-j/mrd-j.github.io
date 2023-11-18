@@ -21,4 +21,7 @@ $(function(){
     $("#skill").click(function(){
         loadJson("技能");
     });
+    $("#shuxing").click(function(){
+        loadJson("属性");
+    });
 });
