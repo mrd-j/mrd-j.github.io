@@ -5,23 +5,40 @@ $(function(){
             url: "data/"+name+".json",
             dataType: "json",
             success: function (data) {
+                $.gamedata = data;
                 $("#count").text("总计有" + data.length + "项"+name+"！");
                 var counter = 0;
                 $.each(data, function(index,item){
                         counter = counter + 1;
-                        $("#count").append("<br>" + counter + "." + item.名称);
+                        $("#count").append("<br>" + counter + "." + "<a id='"+item.名称+"' href='#'>"+item.名称+"</a>");
                 });
             }
         });
     }
     
     $("#xinfa").click(function(){
+        $.typ = "心法";
         loadJson("心法");
     });
     $("#skill").click(function(){
+        $.typ = "技能";
         loadJson("技能");
     });
     $("#shuxing").click(function(){
         loadJson("属性");
+    });
+    $("body").on("click","a",function(){
+        var name = $(this).attr("id");
+        //alert($.typ);
+        $.each($.gamedata, function(index,item){
+            if (item.名称===name) {
+                $("#xingqing").html("");
+                $.each(item, function(key,value){
+                    $("#xingqing").append("<br>" + key + ":" + value);
+                });
+            }
+        });
+        //$("#xiangqing").append
+        //loadJson("属性");
     });
 });
