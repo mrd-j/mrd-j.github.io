@@ -6,6 +6,7 @@ $(function(){
             dataType: "json",
             success: function (data) {
                 $.gamedata = data;
+                $("#xiangqing").html("");
                 $("#count").text("总计有" + data.length + "项"+name+"！");
                 var counter = 0;
                 $.each(data, function(index,item){
@@ -32,9 +33,18 @@ $(function(){
         //alert($.typ);
         $.each($.gamedata, function(index,item){
             if (item.名称===name) {
-                $("#xingqing").html("");
+                $("#xiangqing").html("");
                 $.each(item, function(key,value){
-                    $("#xingqing").append("<br>" + key + ":" + value);
+                    if ($.isPlainObject(value)){
+                        $("#xiangqing").append("<br>" + key + ":");
+                        $.each(value, function(k,v){
+                            $("#xiangqing").append("【" + k + v + "】");
+                        });
+                    }
+                    else{
+                        $("#xiangqing").append("<br>" + key + ":" + value);
+                    }
+                    
                 });
             }
         });
